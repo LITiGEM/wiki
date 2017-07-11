@@ -1,2 +1,2 @@
 # wiki
-The website is cool and fun ferrr
+The website is cool and fun, because my name is Cetroipeo
