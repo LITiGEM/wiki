@@ -1,2 +1,2 @@
 # wiki
-The website
+The website is cool
