@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+
+.borderTop,
+.borderBottom,
+.borderLeft,
+.borderRight {
+    background-color: #1a1a1a;
+    display: block;
+    position: fixed;
+    z-index: 1000;
+}
+.borderTop {
+    height: 11px;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.borderBottom {
+    bottom: 0;
+    height: 11px;
+    left: 0;
+    right: 0;
+}
+
+.borderRight {
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 11px;
+}
+
+.borderLeft {
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 11px;
+}
+
+
+img {
+    width: 50%;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#top {
+    background-color: rgba(19,20,28,0.91);
+    height: 300px;
+}
+
+
+#home {
+    width:20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 18px;
+    display: block;
+    text-decoration: none !important;
+    text-align: center;
+    font-family:"Josefin Sans";
+    font-weight:100;
+    font-size:18px;
+    color: antiquewhite;
+
+}
+#top #home:hover {
+    border-bottom:3px solid antiquewhite;
+}
+
+
+#nav-menu {
+    display:inline;
+    padding-top: 50px
+}
+
+.menu-item {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none !important;
+    font-family:"Josefin Sans" !important;
+    font-weight:100;
+    font-size:18px;
+    color: antiquewhite !important;
+}
+
+#hide1,#hide2,#hide3 {
+    display: none;
+}
+
+.lit {
+    width:20%;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family:"Josefin Sans";
+    font-weight:100;
+    font-size:20px;
+    color: antiquewhite;
+
+}
+
+
+#description {
+    height: 400px !important;
+    background-color: #1a1a1a;
+    padding-bottom: 8px;
+}
+.col-md-4 {
+    margin-top: 100px;
+}
+
+#what {
+    margin-top: 50px;
+    text-align: center;
+    font-family:"Josefin Sans";
+    font-weight:100;
+    font-size:40px;
+    color: antiquewhite;
+}
+
+#footer {
+    padding-bottom: 50px;
+    background-color: #333c4c;
+}
+
+.footertext {
+    padding-top: 30px;
+    font-family: Orbitron;
+    color: white;
+}
