@@ -6,7 +6,7 @@
 .borderBottom,
 .borderLeft,
 .borderRight {
-    background-color: #1a1a1a;
+    background-color: black;
     display: block;
     position: fixed;
     z-index: 1000;
@@ -50,34 +50,84 @@ img {
 }
 
 #top {
-    background-color: rgba(19,20,28,0.91);
-    height: 300px;
+    background-color: black;
 }
 
+h2 {
+    padding-top: 50px;
+}
 
-#home {
-    width:20%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 18px;
-    display: block;
-    text-decoration: none !important;
-    text-align: center;
-    font-family:"Josefin Sans";
-    font-weight:100;
-    font-size:18px;
+h2 a {
+    position: relative;
     color: antiquewhite;
-
+    text-decoration: none !important;
+    font-size: 20px;
+    font-family:"Josefin Sans";
+    padding-left: 40%;
+    padding-right: 40%;
 }
-#top #home:hover {
-    border-bottom:3px solid antiquewhite;
+
+h2 a:hover {
+    color: antiquewhite;
+}
+h2 a:before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    bottom: 0;
+    left: 40%;
+    right: 20%;
+    background-color: antiquewhite;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+h2 a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#show1, #hide1 {
+    height: 70px;
+    background-color: #4169E1;
+}
+
+#show2, #hide2 {
+    height: 100px;
+    background-color: #F4A460;
+}
+#show3, #hide3 {
+    height: 100px;
+    background-color: #66CDAA;
+    position:relative;
+}
+
+
+#show1, #show2, #show3 p {
+    padding: 2% 20% 0 20%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Josefin Sans";
+    font-color: #1a1a1a;
+}
+
+#hide1, #hide2, #hide3 p {
+    padding: 2% 20% 0 20%;
+    font-size: 20px;
+    font-family: "Josefin Sans";
+    font-color: #1a1a1a;
 }
 
 
 #nav-menu {
     display:inline;
-    padding-top: 50px
 }
+
 
 .menu-item {
     text-align: center;
@@ -95,40 +145,40 @@ img {
 }
 
 .lit {
-    width:20%;
+
     padding-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
     font-family:"Josefin Sans";
     font-weight:100;
-    font-size:20px;
+    font-size:25px;
     color: antiquewhite;
 
 }
-
+#nagi {
+    padding-left: 30%;
+}
 
 #description {
-    height: 400px !important;
-    background-color: #1a1a1a;
+    height: 380px !important;
+    background-color: #FFE4B5;
     padding-bottom: 8px;
+    overflow: auto;
 }
-.col-md-4 {
-    margin-top: 100px;
-}
+
+
 
 #what {
     margin-top: 50px;
+    padding-bottom: 30px;
     text-align: center;
     font-family:"Josefin Sans";
     font-weight:100;
     font-size:40px;
-    color: antiquewhite;
 }
 
 #footer {
     padding-bottom: 50px;
-    background-color: #333c4c;
+    background-color: black;
 }
 
 .footertext {

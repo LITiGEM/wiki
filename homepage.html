@@ -20,18 +20,20 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <script>
-        $(document).ready(function(){
-            $("#show1").click(function(){
-                $("#hide1").slideToggle("slow");
-            });
-            $("#show2").click(function(){
-                $("#hide2").slideToggle("slow");
-            });
-            $("#show3").click(function(){
-                $("#hide3").slideToggle("slow");
-            });
-        });
+         $(document).ready(function(){
+             $("#show1").click(function(){
+                 $("#hide1").slideToggle("slow");
+             });
+             $("#show2").click(function(){
+                 $("#hide2").slideToggle("slow");
+             });
+             $("#show3").click(function(){
+                 $("#hide3").slideToggle("slow");
+             });
+         });
+
     </script>
+
 </head>
 
 
@@ -45,28 +47,27 @@
 <b class="borderRight"></b>
 
 <div id="top" class="container-fluid">
-
     <div class="row">
 
-    <!--<a id="logo" href="#"><img src="whatever.svg"/></a>-->
-
+    <div class="col col-sm-4">
     <p class="lit">Light Induced Technologies</p>
     <p class="lit">UCL iGEM 2017</p>
 
-    <a id="home" href="#">Home is where the light takes you</a>
+    </div>
 
-    <center>
+        <div class="col col-sm-8">
+
+        <h2><a href="http://2017.igem.org/Team:UCL">Home is where the light takes you</a></h2>
+            <br> <br>
             <ul id="nav-menu">
                 <li style="display:inline"><a class="menu-item" href="#">Team</a></li>
                 <li style="display:inline"><a class="menu-item" href="#">Project</a></li>
+                <li style="display:inline"><a class="menu-item" href="https://www.instagram.com/the_art_competition/">Instagram competition</a></li>
                 <li style="display:inline"><a class="menu-item" href="#">Parts</a></li>
                 <li style="display:inline"><a class="menu-item" href="#">Human Practices</a></li>
-                <li style="display:inline"><a class="menu-item" href="#">Awards</a></li>
-                <li style="display:inline"><a class="menu-item" href="#">Judging Form</a></li>
-
             </ul>
-    </center>
 
+        </div>
 
     </div>
 
@@ -76,39 +77,44 @@
     <div id="description" class="container-fluid">
         <div class="row">
 
-        <h1 id="what">We give you light. And you can control cells. What would you do?</h1>
-
-        <center>
-        <div class="row">
-        <div id="show1" class="col-md-4">
-        <p>3D structures from bacteria</p>
-        </div>
-
-            <div id="show2" class="col-md-4">
-                <p>print organs and regenerate tissue</p>
-            </div>
-
-            <div id="show3" class="col-md-4">
-                <p>a bacterial lightbulb</p>
-            </div>
-        </div>
+        <h1 id="what">We give you light & you can control cells. What would you do?</h1>
 
             <div class="row">
-            <div id="hide1" class="col-md-4">
-                <p>3D structures from bacteria</p>
+
+                <div id="show1">
+                    <p>3D structures from E. Coli?</p>
+                </div>
+
+                <div style="height: 200px" id="hide1">
+                    <p>We are aiming to make stereolithography organic. Two light systems are proposed: one that triggers the transcription of the proteins necessary for cells to stick to each other and produce PHB; and an instantaneous photocaged non-natural amino acid that upon exposure to light allows cells to form structures. The link between cells will be based on the strong (and stable) isopeptide covalent bond formed between SpyTag and SpyCatcher. They will be transported to the outer membrane surface by intimin, an outer membrane protein.</p>
+                </div>
+
             </div>
 
+            <div class="row">
 
-            <div id="hide2" class="col-md-4">
-                <p>print organs and regenerate tissue</p>
+            <div id="show2">
+                <p>or print organs and regenerate tissue?</p>
             </div>
 
-            <div id="hide3" class="col-md-4">
-                <p>a bacterial lightbulb</p>
-            </div>
+                <div style="height: 200px" id="hide2">
+                    <p>Mammalian cells can be equally engineered with light. We will use light in two ways: provide a standardised photo activated Cas9 system to trigger the transcription of desired genes; and design a photocaged cadherin blocker, which in contact with light will allow the instantaneous adhesion between cells.</p>
+                </div>
+
             </div>
 
-        </center>
+            <div style="padding-bottom: 0" class="row">
+
+                <div id="show3">
+                    <p>a bacterial lightbulb?</p>
+                </div>
+
+                <div style="height: 200px" id="hide3">
+                    <p>We are adding co-culturing to previous iterations of bacterial lightbulbs. E. Coli and Cyanobacteria will live in the same lightbulb in symbiosis. When the sun comes down, the engineered E. Coli will luminesce. The lux operon is responsible for this and we are aiming to increase the efficiency of their luminescence.</p>
+                </div>
+
+            </div>
+
         </div>
     </div>
 
