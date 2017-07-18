@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
+@keyframes glow {
+    to {
+        text-shadow: 0 0 10px black;
+    }
+}
+
 
 .borderTop,
 .borderBottom,
 .borderLeft,
 .borderRight {
-    background-color: black;
+    background-color: white;
     display: block;
     position: fixed;
     z-index: 1000;
 }
 .borderTop {
-    height: 11px;
+    height: 8px;
     left: 0;
     right: 0;
     top: 0;
@@ -20,7 +26,7 @@
 
 .borderBottom {
     bottom: 0;
-    height: 11px;
+    height: 8px;
     left: 0;
     right: 0;
 }
@@ -29,20 +35,20 @@
     bottom: 0;
     right: 0;
     top: 0;
-    width: 11px;
+    width: 8px;
 }
 
 .borderLeft {
     bottom: 0;
     left: 0;
     top: 0;
-    width: 11px;
+    width: 8px;
 }
 
 
 img {
-    width: 50%;
-    height: 100px;
+    height: 200px;
+    width:200px
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -50,35 +56,21 @@ img {
 }
 
 #top {
-    background-color: black;
+    background: white;
+    height:225px;
 }
 
-h2 {
-    padding-top: 50px;
-}
+/*
 
-h2 a {
-    position: relative;
-    color: antiquewhite;
-    text-decoration: none !important;
-    font-size: 20px;
-    font-family:"Josefin Sans";
-    padding-left: 40%;
-    padding-right: 40%;
-}
-
-h2 a:hover {
-    color: antiquewhite;
-}
-h2 a:before {
+h2:before {
     content: "";
     position: absolute;
     width: 20%;
     height: 2px;
-    bottom: 0;
+    bottom: 10px;
     left: 40%;
     right: 20%;
-    background-color: antiquewhite;
+    background-color: black;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -86,48 +78,74 @@ h2 a:before {
     transition: all 0.3s ease-in-out 0s;
 }
 
-h2 a:hover:before {
+h2:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-}
+}*/
 
 #show1, #hide1 {
-    height: 70px;
-    background-color: #4169E1;
+    height: auto;
+    background-color: #85C8DD;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
 }
 
 #show2, #hide2 {
-    height: 100px;
-    background-color: #F4A460;
+    height: auto;
+    background-color: #D3E0E2;
+    position: relative;
+    overflow: hidden;
 }
 #show3, #hide3 {
     height: 100px;
-    background-color: #66CDAA;
+    background-color: #E9F6F5;
     position:relative;
 }
 
 
 #show1, #show2, #show3 p {
-    padding: 2% 20% 0 20%;
-    font-size: 20px;
-    font-weight: bold;
+    padding-top: 30px;
+    padding-right: 20%;
+    padding-left: 20%;
+    font-size: 30px;
+    font-weight: 800;
     font-family: "Josefin Sans";
-    font-color: #1a1a1a;
+    font-color: black;
 }
 
 #hide1, #hide2, #hide3 p {
-    padding: 2% 20% 0 20%;
+    padding-left: 20%;
+    padding-top: 10px;
+    padding-right: 20%;
     font-size: 20px;
+    overflow: hidden;
     font-family: "Josefin Sans";
-    font-color: #1a1a1a;
+    font-color: black;
 }
 
+#hide1,#hide2,#hide3 {
+    display: none;
+}
+
+.navy {
+    padding-bottom: 30px;
+}
+
+#nagi {
+    padding-left: 30%;
+}
 
 #nav-menu {
     display:inline;
-}
 
+}
+#nav-menu li:not(:first-child):before {
+    content: " | ";
+    color: black;
+    font-weight: 800;
+}
 
 .menu-item {
     text-align: center;
@@ -135,54 +153,90 @@ h2 a:hover:before {
     padding-right: 30px;
     text-decoration: none !important;
     font-family:"Josefin Sans" !important;
-    font-weight:100;
-    font-size:18px;
-    color: antiquewhite !important;
+    font-weight:800;
+    font-size:22px;
+    color: black !important;
 }
 
-#hide1,#hide2,#hide3 {
-    display: none;
-}
+
 
 .lit {
-
-    padding-top: 50px;
     text-align: center;
     font-family:"Josefin Sans";
-    font-weight:100;
-    font-size:25px;
-    color: antiquewhite;
-
-}
-#nagi {
-    padding-left: 30%;
+    font-weight:bolder;
+    font-size:15px;
+    color: black;
 }
 
-#description {
-    height: 380px !important;
-    background-color: #FFE4B5;
-    padding-bottom: 8px;
-    overflow: auto;
+.lit2 {
+    text-align: center;
+    font-family:"Josefin Sans";
+    font-weight:bolder;
+    font-size:13px;
+    color: black;
+    margin:0;
 }
-
 
 
 #what {
-    margin-top: 50px;
+    padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 20% !important;
+    padding-right: 20%;
     text-align: center;
     font-family:"Josefin Sans";
+    color: black;
     font-weight:100;
     font-size:40px;
+    background-color: #F1684E;
 }
 
 #footer {
     padding-bottom: 50px;
-    background-color: black;
+    background-color: white;
 }
 
 .footertext {
     padding-top: 30px;
     font-family: Orbitron;
-    color: white;
+    color: black;
+    font-weight: 800;
+}
+
+#glowy {
+    font-size: 60px;
+    text-shadow: 0 0 0.3em black;
+    animation: glow 1.5s infinite alternate;
+    float: none;
+}
+
+/* ids for other pages*/
+#team {
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 30px;
+    color: black;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: #F1684E;
+}
+
+#hp {
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 30px;
+    color: black;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: #F1684E;
+}
+#hp a {
+    text-align: center;
+    font-family: "Josefin Sans";
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: #F1684E;
 }
