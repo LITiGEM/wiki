@@ -99,9 +99,10 @@ h2:hover:before {
     overflow: hidden;
 }
 #show3, #hide3 {
-    height: 100px;
+    height: auto;
     background-color: #E9F6F5;
     position:relative;
+    overflow: hidden;
 }
 
 
@@ -187,7 +188,7 @@ h2:hover:before {
     font-family:"Josefin Sans";
     color: black;
     font-weight:100;
-    font-size:40px;
+    font-size:30px;
     background-color: #F1684E;
 }
 
@@ -198,9 +199,10 @@ h2:hover:before {
 
 .footertext {
     padding-top: 30px;
-    font-family: Orbitron;
+    font-size: 30px;
+    font-family: "Josefin Sans";
     color: black;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 #glowy {
