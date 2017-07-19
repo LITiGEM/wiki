@@ -48,7 +48,7 @@
 
 img {
     height: 200px;
-    width:200px
+    width:200px;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -198,6 +198,7 @@ h2:hover:before {
 
 .footertext {
     padding-top: 30px;
+    font-size: 30px;
     font-family: "Josefin Sans";
     color: black;
     font-weight: 500;
