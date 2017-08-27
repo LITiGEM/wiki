@@ -31,41 +31,23 @@
 <body class="container-fluid">
 
 <!-- NAVBAR -->
-<div id="topbar" class="row">
+<div id="topbar" class="row" style="display: flex; justify-content: center">
     <!-- Teh actual navbar -->
-    <nav class="navbar navbar-toggleable-md fixed-top navbar-light">
+    <nav>
+        <ul id="navlist">
+            <li class="divided" ><a href="#">Project</a>
+                <ul>
+                    <li ><a href="#" class="dropped">Description</a></li>
+                    <li><a href="#" class="dropped">Experiments</a></li>
+                    <li><a href="#" class="dropped">Results</a>
+                        </ul>
 
-        <div class="navbar-brand box d-flex mx-auto">
-            <div class="triangle"></div>
-            <div class="parallelogram1"></div>
-            <div class="parallelogram2"></div>
-        </div>
-
-        <ul class="nav navbar-nav justify-content-end">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle float-right" href="#" id="project" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Project </a>
             </li>
-            <li class="nav-item ">
-                <a class=" float-right nav-link" id="lab" href="#">Lab</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle float-right" href="#" id="modelling" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modelling</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle float-right" href="#" id="HP" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Human Practices</a>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle float-right" href="#" id="team" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Team
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Us</a>
-                    <a class="dropdown-item" href="#">Collaborations</a>
-                    <a class="dropdown-item" href="#">Schwifty</a>
-                </div>
-            </li>
+            <li class="divided"><a href="#">Parts</a></li>
+            <li class="divided"><a href="#">Human Practices</a></li>
+            <li class="divided"><a href="#">Team</a></li>
         </ul>
+
     </nav>
 </div>
 
@@ -78,18 +60,28 @@
         <div class="col-sm-6" style=" display: flex; justify-content: center">
 
         <h1>IrrE experiments</h1>
-        <p class="summary" >To enable our cells to survive on some extreme occasion like when light bulb needs to be cleaned (most cleaning agents contain oxidative reagents), we simulated several extreme conditions that would kill normal bacterial cells e.g. High salinity, whereas our plasmid, iRRE, from previous years would promote the survival level of cells. The cells were either grown in these cultures or treated with. The results have been positive because there has been distinct growth difference between normal cells and iRRE harboring cells.</p>
+        <p class="summary">Our engineered bacteria will need to perform their tasks (e.g. produce light) in extreme conditions. For our gold medal, we improved the BBB biobrick by showing its function in simulated extreme conditions: high salinity. The IrrE biobrick, which gives bacteria the IrrE genes from Deinococcus Radiodurans was found to help our cells survive more than normal cells after 30 hours. This biobrick will help our cells survive when, for example, our light bulb would be cleaned or when in extreme Martian conditions.</p>
         </div>
+
         <div class="col-sm-6" style="display: flex; justify-content: center;">
-            <img src="IrrE.png" height="290px" width="500px">
+            <img src="IrrE.png" height="320px" width="500px">
         </div>
 
     </div>
 
     <div id="detailirre" class="row">
-        <p>Making stereolithography live: we are using light to stick cells to each other in 3D and then produce PHB. Two light systems are proposed: one that produces and transports the cell adhesion proteins to the outer membrane surface; and an instantaneous photocaged non-natural amino acid that upon exposure to light instantaneously allows cells to adhere. The strong covalent bond formed between SpyTag and SpyCatcher is our „glue“ and intimin, an outer membrane protein, will ensure the surface display. Light-induced PHB production is the cherry on the top, achieving a technology similar to stereolithography.</p>
-    </div>
 
+        <div class="col-sm-6 float-left" >
+            <p class="details">In this experiment, we aimed to test viability of IrrE harboring cells (salinity and oxidative stresses) and make improvements on previous data (lubricants) from UCL iGEM 2012 & 2015. Resistance to high salinity is crucial to our project because we need cells to make structures on mars whereas Martian brine may kill normal cells. Cells may also need to survive under oxidative stress because the light bulb we made sometimes needs to be cleaned. Normally cleaning agents contain certain levels of oxidants to reach the disinfectant level. We used 1.5% of H2O2 and treat cells for 15 mins to simulate disinfection process.</p>
+            <p class="details">IrrE cells and control were grown in four media. Controls had LB, while the other either LB+1M NaCl, LB+1.5% H2O2 or LB+40%v/v lubricant. For H2O2 environment, we treated the pelleted cells from overnight culture by incubating them in 1.5% H2O2 solution for 15 mins and then re-suspended the cells with pure LB before inoculation. As for the rest of the samples, overnight cultures were pelleted and re-suspended with pure LB. All inoculation samples started with optical densities of 0.001(OD600=0.001). The cell cultures were put in shaking incubator (37˚C, 220 r.p.m) for 30 hours. Optical densities were measured constantly throughout the whole experiment.</p>
+            <p class="details">The final results have shown the expected results as the graphs illustrated. IrrE promoted the growth of cells in lubricant and brine greatly. There has been conversable growth of H2O2 treated cells although OD600 has not reached level as cells in LB should be. All three tests showed IrrE can provide protections to cells under some extreme conditions and it is necessary for our cells to survive in the bulb when it comes to cleaning and making structures by bacteria on Mars.</p>
+        </div>
+
+        <div class="col-sm-6 float-right" style="display: flex; justify-content: center;">
+            <img src="IrrE_Full.png" height="450px" width="650px">
+        </div>
+
+    </div>
 </div>
 
 
