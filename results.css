@@ -1,0 +1,30 @@
+#summaryirre {
+    height: auto;
+    background-color: #85C8DD;
+    padding: 10px;
+    overflow: hidden;
+
+}
+
+#detailirre {
+    height: auto;
+    background-color: #85C8DD;
+    padding: 10px;
+    overflow: hidden;
+    display:none;
+}
+
+.result {
+    margin-top: 5%;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #85C8DD;
+}
+
+h1 {
+    position: absolute;
+}
+
+.summary {
+    padding:55px 0 10px 30px;
+}

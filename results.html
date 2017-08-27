@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+
+    <link rel="stylesheet" type="text/css" href="results.css">
+
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.lettering-0.6.1.min.js"></script>
+
+    <!-- The JQUERY -->
+    <script>
+        $(document).ready(function(){
+            $("#summaryirre").click(function(){
+                $("#detailirre").slideToggle("slow");
+            });
+        });
+    </script>
+</head>
+
+
+
+<body class="container-fluid">
+
+<!-- NAVBAR -->
+<div id="topbar" class="row">
+    <!-- Teh actual navbar -->
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-light">
+
+        <div class="navbar-brand box d-flex mx-auto">
+            <div class="triangle"></div>
+            <div class="parallelogram1"></div>
+            <div class="parallelogram2"></div>
+        </div>
+
+        <ul class="nav navbar-nav justify-content-end">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-right" href="#" id="project" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Project </a>
+            </li>
+            <li class="nav-item ">
+                <a class=" float-right nav-link" id="lab" href="#">Lab</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-right" href="#" id="modelling" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modelling</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-right" href="#" id="HP" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Human Practices</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-right" href="#" id="team" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Team
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Us</a>
+                    <a class="dropdown-item" href="#">Collaborations</a>
+                    <a class="dropdown-item" href="#">Schwifty</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<!-- IrrE results-->
+<div class="result">
+
+    <div id="summaryirre" class="row">
+
+        <div class="col-sm-6" style=" display: flex; justify-content: center">
+
+        <h1>IrrE experiments</h1>
+        <p class="summary" >To enable our cells to survive on some extreme occasion like when light bulb needs to be cleaned (most cleaning agents contain oxidative reagents), we simulated several extreme conditions that would kill normal bacterial cells e.g. High salinity, whereas our plasmid, iRRE, from previous years would promote the survival level of cells. The cells were either grown in these cultures or treated with. The results have been positive because there has been distinct growth difference between normal cells and iRRE harboring cells.</p>
+        </div>
+        <div class="col-sm-6" style="display: flex; justify-content: center;">
+            <img src="IrrE.png" height="290px" width="500px">
+        </div>
+
+    </div>
+
+    <div id="detailirre" class="row">
+        <p>Making stereolithography live: we are using light to stick cells to each other in 3D and then produce PHB. Two light systems are proposed: one that produces and transports the cell adhesion proteins to the outer membrane surface; and an instantaneous photocaged non-natural amino acid that upon exposure to light instantaneously allows cells to adhere. The strong covalent bond formed between SpyTag and SpyCatcher is our „glue“ and intimin, an outer membrane protein, will ensure the surface display. Light-induced PHB production is the cherry on the top, achieving a technology similar to stereolithography.</p>
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+
+</html>
