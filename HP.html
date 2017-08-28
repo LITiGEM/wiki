@@ -7,50 +7,97 @@
 
     <meta charset="UTF-8">
     <title>Human practices</title>
-    <link rel="stylesheet" type="text/css" href="homepage.css">
+    <link rel="stylesheet" type="text/css" href="HP.css">
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-    <!-- navbar stuff-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.lettering-0.6.1.min.js"></script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
 
 
-<body>
-<b class="borderTop"></b>
-<b class="borderBottom"></b>
-<b class="borderLeft"></b>
-<b class="borderRight"></b>
-<div id="top" class="container-fluid">
-    <div class="row">
-        <h1 id="glowy" class="lit">LIT</h1>
-        <h2 class="lit">Light Induced Technologies</h2>
-        <h2 class="lit2">UCL iGEM 2017</h2>
+<body class="container-fluid">
 
-        <div style="padding-top: 20px" class="navy">
-            <center>
-                <ul id="nav-menu">
-                    <li style="display:inline"><a class="menu-item" href="#">Team</a></li>
-                    <li style="display:inline"><a class="menu-item" href="#">Project</a></li>
-                    <li style="display:inline"><a class="menu-item" href="https://www.instagram.com/the_art_competition/">Instagram competition</a></li>
-                    <li style="display:inline"><a class="menu-item" href="#">Parts</a></li>
-                    <li style="display:inline"><a class="menu-item" href="#">Human Practices</a></li>
+<!-- NAVBAR -->
+<div id="topbar" class="row" style="display: flex; justify-content: center">
+    <!-- Teh actual navbar -->
+    <nav>
+    <ul id="navlist">
+            <li class="divided" ><a href="#">Project</a>
+                <ul>
+                    <li ><a href="#" class="dropped">Description</a></li>
+                    <li><a href="#" class="dropped">Experiments</a></li>
+                    <li><a href="#" class="dropped">Results</a>
                 </ul>
-            </center>
+
+            </li>
+
+            <li class="divided"><a href="#">Parts</a></li>
+
+            <li class="divided"><a href="#">Human Practices</a>
+                <ul>
+                    <li ><a href="#" class="dropped">Public Engagement</a></li>
+                    <li><a href="#" class="dropped">Integrated Practices</a></li>
+                    <li><a href="#" class="dropped">Silver Medal</a>
+                    <li><a href="#" class="dropped">Gold Medal</a>
+                    <li><a href="#" class="dropped">Collaborations</a>
+                </ul>
+            </li>
+            <li class="divided"><a href="#">Team</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div style="margin-top: 100px" class="row">
+    <div id="overview" class="col-sm-9">
+        <p>Our vision for Human practices had communication at its hear. We thought a lot about what potential public engagement and integrated practices can have, on both the science and society as a whole.</p>
+        <p>Some of our highlights involve rethinking the way we communicate science - turning it from passive to an interactive process - so our Game Lab developed - go and see what prototypes and ideas we have developed.</p>
+
+        <div id="games" style="display: flex; justify-content: center">
+            <div>
+                <p class="details">Science Museum</p>
+            </div>
+            <div style="background-color: #34515e"></div>
+            <div style="background-color: gold "></div>
         </div>
+
+        <p>People had their input through our Instagram story.</p>
+
+        <div id="pictures" style="display: flex; justify-content: center">
+            <img src="assets/insta1.jpg" height="200" width="200">
+            <img src="assets/insta2.jpg" height="200" width="200">
+            <img src="assets/insta3.jpg" height="200" width="200">
+        </div>
+
+        <p>The stakeholders that we have interacted with helped us shape the vision for our light induced technologies. We have also explored how working with people from other disciplines might feel like.</p>
+
+        <div class="circle" style="display: inline-flex"><p>Architects</p></div>
+        <div style="background-color: #34515e; display: inline-flex" class="circle"><p>Designers</p></div>
+        <div style="background-color: darkgreen; display: inline-flex" class="circle"><p>City Councils</p></div>
+        <div style="background-color: goldenrod; display: inline-flex" class="circle"><p>ESA</p></div>
     </div>
+
+    <div class="col-sm-2">
+        <center>
+        <h1>Quick links</h1>
+        <ul id="quick">
+            <li><a href="#">Silver Medal</a></li>
+            <li><a href="#">Gold Medal</a></li>
+            <li><a href="#">Collaborations</a></li>
+        </ul>
+        </center>
+    </div>
+
 
 </div>
 
-<p id="hp">Check out our <a href="https://www.instagram.com/the_art_competition/">Instagram competition</a><br>More to come soon</br></p>
 
-
+<!-- Footer -->
 <div id="footer" class="container-fluid">
     <div class="row">
         <h3 class="footertext text-center">Tune into our wavelength</h3>
@@ -83,5 +130,8 @@
         </div>
     </div>
 </div>
+
 </body>
+
+
 </html>
