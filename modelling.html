@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8">
     <title>Description</title>
-    <link rel="stylesheet" type="text/css" href="modelling.css">
+    <link rel="stylesheet" type="text/css" href="css/modelling.css">
 
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -17,6 +17,40 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.lettering-0.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            $("#dgol").click(function(){
+
+                $("#dgol > h2").fadeOut("3000");
+
+                if ($('#dgol > h2').css('display', "none")) {
+                    $("#dgol > p").fadeIn("4000");
+                }
+            });
+
+            $("#dbulb").click(function(){
+
+                $("#dbulb > h2").fadeOut("3000");
+
+                if ($('#dbulb > h2').css('display', "none")) {
+                    $("#dbulb > p").fadeIn("4000");
+                }
+            });
+
+            $("#dadh").click(function(){
+
+                $("#dadh > h2").fadeOut("3000");
+
+                if ($('#dadh > h2').css('display', "none")) {
+                    $("#dadh > p").fadeIn("4000");
+                }
+            });
+
+        });
+
+    </script>
 </head>
 
 
@@ -60,11 +94,39 @@
     <h1>Our models & why</h1>
 
     <!-- In each of them we will explain why we did the model and what people can explore there -->
-    <div class="col-sm-3 model"></div>
-    <div style="background-color: #34515e" class="col-sm-3 model"></div>
-    <div style="background-color: darkgreen " class="col-sm-3 model"></div>
+    <div id="dgol" class="col-sm-3 model">
+        <h2>Game of LIT</h2>
+        <p>We believe that by using simple sets of rules to simulate complex processes one can get an intuition of what further models can be developed. Our cells express SpyTag or SpyCatcher and change their state of being bound or unbound over a period. This informed our wet lab experiments.</p>
+    </div>
+
+    <div id="dbulb" style="background-color: #34515e" class="col-sm-3 model">
+        <h2>Bioluminescent bulb</h2>
+        <p >We decided to model the change in light intensity throughout the depth of our bioluminescent lightbulb, as light tends to be the growth-limiting substrate in photosynthetic processes. This would enable us to optimize the parameters that affect the rate of sugar production from the Cyanobacteria in the co-culture. Through this model we identified: the parameters the Wet Lab could optimise in their experiments; and the optimal ranges the ‘Wet Lab’ should be testing.</p>
+    </div>
+
+    <div id="dadh" style="background-color: darkgreen " class="col-sm-3 model">
+        <h2>Bacterial cell adhesion</h2>
+        <p>'From light to cell adhesion’ – a mathematical model of how E Coli bind to each other. Through this model we wanted to determine the optimum light intensities the Wet Lab should examine in order to optimise the rate at which SpyTag and SpyCatcher, our two binding partners that cause our cells to adhere to each other, are expressed on the surface of our cells. Once we mapped out all the steps involved in the expression of SpyTag and SpyCarcher we were able to determine the rate limiting step in the expression process. We identified Transcription as our rate limiting step and therefore re-evaluated our model adjusting the type of promoter we used. We were then able to pass this information onto the Wet Lab team who took our findings into consideration when selecting their promoters.</p>
+    </div>
     <div style="background-color: #5e364e" class="col-sm-4 model"></div>
     <div style="background-color: #5e3600" class="col-sm-4 model"></div>
+</div>
+
+<!-- Individual models -->
+
+<!-- Game of LIT -->
+<div id="GoL" class="row">
+    <p>We adapted Conway’s Game of Life to fit our cell adhesion project. </p>
+</div>
+
+<!-- Bioluminescence -->
+<div id="Bulb" class="row">
+    <p>We adapted Conway’s Game of Life to fit our cell adhesion project. </p>
+</div>
+
+<!-- Bacterial Cell Adhesion -->
+<div id="BacAdh" class="row">
+    <p>We adapted Conway’s Game of Life to fit our cell adhesion project. </p>
 </div>
 
 </body>
