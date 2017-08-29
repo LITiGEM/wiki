@@ -86,32 +86,46 @@ ul li:hover > ul {
 
 /*The main part*/
 
-.title {
-    position: relative;
-    font-family: "Josefin Sans";
-    font-size: 30px;
-    margin:0;
-    padding: 50px 0 0 10px;
+h1 {
     text-align: center;
-
+    font-family: "Josefin Sans" !important;
+    font-size: 30px;
+    width:100%;
 }
- h2 {
-     position: relative;
-     font-family: "Josefin Sans";
-     font-size: 30px;
-     margin:0;
-     padding: 50px 0 0 10px;
-     text-align: center;
- }
 
- .apps {
-     position: relative;
-     margin:0;
-     padding:20px 0 0 0;
-     list-style: none;
- }
+.model {
+    position: relative;
+    height: 200px;
+    background-color: #F1684E;
+    margin: 10px 10px 10px 10px;
+    padding:0;
+    border-radius: 10px;
+}
 
- .apps li {
-     text-decoration: none;
-     text-align: center;
- }
+h2 {
+    text-align: center;
+    padding:70px 0 0 0;
+    font-family: "Josefin Sans" !important;
+    font-size: 30px;
+    width:100%;
+}
+
+#dgol p {
+    display: none;
+    font-size: 14px;
+    color:white;
+    height: 100%;
+    overflow: scroll;
+}
+
+#dadh p {
+    display: none;
+    font-size: 14px;
+    color:white;
+}
+
+#dbulb p {
+    display: none;
+    font-size: 14px;
+    color:white;
+}
