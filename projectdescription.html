@@ -10,13 +10,97 @@
     <link rel="stylesheet" type="text/css" href="css/projectdescription.css">
 
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.lettering-0.6.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            //this is to check whether at the start one explanation is shown
+            var on = false;
+
+            $("#tech1 > h2").click(function() {
+                //make the div that will hold the text
+                $("#explanation").addClass("show");
+
+                if (on===false){
+                    $("#tech1 > h2").addClass("hide");
+                    $("#exp1").addClass("show");
+                    on=true;
+                } else {
+                    //hide the button that we clicked on
+                    $("#tech1 > h2").addClass("hide");
+
+                    //show the other buttons
+                    $("#tech2 > h2").removeClass("hide");
+                    $("#tech3 > h2").removeClass("hide");
+
+                    //remove the other explanations
+                    $("#exp2").removeClass("show");
+                    $("#exp3").removeClass("show");
+
+                    //show the desired explanation and overwrite if it was hidden
+                    $("#exp1").removeClass("hide");
+                    $("#exp1").addClass("show");
+                }
+            });
+
+            $("#tech2 > h2").click(function(){
+                //make the div that will hold the text
+                $("#explanation").addClass("show");
+
+                if (on===false){
+                    $("#tech2 > h2").addClass("hide");
+                    $("#exp2").addClass("show");
+                    on=true;
+                } else {
+                    //hide the button that we clicked on
+                    $("#tech2 > h2").addClass("hide");
+
+                    //show the other buttons
+                    $("#tech1 > h2").removeClass("hide");
+                    $("#tech3 > h2").removeClass("hide");
+
+                    //remove the other explanations
+                    $("#exp1").removeClass("show");
+                    $("#exp3").removeClass("show");
+
+                    //show the desired explanation and overwrite if it was hidden
+                    $("#exp2").removeClass("hide");
+                    $("#exp2").addClass("show");
+                }
+            });
+
+            $("#tech3 > h2").click(function(){
+                //make the div that will hold the text
+                $("#explanation").addClass("show");
+
+                if (on===false){
+                    $("#tech3 > h2").addClass("hide");
+                    $("#exp3").addClass("show");
+                    on=true;
+                } else {
+                    //hide the button that we clicked on
+                    $("#tech3 > h2").addClass("hide");
+                    //show the other buttons
+                    $("#tech2 > h2").removeClass("hide");
+                    $("#tech1 > h2").removeClass("hide");
+
+                    //remove the other explanations
+                    $("#exp1").removeClass("show");
+                    $("#exp2").removeClass("show");
+
+                    //show the desired explanation and overwrite if it was hidden
+                    $("#exp3").removeClass("hide");
+                    $("#exp3").addClass("show");
+                }
+            });
+        });
+    </script>
 </head>
 
 
@@ -56,76 +140,13 @@
 </div>
 
 <!-- The Light Technologies -->
-<div style="margin-top: 120px" class="row">
+<div id="1" style="margin-top: 120px; display: flex; justify-content: center" class="row">
 
-    <div style="background-color: bisque " class="col-sm-4" >
-        <p class="title">Light-sensitive proteins</p>
-        <p>Light-sensitive proteins change their structures when light of specific wavelengths is absorbed. So, a cell might such a protein sitting on its surface. When light hits, it changes structure, triggering a cascade of events downstream.</p>
-        <div class="diagrams"> This space should have a diagram that illustrates how that functions </div>
+    <div id="tech1" style="background-color: rgba(150,138,255,0.18)" class="col-sm-4 model">
+        <h1 class="title">Light-sensitive proteins</h1>
+        <h2>What are they?<br> </br><span class="glyphicon glyphicon-chevron-down"></span></h2>
 
-        <h2>Applications</h2>
-
-        <ul class="apps">
-            <li>Bacterial Biopolymer production</li>
-            <li>Precise gene targeting</li>
-            <li>Bioluminescence regulation</li>
-        </ul>
-
-        <h2>Experiments</h2>
-
-        <div class="row">
-            <div class="col-sm"><p>Tested this through by doing this. Click here for more information</p></div>
-            <div class="col-sm"><p>Tested this through by doing this. Click here for more information</p></div>
-            <div class="col-sm"><p>Tested this through by doing this. Click here for more information</p></div>
-        </div>
-
-        <h2>Results</h2>
-
-        <div class="row">
-            <div class="col-sm"><p>We got data to support this and that. Click here for more info.</p></div>
-            <div class="col-sm"><p>We got data to support this and that. Click here for more info.</p></div>
-            <div class="col-sm"><p>We got data to support this and that. Click here for more info.</p></div>
-        </div>
-
-    </div>
-
-    <div style="background-color: #b58b7a" class="col-sm-4">
-        <p class="title">Photocleavable proteins</p>
-        <p>Specific light wavelengths can break proteins apart. Think of it as  light that makes 2 amino acids hate each other, thus splitting the protein into two. If that protein is blocking a process, light is therefore the perfect switch to turn it on.</p>
-        <div class="diagrams"> This space should have a diagram that illustrates how that functions </div>
-
-        <h2>Applications</h2>
-
-        <ul class="apps">
-            <li>Bacterial cell adhesion</li>
-            <li>Mammalian cell adhesion</li>
-
-        </ul>
-
-        <h2>Experiments</h2>
-
-        <div class="row">
-            <div class="col-sm"><p>Tested this through by doing this. Click here for more information</p></div>
-            <div class="col-sm"><p>Tested this through by doing this. Click here for more information</p></div>
-            <div class="col-sm"><p>Tested this through by doing this. Click here for more information</p></div>
-        </div>
-
-        <h2>Results</h2>
-
-        <div class="row">
-            <div class="col-sm"><p>We got data to support this and that. Click here for more info.</p></div>
-            <div class="col-sm"><p>We got data to support this and that. Click here for more info.</p></div>
-            <div class="col-sm"><p>We got data to support this and that. Click here for more info.</p></div>
-        </div>
-
-    </div>
-
-    <div style="background-color: bisque " class="col-sm-4" >
-        <p class="title">Light-responsive non-natural amino acids</p>
-        <p>There are such weird things as amino acids that are not natural. When they encounter light, they change similarly to what proteins change in response to light. For example, pyrolysine goes to lysine. I'll let you guess which one is the natural one.</p>
-        <div class="diagrams"> This space should have a diagram that illustrates how that functions </div>
-
-        <h2>Applications</h2>
+        <!--<h2>Applications</h2>
 
         <ul class="apps">
             <li>Bacterial Biopolymer production</li>
@@ -147,29 +168,77 @@
             <div class="col-sm"><p>We got data to support this and that. Click here for more info.</p></div>
             <div class="col-sm"><p>We got data to support this and that. Click here for more info.</p></div>
             <div class="col-sm"><p>We got data to support this and that. Click here for more info.</p></div>
-        </div>
+        </div>-->
+
+    </div>
+
+    <div id="tech2" style="background-color: rgba(118,181,92,0.21)" class="col-sm-4 model">
+        <h1 class="title">Photocleavable proteins</h1>
+        <h2>What are they?<br> </br><span class="glyphicon glyphicon-chevron-down"></span></h2>
+
+    </div>
+
+    <div id="tech3" style="background-color: rgba(255,116,124,0.17) " class="col-sm-4 model">
+        <h1 class="title">Non-natural amino acids</h1>
+        <h2>What are they?<br> </br><span class="glyphicon glyphicon-chevron-down"></span></h2>
 
     </div>
 
 </div>
 
+<div id="explanation" class="row">
+    <p id="exp1">Light-sensitive proteins change their structures when light of specific wavelengths is absorbed. So, a cell might such a protein sitting on its surface. When light hits, it changes structure, triggering a cascade of events downstream.</p>
+    <p id="exp2">Specific light wavelengths can break proteins apart. Think of it as  light that makes 2 amino acids hate each other, thus splitting the protein into two. If that protein is blocking a process, light is therefore the perfect switch to turn it on.</p>
+    <p id="exp3">There are such weird things as amino acids that are not natural. When they encounter light, they change similarly to what proteins change in response to light. For example, pyrolysine goes to lysine. I'll let you guess which one is the natural one.</p>
+</div>
 
-<!-- The 3 Applications in more detail-->
-<div style="background-color: aliceblue" class="row">
+<table>
+    <tr>
+        <th>Light-induced Technology</th>
+        <th><img src="bulb.png" height="100" width="200"><br> </br>Architecture with bacteria</th>
+        <th><img src="bulb.png" height="100" width="200"><br> </br>3D organ printing</th>
+        <th><img src="bulb.png" height="100" width="200"><br> </br>Bacterial light-bulb</th>
+    </tr>
+    <tr>
+        <td>Light-sensitive proteins</td>
+        <td><span class="glyphicon glyphicon-ok ok"></span></td>
+        <td><span class="glyphicon glyphicon-ok ok"></span></td>
+        <td><span class="glyphicon glyphicon-ok ok"></span></td>
+    </tr>
+    <tr>
+        <td>Photocleavable proteins</td>
+        <td></td>
+        <td><span class="glyphicon glyphicon-ok ok"></span></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Photocaged Non-natural Amino Acids</td>
+        <td><span class="glyphicon glyphicon-ok ok"></span></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+
+</table>
+
+<!--
+
+ The 3 Applications in more detail
+<div style="background-color: aliceblue; margin-top: 120px" class="row">
 
     <div class="col-sm-4">
 
         <h2>Bacterial Light Bulb</h2>
 
-        <!-- Here we explain why we use light to tackle this problem and what this problem is-->
+        &lt;!&ndash; Here we explain why we use light to tackle this problem and what this problem is&ndash;&gt;
         <h2>The vision & Why</h2>
 
-        <!-- Here we explain how our biobricks come together to produce the expected outcomes-->
+        &lt;!&ndash; Here we explain how our biobricks come together to produce the expected outcomes&ndash;&gt;
         <h2>How it works</h2>
 
         <p>Step n in the process</p>
         <div class="diagrams"> This space should have a diagram that illustrates how that functions </div>
-        <!-- Here we explain the process that we went through - i.e. mentioning any input from modelling/HP-->
+        &lt;!&ndash; Here we explain the process that we went through - i.e. mentioning any input from modelling/HP&ndash;&gt;
         <p>Step n+1 in the process</p>
         <div class="diagrams"> This space should have a diagram that illustrates how that functions </div>
         <p>Step n+2 in the process</p>
@@ -178,7 +247,7 @@
         <h2>Process</h2>
     </div>
 
-    <!-- Same for the other 2 below-->
+    &lt;!&ndash; Same for the other 2 below&ndash;&gt;
     <div class="col-sm-4">
         <h2>Tissue Regeneration</h2>
         <h2>The vision & Why</h2>
@@ -216,6 +285,7 @@
         <h2>Process</h2>
     </div>
 </div>
+-->
 
 
 </body>
