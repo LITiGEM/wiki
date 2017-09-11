@@ -3,13 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+
+body {
+    margin:0;
+    width: 100%;
+    padding: 0;
+}
 /*The navbar*/
 #topbar {
     background-color:#607d8b;
     position: fixed;
     top:0;
     width: 100%;
-    z-index: 5;
+    z-index: 1000;
 }
 
 nav ul {
@@ -86,125 +92,81 @@ ul li:hover > ul {
 
 /*The main part*/
 
-.title {
-    position: relative;
+#title {
+    margin-top: 100px;
+}
+#title h1 {
+    text-align: center;
     font-family: "Orbitron";
     font-size: 30px;
-    margin:0;
-    padding: 50px 0 0 10px;
+}
+
+#title h2 {
     text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+}
+
+#projectdescription {
+    position: relative;
+    display:flex;
+    justify-content: center;
 
 }
 
-
- .apps {
-     position: relative;
-     margin:0;
-     padding:20px 0 0 0;
-     list-style: none;
- }
-
- .apps li {
-     text-decoration: none;
-     text-align: center;
- }
-
- .diagrams {
-     height: 200px;
-     width:200px;
-     border: solid 3px red;
- }
-
-
-
-.model {
-    position: relative;
+#projectdescription p {
+    text-align: center;
     font-family: "Josefin Sans";
-    background-color: #F1684E;
-    margin: 2%;
-    height: 180px;
-    padding:0;
-    border-radius: 10px;
+    font-size: 20px;
+    width:60%;
+
+}
+
+#philosophy {
+    position: relative;
+    background-color: rgba(190, 93, 245, 0.06);
+    margin:0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-@keyframes hide {
-    0% {opacity:1}
-    100% {opacity:0}
-}
-
-@keyframes show {
-    0% {opacity:0}
-    100% {opacity:1}
-}
-
-.model h1 {
-    padding: 20px 0 20px 0;
-}
-
-.model h2 {
+#philosophy h1 {
+    text-align: center;
+    font-family: Orbitron;
+    padding: 5% 0 0 0;
+    height:50px;
     position: relative;
-    font-size: 20px;
-    margin:0;
-    padding:0 0 0 2%;
+    vertical-align:top;
+}
+
+#philosophy p {
     text-align: center;
-}
-
-
-.selected {
-    width: 50%;
-}
-.selected:hover {
-    transform: scale(1);
-}
-
-.hide {
-    animation: hide 2s forwards;
-}
-.show {
-    animation: show 2s forwards;
-}
-
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 70%;
-    margin: 2% 0 10% 12.5%;
-    background-color: rgba(255,210,199,0.15) !important;
-}
-
-td, th {
-    border-bottom: 1px solid #ddd;
-    padding: 15px !important;
-    font-size: 20px;
-    text-align: center !important;
-    font-family: "Josefin Sans";
-}
-
-/*tr:nth-child(even) {
-    background-color: #dddddd;
-}*/
-
-.ok {
-    font-size: 30px;
-    padding: 5% 0 5% 12%;
-    color: green;
-}
-
-#explanation {
-    display:none;
-    margin:0;
-    background-color: rgba(241, 104, 78, 0.05);
-}
-
-#explanation p {
     font-family: "Josefin Sans";
     font-size: 20px;
-    text-align: center;
-    padding: 2% 30% 2% 30%;
+    width:60%;
+    padding: 5% 0 5% 0;
+}
+
+#modules {
+    justify-content: center;
+}
+
+#highlights {
+    padding: 15px;
+}
+.cycle-overlay {
+    font-family: tahoma, arial;
+    position: absolute; bottom: 0; width: 400px; z-index: 600;
+    background: black; color: white; padding: 10px; opacity: .5;
 
 }
-#exp1, #exp2, #exp3 {
-    display: none;
+
+
+
+
+/*The footer*/
+
+#footer {
+    font-family: Orbitron;
+    font-weight: 600;
 }

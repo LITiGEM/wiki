@@ -3,11 +3,12 @@
 <head>
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
-    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
-
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="css/homepage.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -19,94 +20,98 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <script>
-         $(document).ready(function(){
-             $("#show1").click(function(){
-                 $("#hide1").slideToggle("slow");
-             });
-             $("#show2").click(function(){
-                 $("#hide2").slideToggle("slow");
-             });
-             $("#show3").click(function(){
-                 $("#hide3").slideToggle("slow");
-             });
-         });
-
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.cycle-slideshow').cycle({
+                fx: 'fade'
+            });
+        });
     </script>
 
 </head>
 
 
 
-<body>
+<body class="container-fluid">
 
-<b class="borderTop"></b>
-<b class="borderBottom"></b>
-
-<div id="top" class="container-fluid">
-    <div class="row">
-
-        <!--
-                <h1 id="glowy" class="lit">LIT</h1>
-                <h2 class="lit">Light Induced Technologies</h2>
-                 <h2 class="lit2">UCL iGEM 2017</h2> -->
-
-        <div style="padding-top: 80px" class="navy">
-            <center>
-                <ul id="nav-menu">
-                    <li style="display:inline"><a class="menu-item" href="http://2017.igem.org/Team:UCL">Project</a></li>
-                    <li style="display:inline"><a class="menu-item" href="http://2017.igem.org/Team:UCL/Insta">Instagram Challenge</a></li>
-                    <li style="display:inline"><a class="menu-item" href="http://2017.igem.org/Team:UCL/HP">Human Practices</a></li>
-                    <li style="display:inline"><a class="menu-item" href="http://2017.igem.org/Team:UCL/Team">Team</a></li>
+<!-- NAVBAR -->
+<div id="topbar" class="row" style="display: flex; justify-content: center">
+    <!-- Teh actual navbar -->
+    <nav>
+        <ul id="navlist">
+            <li class="divided" ><a href="#">Project</a>
+                <ul>
+                    <li ><a href="#" class="dropped">Description</a></li>
+                    <li><a href="#" class="dropped">Experiments</a></li>
+                    <li><a href="#" class="dropped">Results</a>
+                    <li><a href="#" class="dropped">Parts</a>
                 </ul>
-            </center>
-        </div>
-    </div>
 
+            </li>
+
+            <li class="divided"><a href="#">Our vision</a></li>
+
+            <li class="divided"><a href="#">Human Practices</a>
+                <ul>
+                    <li ><a href="#" class="dropped">Public Engagement</a></li>
+                    <li><a href="#" class="dropped">Integrated Practices</a></li>
+                    <li><a href="#" class="dropped">Silver Medal</a>
+                    <li><a href="#" class="dropped">Gold Medal</a>
+                    <li><a href="#" class="dropped">Collaborations</a>
+                </ul>
+            </li>
+            <li class="divided"><a href="#">Modelling</a></li>
+            <li class="divided"><a href="#">Judging Criteria</a></li>
+            <li class="divided"><a href="#">Team</a></li>
+        </ul>
+    </nav>
 </div>
 
-<div class="container-fluid">
-    <div style="background-color: #F1684E; width=100%" class="row">
-        <h1 style="font-family: Josefin Sans" id="what">What would you do if we gave you the power to control cells through light?</h1>
-    </div>
-</div>
-<div class="row">
-
-    <div id="show1">
-        <p><i style="float:left" class="fa fa-angle-down" aria-hidden="true"></i>3D structures from E. Coli?</p>
-    </div>
-
-    <div id="hide1">
-        <p>Making stereolithography live: we are using light to stick cells to each other in 3D and then produce PHB. Two light systems are proposed: one that produces and transports the cell adhesion proteins to the outer membrane surface; and an instantaneous photocaged non-natural amino acid that upon exposure to light instantaneously allows cells to adhere. The strong covalent bond formed between SpyTag and SpyCatcher is our „glue“ and intimin, an outer membrane protein, will ensure the surface display. Light-induced PHB production is the cherry on the top, achieving a technology similar to stereolithography.</p>
-    </div>
-
+<div id="title" class="row">
+    <h1>Light Induced Technologies</h1>
+    <h2>UCL iGEM 2017</h2>
 </div>
 
-<div class="row">
-
-    <div id="show2">
-        <p><i style="float:left" class="fa fa-angle-down" aria-hidden="true"></i>or print organs and regenerate tissue?</p>
-    </div>
-
-    <div id="hide2">
-        <p>Mammalian cells can be equally engineered with light. We will use light in two ways: provide a standardised photo activated dCas9 system to trigger the transcription of desired genes; and design a photocaged cadherin blocker, which in contact with light will allow the instantaneous adhesion between cells.</p>
-    </div>
-
+<div id="projectdescription" class="row">
+    <p>Our mission was to show how optogenetics can improve two areas of human life: architecture and regenerative medicine. Three light-induced technologies brought butterflies in our stomachs, so we set out to show everyone how that feels. All three work as light switches that control cellular processes non-invasively and with high spatiotemporal precision. We made standard Biobricks for these light-technologies and then combined them to explore how we could transform the places that we inhabit and how we think about obtaining new human organs.</p>
 </div>
 
-<div style="padding-bottom: 0" class="row">
-
-    <div id="show3">
-        <p><i style="float:left" class="fa fa-angle-down" aria-hidden="true"></i>a bacterial lightbulb?</p>
-    </div>
-
-    <div id="hide3">
-        <p>We aim to produce a more efficient, longer-lasting and reliable light bulb that does not require electricity, mechanical input or continuous nutrient input. To achieve this, we are developing a “smart-bulb” comprised of E. coli cells that can detect sunlight changes and luminesce at night time. To guarantee a constant food source, the E.coli cells will be co-cultured with cyanobacteria that can continuously produce and secrete glucose.</p>
-    </div>
-
+<div id="philosophy" class="row">
+    <h1>Our philosophy</h1>
+    <p>One word characterises our approach towards developing new technologies: holistic. The three light induced technologies need to be described not only as biological parts and as Biobricks, but mainly as part of projects that can impact people’s lives. To show their full potential, we took on the challenge of combining these technologies into real life applications that we explored from many different angles: aesthetics, policy, engineering, entrepreneurship and public engagement.</p>
 </div>
 
+<div id="modules" class="row">
+    <div class="col-sm-3">
+        <img src="bulb.png" height="300" width="500">
+    </div>
+    <div class="col-sm-3">
+        <img src="bulb.png" height="300" width="500">
+    </div>
+    <div class="col-sm-3">
+        <img src="bulb.png" height="300" width="500">
+    </div>
+</div>
 
+<div id="highlights" class="row">
+    <div class="cycle-slideshow col-sm-4">
+        <div class="cycle-overlay"></div>
+        <img src="bulb.png" height="300" width="400" data-cycle-title="LIGHT BULB" data-cycle-desc="Mad Fun">
+        <img src="rejection.jpg" height="300" width="400" data-cycle-title="LONDON SCIENCE MUSEUM" data-cycle-desc="Cray Cray">
+    </div>
+
+    <div  class="cycle-slideshow col-sm-4">
+        <div class="cycle-overlay"></div>
+        <img src="some.jpg" height="300" width="400" data-cycle-title="LIGHT BULB" data-cycle-desc="Mad Fun">
+        <img src="fear.jpg" height="300" width="400" data-cycle-title="LONDON SCIENCE MUSEUM" data-cycle-desc="Cray Cray">
+    </div>
+
+    <div class="cycle-slideshow col-sm-4">
+        <div class="cycle-overlay"></div>
+        <img src="hubble.jpg" height="300" width="400" data-cycle-title="LIGHT BULB" data-cycle-desc="Mad Fun">
+        <img src="6.png" height="300" width="400" data-cycle-title="LONDON SCIENCE MUSEUM" data-cycle-desc="Cray Cray">
+    </div>
+</div>
 
 <div id="footer" class="container-fluid">
     <div class="row">
