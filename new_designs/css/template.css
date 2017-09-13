@@ -148,6 +148,16 @@
     width:120px;
 }
 
+#drop6:hover > .navy-hidden {
+    margin-top: 20px;
+    display:block;
+    visibility:visible;
+    opacity:1;
+}
+
+#drop6:hover > ul li {
+    width:120px;
+}
 
 /* the scrolling side bar*/
 .side-link {
