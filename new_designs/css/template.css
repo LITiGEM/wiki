@@ -188,7 +188,7 @@
     max-width:80%;
     font-size: 20px;
     font-family: "Crimson Text";
-    padding: 3% 3% 3% 15%;
+    padding: 2% 3% 2% 15%;
     margin:0 !important;
 }
 
@@ -204,6 +204,16 @@
     font-weight: 600;
     padding: 2% 1% 1% 15%;
     margin:0;
+}
+
+
+.subtitle {
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 1% 1% 15%;
+    margin:0;
+    color: rgb(163, 161, 168);
 }
 
 .affix {
