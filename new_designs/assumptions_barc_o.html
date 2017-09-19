@@ -83,7 +83,9 @@
             $("#show2").click(function(){
                 $("#hide2").slideToggle("slow");
             });
-
+            $("#show3").click(function(){
+                $("#hide3").slideToggle("slow");
+            });
         });
 
     </script>
@@ -182,9 +184,9 @@
         <!-- The side navbar -->
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Approaches</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Assumptions</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Parameter</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#section1">Assumptions</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Parameters Optimisation</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Sensitivity Analysis</a></li>
             </ul>
         </nav>
 
@@ -200,32 +202,38 @@
             </div>
 
             <div class="text-section">
-                <h1 class="title" style="color:black">Approaches</h1>
+
+                <div class="row">
+                    <div id="show3">
+                        <h2 class="tabletitle">Parameter Optimisation</h2>
+                    </div>
+
+                    <div id="hide3">
+                        <img src="assets/assumptions.png">
+                    </div>
+                </div>
 
                 <div class="row">
                     <div id="show1">
-                        <h2 class="subtitle">Parameter Optimisation</h2>
+                        <h2 class="tabletitle">Parameter Optimisation</h2>
                     </div>
 
                     <div id="hide1">
-                        <img src="assets/Approaches.png">
+                        <img src="assets/Parameter.png">
                     </div>
+                </div>
 
                 <div class="row">
                     <div id="show2">
-                        <h2 class="subtitle">Sensitivity Analysis</h2>
+                        <h2 class="tabletitle">Sensitivity Analysis</h2>
                     </div>
 
                     <div id="hide2">
-                        <ul> <p class="text-content">For,</p>
-                            <br><img src="assets/sensitivityAnalysis_1.png" class="image-content" style=" width:570px; height:100px">
-                            <br><p class="text-content">given,</p>
-                            <br><img src="assets/sensitivityAnalysis_2.png" class="image-content" style=" width:420px; height:90px">
-                            <br><p class="text-content">and</p>
-                            <br><img src="assets/sensitivityAnalysis_3.png" class="image-content" style=" width:1000px; height:450px">
-                        </ul>
+                        <img src="assets/sensitivity.png">
                     </div>
+                </div>
 
+            </div>
 
         </div>
 

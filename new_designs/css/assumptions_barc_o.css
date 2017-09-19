@@ -211,10 +211,19 @@
 .subtitle {
     font-family: "Noto Sans";
     font-size: 18px;
+    font-weight: 600;
+    padding: 2% 1% 1% 35%;
+    margin:0;
+    color: black ;
+}
+
+.tabletitle {
+    font-family: "Noto Sans";
+    font-size: 18px;
     font-weight: 500;
     padding: 0 1% 1% 35%;
     margin:0;
-    color: rgb(163, 161, 168);
+    color: white ;
 }
 
 .affix {
@@ -252,31 +261,55 @@
 
 #show1  {
     height: auto;
-    background-color: #F8FCDA;
-    padding: 10px;
+    background-color: rgba(204, 0, 53, 0.69);
     overflow: hidden;
-    margin:10px 150px 0 150px;
+    max-width:65%;
+    padding: 2% 3% 2% 3%;
+    position:relative;
+    margin-left: 150px;
 }
 
 #hide1 {
     height: auto;
     background-color: white;
-    padding: 10px;
+    max-width:80%;
+    padding: 2% 3% 2% 15%;
     overflow: hidden;
 }
 
 #show2  {
     height: auto;
-    background-color: #F8FCDA;
-    padding: 10px;
+    background-color: rgba(204, 0, 53, 0.69);
     overflow: hidden;
-    margin: 0 160px 0 160px;
+    max-width:65%;
+    padding: 2% 3% 2% 5%;
+    position:relative;
+    margin-left: 150px;
 }
+
 
 #hide2 {
     height: auto;
     background-color: white;
-    padding: 10px;
+    overflow: hidden;
+    max-width:80%;
+    padding: 2% 3% 2% 15%;
+
+#show3  {
+    height: auto;
+    background-color: rgba(204, 0, 53, 0.69);
+    overflow: hidden;
+    max-width:65%;
+    padding: 2% 3% 2% 3%;
+    position:relative;
+    margin-left: 150px;
+}
+
+#hide3 {
+    height: auto;
+    background-color: white;
+    max-width:80%;
+    padding: 2% 3% 2% 15%;
     overflow: hidden;
 }
 
@@ -303,6 +336,4 @@
     width:100%;
     text-align: center;
 }
-
-
 
