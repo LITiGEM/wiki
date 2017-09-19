@@ -184,24 +184,52 @@
 
             <div style="margin-top: 20px" class="text-section">
 
-                <h1 class="title">Overview</h1>
+                <h1 class="title">‘From light to barchitecture’</h1>
 
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <h2 class="subtitle"> A mathematical model of how E. Coli cells form structures.</h2>
 
-                <img src="bacterial-modelling-overview.jpg" class="image-content image-content-here">
+                <div class="text-content">
+                    <ul>With this Model we wanted to</ul>
+                    <li>Determine the rate limiting step in the expression of intimin </li>
+                    <li>Run a Sensitivity Analysis to determine the rate limiting kinetic parameters and optimise their values</li>
+                    <li>Determine the range of light intensities and light pulses our Wet Lab team should test in the lab</li>
+                    <li>Determine and simulate the ideal conditions required to maximise the expression rate of intimin</li>
+                </div>
 
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <img src="assets/Bac_equations1.png" class="image-content image-content-here" style="width:750px; height:450px ">
+
+                <div class="text-content"> Assumptions
+                <li>Mass action kinetics [link to glossary]</li>
+                <li>Michaelis Menten kinetics [link to glossary]</li>
+                <li>All reactions are taking place in cells, which are in a petri dish</li>
+                <li>Light intensity is the only factor affecting protein expression of the cells</li>
+                <li>Every cell is activated by the same light intensity, regardless of their position in the petri dish</li>
+                <li>There is no light reflection or refraction from the cells</li>
+                <li>All cells are at their exponential growth phase </li>
+                <li>All cells are equally as probable to express SpyTag and SpyCatcher</li>
+                <li>SpyTag and SpyCatcher are constitutively expressed with intimin</li>
+                <li>The amount of inactive EL222 transcription factors is equal to the amount of active EL222</li>
+                </div>
 
             </div>
 
 
             <div class="text-section">
                 <h1 class="title">Light activation</h1>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
                 <img id="special-image-1" src="bacterial-modelling-induction.jpg" class="image-content">
 
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <p class="text-content"> Step 1: Activation, dimerization and binding of our Transcription Factor (EL222) to the LuxI promoter
+                    <br>
+                    <br>Location cellular mechanism takes place in: Cytoplasm
+                   <br>
+                    <br>The first stage of our simulation is the photo-initiated dimerization of two EL222 monomers (EL222Monomer) to produce an active EL222 dimer (EL222Dimer), bound to the LuxI promoter.
+                    <br>The photoactivation is dependent on light intensity (L)
+                </p>
+
+                <img src="assets/eq_activation.png" class="image-content" style="width:600px; height:100px">
+                <p class="text-content">We decided to adapt the Hill equation in order to evaluate the effect different light intensities have on the rate of photoactivation. The Hill equation is commonly used to fit inducible promoter genetic circuits</p>
+                <img src="assets/eq_hill.png" class="image-content" style="width:420px; height:110px">
 
             </div>
 
