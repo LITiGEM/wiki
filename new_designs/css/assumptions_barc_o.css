@@ -212,7 +212,7 @@
     font-family: "Noto Sans";
     font-size: 18px;
     font-weight: 500;
-    padding: 0 1% 1% 15%;
+    padding: 0 1% 1% 35%;
     margin:0;
     color: rgb(163, 161, 168);
 }
@@ -246,6 +246,63 @@
     background-color: #177f91; /* Add a dark-grey background on hover */
 }
 
+.wrap {
+    width: 352px;
+}
+
+#show1  {
+    height: auto;
+    background-color: #F8FCDA;
+    padding: 10px;
+    overflow: hidden;
+    margin:10px 150px 0 150px;
+}
+
+#hide1 {
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#show2  {
+    height: auto;
+    background-color: #F8FCDA;
+    padding: 10px;
+    overflow: hidden;
+    margin: 0 160px 0 160px;
+}
+
+#hide2 {
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#show1 p {
+    padding-top: 30px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 30px !important;
+    font-weight: 500;
+    font-family: "Josefin Sans" !important;
+    font-color: black;
+    width:100%;
+    text-align: center;
+}
+
+#show2 p {
+    padding-top: 30px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 30px !important;
+    font-weight: 500;
+    font-family: "Josefin Sans" !important;
+    font-color: black;
+    width:100%;
+    text-align: center;
+}
 
 
 

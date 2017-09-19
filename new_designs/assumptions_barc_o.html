@@ -6,8 +6,8 @@
     <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
     <meta charset="UTF-8">
-    <title>Description</title>
-    <link rel="stylesheet" type="text/css" href="css/template.css">
+    <title>Approaches</title>
+    <link rel="stylesheet" type="text/css" href="css/assumptions_barc_o.css">
 
     <!-- BOOTSTRAP -->
     <!-- Latest compiled and minified CSS -->
@@ -73,6 +73,20 @@
 
         });
     </script>
+
+    <!-- parameter tables -->
+    <script>
+        $(document).ready(function(){
+            $("#show1").click(function(){
+                $("#hide1").slideToggle("slow");
+            });
+            $("#show2").click(function(){
+                $("#hide2").slideToggle("slow");
+            });
+
+        });
+
+    </script>
 </head>
 
 <style>
@@ -102,13 +116,13 @@
                 </ul>
             </li>
 
-                <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
-                    <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Protocols</a></li>
-                        <li><a href="#" class="dropped">Safety</a></li>
-                        <li><a href="#" class="dropped">Stuff</a></li>
-                    </ul>
-                </li>
+            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Protocols</a></li>
+                    <li><a href="#" class="dropped">Safety</a></li>
+                    <li><a href="#" class="dropped">Stuff</a></li>
+                </ul>
+            </li>
             </li>
 
             <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
@@ -165,68 +179,55 @@
 <div class="container-fluid">
     <div class="row">
 
-            <!-- The side navbar -->
+        <!-- The side navbar -->
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Barchitecture</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Mammalian cells</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Light Bulb</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section4">Game of LIT</a></li>
-                <li id="step5" class="navy-link side-link"><a href="#section5">Software</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#section1">Approaches</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Assumptions</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Parameter</a></li>
             </ul>
         </nav>
 
         <!-- Content -->
-            <div style="float: right !important" class="col-sm-10">
+        <div style="float: right !important" class="col-sm-10">
 
-                <div style="margin-top: 20px" class="text-section">
+            <div style="margin-top: 20px" class="text-section">
 
-                    <h1 class="title">Barchitecture</h1>
+                <h1 class="title">Cracking the Model</h1>
 
-                    <p class="text-content">This mathematical model aims to simulate processes of the Barchitecture system, from light activation to bacterial cell-cell adhesion to form 3D structures. The model has been used to direct and optimise our experimental approach. <br>It allowed us to select parameters for light intensity, predict expected timeframes needed for cell adhesion, and assess the theoretical limitations of our synbio system.</br></p>
-
-                    <a class="text-content" href="#">Click here to see an interactive journey of our model</a>
-
-                    <img src="bacterial-modelling-overview.jpg" class="image-content image-content-here">
-
-                </div>
-
-
-                <div class="text-section">
-                    <h1 class="title">Mammalian cells</h1>
-                    <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-                    <img src="bacterial-modelling-translation.jpg" class="image-content image-content-here">
-
-                    <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-                </div>
-
-                <div class="text-section">
-                    <h1 class="title">Light Bulb</h1>
-                    <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                    <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-                </div>
-
-                <div class="text-section">
-                    <h1 class="title">Game of Life -> Game of LIT</h1>
-                    <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                    <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-                </div>
-
-                <div class="text-section">
-                    <h1 class="title">Programming Language choice</h1>
-                    <p class="text-content"> This summer we decided to run our models on two different softwares: MATLAB and Python. Both are high level languages that allowed us to create robust simulations.
-
-                       <br> Upon starting iGEM, everyone on the modelling team wanted to learn a new programming language. Python’s versatile applications and the ability to import packages that other programmers have developed make it easy to get started with new projects. Moreover, since Python is an open source software it is relatively easy to find resources online to help troubleshoot our codes. Since Python is a high-level language we didn’t require a lot of training to become familiar with the language. We organised a couple of tutorial sessions with our iGEM advisers and then jumped straight into working with it.
-
-                       <br> We also decided to use MATLAB for our models, as we were already familiar with this language from our engineering degrees. MATLAB is a powerful language with a very large built-in database of algorithms for image processing. This was particularly useful for the adaptation of the Game of Life.
-                    </p>
-                </div>
-
+                <p class="text-content"> Mathematical Modelling describes complex biological system with mathematical concepts. Often models are set up to predict and simulate biological behaviours. Once, established the parameters need to constantly be optimised with experimental data in order to fit reality to its maximum. Nevertheless, the starting point of a model is not that straight forward, if no experimental data is yet available, reasonable assumptions based on literature, logic and quantitative analysis need to be made.
+                    We applied specific methodologies when deciding on the initial values for our models., the following section will summarise the approaches taken for the rate kinetics equations and sensitivity analysis equations. </p>
             </div>
+
+            <div class="text-section">
+                <h1 class="title" style="color:black">Approaches</h1>
+
+                <div class="row">
+                    <div id="show1">
+                        <h2 class="subtitle">Parameter Optimisation</h2>
+                    </div>
+
+                    <div id="hide1">
+                        <img src="assets/Approaches.png">
+                    </div>
+
+                <div class="row">
+                    <div id="show2">
+                        <h2 class="subtitle">Sensitivity Analysis</h2>
+                    </div>
+
+                    <div id="hide2">
+                        <ul> <p class="text-content">For,</p>
+                            <br><img src="assets/sensitivityAnalysis_1.png" class="image-content" style=" width:570px; height:100px">
+                            <br><p class="text-content">given,</p>
+                            <br><img src="assets/sensitivityAnalysis_2.png" class="image-content" style=" width:420px; height:90px">
+                            <br><p class="text-content">and</p>
+                            <br><img src="assets/sensitivityAnalysis_3.png" class="image-content" style=" width:1000px; height:450px">
+                        </ul>
+                    </div>
+
+
+        </div>
 
         <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
