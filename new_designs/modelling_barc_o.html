@@ -252,22 +252,44 @@
                     <br>
                     <br> Production of mRNA is dependent upon the concentration of the EL222 dimer, required to initiate transcription. Dilution by cell growth is the principal reason for which we added a term of mRNA degradation.
                 </p>
-                <img src="assets/bac_transcription.png" class="image-content" style="width: 400px; height: 100px">
-                
+                <img src="assets/bac_transcription.png" class="image-content" style="width: 420px; height: 100px">
+
             </div>
 
             <div class="text-section">
                 <h1 class="title">Translation</h1>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
-                <img src="bacterial-modelling-translation.jpg" class="image-content image-content-here">
+                <img src="assets/bacterial-translation.png" class="image-content image-content-here">
+                <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 3: Translation
+                    <br>
+                    <br>
+                    <i>Location cellular mechanism takes place in: Cytoplasm</i>
+                    <br>
+                    <br> The change in concentration of the intracellular intimin protein over time is dependent on the rate of translation of mRNA. We introduced a degradation term to represent expected degradation of intimin over time due to its dilution by cell growth.
+                </p>
+                <img src="assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
+                <p class="text-content">As intimin is continuously transported to the surface of the bacteria its concentration in the cytoplasm decreases over time. Therefore, we created a function to take into consideration the transport rate of intimin to the surface of the bacterial capsule.</p>
+                <img src="assets/transport_bac.png" class="image-content" style="width: 380px; height:130px">
+                <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the spatial availability at the plasma membrane. We expect the transport rate of intimin to the membrane to slow as availability of space falls. To describe this, we adapted the Michaelis Menten equation to consider the intimin molecules already occupying the plasma membrane (PSurface), and the maximum occupancy of the plasma membrane.
+                    The variable η sets a limit for the maximum number of intimin proteins that can be expressed on the cell surface and prevents any other proteins to be expressed once that limit is reached.</p>
+            </div>
 
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <div class="text-section">
+                <h1 class="title">Transport</h1>
+
+                <img src="assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
+                <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 3: Transport of intimin to the surface of the cell
+                    <br>
+                    <br>
+                    <i>Location cellular mechanism takes place in: Surface of the bacterial capsule</i>
+                    <br>
+                    <br> The final differential equation simulates the change in concentration of intimin expressed on the surface of the cells over time.  The equation considers both the rate taken for intimin to be transported to the surface and the degradation of intimin.
+                </p>
+                <img src="assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
 
             </div>
             <!-- add link to the project description page-->
-            <h2 class="text-content"> Not enough science? Check out the project description page!</h2>
-
+            <h2 class="subtitle" style="padding-top: 10%; padding-bottom: 10%"> Not enough science? Check out the project description page!</h2>
         </div>
 
         <a href="#" id="myBtn" title="Go to top">Back to Top</a>
