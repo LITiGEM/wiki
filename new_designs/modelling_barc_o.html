@@ -254,9 +254,7 @@
                 </p>
                 <img src="assets/bac_transcription.png" class="image-content" style="width: 420px; height: 100px">
 
-            </div>
 
-            <div class="text-section">
                 <h1 class="title">Translation</h1>
 
                 <img src="assets/bacterial-translation.png" class="image-content image-content-here">
@@ -272,9 +270,7 @@
                 <img src="assets/transport_bac.png" class="image-content" style="width: 380px; height:130px">
                 <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the spatial availability at the plasma membrane. We expect the transport rate of intimin to the membrane to slow as availability of space falls. To describe this, we adapted the Michaelis Menten equation to consider the intimin molecules already occupying the plasma membrane (PSurface), and the maximum occupancy of the plasma membrane.
                     The variable η sets a limit for the maximum number of intimin proteins that can be expressed on the cell surface and prevents any other proteins to be expressed once that limit is reached.</p>
-            </div>
 
-            <div class="text-section">
                 <h1 class="title">Transport</h1>
 
                 <img src="assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
@@ -288,11 +284,68 @@
                 <img src="assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
 
             </div>
-            <!-- add link to the project description page-->
-            <h2 class="subtitle" style="padding-top: 10%; padding-bottom: 10%"> Not enough science? Check out the project description page!</h2>
-        </div>
 
-        <a href="#" id="myBtn" title="Go to top">Back to Top</a>
+            <!-- add link to the project description page-->
+            <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%"> Not enough science? Check out the project description page!</h2>
+
+
+            <div class="text-section">
+                <h1 class="title">Results</h1>
+                <p class="text-content">We analysed the results obtained from our model and decided to take different approaches to optimise them:</p>
+                <div class="text-content">
+                    <li>Parameter Sampling</li>
+                    <li>Sensitivity Analysis</li>
+                </div>
+                <p class="text-content">Moreover, this section displays the results of our cost analysis which evaluates the economical feasibility of our light induced technologies </p>
+
+                <h1 class="title">Determining the rate limiting step in intimin expression</h1>
+                <p class="text-content">We decided to use thermodynamic modelling to simulate the cellular mechanisms involved in the expression of intimin to determine the rate limiting step. </p>
+                <img src="assets/graph1.png" class="image-content image-content-here">
+                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Fig.1 </i> Rate of Cellular Mechanisms involved in intimin expression
+                <br>
+                    <br>Figure 1 shows the rates of each cellular mechanism involved in intimin expression. The concentration of surface protein expressed appears much lower than the concentration of species produced at the other steps involved in the process. Therefore, we plotted figure 2, which shows a close up of the rate of intimin transport to the surface of the cell.
+                </p>
+                 <img src="assets/graph2.png" class="image-content" style="width: 750px; height: 500px">
+                <p class="text-content"style="margin-top: 0; padding-top:0"> <i>Fig.2 </i> The scale of the graph is re-adjusted to view the rate of the surface expression of intimin.</p>
+
+                <table  class="text-content" style="width: 100%; margin-left: 100px">
+                    <tr>
+                        <th>Reaction</th>
+                        <th>Time taken to plateau (hr) </th>
+                    </tr>
+                    <tr>
+                        <td>Dimerization of EL222</td>
+                        <th>1.3</th>
+
+                    </tr>
+                    <tr>
+                        <td>Transcription</td>
+                        <th>2.4</th>
+                    </tr>
+
+                    <tr>
+                        <td>Translation</td>
+                        <th>2.5</th>
+                    </tr>
+
+                    <tr>
+                        <td>Transpor of intimin to the surface</td>
+                        <th>3.2</th>
+                    </tr>
+                </table>
+
+                <p class="text-content">A rate limiting step in a process is the step that takes the longest amount of time to reach its maximum value, essentially the time taken for the plot to plateau.
+                    We identified the rate at which intimin is transported to the surface of the cells as the rate limiting step in this cellular mechanism.
+                    Since the rapidity of cell adhesion is vital for LIT Barchitecture we decided to identify the rate limiting parameters within the Ordinary Differential Equation we used to describe the transport of intimin to the cell surface.
+                </p>
+
+                <h1 class="title">Optimisation of the rate limiting step</h1>
+                <p>A focus was placed on evaluating the effect three main parameters had on the rate of intimin surface expression: V<sub>max</sub>, Km and Light Intensity. The maximum and minimum values that could be used for each parameter were determined from papers.
+                </p>
+            </div>
+
+
+            <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
     </div>
 </div>
