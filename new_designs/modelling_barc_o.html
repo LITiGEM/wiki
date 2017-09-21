@@ -173,9 +173,9 @@
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
                 <li id="step1" class="navy-link side-link"><a href="#section1">Overview</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Light activation</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Transcription</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section3">Translation</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Background</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Results</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Cost Analysis</a></li>
             </ul>
         </nav>
 
@@ -190,13 +190,11 @@
 
                 <div class="text-content">
                     <ul> Model aims:
-                    <li>Determine the rate limiting step in the expression of intimin. Intimin is the surface protein to which we attach
-                    our binding partners SpyTag and SpyCatcher to allow our cells to adhere to eachother</li>
+                    <li>Determine the rate limiting step in the cellular mechanism.</li>
                     <li> Determine  which kinetic parameters from our rate limiting step are rate-limiting snd optimise their values with two approaches: a conventional
                     Sensitivity Analysis; and Parameter Sampling</li>
                     <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test in the lab</li>
-                    <li>Determine and simulate the ideal conditions required to maximise the expression rate of intimin on the surface of our cells</li>
-                    <li> Conduct a Cost Analysis to evaluate whether our optogenetic tools are affordable technologies that
+                        <li> Conduct a Cost Analysis to evaluate whether our optogenetic tools are affordable technologies that
                     can infiltrate the market</li> </ul>
                 </div>
 
@@ -222,7 +220,8 @@
                 <h1 class="title">The Science behind LEGIT</h1>
                 <img src="bacterial-modelling-overview.jpg" class="image-content">
 
-                <ol class="text-content" type="'1"> LEGIT models the light activated expression of the surface protein intimin on E.coli cells.
+                <ol class="text-content" type="'1"> LEGIT models the light activated expression of the surface protein intimin on E.coli cells. We are attaching
+                    our binding partners SpyTag and SpyCatcher to intimin to allow our cells to adhere to eachother
                     Our model can be divided into four main steps:
                     <br> </br>
                     <li>Light activation</li>
@@ -230,7 +229,7 @@
                     <li>Translation</li>
                     <li>Trasnport of intimin to the surface of the cell</li> </ol>
 
-                <ul class="text-content"> LEGIT differs from conventional models that simulate protein expression, because we've incorporated two innovative twists within it:
+                <ul class="text-content"> Innovative twists in LEGIT:
                 <li> The light activation of our Transcription Factors that bind to the LuxI promoter to initiate transcription </li>
                 <li> The transmembranal transport of intimin protein to the cell surface </li> </ul>
 
@@ -243,7 +242,7 @@
                 <img id="special-image-1" src="bacterial-modelling-induction.jpg" class="image-content" style="margin-bottom: 0">
 
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter
-                    <br> <i>Step Location: Cytoplasm</i>
+                    <br> <i>Location: Cytoplasm</i>
                     <br>
                     <br>The first stage of our simulation is the photo-initiated dimerization of two EL222 monomers (EL222<sub>M</sub>) to produce an active EL222 dimer (EL222<sub>D</sub>).
                     The EL222<sub>D</sub> then binds to the LuxI promoter.
@@ -260,7 +259,7 @@
                 <img src="bacterial-modelling-transcription.jpg" class="image-content image-content-here">
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
                     <br>
-                    <i>Step location: Cytoplasm</i>
+                    <i>location: Cytoplasm</i>
                     <br>
                     <br> The production of mRNA is dependent upon the concentration of the EL222<sub>D</sub> and the rate at which EL222<sub>D</sub> binds to the
                     LuxI promoter. We took dilution rates into consideration to account for cell growth and mRNA degradation.
@@ -271,7 +270,7 @@
                 <h1 class="title">Translation</h1>
                 <img src="assets/bacterial-translation.png" class="image-content image-content-here">
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 3: Translation
-                    <br>Step Location: Cytoplasm</i>
+                    <br>Location: Cytoplasm</i>
                     <br>
                     <br>
                 The change in concentration of the intracellular intimin protein over time is dependent on the rate of translation of mRNA. We introduced a degradation term to represent the degradation of intimin over time due to dilution from
@@ -290,7 +289,7 @@
                 <img src="assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
                 <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 3: Transport of intimin to the surface of the cell
                     <br>
-                    <i>Step Location: Surface of the bacterial capsule</i>
+                    <i>Location: Surface of the bacterial capsule</i>
                     <br>
                     <br> The final differential equation simulates the change in concentration of intimin expressed on the surface of the cells over time.  The equation considers both the rate taken for intimin to be transported to the surface and the degradation of intimin.
                 </p>
@@ -371,7 +370,7 @@
 
                 <img src="assets/Km%20Sensitivity.png" class="image-content" style="width: 800px; height: 450px">
                 <br>
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 4</i> Effect Km has on the rate of intimin expression to the cell surface
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5</i> Effect Km has on the rate of intimin expression to the cell surface
                 <br>
 
                 <h2 class="subtitle">Approach 2 </h2>
@@ -390,11 +389,34 @@
             <h1 class="title">Evaluating the effect light pulsing has on intimin expression</h1>
 
             <p class="text-content">We wanted to evaluate whether light strobing had an effect on intimin expression, more specifically we wanted to see whether continuously activating and
-                deactivating our light induced system resulted in the expression of a larger concentration of intimin on the surface of the cell.</p>
+                deactivating our light induced system resulted in the expression of a larger concentration of intimin on the surface of the cell.
+                <br>
+                <br>We first ran the whole cellular mechanism with one pulse of light, to ensure we received a curved response. </p>
+                <img src="assets/graph6.png" class="image-content" style="width:950px; height: 450px">
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 6</i> Visualising the effect 1 pulse has on the rate kinetics
+                <br>
+                <br>Fig. 6 shows that all the steps involved in the expression of intimin experience a curved shape in terms of the relative concentration of their products. This is justifiable, as when the light is turned off we expect the rate of product production to become smaller than the rate of product degradation. Therefore, as time passes the concentration of each product from each step is expected to decrease.
+                <br>
+                    <br> We then wanted to evaluate the effect pulsing for periods of 4 hours would have on the expression of intimin on the surface of the cell.</p>
+                <img src="assets/graph7.png" class="image-content image-content-here" style="width: 700px; height: 500px">
+                <p class="text-content">Fig. 7 The effect pulsing light in 4 hour intervals has on the intimin surface expression
+                    <br>
+                    <br>From Fig. 7 we discovered that if we pulse light on the cells for a period of 4 hours three times within 24 hours, we experience more than a 10-fold increase in the concentration of intimin expressed on the surface of the cells.
+                </p>
 
-
-
-            </div>
+            <div class="text-section">
+            <h1 class="title">Cost Analysis for parameter optimisation</h1>
+            <p class="text-content">To ensure the costs for operating our Light Induced Barchitecture we decided to determine the different operational costs a user would incur depending on the Light Intensity they used to activate the cellular mechanism and the presence and frequency of pulsing. We did so through creating a function in Python that took both costs into consideration.</p>
+            <img src="assets/graph7.png" class="image-content" style="width: 750px; height:500px">
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8</i> Light intensity effect on cos
+                <br>
+                <br> Figure 8 shows that the increase in light intensity is proportional to the cost for 2 hours of operation.
+                <br>
+                <br> We then decided to plot the effect of different light intensities and pulsing durations have on the overall cost for the operation.
+            </p>
+            <img src="assets/graph10%20.png" class="image-content" style="width:800px; height:500px">
+        </div>
+        </div>
 
 
 
