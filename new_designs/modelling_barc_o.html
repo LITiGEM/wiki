@@ -184,29 +184,33 @@
 
             <div style="margin-top: 20px" class="text-section">
 
-                <h1 class="title">‘LEGIT: From light to barchitecture’</h1>
+                <h1 class="title">‘LEGIT: From light to structure’</h1>
 
-                <h2 class="subtitle"> A mathematical model of how E. Coli cells form structures.</h2>
+                <h2 class="subtitle"> A mathematical model of how E. Coli cells are guided to form structures</h2>
 
                 <div class="text-content">
-                    <ul>With this Model we wanted to</ul>
-                    <li>Determine the rate limiting step in the expression of intimin </li>
-                    <li>Run a Sensitivity Analysis to determine the rate limiting kinetic parameters and optimise their values</li>
-                    <li> Optimize our parameters using parameter sampling </li>
-                    <li>Determine the range of light intensities and light pulses our Wet Lab team should test in the lab</li>
-                    <li>Determine and simulate the ideal conditions required to maximise the expression rate of intimin</li>
+                    <ul> Model aims:
+                    <li>Determine the rate limiting step in the expression of intimin. Intimin is the surface protein to which we attach
+                    our binding partners SpyTag and SpyCatcher to allow our cells to adhere to eachother</li>
+                    <li> Determine  which kinetic parameters from our rate limiting step are rate-limiting snd optimise their values with two approaches: a conventional
+                    Sensitivity Analysis; and Parameter Sampling</li>
+                    <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test in the lab</li>
+                    <li>Determine and simulate the ideal conditions required to maximise the expression rate of intimin on the surface of our cells</li>
+                    <li> Conduct a Cost Analysis to evaluate whether our optogenetic tools are affordable technologies that
+                    can infiltrate the market</li> </ul>
                 </div>
 
                 <img src="assets/Bac_equations1.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 150px ">
 
                <div  class="text-content">
                    <p>Legend
-                   <br>E<sub>M</sub>= EL222 monomer
+
+                   <br>E<sub>M</sub> = EL222 monomer
                    <br>E<sub>D</sub> = EL222 dimer
                    <br>Pr<sub>LuxI</sub> = LuxI Promoter
-                   <br>Pr<sub>LuxI+ED</sub>= EL222 dimer bound to the promoter
-                   <br>P<sub>Intimin</sub>= Intimin protein in the cytoplasm
-                   <br>P<sub>Surface</sub>= Intimin protein on the cell surface
+                   <br>Pr<sub>LuxI+E<sub>D</sub></sub> = EL222 dimer bound to the promoter
+                   <br>P<sub>Intimin</sub> = Intimin protein in the cytoplasm
+                   <br>P<sub>Surface</sub> = Intimin protein on the cell surface
                </p>
                </div>
 
@@ -217,9 +221,19 @@
 
                 <h1 class="title">The Science behind LEGIT</h1>
                 <img src="bacterial-modelling-overview.jpg" class="image-content">
-                <p class="text-content"> LEGIT models the light activated expression of theh surface protein intimin. Our model takes on an innovative twist as it simulates the effect of light as an inducer and models the transmembrane transport of the intimin protein.
-                <br>
-                    <br> Scroll down for more details! </p>
+
+                <ol class="text-content" type="'1"> LEGIT models the light activated expression of the surface protein intimin on E.coli cells.
+                    Our model can be divided into four main steps:
+                    <br> </br>
+                    <li>Light activation</li>
+                    <li>Transcription</li>
+                    <li>Translation</li>
+                    <li>Trasnport of intimin to the surface of the cell</li> </ol>
+
+                <ul class="text-content"> LEGIT differs from conventional models that simulate protein expression, because we've incorporated two innovative twists within it:
+                <li class="text-content"> The light activation of our Transcription Factors that bind to the LuxI promoter to initiate transcription </li>
+                <li class="text-content"> The transmembranal transport of intimin protein to the cell surface </li> </ul>
+
             </div>
 
             <div class="text-section">
@@ -228,16 +242,15 @@
 
                 <img id="special-image-1" src="bacterial-modelling-induction.jpg" class="image-content" style="margin-bottom: 0">
 
-                <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Activation, dimerization and binding of our Transcription Factor (EL222) to the LuxI promoter
+                <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter
+                    <br> <i>Step Location: Cytoplasm</i>
                     <br>
-                    <br>location cellular mechanism takes place in: Cytoplasm
-                    <br>
-                    <br>The first stage of our simulation is the photo-initiated dimerization of two EL222 monomers (EL222Monomer) to produce an active EL222 dimer (EL222Dimer), bound to the LuxI promoter.
-                    <br>The photoactivation is dependent on light intensity (L)
+                    <br>The first stage of our simulation is the photo-initiated dimerization of two EL222 monomers (EL222<sub>M</sub>) to produce an active EL222 dimer (EL222<sub>D</sub>).
+                    The EL222<sub>D</sub> then binds to the LuxI promoter.
                 </p>
 
                 <img src="assets/eq_activation.png" class="image-content" style="width:600px; height:100px">
-                <p class="text-content">We decided to adapt the Hill equation in order to evaluate the effect different light intensities have on the rate of photoactivation. The Hill equation is commonly used to fit inducible promoter genetic circuits</p>
+                <p class="text-content"> The photoactivation is dependent on light intensity (L). The Hill equation is commonly used to fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate the effect different light intensities would have on the rate of photoactivation of EL222. </p>
                 <img src="assets/eq_hill.png" class="image-content" style="width:400px; height:120px">
 
             </div>
@@ -247,10 +260,10 @@
                 <img src="bacterial-modelling-transcription.jpg" class="image-content image-content-here">
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
                     <br>
+                    <i>Step location: Cytoplasm</i>
                     <br>
-                    <i>Location cellular mechanism takes place in: Cytoplasm</i>
-                    <br>
-                    <br> Production of mRNA is dependent upon the concentration of the EL222 dimer, required to initiate transcription. Dilution by cell growth is the principal reason for which we added a term of mRNA degradation.
+                    <br> The production of mRNA is dependent upon the concentration of the EL222<sub>D</sub> and the rate at which EL222<sub>D</sub> binds to the
+                    LuxI promoter. We took dilution rates into consideration to account for cell growth and mRNA degradation.
                 </p>
                 <img src="assets/bac_transcription.png" class="image-content" style="width: 420px; height: 100px">
 
@@ -259,16 +272,18 @@
 
                 <img src="assets/bacterial-translation.png" class="image-content image-content-here">
                 <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 3: Translation
+                    <i>Step Location: Cytoplasm</i>
                     <br>
-                    <br>
-                    <i>Location cellular mechanism takes place in: Cytoplasm</i>
-                    <br>
-                    <br> The change in concentration of the intracellular intimin protein over time is dependent on the rate of translation of mRNA. We introduced a degradation term to represent expected degradation of intimin over time due to its dilution by cell growth.
+                    <br> The change in concentration of the intracellular intimin protein over time is dependent on the rate of translation of mRNA. We introduced a degradation term to represent the degradation of intimin over time due to dilution from
+                    cell growth and the half-life of the intimin protein.
                 </p>
                 <img src="assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
                 <p class="text-content">As intimin is continuously transported to the surface of the bacteria its concentration in the cytoplasm decreases over time. Therefore, we created a function to take into consideration the transport rate of intimin to the surface of the bacterial capsule.</p>
+
                 <img src="assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
-                <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the spatial availability at the plasma membrane. We expect the transport rate of intimin to the membrane to slow as availability of space falls. To describe this, we adapted the Michaelis Menten equation to consider the intimin molecules already occupying the plasma membrane (PSurface), and the maximum occupancy of the plasma membrane.
+                <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the spatial availability at the plasma membrane. We expect the transport rate of intimin to the membrane to slow as availability of space decreases. To describe this, we adapted the Michaelis Menten equation
+                    to consider the intimin molecules already occupying the plasma membrane (P<sub>Surface</sub>), and the maximum available occupancy of the plasma membrane.
+
                     The variable η sets a limit for the maximum number of intimin proteins that can be expressed on the cell surface and prevents any other proteins to be expressed once that limit is reached.</p>
 
                 <h1 class="title">Transport</h1>
@@ -276,8 +291,7 @@
                 <img src="assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
                 <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 3: Transport of intimin to the surface of the cell
                     <br>
-                    <br>
-                    <i>Location cellular mechanism takes place in: Surface of the bacterial capsule</i>
+                    <i>Step Location: Surface of the bacterial capsule</i>
                     <br>
                     <br> The final differential equation simulates the change in concentration of intimin expressed on the surface of the cells over time.  The equation considers both the rate taken for intimin to be transported to the surface and the degradation of intimin.
                 </p>
