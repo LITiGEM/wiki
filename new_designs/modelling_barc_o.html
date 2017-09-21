@@ -301,29 +301,22 @@
             <!-- add link to the project description page-->
             <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%"> Not enough science? Check out the project description page!</h2>
 
-
             <div class="text-section">
                 <h1 class="title">Results</h1>
-                <p class="text-content">We analysed the results obtained from our model and decided to take different approaches to optimise them:</p>
-                <div class="text-content">
-                    <li>Parameter Sampling</li>
-                    <li>Sensitivity Analysis</li>
                 </div>
-                <p class="text-content">Moreover, this section displays the results of our cost analysis which evaluates the economical feasibility of our light induced technologies </p>
-
                 <h1 class="title">Determining the rate limiting step in intimin expression</h1>
-                <p class="text-content">We decided to use thermodynamic modelling to simulate the cellular mechanisms involved in the expression of intimin to determine the rate limiting step. </p>
+                <p class="text-content">We decided to use thermodynamic modelling to simulate the cellular mechanisms involved in the surface expression of intimin, in order to determine the rate limiting step. </p>
                 <img src="assets/graph1.png" class="image-content image-content-here">
-                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Fig.1 </i> Rate of Cellular Mechanisms involved in intimin expression
+                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1 </i> Rate of Cellular Mechanisms involved in intimin expression
                 <br>
                     <br>Figure 1 shows the rates of each cellular mechanism involved in intimin expression. The concentration of surface protein expressed appears much lower than the concentration of species produced at the other steps involved in the process. Therefore, we plotted figure 2, which shows a close up of the rate of intimin transport to the surface of the cell.
                 </p>
                  <img src="assets/graph2.png" class="image-content" style="width: 750px; height: 500px">
-                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Fig.2 </i> The scale of the graph is re-adjusted to view the rate of the surface expression of intimin.</p>
+                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 2 </i> Re-adjusted graph scale to view the rate of the surface expression of intimin</p>
 
                 <table style="width: 70%; margin-left: 150px">
                     <tr>
-                        <th class="text-content" style="padding: 0">Reaction</th>
+                        <th class="text-content" style="padding: 0">Step</th>
                         <th class="text-content" style="padding: 0">Time taken to plateau (hr) </th>
                     </tr>
                     <tr>
@@ -349,35 +342,60 @@
 
                 <p class="text-content">A rate limiting step in a process is the step that takes the longest amount of time to reach its maximum value, essentially the time taken for the plot to plateau.
                     We identified the rate at which intimin is transported to the surface of the cells as the rate limiting step in this cellular mechanism.
-                    Since the rapidity of cell adhesion is vital for LIT Barchitecture we decided to identify the rate limiting parameters within the Ordinary Differential Equation we used to describe the transport of intimin to the cell surface.
+                    Since the rapidity of cell adhesion is vital for LIT Barchitecture we decided to identify the rate limiting parameters within the ODE we used to describe the transport of intimin to the cell surface.
                 </p>
 
-                <h1 class="title">Optimisation of the rate limiting step</h1>
-                <p class="text-content">A focus was placed on evaluating the effect three main parameters had on the rate of intimin surface expression: V<sub>max</sub>, Km and Light Intensity. The maximum and minimum values that could be used for each parameter were determined from papers.</p>
-                <ul class="subtitle">Approaches: </ul>
-                <li class="text-content">Approach 1: We identified the maximum and minimum value each parameter could have and tested equally spaced intervals within their range</li>
-                <li class="text-content">Approach 2: We decided to take biological noise into consideration. Where through the use of parameter sampling, we assigned a weighting to each of the variables we identified in order to calculate a weighted average. We then used our weighted average to randomly select parameters from a normal distribution we created</li>
-                <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising Light Intensity</h2>
+            <h1 class="title">Optimising Light Intensity</h1>
                 <p class="text-content">The range of values we selected to test fell within the range of 0 W/m<sup>2</sup> and 70 W/m<sup>2</sup>, where 0 W/m<sup>2</sup> represented our system in its off state and 70 W/m<sup>2</sup> represented the maximum light intensity E.coli can withstand before they start dying.</p>
                 <h2 class="subtitle">Approach 1 </h2>
                 <img src="assets/graph3.png" class="image-content" style="width: 800px; height: 450px">
                 <br>
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Fig.3 </i> Effect of light intensity on the rate of intimin expression on the cell surface
-                <br>
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 3 </i> Effect of light intensity on the rate of intimin expression on the cell surface
+                    <br>
                 <p class="text-content">Fig. 3 shows that an increase in light intensity used to activate the expression of intimin corresponds to an increase in the concentration of intimin expressed on the surface of the cells. Interestingly, at 0 W/m<sup>2</sup> we still experience some intimin expression due to leakage of promotor expression, this concentration of intimin was assumed to not be enough to cause cells to adhere to one another.</p>
 
-                <h2 class="subtitle">Approach 2 </h2>
-
-                <!--ADD TEXT AND GRAPH HERE -->
                 <h2 class="subtitle">Wetlab contribution </h2>
                 <p class="text-content">We could conduct experiments where the transcription factor EL222 is extracted, exposed to UV light and run on an SDS page. This way we could change different light intensities and evaluate the effect it would have on dimerization of EL222.
                     The dimerised EL222 (1332 bp) will travel a smaller distance down the page than the monomer EL222 (666 bp) due to their larger molecular weight.</p>
 
+                <h1 class="title">Optimisation Approaches for rate-limiting parameters</h1>
+
+                <p class="text-content">A focus was placed on evaluating the effect two main parameters had on the rate of intimin surface expression: V<sub>max</sub> and Km. The maximum and minimum values that could be used for each parameter were determined from papers.</p>
+                <ul class="subtitle">Approaches: </ul>
+                <li class="text-content">Sensitivity Analysis: We identified the maximum and minimum value each parameter could have and tested equally spaced intervals within their range</li>
+                <li class="text-content">Parameter Sampling: We decided to take biological noise into consideration. Where through the use of parameter sampling, we assigned a weighting to each of the variables we identified in order to calculate a weighted average. We then used our weighted average to randomly select parameters from a normal distribution we created</li>
+
                 <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the K<sub>m</sub> value</h2>
-                <p class="text-content">In the transport of intimin to the surface of the cell K<sub>m</sub> represents the affinity the surface of the cell has for the intimin. Ideally, we would want a low Km value to increase the affinity of the cell surface for the intimin.</p>
+                <p class="text-content">In the transport of intimin to the surface of the cell K<sub>m</sub> represents the affinity the surface of the cell has for the intimin. Ideally, we would want a low Km value to increase the affinity of the cell surface for the intimin as this would decrease the time taken for intimin to be transported to the cell surface.</p>
                 <h2 class="subtitle">Approach 1 </h2>
-                
+
+                <img src="assets/Km%20Sensitivity.png" class="image-content" style="width: 800px; height: 450px">
+                <br>
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 4</i> Effect Km has on the rate of intimin expression to the cell surface
+                <br>
+
+                <h2 class="subtitle">Approach 2 </h2>
+
+                <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the V<sub>max</sub> value</h2>
+            <p class="text-content">V<sub>max</sub> represents the maximum rate at which intimin can be expressed on the surface of the cell.
+                    Therefore, we would want to maximise this value to decrease the time it takes for the surface of the cell to fill up with intimin.</p>
+                <h2 class="subtitle">Approach 1 </h2>
+
+                <img src="assets/Vmax%20Sensitivity.png" class="image-content" style="width: 800px; height: 450px">
+                <br>
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 4</i> Effect V<sub>max</sub> has on the rate of intimin expression to the cell surface
+                <br>
+                <h2 class="subtitle">Approach 2 </h2>
+
+            <h1 class="title">Evaluating the effect light pulsing has on intimin expression</h1>
+
+            <p class="text-content">We wanted to evaluate whether light strobing had an effect on intimin expression, more specifically we wanted to see whether continuously activating and
+                deactivating our light induced system resulted in the expression of a larger concentration of intimin on the surface of the cell.</p>
+
+
+
             </div>
+
 
 
             <a href="#" id="myBtn" title="Go to top">Back to Top</a>
