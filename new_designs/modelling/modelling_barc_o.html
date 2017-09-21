@@ -342,6 +342,7 @@
 
                 <p class="text-content">A focus was placed on evaluating the effect two main parameters had on the rate of intimin surface expression: V<sub>max</sub> and Km. The maximum and minimum values that could be used for each parameter were determined from papers.</p>
                 <ul class="subtitle">Approaches: </ul>
+            <!-- Add hyperlink to glossary-->
                 <li class="text-content">Sensitivity Analysis: We identified the maximum and minimum value each parameter could have and tested equally spaced intervals within their range</li>
                 <li class="text-content">Parameter Sampling: We decided to take biological noise into consideration. Where through the use of parameter sampling, we assigned a weighting to each of the variables we identified in order to calculate a weighted average. We then used our weighted average to randomly select parameters from a normal distribution we created</li>
 
@@ -365,10 +366,11 @@
 
                 <img src="../assets/Km%20Sensitivity.png" class="image-content" style="width: 800px; height: 450px">
                 <br>
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5</i> Effect Km has on the rate of intimin expression to the cell surface
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5</i> Sensitivity Analysis. Effect K<sub>m</sub> has on the rate of intimin expression to the cell surface
                 <br>
 
                 <h2 class="subtitle">Approach 2 </h2>
+
 
                 <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the V<sub>max</sub> value</h2>
             <p class="text-content">V<sub>max</sub> represents the maximum rate at which intimin can be expressed on the surface of the cell.
@@ -394,10 +396,37 @@
                 <br>
                     <br> We then wanted to evaluate the effect pulsing for periods of 4 hours would have on the expression of intimin on the surface of the cell.</p>
                 <img src="../assets/graph7.png" class="image-content image-content-here" style="width: 700px; height: 500px">
-                <p class="text-content">Fig. 7 The effect pulsing light in 4 hour intervals has on the intimin surface expression
+                <p class="text-content"><i>Fig. 7 </i>The effect pulsing light in 4 hour intervals has on the intimin surface expression
                     <br>
                     <br>From Fig. 7 we discovered that if we pulse light on the cells for a period of 4 hours three times within 24 hours, we experience more than a 10-fold increase in the concentration of intimin expressed on the surface of the cells.
                 </p>
+
+            <div class="text-section">
+                <h1 class="title">Optimised conditions </h1>
+                <p class="text-content">We determined that the greatest increase in the rate at which intimin is transported to the surface of the cells occurred when the value of ‘km’ decreased and the values of ‘Vmax’ increased. This is something we expected as the lower the value of km the higher the affinity an enzyme has for a substrate, therefore the faster the transport of the substrate to the active site of the membrane. In addition, the higher the Vmax the faster the rate at which the reaction occurs. Thus, the combination of both of these phenomena results in a faster transport of intimin to the surface of the cell.</p>
+                <table style="width: 50%; margin-left: 150px">
+                    <tr>
+                        <th class="text-content" style="padding: 0">Optimised Paramter</th>
+                        <th class="text-content" style="padding: 0">Value </th>
+                    </tr>
+                    <tr>
+                        <td class="text-content" style="padding: 0">K<sub>m</sub> (uM)</td>
+                        <th class="text-content" style="padding: 0">1</th>
+
+                    </tr>
+                    <tr>
+                        <td class="text-content" style="padding: 0" > V<sub>max</sub>(1/h)</td>
+                        <th class="text-content" style="padding: 0"> 3600</th>
+                    </tr>
+                </table>
+                <br>
+                <h2 class="subtitle" style="margin-top: 25px">Running the model with optimised paramters</h2>
+                <p class="text-content">We ran our Rate kinetics model with our newly optimised parameters and determined that although the parameters were optimised and a larger concentration of intimin was transported to the surface of the cell, the same time was taken for the transport rate to plateau.</p>
+                <img src="../assets/graph11.png" class="image-content" style="width: 750px; height:500px">
+                <p class="text-content"><i>Fig. 11 </i> FIND THE RIGHT LEGEND </p>
+                <img src="../assets/graph12.png" class="image-content" style="width: 750px; height:500px">
+                <p class="text-content"><i>Fig. 12 </i> FIND THE RIGHT LEGEND and make sure to mention which graph is the optimised conditions </p>
+            </div>
 
             <div class="text-section">
             <h1 class="title">Cost Analysis for parameter optimisation</h1>
