@@ -201,12 +201,12 @@
 
                <div  class="text-content">
                    <p>Legend
-                   <br>EM = EL222 monomer
-                   <br>ED = EL222 dimer
-                   <br>PrLuxI = LuxI Promoter
-                   <br>PrLuxI+ED = EL222 dimer bound to the promoter
-                   <br>PIntimin = Intimin protein in the cytoplasm
-                   <br>PSurface = Intimin protein on the cell surface
+                   <br>E<sub>M</sub>= EL222 monomer
+                   <br>E<sub>D</sub> = EL222 dimer
+                   <br>Pr<sub>LuxI</sub> = LuxI Promoter
+                   <br>Pr<sub>LuxI+ED</sub>= EL222 dimer bound to the promoter
+                   <br>P<sub>Intimin</sub>= Intimin protein in the cytoplasm
+                   <br>P<sub>Surface</sub>= Intimin protein on the cell surface
                </p>
                </div>
 
@@ -267,7 +267,7 @@
                 </p>
                 <img src="assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
                 <p class="text-content">As intimin is continuously transported to the surface of the bacteria its concentration in the cytoplasm decreases over time. Therefore, we created a function to take into consideration the transport rate of intimin to the surface of the bacterial capsule.</p>
-                <img src="assets/transport_bac.png" class="image-content" style="width: 380px; height:130px">
+                <img src="assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
                 <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the spatial availability at the plasma membrane. We expect the transport rate of intimin to the membrane to slow as availability of space falls. To describe this, we adapted the Michaelis Menten equation to consider the intimin molecules already occupying the plasma membrane (PSurface), and the maximum occupancy of the plasma membrane.
                     The variable η sets a limit for the maximum number of intimin proteins that can be expressed on the cell surface and prevents any other proteins to be expressed once that limit is reached.</p>
 
@@ -306,31 +306,31 @@
                     <br>Figure 1 shows the rates of each cellular mechanism involved in intimin expression. The concentration of surface protein expressed appears much lower than the concentration of species produced at the other steps involved in the process. Therefore, we plotted figure 2, which shows a close up of the rate of intimin transport to the surface of the cell.
                 </p>
                  <img src="assets/graph2.png" class="image-content" style="width: 750px; height: 500px">
-                <p class="text-content"style="margin-top: 0; padding-top:0"> <i>Fig.2 </i> The scale of the graph is re-adjusted to view the rate of the surface expression of intimin.</p>
+                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Fig.2 </i> The scale of the graph is re-adjusted to view the rate of the surface expression of intimin.</p>
 
-                <table  class="text-content" style="width: 100%; margin-left: 100px">
+                <table style="width: 70%; margin-left: 150px">
                     <tr>
-                        <th>Reaction</th>
-                        <th>Time taken to plateau (hr) </th>
+                        <th class="text-content" style="padding: 0">Reaction</th>
+                        <th class="text-content" style="padding: 0">Time taken to plateau (hr) </th>
                     </tr>
                     <tr>
-                        <td>Dimerization of EL222</td>
-                        <th>1.3</th>
+                        <td class="text-content" style="padding: 0">Dimerization of EL222</td>
+                        <th class="text-content" style="padding: 0">1.3</th>
 
                     </tr>
                     <tr>
-                        <td>Transcription</td>
-                        <th>2.4</th>
-                    </tr>
-
-                    <tr>
-                        <td>Translation</td>
-                        <th>2.5</th>
+                        <td class="text-content" style="padding: 0" >Transcription</td>
+                        <th class="text-content" style="padding: 0">2.4</th>
                     </tr>
 
                     <tr>
-                        <td>Transpor of intimin to the surface</td>
-                        <th>3.2</th>
+                        <td class="text-content" style="padding: 0">Translation</td>
+                        <th class="text-content" style="padding: 0">2.5</th>
+                    </tr>
+
+                    <tr>
+                        <td class="text-content" style="padding: 0">Transport of intimin to the surface</td>
+                        <th class="text-content" style="padding: 0">3.2</th>
                     </tr>
                 </table>
 
@@ -340,8 +340,30 @@
                 </p>
 
                 <h1 class="title">Optimisation of the rate limiting step</h1>
-                <p>A focus was placed on evaluating the effect three main parameters had on the rate of intimin surface expression: V<sub>max</sub>, Km and Light Intensity. The maximum and minimum values that could be used for each parameter were determined from papers.
-                </p>
+                <p class="text-content">A focus was placed on evaluating the effect three main parameters had on the rate of intimin surface expression: V<sub>max</sub>, Km and Light Intensity. The maximum and minimum values that could be used for each parameter were determined from papers.</p>
+                <ul class="subtitle">Approaches: </ul>
+                <li class="text-content">Approach 1: We identified the maximum and minimum value each parameter could have and tested equally spaced intervals within their range</li>
+                <li class="text-content">Approach 2: We decided to take biological noise into consideration. Where through the use of parameter sampling, we assigned a weighting to each of the variables we identified in order to calculate a weighted average. We then used our weighted average to randomly select parameters from a normal distribution we created</li>
+                <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising Light Intensity</h2>
+                <p class="text-content">The range of values we selected to test fell within the range of 0 W/m<sup>2</sup> and 70 W/m<sup>2</sup>, where 0 W/m<sup>2</sup> represented our system in its off state and 70 W/m<sup>2</sup> represented the maximum light intensity E.coli can withstand before they start dying.</p>
+                <h2 class="subtitle">Approach 1 </h2>
+                <img src="assets/graph3.png" class="image-content" style="width: 800px; height: 450px">
+                <br>
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Fig.3 </i> Effect of light intensity on the rate of intimin expression on the cell surface
+                <br>
+                <p class="text-content">Fig. 3 shows that an increase in light intensity used to activate the expression of intimin corresponds to an increase in the concentration of intimin expressed on the surface of the cells. Interestingly, at 0 W/m<sup>2</sup> we still experience some intimin expression due to leakage of promotor expression, this concentration of intimin was assumed to not be enough to cause cells to adhere to one another.</p>
+
+                <h2 class="subtitle">Approach 2 </h2>
+
+                <!--ADD TEXT AND GRAPH HERE -->
+                <h2 class="subtitle">Wetlab contribution </h2>
+                <p class="text-content">We could conduct experiments where the transcription factor EL222 is extracted, exposed to UV light and run on an SDS page. This way we could change different light intensities and evaluate the effect it would have on dimerization of EL222.
+                    The dimerised EL222 (1332 bp) will travel a smaller distance down the page than the monomer EL222 (666 bp) due to their larger molecular weight.</p>
+
+                <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the K<sub>m</sub> value</h2>
+                <p class="text-content">In the transport of intimin to the surface of the cell K<sub>m</sub> represents the affinity the surface of the cell has for the intimin. Ideally, we would want a low Km value to increase the affinity of the cell surface for the intimin.</p>
+                <h2 class="subtitle">Approach 1 </h2>
+                
             </div>
 
 
