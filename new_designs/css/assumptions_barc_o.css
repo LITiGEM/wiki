@@ -295,41 +295,44 @@
     max-width:80%;
     padding: 2% 3% 2% 15%;
 
+
 #show3  {
     height: auto;
     background-color: rgba(204, 0, 53, 0.69);
     overflow: hidden;
     max-width:65%;
-    padding: 2% 3% 2% 3%;
+    padding: 2% 3% 2% 5%;
     position:relative;
     margin-left: 150px;
 }
 
+
 #hide3 {
     height: auto;
     background-color: white;
+    overflow: hidden;
     max-width:80%;
     padding: 2% 3% 2% 15%;
-    overflow: hidden;
-}
 
 #show4  {
     height: auto;
     background-color: rgba(204, 0, 53, 0.69);
     overflow: hidden;
     max-width:65%;
-    padding: 2% 3% 2% 3%;
+    padding: 2% 3% 2% 5%;
     position:relative;
     margin-left: 150px;
 }
 
+
 #hide4 {
     height: auto;
     background-color: white;
+    overflow: hidden;
     max-width:80%;
     padding: 2% 3% 2% 15%;
-    overflow: hidden;
-}
+
+
 
 #show1 p {
     padding-top: 30px;
@@ -355,6 +358,7 @@
     text-align: center;
 }
 
+
 #show3 p {
     padding-top: 30px;
     padding-right: 10%;
@@ -366,6 +370,7 @@
     width:100%;
     text-align: center;
 }
+
 
 #show4 p {
     padding-top: 30px;
