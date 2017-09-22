@@ -185,15 +185,14 @@
             <div style="margin-top: 20px" class="text-section">
 
                 <h1 class="title">‘LEGIT: From light to structure’</h1>
-
                 <h2 class="subtitle"> A mathematical model of how E. Coli cells are guided to form structures</h2>
-
                 <div class="text-content">
-                    <ul><b>Model aims:</b>
-                    <li>Determine the rate limiting step in the cellular mechanism.</li>
+                    <h2 class="title" style="padding-left: 0">Model aims</h2>
+                    <ul>
+                        <li>Determine the rate limiting cellular mechanism</li>
                         <li> Optimise the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approach </li>
-                    <li>Determine the range of optimal light intensities and light pulses our Wet Lab team should test in the lab</li>
-                        <li> Conduct a Cost Analysis to evaluate the economical viability of our optogenetic tools</li>
+                        <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test in the lab</li>
+                        <li> Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tools</li>
                     </ul>
                 </div>
 
@@ -219,17 +218,21 @@
                 <h1 class="title">The Science behind LEGIT</h1>
                 <img src="../bacterial-modelling-overview.jpg" class="image-content">
 
-                <ol class="text-content" type="'1"> LEGIT models the light activated expression of the surface protein intimin on E.coli cells. The binding partners SpyTag and SpyCatcher are fused to the intimin protein and allow our cells to adhere to each other.
+                <ol class="text-content" type="'1"> LEGIT models the light activated expression of the protein intimin on the surface of our E.coli cells.
+                    The binding partners SpyTag and SpyCatcher are fused to the intimin protein and allow the cells to adhere to each other.
+                    Therefore, we attempted to optimise the number of intimin proteins expressed on the surface of the E.coli cells to increase
+                    the speed at which our cells could adhere to eachother.
                     Our model can be divided into four main steps:
                     <br>
-                    <li>Light activation</li>
-                    <li>Transcription</li>
-                    <li>Translation</li>
-                    <li>Trasnport of intimin to the surface of the cell</li> </ol>
+                    <li class="text-section"> 1. Light activation (We want to make these links- where when you press on them you get directed to this section)</li>
+                    <li class="text-section"> 2. Transcription</li>
+                    <li class="text-section"> 3. Translation</li>
+                    <li class="text-section"> 4. Trasnport of intimin to the surface of the cell</li> </ol>
 
-                <ul class="text-content"><b>Innovative twists in LEGIT:</b>
-                <li> Modelling the rate kinetics of a light induced system</li>
-                <li> Modelling of the transmembranal transport of intimin protein to the cell surface </li> </ul>
+                <ul class="text-content"><b>We decided to incorporate some innovative twists in our LEGIT model, where we modelled:</b>
+                    <li> The rate kinetics of a light induced system</li>
+                    <li> The transmembranal transport of intimin protein to the cell surface </li>
+                </ul>
 
             </div>
 
@@ -240,7 +243,7 @@
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter
                     <br> <i>Location: Cytoplasm</i>
                     <br>
-                    <br>The first stage of our simulation is the photo-initiated dimerization of two EL222 monomers (EL222<sub>M</sub>) to produce an active EL222 dimer (EL222<sub>D</sub>).
+                    <br>The first step of our simulation is the photo-activated dimerization of two EL222 monomers (EL222<sub>M</sub>) to produce an active EL222 dimer (EL222<sub>D</sub>).
                     The EL222<sub>D</sub> then binds to the LuxI promoter.
                 </p>
 
@@ -252,10 +255,11 @@
                 <img src="../bacterial-modelling-transcription.jpg" class="image-content image-content-here">
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
                     <br>
-                    <i>location: Cytoplasm</i>
+                    <i>Location: Cytoplasm</i>
                     <br>
-                    <br> The production of mRNA is dependent upon the concentration of the EL222<sub>D</sub> and the rate at which EL222<sub>D</sub> binds to the
-                    LuxI promoter. We took dilution rates into consideration to account for cell growth and mRNA degradation.
+                    <br> The second step of our simulation is the production of mRNA from transcription.
+                    The production of mRNA is dependent upon the concentration of the EL222<sub>D</sub> and the rate at which EL222<sub>D</sub> binds to the
+                    LuxI promoter. Dilution rates were taken into consideration to account for cell growth and mRNA degradation.
                 </p>
                 <img src="../assets/bac_transcription.png" class="image-content" style="width: 420px; height: 100px">
 
@@ -266,25 +270,24 @@
                     <br>Location: Cytoplasm</i>
                     <br>
                     <br>
-                The change in concentration of the intracellular intimin protein over time is dependent on the rate of translation of mRNA. We introduced a degradation term to represent the degradation of intimin over time due to dilution from
+                    The third step of our simulation is the production of the surface protein intimin from translation. The change in concentration of the intracellular intimin protein over time is dependent on the rate of mRNAs translation. A degradation term was introduced to represent the degradation of intimin over time because of dilution due to
                     cell growth and the half-life of the intimin protein. </p>
                 <img src="../assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
-                <p class="text-content">As intimin is continuously transported to the surface of the bacteria its concentration in the cytoplasm decreases over time. Therefore, we created a function to take into consideration the transport rate of intimin to the surface of the bacterial capsule.</p>
-
+                <p class="text-content">After translation intimin is continuously transported to the surface of the E.coli, therefore its concentration in the cytoplasm decreases over time. To account for this, we created a function that takes the transport rate of intimin to the surface of the E.coli cells into consideration.</p>
                 <img src="../assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
-                <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the spatial availability at the plasma membrane. We expect the transport rate of intimin to the membrane to slow as availability of space decreases. To describe this, we adapted the Michaelis Menten equation
-                    to consider the intimin molecules already occupying the plasma membrane (P<sub>Surface</sub>), and the maximum available occupancy of the plasma membrane.
+                <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the availabile space on their surface. We expect the transport rate of intimin to the surface to decrease as availability of space decreases. To describe this, we adapted the Michaelis Menten equation
+                    to consider the intimin molecules already occupying the plasma membrane (P<sub>Surface</sub>), and the maximum available space on the cell surface.
 
-                    The variable η sets a limit for the maximum number of intimin proteins that can be expressed on the cell surface and prevents any other proteins to be expressed once that limit is reached.</p>
+                    The variable η sets a limit for the maximum number of intimin proteins that can be expressed on the cell surface and prevents any other proteins from becomming expressed once that limit is reached.</p>
 
                 <h1 class="title">Transport</h1>
 
                 <img src="../assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
                 <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 3: Transport of intimin to the surface of the cell
                     <br>
-                    <i>Location: Surface of the bacterial capsule</i>
+                    <i>Location: E.coli capsule</i>
                     <br>
-                    <br> The final differential equation simulates the change in concentration of intimin expressed on the surface of the cells over time.  The equation considers both the rate taken for intimin to be transported to the surface and the degradation of intimin.
+                    <br> Our final differential equation simulates the change in concentration of intimin expressed on the surface of the cells over time.  The equation takes both the rate taken for intimin to be transported to the cell surface and intimins degradation rate into consideration.
                 </p>
                 <img src="../assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
 
@@ -294,7 +297,8 @@
 
             <div class="text-section">
                 <h1 class="title">Results</h1>
-                <p class="text-content">Scroll down to look at the findigns of our LEGIT model. We have put down our initial findings and the results obtained after paramter optimisation.</p>
+                <p class="text-content">From the LEGIT simulation we compiled the graphs we obtained, evaluated their results
+                    and determined the optimal range of values our Wet Lab should evaluate for the rate-limiting parameters.</p>
                 </div>
                 <h1 class="title">Determining the rate limiting step in intimin expression</h1>
             <p class="text-content">We conducted rate kinetics modelling in order to determine the rate limiting step involved in the cellular mechanism of intimin expression.
