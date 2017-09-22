@@ -1,0 +1,144 @@
+
+			
+		.hidemeplease{
+			display:none;
+		}
+		
+		#interactive-body{
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0 2em 0 2em;
+
+		}
+		
+
+		.jsxgraph_holder {
+			margin: 0 auto 0 auto;
+
+		}
+		
+		 .jsxgraph_outer {
+			margin: 0 auto 0 auto;
+
+		}
+		.buttonholder{
+			overflow: hidden;
+			width: 500px;
+			 margin: 0 auto 0 auto;
+		}
+		
+		.graph-controls{
+		   font-family: helvetica;
+			margin: auto;
+			font-weight: normal;
+			font-size: 1em;
+			width: 100%;
+		}
+		
+.controlLine {
+    overflow: hidden;
+    /* background: #ccc; */
+    margin-bottom: 0.1em;
+    
+}
+.controlLine input.smallrange {
+    width: 100%;
+}
+.controlLine label {
+    float: left;
+}
+
+.controlGraph {
+	margin-bottom: .7em;
+}
+
+.controlDesc {
+	text-align: left;
+	font-size: 0.8em;
+}
+
+.controlLine span.rangeHolder {
+    display: block;
+    overflow: hidden;
+    padding: 0 5px;
+}
+.controlLine input.smallnum {
+    float: right;
+    width: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.controlLine input { 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}​
+		
+		
+
+		
+		.buttonset_holder{
+			margin-top: 2px;
+			margin-left: auto;
+			margin-right: auto;
+			font-weight: normal;
+			width: 500px;
+		}
+		
+ 
+		.rescaleButton{
+			margin-left: 0px;
+			margin-right: -5px;
+		}
+		.nowidth{
+			margin-left:-0.5em;
+			margin-right:-0.5em;
+		} 
+		
+		.InteractiveGraph {
+		background: #ddeeff;
+		display: block;
+		 font-family: Georgia, "Times New Roman", Times, serif;
+		 font-size: 14px;
+		 color: #111111;
+		/*  min-width: 580px; */
+		 padding: 1em 1em 1em 1em;
+		 margin-top: 1em;
+		 margin-bottom: 1em;
+		}
+		.InteractiveGraph-controls {
+			margin-top: 0.5em;
+		}
+		.clear_float{
+			clear: both ;
+		}
+		
+		table.variable_table { 
+			table-layout: fixed;
+			width: 500px;background: #fefefe;
+			border-collapse:collapse; 
+			font-weight: normal;
+			margin: 0px auto 0px auto; 
+		
+		}
+		
+		table.variable_table td { 
+			width: 180px;
+			border: solid 1px #aaaaaa;
+			padding: 5px 5px 5px 5px; 
+			text-align: center;
+			font-family: helvetica;
+			font-size: 1em;
+			 }
+		table.variable_table td:last-child { 
+			width: 100px;
+			}
+	 table.variable_table td:first-child { 
+			width: 100px;
+			}
+
+		.InteractiveGraph-explanation{
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		font-size: 1.5em;
+		}

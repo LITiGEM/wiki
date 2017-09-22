@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Interactive graph demo script</title>
+  	<!-- HTML5 Shim, IE8 and below recognize HTML5 elements -->
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->		
+	<!-- Modernizr -->
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<style>
+	.interactive {
+	padding-bottom: 5em;
+}
+</style>
+
+    <script src="html5slider.js"></script>
+  
+  
+   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+ 	 <script type="text/x-mathjax-config"> 
+        MathJax.Hub.Config({ 
+         "HTML-CSS": { linebreaks: { width: "30em" } },
+         SVG: { linebreaks: { automatic: "30em" } },
+         TeX: {   Macros: {pounds: "{\\it\\unicode{xA3}}"  } },
+ 		 tex2jax: { inlineMath: [ ["$","$"], ["\\ (","\\)"] ] }
+        }); 
+	</script>
+
+   <!--  // Loads external libraries -->
+	<script type="text/javascript" src="jsxgraphcore.js"></script>
+ 	<link rel="stylesheet" type="text/css" href="jsxgraph.css">
+   	<script type="text/javascript" src="InteractiveGraph.js"></script>
+ 		
+ 	<!-- // Loads the SysMIC libraries  -->
+  	<script type="text/javascript" src="make_repressilator.js"></script>
+	<link rel="stylesheet" type="text/css" href="jsxgraphstyle_interactive.css"></link>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script>
+
+<script type="text/javascript">//<![CDATA[ 
+
+
+
+$(document).ready(function() {
+if (typeof(js_graphs_load_all) != "undefined") { 
+    js_graphs_load_all(); // Builds all interactives from  div.interactives elements
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+}
+});
+
+
+
+
+// JSXGraph system
+// Author: Phil Lewis
+
+
+
+
+//]]>  
+
+</script>
+
+
+</head>
+
+<body>
+<!-- 
+The js_graph_load_all function searches for each "div" that has class interactive and then calls the function associated by the div id.
+This function generates the graph and holds all the internal functions to make it interactive.
+ -->
+<!-- 
+<div class="interactive" id="make_discrete_exp_growth"></div>
+ -->
+<div class="interactive" id="make_repressilator"></div>
+
+<!-- 
+<div class="interactive" id="make_Q2"></div>
+<div class="interactive" id="make_Q3"></div>
+ -->
+<!-- 
+<div class="interactive" id="make_ecoli"></div>
+<div class="interactive" id="make_repressilator"></div>
+<div class="interactive" id="make_euler"></div>
+
+<div class="interactive" id="make_toggle_switch"></div>
+<div class="interactive" id="make_michaelis_menten"></div>
+<div class="interactive" id="make_logistic_growth"></div> 
+<div class="interactive" id="make_logistic_growth_with_derivative"></div>
+<div class="interactive" id="make_hill_function"></div>
+<div class="interactive" id="make_hill_function_activator_repressor"></div>
+<div class="interactive" id="make_hill_and_derivative"></div>
+<div class="interactive" id="make_gene_expression"></div>
+<div class="interactive" id="make_gene_expression_two"></div>
+<div class="interactive" id="make_exp_decay"></div>
+<div class="interactive" id="make_circadian"></div>
+ -->
+
+</body>
+</html>
