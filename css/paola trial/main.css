@@ -1,0 +1,85 @@
+#container{
+    position: relative;
+}
+
+
+#banner {
+    height: 40%;
+    width: 100%;
+    position: absolute;
+}
+
+#container2{
+    position: inherit;
+}
+
+#container3{
+    position: inherit;
+}
+
+
+#info1 {
+    height: 80%;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#Buttons{
+    height: 40%;
+    width: 40%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+#mesh {
+    background: #FFFCFF;
+}
+
+#title{
+    position: absolute;
+    margin-top: 20%;
+}
+
+#body{
+    background: #FFFCFF;
+    position: absolute;
+
+    width: 100%;
+    height:500px;
+
+    margin-top: 25%;
+}
+
+#body h1 {
+
+    color: #CBD4C2;
+    font-family: verdana;
+    font-size: 300%;
+    text-align: center;
+}
+
+#body h2 {
+    color: #50514F;
+    font-family: verdana;
+    font-size: 150%;
+    text-align: center;
+}
+
+#body p  {
+    color: #247BA0;
+    font-family: courier;
+    font-size: 100%;
+    text-align: justify;
+}
+
+
+
+
