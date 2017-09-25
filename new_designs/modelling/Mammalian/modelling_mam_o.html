@@ -173,7 +173,7 @@
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
                 <li id="step1" class="navy-link side-link"><a href="#section1">Overview</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Science behind LEGIT</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Science behind LAME</a></li>
                 <li id="step3" class="navy-link side-link"><a href="#section3">Results</a></li>
                 <li id="step4" class="navy-link side-link"><a href="#section3">Cost Analysis</a></li>
                 <li id="step4" class="navy-link side-link"><a href="#section3">Alternative applicaitons</a></li>
@@ -197,76 +197,82 @@
                     </ul>
                 </div>
 
-                <img src="/Users/StefaniaTrepekli/WebstormProjects/wiki/w/new_designs/modelling/Mammalian/mammalian pics/Equation breakdown.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 150px ">
+                <img src="../../assets/Equation%20breakdown.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 150px ">
 
                 <div  class="text-content">
-                    <p>Legend
+                    <p>Legend:
 
-                        <br>LACE<sub>TF</sub> = Photocleavable (PhoCl) linker attached to the outter membrane of the cells outer membrane and the Transcription Factor (TF)
-                        <br>LACE = Protein on cells outter membrane with a part of the cleaved PhoCl linker
-                        <br>TF<sub>C</sub> = Free TF in the cytoplasm of the cell
-                        <br>TF<sub>N</sub> = Free TF in the nucleus of the cell
-                        <br>P<sub>Intimin</sub> = Intimin protein in the cytoplasm
-                        <br>P<sub>Surface</sub> = Intimin protein on the cell surface
+                        <br><b>LACE<sub>TF</sub></b> = Photocleavable (PhoCl) linker attached to the outter membrane of the cells outer membrane and the Transcription Factor (TF)
+                        <br><b>LACE</b> = Protein on cells outter membrane with a part of the cleaved PhoCl linker
+                        <br><b>TF<sub>C</sub></b> = Free TF in the cytoplasm of the cell
+                        <br><b>TF<sub>N</sub></b> = Free TF in the nucleus of the cell
+                        <br><b>Pr<sub>RFP</sub></b> = RFP Promoter
+                        <br><b>Pr<sub>RFP + TF<sub>N</sub> </sub></b> = TF in the nucleus bound to the RFP Promoter
+                        <br><b>mRNA<sub>N</sub></b> = mRNA in the cell nucleus
+                        <br><b>mRNA<sub>C</sub></b> = mRNA in the cell cytoplasm
+                        <br><b>P<sub>RFP</sub></b> = RFP translated protein
                     </p>
                 </div>
 
             </div>
 
-
             <div class="text-section">
 
-                <h1 class="title">The Science behind LEGIT</h1>
+                <h1 class="title">The Science behind LAME</h1>
                 <img src="../../bacterial-modelling-overview.jpg" class="image-content">
 
-                <ol class="text-content" type="'1"> LEGIT models the light activated expression of the protein intimin on the surface of genetically engineered E.coli cells.
-                    The binding partners SpyTag and SpyCatcher are fused to the intimin surface protein and allow the cells to adhere to each other.
+                <ol class="text-content" type="'1"> LAME models the light activated expression of GFP protein within genetically engineered CHO cells.
+                    When light shines onto our CHO cells the photocleavable linker anchoring the RFP TF on the outer membrane of the cell becomes cleaved.
+                    The photocleavage leads to the release of the TF in the cell. The TF is then guided to the RFP promoter in the cell with the help of a dCAS9, which has been attached to it.
+                    This mechanism could be used to induce the production of cadherin, the surface proteins that cause mammalian cells to adhere to eachother, upon demand. Thererfore,
+                    it could be used to create organised cell structures.
+
                     <br>
                     <br>
-                    We attempted to optimise the number of intimin proteins that can be expressed on the surface of the E.coli cells, in order to increase
-                    the speed at which our cells would adhere to eachother.
-                    Our model can be divided into four main steps:
+                    We attempted to optimise the rate at which RFP can be seen within the CHO cells, in order to increase
+                    the speed at which cellular transcription and translation can be activated.
+                    Our model can be divided into three main steps:
                     <br>
                     <br>
-                    <li class="text-section"> 1. Light activation (We want to make these links- where when you press on them you get directed to this section)</li>
+                    <li class="text-section"> 1. Cleavage of Photocleavable (PhoCl) Linker  (We want to make these links- where when you press on them you get directed to this section)</li>
                     <li class="text-section"> 2. Transcription</li>
-                    <li class="text-section"> 3. Translation</li>
-                    <li class="text-section"> 4. Trasnport of intimin to the surface of the cell</li> </ol>
+                    <li class="text-section"> 3. Translation</li> </ol>
 
                 <ul class="text-content" style="margin-top: 0; padding-top:0 "> We decided to incorporate some innovative twists in our LEGIT model, where we modelled:
-                    <li> The rate kinetics of a light induced system</li>
-                    <li> The transmembranal transport of intimin protein to the cell surface </li>
+                    <li> The rate kinetics of a system induced with photocleaving</li>
+                    <li> The transport of our TF, which has a dCas9 attached to it, to the nucleus of the cell </li>
                 </ul>
 
             </div>
 
-            <h1 class="title ">1.) Light activation</h1>
+            <h1 class="title ">1.) Cleavage of PhoCl linker</h1>
 
             <img id="special-image-1" src="../../bacterial-modelling-induction.jpg" class="image-content" style="margin-bottom: 0">
 
-            <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter
-                <br> <i>Location: Cytoplasm</i>
+            <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photocleavage and release of the RFP TF in the cytoplasm of the cell
+            <br> Location: Outter cell membrane
                 <br>
-                <br>The first step of our simulation is the photo-activated dimerization of two EL222 monomers (EL222<sub>M</sub>) to produce an active EL222 dimer (EL222<sub>D</sub>).
-                The EL222<sub>D</sub> then binds to the LuxI promoter.
-            </p>
+                <br>The first step of our simulation is the photocleavage of PhoCl, which results in the release of the RFP TF in the cytoplasm of the cell. Two degradation factors were introduced within our ODEs to account for the hald-life of the RFP TF and the
+                continual transport of TF<sub>C</sub> from the cytoplasm to the nucleus of the cell.</p>
+            <img src="../../assets/TFc.png" class="image-content" style="width:600px; height:100px">
+            <p class="text-content"> The photocleavage is dependent on light intensity (L). The Hill equation is commonly used to
+                fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate
+                the effect different light intensities would have on the rate of photocleavage of the LACE<sub>TF</sub> complex. </p>
 
-            <img src="../../assets/eq_activation.png" class="image-content" style="width:600px; height:100px">
-            <p class="text-content"> The photoactivation is dependent on light intensity (L). The Hill equation is commonly used to fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate the effect different light intensities would have on the rate of photoactivation of EL222. </p>
-            <img src="../../assets/eq_hill.png" class="image-content" style="width:400px; height:120px">
+            <img src="../../assets/HillMam.png" class="image-content" style="width:350px; height:100px">
 
             <h1 class="title">2.) Transcription</h1>
             <img src="../../bacterial-modelling-transcription.jpg" class="image-content image-content-here">
             <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
                 <br>
-                <i>Location: Cytoplasm</i>
+                <i>Location: Nucleus</i>
                 <br>
                 <br> The second step of our simulation is the production of mRNA from transcription.
-                The production of mRNA is dependent upon the concentration of the EL222<sub>D</sub> and the rate at which EL222<sub>D</sub> binds to the
-                LuxI promoter. Dilution rates were taken into consideration to account for mRNA loss due to: cell growth and mRNA degradation.
-            </p>
-            <img src="../../assets/bac_transcription.png" class="image-content" style="width: 420px; height: 100px">
-
+                In order for transcription to take place the TF<sub>C</sub> needs to be trasnported from the cytoplasm of the cell to the nucleus. The TF<sub>C</sub> is guided into the
+                nucleus of the cell to the RFP promoter with the help of dCAS9. Once the TF<sub>c</sub> enters the nucleus of the cell it becomes TF<sub>N</sub>. The rate at which the TF<sub>N</sub> binds to the RFP promoter
+                affects the rate at which transcription takes place. Two degradation factors were introduced t oaccount for the half-life of the mRNA<sub>N</sub> and the transport of the mRNA from the nucleus of the cell
+                to the cytoplasm.</p>
+            <img src="../../assets/MamTranscription.png" class="image-content" style="width: 600px; height: 150px">
 
             <h1 class="title">3.) Translation</h1>
             <img src="../../assets/bacterial-translation.png" class="image-content image-content-here">
@@ -274,38 +280,18 @@
                 <br>Location: Cytoplasm</i>
                 <br>
                 <br>
-                The third step of our simulation is the production of the surface protein intimin from translation. The change in concentration of the intracellular intimin protein over time is dependent on the rate of mRNAs translation. A degradation term was introduced to represent the degradation of intimin over time because of dilution due to
-                cell growth and the half-life of the intimin protein. </p>
-            <img src="../../assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
-            <p class="text-content">After translation intimin is continuously transported to the surface of the E.coli, therefore its concentration in the cytoplasm decreases over time. To account for this, we created a function that takes the transport rate of intimin to the surface of the E.coli cells into consideration.</p>
-            <img src="../../assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
-            <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the availabile space on the surface of the cells. We expect the transport rate of intimin to the cell surface to decrease as availability of space decreases. To describe this, we adapted the Michaelis Menten equation
-                to consider the intimin molecules already occupying the plasma membrane (P<sub>Surface</sub>), and the maximum available space on the cell surface.
-
-                The variable η sets a limit for the maximum number of intimin proteins that can be expressed on the cell surface and prevents any other proteins from becomming expressed once that limit is reached.</p>
-
-            <h1 class="title">4.) Transport</h1>
-
-            <img src="../../assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
-            <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 3: Transport of intimin to the surface of the cell
-                <br>
-                <i>Location: E.coli capsule</i>
-                <br>
-                <br> Our final differential equation simulates the change in concentration of intimin expressed on the surface of the cells over time.  The equation takes both the rate taken for intimin to be transported to the cell surface and intimins degradation rate into consideration.
-            </p>
-            <img src="../../assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
-
-
-            <!-- add link to the project description page-->
-            <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%"> <i><b>Not enough science? Check out the project description page!</i></b></h2>
+                The third step of our simulation is the production of the RFP protein from translation. The change in concentration of the RFP protein is dependent on three main factors. Firstly, the rate at which mRNA is transported from the nucleus to the cytoplasm, this is
+                represented with the letter 'β'. Secondly, the rate of translation and finally the maximum amount of RFP protein a cell can express. A degradation term was introduced to represent the degradation of RFP over time because of dilution due to
+                cell growth and the half-life of the RFP protein. </p>
+            <img src="../../assets/MamTranslation.png" class="image-content" style="width: 550px; height:90px">
 
             <div class="text-section">
                 <h1 class="title">Results</h1>
-                <p class="text-content">From our LEGIT simulation we compiled the graphs generated, evaluated their results
+                <p class="text-content">From our LAME simulation we compiled the graphs generated, evaluated their results
                     and determined the optimal range of values our Wet Lab team should evaluate for the rate-limiting parameters we identified.</p>
             </div>
-            <h1 class="title">Determining the rate limiting step in intimin expression</h1>
-            <p class="text-content">We used rate kinetics modelling to determine the rate limiting step in the cellular mechanisms involved in intimin expression.
+            <h1 class="title">Determining the rate limiting step in RFP expression</h1>
+            <p class="text-content">We used rate kinetics modelling to determine the rate limiting step in the cellular mechanisms involved in the light-activated transcription of RFP.
                 <br>
                 <!-- ADD HYPERLINK-->
             <h2 class="subtitle"> <b><i>Click here to check out our approaches and assumptions! </i></b></h2>
