@@ -6,8 +6,8 @@
     <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
     <meta charset="UTF-8">
-    <title>Approaches</title>
-    <link rel="stylesheet" type="text/css" href="../css/assumptions_barc_o.css">
+    <title>AMethods</title>
+    <link rel="stylesheet" type="text/css" href="../../css/assumptions_barc_o.css">
 
     <!-- BOOTSTRAP -->
     <!-- Latest compiled and minified CSS -->
@@ -87,6 +87,12 @@
                 $("#hide3").slideToggle("slow");
             });
             $("#show4").click(function(){
+                $("#hide4").slideToggle("slow");
+            });
+            $("#show5").click(function(){
+                $("#hide4").slideToggle("slow");
+            });
+            $("#show6").click(function(){
                 $("#hide4").slideToggle("slow");
             });
         });
@@ -187,9 +193,11 @@
         <!-- The side navbar -->
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Assumptions</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Parameters Optimisation</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Sensitivity Analysis</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#section1">Methods</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Assumptions</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Species</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section4">Paramters</a></li>
+                <li id="step5" class="navy-link side-link"><a href="#section5">Bibliography</a></li>
             </ul>
         </nav>
 
@@ -199,20 +207,86 @@
             <div style="margin-top: 20px" class="text-section">
 
                 <h1 class="title">Cracking the Model</h1>
+                <h2 class="subtitle">Methods and Assumptions</h2>
 
                 <p class="text-content"> Mathematical Modelling describes complex biological system with mathematical concepts. Often models are set up to predict and simulate biological behaviours. Once, established the parameters need to constantly be optimised with experimental data in order to fit reality to its maximum. Nevertheless, the starting point of a model is not that straight forward, if no experimental data is yet available, reasonable assumptions based on literature, logic and quantitative analysis need to be made.
                     We applied specific methodologies when deciding on the initial values for our models., the following section will summarise the approaches taken for the rate kinetics equations and sensitivity analysis equations. </p>
             </div>
 
+            <div class="row">
+                <div id="show2">
+                    <h2 class="tabletitle">Sensitivity Analysis</h2>
+                </div>
+
+                <div id="hide2">
+                    <p class="text-content">Sensitivity Analysis is conventionally used for parameter optimisation. A range of independent variables are tested in this technique and their impact on the dependent variable is evaluated. This allows one determine the optimal parameter value. We applied sensitivity analysis to the LEGIT and LAME models.</p>
+                    <h2 class="subtitle">Method</h2>
+                    <ol class="text-content" style="width: 100%">The steps we followed when running our Sensitivity Analysis:
+                        <li>Identify the independent variables (K<sub>m</sub> and V<sub>max</sub>)</li>
+                        <li>Obtain ranges of values to be tested from literature</li>
+                        <li>Plot the range of tested values to identify the optimal condition</li>
+                        <li>Re-run the initial model to check how the optimised parameters affected the transport of intimin to the cell surface, i.e. determine if the transport of the cells still prevailed to be the rate limiting step in the overall cellular mechanism</li>
+                        <li>We determined the areas in which research could be performed to optimise the parameters (Wet Lab contribution)</li>
+                    </ol>
+                    <p class="text-content">Assessing the impact of specific independent variables on the rate of intimin transport (dependent variable)
+                        <br>The equation below describes the rate of intimin production in terms of of K<sub>m</sub> and V<sub>max</sub></p>
+                    <img src="../../assets/sensitivityAnalysisEqu.png">
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="show1">
+                    <h2 class="tabletitle">Parameter Sampling</h2>
+                </div>
+
+                <div id="hide1">
+                    <div class="text-section">
+                        <p class="text-content">Parameter sampling, aka ensemble modelling, is a method of parameter optimisation, which relies on the random sampling of parameter values within a specified range. A probability density function (PDF) determines the distribution of the continuous random variables evaluated in the function. Parameter sampling considers biological noise, making it a more realistic representation of the behaviour of a biological system.</p>
+                        <h2 class="subtitle">Methodology</h2>
+                        <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of transport of intimin.</p>
+                        <ol class="text-content" style="width: 100%">The steps we followed when running our parameter sampling>
+                            <li> Identify the parameters to be optimised (K<sub>m</sub> and V<sub>max</sub>)</li>
+                            <li>Determine categories to be compared and obtain the values from literature research</li>
+                            <li>Assign weights to each value depending on its similarity to the to-be-optimised value</li>
+                            <li>Input the sample size size, standard deviation and weighted mean in a PDF (probability density function)</li>
+                        </ol>
+                    </div>
+                    <h2 class="subtitle" style="text-align: left">Collecting and processing of raw data</h2>
+
+                    <!-- ADD DRAWING ABOUT THE METHOD-->
+
+                    <p class="text-content">The weights of the raw data obtained from literature were assigned with respect to the characteristics of intimin </p>
+                    <ul class="text-content" style="width: 100%">
+                        <li>Size: 94 kDa </li>
+                        <li>Optimal pH conditions: 7 </li>
+                        <li>Organism: E.coli </li>
+                    </ul>
+                    <p class="text-content"> Data collection to optimise the value of K<sub>m</sub> </p>
+                    <img src="../../assets/Km.png" style="width: 900px; heighet: 300px; padding-bottom:0" class="image-content">
+                    <p class="text-content" style="padding-top: 0">Weighted mean: 0.0147</p>
+
+                    <p class="text-content"> Data collection to optimise the value of V<sub>max</sub> </p>
+                    <img src="../../assets/Km.png" style="width: 900px; heighet: 300px; padding-bottom:0" class="image-content">
+                    <p class="text-content" style="padding-top: 0">Weighted mean: 300000 (1 s.f.)</p>
+
+
+                    <h2 class="subtitle" style="text-align: left">Generate probability density functions (PDF) </h2>
+                    <p class="text-content">Probability density functions are functions of continuous random variables. The function considers the integral of this random variable and determines the probability that lies within   a specified interval.
+                        The sample size, the standard deviation and the weighted mean are the 3 parameters that need to be implemented in the PDF function. We can then plot the rate of transport with K<sub>m</sub> /V<sub>max</sub> values randomly selected from the interval and identify the optimal parameter value. </p>
+
+                </div>
+            </div>
+
+
             <div class="text-section">
                 <!-- this section nneds to be fixed -->
                 <div class="row">
                     <div id="show1">
-                        <h2 class="tabletitle">Parameter Optimisation</h2>
+                        <h2 class="tabletitle">Assumptions</h2>
                     </div>
 
                     <div id="hide1">
-                        <img src="../assets/assumptions.png">
+                        <img src="../../assets/assumptions.png">
                     </div>
                 </div>
 
@@ -222,71 +296,33 @@
                     </div>
 
                     <div id="hide2">
-                        <img src="../assets/Parameter.png">
+                        <img src="../../assets/Parameter.png">
                     </div>
                 </div>
 
-                <div class="row">
-                    <div id="show2">
-                        <h2 class="tabletitle">Sensitivity Analysis</h2>
+                <div class="text-section">
+                    <!-- this section nneds to be fixed -->
+                    <div class="row">
+                        <div id="show1">
+                            <h2 class="tabletitle">Species</h2>
+                        </div>
+
+                        <div id="hide1">
+                            <img src="../../assets/species.png" style="width:600px; height:300px">
+                        </div>
                     </div>
 
-                    <div id="hide2">
-                        <p class="text-content" style="width:100%">Assessing the impact of specific independent variables on the rate of intimin transport (dependent variable </p>
-                        <br>
-                        <ol class="text-content" style="width: 100%">The steps we followed when running our Sensitivity Analysis:
-                            <li>Identify the independent variables (K<sub>m</sub> and V<sub>max</sub>)</li>
-                            <li>Obtain ranges of values to be tested from literature</li>
-                            <li>Plot the range of tested values to identify the optimal condition</li>
-                            <li>Re-run the initial LEGIT model to check how the optimised parameters affected the transport of intimin to the cell surface, i.e. determine if the transport of the cells still prevailed to be the rate limiting step in the overall cellular mechanism</li>
-                            <li>We determined the areas in which research could be performed to optimise the parameters (Wet Lab contribution)</li>
-                        </ol>
-                        <p class="text-content">The equation below describes the rate of intimin production in terms of of K<sub>m</sub> and V<sub>max</sub></p>
-                        <img src="../assets/sensitivity.png">
-                    </div>
-                </div>
+                    <div class="row">
+                        <div id="show1">
+                            <h2 class="tabletitle">Parameters</h2>
+                        </div>
 
-                <div class="row">
-                    <div id="show1">
-                        <h2 class="tabletitle">Parameter Sampling</h2>
+                        <div id="hide1">
+                            <img src="../../assets/paramters.png" style="width:600px; height:600px">
+                        </div>
                     </div>
 
-                    <div id="hide1">
-                        <h2 class="subtitle">Methodology</h2>
-                        <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of transport of intimin.</p>
-                        <ol class="text-content" style="width: 100%">The steps we followed when running our parameter sampling>
-                            <li> Identify the parameters to be optimised (K<sub>m</sub> and V<sub>max</sub>)</li>
-                            <li>Determine categories to be compared and obtain the values from literature research</li>
-                            <li>Assign weights to each value depending on its similarity to the to-be-optimised value</li>
-                            <li>Input the sample size size, standard deviation and weighted mean in a PDF (probability density function)</li>
-                        </ol>
-                        <h2 class="subtitle" style="text-align: left">Collecting and processing of raw data</h2>
 
-                        <!-- ADD DRAWING ABOUT THE METHOD-->
-
-                        <p class="text-content">The weights of the raw data obtained from literature were assigned with respect to the characteristics of intimin </p>
-                        <ul class="text-content" style="width: 100%">
-                            <li>Size: 94 kDa </li>
-                            <li>Optimal pH conditions: 7 </li>
-                            <li>Organism: E.coli </li>
-                        </ul>
-                        <p class="text-content"> Data collection to optimise the value of K<sub>m</sub> </p>
-                        <img src="../assets/Km.png" style="width: 900px; heighet: 300px; padding-bottom:0" class="image-content">
-                        <p class="text-content" style="padding-top: 0">Weighted mean: 0.0147</p>
-
-                        <p class="text-content"> Data collection to optimise the value of V<sub>max</sub> </p>
-                        <img src="../assets/Km.png" style="width: 900px; heighet: 300px; padding-bottom:0" class="image-content">
-                        <p class="text-content" style="padding-top: 0">Weighted mean: 300000 (1 s.f.)</p>
-
-
-                        <h2 class="subtitle" style="text-align: left">Generate probability density functions (PDF) </h2>
-                        <p class="text-content">Probability density functions are functions of continuous random variables. The function considers the integral of this random variable and determines the probability that lies within   a specified interval.
-                            The sample size, the standard deviation and the weighted mean are the 3 parameters that need to be implemented in the PDF function. We can then plot the rate of transport with K<sub>m</sub> /V<sub>max</sub> values randomly selected from the interval and identify the optimal parameter value. </p>
-
-                    </div>
-                </div>
-
-            </div>
 
             <div class="text-section">
                 <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69)">Bibliography</h2>

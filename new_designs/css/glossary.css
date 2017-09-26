@@ -206,6 +206,15 @@
     margin:0;
 }
 
+.subtitle {
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 1% 1% 15%;
+    margin:0;
+    color: rgb(163, 161, 168);
+}
+
 .affix {
     top: 20px;
     left:40px;

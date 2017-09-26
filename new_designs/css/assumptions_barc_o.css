@@ -332,6 +332,41 @@
     max-width:80%;
     padding: 2% 3% 2% 15%;
 
+#show5  {
+    height: auto;
+    background-color: rgba(204, 0, 53, 0.69);
+    overflow: hidden;
+    max-width:65%;
+    padding: 2% 3% 2% 5%;
+    position:relative;
+    margin-left: 150px;
+}
+
+
+#hide5 {
+    height: auto;
+    background-color: white;
+    overflow: hidden;
+    max-width:80%;
+    padding: 2% 3% 2% 15%;
+
+#show6  {
+    height: auto;
+    background-color: rgba(204, 0, 53, 0.69);
+    overflow: hidden;
+    max-width:65%;
+    padding: 2% 3% 2% 5%;
+    position:relative;
+    margin-left: 150px;
+}
+
+
+#hide6 {
+    height: auto;
+    background-color: white;
+    overflow: hidden;
+    max-width:80%;
+    padding: 2% 3% 2% 15%;
 
 
 #show1 p {
@@ -373,6 +408,30 @@
 
 
 #show4 p {
+    padding-top: 30px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 30px !important;
+    font-weight: 500;
+    font-family: "Josefin Sans" !important;
+    font-color: black;
+    width:100%;
+    text-align: center;
+}
+
+#show5 p {
+    padding-top: 30px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 30px !important;
+    font-weight: 500;
+    font-family: "Josefin Sans" !important;
+    font-color: black;
+    width:100%;
+    text-align: center;
+}
+
+#show6 p {
     padding-top: 30px;
     padding-right: 10%;
     padding-left: 10%;
