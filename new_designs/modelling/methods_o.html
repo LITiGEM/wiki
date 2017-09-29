@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,8 @@
     <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
     <meta charset="UTF-8">
-    <title>Approaches</title>
-    <link rel="stylesheet" type="text/css" href="../css/assumptions_barc_o.css">
+    <title>AMethods</title>
+    <link rel="stylesheet" type="text/css" href="mo"
 
     <!-- BOOTSTRAP -->
     <!-- Latest compiled and minified CSS -->
@@ -73,27 +74,7 @@
 
         });
     </script>
-
-    <!-- parameter tables -->
-    <script>
-        $(document).ready(function(){
-            $("#show1").click(function(){
-                $("#hide1").slideToggle("slow");
-            });
-            $("#show2").click(function(){
-                $("#hide2").slideToggle("slow");
-            });
-            $("#show3").click(function(){
-                $("#hide3").slideToggle("slow");
-            });
-            $("#show4").click(function(){
-                $("#hide4").slideToggle("slow");
-            });
-        });
-
-    </script>
-</head>
-
+<body>
 <style>
     .image-content-here {
         height:400px;
@@ -187,9 +168,11 @@
         <!-- The side navbar -->
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Assumptions</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Parameters Optimisation</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Sensitivity Analysis</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#section1">Methods</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Assumptions</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Species</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section4">Paramters</a></li>
+                <li id="step5" class="navy-link side-link"><a href="#section5">Bibliography</a></li>
             </ul>
         </nav>
 
@@ -199,118 +182,12 @@
             <div style="margin-top: 20px" class="text-section">
 
                 <h1 class="title">Cracking the Model</h1>
+                <h2 class="subtitle">Methods and Assumptions</h2>
 
                 <p class="text-content"> Mathematical Modelling describes complex biological system with mathematical concepts. Often models are set up to predict and simulate biological behaviours. Once, established the parameters need to constantly be optimised with experimental data in order to fit reality to its maximum. Nevertheless, the starting point of a model is not that straight forward, if no experimental data is yet available, reasonable assumptions based on literature, logic and quantitative analysis need to be made.
                     We applied specific methodologies when deciding on the initial values for our models., the following section will summarise the approaches taken for the rate kinetics equations and sensitivity analysis equations. </p>
             </div>
 
-            <div class="text-section">
-                <!-- this section nneds to be fixed -->
-                <div class="row">
-                    <div id="show1">
-                        <h2 class="tabletitle">Parameter Optimisation</h2>
-                    </div>
-
-                    <div id="hide1">
-                        <img src="../assets/assumptions.png">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div id="show2">
-                        <h2 class="tabletitle">Initial Assumptions</h2>
-                    </div>
-
-                    <div id="hide2">
-                        <img src="../assets/Parameter.png">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div id="show2">
-                        <h2 class="tabletitle">Sensitivity Analysis</h2>
-                    </div>
-
-                    <div id="hide2">
-                        <p class="text-content" style="width:100%">Assessing the impact of specific independent variables on the rate of intimin transport (dependent variable </p>
-                        <br>
-                        <ol class="text-content" style="width: 100%">The steps we followed when running our Sensitivity Analysis:
-                            <li>Identify the independent variables (K<sub>m</sub> and V<sub>max</sub>)</li>
-                            <li>Obtain ranges of values to be tested from literature</li>
-                            <li>Plot the range of tested values to identify the optimal condition</li>
-                            <li>Re-run the initial LEGIT model to check how the optimised parameters affected the transport of intimin to the cell surface, i.e. determine if the transport of the cells still prevailed to be the rate limiting step in the overall cellular mechanism</li>
-                            <li>We determined the areas in which research could be performed to optimise the parameters (Wet Lab contribution)</li>
-                        </ol>
-                        <p class="text-content">The equation below describes the rate of intimin production in terms of of K<sub>m</sub> and V<sub>max</sub></p>
-                        <img src="../assets/sensitivity.png">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div id="show1">
-                        <h2 class="tabletitle">Parameter Sampling</h2>
-                    </div>
-
-                    <div id="hide1">
-                        <h2 class="subtitle">Methodology</h2>
-                        <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of transport of intimin.</p>
-                        <ol class="text-content" style="width: 100%">The steps we followed when running our parameter sampling>
-                            <li> Identify the parameters to be optimised (K<sub>m</sub> and V<sub>max</sub>)</li>
-                            <li>Determine categories to be compared and obtain the values from literature research</li>
-                            <li>Assign weights to each value depending on its similarity to the to-be-optimised value</li>
-                            <li>Input the sample size size, standard deviation and weighted mean in a PDF (probability density function)</li>
-                        </ol>
-                        <h2 class="subtitle" style="text-align: left">Collecting and processing of raw data</h2>
-
-                        <!-- ADD DRAWING ABOUT THE METHOD-->
-
-                        <p class="text-content">The weights of the raw data obtained from literature were assigned with respect to the characteristics of intimin </p>
-                        <ul class="text-content" style="width: 100%">
-                            <li>Size: 94 kDa </li>
-                            <li>Optimal pH conditions: 7 </li>
-                            <li>Organism: E.coli </li>
-                        </ul>
-                        <p class="text-content"> Data collection to optimise the value of K<sub>m</sub> </p>
-                        <img src="../assets/Km.png" style="width: 900px; heighet: 300px; padding-bottom:0" class="image-content">
-                        <p class="text-content" style="padding-top: 0">Weighted mean: 0.0147</p>
-
-                        <p class="text-content"> Data collection to optimise the value of V<sub>max</sub> </p>
-                        <img src="../assets/Km.png" style="width: 900px; heighet: 300px; padding-bottom:0" class="image-content">
-                        <p class="text-content" style="padding-top: 0">Weighted mean: 300000 (1 s.f.)</p>
-
-
-                        <h2 class="subtitle" style="text-align: left">Generate probability density functions (PDF) </h2>
-                        <p class="text-content">Probability density functions are functions of continuous random variables. The function considers the integral of this random variable and determines the probability that lies within   a specified interval.
-                            The sample size, the standard deviation and the weighted mean are the 3 parameters that need to be implemented in the PDF function. We can then plot the rate of transport with K<sub>m</sub> /V<sub>max</sub> values randomly selected from the interval and identify the optimal parameter value. </p>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="text-section">
-                <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69)">Bibliography</h2>
-                <ol class="text-content">
-                    <li>Thereza, C., Marina, I., Luciana.Cambricoli, d. and Olivia, C. (2004). Expression of green fluorescent protein (GFPuv) in Escherichia coli DH5-a, under different growth conditions. African Journal of Biotechnology, 3(1), pp.105-111.</li>
-                    <li>Wlab.ethz.ch. (2017). Cell Surface Protein Atlas. [online] Available at: http://wlab.ethz.ch/cspa/#abstract [Accessed 4 Sep. 2017].</li>
-                    <li>Sciencedirect.com. (2017). Membrane integration of E. coli model membrane proteins - ScienceDirect. [online] Available at: http://www.sciencedirect.com/science/article/pii/S0167488904000813 [Accessed 4 Sep. 2017].</li>
-                    <li>Arun KH e. Green fluorescent proteins in receptor: an emerging tool for drug discovery. – PubMed –NCBI [Internet]. Ncbi.nlm.gov.2017 [cited 21 August 2017]. Available from: https://www.ncbi.nlm.nih.gov/pubmed/15596111</li>
-                    <li>[internet] UVGermicidalTechnicalData. [cited 10 September 2017] http://www.pveducation.org/pvcdrom/effect-of-light-intensity (accessed 10 September 2017).</li>
-                    <li>Jayaraman, P., Devarajan, K., Chua, T. K., Zhang, H., Gunawan, E. and Loo Poh, C.  Blue light-mediated transcriptional activation and repression of gene expression in bacteria. NCBI. 2016;44(14):6994–7005.</li>
-                    <li>Philips, Ron. "Cell Biology By The Numbers." Book.bionumbers.org. N.p., 2017. Web. 10 Sept. 2017.</li>
-                    <li>Kiparissides, Alexandros et al. "Modelling The Delta1/Notch1 Pathway: In Search Of The Mediator(S) Of Neural Stem Cell Differentiation." PLoS ONE 6.2 (2011): e14668. Web.</li>
-                    <li>Carbonell-Ballestero M, Duran-Nebreda S, Montanez R, Sole R, Macia J, Rodriguez-Caso C. A bottom-up characterization of transfer functions for synthetic biology designs: lessons from enzymology. 2017.</li>
-                    <li>Km & Vmax [Internet]. Mofetsrv.mofet.macam98.ac.il. 2017 [cited 21 September 2017]. Available from: http://mofetsrv.mofet.macam98.ac.il/~rafid/BIOLOGY/biochem/infopages/aminoacids/www-biol.paisley.ac.uk/courses/stfunmac/glossary/Km.html</li>
-
-                </ol>
-            </div>
-
-
-        <a href="#" id="myBtn" title="Go to top">Back to Top</a>
-
-    </div>
-</div>
 
 </body>
-
 </html>

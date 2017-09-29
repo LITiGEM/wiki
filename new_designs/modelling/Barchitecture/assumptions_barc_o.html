@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+    <meta charset="UTF-8">
+    <title>AMethods</title>
+    <link rel="stylesheet" type="text/css" href="../../css/assumptions_barc_o.css">
+
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            //Take your div into one js variable
+            var s1 = $("#step1");
+            var s2 = $("#step2");
+            var s3 = $("#step3");
+
+            //Take the current position (vertical position from top) of your div in the variable
+            var pos = s1.position();
+            var pos1 = s2.position();
+            var pos2 = s3.position();
+
+            //Now when scroll event trigger do following
+            $(window).scroll(function () {
+
+                scrollFunction()
+
+                var windowpos = $(window).scrollTop();
+                //console.log(windowpos);
+
+                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
+                if (windowpos >= (pos.top + 100)) {
+                    // div.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s1.addClass("active-link");
+                }
+
+                if (windowpos >= (pos1.top + 750)) {
+                    // div1.addClass("AfterScroll");
+                    s1.removeClass("active-link");
+                    s3.removeClass("active-link");
+                    s2.addClass("active-link");
+
+                }
+
+                if (windowpos >= (pos2.top + 1100)) {
+                    //div2.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s3.addClass("active-link");
+                }
+
+            });
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+        });
+    </script>
+
+    <!-- parameter tables -->
+    <script>
+        $(document).ready(function(){
+            $("#show1").click(function(){
+                $("#hide1").slideToggle("slow");
+            });
+            $("#show2").click(function(){
+                $("#hide2").slideToggle("slow");
+            });
+            $("#show3").click(function(){
+                $("#hide3").slideToggle("slow");
+            });
+            $("#show4").click(function(){
+                $("#hide4").slideToggle("slow");
+            });
+            $("#show5").click(function(){
+                $("#hide4").slideToggle("slow");
+            });
+            $("#show6").click(function(){
+                $("#hide4").slideToggle("slow");
+            });
+        });
+
+    </script>
+</head>
+
+<style>
+    .image-content-here {
+        height:400px;
+        width:800px;
+    }
+</style>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+<!-- The top navbar -->
+<div class="container-fluid">
+    <div id="top" class="row">
+
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 28 1900 300"><defs><style>.cls-1,.cls-2{fill:none;stroke-miterlimit:10;}.cls-1{stroke:#000;}.cls-2{stroke: #272727;}  .cls-3{fill: #000000;}</style></defs><title>Banner</title><path d="M362.58,63.45l147.29,87.62V326.36L362.58,414,215.29,326.36V151.07L362.58,63.45m0-1.16L214.29,150.5V326.92l148.29,88.21,148.29-88.21V150.5L362.58,62.29Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="363.3" y1="75.21" x2="363.3" y2="244.21"/><line class="cls-1" x1="215.3" y1="339.21" x2="363.3" y2="244.21"/><line class="cls-1" x1="511.3" y1="339.21" x2="363.3" y2="244.21"/><line class="cls-1" x1="0.3" y1="653.21" x2="70.3" y2="601.21"/><line class="cls-1" x1="681.3" y1="58.21" x2="511.3" y2="163.21"/><line class="cls-1" x1="468.3" y1="13.21" x2="365.3" y2="75.21"/><line class="cls-1" x1="363.86" y1="74.27" x2="259.74" y2="14.16"/><path d="M215.58,326.45l147.29,87.62V589.36L215.58,677,68.29,589.36V414.07l147.29-87.62m0-1.16L67.29,413.5V589.92l148.29,88.21,148.29-88.21V413.5L215.58,325.29Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="781.3" y1="350.71" x2="784.3" y2="530.21"/><line class="cls-1" x1="72.3" y1="424.21" x2="0.3" y2="469.21"/><polygon class="cls-1" points="354.98 750.16 366.17 600.56 218.18 688.59 354.98 750.16"/><path d="M778.58-11.55,925.86,76.07V251.36L778.58,339,631.29,251.36V76.07L778.58-11.55m0-1.16L630.29,75.5V251.92l148.29,88.21,148.29-88.21V75.5L778.58-12.71Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="511.3" y1="337.21" x2="781.3" y2="172.21"/><line class="cls-1" x1="929.3" y1="267.21" x2="781.3" y2="172.21"/><path d="M511.58,325.45l147.29,87.62V588.36L511.58,676,364.29,588.36V413.07l147.29-87.62m0-1.16L363.29,412.5V588.92l148.29,88.21,148.29-88.21V412.5L511.58,324.29Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="493.3" y1="13.21" x2="632.3" y2="87.21"/><path d="M1076.58,163.45l147.29,87.62V426.36L1076.58,514,929.29,426.36V251.07l147.29-87.62m0-1.16L928.29,250.5V426.92l148.29,88.21,148.29-88.21V250.5l-148.29-88.21Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="1077.3" y1="175.21" x2="1077.3" y2="344.21"/><line class="cls-1" x1="929.3" y1="439.21" x2="1077.3" y2="344.21"/><line class="cls-1" x1="1225.3" y1="439.21" x2="1077.3" y2="344.21"/><line class="cls-1" x1="511.3" y1="870.21" x2="784.3" y2="701.21"/><line class="cls-1" x1="1486.3" y1="102.21" x2="1225.3" y2="263.21"/><line class="cls-1" x1="1347.3" y1="13.21" x2="1079.3" y2="175.21"/><line class="cls-1" x1="1077.86" y1="174.27" x2="928.3" y2="87.21"/><path d="M931.58,428.45l147.29,87.62V691.36L931.58,779,784.29,691.36V516.07l147.29-87.62m0-1.16L783.29,515.5V691.92l148.29,88.21,148.29-88.21V515.5L931.58,427.29Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="786.3" y1="524.21" x2="659.3" y2="601.21"/><line class="cls-1" x1="1225.3" y1="437.21" x2="1920.3" y2="13.21"/><line class="cls-1" x1="1625.3" y1="367.21" x2="1519.3" y2="439.21"/><path d="M1225.58,428.45l147.29,87.62V691.36L1225.58,779l-147.29-87.62V516.07l147.29-87.62m0-1.16L1077.29,515.5V691.92l148.29,88.21,148.29-88.21V515.5l-148.29-88.21Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="1101.3" y1="13.21" x2="1369.3" y2="174.21"/><line class="cls-2" x1="0.3" y1="12.21" x2="215.3" y2="163.21"/><line class="cls-2" x1="364.3" y1="427.21" x2="659.3" y2="601.21"/><line class="cls-2" x1="215.3" y1="163.21" x2="0.3" y2="291.21"/><path class="cls-3" d="M658.58,60.45l147.29,87.62V323.36L658.58,411,511.29,323.36V148.07L658.58,60.45m0-1.16L510.29,147.5V323.92l148.29,88.21,148.29-88.21V147.5L658.58,59.29Z" transform="translate(0.8 12.71)"/><line class="cls-2" x1="683.3" y1="762.21" x2="841.3" y2="855.21"/><line class="cls-2" x1="1773.3" y1="449.71" x2="1774.3" y2="615.71"/><path class="cls-3" d="M1370.58,337.45l147.29,87.62V600.36L1370.58,688l-147.29-87.62V425.07l147.29-87.62m0-1.16L1222.29,424.5V600.92l148.29,88.21,148.29-88.21V424.5l-148.29-88.21Z" transform="translate(0.8 12.71)"/><line class="cls-2" x1="1041.3" y1="13.21" x2="929.3" y2="86.21"/><line class="cls-2" x1="1347.3" y1="13.21" x2="1920.3" y2="380.21"/><line class="cls-2" x1="931.3" y1="431.71" x2="932.3" y2="597.71"/><line class="cls-2" x1="1370.3" y1="176.71" x2="1373.3" y2="525.21"/><line class="cls-2" x1="1624.29" y1="365.71" x2="1625.3" y2="547.21"/><line class="cls-1" x1="1623.3" y1="13.71" x2="1626.3" y2="193.21"/><path d="M1772.58,91.45l147.29,87.62V354.36L1772.58,442l-147.29-87.62V179.07l147.29-87.62m0-1.16L1624.29,178.5V354.92l148.29,88.21,148.29-88.21V178.5L1772.58,90.29Z" transform="translate(0.8 12.71)"/><path class="cls-3" d="M1373.58,162.45l147.29,87.62V425.36L1373.58,513l-147.29-87.62V250.07l147.29-87.62m0-1.16L1225.29,249.5V425.92l148.29,88.21,148.29-88.21V249.5l-148.29-88.21Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="511.3" y1="689.71" x2="511.3" y2="870.21"/><line class="cls-1" x1="218.3" y1="689.71" x2="218.3" y2="870.21"/><line class="cls-2" x1="72.3" y1="428.21" x2="367.3" y2="602.21"/><line class="cls-1" x1="1519.3" y1="613.21" x2="1772.3" y2="456.21"/></svg>
+
+        <ul class="navy">
+            <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Description</a></li>
+                    <li><a href="#" class="dropped">Experiments</a></li>
+                    <li><a href="#" class="dropped">Results</a></li>
+                    <li><a href="#" class="dropped">Parts</a></li>
+                    <li><a href="#" class="dropped">Gold Criteria</a></li>
+                    <li><a href="#" class="dropped">Interlab</a></li>
+
+                </ul>
+            </li>
+
+            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Protocols</a></li>
+                    <li><a href="#" class="dropped">Safety</a></li>
+                    <li><a href="#" class="dropped">Stuff</a></li>
+                </ul>
+            </li>
+            </li>
+
+            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Product</a></li>
+                    <li><a href="#" class="dropped">IP</a></li>
+                    <li><a href="#" class="dropped">Business Environment</a></li>
+                    <li><a href="#" class="dropped">Marketing</a></li>
+                    <li><a href="#" class="dropped">Management</a></li>
+                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
+                </ul>
+            </li>
+
+            <li id="drop5" class="navy-link"><a href="#">MODELLING</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Barchitecture</a></li>
+                    <li><a href="#" class="dropped">Game of LIT</a></li>
+                    <li><a href="#" class="dropped">Mammalian</a></li>
+                    <li><a href="#" class="dropped">Light Bulb</a></li>
+                    <li><a href="#" class="dropped">Glossary</a></li>
+                </ul>
+            </li>
+
+            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Public Engagement</a></li>
+                    <li><a href="#" class="dropped">Integrated Practices</a></li>
+                </ul>
+            </li>
+
+            <li id="drop2" class="navy-link"><a href="#about">JUDGING CRITERIA</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Bronze</a></li>
+                    <li><a href="#" class="dropped">Silver</a></li>
+                    <li><a href="#" class="dropped">Gold</a></li>
+                </ul>
+            </li>
+
+            <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Team</a></li>
+                    <li><a href="#" class="dropped">Collaborations</a></li>
+                    <li><a href="#" class="dropped">Attributions</a></li>
+                </ul></li>
+
+        </ul>
+    </div>
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- The side navbar -->
+        <nav class="col-sm-2">
+            <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
+                <li id="step1" class="navy-link side-link"><a href="#section1">Methods</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Assumptions</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Species</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section4">Paramters</a></li>
+                <li id="step5" class="navy-link side-link"><a href="#section5">Bibliography</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <div style="float: right !important" class="col-sm-10">
+
+            <div style="margin-top: 20px" class="text-section">
+
+                <h1 class="title">Cracking the Model</h1>
+                <h2 class="subtitle">Methods and Assumptions</h2>
+
+                <p class="text-content"> Mathematical Modelling describes complex biological system with mathematical concepts. Often models are set up to predict and simulate biological behaviours. Once, established the parameters need to constantly be optimised with experimental data in order to fit reality to its maximum. Nevertheless, the starting point of a model is not that straight forward, if no experimental data is yet available, reasonable assumptions based on literature, logic and quantitative analysis need to be made.
+                    We applied specific methodologies when deciding on the initial values for our models., the following section will summarise the approaches taken for the rate kinetics equations and sensitivity analysis equations. </p>
+            </div>
+
+            <div class="row">
+                <div id="show2">
+                    <h2 class="tabletitle">Sensitivity Analysis</h2>
+                </div>
+
+                <div id="hide2">
+                    <p class="text-content">Sensitivity Analysis is conventionally used for parameter optimisation. A range of independent variables are tested in this technique and their impact on the dependent variable is evaluated. This allows to determine the optimal parameter value.</p>
+                    <h2 class="subtitle">Method</h2>
+                    <ol class="text-content" style="width: 100%">
+                        <li>Identify the independent variables to be optimised </li>
+                        <li>Obtain ranges of values to be tested from literature</li>
+                        <li>Run the model and plot the graphs with the range of tested values and identify the optimal condition</li>
+                        <li>Re-run the initial model to check how the optimised parameters affected the rate limiting step, i.e. determine if the optimised step is prevailed to be the rate limiting step in the overall cellular mechanism</li>
+                        <li>Determine the areas in which research could be performed to optimise the parameters (Wet Lab contribution)</li>
+                    </ol>
+                    <h2 class="subtitle"> Sensitivity Analysis method applied to LEGIT model</h2>
+                    <p class="text-content">Assessing the impact specific independent variables have on the rate of intimin transport (dependent variable)
+                        <br>The equation below describes the rate of intimin production in terms of of K<sub>m</sub> and V<sub>max</sub></p>
+                    <img src="../../assets/modellingMethods/sensitivityAnalysisEqu.png">
+
+                    <h2 class="subtitle"> Sensitivity Analysis method applied to LAME model</h2>
+                    <p class="text-content">Assessing the impact of the transport from the nucleus to the cytoplasm and the rate of protein degradation (independent variables) on the rate limiting step.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="show1">
+                    <h2 class="tabletitle">Parameter Sampling</h2>
+                </div>
+
+                <div id="hide1">
+                    <div class="text-section">
+                        <p class="text-content">Parameter sampling, aka ensemble modelling, is a method of parameter optimisation, which relies on the random sampling of parameter values within a specified range. A probability density function (PDF) determines the distribution of the continuous random variables evaluated in the function. Parameter sampling considers biological noise, making it a more realistic representation of the behaviour of a biological system.</p>
+                        <h2 class="subtitle">Method</h2>
+                        <ol class="text-content" style="width: 100%">The steps we followed when running our parameter sampling
+                            <li>Identify the parameters to be optimised</li>
+                            <li>Collect raw data from literature</li>
+                            <li>Process raw data by assigning weights to data depending on the similarity to the to-be-optimised parameter</li>
+                            <li>Input the sample size, standard deviation and weighted mean in a PDF (probability density function)</li>
+                        </ol>
+                        <p class="text-content">This method was applied to the LEGIT and LAME models</p>
+                        <h2 class="subtitle">LEGIT model</h2>
+                        <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of transport of intimin.</p>
+
+                        <!-- add the tree diagram-->
+
+                        <ul class="text-content" style="width: 100%"> Conditions for intimin
+                            <li>Size: 94 kDa </li>
+                            <li>Optimal pH conditions: 7 </li>
+                            <li>Organism: E.coli </li>
+                        </ul>
+
+                        <p class="text-content" style="padding-top: 0">Weighted mean of K<sub>m</sub>: 0.0147</p>
+                        <p class="text-content" style="padding-top: 0">Weighted mean of V<sub>max</sub>: 300000 (1 s.f.)</p>
+
+
+                        <p class="text-content"> Click here to check out the data collected to optimise the value of K<sub>m</sub> </p>
+                        <!-- ADD LINK for the table of values-->
+                        <p class="text-content"> Click here to check out the data collected to optimise the value of V<sub>max</sub> </p>
+                        <!-- ADD LINK  for the table of values -->
+                    </div>
+
+                    <h2 class="subtitle" style="text-align: left">Generate probability density functions (PDF) </h2>
+                    <p class="text-content">Probability density functions are functions of continuous random variables. The function considers the integral of this random variable and determines the probability that lies within   a specified interval.
+                        The sample size, the standard deviation and the weighted mean are the 3 parameters that need to be implemented in the PDF function. We can then plot the rate of transport with K<sub>m</sub> /V<sub>max</sub> values randomly selected from the interval and identify the optimal parameter value. </p>
+
+                </div>
+            </div>
+
+
+            <div class="text-section">
+                <!-- this section needs to be fixed -->
+                <div class="row">
+                    <div id="show1">
+                        <h2 class="tabletitle">Assumptions</h2>
+                    </div>
+
+                    <div id="hide1">
+                        <img src="../../assets/assumptions.png">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="show2">
+                        <h2 class="tabletitle">Initial Assumptions</h2>
+                    </div>
+
+                    <div id="hide2">
+                        <img src="../../assets/Parameter.png">
+                    </div>
+                </div>
+
+                <div class="text-section">
+                    <!-- this section nneds to be fixed -->
+                    <div class="row">
+                        <div id="show1">
+                            <h2 class="tabletitle">Species</h2>
+                        </div>
+
+                        <div id="hide1">
+                            <img src="../../assets/species.png" style="width:600px; height:300px">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div id="show1">
+                            <h2 class="tabletitle">Parameters</h2>
+                        </div>
+
+                        <div id="hide1">
+                            <img src="../../assets/paramters.png" style="width:600px; height:600px">
+                        </div>
+                    </div>
+
+
+
+            <div class="text-section">
+                <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69)">Bibliography</h2>
+                <ol class="text-content">
+                    <li>Thereza, C., Marina, I., Luciana.Cambricoli, d. and Olivia, C. (2004). Expression of green fluorescent protein (GFPuv) in Escherichia coli DH5-a, under different growth conditions. African Journal of Biotechnology, 3(1), pp.105-111.</li>
+                    <li>Wlab.ethz.ch. (2017). Cell Surface Protein Atlas. [online] Available at: http://wlab.ethz.ch/cspa/#abstract [Accessed 4 Sep. 2017].</li>
+                    <li>Sciencedirect.com. (2017). Membrane integration of E. coli model membrane proteins - ScienceDirect. [online] Available at: http://www.sciencedirect.com/science/article/pii/S0167488904000813 [Accessed 4 Sep. 2017].</li>
+                    <li>Arun KH e. Green fluorescent proteins in receptor: an emerging tool for drug discovery. – PubMed –NCBI [Internet]. Ncbi.nlm.gov.2017 [cited 21 August 2017]. Available from: https://www.ncbi.nlm.nih.gov/pubmed/15596111</li>
+                    <li>[internet] UVGermicidalTechnicalData. [cited 10 September 2017] http://www.pveducation.org/pvcdrom/effect-of-light-intensity (accessed 10 September 2017).</li>
+                    <li>Jayaraman, P., Devarajan, K., Chua, T. K., Zhang, H., Gunawan, E. and Loo Poh, C.  Blue light-mediated transcriptional activation and repression of gene expression in bacteria. NCBI. 2016;44(14):6994–7005.</li>
+                    <li>Philips, Ron. "Cell Biology By The Numbers." Book.bionumbers.org. N.p., 2017. Web. 10 Sept. 2017.</li>
+                    <li>Kiparissides, Alexandros et al. "Modelling The Delta1/Notch1 Pathway: In Search Of The Mediator(S) Of Neural Stem Cell Differentiation." PLoS ONE 6.2 (2011): e14668. Web.</li>
+                    <li>Carbonell-Ballestero M, Duran-Nebreda S, Montanez R, Sole R, Macia J, Rodriguez-Caso C. A bottom-up characterization of transfer functions for synthetic biology designs: lessons from enzymology. 2017.</li>
+                    <li>Km & Vmax [Internet]. Mofetsrv.mofet.macam98.ac.il. 2017 [cited 21 September 2017]. Available from: http://mofetsrv.mofet.macam98.ac.il/~rafid/BIOLOGY/biochem/infopages/aminoacids/www-biol.paisley.ac.uk/courses/stfunmac/glossary/Km.html</li>
+
+                </ol>
+            </div>
+
+
+        <a href="#" id="myBtn" title="Go to top">Back to Top</a>
+
+    </div>
+</div>
+
+</body>
+
+</html>
