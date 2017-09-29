@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
     <script type="text/javascript">google.load("jquery", "1.3.2");</script>
@@ -102,7 +103,6 @@
                     <li><a href="#" class="dropped">Parts</a></li>
                     <li><a href="#" class="dropped">Gold Criteria</a></li>
                     <li><a href="#" class="dropped">Interlab</a></li>
-
                 </ul>
             </li>
 
@@ -160,7 +160,6 @@
                     <li><a href="#" class="dropped">Collaborations</a></li>
                     <li><a href="#" class="dropped">Attributions</a></li>
                 </ul></li>
-
         </ul>
     </div>
 
@@ -201,8 +200,7 @@
 
                 <div  class="text-content">
                     <p>Legend:
-
-                        <br><b>LACE<sub>TF</sub></b> = Photocleavable (PhoCl) linker attached to the outter membrane of the cells outer membrane and the Transcription Factor (TF)
+                        <br><b>LACE<sub>TF</sub></b> = Photocleavable (PhoCl) linker attached to the outter membrane of the cells and the Transcription Factor (TF)
                         <br><b>LACE</b> = Protein on cells outter membrane with a part of the cleaved PhoCl linker
                         <br><b>TF<sub>C</sub></b> = Free TF in the cytoplasm of the cell
                         <br><b>TF<sub>N</sub></b> = Free TF in the nucleus of the cell
@@ -213,20 +211,16 @@
                         <br><b>P<sub>RFP</sub></b> = RFP translated protein
                     </p>
                 </div>
-
             </div>
 
             <div class="text-section">
-
                 <h1 class="title">The Science behind LAME</h1>
                 <img src="../../bacterial-modelling-overview.jpg" class="image-content">
-
                 <ol class="text-content" type="'1"> LAME models the light activated expression of GFP protein within genetically engineered CHO cells.
                     When light shines onto our CHO cells the photocleavable linker anchoring the RFP TF on the outer membrane of the cell becomes cleaved.
                     The photocleavage leads to the release of the TF in the cell. The TF is then guided to the RFP promoter in the cell with the help of a dCAS9, which has been attached to it.
                     This mechanism could be used to induce the production of cadherin, the surface proteins that cause mammalian cells to adhere to eachother, upon demand. Thererfore,
                     it could be used to create organised cell structures.
-
                     <br>
                     <br>
                     We attempted to optimise the rate at which RFP can be seen within the CHO cells, in order to increase
@@ -237,16 +231,13 @@
                     <li class="text-section"> 1. Cleavage of Photocleavable (PhoCl) Linker  (We want to make these links- where when you press on them you get directed to this section)</li>
                     <li class="text-section"> 2. Transcription</li>
                     <li class="text-section"> 3. Translation</li> </ol>
-
                 <ul class="text-content" style="margin-top: 0; padding-top:0 "> We decided to incorporate some innovative twists in our LEGIT model, where we modelled:
                     <li> The rate kinetics of a system induced with photocleaving</li>
                     <li> The transport of our TF, which has a dCas9 attached to it, to the nucleus of the cell </li>
                 </ul>
-
             </div>
 
             <h1 class="title ">1.) Cleavage of PhoCl linker</h1>
-
             <img id="special-image-1" src="../../bacterial-modelling-induction.jpg" class="image-content" style="margin-bottom: 0">
 
             <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photocleavage and release of the RFP TF in the cytoplasm of the cell
@@ -272,7 +263,7 @@
                 nucleus of the cell to the RFP promoter with the help of dCAS9. Once the TF<sub>c</sub> enters the nucleus of the cell it becomes TF<sub>N</sub>. The rate at which the TF<sub>N</sub> binds to the RFP promoter
                 affects the rate at which transcription takes place. Two degradation factors were introduced t oaccount for the half-life of the mRNA<sub>N</sub> and the transport of the mRNA from the nucleus of the cell
                 to the cytoplasm.</p>
-            <img src="../../assets/MamTranscription.png" class="image-content" style="width: 600px; height: 150px">
+            <img src="../../assets/MamTranslation.png" class="image-content" style="width: 600px; height: 150px">
 
             <h1 class="title">3.) Translation</h1>
             <img src="../../assets/bacterial-translation.png" class="image-content image-content-here">
@@ -295,73 +286,70 @@
                 <br>
                 <!-- ADD HYPERLINK-->
             <h2 class="subtitle"> <b><i>Click here to check out our approaches and assumptions! </i></b></h2>
-            <img src="../../assets/graph1.png" class="image-content image-content-here">
-            <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1: </i> Rate of Cellular Mechanisms involved in intimin expression
+            <img src="../../assets/Mam/Mam_RK.png" class="image-content" style="width: 800px; height:450px">
+            <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1: </i> Rate of Cellular Mechanisms involved in the expression of RFP protein
                 <br>
-                <br>The concentration of the surface expressed intimin appears to be much lower than that of all the other species produced.
-                Therefore, we decided to plot a second figure to evaluate the rate taken to transport intimin to the surface of the cell.
+                <br>For Figure 1 we decided to induce the photocleavable expression system with a 27 W/cm<sup>2</sup> light intensity.The concentration of the free TF and mRNA in the nucleus appear to be much smaller than that of the other species produced.
+                Therefore, we decided to plot a second figure to evaluate the rates of photocleaving and transcription taking place. </p>
+
+            <img src="../../assets/Mam/Mam_RLS.png" class="image-content" style="width: 750px; height: 500px">
+            <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 2: </i> Re-scaled plot of Figure 1 to view the rate at which TF is released</p>
+
+            <p class="text-content" style="margin-top: 0; padding-top:0"> A rate limiting step in a process is the step that takes the longest amount of time to reach its maximum value, essentially the step that takes the longest time to
+                plateau. We identified the rate at which translation takes place as the rate limiting step from the cellular mechanisms involved.
             </p>
-            <img src="../../assets/graph2.png" class="image-content" style="width: 750px; height: 500px">
-            <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 2: </i> Re-scaled plot of Figure 1 to view the rate of the surface expression of intimin</p>
 
             <table style="width: 70%; margin-left: 150px">
+
                 <tr>
                     <th class="text-content" style="padding: 0">Step</th>
                     <th class="text-content" style="padding: 0">Time taken to plateau (hr) </th>
                 </tr>
-                <tr>
-                    <td class="text-content" style="padding: 0">Dimerization of EL222</td>
-                    <th class="text-content" style="padding: 0">1.3</th>
 
+                <tr>
+                    <td class="text-content" style="padding: 0">Cleavage of PhoCl Linker</td>
+                    <th class="text-content" style="padding: 0">0.5</th>
                 </tr>
+
                 <tr>
                     <td class="text-content" style="padding: 0" >Transcription</td>
-                    <th class="text-content" style="padding: 0">2.4</th>
+                    <th class="text-content" style="padding: 0">0.5</th>
                 </tr>
 
                 <tr>
                     <td class="text-content" style="padding: 0">Translation</td>
-                    <th class="text-content" style="padding: 0">2.5</th>
+                    <th class="text-content" style="padding: 0">5</th>
                 </tr>
 
-                <tr>
-                    <td class="text-content" style="padding: 0">Transport of intimin to the surface</td>
-                    <th class="text-content" style="padding: 0">3.2</th>
-                </tr>
             </table>
 
             <p class="text-content">A rate limiting step in a process is the step that takes the longest amount of time to reach its maximum value, essentially the step that takes the longest time to plateau.
-                We identified the rate at which intimin is transported to the surface of the cells as the rate limiting step in this cellular mechanism.
-                The rapidity of our LIT technology is vital, therefore we decided to identify the rate limiting parameters within the ODE that describes the transport of intimin to the cell surface.
+                We identified the rate of translation is the rate limiting step in this cellular mechanism.
+                The rapidity of our LIT technology is vital, therefore we decided to identify the rate limiting parameters within the ODE that describe the translation of mRNA<sub>N</sub> to RFP protein.
             </p>
 
             <h2 class="title">Optimising Light intensity</h2>
 
-            <p class="text-content">Our LEGIT model is initiated with the photoactivation of our EL222<sub>M</sub> transcription factor. Therefore we thought it would be interesting to evaluate the effect
-                different light intensities had on the concentration and rate of expression of intimin on the cell surface. The range of values we selected to test fell within the range of 0 W/m<sup>2</sup> and
-                70 W/m<sup>2</sup>, where 0 W/m<sup>2</sup> represented our system in its off state and 70 W/m<sup>2</sup> represented the maximum light intensity E.coli can withstand
+            <p class="text-content">Our LAME model is initiated with the photocleavage of PhoCl Linker that leads to the release of the transcription factor. Therefore we thought it would be interesting to evaluate the effect
+                different light intensities had on the concentration and rate of expression of RFP protein in the cell. The range of values we selected to test fell within the range of 0 W/cm<sup>2</sup> and
+                54 W/cm<sup>2</sup>, where 0 W/cm<sup>2</sup> represented our system in its off state and 54 W/cm<sup>2</sup> represented the maximum light intensity Mammalian cells can withstand
                 before they started to die.</p>
+
             <h2 class="subtitle">Sensitivity Analysis of Light Intensities </h2>
-            <img src="../../assets/graph3.png" class="image-content" style="width: 800px; height: 450px">
-            <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 3: </i> Effect of light intensity on the concentration and rate of expression of intimin on the cell surface </p>
-            <p class="text-content">From Figure 3 it is evident that an increase in the light intensity used to activate the expression of intimin corresponds to a direct increase in the concentration of intimin expressed on the surface of the cells.
-                Interestingly, at 0 W/m<sup>2</sup> we still experience some intimin expression due to leakage of promoter expression. The concentration of intimin expressed at a light intensity of 0 W/m<sup>2</sup> was assumed to not be sufficient to cause cell adhesion.</p>
-            <h2 class="subtitle">Wetlab contribution </h2>
-            <p class="text-content">Real life experimental data could be obtained for this model by extracting the EL222<sub>M</sub> from E.coli cells, exposing it to different intensities of blue light and running it on an SDS page.
-                With this procedure one could evaluate the effect light intensity has on the extent of dimerisation EL222<sub>M</sub> undergoes.
-                The amount of dimerisation taking place could be measured by looking at the distance the EL222 extracts travel down the SDS page, where a shorter distance will be travelled by the EL222<sub>D</sub> due to their larger molecular weight.</p>
+            <img src="../../assets/Mam/Mam_LI.png" class="image-content" style="width: 800px; height: 450px">
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 3: </i> Effect of light intensity on the concentration and rate of expression of RFP protein in the cell </p>
+            <p class="text-content" style="margin-top: 0; padding-top:0">From Figure 3 it is evident that an increase in the light intensity used to photocleave PhoCl and activate the expression of RFP within the cells corresponds to a direct increase in the concentration of RFP expressed in the cells.</p>
 
             <h1 class="title">Optimising the parameters in the rate-limiting step</h1>
 
-            <p class="text-content">We decided to optimize the rate-limiting parameters present in the ODE which describes the transport of intimin to the cell surface. The two rate-limiting parameters identified were:  V<sub>max</sub> and Km.
+            <p class="text-content">We decided to optimize the rate-limiting parameters present in the ODE which describes the translation of RFP protein in the cell. The two rate-limiting parameters identified were: β (the rate of transport of mRNA to the cell cytoplasm) and d<sub>3</sub> (the degradation rate of P<sub>RFP</sub>).
                 The maximum and minimum values that could be assigned to each parameter were determined from papers. We decided to optimise the values for each parameter by using two approaches, a Sensitivity Analysis and Parameter Sampling.</p>
 
-            <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the K<sub>m</sub> value</h2>
-            <p class="text-content">In the transport of intimin to the surface of the cell K<sub>m</sub> represents the affinity the surface of the cell has for intimin. Ideally, we would want a low Km value to increase the affinity of the cell surface for the intimin. This would decrease the time taken for intimin to be transported to the cell surface.</p>
-            <h2 class="subtitle">Sensitivity Analysis for K<sub>m</sub> </h2>
+            <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the rate at which mRNA is transported to the cell nucleus (β)</h2>
+            <p class="text-content">The rate of translation is dependent on the rate at which mRNA is transported to the cytoplasm of the cell. Ideally, we would want a low β value to increase the rate at which the mRNA is transported to the cells cytoplasm. This would increase the rate of translation.</p>
+            <h2 class="subtitle">Sensitivity Analysis for b </h2>
 
-            <img src="../../assets/SensitivityKm.png" class="image-content" style="width: 800px; height: 450px">
+            <img src="../../assets/Mam/Mam_SAbeta.png" class="image-content" style="width: 800px; height: 450px">
             <br>
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5:</i> Effect K<sub>m</sub> has on the rate of intimin expression on the cell surface
                 <br>
@@ -373,48 +361,48 @@
 
             <h2 class="subtitle">Parameter Sampling for K<sub>m</sub></h2>
 
-            <img src="../../assets/Parameter%20Km.png" class="image-content" style="width: 800px; height: 450px">
+            <img src="../../assets/Mam/Mam_PSbeta.png" class="image-content" style="width: 800px; height: 450px">
 
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 6:</i> Effect K<sub>m</sub> has on the rate of intimin expression on the cell surface </p>
 
             <p class="text-content" style="margin-top: 0; padding-top:0">Parameter Sampling takes the specifics of a particular cellular mechansim into consideration, therefore we believe the results obtained from
                 this approach should be more representative of the actual optimised  Km value that could be achieved in our technology. </p>
 
-            <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the V<sub>max</sub> value</h2>
-            <p class="text-content">The parameter V<sub>max</sub> represents the maximum rate at which intimin can be expressed on the surface of the cell.
-                Therefore, we would want to maximise the value of V<sub>max</sub> to decrease the time it takes for the surface of the cell to fill up with intimin.</p>
-            <h2 class="subtitle">Sensitivity Analysis for V<sub>max</sub> </h2>
+            <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the degradation rate (d<sub>3</sub>) of the GFP protein</h2>
+            <p class="text-content">The parameter d<sub>3</sub> represents the rate at which the concentration of GFP decreases due to protein degradation and dilution.
+                Therefore, we would want to minimise the value of d<sub>3</sub> to decrease the time it takes for the maximum amount of GFP to be expressed in the cell.</p>
+            <h2 class="subtitle">Sensitivity Analysis for d<sub>3</sub> </h2>
 
-            <img src="../../assets/Vmax%20Sensitivity.png" class="image-content" style="width: 800px; height: 450px">
+            <img src="../../assets/Mam/Mam_SADeg.png" class="image-content" style="width: 800px; height: 450px">
             <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 7:</i> Effect V<sub>max</sub> has on the rate of intimin expression on the cell surface
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 7:</i> Effect d<sub>3</sub> has on the rate of RFP expression in the cell
                 <br>
-                <br> In Figure 7 it is evident that from the Sensitivity Analysis a very high unrealistically achievable V<sub>max</sub> value is
-                presented as the most optimal value for our V<sub>max</sub>. </p>
+                <br> In Figure 7 it is evident that from the Sensitivity Analysis a large range of d<sub>3</sub> values are
+                presented, however no factors such the origin of protein, size of the protein etc. have been taken into consideration to make the d<sub>3</sub> value case specific. </p>
 
-            <h2 class="subtitle">Parameter Sampling for V<sub>max</sub></h2>
-            <img src="../../assets/Vmax%20Param%20Samp.png" class="image-content" style="width: 800px; height: 450px">
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8:</i> Effect V<sub>max</sub> has on the rate of intimin expression on the cell surface
+            <h2 class="subtitle">Parameter Sampling for d<sub>3</sub></h2>
+            <img src="../../assets/Mam/Mam_PSDeg.png" class="image-content" style="width: 800px; height: 450px">
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8:</i> Effect d<sub>3</sub> has on the rate of RFP expression in the cell
                 <br>
                 <br>
-                In Figure 8 it is evident that once Parameter Sampling is used a significantly smaller V<sub>max</sub>
-                value is suggested, as a series of factors that cater the answer to our particular cellular mechanism are taken into consideration.</p>
+                In Figure 8 it is evident that once Parameter Sampling is used a narrower range of d<sub>3</sub>
+                values are evaluated. This occurs because a series of factors that cater the answer to our particular cellular mechanism are taken into consideration.</p>
 
-            <h1 class="title">Determining the effect light pulsing has on intimin expression</h1>
+            <h1 class="title">Determining the effect light pulsing has on the rate of GFP expression</h1>
 
             <p class="text-content"> We determined increasing light intensity has a directly proportional increase on the concentration
-                and the rate of expression of intimin on the surface of the cell. We therefore decided to evaluate the effect other light properties would have on our system. More specifically, we decided to evaluate whether light pulsing had an effect on intimin expression. This would allow us to see whether continuously activating and
-                deactivating our light induced system could result in the expression of a larger concentration of intimin on the surface of the cell.
+                and the rate of expression of GFP in the cell. We therefore decided to evaluate the effect other light properties would have on our system. More specifically, we decided to evaluate whether light pulsing had an effect on GRP expression. This would allow us to see whether continuously activating and
+                deactivating our light induced system could result in the expression of a larger concentration of GFP at a faster rate in the cells.
                 <br>
                 <br>We first ran a control simulation, where we introduced one long pulse of 7 hours of light, to ensure we received a curved response that would simulate the activation and deactivation of our cellular mechanisms for a defined period of time. </p>
-            <img src="../../assets/1%20Pulse.png" class="image-content" style="width:950px; height: 450px">
+            <img src="../../assets/Mam/Mam_1pulse.png" class="image-content" style="width:950px; height: 450px">
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 9:</i> Effect one pulse has on the rate kinetics on the expression of intimin
                 <br>
                 <br>From Figure 9 it is evident the behaviour of all the species produced after each step involved in the expression of intimin is represented as a dumb bell shaped curve. This is justifiable, as when the light is turned off we expect the rate of product production to become smaller than the rate of product degradation. Therefore, as time passes the concentration of each product from each step is expected to decrease, until eventually all the species from the product produced degrade.
                 <br>
-                <br> We then wanted to evaluate the effect pulsing for periods of 4 hours would have on the expression of intimin on the surface of the cell.</p>
-            <img src="../assets/PUlsing.png" class="image-content image-content-here" style="width: 700px; height: 500px">
-            <p class="text-content"><i>Figure 10:</i> Effect pulsing light in 4 hour intervals has on the intimin surface expression
+                <br> We then wanted to evaluate the effect pulsing for periods of 2 hours would have on the expression of intimin on the surface of the cell.</p>
+            <img src="../../assets/Mam/Mam_3pulses.png" class="image-content image-content-here" style="width: 700px; height: 500px">
+            <p class="text-content"><i>Figure 10:</i> Effect pulsing light in 2 hour intervals has on the intimin surface expression
                 <br>
                 <br>From Figure 10 we discovered that if we pulse light on the cells for a period of 4 hours three times within 24 hours, we experience more than a 10-fold increase in the concentration of intimin expressed on the surface of the cells.
                 <br> WE NEED TO TALK ABOUT THE SCIENCE OF WHY THIS HAPPENS
@@ -422,7 +410,7 @@
 
             <div class="text-section">
                 <h1 class="title">Optimised conditions </h1>
-                <p class="text-content">The biggest increase in the rate of intimin expression on the surface of the cells occurrs when the value of ‘Km’ decreases and the values of ‘V<sub>max</sub>’ increases. This is something we expected, as the lower the value of Km the higher the affinity our cells membranes would have for intimin and therefore the faster the transport of intimin to the cell surface. In addition, the higher the V<sub>max</sub> the faster the rate at which the reaction occurs. Thus, the combination of both of these phenomena results in a faster transport of intimin to the surface of the cell.</p>
+                <p class="text-content"> The biggest increase in the rate of intimin expression on the surface of the cells occurrs when the value of ‘Km’ decreases and the values of ‘V<sub>max</sub>’ increases. This is something we expected, as the lower the value of Km the higher the affinity our cells membranes would have for intimin and therefore the faster the transport of intimin to the cell surface. In addition, the higher the V<sub>max</sub> the faster the rate at which the reaction occurs. Thus, the combination of both of these phenomena results in a faster transport of intimin to the surface of the cell.</p>
                 <table style="width: 50%; margin-left: 150px">
                     <tr>
                         <th class="text-content" style="padding: 0">Optimised Paramter</th>
@@ -440,21 +428,21 @@
                 </table>
                 <br>
                 <h2 class="subtitle" style="margin-top: 25px; color: rgba(204, 0, 53, 0.69)">Running the model with optimised paramters</h2>
-                <p class="text-content">We ran our rate kinetics model with our newly optimised parameters and determined that with our optimised parameters a larger concentration of intimin was transported to the surface of the cell. However, the same amount of time was taken for the intimin expression rate to plateau. Therefore, this
+                <p class="text-content"> We ran our rate kinetics model with our newly optimised parameters and determined that with our optimised parameters a larger concentration of intimin was transported to the surface of the cell. However, the same amount of time was taken for the intimin expression rate to plateau. Therefore, this
                     means that although the concnetration of intimin expressed on the surface of the cell was optimised this step prevails to be the rate-limiting step in the netwrok of cellular mechanisms invovled.</p>
-                <img src="../../assets/graph11.png" class="image-content" style="width: 750px; height:500px">
+                <img src="../../assets/Mam/Mam_Tran.png" class="image-content" style="width: 750px; height:500px">
                 <p class="text-content"><i>Figure 11: </i> Original rate kinetics for the transport of intimin to the cell surface </p>
-                <img src="../../assets/graph12.png" class="image-content" style="width: 750px; height:500px">
+                <img src="../../assets/Mam/Mam_RKOpt.png" class="image-content" style="width: 750px; height:500px">
                 <p class="text-content"><i>Figure 12: </i> Optimised rate kinetics for the transport of intimin to the cell surface </p>
 
             </div>
 
             <div class="text-section">
                 <h1 class="title">Cost Analysis</h1>
-                <p class="text-content">We ran a  Cost Analysis to ensure our LIT optogenetic tool was an affordable technology current labs could use to replace alternative technologies with.
+                <p class="text-content"> We ran a  Cost Analysis to ensure our LIT optogenetic tool was an affordable technology current labs could use to replace alternative technologies with.
                     We focused on identifying the main operational costs a user would incur, where we determined the most critical ones were: the light intensity they used to activate the E.coli cellular mechanism; and the frequency of light pulsing.
                     We created a function in Python that took costs incurred for both methods into consideration, where we attempted to identify the most cost-efficient operational conditions for our tool.</p>
-                <img src="../../assets/Intensity.png" class="image-content" style="width: 750px; height:500px">
+                <img src="../../assets/Mam/Mam_CostLI.png" class="image-content" style="width: 750px; height:500px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Effect light intensity has on the cost for the operation of the optogenetic tool
                     <br>
 
@@ -462,60 +450,25 @@
                     proportionally to the light intensity at which our optogenetic tool is operated at.
                     <br>
                     <br> We also decided to analyse the impact light pulsing would have on the overall process costs.</p>
-                <img src="../../assets/Pulsing.png" class="image-content" style="width: 800px; height:500px">
+                <img src="../../assets/Mam/Mam_CostPul.png" class="image-content" style="width: 800px; height:500px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 14: </i> Effect of pulsing on the cost for the operation of the optogenetic tool
                     <br>
-                    <br>The simulation in Figure 14 was also run for a period of 2 hours, where it was assumed a constant light intensity of 40 W/m<sub>2</sub> was used. Similarly to Figure 13, we see that an increase in the pulse duration results in a proportional increase in the cost of operation.
+                    <br>The simulation in Figure 14 was also run for a period of 2 hours, where it was assumed a constant light intensity of 40 W/cm<sub>2</sub> was used. Similarly to Figure 13, we see that an increase in the pulse duration results in a proportional increase in the cost of operation.
                 <p class="text-content">We then decided to plot both the costs incurred for different light intensities and the pulsing durations on the same graph to evaluate their synergistic effect.</p>
 
-                <img src="../../assets/Optimized.png" class="image-content" style="width:800px; height:500px">
+                <img src="../../assets/Mam/Mam_CostOpt.png" class="image-content" style="width:800px; height:500px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 15: </i> Comparison of the effects of pulsing and light intensity on the overall cost.
                     <br>
                     <br> We decided to define the most optimum operating conditions for our optogenetic tool as those at which both lines intersect. Beyond the point of intersection it was evident that the operational costs
                     for the optogenetic tool were too high. Below the intersection point it was evident that the activity of the E.coli cell adhesion mechanism would
                     be too slow, and as one of the biggest selling points for our technolgy is its rapidity we decided it would not be feasible to
-                    operate at such a slow rate. Therefore, the best trade-off was identified when operating at a light intensity of 30 W/m<sup>2</sup> with a 4.5 hr pulsing frequency.</p>
+                    operate at such a slow rate. Therefore, the best trade-off was identified when operating at a light intensity of 30 W/cm<sup>2</sup> with a 4.5 hr pulsing frequency.</p>
             </div>
-
-            <h2 class="title">Alternative applications of our model</h2>
-
-            <div style="margin-top: 20px">
-
-                <h1 class="subtitle">Pharmaceutical Industry</h1>
-
-                <p class="text-content">Our model could be adapted and used by Pharmaceutical companies to optimize their
-                    Downstream Processing conditions, in order to obtain a high product yield. A focus could be placed on
-                    identifying the bottleneck of the manufacturing process, the stage at which the greatest concentration
-                    of product is lost in the manufacturing process. Each differential equation could represent a batch mode
-                    taking place in one unit operation, where the product concentration changes over time. For each equation,
-                    we would include the loss of product in the form of degradation rates, as they would indicate a decrease in
-                    product concentration. For each of these conditions a discount factor for the product concentration would need
-                    to be introduced. The product loss could be due to: the product getting stuck in crevices in the machinery;
-                    product degradation due to a limited half-life; and product aggregation to other cellular debris. This model
-                    would help companies determine the unit operation at which the largest product loss is experienced.</p>
-
-            </div>
-
-            <div class="text-section">
-                <h1 class="subtitle">Stock market</h1>
-                <p class="text-content">Similarly, our model could be also be adapted to represent the volatile nature of publically
-                    listed companies’ share prices in the stock market. One could divide the differential equations into the main factors
-                    which affect the share price of a company. These factors could be: the Lombard Rate which is set by the European Central Bank;
-                    the desirability of a company’s shares (set as a function of the market share a company has); and a company’s share price.
-                    A decrease in the Lombard rate would result in an increase in the share price of a company, which would lead to an increase
-                    in the number of the company’s shares bought from the stock market and finally result in an increase the market share a company
-                    has in its industrial sector. Through our model financial institutions could identify the time it takes for a change in the
-                    Lombard rate to result in a change in the company’s market share. Simultaneously, once the bottleneck is identified, the
-                    company’s management team could optimise parameters (such as advertising or product diversification) to minimise the time taken for this change to occur.
-                </p>
-
-            </div>
-
-        </div>
 
         <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
     </div>
+
 </div>
 
 </body>
