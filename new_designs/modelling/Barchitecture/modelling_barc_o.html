@@ -178,6 +178,10 @@
                 <li id="step4" class="navy-link side-link"><a href="#section3">Cost Analysis</a></li>
                 <li id="step4" class="navy-link side-link"><a href="#section3">Alternative applicaitons</a></li>
                 <li id="step4" class="navy-link side-link"><a href="#section3">Collaboration</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Assumptions</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Parameters</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Species</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Initial Conditions</a></li>
             </ul>
         </nav>
 
@@ -243,7 +247,7 @@
 
             <h2 class="subtitle"> <b><i>Interested to understand how we did this? Check out a detailed description of each of our modelling steps</i></b></h2>
 
-            <h1 class="title ">Modelling steps breakdown</h1>
+            <h1 class="title ">Modelling steps</h1>
 
                 <h1 class="title ">1.) Light activation</h1>
 
@@ -461,11 +465,13 @@
                     V<sub>max</sub> has on the rate of intimin expression on the cell surface
                     <br>
                     <br>
-                    Parameter sampling allowed us to take a series of factors into consideration when optimising the value of V<sub>max</sub>.
-                    
-                    In this case we took the cell size, cell type and protein size of the proteins from which we took our parameter values into consideration.
+                    Parameter Sampling allowed us to take a series of factors into consideration when optimising the value of V<sub>max</sub>.
                     The values of V<sub>max</sub> represented in figure 8 are more realistic and significantly lower than
-                    the ones obtained from a Sensitivity Analysis.
+                    the ones obtained from the Sensitivity Analysis. This is because a series of factors were taken into consideration when
+                    creating a normal distribution of the possible V<sub>max</sub> values for our technology.
+
+            <h2 class="subtitle"> <b><i>Curious about the steps Paramater Sampling actually entails? Have a look at our Methodology page</i></b></h2>
+
                 </p>
 
             <h1 class="title">Determining the effect light pulsing has on intimin expression</h1>
@@ -529,7 +535,7 @@
                 </table>
                 <br>
                 <h2 class="subtitle" style="margin-top: 25px; color: rgba(204, 0, 53, 0.69)">Running the model with optimised paramters</h2>
-                <p class="text-content">We ran our rate kinetics model with our newly optimised parameters and determined that with our optimised parameters a larger concentration of intimin was transported to the surface of the cell. However, the same amount of time was taken for the intimin expression rate to plateau. Therefore, this
+                <p class="text-content">We ran our rate kinetics model with our newly optimised parameters and determined that with our optimised parameters there was a 5% increase in the concentration of intimin transported to the surface of the cell. However, the same amount of time was taken for the intimin expression rate to plateau. Therefore, this
                 means that although the concnetration of intimin expressed on the surface of the cell was optimised this step prevails to be the rate-limiting step in the netwrok of cellular mechanisms invovled.</p>
                 <img src="../../assets/Barch/Barc_RLS.png" class="image-content" style="width: 750px; height:500px">
                 <p class="text-content"><i>Figure 11: </i> Original rate kinetics for the transport of intimin to the cell surface </p>
@@ -573,12 +579,15 @@
                     lines intersect. Beyond the point of intersection, it was evident that the operational costs for the optogenetic
                     tool were too high. Below the intersection point it was evident that the activity of the E. coli cell adhesion
                     mechanism would be too slow.  As one of the biggest selling points for our technology is its rapidity we decided
-                    it would not be feasible to operate at such a slow rate. Therefore, the best trade-off was identified when operating
+                    it would not be feasible to operate at such a slow rate.
+                    <br>
+                    <br>
+                    The best costing trade-off was identified when operating our technology
                     at a light intensity of 30 W/cm<sup>2</sup> with a 4.5-hour pulsing frequency.
                 </p>
             </div>
 
-            <h2 class="title">Alternative applications of our model</h2>
+            <h6 class="title">Alternative applications of our model</h6>
 
             <div style="margin-top: 20px">
 
@@ -612,6 +621,48 @@
                 </p>
 
             </div>
+
+            <h6 class="title">Collaboration</h6>
+
+            <div class="text-section">
+                <p class="text-content">  Throughout the summer we had a bilateral collaboration with the iGEM SVCE 2017 team from India.
+                    Our collaboration started off with us sending each other useful sources and tutorials on how to approach modelling for
+                    cellular mechanisms, as neither team considered itself an expert in the field. Once we both started forming the differential
+                    equations for our respective models, we sent each other documents with a summary of our ODEs and provided feedback to each other.
+                    Both teams provided constructive feedback on how to present complex information in a simple manner to make it easy to understand
+                    for non-modellers, while at the same time helped refine each other’s differential equations.
+                </p>
+
+            </div>
+
+
+
+            <h2 class="title">Legit Assumptions</h2>
+
+            <ul class="text-content">
+                <li>Mass action kinetics</li>
+                <li>Michaelis Menten kinetics</li>
+                <li>All reactions are taking place in cells that are plated in a petri dish</li>
+                <li>Light intensity is the only factor affecting the intimin protein expression in the cells</li>
+                <li>Every cell is activated by the same light intensity, regardless of its position in the petri dish</li>
+                <li>There is no light reflection or refraction from the cells</li>
+                <li>All cells are at their exponential growth phase</li>
+                <li>All cells are equally as probable to express SpyTag and SpyCatcher</li>
+                <li>SpyTag and SpyCatcher are constitutively expressed with Intimin</li>
+            </ul>
+
+            <h3 class="title">LEGIT Species</h3>
+
+            <img src="../../assets/Barch/Species.png" class="image-content image-content-here">
+
+            <h3 class="title">Legit Parameters</h3>
+
+            <img src="../../assets/Barch/Parameters.png" class="image-content" style="width: 900px; height:700px">
+
+            <h5 class="title">Legit Initial Conditions</h5>
+
+            <img src="../../assets/Barch/InitCond.png" class="image-content" style="width: 900px; height:1000px">
+
 
         </div>
 
