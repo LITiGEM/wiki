@@ -181,6 +181,7 @@
         <div style="float: right !important" class="col-sm-10">
             <div class="text-section">
                 <h1 class="title"> GOLIT -  Cell adhesion to form bacterial 3D structures </h1>
+                <h2 class="subtitle">Merging SynBio with cellular automata</h2>
                 <p class="text-content">GOLIT is an adapted version of Conway’s ‘Game of Life’ [add link to glossary].
                     It aims to create a visual representation of how solid cell structures formfrom the binding of SpyTag
                     and SpyCatcher.</p>
@@ -274,23 +275,66 @@
                 <h2 class="subtitle"><i>Click here to check out our code!</i></h2> <!-- Add link to Github-->
                 <br>
                 <h2 class="title">Results</h2>
+                <p class="text-content">We ran the game with the light intensities tested in the lab and the corresponding concentrations blablabla</p>
+                <p class="text-content">For 18 W/m<sup>2</sup></p>
+                <img src="../assets/18W:m2_plot copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/18W:m2_grid copy.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px">Fig. 1 shows the rate cell adhesion, Cell Number vs. times points measured.
+                    The grid shows  blablabla</p>
+
+                <p class="text-content">For 35 W/m<sup>2</sup></p>
+                <img src="../assets/35W:m2_plot.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/35W:m2_grid.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px">Fig. 1 shows the rate cell adhesion, Cell Number vs. times points measured.
+                    The grid shows  blablabla</p>
+
+                <p class="text-content">For 53 W/m<sup>2</sup></p>
+                <img src="../assets/53W:m2_plot copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/53W:m2_grid copy.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px">Fig. 1 shows the rate cell adhesion, Cell Number vs. times points measured.
+                    The grid shows  blablabla</p>
+
+                <p class="text-content">For 70 W/m<sup>2</sup></p>
+                <img src="../assets/70W:m2_plot copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/70W:m2_grid copy.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px">Fig. 1 shows the rate cell adhesion, Cell Number vs. times points measured.
+                    The grid shows  blablabla</p>
+
+                <p class="text-content">Paragraph about how what this shows and say smth about random ... </p>
+
+                <p class="text-content">We then decided to ......</p>
+                <img src="../assets/18W:m2_range copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:0px">
+                <img src="../assets/35W:m2_range .jpg" class="image-content" style="width: 480px; height: 300px; padding-left:0px; padding-right:150px">
+                <img src="../assets/53W:m2_range copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:0px">
+                <img src="../assets/70W:m2_range copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-left:0px; padding-right:150px">
+
+
 
             </div>
 
             <div class="text-section">
-                <h1 class="title">Adding Artificial Intelligence to the model </h1>
-                <p class="text-content">Aim: Optimize the initial grid to allow the fastest rate of cell aggregation.
-                    For this we are optimizing the light distribution pattern needed to induce the cellular mechanism.
+                <h1 class="title">Adding Artificial Intelligence to the Model</h1>
+                <p class="text-content">Aim: Optimize the light distribution pattern on the initial grid to allow
+                    the fastest rate of cell aggregation.
                     <br>
                     <br>We decided to add an innovative twist to our model by incorporating artificial intelligence,
-                    more particularly Genetic Algorithm (GA). Genetic Algorithms aim to mimic natural evolution
-                    processes to solve the issues of parameter optimization.
-                    <br>The genetic algorithm adopts similar rules to the game described above; the probability of a
-                    particular cell turning black (i.e. becoming bound) depends on it’s neighboring cells.
-                    The code is running different “agents” which randomly generate probabilities of binding.
-                    The code automatically selects the “best agent”, that is the initial pattern on the grid that
-                    will allow cells to aggregate fastest.
+                    more particularly Genetic Algorithm (GA). Genetic Algorithms, a type of subsymbolic artificial
+                    intelligence, adopt the principles of Darwinian evolution to tackle the challenge of parameter
+                    optimization.
+                    <br>In the context of GOLIT we are applying a genetic algorithm to optimize the initial grid,
+                    i.e. the grid at time, t=0. In other words, this means that we are generating the initial pattern
+                    of “bound” cells on the grid that will allow the fastest rate of cell adhesion. Given as only
+                    condition, a maximum number of cells to be placed on the initial grid, the model runs a number of
+                    “agents” that generate different patterns according to random probabilities. The genetic algorithm
+                    then selects the “best agent”, i.e. the “agent” showing the pattern that will allow cells to aggregate
+                    fastest.
                 </p>
+
+                <!-- may be worth adding a diagram here to illustrate this -->
+                <h2 class="subtitle"><i>Click here to access Github</i></h2>
+                <h1 class="title">Results</h1>
+                <p class="text-content">add stuff about the initial conditions of the GA</p>
+                <h1 class="title">Re-running the game with optimized conditions</h1>
             </div>
 
             <div class="text-section">
@@ -300,6 +344,8 @@
                     between Biothin and Avadin. Similarly, to SpyTag and SpyCatcher, Biothin and Avadin form a covalent bond.
                     This experimental data allowed us to optimize the concentration of surface proteins needed to achieve the
                     highest binding rate. </p>
+                <p class="text-content">change the text add content about the lab procedure/protocol? and tehn experimental
+                data and maybe the video?</p>
             </div>
 
 
