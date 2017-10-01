@@ -175,60 +175,78 @@
                 <li id="step1" class="navy-link side-link"><a href="#section1">Overview</a></li>
                 <li id="step2" class="navy-link side-link"><a href="#section2">Science behind LEGIT</a></li>
                 <li id="step3" class="navy-link side-link"><a href="#section3">Results</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section4">Cost Analysis</a></li>
-                <li id="step5" class="navy-link side-link"><a href="#section5">Alternative applicaitons</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Cost Analysis</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Alternative applicaitons</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Collaboration</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Assumptions</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Parameters</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Species</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Initial Conditions</a></li>
             </ul>
         </nav>
 
         <!-- Content -->
+
         <div style="float: right !important" class="col-sm-10">
+
+            <h1 class="title">‘LEGIT: From light to structure’</h1>
+            <h2 class="subtitle"> A mathematical model of how E. Coli cells are guided to form structures</h2>
+
+            <h1 class="title">The Science behind LEGIT</h1>
+
+            <ol class="text-content"> LEGIT is a model that determines the conditions required for optimal and rapid
+                light activated expression of the protein intimin. Intimin is a protein expressed on the surface of our genetically
+                engineered E. coli cells. It is used as an anchor on which we fuse our binding partners, SpyTag and SpyCatcher.
+                Once SpyTags and SpyCatchers have attached to a particular cell they start to bind to other SpyTags and SpyCatchers
+                attached to other cells. This binding allows our cells to aggregate into shapes. We ideally want to control the
+                amount of intimin produced on the surface of our cells so that we can control the amount of binding that takes place between our cells.
+                <br>
+                <br>
+                Breakdown of the cellular mechanims involved in the expression of intimin:
+                <br>
+                <img src="../../assets/Bac_equations1.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 50px ">
+                <br>
+                <p>Legend:
+                    <br>EL222<sub>M</sub> = EL222 monomer
+                    <br>EL222<sub>D</sub> = EL222 dimer
+                    <br>Pr<sub>LuxI</sub> = LuxI Promoter
+                    <br>Pr<sub>LuxI+E<sub>D</sub></sub> = EL222 dimer bound to the promoter
+                    <br>P<sub>Intimin</sub> = Intimin protein in the cytoplasm
+                    <br>P<sub>Surface</sub> = Intimin protein on the cell surface
+                </p>
+                <br>
+                We decided to divide our model into four main steps:
+                <br>
+                <br>
+                <li class="text-section"> 1. Light activation</li>
+                <li class="text-section"> 2. Transcription</li>
+                <li class="text-section"> 3. Translation</li>
+                <li class="text-section"> 4. Trasnport of intimin from the cells cytoplasm to the cell surface</li> </ol>
+
+            <img src="../../bacterial-modelling-overview.jpg" class="image-content">
+
+
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">LEGIT differs from conventional protein expression models
+                as it incorporates two innovative twists. The first  being rate kinetics that are dependent on light induced systems
+                and the second the transmembranal transport of the intimin protein to the surface of our E.coli cell.
+            </p>
 
             <div style="margin-top: 20px" class="text-section">
 
-                <h1 class="title">‘LEGIT: From light to structure’</h1>
-                <h2 class="subtitle"> A mathematical model of how E. Coli cells are guided to form structures</h2>
                 <div class="text-content">
                     <h2 class="title" style="padding-left: 0">Model aims</h2>
                     <ul>
                         <li>Determine the rate limiting cellular mechanism</li>
-                        <li> Optimise the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approach </li>
+                        <li>Optimise the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approach </li>
                         <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test in the lab</li>
-                        <li> Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</li>
-                    </ul>
-
-                    <h2 class="title" style="padding-left: 0">Assumptions</h2>
-                    <ul>
-                        <li>Mass action kinetics</li>
-                        <li>Michaelis Menten kinetics</li>
-                        <li>All reactions are taking place in cells, which are in a petri dish</li>
-                        <li>Light intensity is the only factor affecting protein expression of the cells</li>
-                        <li>Every cell is activated by the same light intensity, regardless of their position in the petri dish</li>
-                        <li>There is no light reflection or refraction from the cells</li>
-                        <li>All cells are at their exponential growth phase</li>
-                        <li>All cells are equally as probable to express SpyTag and SpyCatcher</li>
-                        <li>SpyTag and SpyCatcher are constitutively expressed with intimin</li>
-                        <li>The amount of inactive EL222 transcription factors is equal to the amount of active EL222</li>
+                        <li>Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</li>
                     </ul>
                 </div>
 
-                <img src="../../assets/Bac_equations1.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 150px ">
-
-               <div  class="text-content">
-                   <p>Legend
-
-                   <br>E<sub>M</sub> = EL222 monomer
-                   <br>E<sub>D</sub> = EL222 dimer
-                   <br>Pr<sub>LuxI</sub> = LuxI Promoter
-                   <br>Pr<sub>LuxI+E<sub>D</sub></sub> = EL222 dimer bound to the promoter
-                   <br>P<sub>Intimin</sub> = Intimin protein in the cytoplasm
-                   <br>P<sub>Surface</sub> = Intimin protein on the cell surface
-               </p>
-               </div>
-
             </div>
 
-
-            <div class="text-section">
+            <h2 class="subtitle"> <b><i>Interested to understand how we did this? Check out a detailed description of each of our modelling steps</i></b></h2>
+ <div class="text-section">
 
                 <h1 class="title">The Science behind LEGIT</h1>
                 <img src="../../assets/Barch/bacterial-modelling-overview.jpg" class="image-content">
@@ -254,6 +272,8 @@
 
             </div>
 
+            <h1 class="title ">Modelling steps</h1>
+
                 <h1 class="title ">1.) Light activation</h1>
 
                 <img id="special-image-1" src="../../assets/Barch/bacterial-modelling-induction.jpg" class="image-content" style="margin-bottom: 0">
@@ -261,12 +281,18 @@
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter
                     <br> <i>Location: Cytoplasm</i>
                     <br>
-                    <br>The first step of our simulation is the photo-activated dimerization of two EL222 monomers (EL222<sub>M</sub>) to produce an active EL222 dimer (EL222<sub>D</sub>).
-                    The EL222<sub>D</sub> then binds to the LuxI promoter.
+                    <br>The first step of our LEGIT simulation involves determining the amount of EL222 dimers (EL222<sub>D</sub>) present in the cell.
+                    EL222<sub>D</sub> are the transcription factors used to activate the expression of intimin in the cell. An EL222 <sub>D</sub> is produced from
+                    the photo-activated dimerization of two EL222 monomers (EL222<sub>M</sub>) found in the cell. We wanted to establish this relationship
+                    because once EL222<sub>D</sub> binds to the LuxI promotor, it starts to promote the transcription of mRNA.
+
                 </p>
 
                 <img src="../../assets/eq_activation.png" class="image-content" style="width:600px; height:100px">
-                <p class="text-content"> The photoactivation is dependent on light intensity (L). The Hill equation is commonly used to fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate the effect different light intensities would have on the rate of photoactivation of EL222. </p>
+                <p class="text-content"> Since we know that photo-activation is dependent upon light intensity (L) we used the Hill
+                    equation in our ODE to evaluate our inducible promoter genetic circuits. We did this so we could evaluate the effect different
+                    light intensities would have on the rate of photo-activation of EL222.
+                </p>
                 <img src="../../assets/eq_hill.png" class="image-content" style="width:400px; height:120px">
 
                 <h1 class="title">2.) Transcription</h1>
@@ -275,12 +301,13 @@
                     <br>
                     <i>Location: Cytoplasm</i>
                     <br>
-                    <br> The second step of our simulation is the production of mRNA from transcription.
-                    The production of mRNA is dependent upon the concentration of the EL222<sub>D</sub> and the rate at which EL222<sub>D</sub> binds to the
-                    LuxI promoter. Dilution rates were taken into consideration to account for mRNA loss due to: cell growth and mRNA degradation.
+                    <br> The second step of our simulated model involves determining the levels of mRNA transcribed from the light
+                    induced transcription. Production of mRNA is dependent upon the concentration of EL222<sub>D</sub> and the rate at which EL222<sub>D</sub>
+                    binds to the LuxI promoter. We took dilution rates due to both cell growth/division and mRNA degradation into consideration
+                    when accounting for mRNA equilibriums.
+
                 </p>
                 <img src="../../assets/bac_transcription.png" class="image-content" style="width: 420px; height: 100px">
-
 
                 <h1 class="title">3.) Translation</h1>
                 <img src="../../assets/Barch/bacterial-translation.png" class="image-content image-content-here">
@@ -288,49 +315,62 @@
                     <br>Location: Cytoplasm</i>
                     <br>
                     <br>
-                    The third step of our simulation is the production of the surface protein intimin from translation. The change in concentration of the intracellular intimin protein over time is dependent on the rate of mRNAs translation. A degradation term was introduced to represent the degradation of intimin over time because of dilution due to
-                    cell growth and the half-life of the intimin protein. </p>
+                    The next step of our model seeks to establish the production levels of the surface protein intimin from translation.
+                    The rate of intimin production is subject to changes in the rate of mRNA translation. Once intimin is translated, it is
+                    continuously transported to the surface of the E. Coli cell, therefore intimins concentration in the cell also decreases. To account
+                    for fluctuation, we created a function that takes the transport rate of intimin to the surface to the E. Coli cells into consideration as well.
+                </p>
                 <img src="../../assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
-                <p class="text-content">After translation intimin is continuously transported to the surface of the E.coli, therefore its concentration in the cytoplasm decreases over time. To account for this, we created a function that takes the transport rate of intimin to the surface of the E.coli cells into consideration.</p>
+                <p class="text-content"> We expect the speed at which intimin is transported to the surface of the cell to decrease over time.
+                    This is because as time passes there will be a decrease in available space for intimin on the cell surface. We adapted the
+                    Michaelis Menten equation to allow for the consideration of: the intimin proteins already occupying space on the cell surface; (P<sub>Surface</sub>)
+                    and the maximum available space for intimin proteins on the cell surface to create our model. The variable  was set as the limit for the
+                    maximum number of intimin proteins that can be expressed on the cell surface, thus preventing any other proteins from becoming expressed.
+                </p>
                 <img src="../../assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
-                <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the availabile space on the surface of the cells. We expect the transport rate of intimin to the cell surface to decrease as availability of space decreases. To describe this, we adapted the Michaelis Menten equation
-                    to consider the intimin molecules already occupying the plasma membrane (P<sub>Surface</sub>), and the maximum available space on the cell surface.
-
-                    The variable η sets a limit for the maximum number of intimin proteins that can be expressed on the cell surface and prevents any other proteins from becomming expressed once that limit is reached.</p>
+                <p class="text-content" >Finally, we also decided to take into consideration the fact that dilutions can occur due to cell growth and the half-life of the intimin protein. As such we introduced a degradation term to represent such degradations of intimin over time.
+                </p>
 
                 <h1 class="title">4.) Transport</h1>
 
                 <img src="../../assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
                 <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 4: Transport of intimin to the surface of the cell
                     <br>
-                    <i>Location: E.coli capsule</i>
+                    <i>Location: Cell surface</i>
                     <br>
-                    <br> Our final differential equation simulates the change in concentration of intimin expressed on the surface of the cells over time.  The equation takes both the rate taken for intimin to be transported to the cell surface and intimins degradation rate into consideration.
+                    <br> Our final differential equation simulates the change in concentration of intimin expressed on the cell
+                    surface over time. This equation takes both the rate at which intimin is being transported to the cell surface
+                    and the intimins’ degradation rate into consideration.
                 </p>
                 <img src="../../assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
-
-
             <!-- add link to the project description page-->
             <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%"> <i>Not enough science? Check out the project description page!</i></h2>
 
             <div class="text-section">
                 <h1 class="title">Results</h1>
-                <p class="text-content">From our LEGIT simulation we compiled the graphs generated, evaluated their results
-                    and determined the optimal range of values our Wet Lab team should evaluate for the rate-limiting parameters we identified.</p>
+                <p class="text-content">Using our LEGIT simulation, we generated graphs and evaluated them to determine the optimal
+                    range of values our Wet Lab team should seek to experiment with.
+                </p>
                 </div>
                 <h1 class="title">Determining the rate limiting step in intimin expression</h1>
-            <p class="text-content">We used rate kinetics modelling to determine the rate limiting step in the cellular mechanisms involved in intimin expression.
+            <p class="text-content">In order to determine the rate limiting step in the cellular mechanisms involved in intimin
+                expression we used rate kinetics modelling.
                 <br>
                 <!-- ADD HYPERLINK-->
             <h2 class="subtitle"> <b><i>Click here to check out our approaches and assumptions! </i></b></h2>
             <img src="../../assets/Barch/Barc_RK.png" class="image-content image-content-here">
-                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1: </i> Rate of Cellular Mechanisms involved in intimin expression
-                <br>
-                    <br>For Figure 1 we decided to induce the photoactivated expression of intimin with a 70 W/cm<sup>2</sup> light intensity. The concentration of the surface expressed intimin appears to be much lower than that of all the other species produced.
-                    Therefore, we decided to plot a second figure to evaluate the rate taken to transport intimin to the surface of the cell.
+                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1: </i> Demonstrates the rate of the cellular mechanisms involved in the expression of intimin
+                    (More specifically the rate of: EL222D production and binding to the LuxI promoter; Transcription; Translation; and transport of translated Intimin to the cell surface)
+
+                    <br>
+                    <br>From Figure 1 it is evident that the concentration of the surface expressed intimin appears to be much lower
+                    than the other species produced from previous cellular mechanisms. As such we decided to plot a second graph to
+                    evaluate only the rate of intimin transportation to the cell surface on a rescaled plot.
+
                 </p>
                  <img src="../../assets/Barch/Barc_RLS.png" class="image-content" style="width: 750px; height: 500px">
-                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 2: </i> Re-scaled plot of Figure 1 to view the rate of the surface expression of intimin</p>
+                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 2: </i> Depicts the rescaled Graph to view the rate of Surface Expression of Intimin
+                </p>
 
                 <table style="width: 70%; margin-left: 150px">
                     <tr>
@@ -344,12 +384,12 @@
                     </tr>
                     <tr>
                         <td class="text-content" style="padding: 0" >Transcription</td>
-                        <th class="text-content" style="padding: 0">2.4</th>
+                        <th class="text-content" style="padding: 0">1.6</th>
                     </tr>
 
                     <tr>
                         <td class="text-content" style="padding: 0">Translation</td>
-                        <th class="text-content" style="padding: 0">2.5</th>
+                        <th class="text-content" style="padding: 0">2.4</th>
                     </tr>
 
                     <tr>
@@ -358,99 +398,151 @@
                     </tr>
                 </table>
 
-                <p class="text-content">A rate limiting step in a process is the step that takes the longest amount of time to reach its maximum value, essentially the step that takes the longest time to plateau.
-                    We identified the rate at which intimin is transported to the surface of the cells as the rate limiting step in this cellular mechanism.
-                    The rapidity of our LIT technology is vital, therefore we decided to identify the rate limiting parameters within the ODE that describes the transport of intimin to the cell surface.
+            <p class="text-content">A rate limiting step in a process is the step that takes the longest to reach its maximum
+                value- or the one that takes the longest to plateau. We identified the rate at which intimin is transported to
+                the cell surface as being the limiting step in this cell mechanism. Because speed is essential to our LIT technology
+                we decided to optimise the rate limiting parameters within the ODE describing intimin transfer to the cell surface.
+            </p>
+
+            <h2 class="title">Optimising Light intensity</h2>
+
+            <p class="text-content">Our LEGIT model is initiated with the photoactivation of our EL222<sub>M</sub> transcription factor.
+                Therefore, we thought it would be interesting to evaluate the effect different light intensities had on the concentration
+                and rate of expression of intimin on the cell surface. The range of values we selected to test fell within the range of
+                0 W/cm<sup>2</sup> and 70 W/cm<sup>2</sup>, where 0 W/cm<sup>2</sup> represented our system in its off state and 70 W/cm<sup>2</sup> represented
+                the maximum light intensity E. coli can withstand before they started to die.
                 </p>
-
-                <h2 class="title">Optimising Light intensity</h2>
-
-                <p class="text-content">Our LEGIT model is initiated with the photoactivation of our EL222<sub>M</sub> transcription factor. Therefore we thought it would be interesting to evaluate the effect
-                    different light intensities had on the concentration and rate of expression of intimin on the cell surface. The range of values we selected to test fell within the range of 0 W/cm<sup>2</sup> and
-                    70 W/cm<sup>2</sup>, where 0 W/cm<sup>2</sup> represented our system in its off state and 70 W/cm<sup>2</sup> represented the maximum light intensity E.coli can withstand
-                    before they started to die.</p>
                 <h2 class="subtitle">Sensitivity Analysis of Light Intensities </h2>
                 <img src="../../assets/Barch/Barc_Intensity.png" class="image-content" style="width: 800px; height: 450px">
                 <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 3: </i> Effect of light intensity on the concentration and rate of expression of intimin on the cell surface </p>
-                <p class="text-content">From Figure 3 it is evident that an increase in the light intensity used to activate the expression of intimin corresponds to a direct increase in the concentration of intimin expressed on the surface of the cells.
-                    Interestingly, at 0 W/cm<sup>2</sup> we still experience some intimin expression due to leakage of promoter expression. The concentration of intimin expressed at a light intensity of 0 W/cm<sup>2</sup> was assumed to not be sufficient to cause cell adhesion.</p>
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 3: </i> Demonstrates the effect light intensity has on the concentration and rate of expression of intimin on the cell surface
+            </p>
+                <p class="text-content">From Figure 3 it is evident that as light intensity (used to activate expression of intimin)
+                    increases there is a corresponding direct increase in the concentration of intimin expressed on the surface of the cells.
+                    Interestingly, at 0 W/cm<sup>2</sup> we still experience some intimin expression due to leakage of promoter expression.
+                    The concentration of intimin expressed on the cell surface at a light intensity of 0 W/cm<sup>2</sup> was assumed to not be
+                    sufficient to cause cell adhesion.
+                </p>
                 <h2 class="subtitle">Wetlab contribution </h2>
-                <p class="text-content">Real life experimental data could be obtained for this model by extracting the EL222<sub>M</sub> from E.coli cells, exposing it to different intensities of blue light and running it on an SDS page.
-                    With this procedure one could evaluate the effect light intensity has on the extent of dimerisation EL222<sub>M</sub> undergoes.
-                    The amount of dimerisation taking place could be measured by looking at the distance the EL222 extracts travel down the SDS page, where a shorter distance will be travelled by the EL222<sub>D</sub> due to their larger molecular weight.</p>
+                <p class="text-content"> Real life experimental data could be obtained for this model by extracting EL222 monomers
+                    from E.coli cells, exposing them to varying intensities of blue light, and running it on an SDS page.
+                    One could thus evaluate the effect light intensity has on the extent to which dimerization of EL222 monomers occurs.
+                    The amount of dimerization taking place could be measured by looking at the distance the EL222 extracts travel down
+                    the SDS page, where a shorter distance will be travelled by the EL222 dimers due to its larger molecular weight.
+                </p>
 
             <h1 class="title">Optimising the parameters in the rate-limiting step</h1>
 
-                <p class="text-content">We decided to optimize the rate-limiting parameters present in the ODE which describes the transport of intimin to the cell surface. The two rate-limiting parameters identified were:  V<sub>max</sub> and Km.
-                    The maximum and minimum values that could be assigned to each parameter were determined from papers. We decided to optimise the values for each parameter by using two approaches, a Sensitivity Analysis and Parameter Sampling.</p>
+                <p class="text-content">We decided to optimize the rate-limiting parameters present in the ODE which describes
+                    the transport of intimin from the cell cytoplasm to the cell surface. The two rate-limiting parameters identified were: V<sub>max</sub> and K<sub>m</sub>.
+                    Where K<sub>m</sub> represents the affinity the surface of the cell has for the intimin protein and V<sub>max</sub> represents
+                    the maximum rate at which intimin can be expressed on the surface of the cell .The maximum and minimum values that could be assigned to each parameter
+                    were determined from literature. We decided to optimize the values for each parameter using two approaches,
+                    a Sensitivity Analysis and Parameter Sampling.
+                </p>
 
             <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the K<sub>m</sub> value</h2>
-                <p class="text-content">In the transport of intimin to the surface of the cell K<sub>m</sub> represents the affinity the surface of the cell has for intimin. Ideally, we would want a low Km value to increase the affinity of the cell surface for the intimin. This would decrease the time taken for intimin to be transported to the cell surface.</p>
+            <p class="text-content">Ideally, we would want a low K<sub>m</sub> value so as to increase the affinity
+                    of the cell surface for the intimin. This would decrease the time taken for intimin to be transported to the cell surface.
+                </p>
                 <h2 class="subtitle">Sensitivity Analysis for K<sub>m</sub> </h2>
 
                 <img src="../../assets/Barch/Barc_SAKm.png" class="image-content" style="width: 800px; height: 450px">
                 <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5:</i> Effect K<sub>m</sub> has on the rate of intimin expression on the cell surface
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5:</i> With the use of a Sensitivity Analysis evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface
                 <br>
 
-            <p class="text-content" style="margin-top: 0; padding-top:0"> We first decided to run a Sensitivity Analysis to get a better understanding of the range of Km
-            values we should be using in our optimised model. From Figure 5 it is evident that the optimum Km value is 0.000005 uM. Sensitivity Analyses focus on
-            selecting the most optimum conditions even if they cannot be achieved by the specific cellular mechanisms evaluated.
-            We therefore decided to conduct Parameter Sampling to ensure the value we select to optimise our Km to can realistically be achieved in our cells.</p>
+            <p class="text-content" style="margin-top: 0; padding-top:0"> We first decided to run a Sensitivity Analysis to get a better understanding of
+            the range of K<sub>m</sub> values we should be using in our optimized model. From Figure 5 it is evident the optimum K<sub>m</sub> value is
+            5E-06 uM. Sensitivity Analyses focus on selecting the most optimum conditions even if they cannot be achieved by the
+            specific cellular mechanisms evaluated. We therefore decided to conduct Parameter Sampling to ensure the value we select
+            to optimize our K<sub>m</sub> to can realistically be achieved in our cells.
+        </p>
 
                 <h2 class="subtitle">Parameter Sampling for K<sub>m</sub></h2>
 
                 <img src="../../assets/Barch/Bac_PSKm.png" class="image-content" style="width: 800px; height: 450px">
 
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 6:</i> Effect K<sub>m</sub> has on the rate of intimin expression on the cell surface </p>
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 6:</i> With the use of Parameter Sampling evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface </p>
 
-            <p class="text-content" style="margin-top: 0; padding-top:0">Parameter Sampling takes the specifics of a particular cellular mechansim into consideration, therefore we believe the results obtained from
-                this approach should be more representative of the actual optimised  Km value that could be achieved in our technology. </p>
+            <p class="text-content" style="margin-top: 0; padding-top:0">Parameter Sampling takes the specifics of a particular cellular mechanism into consideration,
+                which is why we believe the results obtained from this approach should be more representative of the actual optimized K<sub>m</sub> value
+                that could be achieved in our technology.
+            </p>
 
                 <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the V<sub>max</sub> value</h2>
-            <p class="text-content">The parameter V<sub>max</sub> represents the maximum rate at which intimin can be expressed on the surface of the cell.
-                    Therefore, we would want to maximise the value of V<sub>max</sub> to decrease the time it takes for the surface of the cell to fill up with intimin.</p>
-                <h2 class="subtitle">Sensitivity Analysis for V<sub>max</sub> </h2>
+            <p class="text-content">We would want to maximise the parameter of V<sub>max</sub> in order to decrease the time it takes for the surface of the cell to fill up with
+                intimin. </p>
+
+            <h2 class="subtitle">Sensitivity Analysis for V<sub>max</sub></h2>
 
                 <img src="../../assets/Barch/Barc_SAVmax.png" class="image-content" style="width: 800px; height: 450px">
                 <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 7:</i> Effect V<sub>max</sub> has on the rate of intimin expression on the cell surface
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 7:</i> With the use of a Sensitivity Analysis evaluates the effect V<sub>max</sub> has on the
+                rate of intimin expression on the cell surface
             <br>
                 <br> In Figure 7 it is evident that from the Sensitivity Analysis a very high unrealistically achievable V<sub>max</sub> value is
             presented as the most optimal value for our V<sub>max</sub>. </p>
 
             <h2 class="subtitle">Parameter Sampling for V<sub>max</sub></h2>
                 <img src="../../assets/Barch/Bac_PSVmax.png" class="image-content" style="width: 800px; height: 450px">
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8:</i> Effect V<sub>max</sub> has on the rate of intimin expression on the cell surface
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8:</i> With the use of Parameter Sampling evaluates the effect
+                    V<sub>max</sub> has on the rate of intimin expression on the cell surface
                     <br>
                     <br>
-                 In Figure 8 it is evident that once Parameter Sampling is used a significantly smaller V<sub>max</sub>
-            value is suggested, as a series of factors that cater the answer to our particular cellular mechanism are taken into consideration.</p>
+                    Parameter Sampling allowed us to take a series of factors into consideration when optimising the value of V<sub>max</sub>.
+                    The values of V<sub>max</sub> represented in figure 8 are more realistic and significantly lower than
+                    the ones obtained from the Sensitivity Analysis. This is because a series of factors were taken into consideration when
+                    creating a normal distribution of the possible V<sub>max</sub> values for our technology.
+
+            <h2 class="subtitle"> <b><i>Curious about the steps Paramater Sampling actually entails? Have a look at our Methodology page</i></b></h2>
+
+                </p>
 
             <h1 class="title">Determining the effect light pulsing has on intimin expression</h1>
 
-            <p class="text-content"> We determined increasing light intensity has a directly proportional increase on the concentration
-                and the rate of expression of intimin on the surface of the cell. We therefore decided to evaluate the effect other light properties would have on our system. More specifically, we decided to evaluate whether light pulsing had an effect on intimin expression. This would allow us to see whether continuously activating and
-                deactivating our light induced system could result in the expression of a larger concentration of intimin on the surface of the cell.
+            <p class="text-content">Once we determined increasing light intensity has a directly proportional increase on the concentration
+                and rate of expression of intimin on the surface of the cell, we decided to evaluate the effect other light properties would
+                have on our system. More specifically, we decided to evaluate whether light pulsing had an effect on intimin expression.
+                This would allow us to see whether continuously activating and deactivating our light induced system could result in the expression
+                of a larger concentration of intimin on the surface of the cell.
+
                 <br>
-                <br>We first ran a control simulation, where we introduced one long pulse of 7 hours of light, to ensure we received a curved response that would simulate the activation and deactivation of our cellular mechanisms for a defined period of time. </p>
+                <br>We first ran a control simulation, where we introduced one long pulse of 7 hours of light, in order to
+                ensure we received a curved response that would simulate the activation and deactivation of our cellular mechanisms
+                for a defined period of time.</p>
+
                 <img src="../../assets/Barch/Bac_1pulse.png" class="image-content" style="width:950px; height: 450px">
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 9:</i> Effect one pulse has on the rate kinetics on the expression of intimin
-                <br>
-                <br>From Figure 9 it is evident the behaviour of all the species produced after each step involved in the expression of intimin is represented as a dumb bell shaped curve. This is justifiable, as when the light is turned off we expect the rate of product production to become smaller than the rate of product degradation. Therefore, as time passes the concentration of each product from each step is expected to decrease, until eventually all the species from the product produced degrade.
-                <br>
-                    <br> We then wanted to evaluate the effect pulsing for periods of 4 hours would have on the expression of intimin on the surface of the cell.</p>
-                <img src="../../assets/Barch/Bac_3pulse.png"  class="image-content image-content-here" style="width: 700px; height: 500px">
-                <p class="text-content"><i>Figure 10:</i> Effect pulsing light in 4 hour intervals has on the intimin surface expression
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 9:</i> Evaluates the effect a single pulse has on the rate
+                    kinetics of the expression of intimin
                     <br>
-                    <br>From Figure 10 we discovered that if we pulse light on the cells for a period of 4 hours three times within 24 hours, we experience more than a 10-fold increase in the concentration of intimin expressed on the surface of the cells.
+                <br>From Figure 9 it is evident the behavior of all the species produced, after each step involved in the expression
+                    of intimin, is represented in a dumb-bell shaped curve. This is justifiable, as when the light is turned off we
+                    expect the rate of product production to be smaller than the rate of product degradation. Therefore, as time passes
+                    the concentration of each product from each step is expected to decrease.
+
+                    <br>
+                    <br> We then wanted to evaluate the effect pulsing for periods of 4 hours would have on the expression of intimin
+                    on the surface of the cell.</p>
+
+                <img src="../../assets/Barch/Bac_3pulse.png"  class="image-content image-content-here" style="width: 700px; height: 500px">
+                <p class="text-content"><i>Figure 10:</i> Demonstrates the effect pulsing light, at 4-hour intervals,
+                    has on the rate kinetics of the expression of intimin
+                    <br>
+                    <br>From Figure 10 we discovered that if we pulse light on the cells for a period of 4 hours three times
+                    within 24 hours, we experienced more than a 10-fold increase in the concentration of intimin expressed on the
+                    surface of the cells.
                     <br> WE NEED TO TALK ABOUT THE SCIENCE OF WHY THIS HAPPENS
                 </p>
 
             <div class="text-section">
                 <h1 class="title">Optimised conditions </h1>
-                <p class="text-content">The biggest increase in the rate of intimin expression on the surface of the cells occurrs when the value of ‘Km’ decreases and the values of ‘V<sub>max</sub>’ increases. This is something we expected, as the lower the value of Km the higher the affinity our cells membranes would have for intimin and therefore the faster the transport of intimin to the cell surface. In addition, the higher the V<sub>max</sub> the faster the rate at which the reaction occurs. Thus, the combination of both of these phenomena results in a faster transport of intimin to the surface of the cell.</p>
+                <p class="text-content">The biggest increase in the rate of intimin expression on the surface of the cells occurs
+                    when the value of K<sub>m</sub> decreases and the values of V<sub>max</sub> increases. This is something we expected, as the lower the
+                    value of K<sub>m</sub> the higher the affinity our cells’ membranes would have for intimin and therefore the faster the
+                    transport of intimin to the cell surface. In addition, the higher the V<sub>max</sub> the faster the rate at which the reaction
+                    occurs. Thus, the combination of both of these phenomena results in faster transport of intimin to the surface of the cell.</p>
+
                 <table style="width: 50%; margin-left: 150px">
                     <tr>
                         <th class="text-content" style="padding: 0">Optimised Paramter</th>
@@ -458,17 +550,17 @@
                     </tr>
                     <tr>
                         <td class="text-content" style="padding: 0">K<sub>m</sub> (uM)</td>
-                        <th class="text-content" style="padding: 0">0.0011</th>
+                        <th class="text-content" style="padding: 0">1.9E-07</th>
 
                     </tr>
                     <tr>
-                        <td class="text-content" style="padding: 0" >V<sub>max</sub> (1/h)</td>
-                        <th class="text-content" style="padding: 0">9,217,361</th>
+                        <td class="text-content" style="padding: 0" >V<sub>max</sub> (1/s)</td>
+                        <th class="text-content" style="padding: 0">240</th>
                     </tr>
                 </table>
                 <br>
                 <h2 class="subtitle" style="margin-top: 25px; color: rgba(204, 0, 53, 0.69)">Running the model with optimised paramters</h2>
-                <p class="text-content">We ran our rate kinetics model with our newly optimised parameters and determined that with our optimised parameters a larger concentration of intimin was transported to the surface of the cell. However, the same amount of time was taken for the intimin expression rate to plateau. Therefore, this
+                <p class="text-content">We ran our rate kinetics model with our newly optimised parameters and determined that with our optimised parameters there was a 5% increase in the concentration of intimin transported to the surface of the cell. However, the same amount of time was taken for the intimin expression rate to plateau. Therefore, this
                 means that although the concnetration of intimin expressed on the surface of the cell was optimised this step prevails to be the rate-limiting step in the netwrok of cellular mechanisms invovled.</p>
                 <img src="../../assets/Barch/Barc_RLS.png" class="image-content" style="width: 750px; height:500px">
                 <p class="text-content"><i>Figure 11: </i> Original rate kinetics for the transport of intimin to the cell surface </p>
@@ -479,70 +571,127 @@
 
             <div class="text-section">
             <h1 class="title">Cost Analysis</h1>
-            <p class="text-content">We ran a  Cost Analysis to ensure our LIT optogenetic tool was an affordable technology current labs could use to replace alternative technologies with.
-                We focused on identifying the main operational costs a user would incur, where we determined the most critical ones were: the light intensity they used to activate the E.coli cellular mechanism; and the frequency of light pulsing.
-                We created a function in Python that took costs incurred for both methods into consideration, where we attempted to identify the most cost-efficient operational conditions for our tool.</p>
+            <p class="text-content">We ran our rate kinetics model with our newly optimized parameters and determined that with our
+                optimized parameters a larger concentration of intimin was transported to the surface of the cell. However, the same amount
+                of time was taken for the intimin expression rate to plateau. Therefore, this means that although the concentration of intimin
+                expressed on the surface of the cell was optimized this step prevails as the rate-limiting step in the network of cellular
+                mechanisms involved.
+            </p>
             <img src="../../assets/Barch/Bac_CostLI.png" class="image-content" style="width: 750px; height:500px">
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Effect light intensity has on the cost for the operation of the optogenetic tool
-                <br>
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Demonstrates the effect light intensity has on the cost
+                for the operation (£ per W/cm<sup>2</sup>) of the optogenetic tool
 
-                <br> The simulaiton in Figure 13 was run for a period of 2 hours, where it was assumed a constant source of light would be present for the whole period of time. It is evident that the costs incurred increase directly
-                proportionally to the light intensity at which our optogenetic tool is operated at.
+                <br> The simulation in Figure 13 was run for a period of 2 hours, where it was assumed a constant source of light
+                would be present for the whole period of time. It is evident that the costs incurred increase directly proportionally
+                to the light intensity at which our optogenetic tool is operated at.
+
                 <br>
                 <br> We also decided to analyse the impact light pulsing would have on the overall process costs.</p>
                 <img src="../../assets/Barch/Bac_CostPuls.png" class="image-content" style="width: 800px; height:500px">
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 14: </i> Effect of pulsing on the cost for the operation of the optogenetic tool
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 14: </i> Depicts the effect of light pulsing on the cost for the operation of the optogenetic tool running for 2 hours (£/hour)
                 <br>
-                <br>The simulation in Figure 14 was also run for a period of 2 hours, where it was assumed a constant light intensity of 40 W/cm<sub>2</sub> was used. Similarly to Figure 13, we see that an increase in the pulse duration results in a proportional increase in the cost of operation.
-                <p class="text-content">We then decided to plot both the costs incurred for different light intensities and the pulsing durations on the same graph to evaluate their synergistic effect.</p>
+                <br>The simulation in Figure 14 was also run for a period of 2 hours, where it was assumed a constant light intensity
+                    of 40 W/cm<sup>2</sup> was used. Similar to Figure 13, we see that an increase in the pulse duration results in a proportional
+                    increase in the cost of operation.
+
+                <p class="text-content"> We then decided to plot both the costs incurred for different light intensities and the
+                pulsing durations on the same graph to evaluate their synergistic effect.</p>
 
                 <img src="../../assets/Barch/Bac_CostOpt.png" class="image-content" style="width:800px; height:500px">
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 15: </i> Comparison of the effects of pulsing and light intensity on the overall cost.
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 15: </i> Demonstrates a comparison of the effects of light pulsing and light intensity on the overall cost of our optogenetic tool
                     <br>
-                    <br> We decided to define the most optimum operating conditions for our optogenetic tool as those at which both lines intersect. Beyond the point of intersection it was evident that the operational costs
-                    for the optogenetic tool were too high. Below the intersection point it was evident that the activity of the E.coli cell adhesion mechanism would
-                    be too slow, and as one of the biggest selling points for our technolgy is its rapidity we decided it would not be feasible to
-                    operate at such a slow rate. Therefore, the best trade-off was identified when operating at a light intensity of 30 W/cm<sup>2</sup> with a 4.5 hr pulsing frequency.</p>
+                    <br> We decided to define the optimum operating conditions for our optogenetic tool as those at which both
+                    lines intersect. Beyond the point of intersection, it was evident that the operational costs for the optogenetic
+                    tool were too high. Below the intersection point it was evident that the activity of the E. coli cell adhesion
+                    mechanism would be too slow.  As one of the biggest selling points for our technology is its rapidity we decided
+                    it would not be feasible to operate at such a slow rate.
+                    <br>
+                    <br>
+                    The best costing trade-off was identified when operating our technology
+                    at a light intensity of 30 W/cm<sup>2</sup> with a 4.5-hour pulsing frequency.
+                </p>
             </div>
 
-            <h2 class="title">Alternative applications of our model</h2>
+            <h6 class="title">Alternative applications of our model</h6>
 
             <div style="margin-top: 20px">
 
                 <h1 class="subtitle">Pharmaceutical Industry</h1>
 
-                <p class="text-content">Our model could be adapted and used by Pharmaceutical companies to optimize their
-                    Downstream Processing conditions, in order to obtain a high product yield. A focus could be placed on
-                    identifying the bottleneck of the manufacturing process, the stage at which the greatest concentration
-                    of product is lost in the manufacturing process. Each differential equation could represent a batch mode
-                    taking place in one unit operation, where the product concentration changes over time. For each equation,
-                    we would include the loss of product in the form of degradation rates, as they would indicate a decrease in
-                    product concentration. For each of these conditions a discount factor for the product concentration would need
-                    to be introduced. The product loss could be due to: the product getting stuck in crevices in the machinery;
-                    product degradation due to a limited half-life; and product aggregation to other cellular debris. This model
-                    would help companies determine the unit operation at which the largest product loss is experienced.</p>
-
-            </div>
-
-                <h1 class="subtitle">Stock market</h1>
-                <p class="text-content">Similarly, our model could be also be adapted to represent the volatile nature of publically
-                    listed companies’ share prices in the stock market. One could divide the differential equations into the main factors
-                    which affect the share price of a company. These factors could be: the Lombard Rate which is set by the European Central Bank;
-                    the desirability of a company’s shares (set as a function of the market share a company has); and a company’s share price.
-                    A decrease in the Lombard rate would result in an increase in the share price of a company, which would lead to an increase
-                    in the number of the company’s shares bought from the stock market and finally result in an increase the market share a company
-                    has in its industrial sector. Through our model financial institutions could identify the time it takes for a change in the
-                    Lombard rate to result in a change in the company’s market share. Simultaneously, once the bottleneck is identified, the
-                    company’s management team could optimise parameters (such as advertising or product diversification) to minimise the time taken for this change to occur.
+                <p class="text-content">We envision our model could be adapted and used by Pharmaceutical companies to optimize their
+                    Downstream Processing conditions to obtain a high product yield. Focus could be placed on identifying the bottleneck
+                    of the manufacturing process, or the stage at which the greatest concentration of product is lost in the manufacturing process.
+                    Each differential equation could represent a batch mode taking place in one-unit operations, where the product concentration
+                    changes over time. For each equation, we would include the loss of product in the form of degradation rates, as this would
+                    signal a decrease in product concentration. For each of these conditions a discount factor for the product concentration
+                    would need to be introduced. The product loss could be due to: the product getting stuck in crevices in the machinery;
+                    product degradation due to a limited half-life; and/or product aggregation to other cellular debris. This model would help
+                    companies determine the unit operation at which the largest product loss is experienced.
                 </p>
 
             </div>
 
-        </div>
+            <div class="text-section">
+                <h1 class="subtitle">Stock market</h1>
+                <p class="text-content"> Similarly, our model could be adapted to characterize the volatile nature of publically listed
+                    companies’ share prices in the stock market. One could divide the differential equations into the main factors which
+                    affect the share price of a company. These factors could be: the Lombard Rate, which is set by the European Central Bank;
+                    the desirability of a company’s shares (set as a function of the market share a company has); and a company’s share price.
+                    A decrease in the Lombard rate would result in an increase in the share price of a company, which would lead to an increase
+                    in the number of the company’s shares bought from the stock market resulting in an increase of market share the company was
+                    gaining in its industrial sector. Through our model financial institutions could identify the time it takes for a change in
+                    the Lombard Rate to result in a change in the company’s market share. Simultaneously, once the bottleneck is identified,
+                    the company’s management team could optimize parameters (such as advertising or product diversification) to minimize the
+                    time taken for this change to occur.
+                </p>
+
+            </div>
+
+            <h6 class="title">Collaboration</h6>
+
+            <div class="text-section">
+                <p class="text-content">  Throughout the summer we had a bilateral collaboration with the iGEM SVCE 2017 team from India.
+                    Our collaboration started off with us sending each other useful sources and tutorials on how to approach modelling for
+                    cellular mechanisms, as neither team considered itself an expert in the field. Once we both started forming the differential
+                    equations for our respective models, we sent each other documents with a summary of our ODEs and provided feedback to each other.
+                    Both teams provided constructive feedback on how to present complex information in a simple manner to make it easy to understand
+                    for non-modellers, while at the same time helped refine each other’s differential equations.
+                </p>
+
+            </div>
+
+
+ 
+
+
+            <h2 class="title">Legit Assumptions</h2>
+
+            <ul class="text-content">
+                <li>Mass action kinetics</li>
+                <li>Michaelis Menten kinetics</li>
+                <li>All reactions are taking place in cells that are plated in a petri dish</li>
+                <li>Light intensity is the only factor affecting the intimin protein expression in the cells</li>
+                <li>Every cell is activated by the same light intensity, regardless of its position in the petri dish</li>
+                <li>There is no light reflection or refraction from the cells</li>
+                <li>All cells are at their exponential growth phase</li>
+                <li>All cells are equally as probable to express SpyTag and SpyCatcher</li>
+                <li>SpyTag and SpyCatcher are constitutively expressed with Intimin</li>
+            </ul>
+
+            <h3 class="title">LEGIT Species</h3>
+
+            <img src="../../assets/Barch/Species.png" class="image-content image-content-here">
+
+            <h3 class="title">Legit Parameters</h3>
+
+            <img src="../../assets/Barch/Parameters.png" class="image-content" style="width: 900px; height:700px">
+
+            <h5 class="title">Legit Initial Conditions</h5>
+
+            <img src="../../assets/Barch/InitCond.png" class="image-content" style="width: 900px; height:1000px">
+
 
         </div>
-
-
 
             <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
