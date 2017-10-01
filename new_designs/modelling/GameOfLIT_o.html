@@ -181,36 +181,42 @@
         <div style="float: right !important" class="col-sm-10">
             <div class="text-section">
                 <h1 class="title"> GOLIT -  Cell adhesion to form bacterial 3D structures </h1>
-                <p class="text-content">We adapted Conway’s ‘Game of Life’ [add link to glossary] to create a visual
-                    representation of the adhesion of cells to form a solid cell bound structure.
-                    <br>In Modelling, parameter optimization is difficult to tackle. The value of this model lies in the fact that it introduces a range of novel approaches to modelling
-                    <br>
-                    <br>1.Combination of ordinary differential equations for gene expression and cellular automata for spatial analysis
-                    <br>2.Genetic Algorithm for automated parameter optimization
-                    <br>3.Experimental data for parameter optimization
-                </p>
+                <p class="text-content">GOLIT is an adapted version of Conway’s ‘Game of Life’ [add link to glossary].
+                    It aims to create a visual representation of how solid cell structures formfrom the binding of SpyTag
+                    and SpyCatcher.</p>
+
+                    <ol class="text-content">We attempted to optimise the range at which cell adhesion occurs in the GOLIT model. For this we
+                    introduced a range of novel approaches in the GOLIT model:
+                        <br>
+                        <li style="margin-left: 40px">Combination of ordinary differential equations for gene expression and cellular automata for spatial analysis</li>
+                        <li style="margin-left: 40px">Genetic Algorithm for automated parameter optimization</li>
+                        <li style="margin-left: 40px">Experimental data for parameter optimization</li>
+                    </ol>
             </div>
 
             <div class="text-section">
                 <h2 class="title">What are we modelling?</h2>
-                <p class="text-content"> GOLIT is a stochastic and dynamic model which allows to visually represent cell
-                    adhesion over time. The Wet Lab team is engineering E. coli cells to express the binding partners
+                <p class="text-content"> We are modelling a cellular automaton to represent the adhesion of cells in a
+                    dynamic and stochastic way. Our Wet Lab team is engineering E. coli cells to express the binding partners
                     SpyTag and SpyCatcher on their surface. SpyTag and SpyCatcher form a covalent bond and allow cells
-                    to aggregate and form bacterial structures. We are modelling the interaction between both binding
-                    partners by taking into account the concentration of cells in a cell culture. </p>
+                    to aggregate and form bacterial structures. With GOLIT we are simulating the adhesion of these binding
+                    partners over time by considering the concentration of cells in a cell culture as well as
+                    assessing probabilities depending on specific conditions (described below) </p>
 
                 <h2 class="title">How did we adapt the Game of Life? </h2>
                 <p class="text-content">Similarly to the Game of Life, we are representing the cells on a 2D grid.
-                    In the GOLIT model the cells can either be in the “bound” or “unbound” state. We imagine the grid to
-                    represent a petridish containing The game requires to define the state of all the cells on the grid
+                    In the GOLIT model the cells can either be in the “bound” or “unbound” state. The game requires to define the state of all the cells on the grid
                     and update the grid according to a set of rules after each time point. The state of a cell at particular
                     time point depends on the the state of its neighboring cells as well as the concentration of SpyTag/
-                    SpyCatcher expressed on the surface of the cells. </p>
+                    SpyCatcher expressed on the surface of the cells.
+                <br>
+                <br> The rules below assign probabilities of one cell turning to the "bound" state depending on the
+                number of neighbors in the "bound" state it has.
 
                 <h2 class="subtitle">Rules of the Game of LIT </h2>
-                <table style="width: 70%; margin-left: 170px">
+                <table style="width: 60%; margin-left: 170px">
                     <tr>
-                        <th class="text-content" style="padding: 0">Number of neighbors</th>
+                        <th class="text-content" style="padding: 0">Number of "bound" neighbors</th>
                         <th class="text-content" style="padding: 0">Probability of binding (%)</th>
                     </tr>
                     <tr>
@@ -247,22 +253,27 @@
                 <p class="text-content">
                     Aim: Determine which light intensity allows the fastest cell aggregation, i.e. binding of SpyTag and SpyCatcher
                 <br>
-                <br>The particularity of the GOLIT model lies in the fact that we are combining rate kinetics with cellular
-                    automata. The concentration of SpyTag and SpyCatcher expressed on the surface of the engineered E. coli
-                    cells is critical for the efficiency cell adhesion. LEGIT models the concentration of intimin expressed
-                    on the surface of the engineered bacteria for light intensities in the range 0-70 W/m<sup>2</sup>.
+                <br>The particularity of the GOLIT model lies in the combination of rate kinetics and cellular
+                    automata for spatial analysis. The concentration of SpyTag and SpyCatcher expressed on the surface of the engineered E. coli
+                    cells is critical for the efficiency of cell adhesion. LEGIT uses rate kinetics to model the rate of intimin expressed
+                    on the surface of the bacteria for light intensities in the range 0-70 W/m<sup>2</sup>.
                 <br>For the purpose of this model we are assuming that the concentration of intimin expressed corresponds
                     to the amount of SpyTag/ SpyCatcher on the surface of the cells. Since updating the grid in the GOLIT
                     model depends on the concentration of protein expressed, we extracted the concentrations of intimin
-                    expressed from the LEGIT model and fed it into the GOLIT model.
+                    expressed from the LEGIT model and fed it into the GOLIT model.</p>
+
+                <ul class="text-content">Setting up the Initial conditions for the model:
+                <li style="margin-left: 40px"> Dimensions of the grid (height and length)</li>
+                <li style="margin-left: 40px"> The amount of bound cells at time point, t=0</li>
+                <li style="margin-left: 40px"> The amount of unbound cells at time point, t=0</li>
+                <li style="margin-left: 40px"> The number of generations, i.e. the number of times the grid will be updated</li>
+                <li style="margin-left: 40px"> The duration of each generation</li>
+                </ul>
+
                 <br>
-                <br>Setting up the Initial conditions for the model:
-                <br> - Dimensions of the grid (height and length)
-                <br> - The amount of bound cells at time point, t=0
-                <br> - The amount of unbound cells at time point, t=0
-                <br> - The number of generations, i.e. the number of times the grid will be updated
-                <br> - The duration of each generation
-                </p>
+                <h2 class="subtitle"><i>Click here to check out our code!</i></h2> <!-- Add link to Github-->
+                <br>
+                <h2 class="title">Results</h2>
 
             </div>
 
