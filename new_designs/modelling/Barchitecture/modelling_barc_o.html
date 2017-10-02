@@ -237,8 +237,8 @@
                     <h2 class="title" style="padding-left: 0">Model aims</h2>
                     <ul>
                         <li>Determine the rate limiting cellular mechanism</li>
-                        <li>Optimise the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approach </li>
-                        <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test in the lab</li>
+                        <li>Optimise the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approaches </li>
+                        <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test</li>
                         <li>Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</li>
                     </ul>
                 </div>
@@ -292,14 +292,14 @@
                     <br>
                     The next step of our model seeks to establish the production levels of the surface protein intimin from translation.
                     The rate of intimin production is subject to changes in the rate of mRNA translation. Once intimin is translated, it is
-                    continuously transported to the surface of the E. Coli cell, therefore intimins concentration in the cell also decreases. To account
+                    continuously transported to the surface of the E. Coli cell, therefore intimins' concentration in the cell also decreases. To account
                     for fluctuation, we created a function that takes the transport rate of intimin to the surface to the E. Coli cells into consideration as well.
                 </p>
                 <img src="../../assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
                 <p class="text-content"> We expect the speed at which intimin is transported to the surface of the cell to decrease over time.
                     This is because as time passes there will be a decrease in available space for intimin on the cell surface. We adapted the
                     Michaelis Menten equation to allow for the consideration of: the intimin proteins already occupying space on the cell surface; (P<sub>Surface</sub>)
-                    and the maximum available space for intimin proteins on the cell surface to create our model. The variable  was set as the limit for the
+                    and the maximum available space for intimin proteins on the cell surface. The variable  was set as the limit for the
                     maximum number of intimin proteins that can be expressed on the cell surface, thus preventing any other proteins from becoming expressed.
                 </p>
                 <img src="../../assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
@@ -424,7 +424,7 @@
 
                 <img src="../../assets/Barch/Barc_SAKm.png" class="image-content" style="width: 800px; height: 450px">
                 <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5:</i> With the use of a Sensitivity Analysis evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5:</i> Evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface with the use of a Sensitivity Analysis
                 <br>
 
             <p class="text-content" style="margin-top: 0; padding-top:0"> We first decided to run a Sensitivity Analysis to get a better understanding of
@@ -438,7 +438,7 @@
 
                 <img src="../../assets/Barch/Bac_PSKm.png" class="image-content" style="width: 800px; height: 450px">
 
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 6:</i> With the use of Parameter Sampling evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface </p>
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 6:</i> Evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface with the use of Parameter Sampling</p>
 
             <p class="text-content" style="margin-top: 0; padding-top:0">Parameter Sampling takes the specifics of a particular cellular mechanism into consideration,
                 which is why we believe the results obtained from this approach should be more representative of the actual optimized K<sub>m</sub> value
@@ -453,16 +453,16 @@
 
                 <img src="../../assets/Barch/Barc_SAVmax.png" class="image-content" style="width: 800px; height: 450px">
                 <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 7:</i> With the use of a Sensitivity Analysis evaluates the effect V<sub>max</sub> has on the
-                rate of intimin expression on the cell surface
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 7:</i> Evaluates the effect V<sub>max</sub> has on the
+                rate of intimin expression on the cell surface with the use of a Sensitivity Analysis
             <br>
-                <br> In Figure 7 it is evident that from the Sensitivity Analysis a very high unrealistically achievable V<sub>max</sub> value is
+                <br> In Figure 7 it is evident that from the Sensitivity Analysis a very high, unrealistically achievable V<sub>max</sub> value is
             presented as the most optimal value for our V<sub>max</sub>. </p>
 
             <h2 class="subtitle">Parameter Sampling for V<sub>max</sub></h2>
                 <img src="../../assets/Barch/Bac_PSVmax.png" class="image-content" style="width: 800px; height: 450px">
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8:</i> With the use of Parameter Sampling evaluates the effect
-                    V<sub>max</sub> has on the rate of intimin expression on the cell surface
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8:</i> Evaluates the effect
+                    V<sub>max</sub> has on the rate of intimin expression on the cell surface with the use of Parameter Sampling
                     <br>
                     <br>
                     Parameter Sampling allowed us to take a series of factors into consideration when optimising the value of V<sub>max</sub>.
@@ -476,7 +476,7 @@
 
             <h1 class="title">Determining the effect light pulsing has on intimin expression</h1>
 
-            <p class="text-content">Once we determined increasing light intensity has a directly proportional increase on the concentration
+            <p class="text-content">Once we determined increasing light intensity causes a proportional increase to the concentration
                 and rate of expression of intimin on the surface of the cell, we decided to evaluate the effect other light properties would
                 have on our system. More specifically, we decided to evaluate whether light pulsing had an effect on intimin expression.
                 This would allow us to see whether continuously activating and deactivating our light induced system could result in the expression
@@ -534,9 +534,9 @@
                     </tr>
                 </table>
                 <br>
-                <h2 class="subtitle" style="margin-top: 25px; color: rgba(204, 0, 53, 0.69)">Running the model with optimised paramters</h2>
+                <h2 class="subtitle" style="margin-top: 25px; color: rgba(204, 0, 53, 0.69)">Running the model with optimised parameters</h2>
                 <p class="text-content">We ran our rate kinetics model with our newly optimised parameters and determined that with our optimised parameters there was a 5% increase in the concentration of intimin transported to the surface of the cell. However, the same amount of time was taken for the intimin expression rate to plateau. Therefore, this
-                means that although the concnetration of intimin expressed on the surface of the cell was optimised this step prevails to be the rate-limiting step in the netwrok of cellular mechanisms invovled.</p>
+                means that although the concentration of intimin expressed on the surface of the cell was optimised this step prevails to be the rate-limiting step in the network of cellular mechanisms involved.</p>
                 <img src="../../assets/Barch/Barc_RLS.png" class="image-content" style="width: 750px; height:500px">
                 <p class="text-content"><i>Figure 11: </i> Original rate kinetics for the transport of intimin to the cell surface </p>
                 <img src="../../assets/Barch/Barc_OptCond.png" class="image-content" style="width: 750px; height:500px">
@@ -546,15 +546,16 @@
 
             <div class="text-section">
             <h1 class="title">Cost Analysis</h1>
-            <p class="text-content">We ran our rate kinetics model with our newly optimized parameters and determined that with our
-                optimized parameters a larger concentration of intimin was transported to the surface of the cell. However, the same amount
-                of time was taken for the intimin expression rate to plateau. Therefore, this means that although the concentration of intimin
-                expressed on the surface of the cell was optimized this step prevails as the rate-limiting step in the network of cellular
-                mechanisms involved.
+            <p class="text-content">We ran a  Cost Analysis to ensure our LIT optogenetic tool was an affordable technology
+                current labs could use to replace alternative technologies. We focused on identifying the main operational
+                costs a user would incur, where we determined the most critical ones were: the light intensity they used to activate
+                the E.coli cellular mechanism; and the frequency of light pulsing. We created a function in Python that took costs
+                incurred for both methods into consideration, where we attempted to identify the most cost-efficient operational
+                conditions for our tool.
             </p>
             <img src="../../assets/Barch/Bac_CostLI.png" class="image-content" style="width: 750px; height:500px">
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Demonstrates the effect light intensity has on the cost
-                for the operation (£ per W/cm<sup>2</sup>) of the optogenetic tool
+                for the operation (£ per W/cm<sup>2</sup>) of our optogenetic tool
 
                 <br> The simulation in Figure 13 was run for a period of 2 hours, where it was assumed a constant source of light
                 would be present for the whole period of time. It is evident that the costs incurred increase directly proportionally

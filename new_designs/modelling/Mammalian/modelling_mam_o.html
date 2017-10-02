@@ -183,15 +183,15 @@
         <div style="float: right !important" class="col-sm-10">
 
             <h1 class="title">‘LAME: From light to organs’</h1>
-            <h2 class="subtitle"> A mathematical model of how CHO cells are guided to form structured tissues</h2>
+            <h2 class="subtitle"> A mathematical model of how HEK 293 cells are guided to form structured tissues</h2>
 
             <h1 class="title">The Science behind LAME</h1>
 
-            <ol class="text-content"> LAME models the light activated expression of GFP protein within genetically engineered CHO cells.
-                When light shines onto our CHO cells the photocleavable linker anchoring the RFP TF on the outer membrane of the cell becomes cleaved.
-                The photocleavage leads to the release of the TF in the cell. The TF is then guided to the RFP promoter in the cell with the help of a
-                dCAS9, which has been attached to it. This mechanism could be used to induce the production of cadherin, the surface proteins that cause
-                mammalian cells to adhere to each other, upon demand. Therefore, it could be used to create organised cell structures.
+            <ol class="text-content"> LAME models the light activated expression of RFP protein within genetically engineered HEK 293 cells.
+                When light shines onto our HEK 293 cells the photocleavable linker anchoring the RFP transcription factor, which is attached to a dCas9, on the outer membrane of the cell becomes cleaved.
+                This photocleavage leads to the release of the transcription factor in the cell. The transcription factor is then guided to the RFP promoter in the cell nucleus with the help of the
+                dCAS9 it is attached to. This mechanism could be used to induce the production of cadherin, the surface proteins that cause
+                mammalian cells to adhere to each other, upon demand. Therefore, our technology could be used to guide cells with light to create highly specific ccellular tissues.
                 <br>
                 <br>
                 Breakdown of the cellular mechanisms involved in the expression of RFP:
@@ -210,16 +210,16 @@
                     <br><b>P<sub>RFP</sub></b> = RFP translated protein
                 </p>
                 <br>
-                We decided to divide our model into four main steps:
+                In order to simplify the cellular mechanisms involved, we decided to divide our model into three main steps:
                 <br>
                 <br>
-                <li class="text-section"> 1. Cleavage of Photocleavable (PhoCl) Linker  (We want to make these links- where when you press on them you get directed to this section)</li>
+                <li class="text-section"> 1. Cleavage of Photocleavable (PhoCl) Linker </li>
                 <li class="text-section"> 2. Transcription</li>
                 <li class="text-section"> 3. Translation</li> </ol>
 
             <img src="../../bacterial-modelling-overview.jpg" class="image-content">
 
-            <p class="text-content" style="margin-top: 0; padding-top:0 "> We decided to incorporate some innovative twists in our LEGIT model, where we modelled: The rate kinetics of a system induced with photocleaving.
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">Our LAME model is inno, where we modelled: The rate kinetics of a system induced with photocleaving.
                 The transport of our TF, which has a dCas9 attached to it, to the nucleus of the cell.
             </p>
 
@@ -236,7 +236,7 @@
                 </div>
 
             </div>
-            
+
             <h1 class="title ">1.) Cleavage of PhoCl linker</h1>
             <img id="special-image-1" src="../../bacterial-modelling-induction.jpg" class="image-content" style="margin-bottom: 0">
 
@@ -368,9 +368,9 @@
             <p class="text-content" style="margin-top: 0; padding-top:0">Parameter Sampling takes the specifics of a particular cellular mechansim into consideration, therefore we believe the results obtained from
                 this approach should be more representative of the actual optimised  Km value that could be achieved in our technology. </p>
 
-            <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the degradation rate (d<sub>3</sub>) of the GFP protein</h2>
-            <p class="text-content">The parameter d<sub>3</sub> represents the rate at which the concentration of GFP decreases due to protein degradation and dilution.
-                Therefore, we would want to minimise the value of d<sub>3</sub> to decrease the time it takes for the maximum amount of GFP to be expressed in the cell.</p>
+            <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimising the degradation rate (d<sub>3</sub>) of the RFP protein</h2>
+            <p class="text-content">The parameter d<sub>3</sub> represents the rate at which the concentration of RFP decreases due to protein degradation and dilution.
+                Therefore, we would want to minimise the value of d<sub>3</sub> to decrease the time it takes for the maximum amount of RFP to be expressed in the cell.</p>
             <h2 class="subtitle">Sensitivity Analysis for d<sub>3</sub> </h2>
 
             <img src="../../assets/Mam/Mam_SADeg.png" class="image-content" style="width: 800px; height: 450px">
@@ -388,11 +388,11 @@
                 In Figure 8 it is evident that once Parameter Sampling is used a narrower range of d<sub>3</sub>
                 values are evaluated. This occurs because a series of factors that cater the answer to our particular cellular mechanism are taken into consideration.</p>
 
-            <h1 class="title">Determining the effect light pulsing has on the rate of GFP expression</h1>
+            <h1 class="title">Determining the effect light pulsing has on the rate of RFP expression</h1>
 
             <p class="text-content"> We determined increasing light intensity has a directly proportional increase on the concentration
-                and the rate of expression of GFP in the cell. We therefore decided to evaluate the effect other light properties would have on our system. More specifically, we decided to evaluate whether light pulsing had an effect on GRP expression. This would allow us to see whether continuously activating and
-                deactivating our light induced system could result in the expression of a larger concentration of GFP at a faster rate in the cells.
+                and the rate of expression of RFP in the cell. We therefore decided to evaluate the effect other light properties would have on our system. More specifically, we decided to evaluate whether light pulsing had an effect on GRP expression. This would allow us to see whether continuously activating and
+                deactivating our light induced system could result in the expression of a larger concentration of RFP at a faster rate in the cells.
                 <br>
                 <br>We first ran a control simulation, where we introduced one long pulse of 7 hours of light, to ensure we received a curved response that would simulate the activation and deactivation of our cellular mechanisms for a defined period of time. </p>
             <img src="../../assets/Mam/Mam_1pulse.png" class="image-content" style="width:950px; height: 450px">
