@@ -167,12 +167,13 @@
         <!-- The side navbar -->
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Cellular Automata</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Hill Equation</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Mass Action Kinetics</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section4">Michaelis Menten</a></li>
-                <li id="step5" class="navy-link side-link"><a href="#section5">Parameter Sampling</a></li>
-                <li id="step6" class="navy-link side-link"><a href="#section6">Sensitivity Analysis</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#section1">Basal Expression Level</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Cellular Automata</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Game of Life</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section4">Hill Equation</a></li>
+                <li id="step5" class="navy-link side-link"><a href="#section5">Mass Action Kinetics</a></li>
+                <li id="step6" class="navy-link side-link"><a href="#section6">Michaelis Menten</a></li>
+
             </ul>
         </nav>
 
@@ -181,21 +182,34 @@
 
             <div style="margin-top:20px"><h1 class="main">GLOSSARY</h1></div>
 
+            <div class="text-section">
+                <h1 class="title">Basal Expression Level</h1>
+                <p class="text-content">The basal expression of mRNA or a protein refers to its “default” expression level.
+                    Essentially, it’s the level of mRNA/ protein that will be constitutively produced in a cell independent
+                    of the activity of its promoter.
+                </p>
+            </div>
 
-            <div style="margin-top: 20px">
+            <div class="text-section"">
 
                 <h1 class="title">Cellular Automata</h1>
 
-                <p class="text-content">Cellular automata are discrete models used in computational biology to model the state of a cell at a particular point in time. The cells are represented on a grid and their state (on/ off, alive/dead) changes according to a set of rules which is dependent on the number of neighboring cells.
-                    The Game of Life, (which we adapted for our purposes), represents a stochastic cellular automaton. A stochastic cellular automaton differs from conventional cellular automata by the fact that the cells are updated according to probability distributions.</p>
+                <p class="text-content">Cellular automata are discrete models used in computational biology to model the
+                    state of a cell at a particular point in time. The cells are represented on a grid and their state
+                    (on/ off, alive/dead) changes according to a set of rules which is dependent on the number of
+                    neighboring cells.</p>
 
             </div>
 
-            <div style="margin-top: 20px">
-
+            <div class="text-section">
                 <h1 class="title">Game of Life</h1>
+                <p class="text-content">The Game of Life, (which we adapted for our purposes), represents a stochastic
+                    cellular automaton. A stochastic cellular automaton differs from conventional cellular automata by
+                    the fact that the cells are updated according to probability distributions.The Game of Life was
+                    developed in the 1970s by John Conway. Cells which can be either in the "born",
+                    "alive" or "dead" state are initialised on a 2D grid. The idea is to visually represent the evoluation
+                    of the state of the cells over time according to a set of rules.</p>
 
-                <p class="text-content"></p>
             </div>
 
             <div class="text-section">
@@ -231,7 +245,7 @@
             <div class="text-section">
                 <h1 class="title">Michaelis Menten</h1>
                 <p class="text-content">The Michaelis Menten equation was created to describe the rate kinetics in enzymatic reactions. Computational biologists commonly use the Michaelis Menten equation to describe the rate kinetics of cellular mechanisms. The steps described by the Michaelis Menten kinetics, can be represented schematically:</p>
-                <img src="../assets/enzyme.jpg" id="eq5" style="width: 190px; height: 60px">
+                <img src="../assets/enzyme.png" id="eq5" style="width: 220px; height: 60px">
                 <p class="text-content">where,
                     <br>E = enzyme
                     <br>S = substrate
