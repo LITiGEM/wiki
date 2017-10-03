@@ -194,19 +194,18 @@
 
                 <h1 class="title">Cellular Automata</h1>
 
-                <p class="text-content">Cellular automata are discrete models used in computational biology to model the
-                    state of a cell at a particular point in time. The cells are represented on a grid and their state
-                    (on/ off, alive/dead) changes according to a set of rules which is dependent on the number of
+                <p class="text-content">Cellular automata are discrete models introduced in the 1940s as a model of computation.
+                   They model the state of a cell at a particular point in time. Cells are represented on a grid and their state
+                    (on/ off/ empty,...) changes according to a set of rules which is dependent on the state of their
                     neighboring cells.</p>
 
             </div>
 
             <div class="text-section">
                 <h1 class="title">Game of Life</h1>
-                <p class="text-content">The Game of Life, (which we adapted for our purposes), represents a stochastic
-                    cellular automaton. A stochastic cellular automaton differs from conventional cellular automata by
-                    the fact that the cells are updated according to probability distributions.The Game of Life was
-                    developed in the 1970s by John Conway. Cells which can be either in the "born",
+                <p class="text-content">The Game of Life, (which we adapted for our purposes), is a particular case of a
+                    2D cellular automata that is known to show complex behaviours.
+                    The Game of Life was developed in the 1970s by John Conway. Cells which can be either in the "born",
                     "alive" or "dead" state are initialised on a 2D grid. The idea is to visually represent the evoluation
                     of the state of the cells over time according to a set of rules.</p>
 
@@ -214,7 +213,7 @@
 
             <div class="text-section">
                 <h1 class="title">Hill Equation</h1>
-                <p class="text-content">The Hill equation is used in computational biology to describe the interaction between a ligand and its binding site. The general form of the Hill equation is expressed as:</p>
+                <p class="text-content">The Hill equation is used in biology to describe the interaction between a ligand and its binding site. The general form of the Hill equation is expressed as:</p>
                 <img src="../assets/Hill2.jpg" id="eq1" style="width:200px;height:70px">
                 <p class="text-content">where,
                     <br>f(L) = Fraction of the protein concentration bound to the ligand  
@@ -222,7 +221,8 @@
                     <br>n = Hill coefficient
                     <br>Kd = Dissociation constant which follows mass action kinetics
                     <br>
-                    <br>The Hill equation is often adapted in mathematical modelling to allow for parameter optimisation. In our case we implemented a form of the Hill equation that had been adapted to represent a photo-activated cellular mechanism to determine the rate of photo - induction (k1).</p>
+                    <br>The Hill equation is often adapted in mathematical modelling to allow for a more flexible modelling of the dynamics of a promoter?
+                    In our case we implemented a form of the Hill equation that had been adapted to represent a photo-activated cellular mechanism to determine the rate of photo - induction (k1).</p>
                 <img src="../assets/Hill.jpg" id="eq2" style="width:310px;height:80px">
                 <p class="text-content">Two parameters had been added to the equation to account for our modelling needs:
                     <br> a = accounts for the basal expression level of the promoter (LuxI)
@@ -238,9 +238,11 @@
                 <img src="../assets/MA.jpg" id="eq3" style="width:120px;height:40px">
                 <p class="text-content">Given an ordinary differential equation,</p>
                 <img src="../assets/ODE.jpg" id="eq4" style="width:160px;height:60px">
-                <p class="text-content">Where the rate of reaction k is proportional to the concentrations of A and B </p>
+                <p class="text-content">Where k is known as the rate constant, its units depend on the order of the reaction, i.e. the number of reactants.</p>
             </div>
 
+
+        <!-- ADD ASSUMPTIONS ABOUT DERIVATION -->
 
             <div class="text-section">
                 <h1 class="title">Michaelis Menten</h1>
@@ -256,7 +258,7 @@
                 <p class="text-content">where,
                     <br>v = rate of product concentration over time
                     <br>P = concentration of product
-                    <br>Vmax = maximal rate of reactio7
+                    <br>Vmax = maximal rate of reaction
                     <br>S = concentration of the substrate
                     <br>Km = Michaelis Menten constant (value of concentration of ‘the substrate when the velocity = ½ maximum velocity)
                 </p>
