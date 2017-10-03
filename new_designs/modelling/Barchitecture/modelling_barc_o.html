@@ -257,8 +257,8 @@
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter
                     <br> <i>Location: Cytoplasm</i>
                     <br>
-                    <br>The first step of our LEGIT simulation involves determining the amount of EL222 dimers (EL222<sub>D</sub>) present in the cell.
-                    EL222<sub>D</sub> are the transcription factors used to activate the expression of intimin in the cell. An EL222 <sub>D</sub> is produced from
+                    <br>The first step of our LEGIT model involves determining the amount of EL222 dimers (EL222<sub>D</sub>) present in the cell.
+                    EL222<sub>D</sub> are the transcription factors used to activate the expression of intimin in the cell. An EL222 <sub>D</sub> (EL222 dimer) is produced from
                     the photo-activated dimerization of two EL222 monomers (EL222<sub>M</sub>) found in the cell. We wanted to establish this relationship
                     because once EL222<sub>D</sub> binds to the LuxI promotor, it starts to promote the transcription of mRNA.
 
@@ -293,7 +293,7 @@
                     <br>
                     The next step of our model seeks to establish the production levels of the surface protein intimin from translation.
                     The rate of intimin production is subject to changes in the rate of mRNA translation. Once intimin is translated, it is
-                    continuously transported to the surface of the E. Coli cell, therefore intimins' concentration in the cell also decreases. To account
+                    continuously transported to the surface of the E. coli cell, therefore intimins' concentration in the cell also decreases. To account
                     for fluctuation, we created a function that takes the transport rate of intimin to the surface to the E. Coli cells into consideration as well.
                 </p>
                 <img src="../../assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
@@ -319,6 +319,8 @@
                     and the intimins’ degradation rate into consideration.
                 </p>
                 <img src="../../assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
+
+
             <!-- add link to the project description page-->
             <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%"> <i>Not enough science? Check out the project description page!</i></h2>
 
@@ -373,10 +375,13 @@
                         <th class="text-content" style="padding: 0">3.2</th>
                     </tr>
                 </table>
+            <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 3: </i> Outlines the different steps involved in the cellular expression of intimin and the respective
+                times taken for the concentration of the product species from each step to plateau
+            </p>
 
             <p class="text-content">A rate limiting step in a process is the step that takes the longest to reach its maximum
-                value- or the one that takes the longest to plateau. We identified the rate at which intimin is transported to
-                the cell surface as being the limiting step in this cell mechanism. Because speed is essential to our LIT technology
+                value- or the one that takes the longest to plateau. The rate limiting step in this cellular mechanism is
+                the transport of intimin to the surface of the cell, since as demonstrated in Figure 3 it takes the longest time to plateau. Because speed is essential to our LIT technology
                 we decided to optimise the rate limiting parameters within the ODE describing intimin transfer to the cell surface.
             </p>
 
@@ -410,7 +415,14 @@
             <h1 class="title">Optimising the parameters in the rate-limiting step</h1>
 
                 <p class="text-content">We decided to optimize the rate-limiting parameters present in the ODE which describes
-                    the transport of intimin from the cell cytoplasm to the cell surface. The two rate-limiting parameters identified were: V<sub>max</sub> and K<sub>m</sub>.
+                    the transport of intimin from the cell cytoplasm to the cell surface.
+
+                    <img src="../../assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
+
+                    <img src="../../assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
+                    <br>
+                    <br>
+                    The two rate-limiting parameters identified were: V<sub>max</sub> and K<sub>m</sub>.
                     Where K<sub>m</sub> represents the affinity the surface of the cell has for the intimin protein and V<sub>max</sub> represents
                     the maximum rate at which intimin can be expressed on the surface of the cell .The maximum and minimum values that could be assigned to each parameter
                     were determined from literature. We decided to optimize the values for each parameter using two approaches,
