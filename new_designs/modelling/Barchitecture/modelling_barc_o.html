@@ -182,6 +182,7 @@
                 <li id="step4" class="navy-link side-link"><a href="#section3">Parameters</a></li>
                 <li id="step4" class="navy-link side-link"><a href="#section3">Species</a></li>
                 <li id="step4" class="navy-link side-link"><a href="#section3">Initial Conditions</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3">Bibliography</a></li>
             </ul>
         </nav>
 
@@ -234,7 +235,7 @@
             <div style="margin-top: 20px" class="text-section">
 
                 <div class="text-content">
-                    <h2 class="title" style="padding-left: 0">Model aims</h2>
+                    <h2 class="title" style="padding-left: 0">Model Aims</h2>
                     <ul>
                         <li>Determine the rate limiting cellular mechanism</li>
                         <li>Optimise the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approaches </li>
@@ -552,29 +553,36 @@
                 the E.coli cellular mechanism; and the frequency of light pulsing. We created a function in Python that took costs
                 incurred for both methods into consideration, where we attempted to identify the most cost-efficient operational
                 conditions for our tool.
+
+                <img src="../../assets/Barch/Barc_LICTable.png" class="image-content" style="width: 750px; height:500px">
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Outlines the operating costs incurred for operating the optogenetic tool with a range of light intensities </p>
             </p>
             <img src="../../assets/Barch/Bac_CostLI.png" class="image-content" style="width: 750px; height:500px">
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Demonstrates the effect light intensity has on the cost
+            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 14: </i> Demonstrates the effect light intensity has on the cost
                 for the operation (£ per W/cm<sup>2</sup>) of our optogenetic tool
 
-                <br> The simulation in Figure 13 was run for a period of 2 hours, where it was assumed a constant source of light
+                <br> The simulation in Figure 14 was run for a period of 2 hours, where it was assumed a constant source of light
                 would be present for the whole period of time. It is evident that the costs incurred increase directly proportionally
                 to the light intensity at which our optogenetic tool is operated at.
 
                 <br>
                 <br> We also decided to analyse the impact light pulsing would have on the overall process costs.</p>
+
+                <img src="../../assets/Mam/Mam_PCTable.png.png" class="image-content" style="width: 700px; height:200px">
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 15: </i> Outlines the operating costs incurred for pulsing the light source of the optogenetic tool over a range of frequencies </p>
+
                 <img src="../../assets/Barch/Bac_CostPuls.png" class="image-content" style="width: 800px; height:500px">
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 14: </i> Depicts the effect of light pulsing on the cost for the operation of the optogenetic tool running for 2 hours (£/hour)
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 16: </i> Depicts the effect of light pulsing on the cost for the operation of the optogenetic tool running for 2 hours (£/hour)
                 <br>
-                <br>The simulation in Figure 14 was also run for a period of 2 hours, where it was assumed a constant light intensity
-                    of 40 W/cm<sup>2</sup> was used. Similar to Figure 13, we see that an increase in the pulse duration results in a proportional
+                <br>The simulation in Figure 16 was also run for a period of 2 hours, where it was assumed a constant light intensity
+                    of 40 W/cm<sup>2</sup> was used. Similar to Figure 14, we see that an increase in the pulse duration results in a proportional
                     increase in the cost of operation.
 
                 <p class="text-content"> We then decided to plot both the costs incurred for different light intensities and the
                 pulsing durations on the same graph to evaluate their synergistic effect.</p>
 
                 <img src="../../assets/Barch/Bac_CostOpt.png" class="image-content" style="width:800px; height:500px">
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 15: </i> Demonstrates a comparison of the effects of light pulsing and light intensity on the overall cost of our optogenetic tool
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 17: </i> Demonstrates a comparison of the effects of light pulsing and light intensity on the overall cost of our optogenetic tool
                     <br>
                     <br> We decided to define the optimum operating conditions for our optogenetic tool as those at which both
                     lines intersect. Beyond the point of intersection, it was evident that the operational costs for the optogenetic
@@ -636,9 +644,7 @@
 
             </div>
 
-
-
-            <h2 class="title">Legit Assumptions</h2>
+            <h2 class="title">LEGIT Assumptions</h2>
 
             <ul class="text-content">
                 <li>Mass action kinetics</li>
@@ -656,13 +662,41 @@
 
             <img src="../../assets/Barch/Species.png" class="image-content image-content-here">
 
-            <h3 class="title">Legit Parameters</h3>
+            <h3 class="title">LEGIT Parameters</h3>
 
             <img src="../../assets/Barch/Parameters.png" class="image-content" style="width: 900px; height:700px">
 
-            <h5 class="title">Legit Initial Conditions</h5>
+            <h5 class="title">LEGIT Initial Conditions</h5>
 
             <img src="../../assets/Barch/InitCond.png" class="image-content" style="width: 900px; height:1000px">
+
+            <h6 class="title">Bibliography</h6>
+            <br>
+
+            <p class="subtitle"> Thereza, C., Marina, I., Luciana.Cambricoli, d. and Olivia, C. (2004). Expression of green fluorescent protein (GFPuv) in Escherichia coli DH5-a, under different growth conditions. African Journal of Biotechnology, 3(1), pp.105-111.
+                <br>
+                <br>
+                Wlab.ethz.ch. (2017). Cell Surface Protein Atlas. [online] Available at: http://wlab.ethz.ch/cspa/#abstract [Accessed 4 Sep. 2017].
+                <br>
+                <br>
+                Sciencedirect.com. (2017). Membrane integration of E. coli model membrane proteins - ScienceDirect. [online] Available at: http://www.sciencedirect.com/science/article/pii/S0167488904000813 [Accessed 4 Sep. 2017].
+                <br>
+                <br>
+                Arun KH e. Green fluorescent proteins in receptor: an emerging tool for drug discovery. – PubMed –NCBI [Internet]. Ncbi.nlm.gov.2017 [cited 21 August 2017]. Available from: https://www.ncbi.nlm.nih.gov/pubmed/15596111
+                <br>
+                <br>
+                [internet] UVGermicidalTechnicalData. [cited 10 September 2017] http://www.pveducation.org/pvcdrom/effect-of-light-intensity (accessed 10 September 2017).
+                <br>
+                <br>
+                Jayaraman, P., Devarajan, K., Chua, T. K., Zhang, H., Gunawan, E. and Loo Poh, C.  Blue light-mediated transcriptional activation and repression of gene expression in bacteria. NCBI. 2016;44(14):6994–7005.
+                <br>
+                <br>
+                Philips, Ron. "Cell Biology By The Numbers." Book.bionumbers.org. N.p., 2017. Web. 10 Sept. 2017.
+                <br>
+                <br>
+                Kiparissides, Alexandros et al. "Modelling The Delta1/Notch1 Pathway: In Search Of The Mediator(S) Of Neural Stem Cell Differentiation." PLoS ONE 6.2 (2011): e14668. Web.
+                <br>
+            </p>
 
 
         </div>
