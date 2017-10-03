@@ -4,78 +4,78 @@
     <meta charset="UTF-8">
     <title>glossary</title>
 
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
-<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
-<meta charset="UTF-8">
-<title>Description</title>
-<link rel="stylesheet" type="text/css" href="../css/glossary.css">
+    <meta charset="UTF-8">
+    <title>Description</title>
+    <link rel="stylesheet" type="text/css" href="../../css/glossary.css">
 
-<!-- BOOTSTRAP -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script>
+    <script>
 
-    $(document).ready(function(){
-        //Take your div into one js variable
-        var s1 = $("#step1");
-        var s2 = $("#step2");
-        var s3 = $("#step3");
+        $(document).ready(function(){
+            //Take your div into one js variable
+            var s1 = $("#step1");
+            var s2 = $("#step2");
+            var s3 = $("#step3");
 
-        //Take the current position (vertical position from top) of your div in the variable
-        var pos = s1.position();
-        var pos1 = s2.position();
-        var pos2 = s3.position();
+            //Take the current position (vertical position from top) of your div in the variable
+            var pos = s1.position();
+            var pos1 = s2.position();
+            var pos2 = s3.position();
 
-        //Now when scroll event trigger do following
-        $(window).scroll(function () {
+            //Now when scroll event trigger do following
+            $(window).scroll(function () {
 
-            scrollFunction()
+                scrollFunction()
 
-            var windowpos = $(window).scrollTop();
-            //console.log(windowpos);
+                var windowpos = $(window).scrollTop();
+                //console.log(windowpos);
 
-            //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-            if (windowpos >= (pos.top + 100)) {
-                // div.addClass("AfterScroll");
-                s2.removeClass("active-link");
-                s1.addClass("active-link");
-            }
+                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
+                if (windowpos >= (pos.top + 100)) {
+                    // div.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s1.addClass("active-link");
+                }
 
-            if (windowpos >= (pos1.top + 750)) {
-                // div1.addClass("AfterScroll");
-                s1.removeClass("active-link");
-                s3.removeClass("active-link");
-                s2.addClass("active-link");
+                if (windowpos >= (pos1.top + 750)) {
+                    // div1.addClass("AfterScroll");
+                    s1.removeClass("active-link");
+                    s3.removeClass("active-link");
+                    s2.addClass("active-link");
 
-            }
+                }
 
-            if (windowpos >= (pos2.top + 1100)) {
-                //div2.addClass("AfterScroll");
-                s2.removeClass("active-link");
-                s3.addClass("active-link");
+                if (windowpos >= (pos2.top + 1100)) {
+                    //div2.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s3.addClass("active-link");
+                }
+
+            });
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
             }
 
         });
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
-
-    });
-</script>
+    </script>
 </head>
 
 
@@ -167,99 +167,47 @@
         <!-- The side navbar -->
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Basal Expression Level</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Cellular Automata</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Game of Life</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section4">Hill Equation</a></li>
-                <li id="step5" class="navy-link side-link"><a href="#section5">Mass Action Kinetics</a></li>
-                <li id="step6" class="navy-link side-link"><a href="#section6">Michaelis Menten</a></li>
-
+                <li id="step1" class="navy-link side-link"><a href="#section1">Pharmaceutical Industry</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Financial Markets</a></li>
             </ul>
         </nav>
 
 
         <div style="float: right !important" class="col-sm-10">
 
-            <div style="margin-top:20px"><h1 class="main">GLOSSARY</h1></div>
+            <div style="margin-top:20px"><h1 class="main">Alternative Real-life Applications</h1></div>
 
-            <div class="text-section">
-                <h1 class="title">Basal Expression Level</h1>
-                <p class="text-content">The basal expression of mRNA or a protein refers to its “default” expression level.
-                    Essentially, it’s the level of mRNA/ protein that will be constitutively produced in a cell independent
-                    of the activity of its promoter.
-                </p>
-            </div>
 
-            <div class="text-section"">
+            <div style="margin-top: 20px">
 
-                <h1 class="title">Cellular Automata</h1>
+                <h1 class="title">Pharmaceutical Industry</h1>
 
-                <p class="text-content">Cellular automata are discrete models used in computational biology to model the
-                    state of a cell at a particular point in time. The cells are represented on a grid and their state
-                    (on/ off, alive/dead) changes according to a set of rules which is dependent on the number of
-                    neighboring cells.</p>
-
-            </div>
-
-            <div class="text-section">
-                <h1 class="title">Game of Life</h1>
-                <p class="text-content">The Game of Life, (which we adapted for our purposes), represents a stochastic
-                    cellular automaton. A stochastic cellular automaton differs from conventional cellular automata by
-                    the fact that the cells are updated according to probability distributions.The Game of Life was
-                    developed in the 1970s by John Conway. Cells which can be either in the "born",
-                    "alive" or "dead" state are initialised on a 2D grid. The idea is to visually represent the evoluation
-                    of the state of the cells over time according to a set of rules.</p>
+                <p class="text-content">Our model could be adapted and used by Pharmaceutical companies to optimize their
+                    Downstream Processing conditions, in order to obtain a high product yield. A focus could be placed on
+                    identifying the bottleneck of the manufacturing process, the stage at which the greatest concentration
+                    of product is lost in the manufacturing process. Each differential equation could represent a batch mode
+                    taking place in one unit operation, where the product concentration changes over time. For each equation,
+                    we would include the loss of product in the form of degradation rates, as they would indicate a decrease in
+                    product concentration. For each of these conditions a discount factor for the product concentration would need
+                    to be introduced. The product loss could be due to: the product getting stuck in crevices in the machinery;
+                    product degradation due to a limited half-life; and product aggregation to other cellular debris. This model
+                    would help companies determine the unit operation at which the largest product loss is experienced.</p>
 
             </div>
 
             <div class="text-section">
-                <h1 class="title">Hill Equation</h1>
-                <p class="text-content">The Hill equation is used in computational biology to describe the interaction between a ligand and its binding site. The general form of the Hill equation is expressed as:</p>
-                <img src="../assets/Hill2.jpg" id="eq1" style="width:200px;height:70px">
-                <p class="text-content">where,
-                    <br>f(L) = Fraction of the protein concentration bound to the ligand  
-                    <br>L = free ligand concentration
-                    <br>n = Hill coefficient
-                    <br>Kd = Dissociation constant which follows mass action kinetics
-                    <br>
-                    <br>The Hill equation is often adapted in mathematical modelling to allow for parameter optimisation. In our case we implemented a form of the Hill equation that had been adapted to represent a photo-activated cellular mechanism to determine the rate of photo - induction (k1).</p>
-                <img src="../assets/Hill.jpg" id="eq2" style="width:310px;height:80px">
-                <p class="text-content">Two parameters had been added to the equation to account for our modelling needs:
-                    <br> a = accounts for the basal expression level of the promoter (LuxI)
-                    <br> k = accounts for the maximum expression of the promoter due to light intensity 0
+                <h1 class="title">Stock market</h1>
+                <p class="text-content">Similarly, our model could be also be adapted to represent the volatile nature of publically
+                    listed companies’ share prices in the stock market. One could divide the differential equations into the main factors
+                    which affect the share price of a company. These factors could be: the Lombard Rate which is set by the European Central Bank;
+                    the desirability of a company’s shares (set as a function of the market share a company has); and a company’s share price.
+                    A decrease in the Lombard rate would result in an increase in the share price of a company, which would lead to an increase
+                    in the number of the company’s shares bought from the stock market and finally result in an increase the market share a company
+                    has in its industrial sector. Through our model financial institutions could identify the time it takes for a change in the
+                    Lombard rate to result in a change in the company’s market share. Simultaneously, once the bottleneck is identified, the
+                    company’s management team could optimise parameters (such as advertising or product diversification) to minimise the time taken for this change to occur.
                 </p>
 
-            </div>
-
-            <div class="text-section">
-                <h1 class="title">Mass Action Kinetics</h1>
-                <p class="text-content">Mass action kinetics describe chemical reactions. It assumes that the rate of chemical reaction is proportional concentration of the initial reactants.
-                <br>Mass action kinetics assumes: </p>
-                <img src="../assets/MA.jpg" id="eq3" style="width:120px;height:40px">
-                <p class="text-content">Given an ordinary differential equation,</p>
-                <img src="../assets/ODE.jpg" id="eq4" style="width:160px;height:60px">
-                <p class="text-content">Where the rate of reaction k is proportional to the concentrations of A and B </p>
-            </div>
-
-
-            <div class="text-section">
-                <h1 class="title">Michaelis Menten</h1>
-                <p class="text-content">The Michaelis Menten equation was created to describe the rate kinetics in enzymatic reactions. Computational biologists commonly use the Michaelis Menten equation to describe the rate kinetics of cellular mechanisms. The steps described by the Michaelis Menten kinetics, can be represented schematically:</p>
-                <img src="../assets/enzyme.png" id="eq5" style="width: 220px; height: 60px">
-                <p class="text-content">where,
-                    <br>E = enzyme
-                    <br>S = substrate
-                    <br>ES = enzyme substrate complex
-                    <br>P = product </p>
-                <p class="text-content">The rate at which the final product is formed is given by the following equation:</p>
-                <img src="../assets/MichaelisMenten.jpg" id="eq6" style="width: 270px; height: 70px">
-                <p class="text-content">where,
-                    <br>v = rate of product concentration over time
-                    <br>P = concentration of product
-                    <br>Vmax = maximal rate of reactio7
-                    <br>S = concentration of the substrate
-                    <br>Km = Michaelis Menten constant (value of concentration of ‘the substrate when the velocity = ½ maximum velocity)
-                </p>
             </div>
 
         </div>

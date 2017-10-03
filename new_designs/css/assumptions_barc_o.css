@@ -212,16 +212,27 @@
     font-family: "Noto Sans";
     font-size: 18px;
     font-weight: 600;
-    padding: 2% 1% 1% 35%;
+    padding: 2% 1% 1% 15%;
     margin:0;
     color: black ;
+}
+
+.linktitle {
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-weight: 600;
+    padding: 2% 1% 1% 15%;
+    margin:0;
+    color: lightgray ;
+    font-style: italic;
+
 }
 
 .tabletitle {
     font-family: "Noto Sans";
     font-size: 18px;
     font-weight: 500;
-    padding: 0 1% 1% 35%;
+    padding: 0 1% 1% 15%;
     margin:0;
     color: white ;
 }
@@ -259,12 +270,13 @@
     width: 352px;
 }
 
+
 #show1  {
     height: auto;
     background-color: rgba(204, 0, 53, 0.69);
     overflow: hidden;
     max-width:65%;
-    padding: 2% 3% 2% 3%;
+    padding: 2% 3% 2% 5%;
     position:relative;
     margin-left: 150px;
 }
@@ -272,7 +284,7 @@
 #hide1 {
     height: auto;
     background-color: white;
-    max-width:80%;
+    max-width: 80%;
     padding: 2% 3% 2% 15%;
     overflow: hidden;
 }
@@ -296,83 +308,18 @@
     padding: 2% 3% 2% 15%;
 
 
-#show3  {
-    height: auto;
-    background-color: rgba(204, 0, 53, 0.69);
-    overflow: hidden;
-    max-width:65%;
-    padding: 2% 3% 2% 5%;
-    position:relative;
-    margin-left: 150px;
-}
-
-
-#hide3 {
-    height: auto;
-    background-color: white;
-    overflow: hidden;
-    max-width:80%;
-    padding: 2% 3% 2% 15%;
-
-#show4  {
-    height: auto;
-    background-color: rgba(204, 0, 53, 0.69);
-    overflow: hidden;
-    max-width:65%;
-    padding: 2% 3% 2% 5%;
-    position:relative;
-    margin-left: 150px;
-}
-
-
-#hide4 {
-    height: auto;
-    background-color: white;
-    overflow: hidden;
-    max-width:80%;
-    padding: 2% 3% 2% 15%;
-
-
-
 #show1 p {
-    padding-top: 30px;
-    padding-right: 10%;
-    padding-left: 10%;
     font-size: 30px !important;
     font-weight: 500;
     font-family: "Josefin Sans" !important;
-    font-color: black;
-    width:100%;
-    text-align: center;
+    color: black;
+    position:relative;
+    max-width:80%;
+    padding: 2% 3% 2% 15%;
+    margin:0 !important;
 }
 
 #show2 p {
-    padding-top: 30px;
-    padding-right: 10%;
-    padding-left: 10%;
-    font-size: 30px !important;
-    font-weight: 500;
-    font-family: "Josefin Sans" !important;
-    font-color: black;
-    width:100%;
-    text-align: center;
-}
-
-
-#show3 p {
-    padding-top: 30px;
-    padding-right: 10%;
-    padding-left: 10%;
-    font-size: 30px !important;
-    font-weight: 500;
-    font-family: "Josefin Sans" !important;
-    font-color: black;
-    width:100%;
-    text-align: center;
-}
-
-
-#show4 p {
     padding-top: 30px;
     padding-right: 10%;
     padding-left: 10%;

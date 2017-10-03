@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+    <meta charset="UTF-8">
+    <title>GameOfLIT</title>
+    <link rel="stylesheet" type="text/css" href="../css/template.css">
+
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            //Take your div into one js variable
+            var s1 = $("#step1");
+            var s2 = $("#step2");
+            var s3 = $("#step3");
+
+            //Take the current position (vertical position from top) of your div in the variable
+            var pos = s1.position();
+            var pos1 = s2.position();
+            var pos2 = s3.position();
+
+            //Now when scroll event trigger do following
+            $(window).scroll(function () {
+
+                scrollFunction()
+
+                var windowpos = $(window).scrollTop();
+                //console.log(windowpos);
+
+                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
+                if (windowpos >= (pos.top + 100)) {
+                    // div.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s1.addClass("active-link");
+                }
+
+                if (windowpos >= (pos1.top + 750)) {
+                    // div1.addClass("AfterScroll");
+                    s1.removeClass("active-link");
+                    s3.removeClass("active-link");
+                    s2.addClass("active-link");
+
+                }
+
+                if (windowpos >= (pos2.top + 1100)) {
+                    //div2.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s3.addClass("active-link");
+                }
+
+            });
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+        });
+    </script>
+</head>
+
+<style>
+    .image-content-here {
+        height: 300px;
+        width:600px;
+    }
+</style>
+
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+<!-- The top navbar -->
+<div class="container-fluid">
+    <div id="top" class="row">
+
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 28 1900 300"><defs><style>.cls-1,.cls-2{fill:none;stroke-miterlimit:10;}.cls-1{stroke:#000;}.cls-2{stroke: #272727;}  .cls-3{fill: #000000;}</style></defs><title>Banner</title><path d="M362.58,63.45l147.29,87.62V326.36L362.58,414,215.29,326.36V151.07L362.58,63.45m0-1.16L214.29,150.5V326.92l148.29,88.21,148.29-88.21V150.5L362.58,62.29Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="363.3" y1="75.21" x2="363.3" y2="244.21"/><line class="cls-1" x1="215.3" y1="339.21" x2="363.3" y2="244.21"/><line class="cls-1" x1="511.3" y1="339.21" x2="363.3" y2="244.21"/><line class="cls-1" x1="0.3" y1="653.21" x2="70.3" y2="601.21"/><line class="cls-1" x1="681.3" y1="58.21" x2="511.3" y2="163.21"/><line class="cls-1" x1="468.3" y1="13.21" x2="365.3" y2="75.21"/><line class="cls-1" x1="363.86" y1="74.27" x2="259.74" y2="14.16"/><path d="M215.58,326.45l147.29,87.62V589.36L215.58,677,68.29,589.36V414.07l147.29-87.62m0-1.16L67.29,413.5V589.92l148.29,88.21,148.29-88.21V413.5L215.58,325.29Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="781.3" y1="350.71" x2="784.3" y2="530.21"/><line class="cls-1" x1="72.3" y1="424.21" x2="0.3" y2="469.21"/><polygon class="cls-1" points="354.98 750.16 366.17 600.56 218.18 688.59 354.98 750.16"/><path d="M778.58-11.55,925.86,76.07V251.36L778.58,339,631.29,251.36V76.07L778.58-11.55m0-1.16L630.29,75.5V251.92l148.29,88.21,148.29-88.21V75.5L778.58-12.71Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="511.3" y1="337.21" x2="781.3" y2="172.21"/><line class="cls-1" x1="929.3" y1="267.21" x2="781.3" y2="172.21"/><path d="M511.58,325.45l147.29,87.62V588.36L511.58,676,364.29,588.36V413.07l147.29-87.62m0-1.16L363.29,412.5V588.92l148.29,88.21,148.29-88.21V412.5L511.58,324.29Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="493.3" y1="13.21" x2="632.3" y2="87.21"/><path d="M1076.58,163.45l147.29,87.62V426.36L1076.58,514,929.29,426.36V251.07l147.29-87.62m0-1.16L928.29,250.5V426.92l148.29,88.21,148.29-88.21V250.5l-148.29-88.21Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="1077.3" y1="175.21" x2="1077.3" y2="344.21"/><line class="cls-1" x1="929.3" y1="439.21" x2="1077.3" y2="344.21"/><line class="cls-1" x1="1225.3" y1="439.21" x2="1077.3" y2="344.21"/><line class="cls-1" x1="511.3" y1="870.21" x2="784.3" y2="701.21"/><line class="cls-1" x1="1486.3" y1="102.21" x2="1225.3" y2="263.21"/><line class="cls-1" x1="1347.3" y1="13.21" x2="1079.3" y2="175.21"/><line class="cls-1" x1="1077.86" y1="174.27" x2="928.3" y2="87.21"/><path d="M931.58,428.45l147.29,87.62V691.36L931.58,779,784.29,691.36V516.07l147.29-87.62m0-1.16L783.29,515.5V691.92l148.29,88.21,148.29-88.21V515.5L931.58,427.29Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="786.3" y1="524.21" x2="659.3" y2="601.21"/><line class="cls-1" x1="1225.3" y1="437.21" x2="1920.3" y2="13.21"/><line class="cls-1" x1="1625.3" y1="367.21" x2="1519.3" y2="439.21"/><path d="M1225.58,428.45l147.29,87.62V691.36L1225.58,779l-147.29-87.62V516.07l147.29-87.62m0-1.16L1077.29,515.5V691.92l148.29,88.21,148.29-88.21V515.5l-148.29-88.21Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="1101.3" y1="13.21" x2="1369.3" y2="174.21"/><line class="cls-2" x1="0.3" y1="12.21" x2="215.3" y2="163.21"/><line class="cls-2" x1="364.3" y1="427.21" x2="659.3" y2="601.21"/><line class="cls-2" x1="215.3" y1="163.21" x2="0.3" y2="291.21"/><path class="cls-3" d="M658.58,60.45l147.29,87.62V323.36L658.58,411,511.29,323.36V148.07L658.58,60.45m0-1.16L510.29,147.5V323.92l148.29,88.21,148.29-88.21V147.5L658.58,59.29Z" transform="translate(0.8 12.71)"/><line class="cls-2" x1="683.3" y1="762.21" x2="841.3" y2="855.21"/><line class="cls-2" x1="1773.3" y1="449.71" x2="1774.3" y2="615.71"/><path class="cls-3" d="M1370.58,337.45l147.29,87.62V600.36L1370.58,688l-147.29-87.62V425.07l147.29-87.62m0-1.16L1222.29,424.5V600.92l148.29,88.21,148.29-88.21V424.5l-148.29-88.21Z" transform="translate(0.8 12.71)"/><line class="cls-2" x1="1041.3" y1="13.21" x2="929.3" y2="86.21"/><line class="cls-2" x1="1347.3" y1="13.21" x2="1920.3" y2="380.21"/><line class="cls-2" x1="931.3" y1="431.71" x2="932.3" y2="597.71"/><line class="cls-2" x1="1370.3" y1="176.71" x2="1373.3" y2="525.21"/><line class="cls-2" x1="1624.29" y1="365.71" x2="1625.3" y2="547.21"/><line class="cls-1" x1="1623.3" y1="13.71" x2="1626.3" y2="193.21"/><path d="M1772.58,91.45l147.29,87.62V354.36L1772.58,442l-147.29-87.62V179.07l147.29-87.62m0-1.16L1624.29,178.5V354.92l148.29,88.21,148.29-88.21V178.5L1772.58,90.29Z" transform="translate(0.8 12.71)"/><path class="cls-3" d="M1373.58,162.45l147.29,87.62V425.36L1373.58,513l-147.29-87.62V250.07l147.29-87.62m0-1.16L1225.29,249.5V425.92l148.29,88.21,148.29-88.21V249.5l-148.29-88.21Z" transform="translate(0.8 12.71)"/><line class="cls-1" x1="511.3" y1="689.71" x2="511.3" y2="870.21"/><line class="cls-1" x1="218.3" y1="689.71" x2="218.3" y2="870.21"/><line class="cls-2" x1="72.3" y1="428.21" x2="367.3" y2="602.21"/><line class="cls-1" x1="1519.3" y1="613.21" x2="1772.3" y2="456.21"/></svg>
+
+        <ul class="navy">
+            <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Description</a></li>
+                    <li><a href="#" class="dropped">Experiments</a></li>
+                    <li><a href="#" class="dropped">Results</a></li>
+                    <li><a href="#" class="dropped">Parts</a></li>
+                    <li><a href="#" class="dropped">Gold Criteria</a></li>
+                    <li><a href="#" class="dropped">Interlab</a></li>
+
+                </ul>
+            </li>
+
+            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Protocols</a></li>
+                    <li><a href="#" class="dropped">Safety</a></li>
+                    <li><a href="#" class="dropped">Stuff</a></li>
+                </ul>
+            </li>
+            </li>
+
+            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Product</a></li>
+                    <li><a href="#" class="dropped">IP</a></li>
+                    <li><a href="#" class="dropped">Business Environment</a></li>
+                    <li><a href="#" class="dropped">Marketing</a></li>
+                    <li><a href="#" class="dropped">Management</a></li>
+                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
+                </ul>
+            </li>
+
+            <li id="drop5" class="navy-link"><a href="#">MODELLING</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">LEGIT</a></li>
+                    <li><a href="#" class="dropped">GOLIT</a></li>
+                    <li><a href="#" class="dropped">LAME</a></li>
+                    <li><a href="#" class="dropped">OptoFlux</a></li>
+                    <li><a href="#" class="dropped">Glossary</a></li>
+                </ul>
+            </li>
+
+            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Public Engagement</a></li>
+                    <li><a href="#" class="dropped">Integrated Practices</a></li>
+                </ul>
+            </li>
+
+            <li id="drop2" class="navy-link"><a href="#about">JUDGING CRITERIA</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Bronze</a></li>
+                    <li><a href="#" class="dropped">Silver</a></li>
+                    <li><a href="#" class="dropped">Gold</a></li>
+                </ul>
+            </li>
+
+            <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Team</a></li>
+                    <li><a href="#" class="dropped">Collaborations</a></li>
+                    <li><a href="#" class="dropped">Attributions</a></li>
+                </ul></li>
+
+        </ul>
+    </div>
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- The side navbar -->
+        <nav class="col-sm-2">
+            <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
+                <li id="step1" class="navy-link side-link"><a href="#section1">GOLIT model</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Overview</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Rate kinetics and cellular automata</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section4">Artificial Intelligence</a></li>
+                <li id="step5" class="navy-link side-link"><a href="#section5">Experimental Data</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <div style="float: right !important" class="col-sm-10">
+            <div class="text-section">
+                <h1 class="title"> GOLIT -  Cell adhesion to form bacterial 3D structures </h1>
+                <h2 class="subtitle">Merging SynBio with cellular automata</h2>
+                <p class="text-content">GOLIT is an adapted version of Conway’s ‘Game of Life’ [add link to glossary].
+                    It aims to create a visual representation of how solid cell structures formfrom the binding of SpyTag
+                    and SpyCatcher.</p>
+
+                <ol class="text-content">We attempted to optimise the range at which cell adhesion occurs in the GOLIT model. For this we
+                    introduced a range of novel approaches in the GOLIT model:
+                    <br>
+                    <li style="margin-left: 40px">Combination of ordinary differential equations for gene expression and cellular automata for spatial analysis</li>
+                    <li style="margin-left: 40px">Genetic Algorithm for automated parameter optimization</li>
+                    <li style="margin-left: 40px">Experimental data for parameter optimization</li>
+                </ol>
+            </div>
+
+            <div class="text-section">
+                <h2 class="title">What are we modelling?</h2>
+                <p class="text-content"> We are modelling a cellular automaton to represent the adhesion of cells in a
+                    dynamic and stochastic way. Our Wet Lab team is engineering E. coli cells to express the binding partners
+                    SpyTag and SpyCatcher on their surface. SpyTag and SpyCatcher form a covalent bond and allow cells
+                    to aggregate and form bacterial structures. With GOLIT we are simulating the adhesion of these binding
+                    partners over time by considering the concentration of cells in a cell culture as well as
+                    assessing probabilities depending on specific conditions (described below) </p>
+
+                <h2 class="title">How did we adapt the Game of Life? </h2>
+                <p class="text-content">Similarly to the Game of Life, we are representing the cells on a 2D grid.
+                    In the GOLIT model the cells can either be in the “bound” or “unbound” state. The game requires to define the state of all the cells on the grid
+                    and update the grid according to a set of rules after each time point. The state of a cell at particular
+                    time point depends on the the state of its neighboring cells as well as the concentration of SpyTag/
+                    SpyCatcher expressed on the surface of the cells.
+                    <br>
+                    <br> The rules below assign probabilities of one cell turning to the "bound" state depending on the
+                    number of neighbors in the "bound" state it has.
+
+                <h2 class="subtitle">Rules of the Game of LIT </h2>
+                <table style="width: 60%; margin-left: 170px">
+                    <tr>
+                        <th class="text-content" style="padding: 0">Number of "bound" neighbors</th>
+                        <th class="text-content" style="padding: 0">Probability of binding (%)</th>
+                    </tr>
+                    <tr>
+                        <td class="text-content" style="padding: 0">0</td>
+                        <th class="text-content" style="padding: 0">20</th>
+
+                    </tr>
+                    <tr>
+                        <td class="text-content" style="padding: 0" >1</td>
+                        <th class="text-content" style="padding: 0">30</th>
+                    </tr>
+
+                    <tr>
+                        <td class="text-content" style="padding: 0">2</td>
+                        <th class="text-content" style="padding: 0">60</th>
+                    </tr>
+
+                    <tr>
+                        <td class="text-content" style="padding: 0">3</td>
+                        <th class="text-content" style="padding: 0">80</th>
+                    </tr>
+
+                    <tr>
+                        <td class="text-content" style="padding: 0">4</td>
+                        <th class="text-content" style="padding: 0">99</th>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div class="text-section">
+                <h2 class="title">Combination of ODE and Cellular Automata </h2>
+                <p class="text-content">
+                    Aim: Determine which light intensity allows the fastest cell aggregation, i.e. binding of SpyTag and SpyCatcher
+                    <br>
+                    <br>The particularity of the GOLIT model lies in the combination of rate kinetics and cellular
+                    automata for spatial analysis. The concentration of SpyTag and SpyCatcher expressed on the surface of the engineered E. coli
+                    cells is critical for the efficiency of cell adhesion. LEGIT uses rate kinetics to model the rate of intimin expressed
+                    on the surface of the bacteria for light intensities in the range 0-70 W/m<sup>2</sup>.
+                    <br>For the purpose of this model we are assuming that the concentration of intimin expressed corresponds
+                    to the amount of SpyTag/ SpyCatcher on the surface of the cells. Since updating the grid in the GOLIT
+                    model depends on the concentration of protein expressed, we extracted the concentrations of intimin
+                    expressed from the LEGIT model and fed it into the GOLIT model.</p>
+
+                <ul class="text-content">Setting up the Initial conditions for the model:
+                    <li style="margin-left: 40px"> Dimensions of the grid (height and length)</li>
+                    <li style="margin-left: 40px"> The amount of bound cells at time point, t=0</li>
+                    <li style="margin-left: 40px"> The amount of unbound cells at time point, t=0</li>
+                    <li style="margin-left: 40px"> The number of generations, i.e. the number of times the grid will be updated</li>
+                    <li style="margin-left: 40px"> The duration of each generation</li>
+                </ul>
+
+                <br>
+                <h2 class="subtitle"><i>Click here to check out our code!</i></h2> <!-- Add link to Github-->
+                <br>
+                <h2 class="title">Results</h2>
+                <p class="text-content">We ran the game with the light intensities tested in the lab and the corresponding concentrations blablabla</p>
+                <p class="text-content">For 18 W/m<sup>2</sup></p>
+                <img src="../assets/18W:m2_plot copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/18W:m2_grid copy.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px">Fig. 1 shows the rate cell adhesion, Cell Number vs. times points measured.
+                    The grid shows  blablabla</p>
+
+                <p class="text-content">For 35 W/m<sup>2</sup></p>
+                <img src="../assets/35W:m2_plot.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/35W:m2_grid.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px">Fig. 1 shows the rate cell adhesion, Cell Number vs. times points measured.
+                    The grid shows  blablabla</p>
+
+                <p class="text-content">For 53 W/m<sup>2</sup></p>
+                <img src="../assets/53W:m2_plot copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/53W:m2_grid copy.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px">Fig. 1 shows the rate cell adhesion, Cell Number vs. times points measured.
+                    The grid shows  blablabla</p>
+
+                <p class="text-content">For 70 W/m<sup>2</sup></p>
+                <img src="../assets/70W:m2_plot copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/70W:m2_grid copy.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px">Fig. 1 shows the rate cell adhesion, Cell Number vs. times points measured.
+                    The grid shows  blablabla</p>
+
+                <p class="text-content">Paragraph about how what this shows and say smth about random ... </p>
+
+                <p class="text-content">We then decided to ......</p>
+                <img src="../assets/18W:m2_range copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:0px">
+                <img src="../assets/35W:m2_range .jpg" class="image-content" style="width: 480px; height: 300px; padding-left:0px; padding-right:150px">
+                <img src="../assets/53W:m2_range copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:0px">
+                <img src="../assets/70W:m2_range copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-left:0px; padding-right:150px">
+
+
+
+            </div>
+
+            <div class="text-section">
+                <h1 class="title">Adding Artificial Intelligence to the Model</h1>
+                <p class="text-content">Aim: Optimize the light distribution pattern on the initial grid to allow
+                    the fastest rate of cell aggregation.
+                    <br>
+                    <br>We decided to add an innovative twist to our model by incorporating artificial intelligence,
+                    more particularly Genetic Algorithm (GA). Genetic Algorithms, a type of subsymbolic artificial
+                    intelligence, adopt the principles of Darwinian evolution to tackle the challenge of parameter
+                    optimization.
+                    <br>In the context of GOLIT we are applying a genetic algorithm to optimize the initial grid,
+                    i.e. the grid at time, t=0. In other words, this means that we are generating the initial pattern
+                    of “bound” cells on the grid that will allow the fastest rate of cell adhesion. Given as only
+                    condition, a maximum number of cells to be placed on the initial grid, the model runs a number of
+                    “agents” that generate different patterns according to random probabilities. The genetic algorithm
+                    then selects the “best agent”, i.e. the “agent” showing the pattern that will allow cells to aggregate
+                    fastest.
+                </p>
+
+                <!-- may be worth adding a diagram here to illustrate this -->
+                <h2 class="subtitle"><i>Click here to access Github</i></h2>
+                <h1 class="title">Results</h1>
+                <p class="text-content">add stuff about the initial conditions of the GA</p>
+                <h1 class="title">Re-running the game with optimized conditions</h1>
+            </div>
+
+            <div class="text-section">
+                <h1 class="title">Experimental Data</h1>
+                <p class="text-content">We realize that experimental data is very valuable to optimize a mathematical model.
+                    Therefore, we simulated the bacterial SpyTag/ SpyCatcher adhesion chemically, by texting the adhesion
+                    between Biothin and Avadin. Similarly, to SpyTag and SpyCatcher, Biothin and Avadin form a covalent bond.
+                    This experimental data allowed us to optimize the concentration of surface proteins needed to achieve the
+                    highest binding rate. </p>
+                <p class="text-content">change the text add content about the lab procedure/protocol? and tehn experimental
+                data and maybe the video?</p>
+            </div>
+
+
+</body>
+</html>
