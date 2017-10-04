@@ -192,6 +192,17 @@
     margin:0 !important;
 }
 
+
+.text-biblio {
+    position:relative;
+    max-width:80%;
+    font-size: 20px;
+    font-family: "Crimson Text";
+    padding: 2% 3% 2% 15%;
+    margin:0 !important;
+    color: lightgray ;
+}
+
 .image-content {
     height:300px;
     width:650px;
@@ -231,10 +242,25 @@
 .tabletitle {
     font-family: "Noto Sans";
     font-size: 18px;
-    font-weight: 500;
-    padding: 0 1% 1% 15%;
+    font-weight: 800;
+    padding: 0 0 0 10%;
     margin:0;
-    color: white ;
+    color: white;
+
+}
+
+i {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px ;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 .affix {
@@ -273,7 +299,7 @@
 
 #show1  {
     height: auto;
-    background-color: rgba(204, 0, 53, 0.69);
+    background-color: rgba(204, 0, 53, 0.69) ;
     overflow: hidden;
     max-width:65%;
     padding: 2% 3% 2% 5%;
@@ -284,7 +310,6 @@
 #hide1 {
     height: auto;
     background-color: white;
-    max-width: 80%;
     padding: 2% 3% 2% 15%;
     overflow: hidden;
 }
@@ -314,9 +339,9 @@
     font-family: "Josefin Sans" !important;
     color: black;
     position:relative;
-    max-width:80%;
-    padding: 2% 3% 2% 15%;
     margin:0 !important;
+
+
 }
 
 #show2 p {
