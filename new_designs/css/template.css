@@ -5,6 +5,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 
+body {
+    position:relative;
+    height:100%;
+}
+
 .container-fluid {
     padding-right:0;
     padding-left:0;
@@ -19,7 +24,7 @@
     width: 100%;
     z-index:5;
     padding: 0;
-    background-color: rgba(0, 212, 255, 0.32);
+    background-color: #2f2832;
 }
 
 #banner {
@@ -50,7 +55,7 @@
 .navy-link a {
     padding: 0 15px 0 0;
     text-decoration: none !important;
-    color: black;
+    color:white;
 }
 
 /* the dropdown submenus*/
@@ -64,7 +69,7 @@
     border-radius: 5px;
     opacity:0;
     z-index: 10;
-    background: rgba(204, 0, 53, 0.69);
+    background: #e76e7a;
 
     -webkit-transition:opacity 0.3s linear, visibility 0.3s linear;
     -moz-transition:opacity 0.3s linear, visibility 0.3s linear;
@@ -164,11 +169,16 @@
     font-size: 16px;
 }
 
+.side-link a{
+    color:black !important;
+}
+
 .active-link {
     text-decoration: underline !important;
 }
 
 #side-index {
+    position:relative;
     padding:100px 0 0 50px;
     text-decoration: none;
 }
@@ -193,7 +203,7 @@
 
 .picture-section-right {
     position:relative;
-    margin:1% 6% 0 0;
+    margin:1.9% 7% 0 0;
     border-top: solid 1px rgba(39, 32, 34, 0.16);
     padding:5% 0 5% 0;
     z-index:3;
@@ -290,6 +300,15 @@
     color: rgba(204, 0, 53, 0.69);
 }
 
+.title-homepage {
+    font-family: "Noto Sans";
+    font-size: 23px;
+    font-weight: 600;
+    padding: 5% 1% 1% 10%;
+    margin:0;
+    color: rgba(204, 0, 53, 0.69);
+}
+
 
 .subtitle {
     font-family: "Noto Sans";
@@ -298,6 +317,15 @@
     padding: 0 1% 1% 15%;
     margin:0;
     color: rgb(163, 161, 168);
+}
+
+.inside-titles {
+    font-family: "Noto Sans";
+    font-size: 26px;
+    font-weight: 400;
+    padding: 5% 1% 1% 10%;
+    margin:0;
+    color: rgba(47, 0, 13, 0.69);
 }
 
 .tabletitle {
