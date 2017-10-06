@@ -185,13 +185,13 @@
                 <p class="text-content">GOLIT is an adapted version of Conway’s ‘Game of Life’ [add link to glossary].
                     It aims to create a visual representation of how solid cell structures are formed from the binding of SpyTag
                     and SpyCatcher.</p>
-                <ol class="text-content">We attempted to optimise the rate at which cell adhesion occurs in the GOLIT model. For this we
-                    introduced a range of novel approaches in the GOLIT model:
+                <ul class="text-content">We attempted to optimise the rate at which cell adhesion occurs in the GOLIT
+                    model and introduced a range of novel approaches:
                     <br>
                     <li style="margin-left: 40px">Combination of ordinary differential equations for gene expression and cellular automata for spatial analysis</li>
                     <li style="margin-left: 40px">Genetic Algorithm for automated parameter optimization</li>
                     <li style="margin-left: 40px">Experimental data for parameter optimization</li>
-                </ol>
+                </ul>
             </div>
 
             <div class="text-section">
@@ -279,7 +279,15 @@
                 <h2 class="subtitle"><i>Click here to check out our code!</i></h2> <!-- Add link to Github-->
                 <br>
                 <h2 class="title">Results</h2>
-                <p class="text-content">We ran the GOLIT model with initially no cells in the “bound” state for 15 generations.
+                <p class="text-content">
+                    <ul class="text-content">We ran the model with these initial conditions:
+                    <li>50 generations </li>
+                    <li>initially no cells in the </li>
+                    <li></li>
+
+
+
+                    We set the initial conditions for the model We ran the GOLIT model with initially no cells in the “bound” state for 15 generations.
                     For each light intensity tested, we plotted the number of cells vs. time points and the grid obtained after running
                     the model for 15 generations. On the grid the black cells represent "bound" cells and the white cells the "unbound" cells.
                 </p>
@@ -404,30 +412,29 @@
                 rates at which the grids fill up, i.e. rates at which the cells aggregate, for the light intensities tested.
                 As expected, the model for light intensity 18W/cm<sup>2</sup> gives the highest rate of cell adhesion.</p>
 
-                <!-- NOT SURE IF THIS IS NEEDED-->
+                <!-- NOT SURE IF THIS IS NEEDED
                 <img src="../assets/GOLIT/18W:m2_range%20copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:0px">
                 <img src="../assets/GOLIT/35W:m2_range%20.jpg" class="image-content" style="width: 480px; height: 300px; padding-left:0px; padding-right:150px">
                 <img src="../assets/GOLIT/53W:m2_range%20copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:0px">
                 <img src="../assets/GOLIT/70W:m2_range%20copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-left:0px; padding-right:150px">
-
+                -->
             </div>
 
             <div class="text-section">
-                <h1 class="title">Adding Artificial Intelligence to the Model</h1>
-                <p class="text-content">Aim: Optimize the light distribution pattern on the initial grid to allow
-                    the fastest rate of cell aggregation.
+                <h1 class="title">Making the Model smart: incorporating Artificial Intelligence</h1>
+                <p class="text-content">Aim: Optimize the light distribution pattern on the initial grid to allow the
+                    fastest rate of cell aggregation.
                     <br>
-                    <br>We decided to add an innovative twist to our model by incorporating artificial intelligence,
-                    more particularly Genetic Algorithm (GA), to our model. Genetic Algorithms, a type of subsymbolic artificial
-                    agents, adopt the principles of Darwinian evolution to tackle the challenge of parameter
-                    optimization.
+                    <br>We decided to upgrade our model by incorporating artificial intelligence, more particularly
+                    Genetic Algorithm (GA). Genetic Algorithms, a type of subsymbolic artificial agents, adopt the
+                    principles of Darwinian evolution to tackle the challenge of parameter optimization.
                     <br>In the context of GOLIT we are applying a genetic algorithm to optimize the initial grid,
-                    i.e. the grid at time, t=0. In other words, this means that we are generating the initial pattern
-                    of “bound” cells on the grid that will allow the fastest rate of cell adhesion. Given as only
-                    condition, a maximum number of cells to be placed on the initial grid, the model runs a number of
-                    “agents” that generate different patterns according to random probabilities. The genetic algorithm
-                    then selects the “best agent”, i.e. the “agent” showing the pattern that will allow cells to aggregate
-                    fastest.
+                    i.e. the grid at time, t=0. In other words, this means that we are using Artificial Intelligence
+                    to generate the initial pattern of “bound” cells on the grid that will allow the fastest rate of cell
+                    adhesion. The only input arguments given are the maximum number of cells to be placed on the initial
+                    grid. The model then runs a number of “agents” that generate different patterns according to random
+                    probabilities. The genetic algorithm selects the “best agent”, i.e. the “agent” showing the pattern
+                    that will allow cells to aggregate fastest and therefore allow for the most efficient cell aggregation.
                 </p>
 
                 <!-- may be worth adding a diagram here to illustrate this -->
@@ -447,7 +454,7 @@
             </ol>
                 </p>
                 <h1 class="title">Results</h1>
-                <p class="text-content">As described above the genetic algorithm is an autoamted way of optimising the
+                <p class="text-content">As described above the genetic algorithm is an automated way of optimising the
                 conditions of the grid. In our case the dependent variable that we want to optimise is the time it takes
                 to fill up the grid, i.e. the time required for all cells in the culture to bind to each other. The independent
                     variable that affects time is the initial light pattern.
