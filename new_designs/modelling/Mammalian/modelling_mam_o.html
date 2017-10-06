@@ -194,7 +194,7 @@
                 <br>
                 Breakdown of the cellular mechanisms involved in the expression of RFP:
                 <br>
-                <img src="../../assets/Equation%20breakdown.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 150px ">
+                <img src="../../assets/Equation%20breakdown.png" class="image-content-graphs image-content-here" style="width:450px; height:350px; margin-left: 150px ">
                 <br>
                 <p>Legend:
                     <br><b>LACE<sub>TF</sub></b> = Photocleavable (PhoCl) linker attached to the outter membrane of the cells and the Transcription Factor (TF)
@@ -215,7 +215,7 @@
                 <li class="text-section"> 2. Transcription</li>
                 <li class="text-section"> 3. Translation</li> </ol>
 
-            <img src="../../assets/bacterial-modelling-overview.jpg" class="image-content">
+            <img src="../../assets/bacterial-modelling-overview.jpg" class="image-content-graphs">
 
             <p class="text-content" style="margin-top: 0; padding-top:0 ">Our LAME model is inno, where we modelled: The rate kinetics of a system induced with photocleaving.
                 The transport of our TF, which has a dCas9 attached to it, to the nucleus of the cell.
@@ -236,22 +236,22 @@
             </div>
 
             <h1 class="title ">1.) Cleavage of PhoCl linker</h1>
-            <img id="special-image-1" src="../../assets/bacterial-modelling-induction.jpg" class="image-content" style="margin-bottom: 0">
+            <img id="special-image-1" src="../../assets/bacterial-modelling-induction.jpg" class="image-content-graphs" style="margin-bottom: 0">
 
             <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photocleavage and release of the RFP TF in the cytoplasm of the cell
             <br> Location: Outter cell membrane
                 <br>
                 <br>The first step of our simulation is the photocleavage of PhoCl, which results in the release of the RFP TF in the cytoplasm of the cell. Two degradation factors were introduced within our ODEs to account for the hald-life of the RFP TF and the
                 continual transport of TF<sub>C</sub> from the cytoplasm to the nucleus of the cell.</p>
-            <img src="../../assets/TFc.png" class="image-content" style="width:600px; height:100px">
+            <img src="../../assets/TFc.png" class="image-content-graphs" style="width:600px; height:100px">
             <p class="text-content"> The photocleavage is dependent on light intensity (L). The Hill equation is commonly used to
                 fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate
                 the effect different light intensities would have on the rate of photocleavage of the LACE<sub>TF</sub> complex. </p>
 
-            <img src="../../assets/HillMam.png" class="image-content" style="width:350px; height:100px">
+            <img src="../../assets/HillMam.png" class="image-content-graphs">
 
             <h1 class="title">2.) Transcription</h1>
-            <img src="../../assets/bacterial-modelling-transcription.jpg" class="image-content image-content-here">
+            <img src="../../assets/bacterial-modelling-transcription.jpg" class="image-content-graphs image-content-here">
             <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
                 <br>
                 <i>Location: Nucleus</i>
@@ -261,10 +261,10 @@
                 nucleus of the cell to the RFP promoter with the help of dCAS9. Once the TF<sub>c</sub> enters the nucleus of the cell it becomes TF<sub>N</sub>. The rate at which the TF<sub>N</sub> binds to the RFP promoter
                 affects the rate at which transcription takes place. Two degradation factors were introduced t oaccount for the half-life of the mRNA<sub>N</sub> and the transport of the mRNA from the nucleus of the cell
                 to the cytoplasm.</p>
-            <img src="../../assets/MamTranslation.png" class="image-content" style="width: 600px; height: 150px">
+            <img src="../../assets/Mam/Mam_Tran.png" class="image-content-graphs">
 
             <h1 class="title">3.) Translation</h1>
-            <img src="../../assets/bacterial-translation.png" class="image-content image-content-here">
+            <img src="../../assets/bacterial-translation.png" class="image-content-graphs image-content-here">
             <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 3: Translation
                 <br>Location: Cytoplasm</i>
                 <br>
@@ -272,7 +272,7 @@
                 The third step of our simulation is the production of the RFP protein from translation. The change in concentration of the RFP protein is dependent on three main factors. Firstly, the rate at which mRNA is transported from the nucleus to the cytoplasm, this is
                 represented with the letter 'β'. Secondly, the rate of translation and finally the maximum amount of RFP protein a cell can express. A degradation term was introduced to represent the degradation of RFP over time because of dilution due to
                 cell growth and the half-life of the RFP protein. </p>
-            <img src="../../assets/Mam/Mam_Tran.png" class="image-content" style="width: 550px; height:90px">
+            <img src="../../assets/Mam/Mam_Tran.png" class="image-content-graphs">
 
             <div class="text-section">
                 <h1 class="title">Results</h1>
@@ -284,13 +284,13 @@
                 <br>
                 <!-- ADD HYPERLINK-->
             <h2 class="subtitle"> <b><i>Click here to check out our approaches and assumptions! </i></b></h2>
-            <img src="../../assets/Mam/Mam_RK.png" class="image-content" style="width: 800px; height:450px">
+            <img src="../../assets/Mam/Mam_RK.png" class="image-content-graphs" style="width: 800px; height:450px">
             <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1: </i> Rate of Cellular Mechanisms involved in the expression of RFP protein
                 <br>
                 <br>For Figure 1 we decided to induce the photocleavable expression system with a 27 W/cm<sup>2</sup> light intensity.The concentration of the free TF and mRNA in the nucleus appear to be much smaller than that of the other species produced.
                 Therefore, we decided to plot a second figure to evaluate the rates of photocleaving and transcription taking place. </p>
 
-            <img src="../../assets/Mam/Mam_RLS.png" class="image-content" style="width: 750px; height: 500px">
+            <img src="../../assets/Mam/Mam_RLS.png" class="image-content-graphs" style="width: 750px; height: 500px">
             <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 2: </i> Re-scaled plot of Figure 1 to view the rate at which TF is released</p>
 
             <p class="text-content" style="margin-top: 0; padding-top:0"> A rate limiting step in a process is the step that takes the longest amount of time to reach its maximum value, essentially the step that takes the longest time to
@@ -334,7 +334,7 @@
                 before they started to die.</p>
 
             <h2 class="subtitle">Sensitivity Analysis of Light Intensities </h2>
-            <img src="../../assets/Mam/Mam_LI.png" class="image-content" style="width: 800px; height: 450px">
+            <img src="../../assets/Mam/Mam_LI.png" class="image-content-graphs" style="width: 800px; height: 450px">
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 3: </i> Effect of light intensity on the concentration and rate of expression of RFP protein in the cell </p>
             <p class="text-content" style="margin-top: 0; padding-top:0">From Figure 3 it is evident that an increase in the light intensity used to photocleave PhoCl and activate the expression of RFP within the cells corresponds to a direct increase in the concentration of RFP expressed in the cells.</p>
 
@@ -347,7 +347,7 @@
             <p class="text-content">The rate of translation is dependent on the rate at which mRNA is transported to the cytoplasm of the cell. Ideally, we would want a low β value to increase the rate at which the mRNA is transported to the cells cytoplasm. This would increase the rate of translation.</p>
             <h2 class="subtitle">Sensitivity Analysis for b </h2>
 
-            <img src="../../assets/Mam/Mam_SAbeta.png" class="image-content" style="width: 800px; height: 450px">
+            <img src="../../assets/Mam/Mam_SAbeta.png" class="image-content-graphs" style="width: 800px; height: 450px">
             <br>
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5:</i> Effect K<sub>m</sub> has on the rate of intimin expression on the cell surface
                 <br>
@@ -359,7 +359,7 @@
 
             <h2 class="subtitle">Parameter Sampling for K<sub>m</sub></h2>
 
-            <img src="../../assets/Mam/Mam_PSbeta.png" class="image-content" style="width: 800px; height: 450px">
+            <img src="../../assets/Mam/Mam_PSbeta.png" class="image-content-graphs" style="width: 800px; height: 450px">
 
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 6:</i> Effect K<sub>m</sub> has on the rate of intimin expression on the cell surface </p>
 
@@ -371,7 +371,7 @@
                 Therefore, we would want to minimise the value of d<sub>3</sub> to decrease the time it takes for the maximum amount of RFP to be expressed in the cell.</p>
             <h2 class="subtitle">Sensitivity Analysis for d<sub>3</sub> </h2>
 
-            <img src="../../assets/Mam/Mam_SADeg.png" class="image-content" style="width: 800px; height: 450px">
+            <img src="../../assets/Mam/Mam_SADeg.png" class="image-content-graphs" style="width: 800px; height: 450px">
             <br>
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 7:</i> Effect d<sub>3</sub> has on the rate of RFP expression in the cell
                 <br>
@@ -379,7 +379,7 @@
                 presented, however no factors such the origin of protein, size of the protein etc. have been taken into consideration to make the d<sub>3</sub> value case specific. </p>
 
             <h2 class="subtitle">Parameter Sampling for d<sub>3</sub></h2>
-            <img src="../../assets/Mam/Mam_PSDeg.png" class="image-content" style="width: 800px; height: 450px">
+            <img src="../../assets/Mam/Mam_PSDeg.png" class="image-content-graphs" style="width: 800px; height: 450px">
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8:</i> Effect d<sub>3</sub> has on the rate of RFP expression in the cell
                 <br>
                 <br>
@@ -393,13 +393,13 @@
                 deactivating our light induced system could result in the expression of a larger concentration of RFP at a faster rate in the cells.
                 <br>
                 <br>We first ran a control simulation, where we introduced one long pulse of 7 hours of light, to ensure we received a curved response that would simulate the activation and deactivation of our cellular mechanisms for a defined period of time. </p>
-            <img src="../../assets/Mam/Mam_1pulse.png" class="image-content" style="width:950px; height: 450px">
+            <img src="../../assets/Mam/Mam_1pulse.png" class="image-content-graphs" style="width:950px; height: 450px">
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 9:</i> Effect one pulse has on the rate kinetics on the expression of intimin
                 <br>
                 <br>From Figure 9 it is evident the behaviour of all the species produced after each step involved in the expression of intimin is represented as a dumb bell shaped curve. This is justifiable, as when the light is turned off we expect the rate of product production to become smaller than the rate of product degradation. Therefore, as time passes the concentration of each product from each step is expected to decrease, until eventually all the species from the product produced degrade.
                 <br>
                 <br> We then wanted to evaluate the effect pulsing for periods of 2 hours would have on the expression of intimin on the surface of the cell.</p>
-            <img src="../../assets/Mam/Mam_3pulses.png" class="image-content image-content-here" style="width: 700px; height: 500px">
+            <img src="../../assets/Mam/Mam_3pulses.png" class="image-content-graphs image-content-here" style="width: 700px; height: 500px">
             <p class="text-content"><i>Figure 10:</i> Effect pulsing light in 2 hour intervals has on the intimin surface expression
                 <br>
                 <br>From Figure 10 we discovered that if we pulse light on the cells for a period of 4 hours three times within 24 hours, we experience more than a 10-fold increase in the concentration of intimin expressed on the surface of the cells.
@@ -428,9 +428,9 @@
                 <h2 class="subtitle" style="margin-top: 25px; color: rgba(204, 0, 53, 0.69)">Running the model with optimised paramters</h2>
                 <p class="text-content"> We ran our rate kinetics model with our newly optimised parameters and determined that with our optimised parameters a larger concentration of intimin was transported to the surface of the cell. However, the same amount of time was taken for the intimin expression rate to plateau. Therefore, this
                     means that although the concnetration of intimin expressed on the surface of the cell was optimised this step prevails to be the rate-limiting step in the netwrok of cellular mechanisms invovled.</p>
-                <img src="../../assets/Mam/Mam_Tran.png" class="image-content" style="width: 750px; height:500px">
+                <img src="../../assets/Mam/Mam_Tran.png" class="image-content-graphs" style="width: 750px; height:500px">
                 <p class="text-content"><i>Figure 11: </i> Original rate kinetics for the transport of intimin to the cell surface </p>
-                <img src="../../assets/Mam/Mam_RKOpt.png" class="image-content" style="width: 750px; height:500px">
+                <img src="../../assets/Mam/Mam_RKOpt.png" class="image-content-graphs" style="width: 750px; height:500px">
                 <p class="text-content"><i>Figure 12: </i> Optimised rate kinetics for the transport of intimin to the cell surface </p>
 
             </div>
@@ -440,7 +440,7 @@
                 <p class="text-content"> We ran a  Cost Analysis to ensure our LIT optogenetic tool was an affordable technology current labs could use to replace alternative technologies with.
                     We focused on identifying the main operational costs a user would incur, where we determined the most critical ones were: the light intensity they used to activate the E.coli cellular mechanism; and the frequency of light pulsing.
                     We created a function in Python that took costs incurred for both methods into consideration, where we attempted to identify the most cost-efficient operational conditions for our tool.</p>
-                <img src="../../assets/Mam/Mam_CostLI.png" class="image-content" style="width: 750px; height:500px">
+                <img src="../../assets/Mam/Mam_CostLI.png" class="image-content-graphs" style="width: 750px; height:500px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Effect light intensity has on the cost for the operation of the optogenetic tool
                     <br>
 
@@ -448,13 +448,13 @@
                     proportionally to the light intensity at which our optogenetic tool is operated at.
                     <br>
                     <br> We also decided to analyse the impact light pulsing would have on the overall process costs.</p>
-                <img src="../../assets/Mam/Mam_CostPul.png" class="image-content" style="width: 800px; height:500px">
+                <img src="../../assets/Mam/Mam_CostPul.png" class="image-content-graphs" style="width: 800px; height:500px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 14: </i> Effect of pulsing on the cost for the operation of the optogenetic tool
                     <br>
                     <br>The simulation in Figure 14 was also run for a period of 2 hours, where it was assumed a constant light intensity of 40 W/cm<sub>2</sub> was used. Similarly to Figure 13, we see that an increase in the pulse duration results in a proportional increase in the cost of operation.
                 <p class="text-content">We then decided to plot both the costs incurred for different light intensities and the pulsing durations on the same graph to evaluate their synergistic effect.</p>
 
-                <img src="../../assets/Mam/Mam_CostOpt.png" class="image-content" style="width:800px; height:500px">
+                <img src="../../assets/Mam/Mam_CostOpt.png" class="image-content-graphs" style="width:800px; height:500px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 15: </i> Comparison of the effects of pulsing and light intensity on the overall cost.
                     <br>
                     <br> We decided to define the most optimum operating conditions for our optogenetic tool as those at which both lines intersect. Beyond the point of intersection it was evident that the operational costs
