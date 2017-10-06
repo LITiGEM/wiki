@@ -188,14 +188,16 @@
         <div style="float: right !important" class="col-sm-10">
 
             <h1 class="title">‘LAME (Light Activated Mammalian Expression) From light to organs’</h1>
-            <h2 class="subtitle"> A mathematical model of how HEK 293 cells are guided to form structured tissues</h2>
+            <h2 class="subtitle"> A mathematical model to direct/optimize how HEK 293 cells are induced, using light, to grow to form structured tissues</h2>
 
             <h1 class="title">The Science behind LAME</h1>
 
-            <ol class="text-content"> LAME models the light activated expression of RFP proteins within genetically engineered HEK 293 cells.
-                When light shines onto our HEK 293 cells the photocleavable linker, which anchors the RFP transcription factor (TF) onto the outer membrane of the cell, becomes cleaved. The TF is attached to a dCas9,
-                therefore, once the photocleavage occurs the TF is guided to the RFP promoter in the cell nucleus with the help of the dCas9. This mechanism could be adapted and used to induce the production of the surface proteins that cause
-                mammalian cells to adhere to each other, cadherin, upon demand. As such, our technology could be used to guide cells with light to create highly specific ccellular tissues.
+            <ol class="text-content"> LAME models the light activated expression of Red Fluorescent Proteins (RFP) within genetically engineered HEK 293 cells. This mechanism is
+                important because it allows for precise control and direction of protein expression.
+                On the outer membrane of our HEK 293 cells there is an immobilised surface protein that has a photocleavable linker attached to
+                it. The photocleavable linker anchors the RFP transcription factor (TF). When we shine light onto our HEK 293 cells the photocleavable linker becomes cleaved and the RFP TF is released into the cytoplasm of the cell. The TF is attached to a dCas9,
+                that guides the RFP TF to the RFP promoter in the cell nucleus. This mechanism could be adapted to induce the production of the surface protein cadherin to cause
+                mammalian cells to adhere to each other. As such, our technology and model could be used to guide cells with light to create highly specific mammalian tissues.
                 <br>
                 <br>
                 Breakdown of the cellular mechanisms involved in the expression of RFP:
@@ -203,7 +205,7 @@
                 <img src="../../assets/Equation%20breakdown.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 150px ">
                 <br>
                 <p>Legend:
-                    <br><b>LACE<sub>TF</sub></b> = Photocleavable (PhoCl) linker attached to the outter membrane of the cells and the TF
+                    <br><b>LACE<sub>TF</sub></b> = Photocleavable (PhoCl) linker attached to the outer membrane of the cells and the TF
                     <br><b>LACE</b> = Protein on cells' outer membrane attached to a part of the cleaved PhoCl linker
                     <br><b>TF<sub>C</sub></b> = Free TF in the cytoplasm of the cell
                     <br><b>TF<sub>N</sub></b> = Free TF in the nucleus of the cell
@@ -214,7 +216,7 @@
                     <br><b>P<sub>RFP</sub></b> = RFP translated protein
                 </p>
                 <br>
-                In order to simplify the cellular mechanisms involved in RFP expression, we decided to divide our model into three main steps:
+                In order to tackle the cellular mechanisms involved in RFP expression, we decided to divide our model into three main steps:
                 <br>
                 <br>
                 <li class="text-section"> 1. Cleavage of Photocleavable (PhoCl) Linker </li>
@@ -234,7 +236,7 @@
                     <h2 class="title" style="padding-left: 0">Model Aims</h2>
                     <ul>
                         <li>Determine the rate limiting cellular mechanism</li>
-                        <li>Optimize the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approach </li>
+                        <li>Optimize the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Parameter Sampling) approach </li>
                         <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test</li>
                         <li>Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</li>
                     </ul>
@@ -249,7 +251,7 @@
             <br> Location: Outer cell membrane
                 <br>
                 <br>The first step of our simulation is the photocleavage of PhoCl, which results in the release of the RFP TF in the cytoplasm of the cell. We introduced two degradation factors within our ODEs, in order to account for the half-life of the RFP TF and the
-                continual transport of TF from the cytoplasm to the nucleus of the cell.</p>
+                continual transport of the RFP TF from the cytoplasm to the nucleus of the cell.</p>
             <img src="../../assets/Mam/Mam_Eq1.png" class="image-content" style="width:600px; height:100px">
             <p class="text-content"> The photocleavage is dependent on light intensity (L). The Hill equation is commonly used to
                 fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate
@@ -264,8 +266,8 @@
                 <i>Location: Nucleus</i>
                 <br>
                 <br> The second step of our simulation is the production of mRNA from transcription.
-                In order for transcription to take place the TF needs to be transported from the cytoplasm of the cell to the nucleus. The TF is guided into the
-                nucleus of the cell to the RFP promoter with the help of dCAS9. The rate at which the TF enters the nucleus of the cell and binds to the RFP promoter
+                In order for transcription to take place the RFP TF needs to be transported from the cytoplasm of the cell to the nucleus. The RFP TF is guided into the
+                nucleus of the cell to the RFP promoter with the help of dCAS9. The rate at which the RFP TF enters the nucleus of the cell and binds to the RFP promoter
                 affects the rate at which transcription takes place. We incorporated two degradation factors to account for the half-life of the mRNA and the transport of the mRNA from the nucleus of the cell
                 to the cytoplasm.</p>
             <img src="../../assets/Mam/Mam_Eq3.png" class="image-content" style="width: 600px; height: 150px">
@@ -294,7 +296,7 @@
             <img src="../../assets/Mam/Mam_RK.png" class="image-content" style="width: 800px; height:450px">
             <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1: </i> Demonstrates the rate of the cellular mechanisms involved in the expression of RFP protein
                 <br>
-                <br>In Figure 1 the photocleavable expression system is induced with a 27 W/cm<sup>2</sup> light intensity. The concentration of the free TF and mRNA in the nucleus appear to be much smaller than that of the RFP protein.
+                <br>In Figure 1 the photocleavable expression system is induced with a 27 W/cm<sup>2</sup> light intensity. The concentration of the free RFP TF and mRNA in the nucleus appear to be much smaller than that of the RFP protein.
                 Therefore, we decided to plot a second figure, in which we re-scaled the graph, in order to evaluate the rate of photocleaving and transcription. </p>
 
             <img src="../../assets/Mam/Mam_RLS.png" class="image-content" style="width: 750px; height: 500px">
@@ -331,7 +333,7 @@
 
             <h2 class="title">Optimizing Light Intensity</h2>
 
-            <p class="text-content">Our LAME model is initiated with the photocleavage of a PhoCl Linker that leads to the release of the TF in the cells cytoplasm. Therefore, we thought it would be interesting to evaluate the effect
+            <p class="text-content">Our LAME model is initiated with the photocleavage of a PhoCl Linker that leads to the release of the RFP TF in the cells cytoplasm. Therefore, we thought it would be interesting to evaluate the effect
                 different light intensities had on the concentration and rates of expression of RFP protein in the cell. The values we selected to test fell within the range of 0 W/cm<sup>2</sup> and
                 54 W/cm<sup>2</sup>, where 0 W/cm<sup>2</sup> represented our system in its off state and 54 W/cm<sup>2</sup> represented the maximum light intensity mammalian cells can withstand
                 before they started to die.</p>
@@ -344,7 +346,7 @@
             <h1 class="title">Optimizing the parameters in the rate-limiting step</h1>
 
             <p class="text-content">We decided to optimize the rate-limiting parameters present in the ODE which describes the translation of RFP protein in the cell. The two rate-limiting parameters identified were: β (the rate of transport of mRNA from the nucleus to the cell cytoplasm) and d<sub>3</sub> (the degradation rate of the RFP protein).
-                We decided to optimise the values for each parameter by using two approaches, a Sensitivity Analysis and Parameter Sampling. The maximum and minimum values that could be assigned to each parameter were determined from literature. </p>
+                We decided to optimize the values for each parameter by using two approaches, a Sensitivity Analysis and Parameter Sampling. The maximum and minimum values that could be assigned to each parameter were determined from literature. </p>
 
             <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimizing the rate at which mRNA is transported to the cell nucleus (β)</h2>
             <p class="text-content">The rate of translation is dependent on the rate at which mRNA is transported from the nucleus to the cytoplasm of the cell. Ideally, we would want a high β value to increase the rate at which the mRNA is transported to the cytoplasm of the cell. This would increase the rate of translation.</p>
@@ -356,7 +358,7 @@
                 <br>
 
             <p class="text-content" style="margin-top: 0; padding-top:0"> Sensitivity Analyses determine the magnitude of the effect a particular parameter has on the output of a model. Therefore, we first decided to run a Sensitivity Analysis to determine/ validate that β has a large contribution
-            on the concentration of ΡΦΠ expressed in the cells. In order to do this a range of β values, from other similar cellular mechanisms, were inputted into our model. From Figure 5 we determined the optimum β value to
+            on the concentration of RFP expressed in the cells. In order to do this a range of β values, from other similar cellular mechanisms, were inputted into our model. From Figure 5 we determined the optimum β value to
             operate our cellular mechanism at is 2.20Ε+00 1/s. We therefore, decided to conduct Parameter Sampling to ensure the value we select
             to optimize our β to can realistically be achieved in our cellular mechanism.
 
@@ -366,11 +368,11 @@
 
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 6:</i> Evaluates the effect β has on the rate of RFP expression in the cytoplasm of the cell with the use of Parameter Sampling </p>
 
-            <p class="text-content" style="margin-top: 0; padding-top:0">Parameter Sampling allowed us to take a series of factors into consideration when optimising the value of β.
+            <p class="text-content" style="margin-top: 0; padding-top:0">Parameter Sampling allowed us to take a series of factors into consideration when optimizing the value of β.
                 The values of β represented in figure 6 are more realistic and significantly lower than
                 the ones obtained from the Sensitivity Analysis. This is because a series of factors were taken into consideration when
                 creating a normal distribution of the possible β values for our technology. These factors include: the size,
-                origin and operational pH the cellular mechanism from which the data was sourced form. From figure 6 we determined the optimum
+                origin and operational pH of the cellular mechanism from which the data was sourced form. From figure 6 we determined the optimum
                 β value that would result in the highest concentration of RFP expressed in our cells was 1.3E-03 1/s.</p>
             <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%"> <i>Interested in the steps and weighting system we used for our Parameter Sampling? Click away</i></h2>
 
@@ -383,8 +385,8 @@
             <br>
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 7:</i> Evaluates the effect d<sub>3</sub> has on the rate of RFP expression in the cell with the use of a Sensitivity Analysis
                 <br>
-                <br> In Figure 7 t is evident that from the Sensitivity Analysis d<sub>3</sub>  is a large contributor to the final concentration of
-                RFP that can be expressed in the cells. Therefore, we decided to progress and carry out a Parameter Analysis in order to optmise
+                <br> In Figure 7 it is evident that from the Sensitivity Analysis d<sub>3</sub>  is a large contributor to the final concentration of
+                RFP that can be expressed in the cells. Therefore, we decided to progress and carry out a Parameter Analysis in order to optmize
                 our d<sub>3</sub> value.</p></p>
 
             <h2 class="subtitle">Parameter Sampling for d<sub>3</sub></h2>
@@ -392,8 +394,8 @@
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8:</i> Evaluates the effect d<sub>3</sub> has on the rate of RFP expression in the cell with the use of Parameter Sampling
                 <br>
                 <br>
-                Parameter Sampling allowed us to take a series of factors into consideration when optimising the value of d<sub>3</sub>.
-                From figure 8 we determined the optimum d<sub>3</sub> value to maximise the concentration of RFP expressed in the
+                Parameter Sampling allowed us to take a series of factors into consideration when optimizing the value of d<sub>3</sub>.
+                From Figure 8 we determined the optimum d<sub>3</sub> value to maximize the concentration of RFP expressed in the
                 cells is 2.2E-05 1/s.</p>
 
             <h2 class="subtitle"> <b><i>Interested in seeing what these factors are and how Parameter Sampling is carried out? Click away </i></b></h2>
@@ -408,11 +410,11 @@
             <img src="../../assets/Mam/Mam_1pulse.png" class="image-content" style="width:950px; height: 450px">
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 9:</i> Evaluates the effect one long pulse has on the rate kinetics of the expression of RFP in the cell cytoplasm
                 <br>
-                <br>From Figure 9 it is evident the behavior of all the species produced after each step involved in the expression of RFP are represented in a dumb bell shaped curve. This is justifiable, as when the light is turned off we expect the rate of product production to become smaller than the rate of product degradation. Therefore, as time passes the concentration of each product from each step is expected to decrease.
+                <br>From Figure 9 it is evident the behavior of all the species produced, after each step involved in the expression of RFP, are represented in a dumb bell shaped curve. This is justifiable, as when the light is turned off we expect the rate of product production to become smaller than the rate of product degradation. Therefore, as time passes the concentration of each product from each step is expected to decrease.
                 <br>
                 <br> We then wanted to evaluate the effect pulsing, for periods of 2 hours, would have on the rate kinetics involved in the expression of RFP in the cytoplasm of the cell.</p>
             <img src="../../assets/Mam/Mam_3pulses.png" class="image-content image-content-here" style="width: 700px; height: 500px">
-            <p class="text-content"><i>Figure 10:</i> Evaluates the effect pulsing light in 2 hour intervals has on the rate kinetics involved in the rate and concentration of RFP expressed in the cytoplasm of the cell
+            <p class="text-content"><i>Figure 10:</i> Evaluates the effect pulsing light, in 2-hour intervals, has on the rate kinetics involved in the rate and concentration of RFP expressed in the cytoplasm of the cell
                 <br>
                 <br>From Figure 10 we discovered that if we pulse light on the cells for a period of 2 hours over a 24-hour period, we experienced a small decrease (14% decrease) in the concentration of RFP expressed in the cytoplasm of the cells.
                 <br>
@@ -420,10 +422,10 @@
 
             <div class="text-section">
                 <h1 class="title">Optimized conditions </h1>
-                <p class="text-content"> The biggest increase in the rate of RFP expression in the cytoplasm of the cells occurs when the value of 'β’ increases and the values of ‘d<sub>3</sub>’ decreases. This is something we expected, as the larger the value of β the faster the speed at which mRNA is transported to the cytoplasm of the cell from the nucleus and therefore the faster the rate of translation. In addition, the lower the d<sub>3</sub> value the slower the degradation of mRNA in the cell. Thus, the combination of both of these phenomena results in a faster and greater concentration of RFP expressed in the cytoplasm of the cell.</p>
+                <p class="text-content"> The biggest increase in the rate of RFP expression in the cytoplasm of the cells occurs when the value of 'β’ increases and the values of ‘d<sub>3</sub>’ decreases. This is something we expected, as the larger the value of β the faster the speed at which mRNA is transported to the cytoplasm of the cell from the nucleus and therefore the faster the rate of translation. In addition, the lower the d<sub>3</sub> value, the slower the degradation of mRNA in the cell. Thus, the combination of both of these phenomena results in a faster and greater concentration of RFP expressed in the cytoplasm of the cell.</p>
                 <table style="width: 50%; margin-left: 150px">
                     <tr>
-                        <th class="text-content" style="padding: 0">Optimized Paramter</th>
+                        <th class="text-content" style="padding: 0">Optimized Parameter</th>
                         <th class="text-content" style="padding: 0">Value </th>
                     </tr>
                     <tr>
@@ -463,7 +465,7 @@
                 <br>
                 <br>
                     We decided to plot both the costs incurred for different light intensities and the pulsing durations on the same graph to evaluate their synergistic effect.
-                    The most optimum operating conditions for our optogenetic tool were defined as those at which both lines intersect. Beyond the point of intersection it was evident that the operational costs
+                    The most optimum operating conditions for our optogenetic tool were defined as those at which the lines intersect. Beyond the point of intersection, it was evident that the operational costs
                     for the optogenetic tool were too high. Below the intersection point it was evident that the activity of the HEK 293 cell adhesion mechanism would
                     be too slow, and as one of the biggest selling points of our technology is its rapidity we decided it would not be practical to
                     operate at such a slow rate.
