@@ -179,11 +179,10 @@
         <!-- The side navbar -->
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Methods</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Assumptions</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Species</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section4">Paramters</a></li>
-                <li id="step5" class="navy-link side-link"><a href="#section5">Bibliography</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#section1">Overview</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Sensitivity Analysis</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Parameter Sampling</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section4">Bibliography</a></li>
             </ul>
         </nav>
 
@@ -195,64 +194,78 @@
                 <h1 class="title">Cracking the Model</h1>
                 <h2 class="subtitle">Methods of parameter optimisation</h2>
 
-                <p class="text-content"> Mathematical Modelling describes complex biological system with mathematical equations and concepts. Setting up the initial conditions in the model is not that straight forward. If no experimental data is yet available, reasonable assumptions based on literature, logic and quantitative analysis need to be made. We believe that the initial assumptions made are crucial to crack the model.
-                    Once, established the parameters need to constantly be optimised with experimental data and/or literature data in order to fit reality to its maximum. Parameter optimisation adds all the wieght to a model's credibility, this is why we decidedto approach this in 2 ways: Sensitivity Analysis and Paramter Sampling.
+                <p class="text-content"> Mathematical Modelling describes complex biological systems with mathematical
+                    equations and concepts. Setting up the initial conditions in the model is not that straight forward.
+                    If no experimental data is available, reasonable assumptions based on literature, logic and
+                    quantitative analysis need to be made. We believe that the initial assumptions made are crucial
+                    to crack the model. Once, established the parameters need to constantly be optimised with experimental
+                    data and/or literature data in order to fit reality to its maximum. Parameter optimisation adds all
+                    the weight to a model's credibility, this is why we decided to approach this in 2 ways:
+                    Sensitivity Analysis and Parameter Sampling.
                     <br>
-                    <br>Scroll down to find out more! </p>
+                    <h2 class="linktitle">Scroll down to find out more! </p>
             </div>
 
             <div class="text-section">
-                <h2 class="subtitle">Sensitivity Analysis</h2>
+                <h2 class="title">Sensitivity Analysis</h2>
 
-                <p class="text-content">Sensitivity Analysis is conventionally used for parameter optimisation. A range of independent variables are tested in this technique and their impact on the dependent variable is evaluated.</p>
+                <p class="text-content">Sensitivity Analysis is a conventionally used method for parameter optimisation.
+                    A range of independent variables is tested in this technique and their impact on the dependent variable is evaluated.
+                    In our case, we  want to optimise the impact specific values will have on the rate limiting step of the cellular mechanism,
+                    So we are evaluating a range of values and analysing which ones optimise the proces. We applied this method of parameter optimisation to
+                    the LEGIT and the LAME models.</p>
 
                 <h2 class="subtitle">Method</h2>
                     <ol class="text-content" style="width: 100%">
-                        <li>Identify the independent variables to be optimised </li>
-                        <li>Obtain ranges of values to be tested from literature</li>
-                        <li>Run the model and plot the graphs with the range of tested values and identify the optimal condition</li>
-                        <li>Re-run the initial model to check how the optimised parameters affected the rate limiting step, i.e. determine if the optimised step is prevailed to be the rate limiting step in the overall cellular mechanism</li>
-                        <li>Determine the areas in which research could be performed to optimise the parameters (Wet Lab contribution)</li>
+                        <li style="margin-left: 20px">Identify the dependent variable to be optimised (the rate limiting step in our process)</li>
+                        <li style="margin-left: 20px">Identify the independent variables that have an impact on this step</li>
+                        <li style="margin-left: 20px">From literature search/ experimental data, obtain a range of values to be tested for each independent variable</li>
+                        <li style="margin-left: 20px">Run the model for the range of values tested and identify the optimal condition for the rate limiting step</li>
+                        <li style="margin-left: 20px">Re-run the initial model to evaluate the impact of the optimised parameters on the overall process, i.e. to determine if the optimised step is prevailed the rate limiting step in the overall cellular mechanism</li>
+                        <li style="margin-left: 20px">Determine the areas in which research could be performed to further optimise the parameters (Wet Lab contribution)</li>
                     </ol>
 
-
-                <h2 class="subtitle">Sensitivity Analysis method applied to LEGIT model</h2>
-                <p class="text-content">
-                    Assessing the impact specific independent variables have on the rate of intimin transport (dependent variable)
-                    <br>The equation below describes the rate of intimin production in terms of of K<sub>m</sub> and V<sub>max</sub></p>
-
-                <div id="show1">
-                        <h2 class="tabletitle"></h2>
+                <div id="show1" class="text-section">
+                    <p><i class="down"  "></i> </p>
+                        <h2 class="tabletitle">Sensitivity Analysis method applied to LEGIT model</h2>
                     </div>
                     <div id="hide1">
-                        <img src="../../assets/modellingMethods/sensitivityAnalysisEqu.png" style="width: 750px; height:700px">
+                        <p class="text-content" style="margin-left: 20px; padding:5px">
+                            Given that transport of intimin to the surface of the E.coli cells is the rate
+                            limiting step in the overall process, we are rewriting this ODE in order to simplify
+                            the Sensitivity Analysis on this step. </p>
+                        <img src="../../assets/modellingMethods/sensitivityAnalysisEqu.png" style="width: 700px; height:700px; margin-top:10px">
                     </div>
                 </div>
 
-                <h2 class="subtitle">Sensitivity Analysis method applied to LAME model</h2>
-                <p class="text-content">Assessing the impact of the nuclear export of transcript and the rate of GFP degradation on the overall rate of GFP translation. </p>
-
 
             <div class="text-section">
-                <h2 class="subtitle">Parameter Sampling</h2>
-                <p class="text-content">Parameter sampling (ensemble modelling), is a method of parameter optimisation, which relies on the random sampling of parameter values within a specified range. A probability density function (PDF) determines the distribution of the continuous random variables evaluated in the function. Parameter sampling considers biological noise, making it a more realistic representation of the behaviour of a biological system.</p>
+                <h2 class="title">Parameter Sampling</h2>
+                <p class="text-content">Parameter sampling, is another technique used to tackle the issue of uncertain and incomplete knowledge of parameter values.
+                    It is a method of parameter optimisation, which relies on the random sampling of parameter values within a specified range.
+                    A probability density function (PDF) determines the distribution of the continuous random variables evaluated in the function.
+                    Parameter sampling considers biological noise, making it a more realistic representation of the behaviour of a biological system.</p>
+
                 <h2 class="subtitle">Method</h2>
                     <ol class="text-content" style="width: 100%">
-                        <li>Identify the parameters to be optimised</li>
-                        <li>Collect raw data from literature</li>
-                        <li>Process raw data by assigning weights to data depending on the similarity to the to-be-optimised parameter</li>
-                        <li>Generate probability densitiy functions (pdf); input the sample size, standard deviation and weighted mean</li>
+                        <li style="margin-left: 20px">Identify the dependent variable to be optimised (the rate limiting step in our process)</li>
+                        <li style="margin-left: 20px">Identify the independent variables that have an impact on the step we are trying to optimise</li>
+                        <li style="margin-left: 20px">Collect raw data from literature</li>
+                        <li style="margin-left: 20px">Process raw data by assigning weights to the values depending on the similarity to the to-be-optimised parameter</li>
+                        <li style="margin-left: 20px">Calculate the weighted mean for all the optimised parameters</li>
+                        <li style="margin-left: 20px">Generate probability densitiy functions (pdf);input the sample size, standard deviation and weighted mean</li>
                     </ol>
 
                 <h2 class="subtitle">LEGIT model</h2>
-                <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of transport of intimin. For this the values of K<sub>m</sub> and V<sub>max</sub> are evaluated. </p>
+                <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of
+                    transport of intimin. For this the values of K<sub>m</sub> and V<sub>max</sub> are evaluated. </p>
 
                         <!-- add the tree diagram-->
 
                     <ul class="text-content" style="width: 100%"> Conditions for intimin
-                        <li>Size: 94 kDa </li>
-                        <li>Optimal pH conditions: 7 </li>
-                        <li>Native organism: E.coli </li>
+                        <li style="margin-left: 20px">Size: 94 kDa </li>
+                        <li style="margin-left: 20px">Optimal pH conditions: 7 </li>
+                        <li style="margin-left: 20px">Native organism: E.coli </li>
                     </ul>
 
                 <p class="text-content" style="padding-top: 0">Weighted mean of K<sub>m</sub>: 0.0147 uM</p>
@@ -269,10 +282,10 @@
 
                 <!-- add the tree diagram-->
 
-                <ul class="text-content" style="width: 100%"> Conditions for the GFP protein
-                    <li>Size: 27.9 kDa </li>
-                    <li>Location of protein: Cytoplasm</li>
-                    <li>Native organism: CHO cells </li>
+                <ul class="text-content" style="width: 100%"> Conditions for the RFP protein
+                    <li style="margin-left: 20px">Size: 27.9 kDa </li>
+                    <li style="margin-left: 20px">Location of protein: Cytoplasm</li>
+                    <li style="margin-left: 20px">Native organism: CHO cells </li>
                 </ul>
 
                 <p class="text-content" style="padding-top: 0">Weighted mean of rate of nuclear export: 1.43 x 10<sup>-4</sup> s<sup>-1</sup></p>
@@ -285,96 +298,22 @@
             </div>
 
 
-            <div class="text-section">
-
-                <h2 class="subtitle">LAME MODEL</h2>
-                <ol class="text-content">
-                    <li>Mass action kinetics</li>
-                    <li>The reaction is taking place in a petri dish </li>
-                    <li>The same light intensity reaches every cell (thus they are all activated at the same time with the same light intensity)</li>
-                    <li>All cells are at their exponential growth phase </li>
-                    <li>PhoCl always cleaves when exposed to violet light (400 nm) </li>
-                    <li>LACE (transmembrane protein, photocleavable linker and the transcription factor) are constitutively expressed</li>
-                    <li>The cells are not going through the cell cycle when they are induced for the photocleavage of p65 (As during the cell cycle eukaryotic cells double the size of their nucleus)</li>
-
-                </ol>
-                <h2 class="subtitle">GOLIT MODEL</h2>
-                <h2 class="subtitle">OptoFlux MODEL</h2>
-
-            </div>
-
-            <div class="text-section">
-                <h2 class="subtitle">Initial Assumptions</h2>
-                <p class="text-content">Set of assumptions made for initial conditions to set up the models </p>
-                <!-- Add paragraph-->
-
-                <div class="row">
-                    <div id="show1">
-                        <h2 class="tabletitle">LEGIT model</h2>
-                    </div>
-
-                    <div id="hide1">
-                        <img src="../../assets/modellingMethods/Parameter.png" style="width: 750px; height: 1000px">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div id="show1">
-                        <h2 class="tabletitle">LAME model</h2>
-                    </div>
-
-                    <div id="hide1">
-                        <img src="../../assets/modellingMethods/assumption1.png" style="width: 700px; height:1000px; margin-bottom:0">
-                        <img src="../../assets/modellingMethods/assumption2.png" style="width: 700px; height:600px; margin-top:0">
-                    </div>
-                </div>
-            </div>
-
-
                 <div class="text-section">
-                    <!-- this section nneds to be fixed -->
-                    <div class="row">
-                        <div id="show1">
-                            <h2 class="tabletitle">Species</h2>
-                        </div>
 
-                        <div id="hide1">
-                            <p class="subtitle">LEGIT model</p>
-                            <img src="../../assets/species.png" style="width:600px; height:300px">
-                            <p class="subtitle">LAME model</p>
-                            <img src="../../assets/modellingMethods/speciesMamm.png" style="width:600px; height:300px">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div id="show1">
-                            <h2 class="tabletitle">Parameters</h2>
-                        </div>
-
-                        <div id="hide1">
-                            <p class="subtitle">LEGIT model</p>
-                            <img src="../../assets/paramters.png" style="width:600px; height:600px">
-                            <p class="subtitle">LAME model</p>
-                            <img src="../../assets/modellingMethods/parameterMamm.png" style="width:650px; height:500px">
-                        </div>
-                    </div>
-
-                    <div class="text-section">
-
-                        <h1 class="title">Selecting our Software</h1>
-                        <p class="text-content"> This summer we decided to run our models on two different softwares: MATLAB and Python. Both are high level languages that allowed us to create robust simulations. </p>
-
-                        <p class="text-content"> Upon starting iGEM, everyone on the modelling team wanted to learn a new programming language. Python’s versatile applications and the ability to import packages that other programmers have developed make it easy to get started with new projects. Moreover, since Python is an open source software it is relatively easy to find resources online to help troubleshoot our codes. Since Python is a high-level language we didn’t require a lot of training to become familiar with the language. We organised a couple of tutorial sessions with our iGEM advisers and then jumped straight into working with it. </p>
-
-                        <p class="text-content"> We also decided to use MATLAB for our models, as we were already familiar with this language from our engineering degrees. MATLAB is a powerful language with a very large built-in database of algorithms for image processing. This was particularly useful for the adaptation of the Game of Life. </p>
-
+                        <h1 class="title">Selecting our Programming Languages </h1>
+                        <p class="text-content"> This summer we decided to run our models on two different programming languages:
+                            MATLAB and Python. Both are high level languages that allowed us to create robust simulations.
+                            Upon starting iGEM, everyone on the modelling team wanted to learn a new programming language.
+                            Python is an open source software and it is relatively easy to find resources online to help
+                            troubleshoot our codes. We also decided to use MATLAB for our models, as we were already familiar
+                            with this language from our engineering degrees. </p>
                     </div>
 
 
 
             <div class="text-section">
-                <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69)">Bibliography</h2>
-                <ol class="text-content">
+                <h2 class="title" style="color:rgba(204, 0, 53, 0.69)">Bibliography</h2>
+                <ol class="text-biblio">
                     <li>Thereza, C., Marina, I., Luciana.Cambricoli, d. and Olivia, C. (2004). Expression of green fluorescent protein (GFPuv) in Escherichia coli DH5-a, under different growth conditions. African Journal of Biotechnology, 3(1), pp.105-111.</li>
                     <li>Wlab.ethz.ch. (2017). Cell Surface Protein Atlas. [online] Available at: http://wlab.ethz.ch/cspa/#abstract [Accessed 4 Sep. 2017].</li>
                     <li>Sciencedirect.com. (2017). Membrane integration of E. coli model membrane proteins - ScienceDirect. [online] Available at: http://www.sciencedirect.com/science/article/pii/S0167488904000813 [Accessed 4 Sep. 2017].</li>
