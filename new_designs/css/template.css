@@ -193,6 +193,13 @@ body {
     overflow: auto;
 }
 
+.image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+
+}
+
 .picture-section-left {
     position:relative;
     margin:1% 0 0 6%;
