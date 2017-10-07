@@ -188,152 +188,153 @@
 
         <div style="float: right !important" class="col-sm-10">
 
-            <h1 class="title">‘OptoFlux: Optimizing ’</h1>
-            <h2 class="subtitle"> A mathematical model to guide E. coli cells to form structures</h2>
+            <h1 class="title">‘OptoFlux: Making designing a breeze’</h1>
+            <h2 class="subtitle"> A mathematical model that optimizes object dimensions to maximize their productivity</h2>
 
-            <h1 class="title">The Science behind LEGIT</h1>
+            <h1 class="title">The Science behind the LIT lightbulb</h1>
 
-            <ol class="text-content"> LEGIT is a mathematical model that determines the conditions required for optimal and rapid
-                light activated expression of the protein intimin. Intimin is a protein expressed on the surface of our genetically
-                engineered E. coli cells. It is used as an anchor onto which the binding partners, SpyTag and SpyCatcher can fuse.
-                Once SpyTags and SpyCatchers have attached to a particular cell they start to bind with other SpyTags and SpyCatchers
-                that are attached to other cells. We control this process using light. This intracellular binding allows our cells to aggregate
-                into shapes. In order to control the amount of binding that takes place between our cells we  need to control the
-                amount of intimin expressed on the surface of our cells. LEGIT enables us to define the optimal conditions that should be
-                used by our Wet Lab in order to increase the expression of intimin on the surface of the cells by 16%.
-                <br>
-                <br>
-                Breakdown of the cellular mechanism involved in the expression of intimin:
-                <br>
-                <img src="../../assets/Bac_equations1.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 50px ">
-                <br>
-                <p>Legend:
-                    <br>EL222<sub>M</sub> = EL222 monomer
-                    <br>EL222<sub>D</sub> = EL222 dimer
-                    <br>Pr<sub>LuxI</sub> = LuxI Promoter
-                    <br>Pr<sub>LuxI+E<sub>D</sub></sub> = EL222 dimer bound to the promoter
-                    <br>P<sub>Intimin</sub> = Intimin protein in the cytoplasm
-                    <br>P<sub>Surface</sub> = Intimin protein on the cell surface
-                </p>
-                <br>
-                We decided to divide our model into four main steps:
-                <br>
-                <br>
-                <li class="text-section"> 1. Light activation</li>
-                <li class="text-section"> 2. Transcription</li>
-                <li class="text-section"> 3. Translation</li>
-                <li class="text-section"> 4. Transport of intimin from the cells cytoplasm to the cell surface</li> </ol>
+            <p class="text-content"> OptoFlux is a mathematical model that determines the optimum dimensions for our LIT lightbulb
+                in order to maximise the luminescence produced from our optogenetic technology.
 
-            <img src="../../assets/Barch/Barc_Overview.jpg" class="image-content">
+                Our LIT lightbulb is powered by the co-culture of photosynthesising Cyanobacteria cells and luminescing E.coli cells.
+                In order to maximise the amount of luminescence our E.coli cells can produce we need to maximise the amount of photosynthesis
+                taking place by the Cyanobacteria cells. Essentially, when the Cyanobacteria cells respire they produce glucose which is
+                then taken up by the E.coli cells to produce luminescence. OptoFlux ensures that photosynthesis is occurring at the same rate
+                in all the cells regardless of their position in the lightbulb. In order to ensure this the same light intensity will reach all the cells
+                a optimal diameter, which would minimise shading effects, would need to be used for our LIT lightbulb. The dimensions
+                we achieved from OptoFlux enabled us to create a 3D model of our LIT lightbulb in AutoCAD.
+                <br>
+                <br>
+                Schematic of the co-culture in the LIT lightbulb:
+                <br>
+                <img src="../../assets/OptoFlux/Opto_overview.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 50px ">
+                <br>
+                <br>
+                In order to to model the luminescence produced from our LIT lightbulb we considered two aspects:
+                firstly the amount glucose produced from the Cyanobacteria cells for the E.coli cells; and secondly the number of
+                E.coli cells we require in order to produce a high enough luminescence to compete with a conventional 160W lightbulb.
+                <br>
+                <br>
+                We started off by developing our OptoFlux model in order to maximize the amount of glucose produced from our Cyanobacteria
+                cells. We then calculated the number of E.coli cells that would be required to produce a high enough
+                luminescence to compete with a 160W lightbulb. We concluded by evaluating whether the maximum amount of
+                glucose that could be produced from the Cyanobacteria would be enough to culture the required number
+                of E.coli cells. </p>
 
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">LEGIT differs from conventional protein expression models
-                as it incorporates two innovative twists. The first  is rate kinetics that are dependent on light induced systems.
-                The second is the transmembranal transport of the intimin protein to the surface of our E.coli cell.
-            </p>
+                <h1 class="title">Breakdown of the steps involved in the OptoFlux model:</h1>
+                <ol class="text-content">
+                <li class="text-section"> 1. Incoming Photon Flux Density (Iph) at the edge of the lightbulb that is closest to the light source</li>
+                <li class="text-section"> 2. Iph at each position in the lightbulb</li>
+                <li class="text-section"> 3. Rate of photon uptake by the cells at each position in the lightbulb</li>
+                <li class="text-section"> 4. Average sugar production rate at each position in the lightbulb</li></ol>
 
             <div style="margin-top: 20px" class="text-section">
-
+                <h2 class="title">Model Aims</h2>
                 <div class="text-content">
-                    <h2 class="title" style="padding-left: 0">Model Aims</h2>
                     <ul>
-                        <li>Determine the rate limiting cellular mechanism</li>
-                        <li>Optimize the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approaches </li>
-                        <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test</li>
-                        <li>Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</li>
+                        <li>Determine the concentration of Cyanobacteria cells required in the LIT lightbulb </li>
+                        <li>Determine the concentration of E.coli cells require in the LIT lightbulb</li>
+                        <li>Determine the optimal dimesnsions for the LIT lightbulb</li>
+                        <li>Determine the optimum incoming light intensity required to maximise the production of glucose from the Cyanobacteria</li>
                     </ul>
                 </div>
-
             </div>
-
-            <h2 class="subtitle"> <b><i>Interested to understand how we did this? Check out a detailed description of each of our modelling steps</i></b></h2>
 
             <h1 class="title ">Modelling steps</h1>
 
-            <h1 class="title ">1.) Light activation</h1>
-
-            <img id="special-image-1" src="../../assets/Barch/Barc_dimerisation.jpg" class="image-content" style="margin-bottom: 0">
-
-            <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter
-                <br> <i>Location: Cytoplasm</i>
-                <br>
-                <br>The first step of our LEGIT model involves determining the amount of EL222 dimers (EL222<sub>D</sub>) present in the cell.
-                EL222<sub>D</sub> are the transcription factors used to activate the expression of intimin in the cell. An EL222 <sub>D</sub> (EL222 dimer) is produced from
-                the photo-activated dimerization of two EL222 monomers (EL222<sub>M</sub>) found in the cell. We wanted to establish this relationship
-                because once EL222<sub>D</sub> binds to the LuxI promotor, it starts to promote the transcription of mRNA.
-
-            </p>
-
-            <img src="../../assets/eq_activation.png" class="image-content" style="width:600px; height:100px">
-            <p class="text-content"> Since we know that photo-activation is dependent upon light intensity (L) we used the Hill
-                equation in our ODE to evaluate our inducible promoter genetic circuits. We did this so we could evaluate the effect different
-                light intensities would have on the rate of photo-activation of EL222.
-            </p>
-            <img src="../../assets/eq_hill.png" class="image-content" style="width:400px; height:120px">
-
-            <h1 class="title">2.) Transcription</h1>
+            <h1 class="subtitle ">1.) Incoming Photon Flux Density (Iph) at the edge of the lightbulb closest to the light source</h1>
             <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content image-content-here">
-            <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
-                <br>
-                <i>Location: Cytoplasm</i>
-                <br>
-                <br> The second step of our simulated model involves determining the levels of mRNA transcribed from the light
-                induced transcription. Production of mRNA is dependent upon the concentration of EL222<sub>D</sub> and the rate at which EL222<sub>D</sub>
-                binds to the LuxI promoter. We took dilution rates due to both cell growth/division and mRNA degradation into consideration
-                when accounting for mRNA equilibriums.
 
+            <p class="text-content" style="margin-top: 0; padding-top:0 "?
+                <br>
+                <br>We determined the number of photons entering our LIT lightbulb by employing the Planck-Einstein relationship, this
+            enabled us to use radiometric units to quantify the number of photons entering our LIT bulb. We only focused on quantifying the Iph within the Phostosynthetically
+            Active Radiation (PAR) part of the light spectrum, as those are the only light wavelengths used for photosynthesis.
+            Through quantifying the number of photons entering our LIT lightbulb we had the ability to determine the levels of photosynthesis
+            that could take place by our Cyanobacteria cells.
             </p>
-            <img src="../../assets/bac_transcription.png" class="image-content" style="width: 420px; height: 100px">
 
-            <h1 class="title">3.) Translation</h1>
+            <img src="../../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width:200px; height: 75px">
+
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                <br>I<sub>ph<sub>λ</sub></sub> = The Incoming photon flux density at a particular wavelength (λ) of light
+                <br>I<sub>ph</sub> = The total Incoming photon flux density over the PAR light spectrum
+                <br>E<sub>nl</sub> = The amount of light absorbed by the Cyanobacteria cells at different Iph values
+            </p>
+
+            <h1 class="subtitle">2.) Iph at each position in the lightbulb</h1>
+            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content image-content-here">
+            <br>
+            <br> <p class="text-content" style="margin-top: 0; padding-top:0 "> We then decided to divide the lightbulb into a number of imaginary segments (z),
+            we determined the Iph for each imaginary segment of our LIT lightbulb. This would enable us to evaluate the number of photons
+            available for the photosynthesis of our Cyanobacteria cells at each position within the lightbulb.
+            <br>
+
+            <img src="../../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:300px; height: 100px">
+
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                <br>α<sub>x,λ</sub> = Specific light absorption coefficient for Cyanobacteria cells
+                <br>C<sub>x</sub> = Cyanobacteria biomass concentration in the LIT lightbulb
+                <br>z = Location in the lightbulb
+                <br>AF= Accumulation Factor (accounts for the photoaccumulation state of the cells)
+                <br>Δλ= Wavelength intervals </p>
+
+            <h1 class="subtitle">3.) Rate of photon uptake by the cells at each position in the lightbulb</h1>
             <img src="../../assets/Barch/Barc_Translation.png" class="image-content image-content-here">
-            <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 3: Translation
-                <br>Location: Cytoplasm</i>
                 <br>
                 <br>
-                The next step of our model seeks to establish the production levels of the surface protein intimin from translation.
-                The rate of intimin production is subject to changes in the rate of mRNA translation. Once intimin is translated, it is
-                continuously transported to the surface of the E. coli cell, therefore intimins' concentration in the cell also decreases. To account
-                for fluctuation, we created a function that takes the transport rate of intimin to the surface to the E. Coli cells into consideration as well.
-            </p>
-            <img src="../../assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
-            <p class="text-content"> We expect the speed at which intimin is transported to the surface of the cell to decrease over time.
-                This is because as time passes there will be a decrease in available space for intimin on the cell surface. We adapted the
-                Michaelis Menten equation to allow for the consideration of: the intimin proteins already occupying space on the cell surface; (P<sub>Surface</sub>)
-                and the maximum available space for intimin proteins on the cell surface. The variable  was set as the limit for the
-                maximum number of intimin proteins that can be expressed on the cell surface, thus preventing any other proteins from becoming expressed.
-            </p>
-            <img src="../../assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
-            <p class="text-content" >Finally, we also decided to take into consideration the fact that dilutions can occur due to cell growth and the half-life of the intimin protein. As such we introduced a degradation term to represent such degradations of intimin over time.
-            </p>
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">
+                In order to determine the photon uptake rate at each position in the LIT lightbub, we decided to use
+                forward and backward finite differences to solve our differential equation describing the photon uptake rate.
+                The finite differences allowed us to estimate an approximation of the Iph at each position in the LIT lightbulb. </p>
 
-            <h1 class="title">4.) Transport</h1>
+            <img src="../../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:300px; height: 100px">
+
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                <br>Δ<sub>z</sub> = Distance between two positions in the LIT lightbulb
+                <br>q<sub>ph</sub>(z) = Rate of photon uptake by the Cyanobacteria cells at each position in the LIT lightbulb </p>
+
+            <h1 class="title">4.) Average sugar production rate at each position in the lightbulb</h1>
 
             <img src="../../assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
-            <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 4: Transport of intimin to the surface of the cell
+            <p class="text-content"style="margin-top: 0; padding-top:0 ">
                 <br>
-                <i>Location: Cell surface</i>
+                <br> In order to determine the average sugar production rate within the LIT lightbulb we needed to determine
+                the specific sugar production rate and the yield of biomass on sugar at each position in the LIT lightbulb.
                 <br>
-                <br> Our final differential equation simulates the change in concentration of intimin expressed on the cell
-                surface over time. This equation takes both the rate at which intimin is being transported to the cell surface
-                and the intimins’ degradation rate into consideration.
+                <br>
+                Our first step was to determine the specific sugar production rate at each position of the LIT lightbulb:
             </p>
-            <img src="../../assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
-
-
-            <!-- add link to the project description page-->
-            <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%"> <i>Not enough science? Check out the project description page!</i></h2>
+            <img src="../../assets/OptoFlux/Specific_SugarProduction.png" class="image-content" style="width: 500px; height: 90px">
+                <br>
+                <br>
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                <br>q<sub>s</sub><sup>c</sup>(z)= Specific sugar production rate at each position in the LIT lightbulb
+                <br>q<sub>s,m</sub><sup>c</sup>(z) = Maximal sugar production rate in the cells
+                <br>Y<sub>phm</sub><sup>c</sup> = Maximal yield of sugar on photons
+            </p>
+                Our second step was to determine the yield of biomass on sugra production at each position of the LIT lightbulb:
+            <img src="../../assets/OptoFlux/Yield_Biomass.png" class="image-content" style="width: 500px; height: 90px">
+                <br>
+                <br>
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                <br>Y<sub>sph</sub>(z)= Yield of biomass on sugar at every position in the LIT lightbulb
+            </p>
+                Finally, we determined the average sugar production rate in the LIT lighbulb:
+            <img src="../../assets/OptoFlux/Average_SugarProduction.png" class="image-content" style="width: 500px; height: 90px">
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                <br>q<sub>s average</sub><sup>c</sup>= Average sugar production rate
+            </p>
 
             <div class="text-section">
-                <h1 class="title">Results</h1>
-                <p class="text-content">Using our LEGIT model, we determined the optimal
-                    range of values our Wet Lab team should seek to experiment with, in order to maximize the expression of intimin on our cells' surface.</p>
+                <h1 class="title">OptoFlux Results</h1>
+                <p class="text-content">Using our OptoFlux model, we determined the optimal
+                    dimensions, Cyanobacteria concentraiton and Incoming Photon Flux Density required to maximize the sugar production from our Cyanobacteria cells.</p>
             </div>
-            <h1 class="title">Determining the rate limiting step in intimin expression</h1>
-            <p class="text-content">In order to determine the rate limiting step in the cellular mechanisms involved in intimin
-                expression we used rate kinetics modelling.
+            <h1 class="title">Determining the optimum diameter for the LIT lightbulb</h1>
+            <p class="text-content">In order to determine the optimum diameter for the LIT lightbub we decided to focus on two aspects,
+                the amount of sugar produced and the yield of sugar on biomass for each diameter tested.
                 <br>
-                <!-- ADD HYPERLINK-->
-            <h2 class="subtitle"> <b><i>Click here to check out our approaches and assumptions! </i></b></h2>
             <img src="../../assets/Barch/Barc_RK.png" class="image-content image-content-here">
             <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1: </i> Demonstrates the rate of the cellular mechanisms involved in the expression of intimin
                 (More specifically the rate of: EL222D production and binding to the LuxI promoter; Transcription; Translation; and Transport of translated Intimin to the cell surface)
