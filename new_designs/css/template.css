@@ -396,5 +396,78 @@ body {
 }
 
 
+/* drop down box */
 
+#show1  {
+    height: auto;
+    background-color: rgba(204, 0, 53, 0.69) ;
+    overflow: hidden;
+    max-width:65%;
+    padding: 2% 3% 2% 5%;
+    position:relative;
+    margin-left: 150px;
+}
+
+#hide1 {
+    height: auto;
+    background-color: white;
+    padding: 2% 3% 2% 15%;
+    overflow: hidden;
+}
+
+#show2  {
+    height: auto;
+    background-color: rgba(204, 0, 53, 0.69);
+    overflow: hidden;
+    max-width:65%;
+    padding: 2% 3% 2% 5%;
+    position:relative;
+    margin-left: 150px;
+}
+
+
+#hide2 {
+    height: auto;
+    background-color: white;
+    overflow: hidden;
+    max-width:80%;
+    padding: 2% 3% 2% 15%;
+
+
+#show1 p {
+    font-size: 30px !important;
+    font-weight: 500;
+    font-family: "Josefin Sans" !important;
+    color: black;
+    position:relative;
+    margin:0 !important;
+
+
+}
+
+#show2 p {
+    padding-top: 30px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 30px !important;
+    font-weight: 500;
+    font-family: "Josefin Sans" !important;
+    font-color: black;
+    width:100%;
+    text-align: center;
+}
+
+i {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px ;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
 
