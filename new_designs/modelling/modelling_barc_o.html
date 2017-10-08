@@ -188,7 +188,7 @@
                     <h2 class="title" style="padding-left: 0">Model aims</h2>
                     <ul>
                         <li>Determine the rate limiting cellular mechanism</li>
-                        <li> Optimise the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approach </li>
+                        <li> Optimise the rate limiting parameters by using a conventional (<a href="Barchitecture/assumptions_barc_o.html">Sensitivity Analysis </a>) and an innovative (<a href="Barchitecture/assumptions_barc_o.html">Paramter Sampling </a>) approach </li>
                         <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test in the lab</li>
                         <li> Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tools</li>
                     </ul>
@@ -234,6 +234,8 @@
 
             </div>
 
+                <h2 class="subtitle" style="margin-top:20px"><a href="https://github.com/LITiGEM/Simulation/tree/master/Barchitecture">Access Github here!</a></h2>
+
                 <h1 class="title ">Light activation</h1>
 
                 <img id="special-image-1" src="../assets/bacterial-modelling-induction.jpg" class="image-content-graphs" style="margin-bottom: 0">
@@ -245,9 +247,9 @@
                     The EL222<sub>D</sub> then binds to the LuxI promoter.
                 </p>
 
-                <img src="../assets/eq_activation.png" class="image-content-graphs" style="width:600px; height:100px">
-                <p class="text-content"> The photoactivation is dependent on light intensity (L). The Hill equation is commonly used to fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate the effect different light intensities would have on the rate of photoactivation of EL222. </p>
-                <img src="../assets/eq_hill.png" class="image-content-graphs" style="width:400px; height:120px">
+                <img src="../assets/glossary/eq_activation.png" class="image-content-graphs" style="width:600px; height:100px">
+                <p class="text-content"> The photoactivation is dependent on light intensity (L). The <a href="glossary_o.html">Hill equation</a> is commonly used to fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate the effect different light intensities would have on the rate of photoactivation of EL222. </p>
+                <img src="../assets/glossary/eq_hill.png" class="image-content-graphs" style="width:400px; height:120px">
 
                 <h1 class="title">Transcription</h1>
                 <img src="../assets/bacterial-modelling-transcription.jpg" class="image-content-graphs image-content-here">
@@ -273,7 +275,7 @@
                 <img src="../assets/translation_eq1.png" class="image-content-graphs" style="width: 550px; height:90px">
                 <p class="text-content">After translation intimin is continuously transported to the surface of the E.coli, therefore its concentration in the cytoplasm decreases over time. To account for this, we created a function that takes the transport rate of intimin to the surface of the E.coli cells into consideration.</p>
                 <img src="../assets/transport_bac.png" class="image-content-graphs" style="width: 370px; height:130px">
-                <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the availabile space on their surface. We expect the transport rate of intimin to the surface to decrease as availability of space decreases. To describe this, we adapted the Michaelis Menten equation
+                <p class="text-content" >The transport of Intimin from the cytoplasm to the cell surface is dependent upon the availabile space on their surface. We expect the transport rate of intimin to the surface to decrease as availability of space decreases. To describe this, we adapted the <a href="glossary_o.html">Michaelis Menten equation</a>
                     to consider the intimin molecules already occupying the plasma membrane (P<sub>Surface</sub>), and the maximum available space on the cell surface.
 
                     The variable η sets a limit for the maximum number of intimin proteins that can be expressed on the cell surface and prevents any other proteins from becomming expressed once that limit is reached.</p>
@@ -290,8 +292,8 @@
                 <img src="../assets/transport_surface_eq1.png" class="image-content-graphs" style="width: 500px; height: 90px">
 
 
-            <!-- add link to the project description page-->
-            <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%"> <i><b>Not enough science? Check out the project description page!</i></b></h2>
+            <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%">
+                <a href="project-description.html">Not enough science? Check out the project description page!</a></h2>
 
             <div class="text-section">
                 <h1 class="title">Results</h1>

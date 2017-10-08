@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+    <meta charset="UTF-8">
+    <title>Description</title>
+    <link rel="stylesheet" type="text/css" href="../../css/template.css">
+
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            //Take your div into one js variable
+            var s1 = $("#step1");
+            var s2 = $("#step2");
+            var s3 = $("#step3");
+
+            //Take the current position (vertical position from top) of your div in the variable
+            var pos = s1.position();
+            var pos1 = s2.position();
+            var pos2 = s3.position();
+
+            //Now when scroll event trigger do following
+            $(window).scroll(function () {
+
+                scrollFunction()
+
+                var windowpos = $(window).scrollTop();
+                //console.log(windowpos);
+
+                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
+                if (windowpos >= (pos.top + 100)) {
+                    // div.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s1.addClass("active-link");
+                }
+
+                if (windowpos >= (pos1.top + 750)) {
+                    // div1.addClass("AfterScroll");
+                    s1.removeClass("active-link");
+                    s3.removeClass("active-link");
+                    s2.addClass("active-link");
+
+                }
+
+                if (windowpos >= (pos2.top + 1100)) {
+                    //div2.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s3.addClass("active-link");
+                }
+
+            });
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+        });
+    </script>
+</head>
+
+<style>
+    .image-content-here {
+        height:400px;
+        width:800px;
+    }
+    #special-image-1 {
+        height:600px;
+        width:550px;
+    }
+</style>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+<!-- The top navbar -->
+<div class="container-fluid">
+    <div id="top" class="row">
+
+        <ul class="navy">
+            <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Description</a></li>
+                    <li><a href="#" class="dropped">Experiments</a></li>
+                    <li><a href="#" class="dropped">Results</a></li>
+                    <li><a href="#" class="dropped">Parts</a></li>
+                    <li><a href="#" class="dropped">Gold Criteria</a></li>
+                    <li><a href="#" class="dropped">Interlab</a></li>
+
+                </ul>
+            </li>
+
+            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Protocols</a></li>
+                    <li><a href="#" class="dropped">Safety</a></li>
+                    <li><a href="#" class="dropped">Stuff</a></li>
+                </ul>
+            </li>
+            </li>
+
+            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Product</a></li>
+                    <li><a href="#" class="dropped">IP</a></li>
+                    <li><a href="#" class="dropped">Business Environment</a></li>
+                    <li><a href="#" class="dropped">Marketing</a></li>
+                    <li><a href="#" class="dropped">Management</a></li>
+                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
+                </ul>
+            </li>
+
+            <li id="drop5" class="navy-link"><a href="#">MODELLING</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">LEGIT</a></li>
+                    <li><a href="#" class="dropped">GOLIT</a></li>
+                    <li><a href="#" class="dropped">LAME</a></li>
+                    <li><a href="#" class="dropped">OptoFlux</a></li>
+                    <li><a href="#" class="dropped">Glossary</a></li>
+                </ul>
+            </li>
+
+            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Public Engagement</a></li>
+                    <li><a href="#" class="dropped">Integrated Practices</a></li>
+                </ul>
+            </li>
+
+            <li id="drop2" class="navy-link"><a href="#about">JUDGING CRITERIA</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Bronze</a></li>
+                    <li><a href="#" class="dropped">Silver</a></li>
+                    <li><a href="#" class="dropped">Gold</a></li>
+                </ul>
+            </li>
+
+            <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Team</a></li>
+                    <li><a href="#" class="dropped">Collaborations</a></li>
+                    <li><a href="#" class="dropped">Attributions</a></li>
+                </ul></li>
+
+        </ul>
+    </div>
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- The side navbar -->
+        <nav class="col-sm-2">
+            <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
+                <li id="step1" class="navy-link side-link"><a href="#section1">Overview</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Science behind LEGIT</a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+
+    <h1 class="title">LEGIT </h1>
+    <h2 class="subtitle"> Sensitivity Analysis</h2>
+    <h2 class="subtitle"> Parameter Sampling</h2>
+    <h1 class="title">LAME </h1>
+    <h2 class="subtitle"> Sensitivity Analysis</h2>
+    <h2 class="subtitle"> Parameter Sampling</h2>
+
+
+</div>
+
+
+</body>
+</html>
