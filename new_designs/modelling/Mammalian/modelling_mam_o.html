@@ -220,80 +220,83 @@
                 <br>
                 <li class="text-section"> 1. Cleavage of Photocleavable (PhoCl) Linker </li>
                 <li class="text-section"> 2. Transcription</li>
-                <li class="text-section"> 3. Translation</li> </ol>
+                <li class="text-section"> 3. Translation</li>
+            </ol>
 
-            <img src="../../assets/Mam/Mam_overview.png" class="image-content">
-
+            <img src="../../assets/Mam/Mam_overview.png" class="image-content-graphs" style="width: 800px; height:500px">
+            <br>
+            <h1 class="text-content"> <i>Figure 1:</i> Overview of the cellular mechanisms considered in the LAME model</h1>
+            <br>
 
             <p class="text-content" style="margin-top: 0; padding-top:0 ">In our LAME model the rate kinetics of our system are induced with photocleaving.
-                This is a unique twist we incorporated in contrast to conventional mammalian cell expression systems. In addition, the attachment of a dCas9
-                at the end of our TF, is another unique adaptation we incorporated into our model.
+            This is a unique twist we incorporated in contrast to conventional mammalian cell expression systems. In addition, the attachment of a dCas9
+            at the end of our TF, is another unique adaptation we incorporated into our model.
             </p>
 
             <div style="margin-top: 20px" class="text-section">
-
-                <div class="text-content">
-                    <h2 class="title" style="padding-left: 0">Model Aims</h2>
-                    <ul>
-                        <li>Determine the rate limiting cellular mechanism</li>
-                        <li>Optimize the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Parameter Sampling) approach </li>
-                        <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test</li>
-                        <li>Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</li>
-                    </ul>
-                </div>
+                <h2 class="title">Model Aims</h2>
+                <ul class="text-content">
+                    <li>Determine the rate limiting cellular mechanism</li>
+                    <li>Optimize the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Parameter Sampling) approach </li>
+                    <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test</li>
+                    <li>Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</li>
+                </ul>
             </div>
-            <h2 class="title">Modelling Steps</h2>
 
-            <h1 class="title ">1.) Cleavage of PhoCl linker</h1>
+            <div style="margin-top: 20px" class="text-section">
 
-            <img id="special-image-1" src="../../bacterial-modelling-induction.jpg" class="image-content" style="margin-bottom: 0">
-
-
-            <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photocleavage and release of the RFP TF in the cytoplasm of the cell
-            <br> Location: Outer cell membrane
+                <h2 class="title">Modelling Steps </h2>
                 <br>
+                    <br>
+                <h3 class="subtitle">1.) Cleavage of PhoCl linker</h3>
 
-                <br>The first step of our simulation is the photocleavage of PhoCl, which results in the release of the RFP TF in the cytoplasm of the cell. We introduced two degradation factors within our ODEs, in order to account for the half-life of the RFP TF and the
-                continual transport of the RFP TF from the cytoplasm to the nucleus of the cell.</p>
-            <img src="../../assets/Mam/Mam_Eq1.png" class="image-content" style="width:600px; height:100px">
+                <img id="special-image-1" src="../../assets/Mam/Photocleavage_Mammalian%201.svg" class="image-content-graphs">
+                <img id="special-image-1" src="../../assets/Mam/Photocleavage_Mammalian%202.svg" class="image-content-graphs">
 
-          
-            <p class="text-content"> The photocleavage is dependent on light intensity (L). The Hill equation is commonly used to
-                fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate
-                the effect different light intensities would have on the rate of photocleavage of the LACE<sub>TF</sub> complex. </p>
+                <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photocleavage and release of the RFP TF in the cytoplasm of the cell
+                <br> Location: Outer cell membrane
+                    <br>
+
+                    <br>The first step of our simulation is the photocleavage of PhoCl, which results in the release of the RFP TF in the cytoplasm of the cell. We introduced two degradation factors within our ODEs, in order to account for the half-life of the RFP TF and the
+                    continual transport of the RFP TF from the cytoplasm to the nucleus of the cell.</p>
+                <img src="../../assets/Mam/Mam_Eq1.png" class="image-content-graphs" style="width:500px; height:80px">
 
 
-            <img src="../../assets/Mam/Mam_Eq2.png" class="image-content" style="width:350px; height:100px">
+                <p class="text-content"> The photocleavage is dependent on light intensity (L). The Hill equation is commonly used to
+                    fit inducible promoter genetic circuits. We therefore decided to adapt the Hill equation in our ODE to evaluate
+                    the effect different light intensities would have on the rate of photocleavage of the LACE<sub>TF</sub> complex. </p>
 
-            <h1 class="title">2.) Transcription</h1>
-            <img src="../../bacterial-modelling-transcription.jpg" class="image-content image-content-here">
 
-          
-            <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
-                <br>
-                <i>Location: Nucleus</i>
-                <br>
-                <br> The second step of our simulation is the production of mRNA from transcription.
-                In order for transcription to take place the RFP TF needs to be transported from the cytoplasm of the cell to the nucleus. The RFP TF is guided into the
-                nucleus of the cell to the RFP promoter with the help of dCAS9. The rate at which the RFP TF enters the nucleus of the cell and binds to the RFP promoter
-                affects the rate at which transcription takes place. We incorporated two degradation factors to account for the half-life of the mRNA and the transport of the mRNA from the nucleus of the cell
-                to the cytoplasm.</p>
+                <img src="../../assets/Mam/Mam_Eq2.png" class="image-content-graphs" style="width:325px; height:90px">
 
-            <img src="../../assets/Mam/Mam_Eq3.png" class="image-content" style="width: 600px; height: 150px">
+                <h1 class="title">2.) Transcription</h1>
+                <img src="../../assets/Mam/Mam_Transcription.svg" class="image-content-graphs" style="width:800px; height:400px">
 
-            <h1 class="title">3.) Translation</h1>
-            <img src="../../assets/Mam/Mam_Translation.png" class="image-content image-content-here">
+                <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
+                    <br>
+                    <i>Location: Nucleus</i>
+                    <br>
+                    <br> The second step of our simulation is the production of mRNA from transcription.
+                    In order for transcription to take place the RFP TF needs to be transported from the cytoplasm of the cell to the nucleus. The RFP TF is guided into the
+                    nucleus of the cell to the RFP promoter with the help of dCAS9. The rate at which the RFP TF enters the nucleus of the cell and binds to the RFP promoter
+                    affects the rate at which transcription takes place. We incorporated two degradation factors to account for the half-life of the mRNA and the transport of the mRNA from the nucleus of the cell
+                    to the cytoplasm.</p>
 
-            <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 3: Translation
-                <br>Location: Cytoplasm</i>
-                <br>
-                <br>
-                The third step of our simulation is the production of the RFP protein from translation. The change in concentration of the RFP protein is dependent on three main factors. Firstly, the rate at which mRNA is transported from the nucleus to the cytoplasm, this is
+                <img src="../../assets/Mam/Mam_Eq3.png" class="image-content-graphs" style="width: 600px; height: 150px">
 
-                represented with the letter 'β'. Secondly, the rate of translation, represented by 'k<sub>3</sub>', and thirdly the maximum amount of RFP protein a cell can express, represented by the letter 'η'. A degradation term was introduced to represent the degradation of
-                RFP over time because of dilution due to cell growth and the limited half-life of the RFP protein. </p>
-            <img src="../../assets/Mam/Mam_Eq4.png" class="image-content" style="width: 550px; height:90px">
+                <h1 class="title">3.) Translation</h1>
+                <img src="../../assets/Mam/Mam_Translation.svg" cclass="image-content-graphs">
 
+                <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 3: Translation
+                    <br>Location: Cytoplasm</i>
+                    <br>
+                    <br>
+                    The third step of our simulation is the production of the RFP protein from translation. The change in concentration of the RFP protein is dependent on three main factors. Firstly, the rate at which mRNA is transported from the nucleus to the cytoplasm, this is
+
+                    represented with the letter 'β'. Secondly, the rate of translation, represented by 'k<sub>3</sub>', and thirdly the maximum amount of RFP protein a cell can express, represented by the letter 'η'. A degradation term was introduced to represent the degradation of
+                    RFP over time because of dilution due to cell growth and the limited half-life of the RFP protein. </p>
+                <img src="../../assets/Mam/Mam_Eq4.png" class="image-content" style="width: 550px; height:90px">
+            </div>
 
             <div class="text-section">
                 <h1 class="title">Results</h1>
