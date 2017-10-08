@@ -10,13 +10,13 @@ body {
     height:100%;
 }
 
+
 .container-fluid {
     padding-right:0;
     padding-left:0;
     margin-right:auto;
     margin-left:auto;
 }
-
 
 /* navbar and top part*/
 #top {
