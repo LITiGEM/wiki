@@ -203,7 +203,7 @@
                     the weight to a model's credibility, this is why we decided to approach this in 2 ways:
                     Sensitivity Analysis and Parameter Sampling.
                     <br>
-                    <h2 class="linktitle">Scroll down to find out more! </p>
+                <h2 class="subtitle" style="padding-top: 20px"> <i>Scroll down to find out more!</i> </p>
             </div>
 
             <div class="text-section">
@@ -214,6 +214,7 @@
                     In our case, we  want to optimise the impact specific values will have on the rate limiting step of the cellular mechanism,
                     So we are evaluating a range of values and analysing which ones optimise the proces. We applied this method of parameter optimisation to
                     the LEGIT and the LAME models.</p>
+                <br>
 
                 <h2 class="subtitle">Method</h2>
                     <ol class="text-content" style="width: 100%">
@@ -245,7 +246,7 @@
                     It is a method of parameter optimisation, which relies on the random sampling of parameter values within a specified range.
                     A probability density function (PDF) determines the distribution of the continuous random variables evaluated in the function.
                     Parameter sampling considers biological noise, making it a more realistic representation of the behaviour of a biological system.</p>
-
+                <br>
                 <h2 class="subtitle">Method</h2>
                     <ol class="text-content" style="width: 100%">
                         <li style="margin-left: 20px">Identify the dependent variable to be optimised (the rate limiting step in our process)</li>
@@ -255,12 +256,12 @@
                         <li style="margin-left: 20px">Calculate the weighted mean for all the optimised parameters</li>
                         <li style="margin-left: 20px">Generate probability densitiy functions (pdf);input the sample size, standard deviation and weighted mean</li>
                     </ol>
-
+                <br>
                 <h2 class="subtitle">LEGIT model</h2>
                 <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of
                     transport of intimin. For this the values of K<sub>m</sub> and V<sub>max</sub> are evaluated. </p>
 
-                        <!-- add the tree diagram-->
+                <img src="../assets/GOLIT/Bacterial%20Tree%20Diagram.svg" class="image-content-graphs" style="width:600px; height:300px">
 
                     <ul class="text-content" style="width: 100%"> Conditions for intimin
                         <li style="margin-left: 20px">Size: 94 kDa </li>
@@ -271,16 +272,16 @@
                 <p class="text-content" style="padding-top: 0">Weighted mean of K<sub>m</sub>: 0.0147 uM</p>
                 <p class="text-content" style="padding-top: 0">Weighted mean of V<sub>max</sub>: 300000 s<sup>-1</sup>(1 s.f.) </p>
 
-                <p class="linktitle"> Click here to check out the data collected to optimise the value of K<sub>m</sub> </p>
+                <p class="subtitle"> Click here to check out the data collected to optimise the value of K<sub>m</sub> </p>
                 <!-- ADD LINK for the table of values-->
-                <p class="linktitle"> Click here to check out the data collected to optimise the value of V<sub>max</sub> </p>
+                <p class="subtitle"> Click here to check out the data collected to optimise the value of V<sub>max</sub> </p>
                 <!-- ADD LINK  for the table of values -->
 
 
                 <h2 class="subtitle">LAME model</h2>
                 <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of translation of GFP. For this the rate of nuclear export of the transcript and the rate of GFP degradation are evaluated.</p>
 
-                <!-- add the tree diagram-->
+                <img src="modellingMethods/Mammalian%20Tree%20Diagram.svg">
 
                 <ul class="text-content" style="width: 100%"> Conditions for the RFP protein
                     <li style="margin-left: 20px">Size: 27.9 kDa </li>
@@ -314,24 +315,56 @@
             <div class="text-section">
 
                 <h6 class="title" style="color:rgba(204, 0, 53, 0.69)">Bibliography</h6>
-                    <p class="subtitle">
-                        <li>Thereza, C., Marina, I., Luciana.Cambricoli, d. and Olivia, C. (2004). Expression of green fluorescent protein (GFPuv) in Escherichia coli DH5-a, under different growth conditions. African Journal of Biotechnology, 3(1), pp.105-111.</li>
-                        <li>Wlab.ethz.ch. (2017). Cell Surface Protein Atlas. [online] Available at: http://wlab.ethz.ch/cspa/#abstract [Accessed 4 Sep. 2017].</li>
-                        <li>Sciencedirect.com. (2017). Membrane integration of E. coli model membrane proteins - ScienceDirect. [online] Available at: http://www.sciencedirect.com/science/article/pii/S0167488904000813 [Accessed 4 Sep. 2017].</li>
-                        <li>Arun KH e. Green fluorescent proteins in receptor: an emerging tool for drug discovery. – PubMed –NCBI [Internet]. Ncbi.nlm.gov.2017 [cited 21 August 2017]. Available from: https://www.ncbi.nlm.nih.gov/pubmed/15596111</li>
-                        <li>[internet] UVGermicidalTechnicalData. [cited 10 September 2017] http://www.pveducation.org/pvcdrom/effect-of-light-intensity (accessed 10 September 2017).</li>
-                        <li>Jayaraman, P., Devarajan, K., Chua, T. K., Zhang, H., Gunawan, E. and Loo Poh, C.  Blue light-mediated transcriptional activation and repression of gene expression in bacteria. NCBI. 2016;44(14):6994–7005.</li>
-                        <li>Philips, Ron. "Cell Biology By The Numbers." Book.bionumbers.org. N.p., 2017. Web. 10 Sept. 2017.</li>
-                        <li>Kiparissides, Alexandros et al. "Modelling The Delta1/Notch1 Pathway: In Search Of The Mediator(S) Of Neural Stem Cell Differentiation." PLoS ONE 6.2 (2011): e14668. Web.</li>
-                        <li>Carbonell-Ballestero M, Duran-Nebreda S, Montanez R, Sole R, Macia J, Rodriguez-Caso C. A bottom-up characterization of transfer functions for synthetic biology designs: lessons from enzymology. 2017.</li>
-                        <li>Km & Vmax [Internet]. Mofetsrv.mofet.macam98.ac.il. 2017 [cited 21 September 2017]. Available from: http://mofetsrv.mofet.macam98.ac.il/~rafid/BIOLOGY/biochem/infopages/aminoacids/www-biol.paisley.ac.uk/courses/stfunmac/glossary/Km.html</li>
-                        <li>Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.</li>
-                        <li>Zitieren eine Webseite - Cite This For Me [Internet]. Karger.com. 2017 [cited 28 September 2017]. Available from: https://www.karger.com/Article/Pdf/131439</li>
-                        <li>HeLa cell volume - Human Homo sapiens - BNID 103725 [Internet]. Bionumbers.hms.harvard.edu. 2017 [cited 28 September 2017]. Available from: http://bionumbers.hms.harvard.edu/bionumber.aspx?id=103725&ver=3</li>
-                        <li>Baumann N, Vidugiriene J, Machamer C, Menon A. Cell Surface Display and Intracellular Trafficking of Free Glycosylphosphatidylinositols in Mammalian Cells. 2017.</li>
-                        <li>Cortes L, Vainauskas S, Dai N, McClung C, Shah M, Benner J et al. Proteomic identification of mammalian cell surface derived glycosylphosphatidylinositol-anchored proteins through selective glycan enrichment. 2017.</li>
-                        <li>Key Numbers for Cell Biologists [Internet]. Bionumbers.org; 2017 [cited 28 September 2017]. Available from: http://bionumbers.hms.harvard.edu/Includes/KeyNumbersLinks.pdf</li>
-                        <li>Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.</li>
+                    <p class="subtitle" style="max-width: 80%">
+                        Thereza, C., Marina, I., Luciana.Cambricoli, d. and Olivia, C. (2004). Expression of green fluorescent protein (GFPuv) in Escherichia coli DH5-a, under different growth conditions. African Journal of Biotechnology, 3(1), pp.105-111.
+                        <br>
+                        <br>
+                        Wlab.ethz.ch. (2017). Cell Surface Protein Atlas. [online] Available at: http://wlab.ethz.ch/cspa/#abstract [Accessed 4 Sep. 2017].
+                        <br>
+                        <br>
+                        Sciencedirect.com. (2017). Membrane integration of E. coli model membrane proteins - ScienceDirect. [online] Available at: http://www.sciencedirect.com/science/article/pii/S0167488904000813 [Accessed 4 Sep. 2017].
+                        <br>
+                        <br>
+                        Arun KH e. Green fluorescent proteins in receptor: an emerging tool for drug discovery. – PubMed –NCBI [Internet]. Ncbi.nlm.gov.2017 [cited 21 August 2017]. Available from: https://www.ncbi.nlm.nih.gov/pubmed/15596111
+                        <br>
+                        <br>
+                        [internet] UVGermicidalTechnicalData. [cited 10 September 2017] http://www.pveducation.org/pvcdrom/effect-of-light-intensity (accessed 10 September 2017).
+                        <br>
+                        <br>
+                        Jayaraman, P., Devarajan, K., Chua, T. K., Zhang, H., Gunawan, E. and Loo Poh, C.  Blue light-mediated transcriptional activation and repression of gene expression in bacteria. NCBI. 2016;44(14):6994–7005.
+                        <br>
+                        <br>
+                        Philips, Ron. "Cell Biology By The Numbers." Book.bionumbers.org. N.p., 2017. Web. 10 Sept. 2017.
+                        <br>
+                        <br>
+                        Kiparissides, Alexandros et al. "Modelling The Delta1/Notch1 Pathway: In Search Of The Mediator(S) Of Neural Stem Cell Differentiation." PLoS ONE 6.2 (2011): e14668. Web.
+                        <br>
+                        <br>
+                        Carbonell-Ballestero M, Duran-Nebreda S, Montanez R, Sole R, Macia J, Rodriguez-Caso C. A bottom-up characterization of transfer functions for synthetic biology designs: lessons from enzymology. 2017.
+                        <br>
+                        <br>
+                        Km & Vmax [Internet]. Mofetsrv.mofet.macam98.ac.il. 2017 [cited 21 September 2017]. Available from: http://mofetsrv.mofet.macam98.ac.il/~rafid/BIOLOGY/biochem/infopages/aminoacids/www-biol.paisley.ac.uk/courses/stfunmac/glossary/Km.html
+                        <br>
+                        <br>
+                        Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.
+                        <br>
+                        <br>
+                        [Internet]. Karger.com. 2017 [cited 28 September 2017]. Available from: https://www.karger.com/Article/Pdf/131439
+                        <br>
+                        <br>
+                        HeLa cell volume - Human Homo sapiens - BNID 103725 [Internet]. Bionumbers.hms.harvard.edu. 2017 [cited 28 September 2017]. Available from: http://bionumbers.hms.harvard.edu/bionumber.aspx?id=103725&ver=3
+                        <br>
+                        <br>
+                        Baumann N, Vidugiriene J, Machamer C, Menon A. Cell Surface Display and Intracellular Trafficking of Free Glycosylphosphatidylinositols in Mammalian Cells. 2017.
+                        <br>
+                        <br>
+                        Cortes L, Vainauskas S, Dai N, McClung C, Shah M, Benner J et al. Proteomic identification of mammalian cell surface derived glycosylphosphatidylinositol-anchored proteins through selective glycan enrichment. 2017.
+                        <br>
+                        <br>
+                        Key Numbers for Cell Biologists [Internet]. Bionumbers.org; 2017 [cited 28 September 2017]. Available from: http://bionumbers.hms.harvard.edu/Includes/KeyNumbersLinks.pdf
+                        <br>
+                        <br>
+                        Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.
                     </p>
             </div>
 
