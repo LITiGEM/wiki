@@ -349,9 +349,10 @@
         <div style="float: right !important" class="col-sm-10">
 
             <h1 class="title">‘OptoFlux: Making designing a breeze’</h1>
-            <h2 class="subtitle"> A mathematical model that optimizes object dimensions to maximize their productivity</h2>
+            <h2 class="subtitle" style="margin-bottom: 0px"> A mathematical model that optimizes object dimensions to maximize their productivity</h2>
 
-            <h1 class="title">The Science behind the LIT bulb</h1>
+            <h1 class="title" style="margin-top: 0px">The Science behind the LIT bulb</h1>
+
 
             <p class="text-content"> OptoFlux is a mathematical model we developed in order to determines the optimum shape for our LIT bulb.
                 The LIT bulb is powered by the co-culture of photosynthesising Cyanobacteria cells and luminescing E.coli cells.
@@ -369,7 +370,8 @@
                 <img src="../../assets/OptoFlux/Opto_overview.png" class="image-content-graphs" style="width: 500px; height: 300px">
                 <br>
                 <br>
-                In order to to model the luminescence produced from our LIT bulb we considered two aspects:
+                In order to to model the luminescence produced from our LIT bulb we divided the task into two parts:
+                <br>
                 <br>Part 1: Use OptoFlux to maximize the amount glucose produced from the Cyanobacteria cells for the E.coli cells
                 <br>Part 2: Determine the number of E.coli cells required to produce a high enough luminescence to compete with a conventional 160W light bulb
                 <br>
@@ -379,14 +381,9 @@
                 We then decided to calculate the number of E.coli cells that would be required to produce a high enough
                 luminescence to compete with a 160W light bulb. Finally, we evaluated whether the amount of
                 glucose that could be produced from the Cyanobacteria cells, which we determined from OptoFlux, would be sufficient to culture
-                the required number of E.coli cells. </p>
+                the required number of E.coli cells.
+            </p>
 
-                <h1 class="title">Part 1: Breakdown of the steps involved in the OptoFlux model:</h1>
-                <ol class="text-content">
-                <li class="text-section"> 1. Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</li>
-                <li class="text-section"> 2. Iph at each position in the LIT bulb</li>
-                <li class="text-section"> 3. Rate of photon uptake by the cells at each position in the LIT bulb</li>
-                <li class="text-section"> 4. Average sugar production rate at each position in the LIT bulb</li></ol>
 
             <div style="margin-top: 20px" class="text-section">
                 <h2 class="title">Aims</h2>
@@ -401,93 +398,105 @@
                 </div>
             </div>
 
-            <h1 class="title ">Modelling steps</h1>
-            <br>
+            <div class="text-section">
 
-            <h1 class="subtitle ">1.) Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</h1>
-            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px" >
+                <h1 class="title">Part 1: Breakdown of the steps involved in the OptoFlux model:</h1>
+                <ol class="text-content">
+                    <li class="text-section"> 1. Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</li>
+                    <li class="text-section"> 2. Iph at each position in the LIT bulb</li>
+                    <li class="text-section"> 3. Rate of photon uptake by the cells at each position in the LIT bulb</li>
+                    <li class="text-section"> 4. Average sugar production rate at each position in the LIT bulb</li></ol>
+            </div>
 
-            <p class="text-content" style="margin-top: 0; padding-top:0 "?
+            <div class="text-section">
+                <h1 class="title ">Modelling steps</h1>
                 <br>
-                <br>We determined the number of photons entering our LIT bulb by employing the Planck-Einstein relationship. This
-            relationship enabled us to use radiometric units to quantify the number of photons entering our LIT bulb. We only focused on quantifying the photons within the Phostosynthetically
-            Active Radiation (PAR) part of the light spectrum, as those are the only light wavelengths used for photosynthesis.
-            Through quantifying the number of photons entering our LIT bulb we had the ability to determine the levels of photosynthesis
-            that could take place by our Cyanobacteria cells.
-            </p>
 
-            <img src="../../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width: 350px; height: 70px">
+                <h1 class="subtitle ">1.) Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</h1>
+                <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px" >
 
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
-                <br>I<sub>ph<sub>λ</sub></sub> = Incoming photon flux density at a particular wavelength (λ) of light
-                <br>I<sub>ph</sub> = Total Incoming photon flux density over the PAR light spectrum
-                <br>E<sub>nl</sub> = Amount of light absorbed by the Cyanobacteria cells at different Iph values
-            </p>
-            <br>
+                <p class="text-content" style="margin-top: 0; padding-top:0 "?
+                    <br>
+                    <br>We determined the number of photons entering our LIT bulb by employing the Planck-Einstein relationship. This
+                relationship enabled us to use radiometric units to quantify the number of photons entering our LIT bulb. We only focused on quantifying the photons within the Phostosynthetically
+                Active Radiation (PAR) part of the light spectrum, as those are the only light wavelengths used for photosynthesis.
+                Through quantifying the number of photons entering our LIT bulb we had the ability to determine the levels of photosynthesis
+                that could take place by our Cyanobacteria cells.
+                </p>
 
-            <h1 class="subtitle">2.) Iph at each position in the LIT bulb</h1>
-            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px">
-            <br>
-            <br> <p class="text-content" style="margin-top: 0; padding-top:0 "> We then decided to divide the LIT bulb into a number of imaginary segments (z),
-            and determine the Iph entering each of the imaginary segments of the LIT bulb. This enabled us to evaluate the number of photons
-            available for the photosynthesis of our Cyanobacteria cells at each position within the bulb.
-            <br>
+                <img src="../../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width: 350px; height: 70px">
 
-            <img src="../../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:450px; height: 100px">
-
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
-                <br>α<sub>x,λ</sub> = Specific light absorption coefficient for Cyanobacteria cells
-                <br>C<sub>x</sub> = Cyanobacteria biomass concentration in the LIT bulb
-                <br>z = Location in the LIT bulb
-                <br>AF= Accumulation Factor (accounts for the photoaccumulation state of the cells)
-                <br>Δλ= Wavelength intervals </p>
-            <br>
-            <h1 class="subtitle">3.) Rate of photon uptake by the cells at each position in the LIT bulb</h1>
-            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px">
+                <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                    <br>I<sub>ph<sub>λ</sub></sub> = Incoming photon flux density at a particular wavelength (λ) of light
+                    <br>I<sub>ph</sub> = Total Incoming photon flux density over the PAR light spectrum
+                    <br>E<sub>nl</sub> = Amount of light absorbed by the Cyanobacteria cells at different Iph values
+                </p>
                 <br>
-                <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">
-                In order to determine the photon uptake rate at each position in the LIT bulb, we decided to use
-                forward and backward finite differences to solve our differential equation describing the photon uptake rate.
-                The finite differences allowed us to estimate an approximation. </p>
 
-            <img src="../../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:500px; height: 100px">
+                <h1 class="subtitle">2.) Iph at each position in the LIT bulb</h1>
+                <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px">
+                <br>
+                <br> <p class="text-content" style="margin-top: 0; padding-top:0 "> We then decided to divide the LIT bulb into a number of imaginary segments (z),
+                and determine the Iph entering each of the imaginary segments of the LIT bulb. This enabled us to evaluate the number of photons
+                available for the photosynthesis of our Cyanobacteria cells at each position within the bulb.
+                <br>
 
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
-                <br>Δ<sub>z</sub> = Distance between two positions in the LIT bulb
-                <br>q<sub>ph</sub>(z) = Rate of photon uptake by the Cyanobacteria cells at each position in the LIT bulb </p>
+                <img src="../../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:450px; height: 100px">
 
-            <br>
+                <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                    <br>α<sub>x,λ</sub> = Specific light absorption coefficient for Cyanobacteria cells
+                    <br>C<sub>x</sub> = Cyanobacteria biomass concentration in the LIT bulb
+                    <br>z = Location in the LIT bulb
+                    <br>AF= Accumulation Factor (accounts for the photoaccumulation state of the cells)
+                    <br>Δλ= Wavelength intervals </p>
+                <br>
+                <h1 class="subtitle">3.) Rate of photon uptake by the cells at each position in the LIT bulb</h1>
+                <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px">
+                    <br>
+                    <br>
+                <p class="text-content" style="margin-top: 0; padding-top:0 ">
+                    In order to determine the photon uptake rate at each position in the LIT bulb, we decided to use
+                    forward and backward finite differences to solve our differential equation describing the photon uptake rate.
+                    The finite differences allowed us to estimate an approximation. </p>
 
-            <h1 class="subtitle">4.) Average sugar production rate at each position in the LIT bulb</h1>
+                <img src="../../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:500px; height: 100px">
 
-            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px">
-            <p class="text-content"style="margin-top: 0; padding-top:0 ">
-                <br> In order to determine the average sugar production rate within the LIT bulb we needed to determine
-                the specific sugar production rate and the yield of biomass on sugar at each position in the bulb.
+                <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                    <br>Δ<sub>z</sub> = Distance between two positions in the LIT bulb
+                    <br>q<sub>ph</sub>(z) = Rate of photon uptake by the Cyanobacteria cells at each position in the LIT bulb </p>
+
                 <br>
-                <br>
-                Our first step was to determine the specific sugar production rate at each position of the LIT bulb:
-            </p>
-            <img src="../../assets/OptoFlux/Specific_SugarProduction.png" class="image-content-graphs" style="width:500px; height: 100px">
-                <br>
-                <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
-                <br>q<sub>s</sub><sup>c</sup>(z)= Specific sugar production rate at each position in the LIT bulb
-                <br>q<sub>s,m</sub><sup>c</sup>(z) = Maximal sugar production rate in the cells
-                <br>Y<sub>phm</sub><sup>c</sup> = Maximal yield of sugar on photons
-            </p>
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">Our second step was to determine the yield of biomass on sugar production at each position of the LIT bulb:</p>
-            <img src="../../assets/OptoFlux/Yield_Biomass.png" class="image-content-graphs" style="width:325px; height: 80px">
-                <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
-                <br>Y<sub>sph</sub>(z)= Yield of biomass on sugar at every position in the LIT bulb
-            </p>
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">Finally, we determined the average sugar production rate in the LIT bulb: </p>
-            <img src="../../assets/OptoFlux/Average_SugarProduction.png" class="image-content-graphs" style="width:350px; height: 70px">
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
-                <br>q<sub>s average</sub><sup>c</sup>= Average sugar production rate
-            </p>
+
+                <h1 class="subtitle">4.) Average sugar production rate at each position in the LIT bulb</h1>
+
+                <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px">
+                <p class="text-content"style="margin-top: 0; padding-top:0 ">
+                    <br> In order to determine the average sugar production rate within the LIT bulb we needed to determine
+                    the specific sugar production rate and the yield of biomass on sugar at each position in the bulb.
+                    <br>
+                    <br>
+                    Our first step was to determine the specific sugar production rate at each position of the LIT bulb:
+                </p>
+                <img src="../../assets/OptoFlux/Specific_SugarProduction.png" class="image-content-graphs" style="width:500px; height: 100px">
+                    <br>
+                    <br>
+                <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                    <br>q<sub>s</sub><sup>c</sup>(z)= Specific sugar production rate at each position in the LIT bulb
+                    <br>q<sub>s,m</sub><sup>c</sup>(z) = Maximal sugar production rate in the cells
+                    <br>Y<sub>phm</sub><sup>c</sup> = Maximal yield of sugar on photons
+                </p>
+                <p class="text-content" style="margin-top: 0; padding-top:0 ">Our second step was to determine the yield of biomass on sugar production at each position of the LIT bulb:</p>
+                <img src="../../assets/OptoFlux/Yield_Biomass.png" class="image-content-graphs" style="width:325px; height: 80px">
+                    <br>
+                <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                    <br>Y<sub>sph</sub>(z)= Yield of biomass on sugar at every position in the LIT bulb
+                </p>
+                <p class="text-content" style="margin-top: 0; padding-top:0 ">Finally, we determined the average sugar production rate in the LIT bulb: </p>
+                <img src="../../assets/OptoFlux/Average_SugarProduction.png" class="image-content-graphs" style="width:350px; height: 70px">
+                <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
+                    <br>q<sub>s average</sub><sup>c</sup>= Average sugar production rate
+                </p>
+            </div>
 
             <div class="text-section">
                 <h1 class="title">OptoFlux Results</h1>
