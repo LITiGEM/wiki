@@ -353,12 +353,10 @@
 
             <h1 class="title">The Science behind the LIT lightbulb</h1>
 
-            <p class="text-content"> OptoFlux is a mathematical model that determines the optimum dimensions for our LIT lightbulb
-                in order to maximise the luminescence produced from our optogenetic technology.
-
-                Our LIT lightbulb is powered by the co-culture of photosynthesising Cyanobacteria cells and luminescing E.coli cells.
-                In order to maximise the amount of luminescence our E.coli cells can produce we need to maximise the amount of photosynthesis
-                taking place by the Cyanobacteria cells. Essentially, when the Cyanobacteria cells respire they produce glucose which is
+            <p class="text-content"> OptoFlux is a mathematical model we developed in order to determines the optimum shape for our LIT bulb.
+                The LIT bulb is powered by the co-culture of photosynthesising Cyanobacteria cells and luminescing E.coli cells.
+                In order to maximise the amount of luminescence our E.coli cells can produce we understood we needed to maximise the amount of photosynthesis
+                taking place by the Cyanobacteria cells. Essentially, when the Cyanobacteria cells photosynthesise they produce glucose which is
                 then taken up by the E.coli cells to produce luminescence. OptoFlux ensures that photosynthesis is occurring at the same rate
                 in all the cells regardless of their position in the lightbulb. In order to ensure this the same light intensity will reach all the cells
                 a optimal diameter, which would minimise shading effects, would need to be used for our LIT lightbulb. The dimensions
@@ -367,7 +365,8 @@
                 <br>
                 Schematic of the co-culture in the LIT lightbulb:
                 <br>
-                <img src="../../assets/OptoFlux/Opto_overview.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 50px ">
+                <br>
+                <img src="../../assets/OptoFlux/Opto_overview.png" class="image-content-graphs" style="width: 500px; height: 300px">
                 <br>
                 <br>
                 In order to to model the luminescence produced from our LIT lightbulb we considered two aspects:
@@ -383,27 +382,28 @@
 
                 <h1 class="title">Breakdown of the steps involved in the OptoFlux model:</h1>
                 <ol class="text-content">
-                <li class="text-section"> 1. Incoming Photon Flux Density (Iph) at the edge of the lightbulb that is closest to the light source</li>
-                <li class="text-section"> 2. Iph at each position in the lightbulb</li>
-                <li class="text-section"> 3. Rate of photon uptake by the cells at each position in the lightbulb</li>
-                <li class="text-section"> 4. Average sugar production rate at each position in the lightbulb</li></ol>
+                <li class="text-section"> 1. Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</li>
+                <li class="text-section"> 2. Iph at each position in the LIT bulb</li>
+                <li class="text-section"> 3. Rate of photon uptake by the cells at each position in the LIT bulb</li>
+                <li class="text-section"> 4. Average sugar production rate at each position in the LIT bulb</li></ol>
 
             <div style="margin-top: 20px" class="text-section">
                 <h2 class="title">Model Aims</h2>
                 <div class="text-content">
                     <ul>
-                        <li>Determine the concentration of Cyanobacteria cells required in the LIT lightbulb </li>
-                        <li>Determine the concentration of E.coli cells require in the LIT lightbulb</li>
-                        <li>Determine the optimal dimesnsions for the LIT lightbulb</li>
-                        <li>Determine the optimum incoming light intensity required to maximise the production of glucose from the Cyanobacteria</li>
+                        <li>Determine the concentration of Cyanobacteria cells required in the LIT bulb </li>
+                        <li>Determine the concentration of E.coli cells require in the LIT bulb</li>
+                        <li>Determine the optimal dimensions for the LIT bulb</li>
+                        <li>Determine the optimum incoming light intensity required to maximise the production of glucose from the Cyanobacteria cells</li>
                     </ul>
                 </div>
             </div>
 
             <h1 class="title ">Modelling steps</h1>
+            <br>
 
-            <h1 class="subtitle ">1.) Incoming Photon Flux Density (Iph) at the edge of the lightbulb closest to the light source</h1>
-            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content image-content-here">
+            <h1 class="subtitle ">1.) Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</h1>
+            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px" >
 
             <p class="text-content" style="margin-top: 0; padding-top:0 "?
                 <br>
@@ -414,23 +414,24 @@
             that could take place by our Cyanobacteria cells.
             </p>
 
-            <img src="../../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width:200px; height: 75px">
+            <img src="../../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width: 350px; height: 70px">
 
             <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
                 <br>I<sub>ph<sub>λ</sub></sub> = The Incoming photon flux density at a particular wavelength (λ) of light
                 <br>I<sub>ph</sub> = The total Incoming photon flux density over the PAR light spectrum
                 <br>E<sub>nl</sub> = The amount of light absorbed by the Cyanobacteria cells at different Iph values
             </p>
+            <br>
 
-            <h1 class="subtitle">2.) Iph at each position in the lightbulb</h1>
-            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content image-content-here">
+            <h1 class="subtitle">2.) Iph at each position in the LIT bulb</h1>
+            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px">
             <br>
             <br> <p class="text-content" style="margin-top: 0; padding-top:0 "> We then decided to divide the lightbulb into a number of imaginary segments (z),
             we determined the Iph for each imaginary segment of our LIT lightbulb. This would enable us to evaluate the number of photons
             available for the photosynthesis of our Cyanobacteria cells at each position within the lightbulb.
             <br>
 
-            <img src="../../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:300px; height: 100px">
+            <img src="../../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:450px; height: 100px">
 
             <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
                 <br>α<sub>x,λ</sub> = Specific light absorption coefficient for Cyanobacteria cells
@@ -438,9 +439,9 @@
                 <br>z = Location in the lightbulb
                 <br>AF= Accumulation Factor (accounts for the photoaccumulation state of the cells)
                 <br>Δλ= Wavelength intervals </p>
-
-            <h1 class="subtitle">3.) Rate of photon uptake by the cells at each position in the lightbulb</h1>
-            <img src="../../assets/Barch/Barc_Translation.png" class="image-content image-content-here">
+            <br>
+            <h1 class="subtitle">3.) Rate of photon uptake by the cells at each position in the LIT bulb</h1>
+            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px">
                 <br>
                 <br>
             <p class="text-content" style="margin-top: 0; padding-top:0 ">
@@ -448,24 +449,25 @@
                 forward and backward finite differences to solve our differential equation describing the photon uptake rate.
                 The finite differences allowed us to estimate an approximation of the Iph at each position in the LIT lightbulb. </p>
 
-            <img src="../../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:300px; height: 100px">
+            <img src="../../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:500px; height: 100px">
 
             <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
                 <br>Δ<sub>z</sub> = Distance between two positions in the LIT lightbulb
                 <br>q<sub>ph</sub>(z) = Rate of photon uptake by the Cyanobacteria cells at each position in the LIT lightbulb </p>
 
-            <h1 class="title">4.) Average sugar production rate at each position in the lightbulb</h1>
+            <br>
 
-            <img src="../../assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
+            <h1 class="subtitle">4.) Average sugar production rate at each position in the lightbulb</h1>
+
+            <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 700px; height: 400px">
             <p class="text-content"style="margin-top: 0; padding-top:0 ">
-                <br>
                 <br> In order to determine the average sugar production rate within the LIT lightbulb we needed to determine
                 the specific sugar production rate and the yield of biomass on sugar at each position in the LIT lightbulb.
                 <br>
                 <br>
                 Our first step was to determine the specific sugar production rate at each position of the LIT lightbulb:
             </p>
-            <img src="../../assets/OptoFlux/Specific_SugarProduction.png" class="image-content" style="width: 500px; height: 90px">
+            <img src="../../assets/OptoFlux/Specific_SugarProduction.png" class="image-content-graphs" style="width:500px; height: 100px">
                 <br>
                 <br>
             <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
@@ -473,15 +475,14 @@
                 <br>q<sub>s,m</sub><sup>c</sup>(z) = Maximal sugar production rate in the cells
                 <br>Y<sub>phm</sub><sup>c</sup> = Maximal yield of sugar on photons
             </p>
-                Our second step was to determine the yield of biomass on sugra production at each position of the LIT lightbulb:
-            <img src="../../assets/OptoFlux/Yield_Biomass.png" class="image-content" style="width: 500px; height: 90px">
-                <br>
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">Our second step was to determine the yield of biomass on sugra production at each position of the LIT lightbulb:</p>
+            <img src="../../assets/OptoFlux/Yield_Biomass.png" class="image-content-graphs" style="width:325px; height: 80px">
                 <br>
             <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
                 <br>Y<sub>sph</sub>(z)= Yield of biomass on sugar at every position in the LIT lightbulb
             </p>
-                Finally, we determined the average sugar production rate in the LIT lighbulb:
-            <img src="../../assets/OptoFlux/Average_SugarProduction.png" class="image-content" style="width: 500px; height: 90px">
+            <p class="text-content" style="margin-top: 0; padding-top:0 ">Finally, we determined the average sugar production rate in the LIT lighbulb: </p>
+            <img src="../../assets/OptoFlux/Average_SugarProduction.png" class="image-content-graphs" style="width:350px; height: 70px">
             <p class="text-content" style="margin-top: 0; padding-top:0 ">Legend:
                 <br>q<sub>s average</sub><sup>c</sup>= Average sugar production rate
             </p>
@@ -767,40 +768,43 @@
             </ul>
             </div>
 
+            <div class="text-section">
+            <h3 class="title">OptoFlux Species</h3>
 
+            <img src="../../assets/OptoFlux/Optoflux_Species.png" class="image-content-graphs" style="width: 750px; height:300px">
+            </div>
+
+            <div class="text-section">
             <h3 class="title">OptoFlux Parameters</h3>
 
-            <img src="../../assets/Barch/Parameters.png" class="image-content" style="width: 900px; height:700px">
+            <img src="../../assets/OptoFlux/Optoflux_Parameters.png" class="image-content-graphs" style="width: 900px; height:950px">
+            </div>
 
-            <h5 class="title">LEGIT Initial Conditions</h5>
+            <div class="text-section">
 
-            <img src="../../assets/Barch/InitCond.png" class="image-content" style="width: 900px; height:1000px">
+            <h5 class="title">Analytical steps used to calculate the concentration of Cyanobacteria</h5>
+
+            <img src="../../assets/OptoFlux/Initial_Cond.png" class="image-content-graphs" style="width: 900px; height:1000px">
+            </div>
 
             <h6 class="title">Bibliography</h6>
             <br>
 
-            <p class="subtitle"> Thereza, C., Marina, I., Luciana.Cambricoli, d. and Olivia, C. (2004). Expression of green fluorescent protein (GFPuv) in Escherichia coli DH5-a, under different growth conditions. African Journal of Biotechnology, 3(1), pp.105-111.
+            <p class="subtitle">Ducat D, Avelar-Rivas J, Way J, Silver P. Rerouting Carbon Flux To Enhance Photosynthetic Productivity. Applied and Environmental Microbiology. 2012;78(8):2660-2668.
+
                 <br>
                 <br>
-                Wlab.ethz.ch. (2017). Cell Surface Protein Atlas. [online] Available at: http://wlab.ethz.ch/cspa/#abstract [Accessed 4 Sep. 2017].
+                Janssen M. Microalgal Photosynthesis and Growth in Mass Culture. Photobioreaction Engineering. 2016;:185-256.
                 <br>
                 <br>
-                Sciencedirect.com. (2017). Membrane integration of E. coli model membrane proteins - ScienceDirect. [online] Available at: http://www.sciencedirect.com/science/article/pii/S0167488904000813 [Accessed 4 Sep. 2017].
+                Mahlmann D, Jahnke J, Loosen P. Rapid determination of the dry weight of single, living cyanobacterial cells using the Mach-Zehnder double-beam interference microscope. European Journal of Phycology. 2008;43(4):355-364.
                 <br>
                 <br>
-                Arun KH e. Green fluorescent proteins in receptor: an emerging tool for drug discovery. – PubMed –NCBI [Internet]. Ncbi.nlm.gov.2017 [cited 21 August 2017]. Available from: https://www.ncbi.nlm.nih.gov/pubmed/15596111
+                Marr A. Growth Rate of Escherichia coli. Microbiological Reviews- American Society for Microbiology [Internet]. 1991 [cited 7 October 2017];55(2):316-333. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC372817/pdf/microrev00033-0134.pdf
                 <br>
                 <br>
-                [internet] UVGermicidalTechnicalData. [cited 10 September 2017] http://www.pveducation.org/pvcdrom/effect-of-light-intensity (accessed 10 September 2017).
+                Patel A, Mishra S, Pawar R, Ghosh P. Purification and characterization of C-Phycocyanin from cyanobacterial species of marine and freshwater habitat. Protein Expression and Purification. 2005;40(2):248-255.
                 <br>
-                <br>
-                Jayaraman, P., Devarajan, K., Chua, T. K., Zhang, H., Gunawan, E. and Loo Poh, C.  Blue light-mediated transcriptional activation and repression of gene expression in bacteria. NCBI. 2016;44(14):6994–7005.
-                <br>
-                <br>
-                Philips, Ron. "Cell Biology By The Numbers." Book.bionumbers.org. N.p., 2017. Web. 10 Sept. 2017.
-                <br>
-                <br>
-                Kiparissides, Alexandros et al. "Modelling The Delta1/Notch1 Pathway: In Search Of The Mediator(S) Of Neural Stem Cell Differentiation." PLoS ONE 6.2 (2011): e14668. Web.
                 <br>
             </p>
 
