@@ -398,6 +398,10 @@ body {
 
 /* drop down box */
 
+#hide1, #hide2 {
+    display:none;
+}
+
 #show1  {
     height: auto;
     background-color: rgba(204, 0, 53, 0.69) ;
@@ -442,7 +446,6 @@ body {
     color: black;
     position:relative;
     margin:0 !important;
-
 
 }
 
