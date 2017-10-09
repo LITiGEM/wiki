@@ -6,7 +6,7 @@
     <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
     <meta charset="UTF-8">
-    <title>Bacterial Light Bulb</title>
+    <title>LIT Entrepreneurs</title>
     <link rel="stylesheet" type="text/css" href="css/template.css">
 
     <!-- BOOTSTRAP -->
@@ -19,7 +19,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- a script that does the underlining for the side bar -->
     <script>
 
         $(document).ready(function(){
@@ -27,13 +26,11 @@
             var s1 = $("#step1");
             var s2 = $("#step2");
             var s3 = $("#step3");
-            var s4 = $("#step4");
 
             //Take the current position (vertical position from top) of your div in the variable
             var pos = s1.position();
             var pos1 = s2.position();
             var pos2 = s3.position();
-            var pos3 = s4.position();
 
             //Now when scroll event trigger do following
             $(window).scroll(function () {
@@ -61,14 +58,7 @@
                 if (windowpos >= (pos2.top + 1100)) {
                     //div2.addClass("AfterScroll");
                     s2.removeClass("active-link");
-                    s4.removeClass("active-link");
                     s3.addClass("active-link");
-                }
-
-                if (windowpos >= (pos3.top + 1300)) {
-                    //div2.addClass("AfterScroll");
-                    s3.removeClass("active-link");
-                    s4.addClass("active-link");
                 }
 
             });
@@ -87,29 +77,18 @@
 
 <style>
     .image-content-here {
-        height:550px;
-        width:500px;
-    }
-
-    #special-image-here-1 {
-        height:350px;
-        width:320px;
-    }
-    #aim {
-        position:relative;
-        max-width:70%;
-        font-size: 24px;
-        font-family: Futura;
-        padding: 2% 3% 2% 15%;
-        margin:0 !important;
+        height: 320px;
+        width:375px;
+        border-radius: 50%;
+        padding: 0 6% 0 0;
     }
 
 </style>
-<body data-spy="scroll" data-target="#side-index">
 
+<body data-spy="scroll" data-target="#side-index">
+<!-- The top navbar -->
 <div class="container-fluid">
     <div id="top" class="row">
-
         <ul class="navy">
             <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
                 <ul class="navy-hidden">
@@ -171,7 +150,6 @@
                 </ul>
             </li>
 
-
             <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Team</a></li>
@@ -190,81 +168,95 @@
         <!-- The side navbar -->
         <nav id="side-index" class="col-sm-2">
             <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1"></a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">How does it work?</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Modelling</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section3">Human Practices</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#section1">Who we are</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2">Product</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3">Business Environment</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section4">Financial data</a></li>
             </ul>
         </nav>
 
-
+        <!-- Content -->
         <div style="float: right !important" class="col-sm-10">
 
+            <div class="row">
+                <div style="margin-top: 10px" class="text-section col-sm-10">
+
+                    <h1 class="subtitle">Bringing urban design and synthetic biology together</h1>
+
+                    <p class="introbit">1807: London’s Pall Mall becomes the first street in the world to be illuminated by gaslight.</a></p>
+
+                    <p class="introbit">2057: the London Eye uses bioluminescence to impress tourists during night time.</p>
+
+                    <p class="text-content">At LIT, we focus on developing applications for biological light switches – molecular devices that activate and suppress cellular processes. When combined cleverly, technologies such as architecture from bacteria and sustainable bioluminescent bulbs emerge. We see synthetic biology at the core of urban design.</p>
+
+                </div>
+            </div>
+
+
+
 
             <div class="row">
+                <div class="text-section col-sm-7">
 
-                <div style="margin-top: 20px" class="text-section">
+                    <h1 class="title">Product </h1>
 
-                    <h1 class="title">The future of illumination</h1>
+                    <p class="text-content-duo-primary">Our bacteria-powered lightbulb detects changes of light intensity in its environment, allowing the genetically engineered circuit in the bacteria to encode for bioluminescence only during night time. Making use of bacterial co-culturing, the bulb provides an eco-friendly, cost-effective and aesthetically pleasing solution that is sustainable for the long term.</p>
 
-                    <p class="introbit">1807: London’s Pall Mall becomes the first street in the world to be illuminated by gaslight.</p>
 
-                    <p class="introbit">2057: the London Eye will use bioluminescence to impress tourists during night time.</p>
+                </div>
 
-                    <p class="text-content">We aim to produce an efficient, longer-lasting and reliable light bulb that does not require electricity, mechanical input or continuous nutrient input. To achieve this, we are developing the “LIT Bulb” comprised of E. coli cells that can detect sunlight changes and luminesce at night time. To guarantee a constant food source, the E.coli cells will be co-cultured with cyanobacteria that can continuously produce and secrete glucose.</p>
-
+                <div class="picture-section-right col-sm-4">
+                    <img src="assets/bulb.png" class="image-content image-content-here">
                 </div>
 
             </div>
 
+
             <div class="row">
+
                 <div class="text-section">
+                    <h1 class="title">Business Environment</h1>
+                    <p class="text-content-duo-primary">We aimed to engineer a bacterial light bulb that serves as more than an ambient light. We identified a significant design consideration: light must reach our co-culture bacteria for nutrition purposes and traverse the bulb when it is produced by the bioluminescent E. Coli.</p>
 
-                    <p id="aim">We decided to explore how one would deploy a bacterial light bulb in real life by combining mathematical modelling with integrated human practices and entrepreneurship to develop a prototype.</p>
+                    <p class="text-content-duo">We combined mathematical modelling and integrated human practices to determine what our light bulb should look like. Our OptoFlux considered homogeneity and cell growth to determine the dimensions necessary to produce luminescence equivalent to 160W – about the same intensity as a street lamp.</p>
+
+                    <a class="text-content-duo" href="#">Click here to see our 3D light bulb built on Auto CAD.</a>
+
+
 
                 </div>
+
+
             </div>
 
 
             <div class="row">
+
                 <div class="text-section">
-                    <h1 class="title">Mathematical Modelling</h1>
+                    <h1 class="title">Marketing</h1>
+                    <p class="text-content-duo-primary">We considered two potential advantages of our light switches over alternative gene activation tools in our designs: efficiency and speed. To create 3D structures from bacteria, our cells need to produce the most amount of surface display proteins in the least amount of time. Achieving this is dependent on using an optimal light intensity level for gene activation.</p>
 
-                    <p class="text-content">Our final aim for this application was to develop a prototype. We took an engineering perspective, by using mathematical modelling to determine the dimensions and shape of the bulb. The final results cater for bacteria producing an equivalent luminosity to standard bulbs.</p>
-
-                    <p class="text-content">Read more</p>
-
+                    <p class="text-content-duo">Our LEGIT model describes specific steps involved in bacterial cells forming 3D structures, allowing us to see how different light intensity levels affect the quantity and rate of protein production. By also incorporating parameter sampling, our results informed our wet lab experiments to test specific levels of light intensity, expected to be most effective in building bacterial 3D structures.</p>
+                    <a class="text-content-duo" href="#">Learn more about building structure#PeakIntoOurWorld #MachineLearning </a>
 
                 </div>
+
             </div>
 
 
             <div class="row">
+
                 <div class="text-section">
-                    <h1 class="title">Human Practices</h1>
-                    <p class="text-content">Deploying a bacterial light-bulb in real life can face major challenges: will people find it attractive enough to be on the streets? Can the engineering requirements meet the aesthetic ones? Where do we make compromises between the 2?</p>
+                    <h1 class="title">Intellectual Property</h1>
+                    <p class="text-content-duo-primary">We proposed a new way of printing organs: light activates the transcription of any gene of interest to enable desired differentiation. In a medical context, such a process needs to be rapid and highly precise.</p>
 
-                    <p class="text-content">Through our Instagram competition, reaching 78,000 followers, we wanted participants to consider relevant aspects of deploying a bacterial light bulb in real life and submit designs for our prototype. Entries, a final 3D-printed version of the bulb and tips for future iGEMers.</p>
 
-                    <p class="text-content">Read more</p>
+                    <p class="text-content">Similar to how bacterial cells form 3D structures, mammalian cell adhesion is dependent on optimal levels of light intensity. Our LAME model helped us mathematically describe the stages of gene photoactivation in mammalian cells, resulting in us knowing what range of values for transcription activation is more likely to provide informative results in the lab.</p>
 
                 </div>
 
+
             </div>
-
-            <div class="row">
-                <div class="text-section">
-                    <h1 class="title">Entrepreneurship</h1>
-
-                    <p class="text-content">The final stage of working on our prototype was to engage in the financial and operational aspects of deploying a bacterial light bulb</p>
-
-                    <p class="text-content">Read more</p>
-
-
-                </div>
-            </div>
-
-
 
         </div>
 
