@@ -192,16 +192,16 @@
             <div style="margin-top: 20px" class="text-section">
 
                 <h1 class="title">Cracking the Model</h1>
-                <h2 class="subtitle">Methods of parameter optimization</h2>
+                <h2 class="subtitle">Methods of parameter optimisation</h2>
 
-                <p class="text-content"> Mathematical Modelling describes complex biological systems and concepts with mathematical
-                    equations. Setting up the initial conditions in the model is not that straight forward.
-                    If no experimental data is available reasonable assumptions, based on literature, logic and
-                    quantitative analysis, need to be made. We believe that the initial assumptions made are crucial
-                    to cracking a model. Once established, the parameters need to constantly be optimized with experimental
-                    data and/or literature data in order to maximize a fit to reality. Parameter optimization adds all
-                    the weight to a model's credibility, this is why we decided to approach our models with two parameter
-                    optimization techniques. We used: Sensitivity Analysis and Parameter Sampling.
+                <p class="text-content"> Mathematical Modelling describes complex biological systems with mathematical
+                    equations and concepts. Setting up the initial conditions in the model is not that straight forward.
+                    If no experimental data is available, reasonable assumptions based on literature, logic and
+                    quantitative analysis need to be made. We believe that the initial assumptions made are crucial
+                    to crack the model. Once, established the parameters need to constantly be optimised with experimental
+                    data and/or literature data in order to fit reality to its maximum. Parameter optimisation adds all
+                    the weight to a model's credibility, this is why we decided to approach this in 2 ways:
+                    Sensitivity Analysis and Parameter Sampling.
                     <br>
                 <h2 class="subtitle" style="padding-top: 20px"> <i>Scroll down to find out more!</i> </h2></p>
             </div>
@@ -209,22 +209,21 @@
             <div class="text-section">
                 <h2 class="title">Sensitivity Analysis</h2>
 
-                <p class="text-content">Sensitivity Analysis is a conventionally used method for parameter optimization.
-                    A range of independent variables is tested with this technique and its impact on the dependent variable is evaluated.
-                    In our case, we  want to optimize the impact specific values will have on the rate limiting step of the cellular mechanism.
-                    So we are evaluate a range of values and analyze the data to see which ones have the greatest impact on the rate limiting step
-                    of the cellular mechanism. We applied this method of parameter optimization to
+                <p class="text-content">Sensitivity Analysis is a conventionally used method for parameter optimisation.
+                    A range of independent variables is tested in this technique and their impact on the dependent variable is evaluated.
+                    In our case, we  want to optimise the impact specific values will have on the rate limiting step of the cellular mechanism,
+                    So we are evaluating a range of values and analysing which ones optimise the proces. We applied this method of parameter optimisation to
                     the LEGIT and the LAME models.</p>
                 <br>
 
                 <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">Method</h2>
                     <ol class="text-content" style="width: 100%">
-                        <li style="margin-left: 20px">Identify the dependent variable to be optimized (the rate limiting step in our process)</li>
+                        <li style="margin-left: 20px">Identify the dependent variable to be optimised (the rate limiting step in our process)</li>
                         <li style="margin-left: 20px">Identify the independent variables that have an impact on this step</li>
-                        <li style="margin-left: 20px">From literature searches and experimental data obtain a range of values to be tested for each independent variable</li>
+                        <li style="margin-left: 20px">From literature search/ experimental data, obtain a range of values to be tested for each independent variable</li>
                         <li style="margin-left: 20px">Run the model for the range of values tested and identify the optimal condition for the rate limiting step</li>
-                        <li style="margin-left: 20px">Re-run the initial model to evaluate the impact of the optimized parameters on the overall process, i.e. to determine if the optimized step is prevailed the rate limiting step in the overall cellular mechanism</li>
-                        <li style="margin-left: 20px">Determine the areas where research could be performed to further optimize the parameters (Wet Lab contribution)</li>
+                        <li style="margin-left: 20px">Re-run the initial model to evaluate the impact of the optimised parameters on the overall process, i.e. to determine if the optimised step is prevailed the rate limiting step in the overall cellular mechanism</li>
+                        <li style="margin-left: 20px">Determine the areas in which research could be performed to further optimise the parameters (Wet Lab contribution)</li>
                     </ol>
 
                 <div id="show1" class="text-section">
@@ -235,7 +234,7 @@
                         <p class="text-content" style="margin-left: 20px; padding:5px">
                             Given that transport of intimin to the surface of the E.coli cells is the rate
                             limiting step in the overall process, we are rewriting this ODE in order to simplify
-                            the Sensitivity Analysis for this step. </p>
+                            the Sensitivity Analysis on this step. </p>
                         <img src="../../assets/modellingMethods/sensitivityAnalysisEqu.png" style="width: 700px; height:700px; margin-top:10px">
                     </div>
                 </div>
@@ -243,24 +242,24 @@
 
             <div class="text-section">
                 <h2 class="title">Parameter Sampling</h2>
-                <p class="text-content">Parameter sampling is another technique used to tackle the issue of uncertain and incomplete knowledge of parameter values.
-                    This method relies on the random sampling of parameter values within a specified range.
+                <p class="text-content">Parameter sampling, is another technique used to tackle the issue of uncertain and incomplete knowledge of parameter values.
+                    It is a method of parameter optimisation, which relies on the random sampling of parameter values within a specified range.
                     A probability density function (PDF) determines the distribution of the continuous random variables evaluated in the function.
-                    Parameter sampling considers biological noise, so it creates a model with a more realistic representation of the behavior of a biological system.</p>
+                    Parameter sampling considers biological noise, making it a more realistic representation of the behaviour of a biological system.</p>
                 <br>
                 <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">Method</h2>
                     <ol class="text-content" style="width: 100%">
-                        <li style="margin-left: 20px">Identify the dependent variable to be optimized (the rate limiting step in our process)</li>
-                        <li style="margin-left: 20px">Identify the independent variables that have an impact on the step we are trying to optimize</li>
+                        <li style="margin-left: 20px">Identify the dependent variable to be optimised (the rate limiting step in our process)</li>
+                        <li style="margin-left: 20px">Identify the independent variables that have an impact on the step we are trying to optimise</li>
                         <li style="margin-left: 20px">Collect raw data from literature</li>
-                        <li style="margin-left: 20px">Process raw data by assigning weights to the values depending on the similarity to the to-be-optimized parameter</li>
-                        <li style="margin-left: 20px">Calculate the weighted mean for all the optimize parameters</li>
-                        <li style="margin-left: 20px">Generate probability densitiy functions (PDFs);input the sample size, standard deviation and weighted mean</li>
+                        <li style="margin-left: 20px">Process raw data by assigning weights to the values depending on the similarity to the to-be-optimised parameter</li>
+                        <li style="margin-left: 20px">Calculate the weighted mean for all the optimised parameters</li>
+                        <li style="margin-left: 20px">Generate probability densitiy functions (pdf);input the sample size, standard deviation and weighted mean</li>
                     </ol>
                 <br>
                 <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LEGIT model</h2>
                 <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of
-                    transport of intimin. For this, the values of K<sub>m</sub> and V<sub>max</sub> are evaluated. </p>
+                    transport of intimin. For this the values of K<sub>m</sub> and V<sub>max</sub> are evaluated. </p>
 
                 <img src="../assets/modellingMethods/Bacterial%20Tree%20Diagram.svg" class="image-content-graphs" style="width:600px; height:300px">
 
@@ -274,12 +273,12 @@
                 <p class="text-content" style="padding-top: 0">Weighted mean of V<sub>max</sub>: 300000 s<sup>-1</sup>(1 s.f.) </p>
                 <br>
                 <br>
-                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimize the value of K<sub>m</sub></a></p>
-                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimize the value of V<sub>max</sub></a></p>
+                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of K<sub>m</sub></a></p>
+                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of V<sub>max</sub></a></p>
                 <br>
 
                 <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LAME model</h2>
-                <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of translation of Red Fluorescent Protein (RFP). For this the rate of nuclear export of the transcript and the rate of RFP degradation are evaluated.</p>
+                <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of translation of GFP. For this the rate of nuclear export of the transcript and the rate of GFP degradation are evaluated.</p>
 
                 <img src="../assets/modellingMethods/Mammalian%20Tree%20Diagram.svg" class="image-content-graphs" style="width:600px; height:300px">
 
@@ -293,8 +292,8 @@
                 <p class="text-content" style="padding-top: 0">Weighted mean of rate of degradation: 8.96 x 10<sup>-1</sup> s<sup>-1</sup></p>
                 <br>
                 <br>
-                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimize the  rate of nuclear export</a></p>
-                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimize the rate of degradation</a></p>
+                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the  rate of nuclear export</a></p>
+                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the rate of degradation</a></p>
 
             </div>
 
@@ -305,8 +304,8 @@
                         <p class="text-content"> This summer we decided to run our models on two different programming languages:
                             MATLAB and Python. Both are high level languages that allowed us to create robust simulations.
                             Upon starting iGEM, everyone on the modelling team wanted to learn a new programming language.
-                            We decided to learn Python as it is an open source software with wide applications and has a range of resources and tutorials
-                            available online. We also decided to use MATLAB for our models, as we were already familiar
+                            Python is an open source software and it is relatively easy to find resources online to help
+                            troubleshoot our codes. We also decided to use MATLAB for our models, as we were already familiar
                             with this language from our engineering degrees. </p>
                     </div>
 
