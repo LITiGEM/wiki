@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
@@ -407,36 +407,41 @@
 
                 <h2 class="subtitle"><a href="https://github.com/LITiGEM/Simulation/tree/master/Game%20of%20LIT/LIT"> Click here to access Github</a></h2>
 
+
                 <h1 class="title">How does it work?</h1>
 
-                <p class="text-content">[ADD DIAGRAMS ]</p>
-
                 <p class="text-content">
-                    <ol class="text-content">
-                    <li style="margin-left: 20px">When no light is shone, all the cells on the grid are "unbound"</li>
-                    <li style="margin-left: 20px">Define the number of "agents" the genetic algorithm should test</li>
-                    <li style="margin-left: 20px">The genetic algorithm selects the "best agent"</li>
-
-            </ol>
+                    <img src="../assets/GOLIT/GoLIT%20Dark.svg" class="image-content-graphs" style="width:1000px; height:300px; max-width:90%">
+                    <br>When no light is shone, all the cells on the grid are "unbound"
+                    <br>
+                    <br>
+                    <img src="../assets/GOLIT/GoLIT%20Light.svg" class="image-content-graphs" style="width:2000px; height:300px; max-width:80%">
+                    <br>Define the number of "agents" the genetic algorithm should test
+                    <br>
+                    <br>
+                    <img src="../assets/GOLIT/GoLIT%20Trophy.svg" class="image-content-graphs" style="width:900px; height:300px; max-width: 70%">
+                    <br>The genetic algorithm selects the "best agent"
                 </p>
-                <h1 class="title">Results</h1>
-                <p class="text-content">As described above the genetic algorithm is an automated way of optimising the
-                conditions of the grid. In our case the dependent variable that we want to optimise is the time it takes
-                to fill up the grid, i.e. optimise the model such that the lowest possible number of generations is needed to
-                    fill up the grid. The independent
-                    variable that affects time is the initial light pattern.
-                <br>
-                <br>Once the genetic algorithm has selected the "best agent", it provides two main results: the probabilities
-                we should set for the rules of the game and the number of generations that will be needed to fill up the
-                    grid with those probabilities.</p>
 
-                <img src="../assets/GOLIT/python.png" class="image-content-graphs" style="width: 800px; height: 160px">
-                <ul class="text-content">When running the model in Python, the genetic Algorithm prints theses results:
-                    <li style="margin-left: 20px">Finding best agent: the 5 probabilities listed correspond to the "optimal"
-                    rules that will allow the cells to aggregate fastest.</li>
-                    <li style="margin-left: 20px">Finding Cover time: this indicates the number of generations it will
-                    take for the grid to fill up, assuming the probabilities given by the best agent are used</li>
-                </ul>
+
+                    <h1 class="title">Results</h1>
+                    <p class="text-content">As described above the genetic algorithm is an automated way of optimising the
+                    conditions of the grid. In our case the dependent variable that we want to optimise is the time it takes
+                    to fill up the grid, i.e. optimise the model such that the lowest possible number of generations is needed to
+                        fill up the grid. The independent
+                        variable that affects time is the initial light pattern.
+                    <br>
+                    <br>Once the genetic algorithm has selected the "best agent", it provides two main results: the probabilities
+                    we should set for the rules of the game and the number of generations that will be needed to fill up the
+                        grid with those probabilities.</p>
+
+                    <img src="../assets/GOLIT/python.png" class="image-content-graphs" style="width: 800px; height: 160px">
+                    <ul class="text-content">When running the model in Python, the genetic Algorithm prints theses results:
+                        <li style="margin-left: 20px">Finding best agent: the 5 probabilities listed correspond to the "optimal"
+                        rules that will allow the cells to aggregate fastest.</li>
+                        <li style="margin-left: 20px">Finding Cover time: this indicates the number of generations it will
+                        take for the grid to fill up, assuming the probabilities given by the best agent are used</li>
+                    </ul>
 
             </div>
 
