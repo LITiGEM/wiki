@@ -205,7 +205,7 @@
                 <br>
                 Breakdown of the cellular mechanisms involved in the expression of intimin:
                 <br>
-                <img src="../../assets/Bac_equations1.png" class="image-content image-content-here" style="width:450px; height:350px; margin-left: 50px ">
+                <img src="../../assets/Bac_equations1.png" class="image-content-graphs image-content-here" style="width:450px; height:350px; margin-left: 50px ">
                 <br>
                 <p>Legend:
                     <br>EL222<sub>M</sub> = EL222 monomer
@@ -224,7 +224,7 @@
                 <li class="text-section"> 3. Translation</li>
                 <li class="text-section"> 4. Transport of intimin from the cells cytoplasm to the cell surface</li> </ol>
 
-            <img src="../../assets/Barch/Barc_Overview.jpg" class="image-content">
+            <img src="../../assets/Barch/Barc_Overview.jpg" class="image-content-graphs">
 
             <p class="text-content" style="margin-top: 0; padding-top:0 ">LEGIT differs from conventional protein expression models
                 as it incorporates two innovative twists. The first  is rate kinetics that are dependent on light induced systems.
@@ -251,7 +251,7 @@
 
                 <h1 class="title ">1.) Light activation</h1>
 
-                <img id="special-image-1" src="../../assets/Barch/Barc_dimerisation.jpg" class="image-content" style="margin-bottom: 0">
+                <img id="special-image-1" src="../../assets/Barch/Barc_dimerisation.jpg" class="image-content-graphs" style="margin-bottom: 0">
 
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter
                     <br> <i>Location: Cytoplasm</i>
@@ -263,15 +263,15 @@
 
                 </p>
 
-                <img src="../../assets/eq_activation.png" class="image-content" style="width:600px; height:100px">
+                <img src="../../assets/eq_activation.png" class="image-content-graphs" style="width:600px; height:100px">
                 <p class="text-content"> Since we know that photo-activation is dependent upon light intensity (L) we used the Hill
                     equation in our ODE to evaluate our inducible promoter genetic circuits. We did this so we could evaluate the effect different
                     light intensities would have on the rate of photo-activation of EL222.
                 </p>
-                <img src="../../assets/eq_hill.png" class="image-content" style="width:400px; height:120px">
+                <img src="../../assets/eq_hill.png" class="image-content-graphs" style="width:400px; height:120px">
 
                 <h1 class="title">2.) Transcription</h1>
-                <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content image-content-here">
+                <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs image-content-here">
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
                     <br>
                     <i>Location: Cytoplasm</i>
@@ -282,10 +282,10 @@
                     when accounting for mRNA equilibriums.
 
                 </p>
-                <img src="../../assets/bac_transcription.png" class="image-content" style="width: 420px; height: 100px">
+                <img src="../../assets/bac_transcription.png" class="image-content-graphs" style="width: 420px; height: 100px">
 
                 <h1 class="title">3.) Translation</h1>
-                <img src="../../assets/Barch/Barc_Translation.png" class="image-content image-content-here">
+                <img src="../../assets/Barch/Barc_Translation.png" class="image-content-graphs image-content-here">
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 3: Translation
                     <br>Location: Cytoplasm</i>
                     <br>
@@ -295,20 +295,20 @@
                     continuously transported to the surface of the E. coli cell, therefore intimins' concentration in the cell also decreases. To account
                     for fluctuation, we created a function that takes the transport rate of intimin to the surface to the E. Coli cells into consideration as well.
                 </p>
-                <img src="../../assets/translation_eq1.png" class="image-content" style="width: 550px; height:90px">
+                <img src="../../assets/translation_eq1.png" class="image-content-graphs" style="width: 550px; height:90px">
                 <p class="text-content"> We expect the speed at which intimin is transported to the surface of the cell to decrease over time.
                     This is because as time passes there will be a decrease in available space for intimin on the cell surface. We adapted the
                     Michaelis Menten equation to allow for the consideration of: the intimin proteins already occupying space on the cell surface; (P<sub>Surface</sub>)
                     and the maximum available space for intimin proteins on the cell surface. The variable  was set as the limit for the
                     maximum number of intimin proteins that can be expressed on the cell surface, thus preventing any other proteins from becoming expressed.
                 </p>
-                <img src="../../assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
+                <img src="../../assets/transport_bac.png" class="image-content-graphs" style="width: 370px; height:130px">
                 <p class="text-content" >Finally, we also decided to take into consideration the fact that dilutions can occur due to cell growth and the half-life of the intimin protein. As such we introduced a degradation term to represent such degradations of intimin over time.
                 </p>
 
                 <h1 class="title">4.) Transport</h1>
 
-                <img src="../../assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content image-content-here">
+                <img src="../../assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content-graphs image-content-here">
                 <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 4: Transport of intimin to the surface of the cell
                     <br>
                     <i>Location: Cell surface</i>
@@ -317,7 +317,7 @@
                     surface over time. This equation takes both the rate at which intimin is being transported to the cell surface
                     and the intimins’ degradation rate into consideration.
                 </p>
-                <img src="../../assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
+                <img src="../../assets/transport_surface_eq1.png" class="image-content-graphs" style="width: 500px; height: 90px">
 
 
             <!-- add link to the project description page-->
@@ -334,7 +334,7 @@
                 <br>
                 <!-- ADD HYPERLINK-->
             <h2 class="subtitle"> <b><i>Click here to check out our approaches and assumptions! </i></b></h2>
-            <img src="../../assets/Barch/Barc_RK.png" class="image-content image-content-here">
+            <img src="../../assets/Barch/Barc_RK.png" class="image-content-graphs image-content-here">
                 <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1: </i> Demonstrates the rate of the cellular mechanisms involved in the expression of intimin
                     (More specifically the rate of: EL222D production and binding to the LuxI promoter; Transcription; Translation; and Transport of translated Intimin to the cell surface)
 
@@ -344,7 +344,7 @@
                     evaluate only the rate of intimin transportation to the cell surface on a rescaled plot.
 
                 </p>
-                 <img src="../../assets/Barch/Barc_RLS.png" class="image-content" style="width: 750px; height: 500px">
+                 <img src="../../assets/Barch/Barc_RLS.png" class="image-content-graphs" style="width: 750px; height: 500px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 2: </i> Depicts the rescaled Graph to view the rate of Surface Expression of Intimin
                 </p>
 
@@ -391,7 +391,7 @@
                 the maximum light intensity E. coli can withstand before they start to die.
                 </p>
                 <h2 class="subtitle">Sensitivity Analysis of Light Intensities </h2>
-                <img src="../../assets/Barch/Barc_Intensity.png" class="image-content" style="width: 800px; height: 450px">
+                <img src="../../assets/Barch/Barc_Intensity.png" class="image-content-graphs" style="width: 800px; height: 450px">
                 <br>
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 3: </i> Demonstrates the effect light intensity has on the concentration and rate of expression of intimin on the cell surface
             </p>
@@ -415,9 +415,9 @@
                 <p class="text-content">We decided to optimize the rate-limiting parameters present in the ODE which describes
                     the transport of intimin from the cell cytoplasm to the cell surface.
 
-                    <img src="../../assets/transport_surface_eq1.png" class="image-content" style="width: 500px; height: 90px">
+                    <img src="../../assets/transport_surface_eq1.png" class="image-content-graphs" style="width: 500px; height: 90px">
 
-                    <img src="../../assets/transport_bac.png" class="image-content" style="width: 370px; height:130px">
+                    <img src="../../assets/transport_bac.png" class="image-content-graphs" style="width: 370px; height:130px">
                     <br>
                     <br>
                     The two rate-limiting parameters identified were: V<sub>max</sub> and K<sub>m</sub>.
@@ -433,7 +433,7 @@
                 </p>
                 <h2 class="subtitle">Sensitivity Analysis for K<sub>m</sub> </h2>
 
-                <img src="../../assets/Barch/Barc_SAKm.png" class="image-content" style="width: 800px; height: 450px">
+                <img src="../../assets/Barch/Barc_SAKm.png" class="image-content-graphs" style="width: 800px; height: 450px">
                 <br>
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 5:</i> Evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface with the use of a Sensitivity Analysis
                 <br>
@@ -446,7 +446,7 @@
 
                 <h2 class="subtitle">Parameter Sampling for K<sub>m</sub></h2>
 
-                <img src="../../assets/Barch/Bac_PSKm.png" class="image-content" style="width: 800px; height: 450px">
+                <img src="../../assets/Barch/Bac_PSKm.png" class="image-content-graphs" style="width: 800px; height: 450px">
 
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 6:</i> Evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface with the use of Parameter Sampling</p>
 
@@ -464,7 +464,7 @@
 
             <h2 class="subtitle">Sensitivity Analysis for V<sub>max</sub></h2>
 
-                <img src="../../assets/Barch/Barc_SAVmax.png" class="image-content" style="width: 800px; height: 450px">
+                <img src="../../assets/Barch/Barc_SAVmax.png" class="image-content-graphs" style="width: 800px; height: 450px">
                 <br>
             <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 7:</i> Evaluates the effect V<sub>max</sub> has on the
                 rate of intimin expression on the cell surface with the use of a Sensitivity Analysis
@@ -474,7 +474,7 @@
                 our V<sub>max</sub> value.</p>
 
             <h2 class="subtitle">Parameter Sampling for V<sub>max</sub></h2>
-                <img src="../../assets/Barch/Bac_PSVmax.png" class="image-content" style="width: 800px; height: 450px">
+                <img src="../../assets/Barch/Bac_PSVmax.png" class="image-content-graphs" style="width: 800px; height: 450px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 8:</i> Evaluates the effect
                     V<sub>max</sub> has on the rate of intimin expression on the cell surface with the use of Parameter Sampling
                     <br>
@@ -500,7 +500,7 @@
                 ensure we received a curved response that would simulate the activation and deactivation of our cellular mechanisms
                 for a defined period of time.</p>
 
-                <img src="../../assets/Barch/Bac_1pulse.png" class="image-content" style="width:950px; height: 450px">
+                <img src="../../assets/Barch/Bac_1pulse.png" class="image-content-graphs" style="width:950px; height: 450px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 9:</i> Evaluates the effect a single pulse has on the rate
                     kinetics of the expression of intimin
                     <br>
@@ -513,7 +513,7 @@
                     <br> We then wanted to evaluate the effect pulsing for periods of 4 hours would have on the expression of intimin
                     on the surface of the cell.</p>
 
-                <img src="../../assets/Barch/Bac_3pulse.png"  class="image-content image-content-here" style="width: 700px; height: 500px">
+                <img src="../../assets/Barch/Bac_3pulse.png"  class="image-content-graphs image-content-here" style="width: 700px; height: 500px">
                 <p class="text-content"><i>Figure 10:</i> Demonstrates the effect pulsing light, at 4-hour intervals,
                     has on the rate kinetics of the expression of intimin
                     <br>
@@ -549,7 +549,7 @@
                 <h2 class="subtitle" style="margin-top: 25px; color: rgba(204, 0, 53, 0.69)">Running the model with optimized parameters</h2>
                 <p class="text-content">We ran our rate kinetics model with our newly optimized parameters and determined that our optimized parameters produced a 16% increase in the concentration of intimin transported to the surface of the cells. However, the same amount of time was taken for the intimin expression rate to plateau. Therefore, this
                 means that although the concentration of intimin expressed on the surface of the cell was optimized this step prevails as being the rate-limiting step in the network of cellular mechanisms involved.</p>
-                <img src="../../assets/Barch/Barc_OptCond.png" class="image-content" style="width: 750px; height:500px">
+                <img src="../../assets/Barch/Barc_OptCond.png" class="image-content-graphs" style="width: 750px; height:500px">
                 <p class="text-content"><i>Figure 11: </i> Comparison of the optimized and unoptimized rate kinetics for the transport of intimin to the cell surface </p>
 
             </div>
@@ -563,18 +563,18 @@
                 into consideration, where we attempted to identify the most cost-efficient operational
                 conditions for our tool.
 
-                <img src="../../assets/Barch/Barc_LICTable.png" class="image-content" style="width: 700px; height:200px">
+                <img src="../../assets/Barch/Barc_LICTable.png" class="image-content-graphs" style="width: 700px; height:200px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Outlines the operating costs incurred for operating the optogenetic tool with a range of light intensities with no light pulsing present
                 <br>
                 <br> We also decided to analyze the impact light pulsing would have on the overall process costs.</p>
 
-                <img src="../../assets/Mam/Mam_PCTable.png.png" class="image-content" style="width: 700px; height:200px">
+                <img src="../../assets/Mam/Mam_PCTable.png.png" class="image-content-graphs" style="width: 700px; height:200px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 15: </i> Outlines the operating costs incurred for pulsing the light source of the optogenetic tool over a range of frequencies at a light intensity of 40 W/cm<sup>2</sup></p>
 
                 <p class="text-content"> We then decided to plot both the costs incurred for different light intensities and the
                 pulsing durations on the same graph to evaluate their synergistic effect.
 
-                <img src="../../assets/Barch/Bac_CostOpt.png" class="image-content" style="width:800px; height:500px">
+                <img src="../../assets/Barch/Bac_CostOpt.png" class="image-content-graphs" style="width:800px; height:500px">
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 17: </i> Demonstrates a comparison of the effects of light pulsing and light intensity on the overall cost of our optogenetic tool
 
                Figure 17 exhibits that the costs incurred to operate our optogenetic tool increases proportionally to the light intensity and the light pulsing frequency used. We decided to define the optimum operating conditions for our optogenetic tool as those at which both
@@ -636,15 +636,15 @@
 
             <h3 class="title">LEGIT Species</h3>
 
-            <img src="../../assets/Barch/Species.png" class="image-content image-content-here">
+            <img src="../../assets/Barch/Species.png" class="image-content-graphs image-content-here">
 
             <h3 class="title">LEGIT Parameters</h3>
 
-            <img src="../../assets/Barch/Parameters.png" class="image-content" style="width: 900px; height:700px">
+            <img src="../../assets/Barch/Parameters.png" class="image-content-graphs" style="width: 900px; height:700px">
 
             <h5 class="title">LEGIT Initial Conditions</h5>
 
-            <img src="../../assets/Barch/InitCond.png" class="image-content" style="width: 900px; height:1000px">
+            <img src="../../assets/Barch/InitCond.png" class="image-content-graphs" style="width: 900px; height:1000px">
 
             <h6 class="title">Bibliography</h6>
             <br>
