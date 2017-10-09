@@ -162,7 +162,7 @@
 </div>
 
 <div class="container-fluid">
-    <div class="row">
+    <p class="row">
 
         <!-- The side navbar -->
         <nav id="side-index" class="col-sm-2">
@@ -177,26 +177,36 @@
 
         <!-- Content -->
         <div style="float: right !important" class="col-sm-10">
-            <div class="text-section">
-                <h1 class="title"> GOLIT -  Cell adhesion to form bacterial 3D structures </h1>
-                <h2 class="subtitle">Cellular automata a different approach to modelling in SynBio</h2>
-                <p class="text-content">GOLIT is an adapted version of Conway’s ‘Game of Life’ [add link to glossary].
-                    It aims to create a visual representation of how solid cell structures are formed from the binding of SpyTag
+
+
+
+            <div class="container-fluid" style="border: none">
+                <img src="../assets/GOLIT/GOLITGIF.gif" class="image-content-graphs" style="height:400px; width: 80%; margin-left:35px; padding: 0; position: absolute; padding-top:10px; padding-bottom: 10px"">
+                <div class="text-content" style="max-width: 100%; padding-left: 0px; text-align: center">
+                    <h1 class="title" style="position: relative; padding-top:150px; font-size: 50px; max-width:80%!important"> GOLIT -  The Model of 3D structures </h1>
+                    <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69); max-width:80%!important">Cellular automata:  a different approach to modelling in SynBio</h2>
+                </div>
+            </div>
+
+            <div class="text-section" style="border: none; padding-top: 120px">
+                <p class="text-content">GOLIT is an adapted version of Conway’s ‘Game of Life’.
+                    It aims to visually represent how solid cell structures are formed from the binding of SpyTag
                     and SpyCatcher.</p>
                 <ul class="text-content">We attempted to optimise the rate at which cell adhesion occurs in the GOLIT
-                    model and introduced a range of novel approaches:
+                    model by introducing a range of novel approaches:
                     <br>
-                    <li style="margin-left: 40px">Combination of ordinary differential equations for gene expression and cellular automata for spatial analysis</li>
-                    <li style="margin-left: 40px">Genetic Algorithm for automated parameter optimization</li>
-                    <li style="margin-left: 40px">Experimental data for parameter optimization</li>
+                    <br>
+                    <li style="margin-left: 40px">Combination of gene expression kinetics and cellular automata: Two ways to perform spatial analysis</li>
+                    <li style="margin-left: 40px">Artificial Intelligence: Genetic Algorithm for automated parameter optimization</li>
+                    <li style="margin-left: 40px">Experimental data: Wet Lab contribution for parameter optimization</li>
                 </ul>
             </div>
 
             <div class="text-section">
                 <h2 class="title">What are we modelling?</h2>
-                <p class="text-content"> We are modelling a cellular automaton to dynimically represent the adhesion of cells.
+                <p class="text-content"> We are modelling a  <a href="glossary_o.html">cellular automaton</a> to dynimically represent the adhesion of cells.
                     Our Wet Lab team is engineering E. coli cells to express the surface protein intimin. The binding partners
-                    SpyTag and SpyCatcher are then attached to the surface protin (this expression system is modellied in the LEGIT model).
+                    SpyTag and SpyCatcher are then attached to the surface protein (this expression system is modelled in the <a href="modelling_barc_o.html">LEGIT model </a>).
                     When SpyTag and SpyCatcher come in contact they form a covalent bond and allow cells to aggregate and form bacterial structures. With GOLIT we are simulating the adhesion of these binding
                     partners over time by considering the concentration of cells in a cell culture as well as
                     assessing probabilities depending on specific conditions (described below). In short we are modelling
@@ -205,18 +215,20 @@
                 <p class="text-content">[ADD DIAGRAMS ]</p>
 
                 <h2 class="title">How did we adapt the Game of Life? </h2>
-                <p class="text-content">Similarly to Conway's Game of Life, we are representing the cells on a 2D grid and
-                    the game is updating their state over time.
+                <p class="text-content">Similarly to <a href="glossary_o.html">Conway's Game of Life,</a> we are representing the cells on a 2D grid and when running the model,
+                    the cells are constantly updated over a defined period of time.
                     In the GOLIT model the cells can either be in the “bound” or “unbound” state. The game requires to define the state of all the cells on the grid
-                    and update the grid according to a set of rules after each time point. The state of a cell at particular
+                    and update the grid according to a set of rules after each time point. The state of a cell at a particular
                     time point depends on the the state of its neighboring cells as well as the concentration of SpyTag/
                     SpyCatcher expressed on the surface of the cells.
                     <br>
                     <br> The rules below assign probabilities of one cell becoming "bound" depending on the
                     number of neighbors in the "bound" state it has.
+                <br>
+                <br>
 
-                <h2 class="subtitle">Rules of the Game of LIT </h2>
-                <table style="width: 60%; margin-left: 170px">
+                <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">Rules of the Game of LIT </h2>
+                <table class="text-content-duo-primary" style="width: 60%; margin-left: 160px!important">
                     <tr>
                         <th class="text-content" style="padding: 0">Number of "bound" neighbors</th>
                         <th class="text-content" style="padding: 0">Probability of binding (%)</th>
@@ -255,7 +267,7 @@
                 <p class="text-content">
                     Aim: Determine which light intensity allows the fastest cell aggregation, i.e. binding of SpyTag and SpyCatcher
                     <br>
-                    <br>The particularity of the GOLIT model lies in the combination of rate kinetics for protein expression and cellular
+                    <br>The particularity of the GOLIT model lies in fact that we are combining rate kinetics of protein expression with cellular
                     automata for spatial analysis. The concentration of SpyTag and SpyCatcher expressed on the surface of the engineered E. coli
                     cells is critical for the efficiency of cell adhesion. The LEGIT model uses rate kinetics to model the rate of intimin expressed
                     on the surface of the bacteria for light intensities within the range 0-70 W/cm<sup>2</sup>.
@@ -267,156 +279,110 @@
                 <ul class="text-content">Setting up the Initial conditions for the model:
                     <li style="margin-left: 40px"> Dimensions of the 2D grid (height and length)</li>
                     <li style="margin-left: 40px"> The initial amount of bound cells at time point, t=0</li>
-                    <li style="margin-left: 40px"> The initial 8amount of unbound cells at time point, t=0</li>
+                    <li style="margin-left: 40px"> The initial amount of unbound cells at time point, t=0</li>
                     <li style="margin-left: 40px"> The number of generations, i.e. the number of times the grid will be updated</li>
                     <li style="margin-left: 40px"> The duration of each generation</li>
                 </ul>
-                <p class="text-content"> We ran the model for light intensities 18 W/cm<sup>2</sup>, 35 W/cm<sup>2</sup>,
-                    53 W/cm<sup>2</sup>, 70 W/cm<sup>2</sup>, i.e. the same values tested in the intimin expression model (LEGIT).
-                    We selected to run the LEGIT model on a grid with dimensions 50x50. </p>
-                <h2 class="subtitle"><i>Click here to check out our code!</i></h2> <!-- Add link to Github-->
-                <br>
+
+                <h2 class="subtitle" style="margin-top: 20px"><a href="https://github.com/LITiGEM/Simulation/tree/master/Game%20of%20LIT">Click here to check out our code!</a></h2>
                 <h2 class="title">Results</h2>
-              
-                <p class="text-content">
-                    <ul class="text-content">We ran the model with these initial conditions:
-                        <li>50 generations </li>
-                        <li>initially no cells in the </li>
-                        <li></li>
+
+                <p class="text-content"> We ran the GOLIT model for light intensities 0W/cm<sup>2</sup>, 18W/cm<sup>2</sup>, 35W/cm<sup>2</sup>,
+                    53W/cm<sup>2</sup>, and 70W/cm<sup>2</sup>, i.e. the same values tested in the intimin expression model (LEGIT).
+                    For each light intensity tested, we plotted the number of cells vs. time points.
+                    <br>
+                    <ul class="text-content">Setting up the conditions for the game:
+                    <li style="margin-left: 40px"> Dimensions of the 2D grid: 50x50 matrix</li>
+                    <li style="margin-left: 40px"> Evaluate the adhesion of cells for 15 generations</li>
+                    <li style="margin-left: 40px"> Initially at time, t=0, no cells are in the "bound" state </li>
+                    <li style="margin-left: 40px"> Black cells represent "bound" cells and white cells are "unbound" cells</li>
                     </ul>
+                 </p>
 
+                <img src="../assets/GOLIT/S_0plot.jpg" class="image-content-graphs" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/GOLIT/S_0grid.jpg" class="image-content-graphs" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px"><i>Fig. 1 </i>For light intensity 0 W/cm<sup>2</sup>, the plot shows the number of bound cells vs. number of generations and the grid visually represents the amount of bound cells after 15 generations </p>.
 
-                    We set the initial conditions for the model We ran the GOLIT model with initially no cells in the “bound” state for 15 generations.
-                    For each light intensity tested, we plotted the number of cells vs. time points and the grid obtained after running
-                    the model for 15 generations. On the grid the black cells represent "bound" cells and the white cells the "unbound" cells.
-                </p>
-                <p class="text-content"><b>For 18 W/cm<sup>2</sup></b></p>
-                <img src="../assets/GOLIT/18_plot15.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
-                <img src="../assets/GOLIT/18_grid15.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
-                <p class="text-content" style="padding-top: 0px">Fig. 1 shows cell aggregation for light intensity 18 W/cm<sup>2</sup> </p>.
+                <img src="../assets/GOLIT/S_18plot.jpg" class="image-content-graphs" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/GOLIT/S_18grid.jpg" class="image-content-graphs" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px"><i>Fig. 2 </i>For light intensity 18 W/cm<sup>2</sup>, the plot shows the number of bound cells vs. number of generations and the grid is a visual representation of bound cells obtained after 15 generations </p>
 
-                <p class="text-content"><b>For 35 W/cm<sup>2</sup></b></p>
-                <img src="../assets/GOLIT/35_plot15.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
-                <img src="../assets/GOLIT/35_grid15.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
-                <p class="text-content" style="padding-top: 0px">Fig. 2 shows cell aggregation for light intensity 35 W/cm<sup>2</sup> </p>.
+                <img src="../assets/GOLIT/S_35plot.jpg" class="image-content-graphs" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/GOLIT/S_35grid.jpg" class="image-content-graphs"style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px"><i>Fig. 3 </i>Similarly, for light intensity 35 W/cm<sup>2</sup>, the plot represents teh rate of binding by plotting the number of bound cells vs. number of generations and the grid visually represents the amount of bound cells after 15 generations </p> </p>.
 
-                <p class="text-content"><b>For 53 W/cm<sup>2</sup></b></p>
-                <img src="../assets/GOLIT/53_plot15.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
-                <img src="../assets/GOLIT/53_grid15.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
-                <p class="text-content" style="padding-top: 0px">Fig. 3 shows cell aggregation for light intensity 53 W/cm<sup>2</sup> </p>.
+                <img src="../assets/GOLIT/S_53plot.jpg" class="image-content-graphs" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/GOLIT/S_53grid.jpg" class="image-content-graphs"style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px"><i>Fig. 4 </i>Shows the number of bound cells vs. number of generations and the grid of bound/ unbound cells for light intensity 53 W/cm<sup>2</sup> </p></p>.
 
-                <p class="text-content"><b>For 70 W/cm<sup>2</sup></b></p>
-                <img src="../assets/GOLIT/70_plot15.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
-                <img src="../assets/GOLIT/70_grid15.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
-                <p class="text-content" style="padding-top: 0px">Fig. 4 shows cell aggregation for light intensity 70 W/cm<sup>2</sup> </p>.
-
-                <table style="width: 60%; margin-left: 170px">
-                    <tr>
-                        <th class="text-content" style="padding: 0">Light intensity (W/cm<sup>2</sup></th>
-                        <th class="text-content" style="padding: 0">Number of "bound" cells</th>
-                        <th class="text-content" style="padding: 0">Percentage of bound cells (%)</th>
-                    </tr>
-                    <tr>
-                        <th class="text-content" style="padding: 0">18</th>
-                        <td class="text-content" style="padding: 0">2476</td>
-                        <th class="text-content" style="padding: 0">99</th>
-
-                    </tr>
-                    <tr>
-                        <th class="text-content" style="padding: 0">35</th>
-                        <td class="text-content" style="padding: 0">2474</td>
-                        <th class="text-content" style="padding: 0">99</th>
-                    </tr>
-
-                    <tr>
-                        <th class="text-content" style="padding: 0">53</th>
-                        <td class="text-content" style="padding: 0">2474</td>
-                        <th class="text-content" style="padding: 0">99</th>
-                    </tr>
-
-                    <tr>
-                        <th class="text-content" style="padding: 0">70</th>
-                        <td class="text-content" style="padding: 0">2454</td>
-                        <th class="text-content" style="padding: 0">98</th>
-                    </tr>
-
-                </table>
-
-                <p class="text-content">The table above summarises the efficiency of binding for every light intensity value tested.
-                Given the dimensions of the grid 50x50, we know that a maximum of 2500 cells can become bound. The ultimate  aim of the GOLIT model is to obtain a black grid, i.e. 100% bound cells. The results of the models
-                show an efficiency of 99% each, except for 70 W7cm<sup>2</sup>, where the value the efficiency is slightly lower. However, from the LEGIT model
-                we know that 18W/cm<sup>2</sup> allows for the highest production of surface protein. Hence, we would expect the GOLIT run at 18W/cm<sup>2</sup>
-                to give the highest rate of cell adhesion. In order to check if 18W/cm<suo>2</suo> gives the highest rate of cell adhesion, we ran the model again with
-                a lower generation number.</p>
-
-                <p class="text-content"> <i>Note that the GOLIT model is based on probabilities and that exact values will change
+                <img src="../assets/GOLIT/S_70plot.jpg" class="image-content-graphs" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/GOLIT/S_70grid.jpg" class="image-content-graphs" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px"><i>Fig. 5 </i> The plot shows the number of bound cells vs. number of generations for 53 W/cm<sup>2</sup> and the grid shows teh ratio of bound/unbound cells after 15 generations</p>
+                <br>
+                <p class="text-content" style="color: rgb(163, 161, 168)"> <i>Note that the GOLIT model is based on probabilities and that exact values will change
                     every time the model is ran. We are only interested in the genral trends rather than precise numbers.</i></p>
 
-                <p class="text-content">We kept all conditions constant except for the number of generations which we set to 10 and ran GOLIT again.</p>
-
-                <p class="text-content"><b>For 18 W/cm<sup>2</sup></b></p>
-                <img src="../assets/GOLIT/18_plot.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
-                <img src="../assets/GOLIT/18_grid.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
-                <p class="text-content" style="padding-top: 0px">Fig. 1 shows cell aggregation for light intensity 18 W/cm<sup>2</sup> </p>
-
-                <p class="text-content"><b>For 35 W/cm<sup>2</sup></b></p>
-                <img src="../assets/GOLIT/18_plot.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
-                <img src="../assets/GOLIT/18_grid.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
-                <p class="text-content" style="padding-top: 0px">Fig. 1 shows cell aggregation for light intensity 35 W/cm<sup>2</sup> </p>.
-
-                <p class="text-content"><b>For 53 W/cm<sup>2</sup></b></p>
-                <img src="../assets/GOLIT/18_plot.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
-                <img src="../assets/GOLIT/18_grid.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
-                <p class="text-content" style="padding-top: 0px">Fig. 1 shows cell aggregation for light intensity 53 W/cm<sup>2</sup> </p>.
-
-                <p class="text-content"><b>For 70 W/cm<sup>2</sup></b></p>
-                <img src="../assets/GOLIT/18_plot.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:10px">
-                <img src="../assets/GOLIT/18_grid.jpg" class="image-content" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
-                <p class="text-content" style="padding-top: 0px">Fig. 1 shows cell aggregation for light intensity 70 W/cm<sup>2</sup> </p>.
-
-                <table style="width: 60%; margin-left: 170px">
+                <table class="text-content-duo-primary" style="width: 60%; margin-left: 170px!important; margin-top:30px!important">
                     <tr>
-                        <th class="text-content" style="padding: 0">Light intensity (W/cm<sup>2</sup></th>
+                        <th class="text-content" style="padding: 0">Light intensity (W/cm<sup>2</sup>)</th>
                         <th class="text-content" style="padding: 0">Number of "bound" cells</th>
                         <th class="text-content" style="padding: 0">Percentage of bound cells (%)</th>
                     </tr>
+
+                    <tr>
+                        <th class="text-content" style="padding: 0">0</th>
+                        <td class="text-content" style="padding: 0">264</td>
+                        <th class="text-content" style="padding: 0">11</th>
+
+                    </tr>
+
                     <tr>
                         <th class="text-content" style="padding: 0">18</th>
-                        <td class="text-content" style="padding: 0">2077</td>
-                        <th class="text-content" style="padding: 0">83.1</th>
+                        <td class="text-content" style="padding: 0">2014</td>
+                        <th class="text-content" style="padding: 0">81</th>
 
                     </tr>
                     <tr>
                         <th class="text-content" style="padding: 0">35</th>
-                        <td class="text-content" style="padding: 0">2034</td>
-                        <th class="text-content" style="padding: 0"></th>
+                        <td class="text-content" style="padding: 0">2008</td>
+                        <th class="text-content" style="padding: 0">83</th>
                     </tr>
 
                     <tr>
                         <th class="text-content" style="padding: 0">53</th>
-                        <td class="text-content" style="padding: 0"></td>
-                        <th class="text-content" style="padding: 0"></th>
+                        <td class="text-content" style="padding: 0">1684</td>
+                        <th class="text-content" style="padding: 0">67</th>
                     </tr>
 
                     <tr>
                         <th class="text-content" style="padding: 0">70</th>
-                        <td class="text-content" style="padding: 0">2018</td>
-                        <th class="text-content" style="padding: 0"></th>
+                        <td class="text-content" style="padding: 0">1640</td>
+                        <th class="text-content" style="padding: 0">66</th>
                     </tr>
 
                 </table>
+                <p class="text-content" style="padding-top: 0px; margin-left:30px!important">Summary table the efficiency of binding for every light intensity tested. </p>
+                <br>
+                <p class="text-content"> Given the dimensions of the grid 50x50, we know that the maximum number of "bound" cells is 2500.
+                    The ultimate aim of the GOLIT model is to obtain a black grid, i.e. 100% bound cells. To start off
+                    we ran the model for 15 generations and compared the performance of each light intensity tested.
+                    From the LEGIT model we know that 18W/cm<sup>2</sup> gives the highest production of surface protein. We observe
+                    a the same result when running the GOLIT model, since 18W/cm<sup>2</sup> gives the highest number of bound cells after
+                    15 generations. </p>
 
-                <p class="text-content">The table above givea a summary of the efficiency of cell adhsesion for the
-                    different light intensities tested. In this case the focus was not put on filling up the grid but to compare the
-                rates at which the grids fill up, i.e. rates at which the cells aggregate, for the light intensities tested.
-                As expected, the model for light intensity 18W/cm<sup>2</sup> gives the highest rate of cell adhesion.</p>
+                <p class="text-content">When running the model for 15 generations, the focus was not put on filling up the
+                    grid but to compare the rates at which the grids fill up, i.e. rates at which the cells aggregate.
+                    Now, given that 18W/cm<sup>2</sup> represents the most efficient conditions to for bacterial cell adhesion,
+                    we want to test the number of generations that are required to fill up the grid. </p>
 
-                <!-- NOT SURE IF THIS IS NEEDED
-                <img src="../assets/GOLIT/18W:m2_range%20copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:0px">
-                <img src="../assets/GOLIT/35W:m2_range%20.jpg" class="image-content" style="width: 480px; height: 300px; padding-left:0px; padding-right:150px">
-                <img src="../assets/GOLIT/53W:m2_range%20copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-right:0px">
-                <img src="../assets/GOLIT/70W:m2_range%20copy.jpg" class="image-content" style="width: 480px; height: 300px; padding-left:0px; padding-right:150px">
-                -->
+                <img src="../assets/GOLIT/optimized_plot.jpg" class="image-content-graphs" style="width: 480px; height: 300px; padding-right:10px">
+                <img src="../assets/GOLIT/optimized_grid.jpg" class="image-content-graphs" style="width: 500px; height: 300px; padding-left: 10px; padding-right:180px">
+                <p class="text-content" style="padding-top: 0px"><i>Fig. 6 </i> shows number of aggregated cells after 80 generations for 18W/cm<sup>2</sup></p>.
+                <p class="text-content">As mentioned above, we identified the light intensity of 18W/cm<sup>2</sup> to give the
+                highest rate of cell aggregation. Hence, we ran the model again at this light to determine the time required
+                to fill up the grid. We obtained an efficiency of binding of 99% when running the model for 80 generations.
+                The next step is to optimize the model such as to reduce the number of generations needed to fill up the grid.
+                </p>
             </div>
 
             <div class="text-section">
@@ -425,7 +391,7 @@
                     fastest rate of cell aggregation.
                     <br>
                     <br>We decided to upgrade our model by incorporating artificial intelligence, more particularly
-                    Genetic Algorithm (GA). Genetic Algorithms, a type of subsymbolic artificial agents, adopt the
+                    <a href="glossary_o.html">Genetic Algorithm (GA)</a> . Genetic Algorithms, a type of subsymbolic artificial agents, adopt the
                     principles of Darwinian evolution to tackle the challenge of parameter optimization.
                     <br>In the context of GOLIT we are applying a genetic algorithm to optimize the initial grid,
                     i.e. the grid at time, t=0. In other words, this means that we are using Artificial Intelligence
@@ -437,7 +403,7 @@
                 </p>
 
                 <!-- may be worth adding a diagram here to illustrate this -->
-                <h2 class="subtitle"><i>Click here to access Github</i></h2>
+                <h2 class="subtitle"><a href="https://github.com/LITiGEM/Simulation/tree/master/Game%20of%20LIT/LIT"> Click here to access Github</a></h2>
                 <!-- ADD LINK TO GITHUB -->
 
                 <h1 class="title">How does it work?</h1>
@@ -455,13 +421,21 @@
                 <h1 class="title">Results</h1>
                 <p class="text-content">As described above the genetic algorithm is an automated way of optimising the
                 conditions of the grid. In our case the dependent variable that we want to optimise is the time it takes
-                to fill up the grid, i.e. the time required for all cells in the culture to bind to each other. The independent
+                to fill up the grid, i.e. optimise the model such that the lowest possible number of generations is needed to
+                    fill up the grid. The independent
                     variable that affects time is the initial light pattern.
                 <br>
-                <br>Once the genetic algorithm has selected the best agent, it provides two main results: the probabilities
+                <br>Once the genetic algorithm has selected the "best agent", it provides two main results: the probabilities
                 we should set for the rules of the game and the number of generations that will be needed to fill up the
-                    grid with those probabilities. </p>
+                    grid with those probabilities.</p>
 
+                <img src="../assets/GOLIT/python.png" class="image-content-graphs" style="width: 800px; height: 160px">
+                <ul class="text-content">When running the model in Python, the genetic Algorithm prints theses results:
+                    <li style="margin-left: 20px">Finding best agent: the 5 probabilities listed correspond to the "optimal"
+                    rules that will allow the cells to aggregate fastest.</li>
+                    <li style="margin-left: 20px">Finding Cover time: this indicates the number of generations it will
+                    take for the grid to fill up, assuming the probabilities given by the best agent are used</li>
+                </ul>
 
             </div>
 
@@ -470,18 +444,37 @@
                 <p class="text-content">The ultimate goal of developing mathematical models is to create robust systems
                     which are representative of reality. The best way to optimize parameters in a model is to tweek it with experimental data.
 
-
-                    We realize that experimental data is very valuable to optimize a mathematical model.
-                    Therefore, we simulated the bacterial SpyTag/ SpyCatcher adhesion chemically, by texting the adhesion
-                    between Biothin and Avadin. Similarly, to SpyTag and SpyCatcher, Biothin and Avadin form a covalent bond.
+                    Our Wet Lab team simulated the bacterial SpyTag/ SpyCatcher adhesion chemically, by testing the adhesion
+                    between Biotin and Avadin. Similarly, to SpyTag and SpyCatcher, Biotin and Avadin form a covalent bond.
                     This experimental data allowed us to optimize the concentration of surface proteins needed to achieve the
                     highest binding rate. </p>
-                <p class="text-content">[change the text add content about the lab procedure/protocol? and tehn experimental
-                data and maybe the video? ]</p>
+
+                <video controls class="image-content-graphs">
+                    <source src="../assets/GOLIT/cellAggregation.mp4" type="video/mp4" style="align-content: center">
+                </video>
+
+                <h2 class="subtitle">Click here to check the protocol of the cell aggregation experiment</h2>
+
+                <p class="text-content">[MISSING experimental data ]</p>
             </div>
 
-        </div>
-    </div>
+
+
+
+
+<div class="text-section">
+    <h2 class="title">Bibliography</h2>
+    <ol class="text-content" style="color: rgb(163, 161, 168)">
+        <li style="margin-left:20px">Introduction to Genetic Algorithms [Internet]. Doc.ic.ac.uk. 2017 [cited 8 October 2017]. Available from: https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html</li>
+        <li style="margin-left:20px ">Game of Life -- from Wolfram MathWorld [Internet]. Mathworld.wolfram.com. 2017 [cited 8 October 2017]. Available from: http://mathworld.wolfram.com/GameofLife.html</li>
+    </ol>
+
 </div>
+
+        <a href="#" id="myBtn" title="Go to top">Back to Top</a>
+                                                </div>
+        </div>
+</div>
+
 </body>
 </html>
