@@ -78,7 +78,7 @@
     <script>
         $(document).ready(function(){
             $("#show1").click(function(){
-                $("#hide1").slideToggle("slow");
+                $("#hidden-sanalysis").slideToggle("slow");
             });
             $("#show2").click(function(){
                 $("#hide2").slideToggle("slow");
@@ -93,9 +93,57 @@
         height:400px;
         width:800px;
     }
+
+	#hidden-sanalysis, #hide2 {
+		display:none;
+	}
+	#show1  {
+		height: auto;
+		background-color: rgba(204, 0, 53, 0.69) ;
+		overflow: hidden;
+		max-width:65%;
+		padding: 2% 3% 2% 5%;
+		position:relative;
+		margin-left: 150px;
+	}
+
+
+	#show2  {
+		height: auto;
+		background-color: rgba(204, 0, 53, 0.69);
+		overflow: hidden;
+		max-width:65%;
+		padding: 2% 3% 2% 5%;
+		position:relative;
+		margin-left: 150px;
+	}
+
+
+	#show1 p {
+		font-size: 30px !important;
+		font-weight: 500;
+		font-family: "Josefin Sans" !important;
+		color: black;
+		position:relative;
+		margin:0 !important;
+
+	}
+
+	#show2 p {
+		padding-top: 30px;
+		padding-right: 10%;
+		padding-left: 10%;
+		font-size: 30px !important;
+		font-weight: 500;
+		font-family: "Josefin Sans" !important;
+		font-color: black;
+		width:100%;
+		text-align: center;
+	}
+
 </style>
 
-<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+<body data-spy="scroll" data-target="#side-index">
 <!-- The top navbar -->
 <div class="container-fluid">
     <div id="top" class="row">
@@ -177,8 +225,8 @@
     <div class="row">
 
         <!-- The side navbar -->
-        <nav class="col-sm-2">
-            <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
+        <nav id="side-index" class="col-sm-2">
+            <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
                 <li id="step1" class="navy-link side-link"><a href="#section1">Overview</a></li>
                 <li id="step2" class="navy-link side-link"><a href="#section2">Sensitivity Analysis</a></li>
                 <li id="step3" class="navy-link side-link"><a href="#section3">Parameter Sampling</a></li>
@@ -188,7 +236,7 @@
         <!-- Content -->
         <div style="float: right !important" class="col-sm-10">
 
-            <div style="margin-top: 20px" class="text-section">
+            <div id="section1" style="margin-top: 20px" class="text-section">
 
                 <h1 class="title">Cracking the Model</h1>
                 <h2 class="subtitle">Methods of parameter optimisation</h2>
@@ -205,41 +253,51 @@
                 <h2 class="subtitle" style="padding-top: 20px"> <i>Scroll down to find out more!</i> </h2></p>
             </div>
 
-            <div class="text-section">
-                <h2 class="title">Sensitivity Analysis</h2>
+			<!-- Sensitivity analysis -->
+			<div id="section2" class="row">
+				<div class="text-section">
 
-                <p class="text-content">Sensitivity Analysis is a conventionally used method for parameter optimisation.
-                    A range of independent variables is tested in this technique and their impact on the dependent variable is evaluated.
-                    In our case, we  want to optimise the impact specific values will have on the rate limiting step of the cellular mechanism,
-                    So we are evaluating a range of values and analysing which ones optimise the proces. We applied this method of parameter optimisation to
-                    the LEGIT and the LAME models.</p>
-                <br>
+					<h2 class="title">Sensitivity Analysis</h2>
 
-                <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">Method</h2>
-                    <ol class="text-content" style="width: 100%">
-                        <li style="margin-left: 20px">Identify the dependent variable to be optimised (the rate limiting step in our process)</li>
-                        <li style="margin-left: 20px">Identify the independent variables that have an impact on this step</li>
-                        <li style="margin-left: 20px">From literature search/ experimental data, obtain a range of values to be tested for each independent variable</li>
-                        <li style="margin-left: 20px">Run the model for the range of values tested and identify the optimal condition for the rate limiting step</li>
-                        <li style="margin-left: 20px">Re-run the initial model to evaluate the impact of the optimised parameters on the overall process, i.e. to determine if the optimised step is prevailed the rate limiting step in the overall cellular mechanism</li>
-                        <li style="margin-left: 20px">Determine the areas in which research could be performed to further optimise the parameters (Wet Lab contribution)</li>
-                    </ol>
+					<p class="text-content">Sensitivity Analysis is a conventionally used method for parameter optimisation.
+						A range of independent variables is tested in this technique and their impact on the dependent variable is evaluated.
+						In our case, we  want to optimise the impact specific values will have on the rate limiting step of the cellular mechanism,
+						So we are evaluating a range of values and analysing which ones optimise the proces. We applied this method of parameter optimisation to
+						the LEGIT and the LAME models.</p>
+				</div>
 
-                <div id="show1" class="text-section">
-                    <p><i class="down" ></i> </p>
-                        <h2 class="tabletitle">Sensitivity Analysis method applied to LEGIT model</h2>
-                    </div>
-                    <div id="hide1">
-                        <p class="text-content" style="margin-left: 20px; padding:5px">
-                            Given that transport of intimin to the surface of the E.coli cells is the rate
-                            limiting step in the overall process, we are rewriting this ODE in order to simplify
-                            the Sensitivity Analysis on this step. </p>
-                        <img src="../../assets/modellingMethods/sensitivityAnalysisEqu.png" style="width: 700px; height:700px; margin-top:10px">
-                    </div>
-                </div>
+				<div class="text-section">
+					<h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">Method</h2>
+						<ol class="text-content" style="width: 100%">
+							<li style="margin-left: 20px">Identify the dependent variable to be optimised (the rate limiting step in our process)</li>
+							<li style="margin-left: 20px">Identify the independent variables that have an impact on this step</li>
+							<li style="margin-left: 20px">From literature search/ experimental data, obtain a range of values to be tested for each independent variable</li>
+							<li style="margin-left: 20px">Run the model for the range of values tested and identify the optimal condition for the rate limiting step</li>
+							<li style="margin-left: 20px">Re-run the initial model to evaluate the impact of the optimised parameters on the overall process, i.e. to determine if the optimised step is prevailed the rate limiting step in the overall cellular mechanism</li>
+							<li style="margin-left: 20px">Determine the areas in which research could be performed to further optimise the parameters (Wet Lab contribution)</li>
+						</ol>
+				</div>
+
+				<div id="show1" class="text-section">
+						<p><i class="down" ></i> </p>
+							<h2 class="tabletitle">Sensitivity Analysis method applied to LEGIT model</h2>
+				</div>
+
+				<div id="hidden-sanalysis">
+					<p class="text-content" style="margin-left: 20px; padding:5px">
+						Given that transport of intimin to the surface of the E.coli cells is the rate
+						limiting step in the overall process, we are rewriting this ODE in order to simplify
+						the Sensitivity Analysis on this step. </p>
+
+					<img src="../../assets/modellingMethods/sensitivityAnalysisEqu.png" style="width: 700px; height:700px; margin-top:10px">
+				</div>
+
+			</div>
 
 
-            <div class="text-section">
+			<!-- Parameter sampling-->
+			<div id="section3" class="row">
+            	<div class="text-section">
                 <h2 class="title">Parameter Sampling</h2>
                 <p class="text-content">Parameter sampling, is another technique used to tackle the issue of uncertain and incomplete knowledge of parameter values.
                     It is a method of parameter optimisation, which relies on the random sampling of parameter values within a specified range.
@@ -1289,8 +1347,10 @@
                 <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the rate of degradation</a></p>
 
             </div>
+			</div>
 
-
+			<div class="row">
+			<!-- Selectin software -->
                 <div class="text-section">
 
                         <h1 class="title">Selecting our Programming Languages </h1>
@@ -1301,65 +1361,67 @@
                             troubleshoot our codes. We also decided to use MATLAB for our models, as we were already familiar
                             with this language from our engineering degrees. </p>
                     </div>
+			</div>
 
 
+			<!-- Bibliography -->
+				<div class="row">
+					<div class="text-section">
 
-            <div class="text-section">
-
-                <h6 class="title" style="color:rgba(204, 0, 53, 0.69)">Bibliography</h6>
-                    <p class="subtitle" style="max-width: 80%">
-                        Thereza, C., Marina, I., Luciana.Cambricoli, d. and Olivia, C. (2004). Expression of green fluorescent protein (GFPuv) in Escherichia coli DH5-a, under different growth conditions. African Journal of Biotechnology, 3(1), pp.105-111.
-                        <br>
-                        <br>
-                        Wlab.ethz.ch. (2017). Cell Surface Protein Atlas. [online] Available at: http://wlab.ethz.ch/cspa/#abstract [Accessed 4 Sep. 2017].
-                        <br>
-                        <br>
-                        Sciencedirect.com. (2017). Membrane integration of E. coli model membrane proteins - ScienceDirect. [online] Available at: http://www.sciencedirect.com/science/article/pii/S0167488904000813 [Accessed 4 Sep. 2017].
-                        <br>
-                        <br>
-                        Arun KH e. Green fluorescent proteins in receptor: an emerging tool for drug discovery. – PubMed –NCBI [Internet]. Ncbi.nlm.gov.2017 [cited 21 August 2017]. Available from: https://www.ncbi.nlm.nih.gov/pubmed/15596111
-                        <br>
-                        <br>
-                        [internet] UVGermicidalTechnicalData. [cited 10 September 2017] http://www.pveducation.org/pvcdrom/effect-of-light-intensity (accessed 10 September 2017).
-                        <br>
-                        <br>
-                        Jayaraman, P., Devarajan, K., Chua, T. K., Zhang, H., Gunawan, E. and Loo Poh, C.  Blue light-mediated transcriptional activation and repression of gene expression in bacteria. NCBI. 2016;44(14):6994–7005.
-                        <br>
-                        <br>
-                        Philips, Ron. "Cell Biology By The Numbers." Book.bionumbers.org. N.p., 2017. Web. 10 Sept. 2017.
-                        <br>
-                        <br>
-                        Kiparissides, Alexandros et al. "Modelling The Delta1/Notch1 Pathway: In Search Of The Mediator(S) Of Neural Stem Cell Differentiation." PLoS ONE 6.2 (2011): e14668. Web.
-                        <br>
-                        <br>
-                        Carbonell-Ballestero M, Duran-Nebreda S, Montanez R, Sole R, Macia J, Rodriguez-Caso C. A bottom-up characterization of transfer functions for synthetic biology designs: lessons from enzymology. 2017.
-                        <br>
-                        <br>
-                        Km & Vmax [Internet]. Mofetsrv.mofet.macam98.ac.il. 2017 [cited 21 September 2017]. Available from: http://mofetsrv.mofet.macam98.ac.il/~rafid/BIOLOGY/biochem/infopages/aminoacids/www-biol.paisley.ac.uk/courses/stfunmac/glossary/Km.html
-                        <br>
-                        <br>
-                        Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.
-                        <br>
-                        <br>
-                        [Internet]. Karger.com. 2017 [cited 28 September 2017]. Available from: https://www.karger.com/Article/Pdf/131439
-                        <br>
-                        <br>
-                        HeLa cell volume - Human Homo sapiens - BNID 103725 [Internet]. Bionumbers.hms.harvard.edu. 2017 [cited 28 September 2017]. Available from: http://bionumbers.hms.harvard.edu/bionumber.aspx?id=103725&ver=3
-                        <br>
-                        <br>
-                        Baumann N, Vidugiriene J, Machamer C, Menon A. Cell Surface Display and Intracellular Trafficking of Free Glycosylphosphatidylinositols in Mammalian Cells. 2017.
-                        <br>
-                        <br>
-                        Cortes L, Vainauskas S, Dai N, McClung C, Shah M, Benner J et al. Proteomic identification of mammalian cell surface derived glycosylphosphatidylinositol-anchored proteins through selective glycan enrichment. 2017.
-                        <br>
-                        <br>
-                        Key Numbers for Cell Biologists [Internet]. Bionumbers.org; 2017 [cited 28 September 2017]. Available from: http://bionumbers.hms.harvard.edu/Includes/KeyNumbersLinks.pdf
-                        <br>
-                        <br>
-                        Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.
-                    </p>
-            </div>
-
+								<h6 class="title" style="color:rgba(204, 0, 53, 0.69)">Bibliography</h6>
+									<p class="subtitle" style="max-width: 80%">
+										Thereza, C., Marina, I., Luciana.Cambricoli, d. and Olivia, C. (2004). Expression of green fluorescent protein (GFPuv) in Escherichia coli DH5-a, under different growth conditions. African Journal of Biotechnology, 3(1), pp.105-111.
+										<br>
+										<br>
+										Wlab.ethz.ch. (2017). Cell Surface Protein Atlas. [online] Available at: http://wlab.ethz.ch/cspa/#abstract [Accessed 4 Sep. 2017].
+										<br>
+										<br>
+										Sciencedirect.com. (2017). Membrane integration of E. coli model membrane proteins - ScienceDirect. [online] Available at: http://www.sciencedirect.com/science/article/pii/S0167488904000813 [Accessed 4 Sep. 2017].
+										<br>
+										<br>
+										Arun KH e. Green fluorescent proteins in receptor: an emerging tool for drug discovery. – PubMed –NCBI [Internet]. Ncbi.nlm.gov.2017 [cited 21 August 2017]. Available from: https://www.ncbi.nlm.nih.gov/pubmed/15596111
+										<br>
+										<br>
+										[internet] UVGermicidalTechnicalData. [cited 10 September 2017] http://www.pveducation.org/pvcdrom/effect-of-light-intensity (accessed 10 September 2017).
+										<br>
+										<br>
+										Jayaraman, P., Devarajan, K., Chua, T. K., Zhang, H., Gunawan, E. and Loo Poh, C.  Blue light-mediated transcriptional activation and repression of gene expression in bacteria. NCBI. 2016;44(14):6994–7005.
+										<br>
+										<br>
+										Philips, Ron. "Cell Biology By The Numbers." Book.bionumbers.org. N.p., 2017. Web. 10 Sept. 2017.
+										<br>
+										<br>
+										Kiparissides, Alexandros et al. "Modelling The Delta1/Notch1 Pathway: In Search Of The Mediator(S) Of Neural Stem Cell Differentiation." PLoS ONE 6.2 (2011): e14668. Web.
+										<br>
+										<br>
+										Carbonell-Ballestero M, Duran-Nebreda S, Montanez R, Sole R, Macia J, Rodriguez-Caso C. A bottom-up characterization of transfer functions for synthetic biology designs: lessons from enzymology. 2017.
+										<br>
+										<br>
+										Km & Vmax [Internet]. Mofetsrv.mofet.macam98.ac.il. 2017 [cited 21 September 2017]. Available from: http://mofetsrv.mofet.macam98.ac.il/~rafid/BIOLOGY/biochem/infopages/aminoacids/www-biol.paisley.ac.uk/courses/stfunmac/glossary/Km.html
+										<br>
+										<br>
+										Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.
+										<br>
+										<br>
+										[Internet]. Karger.com. 2017 [cited 28 September 2017]. Available from: https://www.karger.com/Article/Pdf/131439
+										<br>
+										<br>
+										HeLa cell volume - Human Homo sapiens - BNID 103725 [Internet]. Bionumbers.hms.harvard.edu. 2017 [cited 28 September 2017]. Available from: http://bionumbers.hms.harvard.edu/bionumber.aspx?id=103725&ver=3
+										<br>
+										<br>
+										Baumann N, Vidugiriene J, Machamer C, Menon A. Cell Surface Display and Intracellular Trafficking of Free Glycosylphosphatidylinositols in Mammalian Cells. 2017.
+										<br>
+										<br>
+										Cortes L, Vainauskas S, Dai N, McClung C, Shah M, Benner J et al. Proteomic identification of mammalian cell surface derived glycosylphosphatidylinositol-anchored proteins through selective glycan enrichment. 2017.
+										<br>
+										<br>
+										Key Numbers for Cell Biologists [Internet]. Bionumbers.org; 2017 [cited 28 September 2017]. Available from: http://bionumbers.hms.harvard.edu/Includes/KeyNumbersLinks.pdf
+										<br>
+										<br>
+										Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.
+									</p>
+							</div>
+				</div>
 
         <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
