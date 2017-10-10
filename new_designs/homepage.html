@@ -23,55 +23,6 @@
     <script>
 
         $(document).ready(function(){
-            //Take your div into one js variable
-            var s1 = $("#step1");
-            var s2 = $("#step2");
-            var s3 = $("#step3");
-            var s4 = $("#step4");
-
-            //Take the current position (vertical position from top) of your div in the variable
-            var pos = s1.position();
-            var pos1 = s2.position();
-            var pos2 = s3.position();
-            var pos3 = s4.position();
-
-            //Now when scroll event trigger do following
-            $(window).scroll(function () {
-
-                scrollFunction()
-
-                var windowpos = $(window).scrollTop();
-                //console.log(windowpos);
-
-                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-                if (windowpos >= (pos.top + 100)) {
-                    // div.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s1.addClass("active-link");
-                }
-
-                if (windowpos >= (pos1.top + 750)) {
-                    // div1.addClass("AfterScroll");
-                    s1.removeClass("active-link");
-                    s3.removeClass("active-link");
-                    s2.addClass("active-link");
-
-                }
-
-                if (windowpos >= (pos2.top + 1100)) {
-                    //div2.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s4.removeClass("active-link");
-                    s3.addClass("active-link");
-                }
-
-                if (windowpos >= (pos3.top + 1300)) {
-                    //div2.addClass("AfterScroll");
-                    s3.removeClass("active-link");
-                    s4.addClass("active-link");
-                }
-
-            });
 
             function scrollFunction() {
                 if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -88,6 +39,17 @@
 <!-- Included an in-line CSS, as it's easier to put on the iGEM website -->
 <style>
 
+    .image-content-here {
+        height:200px;
+        width:200px;
+        border-radius: 50%;
+        margin: 0 25% 5% 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .buttons {
+        margin: 0 0 0 8%;
+    }
+
     .title-homepage {
         font-family: Futura;
         text-align: center;
@@ -96,16 +58,6 @@
         padding: 2% 11% 0 1%;
         margin:0 !important;
         color: rgba(241, 241, 241, 0.61);
-    }
-
-    #presents {
-        font-family: "Noto Sans";
-        text-align: center;
-        font-size: 15px;
-        font-weight: 300;
-        padding: 2% 9% 0 25%;
-        margin:0 !important;
-        color: rgba(0, 0, 0, 0.36);
     }
 
     #LIT {
@@ -117,11 +69,12 @@
         margin:0 !important;
         color: rgba(77, 77, 77, 0.96);
     }
+
     .text-content-homepage {
         position:relative;
         text-align: justify;
         max-width:90%;
-        color:white;
+        color:black;
         font-size: 22px;
         font-family: "Crimson Text";
         padding: 2% 12% 2% 23%;
@@ -133,7 +86,7 @@
         text-align: center;
         font-size: 24px;
         font-family: Futura;
-        padding: 15% 11% 0 15%;
+        padding: 25% 11% 0 10%;
         margin:0 !important;
         color: #ffffff;
     }
@@ -141,12 +94,18 @@
     #subtitle-main {
         position:relative;
         text-align: center;
-        max-width:95%;
-        font-size: 17px;
+        max-width:80%;
+        font-size: 27px;
         font-family: "Crimson Text";
-        padding: 2% 11% 0 16%;
+        padding: 2% 0 3% 19%;
         margin:0 !important;
         color: rgba(250, 250, 250, 0.65);
+    }
+
+    #down span {
+        color: white;
+        font-size: 40px;
+        padding: 0 0 3% 47.5%;
     }
 
     .list-section-homepage {
@@ -160,6 +119,10 @@
         stroke-dasharray: 1300;
         stroke-dashoffset: 1000;
         animation: dash 2.5s linear forwards;
+    }
+
+    #wavy {
+        margin:0 0 0 10% !important;
     }
 
     #strand1 {
@@ -183,14 +146,15 @@
     #switches {
         border: none;
         margin-top:0;
-        background:  #554a5d; /* For browsers that do not support gradients */
-        background: linear-gradient(#2f2832, #554a5d);
     }
 
     #applications {
         border: none;
         margin-top:0;
-        background:  #554a5d; /* For browsers that do not support gradients */
+    }
+
+    #applications p {
+        color:black;
     }
 
     @keyframes dash {
@@ -216,13 +180,20 @@
         z-index: 8;
     }
 
+    .down-the-rabbit-hole {
+        position:relative;
+        font-size: 18px;
+        padding-bottom:10%;
+        text-decoration: none !important;
+    }
+
 
 </style>
 
 
 <!-- The main section will be making 3 Points - see comments below -->
 
-<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+<body>
 
 <!-- Navbar -->
 
@@ -301,236 +272,243 @@
     </div>
 </div>
 
-
-<div class="container-fluid">
-
-    <div class="row">
-
-        <div style="float: right !important">
-
-            <!-- Point 1 - What's the vision? -->
-
-            <div id="intro" class="row">
-
-                    <div style="position: relative; margin:0 0 0 6%" class="col-sm-3">
-                        <svg
-                                xmlns:dc="http://purl.org/dc/elements/1.1/"
-                                xmlns:cc="http://creativecommons.org/ns#"
-                                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                                xmlns:svg="http://www.w3.org/2000/svg"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                                width="370px"
-                                height="400px"
-                                viewBox="0 0 600 300"
-                                id="svg1"
-                                version="1.1"
-                                inkscape:version="0.91 r13725"
-                                sodipodi:docname="wavelength.svg">
-                            <defs
-                                    id="defs4" />
-                            <sodipodi:namedview
-                                    id="base"
-                                    pagecolor="#ffffff"
-                                    bordercolor="#666666"
-                                    borderopacity="1.0"
-                                    inkscape:pageopacity="0.0"
-                                    inkscape:pageshadow="2"
-                                    inkscape:zoom="1.4574219"
-                                    inkscape:cx="184.93835"
-                                    inkscape:cy="876.79443"
-                                    inkscape:document-units="px"
-                                    inkscape:current-layer="layer1"
-                                    showgrid="false"
-                                    inkscape:window-width="1280"
-                                    inkscape:window-height="751"
-                                    inkscape:window-x="0"
-                                    inkscape:window-y="1"
-                                    inkscape:window-maximized="1" />
-                            <metadata
-                                    id="metadata7">
-                                <rdf:RDF>
-                                    <cc:Work
-                                            rdf:about="">
-                                        <dc:format>image/svg+xml</dc:format>
-                                        <dc:type
-                                                rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                                        <dc:title></dc:title>
-                                    </cc:Work>
-                                </rdf:RDF>
-                            </metadata>
-                            <g
-                                    inkscape:label="Layer 1"
-                                    inkscape:groupmode="layer"
-                                    id="layer1">
-                                <path
-                                        style="fill:none;fill-rule:evenodd;stroke:rgba(241, 241, 241, 0.61);stroke-width:7px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                                        d="m 2.7445725,146.65328 c 64.7193585,-203.46921 106.6448575,-117.130798 146.1484875,0 33.52475,115.6014 69.40332,214.54503 149.5792,0 37.99206,-98.397079 74.90023,-214.136188 132.42562,0 39.24589,176.78985 85.86773,159.69762 137.91477,0 53.21646,-162.258136 112.14444,-157.929996 176.33878,0"
-                                        id="wavelength"
-                                        inkscape:connector-curvature="0"
-                                        sodipodi:nodetypes="cccccc" />
-                            </g>
-                        </svg>
-
-                    </div>
-
-                    <div id="main-point" class="col-sm-5">
-
-                        <p class="text-content-main-point">We envision a future where light will do more than illuminate your streets.</p>
-                        <p id="subtitle-main">Synthetic biology will use light to control cellular processes and innovate sustainable living and medicine.</p>
-
-                    </div>
+<!-- content -->
+    <div class="container-fluid">
 
 
-                    <div style="position: relative; margin:1% 0 0 29%" class="col-sm-3">
-                        <svg
-                                xmlns:dc="http://purl.org/dc/elements/1.1/"
-                                xmlns:cc="http://creativecommons.org/ns#"
-                                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                                xmlns:svg="http://www.w3.org/2000/svg"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                                width="400px"
-                                height="400px"
-                                viewBox="125 0 650 250"
-                                id="svg2"
-                                version="1.1"
-                                inkscape:version="0.91 r13725"
-                                sodipodi:docname="DNA.svg">
-                            <defs
-                                    id="defs4" />
-                            <sodipodi:namedview
-                                    id="base"
-                                    pagecolor="#ffffff"
-                                    bordercolor="#666666"
-                                    borderopacity="1.0"
-                                    inkscape:pageopacity="0.0"
-                                    inkscape:pageshadow="2"
-                                    inkscape:zoom="8.5825734"
-                                    inkscape:cx="75.650005"
-                                    inkscape:cy="956.17478"
-                                    inkscape:document-units="px"
-                                    inkscape:current-layer="layer1"
-                                    showgrid="false"
-                                    inkscape:window-width="1280"
-                                    inkscape:window-height="751"
-                                    inkscape:window-x="0"
-                                    inkscape:window-y="1"
-                                    inkscape:window-maximized="1" />
-                            <metadata
-                                    id="metadata7">
-                                <rdf:RDF>
-                                    <cc:Work
-                                            rdf:about="">
-                                        <dc:format>image/svg+xml</dc:format>
-                                        <dc:type
-                                                rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                                        <dc:title />
-                                    </cc:Work>
-                                </rdf:RDF>
-                            </metadata>
-                            <g
-                                    inkscape:label="Layer 1"
-                                    inkscape:groupmode="layer"
-                                    id="layer1">
-                                <path
-                                        style="fill:none;fill-rule:evenodd;stroke:rgba(241, 241, 241, 0.61);stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                                        d="m 35.679443,104.11241 c 24.612619,-24.338578 45.359058,-61.380321 96.060037,0 28.47338,36.03653 58.71435,56.16479 97.43232,0 27.66593,-29.849976 53.84202,-60.329155 107.92544,2.91106 25.79796,30.91003 50.6874,64.12451 96.54522,-2.91106 20.70395,-20.150692 37.37395,-71.411463 94.68775,0.48518 19.24508,42.80446 59.53254,62.31802 89.1986,0 15.66788,-20.028448 54.86315,-82.430818 98.25047,5.82211"
-                                        id="strand1"
-                                        inkscape:connector-curvature="0"
-                                        sodipodi:nodetypes="cccccccc"
-                                        inkscape:label="#strand1" />
-                                <path
-                                        style="fill:none;fill-rule:evenodd;stroke:rgba(241, 241, 241, 0.61);stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                                        d="m 35.593782,103.92486 c 28.887965,50.74234 59.72186,53.64866 102.840638,4.7753 26.51909,-31.304004 41.02112,-66.09422 88.7824,0.97035 28.85303,27.15781 48.41588,65.70025 110.67001,-0.48517 22.96003,-39.111572 58.67874,-73.757701 90.01675,-1e-5 27.1824,26.96157 52.99876,58.61876 101.54918,0 14.01363,-39.664975 54.28174,-71.649191 88.40903,1.45553 15.07338,24.94196 50.75057,68.32793 97.79844,0.3095"
-                                        id="strand2"
-                                        inkscape:connector-curvature="0"
-                                        sodipodi:nodetypes="cccccccc" />
+                <!-- Point 1 - What's the vision? -->
+
+                <div id="intro" class="row">
+
+                        <div style=" margin: 0 0 0 3%" class="col-sm-4">
+                            <svg
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                                    width="370px"
+                                    height="400px"
+                                    viewBox="0 0 600 300"
+                                    id="wavy"
+                                    version="1.1"
+                                    inkscape:version="0.91 r13725"
+                                    sodipodi:docname="wavelength.svg">
+                                <defs
+                                        id="defs4" />
+                                <sodipodi:namedview
+                                        id="base"
+                                        pagecolor="#ffffff"
+                                        bordercolor="#666666"
+                                        borderopacity="1.0"
+                                        inkscape:pageopacity="0.0"
+                                        inkscape:pageshadow="2"
+                                        inkscape:zoom="1.4574219"
+                                        inkscape:cx="184.93835"
+                                        inkscape:cy="876.79443"
+                                        inkscape:document-units="px"
+                                        inkscape:current-layer="layer1"
+                                        showgrid="false"
+                                        inkscape:window-width="1280"
+                                        inkscape:window-height="751"
+                                        inkscape:window-x="0"
+                                        inkscape:window-y="1"
+                                        inkscape:window-maximized="1" />
+                                <metadata
+                                        id="metadata7">
+                                    <rdf:RDF>
+                                        <cc:Work
+                                                rdf:about="">
+                                            <dc:format>image/svg+xml</dc:format>
+                                            <dc:type
+                                                    rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                            <dc:title></dc:title>
+                                        </cc:Work>
+                                    </rdf:RDF>
+                                </metadata>
                                 <g
-                                        transform="translate(0,0.23303034)">
+                                        inkscape:label="Layer 1"
+                                        inkscape:groupmode="layer"
+                                        id="layer1">
                                     <path
+                                            style="fill:none;fill-rule:evenodd;stroke:rgba(241, 241, 241, 0.61);stroke-width:7px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                            d="m 2.7445725,146.65328 c 64.7193585,-203.46921 106.6448575,-117.130798 146.1484875,0 33.52475,115.6014 69.40332,214.54503 149.5792,0 37.99206,-98.397079 74.90023,-214.136188 132.42562,0 39.24589,176.78985 85.86773,159.69762 137.91477,0 53.21646,-162.258136 112.14444,-157.929996 176.33878,0"
+                                            id="wavelength"
                                             inkscape:connector-curvature="0"
-                                            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                                            d="M 61.75304,78.295379 61.053949,104.39478"
-                                            id="line1"
-                                            sodipodi:nodetypes="cccccccc"
-                                            inkscape:label="#line1"
-                                            />
-                                    <path
-                                            inkscape:connector-curvature="0"
-                                            id="line2"
-                                            d="m 72.938497,72.00356 0,34.25546"
-                                            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-                                    <path
-                                            inkscape:connector-curvature="0"
-                                            id="line3"
-                                            d="m 84.356983,70.139317 0,37.051823"
-                                            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-                                    <path
-                                            inkscape:connector-curvature="0"
-                                            id="line4"
-                                            d="m 95.54244,73.168711 0,32.158189"
-                                            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-                                    <path
-                                            inkscape:connector-curvature="0"
-                                            id="line5"
-                                            d="m 106.02881,78.528409 0,24.002121"
-                                            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                            sodipodi:nodetypes="cccccc" />
                                 </g>
-                            </g>
-                        </svg>
+                            </svg>
+
+                        </div>
+
+                        <div id="main-point" class="col-sm-5">
+
+                            <p class="text-content-main-point">We envision a future where light will do more than illuminate your streets.</p>
+
+                        </div>
+
+
+                        <div style="position: relative; margin:1% 0 0 13.1%" class="col-sm-3">
+                            <svg
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                                    width="400px"
+                                    height="400px"
+                                    viewBox="125 0 650 250"
+                                    id="svg2"
+                                    version="1.1"
+                                    inkscape:version="0.91 r13725"
+                                    sodipodi:docname="DNA.svg">
+                                <defs
+                                        id="defs4" />
+                                <sodipodi:namedview
+                                        id="base"
+                                        pagecolor="#ffffff"
+                                        bordercolor="#666666"
+                                        borderopacity="1.0"
+                                        inkscape:pageopacity="0.0"
+                                        inkscape:pageshadow="2"
+                                        inkscape:zoom="8.5825734"
+                                        inkscape:cx="75.650005"
+                                        inkscape:cy="956.17478"
+                                        inkscape:document-units="px"
+                                        inkscape:current-layer="layer1"
+                                        showgrid="false"
+                                        inkscape:window-width="1280"
+                                        inkscape:window-height="751"
+                                        inkscape:window-x="0"
+                                        inkscape:window-y="1"
+                                        inkscape:window-maximized="1" />
+                                <metadata
+                                        id="metadata7">
+                                    <rdf:RDF>
+                                        <cc:Work
+                                                rdf:about="">
+                                            <dc:format>image/svg+xml</dc:format>
+                                            <dc:type
+                                                    rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                            <dc:title />
+                                        </cc:Work>
+                                    </rdf:RDF>
+                                </metadata>
+                                <g
+                                        inkscape:label="Layer 1"
+                                        inkscape:groupmode="layer"
+                                        id="layer1">
+                                    <path
+                                            style="fill:none;fill-rule:evenodd;stroke:rgba(241, 241, 241, 0.61);stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                            d="m 35.679443,104.11241 c 24.612619,-24.338578 45.359058,-61.380321 96.060037,0 28.47338,36.03653 58.71435,56.16479 97.43232,0 27.66593,-29.849976 53.84202,-60.329155 107.92544,2.91106 25.79796,30.91003 50.6874,64.12451 96.54522,-2.91106 20.70395,-20.150692 37.37395,-71.411463 94.68775,0.48518 19.24508,42.80446 59.53254,62.31802 89.1986,0 15.66788,-20.028448 54.86315,-82.430818 98.25047,5.82211"
+                                            id="strand1"
+                                            inkscape:connector-curvature="0"
+                                            sodipodi:nodetypes="cccccccc"
+                                            inkscape:label="#strand1" />
+                                    <path
+                                            style="fill:none;fill-rule:evenodd;stroke:rgba(241, 241, 241, 0.61);stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                            d="m 35.593782,103.92486 c 28.887965,50.74234 59.72186,53.64866 102.840638,4.7753 26.51909,-31.304004 41.02112,-66.09422 88.7824,0.97035 28.85303,27.15781 48.41588,65.70025 110.67001,-0.48517 22.96003,-39.111572 58.67874,-73.757701 90.01675,-1e-5 27.1824,26.96157 52.99876,58.61876 101.54918,0 14.01363,-39.664975 54.28174,-71.649191 88.40903,1.45553 15.07338,24.94196 50.75057,68.32793 97.79844,0.3095"
+                                            id="strand2"
+                                            inkscape:connector-curvature="0"
+                                            sodipodi:nodetypes="cccccccc" />
+                                    <g
+                                            transform="translate(0,0.23303034)">
+                                        <path
+                                                inkscape:connector-curvature="0"
+                                                style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                                d="M 61.75304,78.295379 61.053949,104.39478"
+                                                id="line1"
+                                                sodipodi:nodetypes="cccccccc"
+                                                inkscape:label="#line1"
+                                                />
+                                        <path
+                                                inkscape:connector-curvature="0"
+                                                id="line2"
+                                                d="m 72.938497,72.00356 0,34.25546"
+                                                style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                        <path
+                                                inkscape:connector-curvature="0"
+                                                id="line3"
+                                                d="m 84.356983,70.139317 0,37.051823"
+                                                style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                        <path
+                                                inkscape:connector-curvature="0"
+                                                id="line4"
+                                                d="m 95.54244,73.168711 0,32.158189"
+                                                style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                        <path
+                                                inkscape:connector-curvature="0"
+                                                id="line5"
+                                                d="m 106.02881,78.528409 0,24.002121"
+                                                style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div style="border:none" class="text-section col-sm-12">
+                            <p id="subtitle-main">Synthetic biology will use light to control cellular processes and innovate sustainable living and medicine.</p>
+                            <a id="down" href="#second-part"><span class="glyphicon glyphicon-chevron-down"></span></a>
+                        </div>
+
+
+                </div>
+
+                <!-- Point 2 - what does biological light switch mean? After all, this is what the project is about -->
+
+
+                <div id="second-part" class="row">
+
+                    <div style="border:none" class="text-section">
+                        <p class="text-content-homepage">Our team has explored ways to combine biological light switches, either engineered or found in nature, into applications on Earth and beyond. The aim has been to standardise biological light switches and offer the iGEM community these tools together with an inspiration of how they can be used in the future of synthetic biology.</p>
                     </div>
 
-                    <p class="text-content-homepage">Our team has explored ways to combine biological light switches, either engineered or found in nature, into applications on Earth and beyond. The aim has been to standardise biological light switches and offer the iGEM community these tools together with an inspiration of how they can be used in the future of synthetic biology.</p>
-                </div>
+                    <div id="switches" class="text-section">
+                        <h1 style=" padding: 2% 0 1% 0; color:black" class="title-homepage">BIOLOGICAL LIGHT SWITCHES...HUH?</h1>
+                        <p class="text-content-homepage">A biological light switch is any molecular machine that can activate or supress a cascade of cellular processes. Think of them as controls that turn your target outcomes on or off.</p>
 
-            <!-- Point 2 - what does biological light switch mean? After all, this is what the project is about -->
-            <div class="row">
-
-                <div id="switches" class="text-section">
-                    <h1 style=" padding: 2% 0 1% 0" class="title-homepage">BIOLOGICAL LIGHT SWITCHES...HUH?</h1>
-                    <p class="text-content-homepage">A biological light switch is any molecular machine that can activate or supress a cascade of cellular processes. Think of them as controls that turn your target outcomes on or off.</p>
+                    </div>
 
                 </div>
 
-            </div>
 
+                <!-- Point 3 - how we explored light switches in 3 applications -->
 
-            <!-- Point 3 - how we explored light switches in 3 applications -->
+                <div id="applications" class="row">
+                    <div style="border: none" class="text-section">
+                        <h1 style="padding: 2% 0 1% 0; color:black" class="title-homepage">HOW WE EXPLORED THEM</h1>
+                        <p class="text-content-homepage">The bulk of optogenetics research happens in neuroscience. However, we felt that optogenetic tools should become more popular in synthetic biology. We combined photosensitive proteins and photocaged non-natural amino acids into applications in medicine, architecture and illumination.</p>
 
-            <div id="applications" class="row">
-                <div style="border: none" class="text-section">
-                    <h1 style="padding: 2% 0 1% 0" class="title-homepage">HOW WE EXPLORED THEM</h1>
-                    <p class="text-content-homepage">Realizing that the bulk of optogenetics research happens in neuroscience, we felt that optogenetic tools should be given a chance in other areas as well. We combined 3 of them: photosensitive proteins, photocleavable proteins and photocaged non-natural amino acids into applications in medicine, architecture and illumination.</p>
+                    </div>
+
+                    <!-- Here we would have the 3 buttons go -->
+
+                    <div class="buttons col-sm-3">
+                        <a href="#"><img src="assets/icon-barc.png" class="image-content-here"></a>
+                        <a href="#" class="down-the-rabbit-hole">Architecture from bacteria</a>
+                    </div>
+
+                    <div class="buttons col-sm-3">
+                        <a href="#"><img style="padding:3% 0 0 0;" src="assets/icon-organ.png" class="image-content-here"></a>
+                        <a href="#" class="down-the-rabbit-hole">Organ printing using light</a>
+                    </div>
+
+                    <div class="buttons col-sm-3">
+                        <a href="#"><img src="assets/icon-bulb.png" class="image-content-here"></a>
+                        <a href="#" class="down-the-rabbit-hole">Self-regulating bacterial light bulb</a>
+                    </div>
 
                 </div>
 
-                <!-- Here we would have the 3 buttons go - not designed yet -->
 
-<!--                <div class="buttons col-sm-4">
-                    <img src="assets/button-mammalian.png" class="image-content-here">
-                </div>-->
+        <!-- After we add the pictures, we would ideally add sponsors here at the bottom/links to social media -->
 
-<!--                <div class="buttons col-sm-4">
-                    <img src="assets/button-bulb.jpg" class="image-content-here">
-                </div>-->
 
-<!--                <div class="buttons col-sm-4">
-                    <img src="assets/button-mammalian.png" class="image-content-here">
-                </div>-->
-
-            </div>
-
-        </div>
     </div>
-
-
-    <!-- After we add the pictures, we would ideally add sponsors here at the bottom/links to social media -->
-
-
-</div>
 
 </body>
 
