@@ -182,7 +182,7 @@
 
             <div class="text-section" style="border:none">
                 <h1 class="title">Basal Expression Level</h1>
-                <p class="text-content">The basal expression of mRNA or a protein refers to its “default” expression level.
+                <p class="text-content">The basal expression of mRNA, or a protein, refers to its “default” expression level.
                     Essentially, it’s the level of mRNA/ protein that will be constitutively produced in a cell independent
                     of the activity of its promoter.
                 </p>
@@ -192,19 +192,17 @@
 
                 <h1 class="title">Cellular Automata</h1>
 
-                <p class="text-content">Cellular automata are discrete models introduced in the 1940s as a model of computation.
-                   They model the state of a cell at a particular point in time. Cells are represented on a grid and their state
-                    (on/ off/ empty,...) changes according to a set of rules which is dependent on the state of their
+                <p class="text-content">Cellular automata are discrete models, that were introduced in the 1940s, that act as a model of computation.
+                   They model the state of a cell at a particular point in time. Cells are represented on a grid, and their state
+                    (on/ off/, empty/alive) changes according to a set of rules which is dependent on the state of their
                     neighboring cells.</p>
-
             </div>
 
             <div class="text-section">
                 <h1 class="title">Game of Life</h1>
-                <p class="text-content">The Game of Life, (which we adapted for our purposes), is a particular case of a
-                    2D cellular automata that is known to show complex behaviours.
-                    The Game of Life was developed in the 1970s by John Conway. Cells which can be either in the "born",
-                    "alive" or "dead" state are initialised on a 2D grid. The idea is to visually represent the evoluation
+                <p class="text-content">The Game of Life, (which we adapted for our purposes), relates a particular case of a
+                    2D cellular automata that is known to show complex behaviors.
+                    The Game of Life was developed in the 1970s by John Conway. Cells which can be either in the "born"/"alive" or "dead" state are initialized on a 2D grid. The idea is to visually represent the evolution
                     of the state of the cells over time according to a set of rules.</p>
 
             </div>
@@ -219,10 +217,10 @@
                     <br>n = Hill coefficient
                     <br>Kd = Dissociation constant which follows mass action kinetics
                     <br>
-                    <br>The Hill equation is often adapted in mathematical modelling to allow for a more flexible modelling of the dynamics of a promoter?
-                    In our case we implemented a form of the Hill equation that had been adapted to represent a photo-activated cellular mechanism to determine the rate of photo - induction (k1).</p>
+                    <br>The Hill equation is often adapted in mathematical modelling to allow for a more flexible modelling of the dynamics of a promoter.
+                    In our case we implemented a form of the Hill equation that had been adapted to represent a photo-activated cellular mechanism to determine the rate of photo-activation (k1) of our transcription factor.</p>
                 <img src="../assets/Hill.jpg" class="image-content-graphs" style="width:400px;height:100px">
-                <p class="text-content">Two parameters had been added to the equation to account for our modelling needs:
+                <p class="text-content">Two parameters were added to the equation to account for our modelling needs:
                     <br> a = accounts for the basal expression level of the promoter (LuxI)
                     <br> k = accounts for the maximum expression of the promoter due to light intensity 0
                 </p>
@@ -231,10 +229,10 @@
 
             <div class="text-section">
                 <h1 class="title">Mass Action Kinetics</h1>
-                <p class="text-content">Mass action kinetics describe chemical reactions. It assumes that the rate of chemical reaction is proportional concentration of the initial reactants.
-                <br>Mass action kinetics assumes: </p>
+                <p class="text-content">Mass action kinetics describe chemical reactions. It assumes that the rate of a chemical reaction is proportional to the concentration of the initial reactants.
+                Mass action kinetics assumes: </p>
                 <img src="../assets/glossary/MA.jpg" class="image-content-graphs" style="width:280px;height:55px">
-                <p class="text-content">Given an ordinary differential equation,</p>
+                <p class="text-content">Given an Ordinary Differential Equation (ODE):</p>
                 <img src="../assets/ODE.jpg" class="image-content-graphs" style="width:330px;height:70px">
                 <p class="text-content">Where k is known as the rate constant, its units depend on the order of the reaction, i.e. the number of reactants.</p>
             </div>
@@ -244,7 +242,8 @@
 
             <div class="text-section">
                 <h1 class="title">Michaelis Menten</h1>
-                <p class="text-content">The Michaelis Menten equation was created to describe the rate kinetics in enzymatic reactions. Computational biologists commonly use the Michaelis Menten equation to describe the rate kinetics of cellular mechanisms. The steps described by the Michaelis Menten kinetics, can be represented schematically:</p>
+                <p class="text-content">The Michaelis Menten equation was created to describe the rate kinetics in enzymatic reactions. Computational biologists commonly use the Michaelis Menten equation to describe the rate kinetics of cellular mechanisms. The steps described by the Michaelis Menten kinetics, can be represented schematically
+                    in the following equation:</p>
                 <img src="../assets/glossary/enzyme.png" class="image-content-graphs" style="width:350px;height:65px">
                 <p class="text-content">where,
                     <br>E = enzyme
@@ -260,8 +259,8 @@
                     <br>S = concentration of the substrate
                     <br>Km = Michaelis Menten constant (value of concentration of ‘the substrate when the velocity = ½ maximum velocity)
                 <br>
-                    <br> We assume that the product formation is irreversible, as the Michaelis Menten equations only considers
-                    initial velocities of product formation. We are also assuming staedy state, i.e. constant concentration of the [ES] complex.
+                    <br> We assume the system is at steady state, i.e. the concentration of the [ES] complex remains constant. (It can be assumed
+                    to be constant as it represents a species that is constitutively expressed by a cell)
                 </p>
             </div>
 

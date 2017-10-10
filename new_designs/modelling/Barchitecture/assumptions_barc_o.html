@@ -22,14 +22,6 @@
     <script>
 
         $(document).ready(function(){
-
-            $("#show1").click(function(){
-                $("#hide1").slideToggle("slow");
-            });
-
-            $("#show2").click(function(){
-                $("#hide2").slideToggle("slow");
-            });
             //Take your div into one js variable
             var s1 = $("#step1");
             var s2 = $("#step2");
@@ -83,6 +75,17 @@
     </script>
 
     <!-- parameter tables drop dpwn-->
+    <script>
+        $(document).ready(function(){
+            $("#show1").click(function(){
+                $("#hide1").slideToggle("slow");
+            });
+            $("#show2").click(function(){
+                $("#hide2").slideToggle("slow");
+            });
+        });
+
+    </script>
 </head>
 
 <style>
@@ -179,7 +182,6 @@
                 <li id="step1" class="navy-link side-link"><a href="#section1">Overview</a></li>
                 <li id="step2" class="navy-link side-link"><a href="#section2">Sensitivity Analysis</a></li>
                 <li id="step3" class="navy-link side-link"><a href="#section3">Parameter Sampling</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section4">Bibliography</a></li>
             </ul>
         </nav>
 
@@ -222,20 +224,19 @@
                         <li style="margin-left: 20px">Re-run the initial model to evaluate the impact of the optimised parameters on the overall process, i.e. to determine if the optimised step is prevailed the rate limiting step in the overall cellular mechanism</li>
                         <li style="margin-left: 20px">Determine the areas in which research could be performed to further optimise the parameters (Wet Lab contribution)</li>
                     </ol>
-            </div>
 
-            <div id="show1" class="text-section">
+                <div id="show1" class="text-section">
                     <p><i class="down" ></i> </p>
                         <h2 class="tabletitle">Sensitivity Analysis method applied to LEGIT model</h2>
                     </div>
-
-            <div id="hide1" >
+                    <div id="hide1">
                         <p class="text-content" style="margin-left: 20px; padding:5px">
                             Given that transport of intimin to the surface of the E.coli cells is the rate
                             limiting step in the overall process, we are rewriting this ODE in order to simplify
                             the Sensitivity Analysis on this step. </p>
                         <img src="../../assets/modellingMethods/sensitivityAnalysisEqu.png" style="width: 700px; height:700px; margin-top:10px">
-            </div>
+                    </div>
+                </div>
 
 
             <div class="text-section">
@@ -259,7 +260,7 @@
                 <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of
                     transport of intimin. For this the values of K<sub>m</sub> and V<sub>max</sub> are evaluated. </p>
 
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="610px"
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px"
 	 height="400px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
 <g id="BG">
 	<rect fill="#000040" width="960" height="560"/>
@@ -813,7 +814,7 @@
 </g>
 </svg>
 
-                    <ul class="text-content" style="width: 100%"> Conditions for intimin
+				<ul class="text-content" style="width: 100%"> Conditions for intimin
                         <li style="margin-left: 20px">Size: 94 kDa </li>
                         <li style="margin-left: 20px">Optimal pH conditions: 7 </li>
                         <li style="margin-left: 20px">Native organism: E.coli </li>
@@ -823,13 +824,14 @@
                 <p class="text-content" style="padding-top: 0">Weighted mean of V<sub>max</sub>: 300000 s<sup>-1</sup>(1 s.f.) </p>
                 <br>
                 <br>
-                <p class="subtitle"> <a href="../parameter_o.html">Click here to check out the data collected to optimise the value of K<sub>m</sub></a></p>
-                <p class="subtitle"> <a href="../parameter_o.html">Click here to check out the data collected to optimise the value of V<sub>max</sub></a></p>
+                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of K<sub>m</sub></a></p>
+                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of V<sub>max</sub></a></p>
                 <br>
 
                 <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LAME model</h2>
-                <p class="text-content" style="padding-bottom: 0">Assessing the impact of randomly generated discrete variables on the rate of translation of GFP. For this the rate of nuclear export of the transcript and the rate of GFP degradation are evaluated.</p>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px"
+                <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of translation of GFP. For this the rate of nuclear export of the transcript and the rate of GFP degradation are evaluated.</p>
+
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px"
 	 height="400px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
 <g id="BG">
 	<rect fill="#000040" width="960" height="560"/>
@@ -1273,8 +1275,6 @@
 	</g>
 </g>
 </svg>
-
-
                 <ul class="text-content" style="width: 100%"> Conditions for the RFP protein
                     <li style="margin-left: 20px">Size: 27.9 kDa </li>
                     <li style="margin-left: 20px">Location of protein: Cytoplasm</li>
@@ -1285,13 +1285,13 @@
                 <p class="text-content" style="padding-top: 0">Weighted mean of rate of degradation: 8.96 x 10<sup>-1</sup> s<sup>-1</sup></p>
                 <br>
                 <br>
-                <p class="subtitle"> <a href="../parameter_o.html">Click here to check out the data collected to optimise the  rate of nuclear export</a></p>
-                <p class="subtitle"> <a href="../parameter_o.html">Click here to check out the data collected to optimise the rate of degradation</a></p>
+                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the  rate of nuclear export</a></p>
+                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the rate of degradation</a></p>
 
             </div>
 
 
-            <div class="text-section">
+                <div class="text-section">
 
                         <h1 class="title">Selecting our Programming Languages </h1>
                         <p class="text-content"> This summer we decided to run our models on two different programming languages:
@@ -1301,6 +1301,7 @@
                             troubleshoot our codes. We also decided to use MATLAB for our models, as we were already familiar
                             with this language from our engineering degrees. </p>
                     </div>
+
 
 
             <div class="text-section">
