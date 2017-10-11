@@ -1,294 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-
-    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
-
-    <meta charset="UTF-8">
-    <title>Description</title>
-    <link rel="stylesheet" type="text/css" href="../css/template.css">
-
-    <!-- BOOTSTRAP -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <script>
-
-        $(document).ready(function(){
-            //Take your div into one js variable
-            var s1 = $("#step1");
-            var s2 = $("#step2");
-            var s3 = $("#step3");
-            var s4 = $("#step4");
-
-            //Take the current position (vertical position from top) of your div in the variable
-            var pos = s1.position();
-            var pos1 = s2.position();
-            var pos2 = s3.position();
-
-            //Now when scroll event trigger do following
-            $(window).scroll(function () {
-
-                scrollFunction()
-
-                var windowpos = $(window).scrollTop();
-                //console.log(windowpos);
-
-                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-                if (windowpos >= (pos.top + 100)) {
-                    // div.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s1.addClass("active-link");
-                }
-
-                if (windowpos >= (pos1.top + 750)) {
-                    // div1.addClass("AfterScroll");
-                    s1.removeClass("active-link");
-                    s3.removeClass("active-link");
-                    s2.addClass("active-link");
-
-                }
-
-                if (windowpos >= (pos2.top + 1100)) {
-                    //div2.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s3.addClass("active-link");
-                }
-
-            });
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
-            }
-
-        });
-    </script>
-</head>
-
-<style>
-    .image-content-here {
-        height: 320px;
-        width:320px;
-        padding:0;
-        border-radius: 48%;
-    }
-
-    .image-content-here-2 {
-        height: 320px;
-        width:320px;
-        padding:0;
-    }
-
-    #godown {
-        text-decoration: none !important;
-        font-size: 30px;
-        padding: 0 0 0 5%;
-    }
-</style>
-
-<body data-spy="scroll" data-target="#side-index">
-<!-- The top navbar -->
-<div class="container-fluid">
-    <div id="top" class="row">
-
-        <ul class="navy">
-            <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
-                <ul class="navy-hidden">
-                    <li><a href="#" class="dropped">Description</a></li>
-                    <li><a href="#" class="dropped">Experiments</a></li>
-                    <li><a href="#" class="dropped">Results</a></li>
-                    <li><a href="#" class="dropped">Parts</a></li>
-                    <li><a href="#" class="dropped">Gold Criteria</a></li>
-                    <li><a href="#" class="dropped">Interlab</a></li>
-
-                </ul>
-            </li>
-
-                <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
-                    <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Protocols</a></li>
-                        <li><a href="#" class="dropped">Safety</a></li>
-                        <li><a href="#" class="dropped">Stuff</a></li>
-                    </ul>
-                </li>
-            </li>
-
-            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
-                <ul class="navy-hidden">
-                    <li><a href="#" class="dropped">Overview</a></li>
-                    <li><a href="#" class="dropped">Product</a></li>
-                    <li><a href="#" class="dropped">IP</a></li>
-                    <li><a href="#" class="dropped">Business Environment</a></li>
-                    <li><a href="#" class="dropped">Marketing</a></li>
-                    <li><a href="#" class="dropped">Management</a></li>
-                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
-                </ul>
-            </li>
-
-            <li id="drop5" class="navy-link"><a href="#">MODELLING</a>
-                <ul class="navy-hidden">
-                    <li><a href="#" class="dropped">Overview</a></li>
-                    <li><a href="#" class="dropped">Barchitecture</a></li>
-                    <li><a href="#" class="dropped">Game of LIT</a></li>
-                    <li><a href="#" class="dropped">Mammalian</a></li>
-                    <li><a href="#" class="dropped">Light Bulb</a></li>
-                    <li><a href="#" class="dropped">Glossary</a></li>
-                </ul>
-            </li>
-
-            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
-                <ul class="navy-hidden">
-                    <li><a href="#" class="dropped">Overview</a></li>
-                    <li><a href="#" class="dropped">Public Engagement</a></li>
-                    <li><a href="#" class="dropped">Integrated Practices</a></li>
-                </ul>
-            </li>
-
-            <li id="drop2" class="navy-link"><a href="#about">JUDGING CRITERIA</a>
-                <ul class="navy-hidden">
-                    <li><a href="#" class="dropped">Bronze</a></li>
-                    <li><a href="#" class="dropped">Silver</a></li>
-                    <li><a href="#" class="dropped">Gold</a></li>
-                </ul>
-            </li>
-
-            <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
-                <ul class="navy-hidden">
-                    <li><a href="#" class="dropped">Team</a></li>
-                    <li><a href="#" class="dropped">Collaborations</a></li>
-                    <li><a href="#" class="dropped">Attributions</a></li>
-                </ul></li>
-
-        </ul>
-    </div>
-
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-
-            <!-- The side navbar -->
-        <nav id="side-index" class="col-sm-2">
-            <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#golit">GOLIT</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#optoflux">OptoFlux</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#legit">LEGIT</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#lame">LAME</a></li>
-            </ul>
-        </nav>
-
-        <!-- Content -->
-            <div style="float: right !important" class="col-sm-10">
-
-
-                <!-- Philosophy and aims-->
-                <div class="row">
-                    <div class="text-section col-sm-8">
-
-                        <h1 class="title">The Modelling of LIT</h1>
-
-                        <h2 class="subtitle">Philosophy and exciting nerdy stuff</h2>
-
-                        <p class="text-content-duo">Our project explored how 3 types of biological light switches can be combined in innovative applications. Upon exposure to light, these light switches either activate or suppress cellular processes.  Put together, switches and cellular functions such as cell adhesion can lead to novel ways of thinking about organ printing, street illumination and architecture.</p>
-
-                        <p class="text-content-duo modelling-steps-intro">For us, mathematical modelling was a tool to look at our applications of biological light switches in new ways. We used our models to:</p>
-
-                         <ul class="list-section">
-
-                             <li class="list-item-content">Prepare wet lab experiments by determining the range of parameters that should be tested to maximise the yield of our optogenetic tools </li>
-                             <li class="list-item-content"> Conduct Cost Analysis to determine the economic viability of our optogenetic tools</li>
-                             <li class="list-item-content">Introduce real life experimental results to determine the robustness of our models</li>
-                             <li class="list-item-content">  Design our final product for entrepreneurship </li>
-                         </ul>
-
-                        <p class="text-content-duo modelling-steps-intro">We also challenged the conventional way modellers tackle the problem of parameter optimization in various biological processes. To overcome under and overestimation of parameters, we used:</p>
-                        <ul class="list-section">
-                            <li class="list-item-content">Genetic algorithms</li>
-                            <li class="list-item-content">Parameter sampling</li>
-                            <li class="list-item-content">Sensitivity analysis</li>
-                        </ul>
-
-                        <p class="text-content-duo modelling-steps-intro">To be mind-blown, scroll down or click here<a id="godown" href="#golit"><span class="glyphicon glyphicon-chevron-down"></span></a></p>
-                    </div>
-
-                    <div class="picture-section-right col-sm-3">
-                        <p class="modelling-steps-intro">To find out more about the applications,<a href="#"> click here.</a></p>
-
-                        <img src="../assets/icon-bulb.png" class="image-content-icons">
-                        <img src="../assets/icon-organ.png" class="image-content-icons">
-                        <img src="../assets/icon-barc.png" class="image-content-icons">
-                    </div>
-
-                </div>
-
-                <!-- GOLIT -->
-                <div id="golit" class="row">
-
-                    <div class="text-section col-sm-7">
-
-                        <h1 class="title">GOLIT (Game of LIT) </h1>
-
-                        <p class="text-content-duo modelling-steps-intro">The ultimate goal of synthetic biology is to recreate cells as cellular automata, to simulate life and explore new forms of artificial life. We extended the use of cellular automata to help people visualize our project better.</p>
-
-                        <p class="text-content-duo">With cellular automata, cells behave according to a set number of rules over a period of time. We hypothesized that this will help people visualize the processes underlying the formation of 3D bacterial structures better and created a cellular automaton. On the nerdy side of things, we incorporated a genetic algorithm to help us understand how light should activate cells to create a structure from bacteria in the least possible time.</p>
-
-
-                    </div>
-
-                    <div class="picture-section-right col-sm-4">
-                        <img src="../assets/GOLIT.gif" class="image-content image-content-here">
-                    </div>
-
-                </div>
-
-                <!-- OPTOFLUX -->
-                <div id="optoflux" class="row">
-
-                    <div class="text-section col-sm-7">
-
-                        <h1 class="title">OptoFlux </h1>
-                        <p class="text-content-duo modelling-steps-intro">We aimed to engineer a bacterial light bulb that serves as more than an ambient light. We identified a significant design consideration: light must reach our co-culture bacteria for nutrition purposes and traverse the bulb when it is produced by the bioluminescent E. Coli.</p>
-
-                        <p class="text-content-duo">We combined mathematical modelling and integrated human practices to determine what our light bulb should look like. Our OptoFlux considered homogeneity and cell growth to determine the dimensions necessary to produce luminescence equivalent to 160W – about the same intensity as a street lamp.</p>
-
-                        <a class="text-content-duo" href="#">Click here to see our 3D light bulb built on Auto CAD.</a>
-
-
-
-                    </div>
-
-                    <div class="picture-section-right col-sm-4">
-                        <img src="../assets/LITbulb.png" class="image-content image-content-here">
-                    </div>
-
-                </div>
-
-                <!-- LEGIT -->
-                <div id="legit" class="row">
-
-                    <div class="text-section col-sm-7">
-                        <h1 class="title">LEGIT (Light Expressed Gene Induced Transport)</h1>
-                        <p class="text-content-duo modelling-steps-intro">We considered two potential advantages of our light switches over alternative gene activation tools in our designs: efficiency and speed. To create 3D structures from bacteria, our cells need to produce the most amount of surface display proteins in the least amount of time. Achieving this is dependent on using an optimal light intensity level for gene activation.</p>
-
-                        <p class="text-content-duo">Our LEGIT model describes the steps involved in the formation of 3D structures with the use of bacterial cells. LEGIT allows us to see how different light intensity levels affect the quantity and rate of protein production. By also incorporating parameter sampling, our results informed our wet lab experiments to test specific levels of light intensity, expected to be most effective in building bacterial 3D structures.</p>
-                        <a class="text-content-duo" href="#">Learn more about building structure#PeakIntoOurWorld #MachineLearning </a>
-
-                    </div>
-
-                    <div class="picture-section-right col-sm-4 image-content-here-2">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="460px"
-	 height="300px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="960px"
+	 height="560px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
 <g id="Outside_Cell_BG">
 	<rect x="0.5" y="0.5" fill="#080041" stroke="#000000" stroke-miterlimit="10" width="960" height="560"/>
 </g>
@@ -298,7 +12,7 @@
 <g id="Annotations">
 	<g>
 		<g>
-
+			
 				<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="215.518" y1="453.736" x2="148.27" y2="423.013"/>
 			<g>
 				<polygon points="212.889,443.543 211.04,444.308 214.821,453.416 205.46,456.521 206.092,458.421 217.492,454.636 				"/>
@@ -309,7 +23,7 @@
 		<g>
 			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="87.726" y1="378.146" x2="72.4" y2="163.725"/>
 			<g>
-				<polygon fill="#FFFFFF" points="95.413,370.952 93.854,369.695 87.673,377.379 80.461,370.653 79.097,372.118 87.883,380.309
+				<polygon fill="#FFFFFF" points="95.413,370.952 93.854,369.695 87.673,377.379 80.461,370.653 79.097,372.118 87.883,380.309 
 									"/>
 			</g>
 		</g>
@@ -562,7 +276,7 @@
 		<g>
 			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="746" y1="177" x2="696" y2="177"/>
 			<g>
-				<polygon fill="#FFFFFF" points="738.939,169.043 737.575,170.508 744.799,177.221 737.575,183.936 738.939,185.401
+				<polygon fill="#FFFFFF" points="738.939,169.043 737.575,170.508 744.799,177.221 737.575,183.936 738.939,185.401 
 					747.735,177.221 				"/>
 			</g>
 		</g>
@@ -886,11 +600,11 @@
 		<path fill="#FFF2BE" d="M916.577,404.531l2.903-15.265h1.784l-2.924,15.265H916.577z"/>
 	</g>
 	<g>
-
+		
 			<ellipse fill="none" stroke="#E6457D" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="6.0663,6.0663" cx="95.921" cy="147.654" rx="89.959" ry="79.808"/>
 	</g>
 	<g>
-
+		
 			<ellipse fill="none" stroke="#E6457D" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="6.0019,6.0019" cx="701.381" cy="178.827" rx="115.504" ry="68.75"/>
 	</g>
 	<g>
@@ -916,7 +630,7 @@
 </g>
 <g id="Processes">
 	<g>
-
+		
 			<ellipse fill="none" stroke="#5341FF" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="11.9201,11.9201" cx="410.787" cy="383.982" rx="371.827" ry="150.887"/>
 	</g>
 	<path fill="#FF5E2C" d="M484.404,383.5c0,1.111-0.306,1.5-0.682,1.5H365.065c-0.376,0-0.682-0.389-0.682-1.5l0,0
@@ -1006,39 +720,3 @@
 	</g>
 </g>
 </svg>
-                        
-                        <img src="../assets/bacterial-modelling-overview.jpg" class="image-content-here-2">
-                    </div>
-
-                </div>
-
-                <!-- LAME -->
-                <div id="lame" class="row">
-
-                    <div class="text-section col-sm-7">
-                        <h1 class="title">LAME (Light Activated Mammalian Expression)</h1>
-                        <p class="text-content-duo modelling-steps-intro">We proposed a new way of printing organs: light activates the transcription of any gene of interest to enable desired differentiation. In a medical context, such a process needs to be rapid and highly precise.</p>
-
-
-                        <p class="text-content-duo">Similar to how bacterial cells form 3D structures, mammalian cell adhesion is dependent on optimal levels of light intensity. Our LAME model helped us mathematically describe the stages of gene photoactivation in mammalian cells, resulting in us knowing what range of values for transcription activation is more likely to provide informative results in the lab.</p>
-
-
-                    </div>
-
-                    <div class="picture-section-right col-sm-4">
-                        <img src="../assets/Mam/Mam_overview.png" class="image-content-here-2">
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        <a href="#" id="myBtn" title="Go to top">Back to Top</a>
-
-    </div>
-</div>
-
-</body>
-
-</html>
