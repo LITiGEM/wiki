@@ -96,6 +96,8 @@
 
 	#hidden-sanalysis, #hide2 {
 		display:none;
+		max-width: 65%;
+		margin-left: 150px;
 	}
 	#show1  {
 		height: auto;
@@ -297,7 +299,7 @@
 
 			<!-- Parameter sampling-->
 			<div id="section3" class="row">
-            	<div class="text-section">
+            	<div class="text-section col-sm-10">
                 <h2 class="title">Parameter Sampling</h2>
                 <p class="text-content">Parameter sampling, is another technique used to tackle the issue of uncertain and incomplete knowledge of parameter values.
                     It is a method of parameter optimisation, which relies on the random sampling of parameter values within a specified range.
@@ -317,11 +319,14 @@
                 <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LEGIT model</h2>
                 <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of
                     transport of intimin. For this the values of K<sub>m</sub> and V<sub>max</sub> are evaluated. </p>
+				</div>
 
-				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px"
-	 height="400px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+				<div class="picture-section-left col-sm-7" style="margin-left: 0; margin-top: 15px; padding-top:15px; padding-left: 0; padding-bottom: 0">
+
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px"
+	 height="300px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
 <g id="BG">
-	<rect fill="#000040" width="960" height="560"/>
+	<rect fill="#000040" width="2000" height="860"/>
 </g>
 <g id="Annotations">
 	<polygon opacity="0.4" fill="#00DAA8" points="41.32,329 171,329 171,362 10.75,362 	"/>
@@ -872,25 +877,40 @@
 </g>
 </svg>
 
-				<ul class="text-content" style="width: 100%"> Conditions for intimin
-                        <li style="margin-left: 20px">Size: 94 kDa </li>
-                        <li style="margin-left: 20px">Optimal pH conditions: 7 </li>
-                        <li style="margin-left: 20px">Native organism: E.coli </li>
-                    </ul>
+				</div>
 
-                <p class="text-content" style="padding-top: 0">Weighted mean of K<sub>m</sub>: 0.0147 uM</p>
-                <p class="text-content" style="padding-top: 0">Weighted mean of V<sub>max</sub>: 300000 s<sup>-1</sup>(1 s.f.) </p>
-                <br>
-                <br>
-                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of K<sub>m</sub></a></p>
-                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of V<sub>max</sub></a></p>
-                <br>
+				<div class="text-content-duo col-sm-3">
 
-                <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LAME model</h2>
-                <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of translation of GFP. For this the rate of nuclear export of the transcript and the rate of GFP degradation are evaluated.</p>
+					<p class="text-content-duo modelling-steps-intro" style="margin-left:400px">Conditions for intimin</p>
 
-				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px"
-	 height="400px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+					<ul class="text-content-duo modelling-steps-intro" style="padding-top: 25px">
+						<li style="margin-left: 15px">Size: 94 kDa </li>
+						<li style="margin-left: 15px">Optimal pH conditions: 7 </li>
+						<li style="margin-left: 15px">Native organism: E.coli </li>
+					</ul>
+				</div>
+
+				<div class="text-content col-sm-10">
+
+					<p  style="margin-left: 150px">Weighted mean of K<sub>m</sub>: 0.0147 uM</p>
+					<p style="margin-left: 150px">Weighted mean of V<sub>max</sub>: 300000 s<sup>-1</sup>(1 s.f.) </p>
+
+				</div>
+
+				<div class="text-section">
+
+					<p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of K<sub>m</sub></a></p>
+					<p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of V<sub>max</sub></a></p>
+
+				</div>
+			</div>
+
+			<h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LAME model</h2>
+			<p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of translation of GFP. For this the rate of nuclear export of the transcript and the rate of GFP degradation are evaluated.</p>
+
+			<div class="picture-section-left col-sm-7" style="margin-left: 0; margin-top: 15px; padding-top:15px; padding-left: 0; padding-bottom: 0">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px"
+	 height="300px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
 <g id="BG">
 	<rect fill="#000040" width="960" height="560"/>
 </g>
@@ -1333,25 +1353,36 @@
 	</g>
 </g>
 </svg>
-                <ul class="text-content" style="width: 100%"> Conditions for the RFP protein
-                    <li style="margin-left: 20px">Size: 27.9 kDa </li>
-                    <li style="margin-left: 20px">Location of protein: Cytoplasm</li>
-                    <li style="margin-left: 20px">Native organism: CHO cells </li>
-                </ul>
+			</div>
 
-                <p class="text-content" style="padding-top: 0">Weighted mean of rate of nuclear export: 1.43 x 10<sup>-4</sup> s<sup>-1</sup></p>
-                <p class="text-content" style="padding-top: 0">Weighted mean of rate of degradation: 8.96 x 10<sup>-1</sup> s<sup>-1</sup></p>
-                <br>
-                <br>
+			<div class="text-content-duo col-sm-3">
+
+				<p class="text-content-duo modelling-steps-intro" style="margin-left:400px">Conditions for RFP protein</p>
+
+				<ul class="text-content-duo modelling-steps-intro" style="padding-top: 25px">
+					<li style="margin-left: 20px">Size: 27.9 kDa </li>
+					<li style="margin-left: 20px">Location of protein: Cytoplasm</li>
+					<li style="margin-left: 20px">Native organism: CHO cells </li>
+				</ul>
+			</div>
+
+			<div class="text-content col-sm-10">
+
+				<p  style="margin-left: 150px">Weighted mean of rate of nuclear export: 1.43 x 10<sup>-4</sup> s<sup>-1</sup></p>
+				<p style="margin-left: 150px">Weighted mean of rate of degradation: 8.96 x 10<sup>-1</sup> s<sup>-1</sup></p>
+
+			</div>
+
+			<div class="text-section col-sm-10" style="border:none">
                 <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the  rate of nuclear export</a></p>
                 <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the rate of degradation</a></p>
 
             </div>
-			</div>
+
 
 			<div class="row">
 			<!-- Selectin software -->
-                <div class="text-section">
+                <div class="text-section col-sm-10">
 
                         <h1 class="title">Selecting our Programming Languages </h1>
                         <p class="text-content"> This summer we decided to run our models on two different programming languages:

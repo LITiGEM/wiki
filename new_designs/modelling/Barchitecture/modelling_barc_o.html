@@ -71,6 +71,22 @@
                 }
             }
 
+            $("#trigger-assumptions").click(function(){
+                $("#assumptions").slideToggle("slow");
+            });
+
+            $("#trigger-species").click(function(){
+                $("#species").slideToggle("slow");
+            });
+
+            $("#trigger-conditions").click(function(){
+                $("#conditions").slideToggle("slow");
+            });
+
+            $("#trigger-parameters").click(function(){
+                $("#parameters").slideToggle("slow");
+            });
+
         });
     </script>
 </head>
@@ -635,16 +651,18 @@
                 pulsing durations on the same graph to evaluate their synergistic effect.
 
                 <img src="../../assets/Barch/Bac_CostOpt.png" class="image-content-graphs" style="width:600px; height:500px; padding-left:0!important; padding-bottom: 0;">
-                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 17: </i> Demonstrates a comparison of the effects of light pulsing and light intensity on the overall cost of our optogenetic tool
+                <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 17: </i> Demonstrates a comparison of the effects of light pulsing and light intensity on the overall cost of our optogenetic tool </p>
 
-               Figure 17 exhibits that the costs incurred to operate our optogenetic tool increases proportionally to the light intensity and the light pulsing frequency used. We decided to define the optimum operating conditions for our optogenetic tool as those at which both
-                    lines intersect. Beyond the point of intersection, it was evident that the operational costs for the optogenetic
-                    tool were too high. Below the intersection point it was evident that the activity of the E. coli cell adhesion
+
+                <p class="text-content">Figure 17 exhibits that the costs incurred to operate our optogenetic tool increases
+                    proportionally to the light intensity and the light pulsing frequency used. We decided to define the optimum
+                    operating conditions for our optogenetic tool as those at which both
+                    lines intersect. Beyond the point of intersection, the operational costs for the optogenetic
+                    tool were too high and  below the intersection point the activity of the E. coli cell adhesion
                     mechanism would be too slow.  As one of the biggest selling points for our technology is its rapidity we decided
-                    it would not be feasible to operate at such a slow rate.
-                    <br>
-                    <br>
-                    The best cost trade-off was identified when operating our technology
+                    it would not be feasible to operate at such a slow rate. </p>
+
+                   <p class="text-content"> We identified the best cost trade-off when operating our technology
                     at a light intensity of 30 W/cm<sup>2</sup> with a 4.5-hour pulsing frequency.
                 </p>
                 <br>
@@ -654,7 +672,7 @@
             <div class="text-section">
                 <h6 class="title">Alternative applications of our model</h6>
                 <h1 class="subtitle">Stock market</h1>
-                <p class="text-content"> Similarly, our model could be adapted to characterize the volatile nature of publically listed
+                <p class="text-content"> Our model could be adapted to characterize the volatile nature of publically listed
                     companies’ share prices in the stock market. One could divide the differential equations into the main factors which
                     affect the share price of a company. These factors could be: the Lombard Rate, which is set by the European Central Bank;
                     the desirability of a company’s shares (set as a function of the market share a company has); and a company’s share price.
@@ -671,7 +689,7 @@
 
 
             <div class="text-section">
-                <h6 class="title">Collaboration</h6>
+                <h6 class="title">Collaboration with iGEM SVCE 2017</h6>
                 <p class="text-content">  Throughout the summer we had a bilateral collaboration with the iGEM SVCE 2017 team from India.
                     Our collaboration started off with us sending each other useful sources and tutorials on how to approach modelling for
                     cellular mechanisms, as neither team considered itself an expert in the field. Once we both started forming the differential
@@ -682,35 +700,62 @@
 
             </div>
 
-            <div  class="text-section" id="assumptions">
 
-                <h2 class="title">LEGIT Assumptions</h2>
+            <!-- Modelling details -->
+            <h2 id="trigger-assumptions" class="title">LEGIT Assumptions <span class="glyphicon glyphicon-chevron-down"></span></h2>
 
-                <ul class="text-content">
-                    <li>Mass action kinetics</li>
-                    <li>Michaelis Menten kinetics</li>
-                    <li>All reactions are taking place in cells that are plated in a petri dish</li>
-                    <li>Light intensity is the only factor affecting the intimin protein expression in the cells</li>
-                    <li>Every cell is activated by the same light intensity, regardless of its position in the petri dish</li>
-                    <li>There is no light reflection or refraction from the cells</li>
-                    <li>All cells are at their exponential growth phase</li>
-                    <li>All cells are equally as probable to express SpyTag and SpyCatcher</li>
-                    <li>SpyTag and SpyCatcher are constitutively expressed with Intimin</li>
-                </ul>
+            <div id="assumptions" class="row">
 
-                <h3 class="title">LEGIT Species</h3>
+                <div class="text-section">
 
-                <img src="../../assets/Barch/Species.png" class="image-content-graphs" style="width:900px; height:450px">
+                    <ul class="text-content">
+                        <li>Mass action kinetics</li>
+                        <li>Michaelis Menten kinetics</li>
+                        <li>All reactions are taking place in cells that are plated in a petri dish</li>
+                        <li>Light intensity is the only factor affecting the intimin protein expression in the cells</li>
+                        <li>Every cell is activated by the same light intensity, regardless of its position in the petri dish</li>
+                        <li>There is no light reflection or refraction from the cells</li>
+                        <li>All cells are at their exponential growth phase</li>
+                        <li>All cells are equally as probable to express SpyTag and SpyCatcher</li>
+                        <li>SpyTag and SpyCatcher are constitutively expressed with Intimin</li>
+                    </ul>
 
-                <h3 class="title">LEGIT Parameters</h3>
+                </div>
+            </div>
 
-                <img src="../../assets/Barch/Parameters.png" class="image-content-graphs" style="width: 900px; height:700px">
+            <h3 id="trigger-species" class="title">LEGIT Species <span class="glyphicon glyphicon-chevron-down"></span></h3>
 
-                <h5 class="title">LEGIT Initial Conditions</h5>
+            <div id="species" class="row">
 
-                <img src="../../assets/Barch/InitCond.png" class="image-content-graphs" style="width: 900px; height:1050px">
+                <div class="text-section">
+
+                    <img src="../../assets/Barch/Species.png" class="image-content-graphs" style="width:900px; height:450px">
+
+                </div>
 
             </div>
+
+            <h3 id="trigger-parameters" class="title">LEGIT Parameters <span class="glyphicon glyphicon-chevron-down"></span></h3>
+
+            <div id="parameters" class="row">
+                <div class="text-section">
+                    <img src="../../assets/Barch/Parameters.png" class="image-content-graphs" style="width: 900px; height:700px">
+
+                </div>
+            </div>
+
+            <h5 id="trigger-conditions" class="title">LEGIT Initial Conditions <span class="glyphicon glyphicon-chevron-down"></span></h5>
+
+
+            <div id="conditions" class="row">
+                <div class="text-section">
+
+                    <img src="../../assets/Barch/InitCond.png" class="image-content-graphs" style="width: 900px; height:1050px">
+
+
+                </div>
+            </div>
+
 
            <div class="text-section">
                 <h6 class="title">Bibliography</h6>
