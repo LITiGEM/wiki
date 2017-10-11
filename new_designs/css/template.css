@@ -212,7 +212,7 @@ body {
     border-top: solid 1px rgba(39, 32, 34, 0.16);
     padding:0;
     z-index:3;
-    overflow: auto;
+
 }
 
 
@@ -241,7 +241,7 @@ body {
     font-family: "Noto Sans";
     font-size: 23px;
     font-weight: 600;
-    padding: 5% 1% 1% 10%;
+    padding: 5% 1% 1% 15%;
     margin:0;
     color: rgba(204, 0, 53, 0.69);
 }
@@ -351,6 +351,13 @@ body {
     padding:1% 1% 1% 15%;
 }
 
+.image-content-icons {
+    height: 120px;
+    width:120px;
+    margin: 4% 5% 0 20%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
 /* ----------------------------------------------------------------*/
                             /* MISCELLANEOUS*/
@@ -392,6 +399,20 @@ body {
 
 
 /* ----------------------------------------------------------------*/
+                        /* HP- specific classes */
+/* ----------------------------------------------------------------*/
+
+
+
+.HP-intros {
+    max-width:100%;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Crimson Text";
+    padding: 1% 3% 1% 15%;
+}
+
+/* ----------------------------------------------------------------*/
                     /* MODELLING-specific classes */
 /* ----------------------------------------------------------------*/
 
@@ -399,9 +420,10 @@ body {
 /* gives a nice visual hierarchy to the paragraphs */
 .modelling-steps-intro {
     max-width:100%;
-    font-size: 23px;
+    font-size: 22px;
     font-weight: bold;
-    padding: 3% 3% 2% 15%;
+    font-family: "Crimson Text";
+    padding: 1% 3% 1% 15%;
 }
 
 /* secondary titles to be used in the modelling pages to add some more information to the title */

@@ -81,14 +81,24 @@
                 }
             }
 
+            $("#show1").click(function(){
+                $("#hidden-summer").slideToggle("slow");
+            });
+
+            $("#show2").click(function(){
+                $("#hidden-wellcome").slideToggle("slow");
+            });
+
         });
     </script>
 </head>
 
 <style>
     .image-content-here {
-        height:550px;
-        width:500px;
+        height:300px;
+        width:300px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
     #special-image-here-1 {
@@ -97,7 +107,12 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
+    #hidden-summer, #hidden-wellcome {
+        display:none;
+    }
+
 </style>
+
 <body data-spy="scroll" data-target="#side-index">
 
 <div class="container-fluid">
@@ -191,8 +206,10 @@
         </nav>
 
 
+        <!-- Content -->
         <div style="float: right !important" class="col-sm-10">
 
+            <!-- SCIENCE MUSEUM -->
             <div id="museum" class="row">
 
                 <div style="margin-top: 20px" class="text-section col-sm-7">
@@ -227,19 +244,31 @@
 
             </div>
 
+            <!-- SUMMER SCHOOL-->
             <div id="discussion" class="row">
-                <div class="text-section">
+
+                <div class="text-section col-sm-7">
+
                     <h1 class="title">Facilitating discussion in synthetic biology</h1>
 
-                    <p class="text-content">We tested the technique of discussion facilitation in a medium-scale event. Based on a team member’s experience with the guidelines used in management consulting by companies such as Deloitte, we organised the session as an introduction to synthetic biology and our biological light switches and their applications. The lucky ones were adolescents taking part in the UCL Sutton Trust Biosciences Summer School.</p>
+                    <p class="text-content-duo HP-intros">We tested the technique of discussion facilitation in a medium-scale event. Based on a team member’s experience with the guidelines used in management consulting by companies such as Deloitte, we organised the session as an introduction to synthetic biology and our biological light switches and their applications. The lucky ones were adolescents taking part in the UCL Sutton Trust Biosciences Summer School.</p>
 
+                    <p id="show1" class="text-content-duo HP-intros">Click here to find out more about what we've learnt <span class="glyphicon glyphicon-chevron-down"></span></p>
+                </div>
+
+                <div class="picture-section-right col-sm-4">
+                    <img src="assets/HP-summersc.JPG" class="image-content-here">
+                </div>
+
+
+                <div id="hidden-summer" class="text-section col-sm-11">
                     <p class="text-content">Our introduction of the project and synthetic biology focused on asking students what their knowledge about the field is and then built upon this. For example, we highlighted the need for interdisciplinary work and then asked why that might be important. We discussed examples of how mathematical modelling can be combined with wet lab experiments and then entrepreneurship.</p>
 
                     <p class="text-content">What worked well was having the students diverge and talk among themselves about given points and then converge back to share everyone’s opinion and then summarise conclusion or take-away points along the way.</p>
 
-                <p class="text-content">The most interesting example came in a discussion initiated by a student: ‘We should make mules fertile, as it can benefit agriculture’.</p>
+                    <p class="text-content">The most interesting example came in a discussion initiated by a student: ‘We should make mules fertile, as it can benefit agriculture’.</p>
 
-               <p class="text-content">We went through 4 or 5 turns of diverging and converging to cover points such as:</p>
+                    <p class="text-content">We went through 4 or 5 turns of diverging and converging to cover points such as:</p>
 
                     <ul class="list-section">
                         <li class="list-item-content">-	what are the real-life trade-offs of modifying mules in an agricultural context?</li>
@@ -247,16 +276,31 @@
                         <li class="list-item-content">how should experimentation happen – behind closed doors or in a transparent manner</li>
                     </ul>
 
-                <p class="text-content">What we hope to have had achieved was to give students a more holistic way of looking at ideas in synthetic biology. We encourage future teams to try and seek communication techniques from other fields that specialize in getting to the heart of problems, such as in management consulting.</p>
+                    <p class="text-content">What we hope to have had achieved was to give students a more holistic way of looking at ideas in synthetic biology. We encourage future teams to try and seek communication techniques from other fields that specialize in getting to the heart of problems, such as in management consulting.</p>
+
 
                 </div>
             </div>
 
+            <!-- WELLCOME TRUST-->
             <div id="welcome" class="row">
-                <div class="text-section">
+                <div class="text-section col-sm-7">
+
                     <h1 class="title">Using light to guide cell behaviour: exploring societal impacts of technology of the future</h1>
-                    <p class="text-content">We extended the exploration of small-scale events by now focusing the discussion around a specific topic regarding our project: policy. At the Wellcome Trust Reading room, we structured a discussion around the societal and ethical impacts of light-induced technologies with members of various backgrounds.</p>
+
+                    <p class="text-content-duo HP-intros">We extended the exploration of small-scale events by now focusing the discussion around a specific topic regarding our project: policy. At the Wellcome Trust Reading room, we structured a discussion around the societal and ethical impacts of light-induced technologies with members of various backgrounds.</p>
+
                     <p class="text-content">We proposed that the discussion focused on the limits to using biological light switches in controlling genetically modified organisms and in printing organs.</p>
+
+                    <p id="show2" class="text-content-duo HP-intros">The outcomes <span class="glyphicon glyphicon-chevron-down"></span></p>
+
+                </div>
+
+                <div class="picture-section-right col-sm-4">
+                    <img src="assets/HP-Wellcome.jpeg" class="image-content-here">
+                </div>
+
+                <div id="hidden-wellcome" class="text-section col-sm-11">
 
                     <p class="text-content">The outcomes of the discussion can be turned into relevant policies to be developed (future iGEM teams can build upon this by contacting the relevant bodies that regulate these developments):</p>
 
@@ -268,8 +312,10 @@
                     </ul>
 
                 </div>
+
             </div>
 
+            <!-- DINNER -->
             <div id="dinner" class="row">
                 <div class="text-section">
                     <h1 class="title">Smart Dinner</h1>
