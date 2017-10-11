@@ -87,8 +87,10 @@
 
 <style>
     .image-content-here {
-        height:550px;
-        width:500px;
+        height:350px;
+        width:300px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 </style>
 <body data-spy="scroll" data-target="#side-index">
@@ -172,16 +174,14 @@
 
 <div class="container-fluid">
 
-    <div class="row">
-
         <!-- The side navbar -->
         <nav id="side-index" class="col-sm-2">
             <ul  class="nav nav-stacked" data-spy="affix" data-offset-top="205">
                 <li id="step1" class="navy-link side-link"><a href="#aesthetics">Aesthetics</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#meetup">UK Meet-up</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#stakes">Stakeholders</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#stakes">Architects</a></li>
                 <li id="step4" class="navy-link side-link"><a href="#tfl">Transport for London</a></li>
                 <li id="step5" class="navy-link side-link"><a href="#space">European Space Agency</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#meetup">UK Meet-up</a></li>
             </ul>
         </nav>
 
@@ -189,30 +189,25 @@
         <div style="float: right !important" class="col-sm-10">
 
             <div id="aesthetics" class="row">
-                <div style="margin-top: 20px" class="text-section">
+
+                <div class="text-section col-sm-7">
 
                     <h1 class="title">The aesthetics of light technologies</h1>
 
-                    <p class="text-content">In the early research stages of LIT, we found that many fields have been taking interest in bioluminescent bacteria: the start-up scene (Glowee), academics (Researcher Name) and designers, such as Teresa van Dongen.</p>
+                    <p class="text-content-duo HP-intros">Deploying a bacterial light-bulb in real life can face major challenges: will people find it attractive enough to be on the streets? Can the engineering requirements meet the aesthetic ones? Where do we make compromises between the 2?</p>
 
-                    <img src="assets/rejection.jpg" class="image-content-graphs image-content-here">
+                    <p class="text-content-duo">Through our Instagram competition, reaching 78,000 followers, we wanted participants to consider relevant aspects of deploying a bacterial light bulb in real life and submit designs for our prototype.</p>
 
-                    <p class="text-content">After Glowee decided that they’re too cool for school, we reached to Teresa, a Dutch artist, who designed and produced a bioluminescent light-bulb with bacteria.</p>
-
-                    <p class="text-content">Read more</p>
+                    <p class="text-content-duo">Entries, a final 3D-printed version of the bulb and tips for future iGEMers.</p>
                 </div>
+
+                <div class="picture-section-right col-sm-4">
+                    <img src="assets/bulb.png" class="image-content-here">
+                </div>
+
             </div>
 
-            <div id="meetup" class="row">
-                <div class="text-section">
-                    <h1 class="title">UK iGEM 2017</h1>
-                    <p class="text-content">Together with the Warwick and Westminster iGEM teams, we hosted the UK 2017 iGEM Meet-up. Besides the usual project presentations and talks, we tested an idea developed from the very start of the project: what tools should one use to choose an iGEM project?</p>
-                    <p class="text-content">At the start of our project, many ideas and projects were discussed, debated and pondered upon. What perhaps needed some more consideration, was how do we think about the project development in terms of ethical, safety and societal considerations? What directions should be pursued?</p>
-                    <p class="text-content">To see what a good way to engage in such a thought experiment would be, we organised debates between UK’s iGEM teams on synthetic biology matters. Topics ranged from whether synthetic biology should be merged with AI, to whether there should be a limit on what can be genetically engineered, to who should own the intellectual property of scientific developments.</p>
-
-                </div>
-            </div>
-
+            <!-- Architects -->
             <div id="stakes" class="row">
                 <div class="text-section">
                     <h1 class="title">Architects</h1>
@@ -230,15 +225,17 @@
                 </div>
             </div>
 
+            <!-- Blue Alpha -->
             <div class="row">
-                <div class="text-section">
+                <div class="text-section col-sm-11">
                     <h1 class="title">Blue Alpha</h1>
-                    <p class="text-content">Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. </p>
-                    <p class="text-content">Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. Instagram. </p>
+                    <p class="text-content-duo HP-intros">In the early stages of the Barchitecture application, we consulted Blue Alpha – a company that specializes in PHB production for a variety of applications. We talked about small and large scale applications, the market demand and potential of medical implants.</p>
+                    <p class="text-content-duo">Two important ideas emerged from our conversation. First, we were advised that as PHB is a biocompatible polymer, a focus could be on PHB-based medical implants. Via accurate light control, we can 3D print small biocompatible implants like veins and bronchus. From this idea, we decided to shift focus on large scale structures, due to the quality of the PHB that we could produce from cells with the current available technology.</p>
 
                 </div>
             </div>
 
+            <!-- the TfL -->
             <div id="tfl" class="row">
                 <div class="text-section">
                     <h1 class="title">From ambient lights to street illumination</h1>
@@ -248,6 +245,7 @@
                 </div>
             </div>
 
+            <!-- ARUP -->
             <div class="row">
                 <div class="text-section">
                     <h1 class="title">ARUP - the construction colossal</h1>
@@ -266,6 +264,7 @@
 
             </div>
 
+            <!-- EUROPEAN SPACE AGENCY -->
             <div id="space" class="row">
                 <div class="text-section">
                     <h1 class="title">European Space Agency</h1>
@@ -282,11 +281,22 @@
                 </div>
             </div>
 
+            <!-- UK MEET-UP -->
+            <div id="meetup" class="row">
+                <div class="text-section">
+                    <h1 class="title">UK iGEM 2017</h1>
+                    <p class="text-content">Together with the Warwick and Westminster iGEM teams, we hosted the UK 2017 iGEM Meet-up. Besides the usual project presentations and talks, we tested an idea developed from the very start of the project: what tools should one use to choose an iGEM project?</p>
+                    <p class="text-content">At the start of our project, many ideas and projects were discussed, debated and pondered upon. What perhaps needed some more consideration, was how do we think about the project development in terms of ethical, safety and societal considerations? What directions should be pursued?</p>
+                    <p class="text-content">To see what a good way to engage in such a thought experiment would be, we organised debates between UK’s iGEM teams on synthetic biology matters. Topics ranged from whether synthetic biology should be merged with AI, to whether there should be a limit on what can be genetically engineered, to who should own the intellectual property of scientific developments.</p>
+
+                </div>
+            </div>
+
+
         </div>
 
         <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
-    </div>
 </div>
 
 </body>

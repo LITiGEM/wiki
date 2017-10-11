@@ -26,6 +26,7 @@
             var s1 = $("#step1");
             var s2 = $("#step2");
             var s3 = $("#step3");
+            var s4 = $("#step4");
 
             //Take the current position (vertical position from top) of your div in the variable
             var pos = s1.position();
@@ -77,9 +78,22 @@
 
 <style>
     .image-content-here {
-        height: 300px;
-        width:300px;
-        border-radius: 50%;
+        height: 320px;
+        width:320px;
+        padding:0;
+        border-radius: 48%;
+    }
+
+    .image-content-here-2 {
+        height: 320px;
+        width:320px;
+        padding:0;
+    }
+
+    #godown {
+        text-decoration: none !important;
+        font-size: 30px;
+        padding: 0 0 0 5%;
     }
 </style>
 
@@ -167,23 +181,28 @@
             <!-- The side navbar -->
         <nav id="side-index" class="col-sm-2">
             <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">GOLIT</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">OptoFlux</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">LEGIT</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section4">LAME</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#golit">GOLIT</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#optoflux">OptoFlux</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#legit">LEGIT</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#lame">LAME</a></li>
             </ul>
         </nav>
 
         <!-- Content -->
             <div style="float: right !important" class="col-sm-10">
 
+
+                <!-- Philosophy and aims-->
                 <div class="row">
-                    <div style="margin-top: 10px" class="text-section col-sm-11">
+                    <div class="text-section col-sm-8">
+
                         <h1 class="title">The Modelling of LIT</h1>
 
-                        <p class="text-content-duo">Our project explored how 3 types of biological light switches can be combined in innovative applications. Upon exposure to light, these light switches either activate or suppress cellular processes.  If put together carefully, switches and cellular functions such as cell adhesion can lead to novel ways of thinking about organ printing, street illumination and architecture. To find out more about the applications,<a href="#"> click here.</a></p>
+                        <h2 class="subtitle">Philosophy and exciting nerdy stuff</h2>
 
-                        <p class="text-content-duo">For us, mathematical modelling was a tool to look at our applications of biological light switches in new ways. We used our models to:</p>
+                        <p class="text-content-duo">Our project explored how 3 types of biological light switches can be combined in innovative applications. Upon exposure to light, these light switches either activate or suppress cellular processes.  Put together, switches and cellular functions such as cell adhesion can lead to novel ways of thinking about organ printing, street illumination and architecture.</p>
+
+                        <p class="text-content-duo modelling-steps-intro">For us, mathematical modelling was a tool to look at our applications of biological light switches in new ways. We used our models to:</p>
 
                          <ul class="list-section">
                              <li class="list-item-content">Prepare wet lab experiments and determine how effective biological light switches can be</li>
@@ -191,27 +210,37 @@
                              <li class="list-item-content">Design our final product for entrepreneurship</li>
                          </ul>
 
-                        <p class="text-content-duo">We also challenged the conventional way we make assumptions about parameters in various biological processes. To overcome under and overestimation of parameters, we used:</p>
+                        <p class="text-content-duo modelling-steps-intro">We also challenged the conventional way we make assumptions about parameters in various biological processes. To overcome under and overestimation of parameters, we used:</p>
 
                         <ul class="list-section">
                             <li class="list-item-content">Sensitivity analysis</li>
                             <li class="list-item-content">Genetic algorithms</li>
                             <li class="list-item-content">Parameter sampling</li>
                         </ul>
+
+                        <p class="text-content-duo modelling-steps-intro">To be mind-blown, scroll down or click here<a id="godown" href="#golit"><span class="glyphicon glyphicon-chevron-down"></span></a></p>
                     </div>
+
+                    <div class="picture-section-right col-sm-3">
+                        <p class="modelling-steps-intro">To find out more about the applications,<a href="#"> click here.</a></p>
+
+                        <img src="../assets/icon-bulb.png" class="image-content-icons">
+                        <img src="../assets/icon-organ.png" class="image-content-icons">
+                        <img src="../assets/icon-barc.png" class="image-content-icons">
+                    </div>
+
                 </div>
 
+                <!-- GOLIT -->
+                <div id="golit" class="row">
 
-
-
-                <div class="row">
                     <div class="text-section col-sm-7">
 
                         <h1 class="title">GOLIT (Game of LIT) </h1>
 
-                        <p class="text-content-duo-primary">The ultimate goal of synthetic biology is to recreate cells as cellular automata, to simulate life and explore new forms of artificial life. We extended the use of cellular automata to help people visualize our project better.</p>
+                        <p class="text-content-duo modelling-steps-intro">The ultimate goal of synthetic biology is to recreate cells as cellular automata, to simulate life and explore new forms of artificial life. We extended the use of cellular automata to help people visualize our project better.</p>
 
-                        <p class="text-content-duo-secondary">With cellular automata, cells behave according to a set number of rules over a period of time. We hypothesized that this will help people visualize the processes underlying the formation of 3D bacterial structures better and created a cellular automaton. On the technical side of mathematical modelling, we incorporated a genetic algorithm to help us understand how light should activate cells to create a structure from bacteria in the least possible time.</p>
+                        <p class="text-content-duo">With cellular automata, cells behave according to a set number of rules over a period of time. We hypothesized that this will help people visualize the processes underlying the formation of 3D bacterial structures better and created a cellular automaton. On the nerdy side of things, we incorporated a genetic algorithm to help us understand how light should activate cells to create a structure from bacteria in the least possible time.</p>
 
 
                     </div>
@@ -222,12 +251,13 @@
 
                 </div>
 
-
-                <div class="row">
+                <!-- OPTOFLUX -->
+                <div id="optoflux" class="row">
 
                     <div class="text-section col-sm-7">
+
                         <h1 class="title">OptoFlux </h1>
-                        <p class="text-content-duo-primary">We aimed to engineer a bacterial light bulb that serves as more than an ambient light. We identified a significant design consideration: light must reach our co-culture bacteria for nutrition purposes and traverse the bulb when it is produced by the bioluminescent E. Coli.</p>
+                        <p class="text-content-duo modelling-steps-intro">We aimed to engineer a bacterial light bulb that serves as more than an ambient light. We identified a significant design consideration: light must reach our co-culture bacteria for nutrition purposes and traverse the bulb when it is produced by the bioluminescent E. Coli.</p>
 
                         <p class="text-content-duo">We combined mathematical modelling and integrated human practices to determine what our light bulb should look like. Our OptoFlux considered homogeneity and cell growth to determine the dimensions necessary to produce luminescence equivalent to 160W – about the same intensity as a street lamp.</p>
 
@@ -243,12 +273,12 @@
 
                 </div>
 
-
-                <div class="row">
+                <!-- LEGIT -->
+                <div id="legit" class="row">
 
                     <div class="text-section col-sm-7">
                         <h1 class="title">LEGIT (Light Expressed Gene Induced Transport)</h1>
-                        <p class="text-content-duo-primary">We considered two potential advantages of our light switches over alternative gene activation tools in our designs: efficiency and speed. To create 3D structures from bacteria, our cells need to produce the most amount of surface display proteins in the least amount of time. Achieving this is dependent on using an optimal light intensity level for gene activation.</p>
+                        <p class="text-content-duo modelling-steps-intro">We considered two potential advantages of our light switches over alternative gene activation tools in our designs: efficiency and speed. To create 3D structures from bacteria, our cells need to produce the most amount of surface display proteins in the least amount of time. Achieving this is dependent on using an optimal light intensity level for gene activation.</p>
 
                         <p class="text-content-duo">Our LEGIT model describes the steps involved in the formation of 3D structures with the use of bacterial cells. LEGIT allows us to see how different light intensity levels affect the quantity and rate of protein production. By also incorporating parameter sampling, our results informed our wet lab experiments to test specific levels of light intensity, expected to be most effective in building bacterial 3D structures.</p>
                         <a class="text-content-duo" href="#">Learn more about building structure#PeakIntoOurWorld #MachineLearning </a>
@@ -256,28 +286,26 @@
                     </div>
 
                     <div class="picture-section-right col-sm-4">
-                        <img src="../assets/bacterial-modelling-overview.jpg" class="image-content image-content-here">
+                        <img src="../assets/bacterial-modelling-overview.jpg" class="image-content-here-2">
                     </div>
 
                 </div>
 
-
-                <div class="row">
+                <!-- LAME -->
+                <div id="lame" class="row">
 
                     <div class="text-section col-sm-7">
                         <h1 class="title">LAME (Light Activated Mammalian Expression)</h1>
-                        <p class="text-content-duo-primary">We proposed a new way of printing organs: light activates the transcription of any gene of interest to enable desired differentiation. In a medical context, such a process needs to be rapid and highly precise.</p>
+                        <p class="text-content-duo modelling-steps-intro">We proposed a new way of printing organs: light activates the transcription of any gene of interest to enable desired differentiation. In a medical context, such a process needs to be rapid and highly precise.</p>
 
 
-                        <p class="text-content">Similar to how bacterial cells form 3D structures, mammalian cell adhesion is dependent on optimal levels of light intensity. Our LAME model helped us mathematically describe the stages of gene photoactivation in mammalian cells, resulting in us knowing what range of values for transcription activation is more likely to provide informative results in the lab.</p>
-
-
+                        <p class="text-content-duo">Similar to how bacterial cells form 3D structures, mammalian cell adhesion is dependent on optimal levels of light intensity. Our LAME model helped us mathematically describe the stages of gene photoactivation in mammalian cells, resulting in us knowing what range of values for transcription activation is more likely to provide informative results in the lab.</p>
 
 
                     </div>
 
                     <div class="picture-section-right col-sm-4">
-                        <img src="../assets/bacterial-modelling-overview.jpg" class="image-content image-content-here">
+                        <img src="../assets/Mam/Mam_overview.png" class="image-content-here-2">
                     </div>
 
 
