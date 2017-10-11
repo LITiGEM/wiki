@@ -63,6 +63,9 @@
 
             });
 
+
+            //---------------------------------------------------------------------
+            //the scroll function for the 'Back to Top' button
             function scrollFunction() {
                 if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                     document.getElementById("myBtn").style.display = "block";
@@ -71,16 +74,109 @@
                 }
             }
 
+            //---------------------------------------------------------------------
+            //the functions that change the content of the table when you press on the respective buttons
+            $("#leds").click(function(){
+                document.getElementById('value-change-1').innerHTML = '3-year plan to replace 900,000 streetlamp lightbulbs';
+                document.getElementById('value-change-2').innerHTML = 'Emissions: 309,600 tonnes of CO2 (90% decrease in comparison to conventional lightbulbs)';
+                document.getElementById('value-change-3').innerHTML = 'Total Cost: £59.8M (23% decrease in comparison to conventional lightbulbs)';
+                document.getElementById('value-change-4').innerHTML = 'Total Cost: £45M';
+                document.getElementById('value-change-5').innerHTML = '160W';
+                document.getElementById('value-change-6').innerHTML = 'Citizens: +	Healthier living environment due to lower CO2 emissions −	Concerns would arise about the colour of the light produced from LED lights. LED lightbulbs produce cold (white) light, thus the surroundings may not look as welcoming/warm as they would with conventional lightbulbs −	American Medical Association (AMA) has warned that blue-rich LED lights may disrupt the circadian rhythm (the body’s internal clock), leading to sleep problems which can further exacerbate serious medical conditions such as obesity Municipality:  +	Lower maintenance costs  +	Decrease in emissions and promotion of positive public image −	Large capital outlay required to replace the lightbulbs Change in the aesthetics of the town due to the cold light produced by LED lightbulbs';
+                document.getElementById('value-change-7').innerHTML = 'Transport for London (TfL)  and SMART lights by Bouygues, City of Westminster';
+            });
+
+            $("#dims").click(function(){
+                document.getElementById('value-change-1').innerHTML = '900,000 streetlamp lightbulbs';
+                document.getElementById('value-change-2').innerHTML = 'Emissions: 1,238,400 T of CO2 (60% reduction in emissions) ';
+                document.getElementById('value-change-3').innerHTML = 'Total Cost: £30.6M (50% decrease in total costs)';
+                document.getElementById('value-change-4').innerHTML = 'Total Cost: £155.5 million';
+                document.getElementById('value-change-5').innerHTML = 'Intensity depends on the time of the day and mobility in the area. The maximum light intensity reached is 160W (When no motion is detected the lights are kept at a minimum light intensity of 20%)';
+                document.getElementById('value-change-6').innerHTML = 'Citizens: +	It decreases light pollution. It is safe as upon motion detection the light intensity increases, this means that closer monitoring  +	A healthier living environment is created due to the decreased CO2 emissions Municipality:  +	Reduction in energy requirements  +	Reduction in pollution and positive public image, because the sensors have a fast response time, they react very rapidly to upcoming cars/pedestrians. In addition, in case of an electrical malfunction the lights are automatically programmed to stay on at 100% light intensity −	Wireless control of light dimming makes cities prone to hacking (As the lights are programmed and controlled remotely) If a car is speeding through the road and it surpasses the reaction time of the sensor, an accident could occur';
+                document.getElementById('value-change-7').innerHTML = 'Tvilight';
+            });
+
+            $("#lits").click(function(){
+                document.getElementById('value-change-1').innerHTML = '3-year plan to replace 900,000 streetlamp lightbulbs';
+                document.getElementById('value-change-2').innerHTML = 'Carbon neutral bulb, the co-culture ensures gas exchange between both organisms. Electrical motor needed for mechanical rotation of the impeller (find a number of what it emits) can be implemented easily since electrical facilities are already present ';
+                document.getElementById('value-change-3').innerHTML = 'Total Cost: £59.8M (23% decrease in comparison to conventional lightbulbs)';
+                document.getElementById('value-change-4').innerHTML = 'Total Cost: £45M';
+                document.getElementById('value-change-5').innerHTML = '160W';
+                document.getElementById('value-change-6').innerHTML = 'Citizens: +	It decreases light pollution +	Carbon neutral design, providing a healthier living environment +	Ensures friendly and welcoming environment +	Allows to see benefits and possibilities of GM tools in everyday life appliancesMunicipality: +	Reduction in energy requirements +	Reduction in pollution and positive public image. +	Cut in energy bill +	Educating the public about the safety of this design';
+                document.getElementById('value-change-7').innerHTML = 'Teresa van Dongen - Ambio';
+            });
+
         });
     </script>
 </head>
 
 <style>
     .image-content-here {
-        height: 320px;
-        width:375px;
+        height: 200px;
+        width:220px;
         border-radius: 50%;
-        padding: 0 6% 0 0;
+        margin: 1% 5% 1% 5%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .introbit {
+        position:relative;
+        font-size: 25px;
+        font-family: "Crimson Text";
+        padding: 1% 3% 2% 15%;
+        margin:0 !important;
+    }
+
+    .quotes {
+        position:relative;
+        font-size: 22px;
+        font-style:italic;
+        font-family: "Crimson Text";
+        padding: 1% 3% 2% 15%;
+        margin:0 !important;
+    }
+
+    .competitors-table {
+        margin:10% 0 0 0;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .competitors-tr {
+        border: 1px solid black;
+
+    }
+
+    .competitors-td  {
+        padding: 3% 3% 3% 3%;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .competitors-td-changing {
+        padding: 3% 3% 3% 3%;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .competitors-td-first-column {
+        padding: 1% 8% 1% 2% !important;
+        font-weight: 600;
+        font-size:16px;
+        max-width: 100%;
+        background-color: #c6c6d8;
+    }
+
+    .table-buttons {
+        margin: 2% 0 1% 3%;
+        float:right;
+        position: relative;
+    }
+    .icons-here {
+        height:100px;
+        width:100px;
+        padding: 1%;
+        margin: 1% 10% 5% 10%;
     }
 
 </style>
@@ -168,18 +264,21 @@
         <!-- The side navbar -->
         <nav id="side-index" class="col-sm-2">
             <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Who we are</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Product</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Business Environment</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section4">Financial data</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#who">Who we are</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#why">Why and How</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#product">Product</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#ip">Intellectual Property</a></li>
+                <li id="step5" class="navy-link side-link"><a href="#busienv">Business Environment</a></li>
+                <li id="step6" class="navy-link side-link"><a href="#market">Marketing</a></li>
             </ul>
         </nav>
 
         <!-- Content -->
         <div style="float: right !important" class="col-sm-10">
 
-            <div class="row">
-                <div style="margin-top: 10px" class="text-section col-sm-10">
+            <!-- Intro -->
+            <div id="who" class="row">
+                <div style="margin-top: 10px" class="text-section col-sm-7">
 
                     <h1 class="subtitle">Bringing urban design and synthetic biology together</h1>
 
@@ -187,21 +286,64 @@
 
                     <p class="introbit">2057: the London Eye uses bioluminescence to impress tourists during night time.</p>
 
-                    <p class="text-content">At LIT, we focus on developing applications for biological light switches – molecular devices that activate and suppress cellular processes. When combined cleverly, technologies such as architecture from bacteria and sustainable bioluminescent bulbs emerge. We see synthetic biology at the core of urban design.</p>
+                    <p class="text-content">At LIT, we develop applications for biological light switches – molecular devices that activate and suppress cellular processes. Our focus is on controlling cellular organisms that can transform our current ways of thinking about urban design.</p>
 
+                    <p class="text-content-duo">Our first product is a sustainable bioluminescent light bulb. It uses the daily cycles of day and night to regulate its bioluminescence via a genetically engineered circuit. Making use of bacterial co-culturing, the bulb provides an eco-friendly, cost-effective and aesthetically pleasing solution that is sustainable for the long term compared to other alternatives.</p>
                 </div>
+
+                <div class="picture-section-right col-sm-4">
+                    <img src="assets/icon-bulb.png" class="image-content-here">
+                </div>
+
             </div>
 
+            <!-- Is it worth it? -->
+            <div id="why" class="row">
 
+                <div class="text-section col-sm-10">
+                    <h1 class="title">The why and how</h1>
 
+                    <p class="introbit">Currently, the world is in the process of rethinking 2 essential aspects of what our metropoles mean: energy consumption and the integration of nature into urban design – sometimes involving the idea of biomimicry.</p>
 
-            <div class="row">
+                    <p class="text-content-duo">In the UK, the “Europe Strategy 2020” aims to cut CO2 emissions by 20% before 2020. Consequently, city councils are requested to implement measures that will reduce their carbon emissions. Now, 85% of city councils dim or turn off the streetlights to save electricity costs and reduce their carbon foot print.</p>
+
+                    <p class="text-content-duo">We see the implementation of new and better technology to satisfy the needs for private and public illumination as the only solution to the issue. Not only will our products help with the current worldwide endeavour of reducing energy consumption, but they will also make citizens more aware of what their surroundings are made of and how one must take care of that. The concept of the citizen can again be relived.</p>
+
+                    <p class="text-content-duo">We chose to first focus on the prototype of a bacterial light bulb, after reviewing the potential of all our iGEM applications developed during the past couple of months.</p>
+                </div>
+
+                <!--bit about who we collaborated with -->
+                <div class="text-content col-sm-7">
+                    <p class="introbit text-content-duo">Over the summer, we contacted and built connections with architects, designers, lawyers and public service institutions in London to go from summer project to start-up. Their advice has been extremely valuable to the practicality of our products, their real-life implementation, public reception and what steps need to be taken.</p>
+                </div>
+
+                    <!-- Icons for the collaborators-->
+                <div style="border:none" class="picture-section-right col-sm-4">
+                    <img src="assets/icon-esa.png" class="icons-here">
+                    <img src="assets/icon-tfl.png" class="icons-here">
+                </div>
+
+                    <!-- where are we heading next-->
+                <div style="border:none" class="text-section col-sm-7">
+                    <h2 class="subtitle">Where to next?</h2>
+                    <p class="text-content-duo introbit">The next few years will involve a lot more R&D, but we’ll not keep things quiet. Since we already hosted a competition to crowdsource designs for the aesthetics of our bulb, we intend to repeat such events where we can get as much feedback as possible from people and integrate that in our technologies.</p>
+                </div>
+
+                    <!-- picture of the instagram/events -->
+                <div style="border:none" class="picture-section-right col-sm-4">
+                    <img src="assets/insta1.jpg" class="image-content-here">
+                    <img src="assets/HP-ScienceMuseum-3.jpg" class="image-content-here">
+                </div>
+
+            </div>
+
+            <!-- Product-->
+            <div id="product" class="row">
                 <div class="text-section col-sm-7">
 
                     <h1 class="title">Product </h1>
 
-                    <p class="text-content-duo-primary">Our bacteria-powered lightbulb detects changes of light intensity in its environment, allowing the genetically engineered circuit in the bacteria to encode for bioluminescence only during night time. Making use of bacterial co-culturing, the bulb provides an eco-friendly, cost-effective and aesthetically pleasing solution that is sustainable for the long term.</p>
-
+                    <p class="text-content-duo">Our bacteria-powered lightbulb detects changes of light intensity in its environment, allowing the genetically engineered circuit in the bacteria to encode for bioluminescence only during night time. Making use of bacterial co-culturing, the bulb provides an eco-friendly, cost-effective and aesthetically pleasing solution that is sustainable for the long term.</p>
 
                 </div>
 
@@ -212,25 +354,134 @@
             </div>
 
 
-            <div class="row">
+            <!-- Business Environment -->
+            <div id="busienv" class="row">
 
-                <div class="text-section">
+                <!-- Philosophy-->
+                <div class="text-section col-sm-11">
                     <h1 class="title">Business Environment</h1>
-                    <p class="text-content-duo-primary">We aimed to engineer a bacterial light bulb that serves as more than an ambient light. We identified a significant design consideration: light must reach our co-culture bacteria for nutrition purposes and traverse the bulb when it is produced by the bioluminescent E. Coli.</p>
+                    <h1 class="subtitle">Why we think we can have an impact</h1>
 
-                    <p class="text-content-duo">We combined mathematical modelling and integrated human practices to determine what our light bulb should look like. Our OptoFlux considered homogeneity and cell growth to determine the dimensions necessary to produce luminescence equivalent to 160W – about the same intensity as a street lamp.</p>
+                    <p class="text-content-duo">At LIT we got inspired by a set of principles laid out tech investor and PayPal co-founder, Peter Thiel:</p>
 
-                    <a class="text-content-duo" href="#">Click here to see our 3D light bulb built on Auto CAD.</a>
+                    <p class="quotes">“The most valuable businesses of coming decades will be built by entrepreneurs who seek to empower people rather than try to make them obsolete.”</p>
 
+                    <p class="quotes">“The best entrepreneurs know this: every great business is built around a secret that’s hidden from the outside. A great company is a conspiracy to change the world; when you share your secret, the recipient becomes a fellow conspirator.”</p>
 
+                    <p class="quotes">“If your product requires advertising or salespeople to sell it, it’s not good enough: technology is primarily about product development, not distribution.”</p>
+                </div>
+
+                <!-- Some more philosophy-->
+                <div class="text-section col-sm-9">
+
+                    <p class="introbit">Therefore, we organized our strategy in terms of developing an awesome product, empowering people and building strong connections with fellow ‘conspirators’. </p>
+
+                    <p class="text-content-duo">To get from 0 to 1, one needs to assess the impact that one can have – in our case in urban design and public illumination. The following impact analysis reviewed the ethics, cost analysis and competitors’ analysis to evaluate in parallel to our product development how successful our vision can be and the challenges that will need to be tackled in the next few years.</p>
+
+                    <p class="quotes">“Prepare for the worst, hope for the best."</p>
+                </div>
+
+                <!-- Actual content-->
+                <div class="text-section col-sm-10">
+                    <h1 class="title">First stop: United Kingdom</h1>
+
+                    <p class="introbit">“Europe Strategy 2020” aims to cut CO2 emissions by 20% before 2020. In the UK, city councils are requested to implement measures that will reduce their carbon emissions. At the moment, 85% of the city councils dim or turn off the streetlights to save electricity costs and reduce their carbon foot print.</p>
+
+                    <p class="text-content-duo">We chose to try and implement our technology in London, where the environmental impact and maintenance costs required for street lamps represent two of the largest concerns conventional lightbulbs raise for the municipality. In addition to the high costs incurred to power the streetlights, they also are a major source of pollution and large contributors to the carbon footprint of the city.</p>
 
                 </div>
 
 
+                <!-- The criteria-->
+                <div class="text-section col-sm-10">
+
+                    <p style="position:absolute; padding:2% 0 0 0 !important; float:right" class="subtitle">Click to see the impact analysis for each alternative<span class="glyphicon glyphicon-chevron-right"></span></p>
+
+                    <button id="lits" type="button" class="btn btn-primary table-buttons">LIT bulb</button>
+                    <button id="dims" type="button" class="btn btn-primary table-buttons">Sensor diming bulbs</button>
+                    <button id="leds" type="button" class="btn btn-primary table-buttons">LED bulbs</button>
+
+                    <table class="competitors-table">
+
+                        <tr class="competitors-tr">
+                            <th class="competitors-td">Criteria</th>
+                            <th class="competitors-td">Convetional bulbs</th>
+                            <th class="competitors-td">Alternative technology</th>
+                        </tr>
+
+                        <tr class="competitors-tr">
+                            <td class="competitors-td-first-column">Scale of project</td>
+                            <td class="competitors-td">900,000 streetlights</td>
+                            <td id="value-change-1" class="competitors-td">900,000 streetlights</td>
+                        </tr>
+
+                        <tr class="competitors-tr">
+                            <td class="competitors-td-first-column">Environmental impact (over a period of 1 year)</td>
+                            <td class="competitors-td">Emissions: 3.9 million T of CO2 <br>
+                                Energy consumption: 409 GWh of energy</td>
+                            <td id="value-change-2" class="competitors-td">Emissions: 3.9 million T of CO2 <br>
+                                Energy consumption: 409 GWh of energy</td>
+                        </tr>
+
+                        <tr class="competitors-tr">
+                            <td class="competitors-td-first-column">Maintenance costs</td>
+                            <td class="competitors-td">£4 million</td>
+                            <td id="value-change-3" class="competitors-td">£4 million</td>
+                        </tr>
+
+                        <tr class="competitors-tr">
+                            <td class="competitors-td-first-column">Upfront costs to implement</td>
+                            <td class="competitors-td">NA</td>
+                            <td id="value-change-4" class="competitors-td">NA</td>
+                        </tr>
+
+                        <tr class="competitors-tr">
+                            <td class="competitors-td-first-column">Power/ light intensity</td>
+                            <td class="competitors-td">160 W</td>
+                            <td id="value-change-5" class="competitors-td">160 W</td>
+                        </tr>
+
+                        <tr class="competitors-tr">
+                            <td class="competitors-td-first-column">Social impact</td>
+                            <td class="competitors-td">Citizens:
+                                +	The yellow light released from the CFL lightbulbs from the street lights gives the streets a warm and welcoming character <br>
+                                -	CFL lights contribute to the carbon footprint of London and therefore to the pollution of the city <br>
+                                -	CFL lightbulbs are main contributors of light pollution in London. The sky in the City of London is covered by an “artificial twilight” that its population never gets to experience a true night
+
+                                Municipality:
+                                +	Ease of having an already established process for this technology. As the technology is already in place no changes would be required
+                                −	High CO2 emissions
+                                −	High maintenance costs, due to regular replacement of the lightbulbs
+                            </td>
+                            <td id="value-change-6" class="competitors-td">Citizens:
+                                +	The yellow light released from the CFL lightbulbs from the street lights gives the streets a warm and welcoming character <br>
+                                -	CFL lights contribute to the carbon footprint of London and therefore to the pollution of the city <br>
+                                -	CFL lightbulbs are main contributors of light pollution in London. The sky in the City of London is covered by an “artificial twilight” that its population never gets to experience a true night
+
+                                Municipality:
+                                +	Ease of having an already established process for this technology. As the technology is already in place no changes would be required
+                                −	High CO2 emissions
+                                −	High maintenance costs, due to regular replacement of the lightbulbs
+                            </td>
+                        </tr>
+
+                        <tr class="competitors-tr">
+                            <td class="competitors-td-first-column">Case studies</td>
+                            <td class="competitors-td">NA</td>
+                            <td id="value-change-7" class="competitors-td">NA</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="text-section col-sm-10">
+                    <p class="introbit">To ensure the design is bio-safe, further research would need to be conducted to eliminate the fear of bio-contamination. Furthermore, the design would need to be proven to be robust and reliable to replace current technologies. This report will hopefully bring the LIT bacterial powered lightbulb one step closer to being incorporated in London’s streetlights.</p>
+                </div>
+
             </div>
 
 
-            <div class="row">
+            <!-- Marketing-->
+            <div id="market" class="row">
 
                 <div class="text-section">
                     <h1 class="title">Marketing</h1>
@@ -243,16 +494,26 @@
 
             </div>
 
+            <!-- Culture-->
+            <div id="culture" class="row">
+                <div class="text-section col-sm-10">
+                    <h1 class="title">The culture at LIT</h1>
+                    <p class="introbit"></p>
+                </div>
+            </div>
 
+            
+            <!-- Intellectual property-->
             <div class="row">
 
                 <div class="text-section">
                     <h1 class="title">Intellectual Property</h1>
-                    <p class="text-content-duo-primary">We proposed a new way of printing organs: light activates the transcription of any gene of interest to enable desired differentiation. In a medical context, such a process needs to be rapid and highly precise.</p>
 
+                    <p class="introbit">We love open-source and we believe that the future of synthetic biology lies in everyone doing it responsibly, transparently and with the best intentions. The culture at LIT is about enabling people to creatively innovate and not shut down ideas if no short-term benefit is apparent.</p>
 
-                    <p class="text-content">Similar to how bacterial cells form 3D structures, mammalian cell adhesion is dependent on optimal levels of light intensity. Our LAME model helped us mathematically describe the stages of gene photoactivation in mammalian cells, resulting in us knowing what range of values for transcription activation is more likely to provide informative results in the lab.</p>
+                    <p class="text-content-duo">Still, as any starting company, one must play the game. To obtain funding and support, it is necessary to go from 0 to 1 – develop technologies that are at least 10x better than what is already available. To achieve this, protecting the intellectual property of our technologies is necessary. In the same way that Google made their TensorFlow software available for everyone to dabble with machine learning for free, we would like in the next few years to open-source the way biological light switches can be used to innovate in everyday life.</p>
 
+                    <p class="text-content-duo">Perhaps naively, we started out by reaching to Glowee, a company that is focusing on integrating bioluminescence on the streets. Their response, maybe unsurprisingly, was of keeping information confidential.</p>
                 </div>
 
 
