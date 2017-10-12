@@ -319,7 +319,6 @@ body {
 
 
 
-
 /* ----------------------------------------------------------------*/
 /* this is for ul elements where we want to put content */
 .list-section {
@@ -354,7 +353,7 @@ body {
 .image-content-icons {
     height: 120px;
     width:120px;
-    margin: 4% 5% 0 20%;
+    margin: 4% 3% 0 0;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -366,6 +365,13 @@ body {
 .affix {
     top: 20px;
     left:40px;
+}
+
+/* for the pdfs to be seen on the website */
+.pdfs {
+    margin:2% 0 15% 5%;
+    width:800px;
+    height:500px;
 }
 
 /* class made to center content? - not sure where we are using this */
