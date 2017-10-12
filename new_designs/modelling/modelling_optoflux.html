@@ -211,10 +211,11 @@
         <nav id="side-index" class="col-sm-2">
             <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
                 <li id="step1" class="navy-link side-link"><a href="#overview">Overview</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#science1">Modelling steps</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#results">Results</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section4">3D model design</a></li>
-                <li id="step5" class="navy-link side-link"><a href="#section5">Modelling details</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#aims">Aims</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#science1">Modelling steps</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#results">Results</a></li>
+                <li id="step5" class="navy-link side-link"><a href="#design">3D model design</a></li>
+                <li id="step6" class="navy-link side-link"><a href="#assumptions">Modelling details</a></li>
             </ul>
         </nav>
 
@@ -225,32 +226,33 @@
             <!-- The science and biology -->
             <div id="overview" class="row">
 
-                <div style="margin-top: 20px" class="text-section col-sm-7">
-                    <h1 class="title" style="font-size: 30px; margin-left: 50px">‘OptoFlux: Making design a breeze’</h1>
-                    <h2 class="subtitle"> A mathematical model that optimizes object dimensions to maximize their productivity</h2>
+                <div class="text-section col-sm-10" style="border:none">
+                    <h1 class="title" style="font-size: 30px; text-align:center">‘OptoFlux: Making design a breeze’</h1>
+                    <h2 class="subtitle" style="text-align: center"> A mathematical model that optimizes object dimensions to maximize their productivity</h2>
+                </div>
 
-                    <h1 class="title" style="margin-top: 0px">The aim of Optoflux</h1>
+                <div style="margin-top: 20px; border:none" class="text-section col-sm-7">
 
+                    <h1 class="title" style="margin-top: 30px">The aim of Optoflux</h1>
 
                     <p id="aim" class="text-content-duo">We pride ourselves in designing a sustainable bioluminescent light bulb that uses co-culturing to provide the necessary nutrients for the bacteria. Key to this process is the photosynthesis carried out by the cyanobacteria, which provides the necessary glucose for E. Coli.</p>
 
                     <p class="text-content-duo">The aim of Optoflux was to optimise:</p>
 
                     <ul style="padding-top: 0" class="list-section">
-                        <li class="list-item-content">Maximum amount of glucose that Cyanobacteria can produce</li>
-                        <li class="list-item-content">Number of E.coli cells required to produce luminescence that can compete with a conventional 160W light bulb </li>
-                        <li class="list-item-content">Amount of glucose produced from Cyanobacteria that is sufficient to sustain the required number of E.coli cells</li>
+                        <li class="list-item-content"><b>Part 1 </b> Maximum amount of glucose that Cyanobacteria can produce</li>
+                        <li class="list-item-content"><b>Part 2 </b>The number of E.coli cells required to produce luminescence that can compete with a conventional 160W light bulb </li>
+                        <li class="list-item-content"> <b>Part 3 </b>The amount of glucose produced from Cyanobacteria that is sufficient to sustain the required number of E.coli cells</li>
                     </ul>
-
 
                 </div>
 
-                <div style="margin-top: 1.8%" class="picture-section-right col-sm-4">
-                    <img src="../assets/OptoFlux/Opto_overview.png" class="image-content-graphs image-content-here">
+                <div style="margin-top: 0; padding-top: 0; border:none" class="picture-section-right col-sm-4">
+                    <img src="../assets/OptoFlux/Opto_overview.png" class="image-content-graphs image-content-here" style="margin-top:0">
 
                     <p class="text-content" style="padding-top: 0"><i>Figure 1</i>Schematic of the co-culture in the LIT bulb</p>
 
-                    <h2 style="padding-top: 15%; font-size: 25px" class="subtitle"><a href="">Click here to learn more about the science behind the LIT bulb! </a></h2>
+                    <h2 style="padding-top: 10%; font-size: 25px" class="subtitle"><a href="">Click here to learn more about the science behind the LIT bulb! </a></h2>
 
                 </div>
 
@@ -258,14 +260,14 @@
 
             <!-- Aims and overview -->
             <div class="row">
-                <div class="text-section col-sm-5">
+                <div id="aims" class="text-section col-sm-5">
                     <h2 class="title">Specific Model Aims</h2>
                     <div class="text-content-duo">
                         <ul>
-                            <li>Determine the concentration of Cyanobacteria cells required in the LIT bulb </li>
+                            <li>Determine the concentration of Cyanobacteria required in the LIT bulb</li>
                             <li>Determine the concentration of E.coli cells required in the LIT bulb</li>
                             <li>Determine the optimal dimensions (diameter) for the LIT bulb</li>
-                            <li>Determine the optimum incoming light intensity to maximize the production of glucose from the Cyanobacteria cells</li>
+                            <li>Determine the optimum incoming light intensity to maximize the production of glucose from the Cyanobacteria</li>
                             <li>Determine if the optimized conditions can power the co-culture in the LIT bulb</li>
                         </ul>
                     </div>
@@ -289,23 +291,25 @@
 
                     <h1 class="subtitle subtitle-modelling">1) Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</h1>
 
-                    <p style="max-width: 100%" class="text-content-duo">We determined the number of photons entering our LIT bulb by employing the  <a href="glossary_o.html"> Planck-Einstein relationship </a>. This
-                        relationship enabled us to use radiometric units to quantify the number of photons entering our LIT bulb. </p>
+                    <p style="max-width: 100%" class="text-content-duo">We determined the number of photons entering our LIT bulb by employing the  <a href="glossary_o.html"> Planck-Einstein relationship </a>,
+                        which allowed us to use radiometric units to quantify the number of photons entering our LIT bulb. </p>
 
-                    <p style="max-width: 100%; padding-bottom: 0" class="text-content-duo">We only focused on quantifying the photons within the Phostosynthetically Active Radiation (PAR) part of the light spectrum, as those are the only light wavelengths used for photosynthesis. Through quantifying the number of photons entering our LIT bulb we could determine the levels of photosynthesis
+                    <p style="max-width: 100%; padding-bottom: 0" class="text-content-duo">We only focused on quantifying
+                        the photons within the Phostosynthetically Active Radiation (PAR) part of the light spectrum, as
+                        those are the only light wavelengths used for photosynthesis. This way we could determine the levels of photosynthesis
                         that could take place by our Cyanobacteria cells.</p>
 
                 </div>
 
                 <div class="picture-section-right col-sm-5">
-                    <img src="../assets/Barch/Barc_Transcription.jpg" class="modelling-steps-image" >
+                    <img src="../assets/Barch/Barc_Transcription.jpg" class="modelling-steps-image" style=" height: 500px; padding-bottom: 0">
                 </div>
 
                 <div style="border:none" class="picture picture-section-left col-sm-5">
-                    <img src="../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width: 400px; height: 100px">
+                    <img src="../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width: 280px; height: 70px">
                 </div>
 
-                <div style="border:none" class="text-section col-sm-5">
+                <div style="border:none; padding-top: 0px" class="text-section col-sm-5">
                     <p class="text-content">Where,
                         <br>I<sub>ph<sub>λ</sub></sub> = Incoming photon flux density at a particular wavelength (λ)
                         <br>I<sub>ph</sub> = Total Incoming photon flux density over the PAR light spectrum
@@ -336,7 +340,7 @@
 
 
                 <div style="border:none" class="picture-section-left col-sm-5">
-                    <img src="../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:400px; height: 90px; padding-left: 0">
+                    <img src="../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:400px; height: 100px; padding-left: 0">
                 </div>
 
                 <div style="border:none" class="text-section col-sm-5">
@@ -355,7 +359,11 @@
             <!-- Modelling Step 3 -->
             <div class="row">
 
-                <div class="text-section col-sm-5">
+                <div class="picture-section-left col-sm-4">
+                    <img src="../assets/Barch/Barc_Transcription.jpg" class="modelling-steps-image">
+                </div>
+
+                <div class="text-section col-sm-5" style="margin-left: 150px">
 
                     <h1 class="subtitle subtitle-modelling">3) Rate of photon uptake by the Cyanobacteria cells at each position in the LIT bulb</h1>
 
@@ -364,19 +372,14 @@
 
                 </div>
 
-                <div class="picture-section-right col-sm-4">
-                    <img src="../assets/Barch/Barc_Transcription.jpg" class="modelling-steps-image">
-                </div>
 
-                <div style="border:none" class="picture-section-left col-sm-4">
+                <div style="border:none; margin-left: 0px; padding-top:0" class="text-section col-sm-10">
                     <img src="../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:450px; height: 100px">
-                </div>
 
-                <div style="border:none" class="text-section col-sm-7">
                     <p class="text-content">Where,
                         <br>Δ<sub>z</sub> = Distance between two positions in the LIT bulb
                         <br>q<sub>ph</sub>(z) = Rate of photon uptake by the Cyanobacteria cells at each position in the LIT bulb </p>
-                </div>
+                     </div>
 
             </div>
 
@@ -400,7 +403,7 @@
 
                     <p style="font-size: 20px" class="text-content-duo">1. Finding the specific rate of sugar production at each position of the LIT bulb</p>
 
-                    <img src="../assets/OptoFlux/Specific_SugarProduction.png" class="image-content-graphs" style="width:500px; height: 100px">
+                    <img src="../assets/OptoFlux/Specific_SugarProduction.png" class="image-content-graphs" style="width:400px; height: 100px">
 
                     <p style="font-size: 20px" class="text-content" style="margin-top: 0; padding-top:0 ">Where,
                         <br>q<sub>s</sub><sup>c</sup>(z)= Specific sugar production rate at each position in the LIT bulb
@@ -411,9 +414,9 @@
                 </div>
 
                 <div style="border:none" class="text-section col-sm-6">
-                    <p class="text-content" style="font-size: 20px"><b>2. Determine the yield of biomass on sugar production at each position of the LIT bulb </b></p>
+                    <p class="text-content" style="font-size: 20px">2. Determine the yield of biomass on sugar production at each position of the LIT bulb </p>
 
-                    <img src="../assets/OptoFlux/Yield_Biomass.png" class="image-content-graphs" style="width:325px; height: 80px">
+                    <img src="../assets/OptoFlux/Yield_Biomass.png" class="image-content-graphs" style="width:300px; height: 80px">
 
                     <p style="font-size: 20px" class="text-content">Where,
                         <br>Y<sub>sph</sub>(z)= Yield of biomass on sugar at every position in the LIT bulb
@@ -421,7 +424,7 @@
 
                     <p class="text-content" style="font-size: 20px">Finally, we determined the average sugar production rate in the LIT bulb: </p>
 
-                    <img src="../assets/OptoFlux/Average_SugarProduction.png" class="image-content-graphs" style="width:350px; height: 70px">
+                    <img src="../assets/OptoFlux/Average_SugarProduction.png" class="image-content-graphs" style="width:320px; height: 70px">
 
                     <p class="text-content" style="font-size: 20px">Where,
                         <br>q<sub>s average</sub><sup>c</sup>= Average sugar production rate
@@ -450,9 +453,9 @@
                 <div class="text-section col-sm-6">
                     <h1 class="title">Optimising the diameter of the LIT bulb</h1>
 
-                    <p class="text-content-duo modelling-steps-intro">When optimizing the diameter for the LIT bulb we decided to focus on two aspects,
+                    <p class="text-content-duo modelling-steps-intro" style="padding-top:15px">When optimizing the diameter for the LIT bulb we decided to focus on two aspects,
                         the amount of sugar produced and the yield of sugar on biomass for each diameter tested. </p>
-                    <table  class="text-content-duo-primary" style="margin-left: 75px!important; max-width: 90%; padding-bottom:0; margin-bottom:0">
+                    <table  class="text-content-duo-primary" style="margin-left: 75px!important; max-width: 90%; padding-bottom:0; padding-left:30%; padding-right:30%">
                         <tr>
                             <th class="text-content" style="padding: 0">Parameter</th>
                             <th class="text-content" style="padding: 0">Inputted values </th>
@@ -745,7 +748,7 @@
             </div>
 
             <!-- Analytical steps-->
-            <div id="section5" class="row">
+            <div id="design" class="row">
                 <div class="text-section">
                     <h10 class="title"> 3D Prototype of the LIT bulb</h10>
 
