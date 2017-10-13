@@ -46,15 +46,13 @@ function make_repressilator(target_element,unique_name){
 				var d1= 60/300;
 				var d2=60/20;
 				var a= 0.07;
-				var b= (Pc / (Pc+ Km.val())) * n * Vmax.val();
+                var b= (Pc / (Pc+ Km.val())) * n * Vmax.val();
+                var n= 1 - (Ps/1.24);
 
-
-
-                dEL222d = a+(light_intensity * (Math.pow(EL222inactive,2)) - (k2 * EL222d);
+                dEL222d = a+(light(L) * (Math.pow(EL222inactive,2)) - (k2 * EL222d));
                 dmRNA = (k2 * EL222d) - (d1 * mRNA) - (k3 * mRNA);
-                dPc = (k3 * mRNA) - (d2 * Pc) - (b * Pc)
-
-                dPs = (b * Pc) -d2*(Ps)
+                dPc = (k3 * mRNA) - (d2 * Pc) - (b * Pc);
+                dPs = (b * Pc) -d2*(Ps);
 
 
 			
