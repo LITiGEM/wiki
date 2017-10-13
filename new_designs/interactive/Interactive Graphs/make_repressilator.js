@@ -55,7 +55,6 @@ function make_repressilator(target_element,unique_name){
                 dPs = (b * Pc) -d2*(Ps);
 
 
-			
 				//dEL222d = (0.2*Math.pow(10,-5))+(light(L)*Math.pow(EL222d, 2))-(4.32*EL222d);//basal expression missing //
 				//dmRNA = (4.32*EL222d)-(3*mRNA)-(5.45*mRNA);
 				//dPc = (((Math.pow(2,Pc)*Math.pow((1-(Pc/0.00000648)),-3-Vmax.val()))+(Pc*((mRNA*5.45)-(3*Km.val())))+((mRNA*5.45)*Km.val()))/(Km.val()+Pc));
