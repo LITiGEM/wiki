@@ -286,36 +286,30 @@
             <div id="science1" class="row">
 
                 <div class="text-section col-sm-5">
-                    <h1 class="title">Modelling steps</h1>
+                    <h1 class="title" style="padding-bottom: 25px">Modelling steps</h1>
 
-                    <h1 class="subtitle subtitle-modelling">1) Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</h1>
+                    <h1 class="subtitle subtitle-modelling" style="padding-bottom: 30px">1) Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</h1>
 
-                    <p style="max-width: 100%" class="text-content-duo">We determined the number of photons entering our LIT bulb by employing the  <a href="glossary_o.html"> Planck-Einstein relationship </a>,
+                    <p style="max-width: 100%; padding-bottom: 20px" class="text-content-duo">We determined the number of photons entering our LIT bulb by employing the  <a href="glossary_o.html"> Planck-Einstein relationship </a>,
                         which allowed us to use radiometric units to quantify the number of photons entering our LIT bulb. </p>
 
                     <p style="max-width: 100%; padding-bottom: 0" class="text-content-duo">We only focused on quantifying
                         the photons within the Phostosynthetically Active Radiation (PAR) part of the light spectrum, as
                         those are the only light wavelengths used for photosynthesis. This way we could determine the levels of photosynthesis
                         that could take place by our Cyanobacteria cells.</p>
-
                 </div>
 
                 <div class="picture-section-right col-sm-5">
-                    <img src="../assets/Barch/Barc_Transcription.jpg" class="modelling-steps-image" style=" height: 500px; padding-bottom: 0">
-                </div>
+                    <img src="../assets/LITbulb1.png" class="modelling-steps-image" style=" height: 280px; width: 500px;padding-bottom: 0; padding-top:0!important">
 
-                <div style="border:none" class="picture picture-section-left col-sm-5">
                     <img src="../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width: 280px; height: 70px">
-                </div>
 
-                <div style="border:none; padding-top: 0px" class="text-section col-sm-5">
-                    <p class="text-content">Where,
+                    <p class="text-content-duo" style="margin-left: 150px">Where,
                         <br>I<sub>ph<sub>λ</sub></sub> = Incoming photon flux density at a particular wavelength (λ)
                         <br>I<sub>ph</sub> = Total Incoming photon flux density over the PAR light spectrum
                         <br>E<sub>nl</sub> = Amount of light absorbed by the Cyanobacteria cells at different Iph values
                     </p>
                 </div>
-
             </div>
 
             <!-- Modelling Step 2 -->
@@ -331,27 +325,20 @@
 
                 </div>
 
-                <div class="picture-section-right col-sm-5">
+                <div class="picture-section-right col-sm-5" style="padding-bottom: 0">
 
-                    <img src="../assets/Barch/Barc_Transcription.jpg" class="modelling-steps-image">
+                    <img src="../assets/LITbulb2.png" class="modelling-steps-image" style="width: 430px; height: 300px" >
+
+                    <img src="../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:400px; height: 100px">
 
                 </div>
 
-
-                <div style="border:none" class="picture-section-left col-sm-5">
-                    <img src="../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:400px; height: 100px; padding-left: 0">
-                </div>
-
-                <div style="border:none" class="text-section col-sm-5">
-
-                    <p class="text-content-duo">Where,
+                    <p class="text-content col-sm-10" style="margin-left:70px!important">Where,
                         <br>α<sub>x,λ</sub> = Specific light absorption coefficient for Cyanobacteria cells
                         <br>C<sub>x</sub> = Concentration of Cyanobacteria biomass in the LIT bulb
                         <br>z = Zone, i.e. Location in the LIT bulb
                         <br>AF = Accumulation Factor (accounts for the photoaccumulation state of the cells)
                         <br>Δλ = Wavelength intervals </p>
-
-                </div>
 
             </div>
 
@@ -359,26 +346,24 @@
             <div class="row">
 
                 <div class="picture-section-left col-sm-4">
-                    <img src="../assets/Barch/Barc_Transcription.jpg" class="modelling-steps-image">
+                    <img src="../assets/LITbulb3.png" class="modelling-steps-image" style="width: 400px; height: 250px; padding-bottom: 0; padding-top:0">
+                    <p class="text-content">Where,
+                        <br>Δ<sub>z</sub> = Distance between two positions in the LIT bulb
+                        <br>q<sub>ph</sub>(z) = Rate of photon uptake by the Cyanobacteria cells at each position in the LIT bulb </p>
+
+
                 </div>
 
-                <div class="text-section col-sm-5" style="margin-left: 150px">
+                <div class="text-section col-sm-5" style="margin-left: 100px">
 
                     <h1 class="subtitle subtitle-modelling">3) Rate of photon uptake by the Cyanobacteria cells at each position in the LIT bulb</h1>
 
                     <p class="text-content modelling-steps-intro">We determined the photon uptake rate at each position in the LIT bulb using forward and backward
                         finite differences. The finite differences allowed us to estimate an approximation.</p>
 
+                    <img src="../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:450px; height: 120px; padding-top: 25px">
+
                 </div>
-
-
-                <div style="border:none; margin-left: 0px; padding-top:0" class="text-section col-sm-10">
-                    <img src="../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:450px; height: 100px">
-
-                    <p class="text-content">Where,
-                        <br>Δ<sub>z</sub> = Distance between two positions in the LIT bulb
-                        <br>q<sub>ph</sub>(z) = Rate of photon uptake by the Cyanobacteria cells at each position in the LIT bulb </p>
-                     </div>
 
             </div>
 
@@ -395,7 +380,7 @@
                 </div>
 
                 <div class="picture-section-right col-sm-6">
-                    <img src="../assets/Barch/Barc_Transcription.jpg" class="modelling-steps-image">
+                    <img src="../assets/LITbulb4.png" class="modelling-steps-image" style="width:400px; height:300px">
                 </div>
 
                 <div style="border:none" class="text-section col-sm-5">
@@ -640,7 +625,7 @@
                         photons will not be utilised by the cells for photosynthesis. We identified the best Iph as the point at which the graphs intersect. Although
                         past the point of intersection the average sugar production rate increases there is such a significant decrease in the yield of sugar per photon, that the intersection represents the best trade off. </p>
 
-                    <table class="text-content-duo-primary" style=" margin-left: 70px!important; max-width:100%!important; padding-top:30px!important; padding-bottom: 30px!important ">
+                    <table class="text-content-duo-primary" style=" margin-left: 120px!important; max-width:100%!important; padding-top:30px!important; padding-bottom: 30px!important ">
                         <tr>
                             <th class="text-content" style="padding: 0">Parameters</th>
                             <th class="text-content" style="padding: 0">Optimized values </th>
@@ -661,7 +646,7 @@
                         </tr>
                     </table>
 
-                    <p style="padding-top: 15px; margin-left:70px"> <i>Figure 9: </i> Outlines the optimized Iph for the LIT bulb</p>
+                    <p style="padding-top: 15px; margin-left:120px"> <i>Figure 9: </i> Outlines the optimized Iph for the LIT bulb</p>
                 </div>
 
             </div>
@@ -694,6 +679,9 @@
                             <th class="text-content" style="padding: 0">2.5E-03</th>
                         </tr>
                     </table>
+
+                    <p class="text-content" style="padding-top: 15px; margin-left:120px"> <i>Figure 10: </i> Outlines the optimized parameters for the LIT bulb</p>
+
                 </div>
             </div>
 
@@ -748,8 +736,6 @@
                         concentration is 100 fold lower than the maximum Cyanobacteria concentration that can be handelled in the OptoFlux LIT bulb design.
                         Therefore, our OptoFlux LIT bulb is suitable for to maintain our co-culture. </p>
 
-                    <h2 class="subtitle" style="padding-top: 15px; padding-bottom: 15px"> <i>Interested in the breakdown of steps? Click away </i></h2>
-
                 </div>
             </div>
 
@@ -758,12 +744,18 @@
                 <div class="text-section">
                     <h1 class="title" style="margin-left: 40px; padding-bottom: 0px"> 3D Prototype of the LIT bulb</h1>
 
-                    <p class="modelling-steps-intro col-sm-5" style="padding-bottom: 0; margin-left:30px!important"> Taking into consideration the results obtained from the Optoflux model and the
-                        submissions of our Instagram competition, we designed a 3D prototype of our LIT bulb.</p>
+                    <div class="modelling-steps-intro col-sm-5">
+                        <p style="padding-bottom: 0; margin-left:30px!important"> Taking into consideration the results obtained from the Optoflux model and the
+                            submissions of our Instagram competition, we designed a 3D prototype of our LIT bulb.</p>
+                        <h2 class="subtitle" style="padding-top: 30px; padding-bottom: 15px"> <i>Check out the final product here! </i></h2>
+                    </div>
+
                     <!-- ADD LINK TO INSTAGRAM AND TO ENTREPRENEURSHIP -->
+                    <p class="text-content" style="margin-left: 500px!important; padding-bottom: 0; margin-bottom:0; max-width: 50%"><i>Figure 11</i> 3D prototype of
+                        the LIT bulb designed on Autodesk Fusion 360 </p>
 
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="400px" height="550px" viewBox="0 0 560 960" enable-background="new 0 0 560 960" xml:space="preserve">
+	 width="500px" height="600px" viewBox="0 0 560 960" enable-background="new 0 0 400 600" xml:space="preserve">
 <g>
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#1EB3F6" d="M219.067,111.604c3.528-1.852,7.581-1.796,11.264-3.095
 		c6.687-1.251,13.372-2.502,20.058-3.753c6.599-0.371,13.196-0.741,19.793-1.112c6.945-1.396,13.897-0.008,20.828,0.134
@@ -2987,13 +2979,7 @@
 <g>
 </g>
 </svg>
-
-                    <div class="picture-section-right col-sm-5" style="padding-top: 0; padding-bottom:0; display:inline-flex; margin-left: 150px">
-
-                    </div>
                 </div>
-
-
             </div>
 
             <div class="row" style="padding-top: 0">

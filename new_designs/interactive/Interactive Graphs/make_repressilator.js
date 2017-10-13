@@ -27,7 +27,7 @@ function make_repressilator(target_element,unique_name){
 
 
     function light(L) {
-        return (1545*Math.pow(2,L.val()))/(Math.pow(2,1545)+Math.pow(2,L.val()));
+        return ((1545*Math.pow(L.val(), 2))/(Math.pow(1.052, 2)+Math.pow(L.val(), 2)));
 	}
 	
 	function ode() {
@@ -39,11 +39,26 @@ function make_repressilator(target_element,unique_name){
 				var mRNA= x[1];
 				var Pc= x[2];
 				var Ps = x[3];
-			
-				dEL222d = (0.2*Math.pow(10,-5))+(light(L)*Math.pow(2,EL222d))-(4.32*EL222d);
-				dmRNA = (4.32*EL222d)-(3*mRNA)-(5.45*mRNA);
-				dPc = (((Math.pow(2,Pc)*Math.pow((1-(Pc/0.00000648)),-3-Vmax.val()))+(Pc*((mRNA*5.45)-(3*Km.val())))+((mRNA*5.45)*Km.val()))/(Km.val()+Pc));
-				dPs  = ((((Pc*Vmax.val())/(Pc+Km.val()))*Math.pow((1-(Pc/0.00000648))))*Pc)-(3*Ps);
+
+				var EL222inactive= 0.032;
+				var k2= 108/25;
+				var k3= 3600/660;
+				var d1= 60/300;
+				var d2=60/20;
+				var a= 0.07;
+                var b= (Pc / (Pc+ Km.val())) * n * Vmax.val();
+                var n= 1 - (Ps/1.24);
+
+                dEL222d = a+(light(L) * (Math.pow(EL222inactive,2)) - (k2 * EL222d));
+                dmRNA = (k2 * EL222d) - (d1 * mRNA) - (k3 * mRNA);
+                dPc = (k3 * mRNA) - (d2 * Pc) - (b * Pc);
+                dPs = (b * Pc) -d2*(Ps);
+
+
+				//dEL222d = (0.2*Math.pow(10,-5))+(light(L)*Math.pow(EL222d, 2))-(4.32*EL222d);//basal expression missing //
+				//dmRNA = (4.32*EL222d)-(3*mRNA)-(5.45*mRNA);
+				//dPc = (((Math.pow(2,Pc)*Math.pow((1-(Pc/0.00000648)),-3-Vmax.val()))+(Pc*((mRNA*5.45)-(3*Km.val())))+((mRNA*5.45)*Km.val()))/(Km.val()+Pc));
+				//dPs  = ((((Pc*Vmax.val())/(Pc+Km.val()))*Math.pow((1-(Pc/0.00000648))))*Pc)-(3*Ps);
 
 				y = [dEL222d, dmRNA, dPc, dPs];
 				return y;
