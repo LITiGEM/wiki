@@ -196,7 +196,7 @@
 
 
             <div class="container-fluid" style="border: none">
-                <img src="../assets/GOLIT/GOLITGIF.gif" class="image-content-graphs" style="height:400px; width: 80%; margin-left:35px; padding: 0; position: absolute; padding-top:10px; padding-bottom: 5px">
+                <img src="../assets/GOLIT/GOLITGIF.gif" class="image-content-graphs" style="height:400px; width: 80%; margin-left:35px; padding: 0; position: absolute; padding-top:10px">
                 <div class="text-content" style="max-width: 100%; padding-left: 0px; text-align: center">
                     <h1 class="title" style="position: relative; padding-top:150px; font-size: 50px; max-width:80%!important"> GOLIT -  The Model of 3D structures </h1>
                     <h1 class="title" style="color:rgba(204, 0, 53, 0.69); max-width:80%!important; padding-top:5px">Cellular automata:  a different approach to modelling Barchitecture</h1>
@@ -204,27 +204,26 @@
             </div>
 
             <div class="text-section" style="border: none; padding-top: 60px">
-                <p class="text-content">GOLIT is a model that creates a visual representation of how solid cell structures
-
-                can be formed by inducing the expression and binding of SpyTag and SpyCatcher, which are expressed on the surface
-                of our E.coli cells and are explored in our Barchitecture section. GOLIT is inspired from Conway’s Game of Life.</p>
 
 
-               <h2 class="title" style="padding-top: 10px">Aims</h2>
-                <ul class="text-content">Using GOLIT we attempted to optimize the rate at which cell adhesion occurs. We did so
-                    by introducing a range of novel approaches:
-                    <li style="margin-left: 40px">Visually represent cell adhesion</li>
-                    <li style="margin-left: 40px">Combination of <b>gene expression kinetics</b> and <b>cellular automata:</b> For spatial analysis</li>
-                    <li style="margin-left: 40px">Artificial Intelligence: <b>Genetic Algorithm</b> for automated parameter optimization</li>
-                    <li style="margin-left: 40px"><b>Experimental data:</b> Wet Lab contribution for parameter optimization</li>
-                    <li style="margin-left:40px">Determine the optimum initial light pattern to activtae the cellular mechanism</li>
-                    <li style="margin-left:40px">Determine the optimum light intensity for cell adhesion</li>
-                </ul>
+               <h2 class="title" style="padding-top: 5px">Model Aims</h2>
+                <p class="text-content"> 1. Visually represent cell adhesion</p>
+                <p class="text-content"> 2. Combination of gene expression kinetics and cellular automata: For spatial analysis</p>
+                <p class="text-content"> 3. Artificial Intelligence: Genetic Algorithm for automated parameter optimization</p>
+                <p class="text-content"> 4. Experimental data: Wet Lab contribution for parameter optimization</p>
+                <p class="text-content"> 5. Determine the optimum initial light pattern to activtae the cellular mechanism</p>
+                <p class="text-content"> 6. Determine the optimum light intensity for cell adhesion</p>
             </div>
 
 
-            <div class="row" style="border:none">
-                <h2 class="title" style="padding-top: 10px">What are we modelling?</h2>
+            <div class="text-section">
+                <h2 class="title">The science behind GOLIT</h2>
+
+                <p class="text-content">GOLIT is a model that creates a visual representation of how solid cell structures
+
+                    can be formed by inducing the expression and binding of SpyTag and SpyCatcher, which are expressed on the surface
+                    of our E.coli cells and are explored in our Barchitecture section. GOLIT is inspired from Conway’s Game of Life.</p>
+
                 <p class="text-content" > We are modelling a  <a class="text-hyperlink" href="glossary_o.html">cellular automaton</a> to dynamically represent the adhesion of cells.</p>
                     <p class="text-content">We started by collaborating with the Wet Lab team to engineer E. coli cells to express the surface protein intimin.</p>
                 <img src="../assets/GOLIT/GoLIT%201.svg" class="image-content-graphs" style="width:700px; height:350px; margin-left: 70px!important ">
@@ -236,7 +235,7 @@
                 <p class="text-content">When SpyTag and SpyCatcher from neighboring cells are in close proximity to each other they form a covalent bond. This allows cells to aggregate and form bacterial structures.</p>
 
                 <div class="image-content-graphs" style="margin-left:35px">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="650px"
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px"
 	 height="330px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
 <g id="BG">
 	<rect fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="960" height="560"/>
@@ -623,7 +622,7 @@
             </div>
 
 
-            <div class="text-content-duo col-sm-10">
+            <div class="text-content-duo col-sm-10" style="border: none">
                 <h2 class="title">How did we adapt the Game of Life? </h2>
                 <p class="text-content" style="max-width: 100%">Similar to <a  class="text-hyperlink" href="glossary_o.html"> Conway's Game of Life,</a> we are representing the cells on a 2D grid so when running the model,
                     the cells are constantly updated over a defined period of time.
@@ -843,11 +842,11 @@
 
                     <img src="../assets/GOLIT/python.png" class="image-content-graphs" style="width: 800px; height: 160px">
                     <ul class="text-content">When running the model in Python, the genetic Algorithm prints theses results:
+                        <li style="margin-left: 20px">Finding Cover time: this indicates the number of generations it will
+                            take for the grid to fill up, assuming the probabilities given by the best agent are used</li>
                         <li style="margin-left: 20px">Finding best agent: the 5 probabilities listed correspond to the "optimal"
                         rules one would need to follow when shining light on the grid in order to allow the cells to aggregate at the fastest rate</li>
-                        <li style="margin-left: 20px">Finding Cover time: this indicates the number of generations it will
-                        take for the grid to fill up, assuming the probabilities given by the best agent are used</li>
-                    </ul>
+                         </ul>
             </div>
 
 
@@ -874,10 +873,11 @@
                 <div class="border">
                     <img src="../assets/GOLIT/biotin_plot.jpg" class="image-content-graphs" style="width: 320px; height: 300px;margin-left:0!important; padding-left:2px!important;padding-right:0">
                     <img src="../assets/GOLIT/biotin_grid.jpg" class="image-content-graphs" style="width: 330px; height: 300px; margin-right: 0!important; padding-right:2px!important; padding-left: 1px">
-                    <p class="text-figure" style="padding-top:0; padding-left:10px; max-width: 100%!important">Figure 7: </p>
+                    <p class="text-figure" style="padding-top:0; padding-left:10px; max-width: 100%!important">Figure 7: Shows the number of aggregated cells vs. time. These are the
+                    experimental results abotained for the simulation of SpyTag/SpyCatcher adhesion using Biotin and Avadin</p>
                 </div>
 
-                <p class="text-content"><a class="text-hyperlink"> Click here to check the protocol of the cell aggregation experiment</a></p>
+                <p class="text-content"><a class="text-hyperlink" style="margin-left: 10px"> Click here to check the protocol of the cell aggregation experiment</a></p>
 
 
                 <h3 id="trigger-parameters" class="title">Assumptions <span class="glyphicon glyphicon-chevron-down"></span></h3>
@@ -885,10 +885,10 @@
                 <div id="parameters" class="row" style="border: none">
                     <div class="text-section" style="border: none">
                         <ul class="text-content">
-                            <li style="margin-left: 40px">Assume no metabolites are present on the surface or in the solution with the cells as
-                                biotin may attach to those proteins as opposed to the cells (biotin only attaches to surface protein)</li>
+                            <li style="margin-left: 40px">Assume no metabolites are present on the surface or in the solution with the cells,
+                                i.e. biotin only attaches to surface protein</li>
                             <li style="margin-left: 40px">Assume no cell lysis during centrifugation (All cells are whole)</li>
-                            <li style="margin-left: 40px">Assume the initial concentration of cells is- (2.5*10^7 E.coli cells)</li>
+                            <li style="margin-left: 40px">Assume the initial concentration of cells is (2.5*10<sup>7</sup> E.coli cells)</li>
                             <li style="margin-left: 40px">Assume there are only biotinylated cells present</li>
                             <li style="margin-left: 40px">Assume initial concentration of Avidin is 20 mM</li>
                         </ul>
