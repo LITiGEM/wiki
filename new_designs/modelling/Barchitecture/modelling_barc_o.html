@@ -100,6 +100,21 @@
         height:600px;
         width:550px;
     }
+
+     table, th, td {
+         border: 1px solid black;
+         border-collapse: collapse;
+     }
+    th, td {
+        padding: 5px;
+    }
+    th{
+        text-align: center;
+    }
+    td {
+        text-align: left;
+    }
+
 </style>
 
 <body data-spy="scroll" data-target="#side-index">
@@ -198,10 +213,16 @@
 
         <div style="float: right !important" class="col-sm-10">
 
-            <h1 class="title" style="font-size:50px">‘LEGIT: From light to structure’</h1>
-            <h2 class="subtitle"> A mathematical model showing how E. coli cells can be induced with light
-                <br>to build structures</h2>
+            <h1 class="title" style="font-size:50px">LEGIT - From light to structure</h1>
+            <h2 class="subtitle" style="max-width:80%!important"> A mathematical model optimizing the speed and precision of 3D structure building with E.coli cells for Barchitecture</h2>
 
+                <h2 class="title">Model Aims</h2>
+                <p class="text-content">1. Determine the rate limiting cellular mechanism</p>
+                <p class="text-content">2. Optimize the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approach </p>
+                <p class="text-content">3. Determine the range of optimal light intensities and light pulses our Wet Lab should test</p>
+                <p class="text-content">4. Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</p>
+
+            <div class="text-section">
             <h1 class="title">The Science behind LEGIT</h1>
 
             <ol class="text-content"> LEGIT is a mathematical model that determines the conditions required for optimal and rapid
@@ -214,89 +235,87 @@
                 used by our Wet Lab in order to increase the expression of intimin on the surface of the cells by 16%.
                 <br>
                 <br>
-                Breakdown of the cellular mechanisms involved in the expression of intimin:
-                <br>
-                <img src="../../assets/Bac_equations1.png" class="image-content-graphs" style="width:430px; height:350px; margin-left: 50px ">
-                <br>
-                <p>Legend:
-                    <br>EL222<sub>M</sub> = EL222 monomer
-                    <br>EL222<sub>D</sub> = EL222 dimer
-                    <br>Pr<sub>LuxI</sub> = LuxI Promoter
-                    <br>Pr<sub>LuxI+E<sub>D</sub></sub> = EL222 dimer bound to the promoter
-                    <br>P<sub>Intimin</sub> = Intimin protein in the cytoplasm
-                    <br>P<sub>Surface</sub> = Intimin protein on the cell surface
-                </p>
-                <br>
-                We decided to divide our model into four main steps:
-                <br>
-                <br>
-                <li class="text-section"> 1. Light activation</li>
-                <li class="text-section"> 2. Transcription</li>
-                <li class="text-section"> 3. Translation</li>
-                <li class="text-section"> 4. Transport of intimin from the cells cytoplasm to the cell surface</li> </ol>
 
-            <img src="../../assets/Barch/Barc_Overview.jpg" class="image-content-graphs">
+                <table style="border: 1px solid black; margin-left: 40px; margin-top: 15px; margin-bottom: 15px">
+                    <tr>
+                        <td>
+                            Breakdown of the cellular mechanisms involved in the expression of intimin:
+                            <br>
+                            <img src="../../assets/Bac_equations1.png" class="image-content-graphs" style="width:400px; height:370px; margin-left: 40px ">
+                            <br>
+                            <p> Legend:
+                                <br> EL222<sub>M</sub> = EL222 monomer
+                                <br> EL222<sub>D</sub> = EL222 dimer
+                                <br> Pr<sub>LuxI</sub> = LuxI Promoter
+                                <br> Pr<sub>LuxI+E<sub>D</sub></sub> = EL222 dimer bound to the promoter
+                                <br> P<sub>Intimin</sub> = Intimin protein in the cytoplasm
+                                <br> P<sub>Surface</sub> = Intimin protein on the cell surface
+                            </p>
 
-            <p class="text-content" style="margin-top: 0; padding-top:0 ">LEGIT differs from conventional protein expression models
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+            <h2 class="text-content" style="margin-left: 0; padding-left:0">We decided to divide our model into four main steps:</h2>
+            <p class="text-content" style="margin-left: 0; padding-left:0; max-width:100%!important"> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter</p>
+            <p class="text-content" style="margin-left: 0; padding-left:0">Step 2: Transcription</p>
+            <p class="text-content" style="margin-left: 0; padding-left:0">Step 3: Translation</p>
+            <p class="text-content" style="margin-left: 0; padding-left:0">Step 4: Transport of intimin to the surface of the cell</p>
+            </ol>
+
+
+            <img src="../../assets/Barch/Barc_Overview.jpg" class="image-content-graphs" style="width: 900px; height: 450px">
+            <h1 class="text-figure"> Figure 1: Demonstrates an overview of the modelling steps in our LEGIT model</h1>
+
+
+            <p class="text-content" style="margin-top: 30px; padding-top:30px ">LEGIT differs from conventional protein expression models
                 as it incorporates two innovative twists. The first  is rate kinetics that are dependent on light induced systems.
                 The second is the transmembranal transport of the intimin protein to the surface of our E.coli cell.
             </p>
 
-            <div style="margin-top: 20px" class="text-section">
-
-                <h2 class="title">Model Aims</h2>
-                    <ul class="text-content">
-                        <li>Determine the rate limiting cellular mechanism</li>
-                        <li>Optimize the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approach </li>
-                        <li>Determine the range of optimal light intensities and light pulses our Wet Lab should test</li>
-                        <li>Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</li>
-                    </ul>
+            <h2 class="text-hyperlink" style="margin-top: 0px!important"> <a href="https://github.com/LITiGEM/Simulation/tree/master/Barchitecture">Click here to check out our code on Github!</a></h2>
 
             </div>
 
-            <h2 class="subtitle" style="padding-top: 2%"> <a href="https://github.com/LITiGEM/Simulation/tree/master/Barchitecture">Interested to understand how we did this? Check out our codes on Github!</a></h2>
+            <div class="text-section">
 
-            <h1 class="title ">Modelling steps</h1>
+            <h1 class="title" style="margin-top: 0px">Modelling steps</h1>
 
-                <h1 class="title ">1.) Light activation</h1>
+                <h1 class="subtitle" style="max-width: 80%">1.) Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter</h1>
 
-                <img id="special-image-1" src="../../assets/Barch/Barc_dimerisation.jpg" class="image-content-graphs" style="margin-bottom: 0">
+                <img id="special-image-1" src="../../assets/Barch/Barc_dimerisation.jpg" class="image-content-graphs" style="margin-left: 150px">
 
-                <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 1: Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter
-                    <br> <i>Location: Cytoplasm</i>
-                    <br>
-                    <br>The first step of our LEGIT model involves determining the amount of EL222 dimers (EL222<sub>D</sub>) present in the cell.
+                <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:150px!important"> Location: Cytoplasm </p>
+
+                <p class="text-content" >The first step of our LEGIT model involves determining the amount of EL222 dimers (EL222<sub>D</sub>) present in the cell.
                     EL222<sub>D</sub> are the transcription factors used to activate the expression of intimin in the cell. An EL222 <sub>D</sub> (EL222 dimer) is produced from
                     the photo-activated dimerization of two EL222 monomers (EL222<sub>M</sub>) found in the cell. We wanted to establish this relationship
                     because once EL222<sub>D</sub> binds to the LuxI promotor, it starts to promote the transcription of mRNA.
 
                 </p>
 
-                <img src="../../assets/glossary/eq_activation.png" class="image-content-graphs" style="width:600px; height:100px">
+                <img src="../../assets/glossary/eq_activation.png" class="image-content-graphs" style="width:540px; height:80px; margin-left: 150px">
                 <p class="text-content"> Since we know that photo-activation is dependent upon light intensity (L) we used the Hill
                     equation in our ODE to evaluate our inducible promoter genetic circuits. We did this so we could evaluate the effect different
                     light intensities would have on the rate of photo-activation of EL222.
                 </p>
-                <img src="../../assets/glossary/eq_hill.png" class="image-content-graphs" style="width:400px; height:120px">
+                <img src="../../assets/glossary/eq_hill.png" class="image-content-graphs" style="width:370px; height:110px; margin-left: 220px; margin-bottom: 0px">
 
-                <h1 class="title">2.) Transcription</h1>
-                <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs">
-                <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 2: Transcription
-                    <br>
-                    <i>Location: Cytoplasm</i>
-                    <br>
-                    <br> The second step of our simulated model involves determining the levels of mRNA transcribed from the light
+                <h1 class="subtitle" style="margin-top:0px">2.) Transcription</h1>
+                <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 900px ;height:450px">
+                <p class="text-content" style="margin-top: 0; padding-top:0 "> Location: Cytoplasm </p>
+
+                <p class="text-content"> The second step of our simulated model involves determining the levels of mRNA transcribed from the light
                     induced transcription. Production of mRNA is dependent upon the concentration of EL222<sub>D</sub> and the rate at which EL222<sub>D</sub>
                     binds to the LuxI promoter. We took dilution rates due to both cell growth/division and mRNA degradation into consideration
                     when accounting for mRNA equilibriums.
-
                 </p>
-                <img src="../../assets/bac_transcription.png" class="image-content-graphs" style="width: 420px; height: 100px">
+                <img src="../../assets/bac_transcription.png" class="image-content-graphs" style="width: 420px; height: 90px; margin-left: 220px">
 
-                <h1 class="title">3.) Translation</h1>
-                <img src="../../assets/Barch/Barc_Translation.png" class="image-content-graphs">
-                <p class="text-content" style="margin-top: 0; padding-top:0 "> Step 3: Translation
-                    <br>Location: Cytoplasm</i>
+                <h1 class="subtitle">3.) Translation</h1>
+                <img src="../../assets/Barch/Barc_Translation.png" class="image-content-graphs" style="width: 900px ;height:450px">
+                <p class="text-content" style="margin-top: 0; padding-top:0 "> Location: Cytoplasm
                     <br>
                     <br>
                     The next step of our model seeks to establish the production levels of the surface protein intimin from translation.
@@ -304,62 +323,59 @@
                     continuously transported to the surface of the E. coli cell, therefore intimins' concentration in the cell also decreases. To account
                     for fluctuation, we created a function that takes the transport rate of intimin to the surface to the E. Coli cells into consideration as well.
                 </p>
-                <img src="../../assets/translation_eq1.png" class="image-content-graphs" style="width: 550px; height:90px">
+                <img src="../../assets/translation_eq1.png" class="image-content-graphs" style="width: 540px; height:80px; margin-left:150px">
                 <p class="text-content"> We expect the speed at which intimin is transported to the surface of the cell to decrease over time.
                     This is because as time passes there will be a decrease in available space for intimin on the cell surface. We adapted the
                     Michaelis Menten equation to allow for the consideration of: the intimin proteins already occupying space on the cell surface; (P<sub>Surface</sub>)
                     and the maximum available space for intimin proteins on the cell surface. The variable  was set as the limit for the
                     maximum number of intimin proteins that can be expressed on the cell surface, thus preventing any other proteins from becoming expressed.
                 </p>
-                <img src="../../assets/transport_bac.png" class="image-content-graphs" style="width: 370px; height:130px">
+                <img src="../../assets/transport_bac.png" class="image-content-graphs" style="width: 350px; height:130px; margin-left: 240px">
                 <p class="text-content" >Finally, we also decided to take into consideration the fact that dilutions can occur due to cell growth and the half-life of the intimin protein. As such we introduced a degradation term to represent such degradations of intimin over time.
                 </p>
 
-                <h1 class="title">4.) Transport</h1>
+                <h1 class="subtitle">4.) Transport</h1>
 
-                <img src="../../assets/Modelling%20-%20Outside%20Cell.jpg" class="image-content-graphs">
-                <p class="text-content"style="margin-top: 0; padding-top:0 "> Step 4: Transport of intimin to the surface of the cell
-                    <br>
-                    <i>Location: Cell surface</i>
+                <img src="../../assets/Barch/Barc_Transport.jpg" class="image-content-graphs" style="width: 900px ;height:450px">
+                <p class="text-content"style="margin-top: 0; padding-top:0 ">Location: Cell surface
                     <br>
                     <br> Our final differential equation simulates the change in concentration of intimin expressed on the cell
                     surface over time. This equation takes both the rate at which intimin is being transported to the cell surface
                     and the intimins’ degradation rate into consideration.
                 </p>
-                <img src="../../assets/transport_surface_eq1.png" class="image-content-graphs" style="width: 500px; height: 90px">
+                <img src="../../assets/transport_surface_eq1.png" class="image-content-graphs" style="width: 450px; height:80px; margin-left:190px">
 
+            <h2 class="text-hyperlink" style="padding-top: 0px; padding-bottom: 5px">
+                <a href="project-description.html">Not enough biology? Check out the project description page!</a></h2>
 
-            <h2 class="subtitle" style="padding-top: 5%; padding-bottom: 5%">
-                <a href="project-description.html">Not enough science? Check out the project description page!</a></h2>
+            </div>
 
             <div class="text-section">
                 <h1 class="title">Results</h1>
                 <p class="text-content">Using our LEGIT model, we determined the optimal
                     range of values our Wet Lab team should seek to experiment with, in order to maximize the expression of intimin on our cells' surface.</p>
                 </div>
-                <h1 class="title">Determining the rate limiting step in intimin expression</h1>
+                <h1 class="subtitle">Determining the rate limiting step in intimin expression</h1>
             <p class="text-content">In order to determine the rate limiting step in the cellular mechanisms involved in intimin
                 expression we used rate kinetics modelling.
                 <br>
 
+                <h2 class="border"><img src="../../assets/Barch/Barc_RK.png" class="image-content-graphs" style="width:800px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
+                 <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 1: Demonstrates the rate of the cellular mechanisms involved in the expression of intimin
+                                (More specifically the rate of: EL222D production and binding to the LuxI promoter; Transcription; Translation; and Surface expression of intimin) </p>
+                </h2>
 
-            <h2 class="subtitle" style="padding-top:5%; padding-bottom: 5%"> <a href="#assumptions">Click here to check out our approaches and assumptions! </a></h2>
-            <img src="../../assets/Barch/Barc_RK.png" class="image-content-graphs" style="width:830px; height:400px; padding-bottom:0">
-                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 1: </i> Demonstrates the rate of the cellular mechanisms involved in the expression of intimin
-                    (More specifically the rate of: EL222D production and binding to the LuxI promoter; Transcription; Translation; and Transport of translated Intimin to the cell surface)
-
-                    <br>
-                    <br>From Figure 1 it is evident that the concentration of the surface expressed intimin appears to be much lower
-                    than the other species produced from previous cellular mechanisms. As such we decided to plot a second graph to
+                <p class="text-content"> From Figure 1 it is evident that the concentration of the surface expressed intimin appears to be much lower
+                    than the other species prrgba(204, 0, 53, 0.69)oduced from previous cellular mechanisms. As such we decided to plot a second graph to
                     evaluate only the rate of intimin transportation to the cell surface on a rescaled plot.
 
                 </p>
-                 <img src="../../assets/Barch/Barc_RLS.png" class="image-content-graphs" style="width: 800px; height: 400px; padding-bottom:0">
-                <p class="text-content" style="margin-top: 0; padding-top:0"> <i>Figure 2: </i> Depicts the rescaled Graph to view the rate of Surface Expression of Intimin
+                <h2 class="border"><img src="../../assets/Barch/Barc_RLS.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
+                <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 2: Depicts the rescaled Graph to view the rate of Surface Expression of Intimin
                 </p>
-                <br>
-                <br>
-                <table style="width: 60%; margin-left: 150px!important" class="text-content-duo-primary">
+                </h2>
+
+                <table style="width: 60%; margin-left: 160px!important; max-width:80%!important" class="text-content-duo-primary">
                     <tr>
                         <th class="text-content" style="padding: 0">Step</th>
                         <th class="text-content" style="padding: 0">Time taken to plateau (hr) </th>
@@ -393,7 +409,8 @@
                 value- or the one that takes the longest to plateau. The rate limiting step in this cellular mechanism is
                 the transport of intimin to the surface of the cell since, as demonstrated in Figure 3, it takes the longest time to plateau. Because speed is essential to our LIT technology
                 we decided to optimize the rate limiting parameters within the ODE describing intimin transfer to the cell surface.</p>
-            <h2 class="title">Optimizing Light intensity</h2>
+
+            <h2 class="subtitle">Optimizing Light intensity with the use of Sensitivity Analysis</h2>
 
             <p class="text-content">Our LEGIT model is initiated with the photoactivation of our EL222<sub>M</sub> transcription factor.
                 Therefore, we thought it would be interesting to evaluate the effect different light intensities had on the concentration
@@ -401,11 +418,14 @@
                 0 W/cm<sup>2</sup> and 70 W/cm<sup>2</sup>, where 0 W/cm<sup>2</sup> represented our system in its off state and 70 W/cm<sup>2</sup> represented
                 the maximum light intensity E. coli can withstand before they start to die.
                 </p>
-                <h2 class="subtitle">Sensitivity Analysis of Light Intensities </h2>
-                <img src="../../assets/Barch/Barc_Intensity.png" class="image-content-graphs" style="width: 800px; height: 450px;padding-bottom:0">
+
+            <h2 class="border">
+                <img src="../../assets/Barch/Barc_Intensity.png" class="image-content-graphs" style="width:720px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
                 <br>
-            <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 3: </i> Demonstrates the effect light intensity has on the concentration and rate of expression of intimin on the cell surface
+            <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 3: Demonstrates the effect light intensity has on the concentration and rate of expression of intimin on the cell surface
             </p>
+
+            </h2>
                 <p class="text-content">From Figure 3 it is evident that the most optimum light intensity for intimin expression is 18 W/cm<sup>2</sup>.
                     As light intensity increases the heat exerted onto our cells also increases, therefore we expected beyond a certain point (in this case 18 W/cm<sup>2</sup>) the concentration of intimin expressed on the cell surface to decrease. This could be
                     because the heat exerted from the higher light intensities denatures our cells.
@@ -414,7 +434,7 @@
                     sufficient to cause cell adhesion.
                 </p>
                 <br>
-                <h2 class="subtitle">WetLab contribution </h2>
+                <h2 class="subsubtitle">WetLab contribution </h2>
                 <p class="text-content"> Real life experimental data could be obtained for this model by extracting EL222 monomers
                     from E.coli cells, exposing them to varying intensities of blue light, and running the samples on an SDS page.
                     One could thus evaluate the effect light intensity has on the extent to which dimerization of EL222 monomers occurs.
@@ -437,6 +457,8 @@
                     the maximum rate at which intimin can be expressed on the surface of the cell .The maximum and minimum values that could be assigned to each parameter
                     were determined from literature. We decided to optimize the values for each parameter using two approaches,
                     a Sensitivity Analysis and Parameter Sampling.
+
+            <h2 class="text-hyperlink" style="padding-top:0%; margin-top:5px!important"> <a href="#assumptions">Click here to check out our approaches and assumptions! </a></h2>
                 </p>
             <br>
             <h2 class="subtitle" style="color:rgba(204, 0, 53, 0.69);">Optimizing the K<sub>m</sub> value</h2>
