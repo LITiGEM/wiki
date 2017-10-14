@@ -332,6 +332,7 @@ body {
     border-color: black;
     max-width: 65%;
     margin-left: 160px;
+    padding-left: 160px;
 }
 
 /* this is for the <p> elements that contain text AND will be put on a row where pictures will be added*/
