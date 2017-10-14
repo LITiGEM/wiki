@@ -73,6 +73,20 @@
         height:600px;
         width:550px;
     }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+    }
+    th{
+        text-align: center;
+    }
+    td {
+        text-align: left;
+    }
 </style>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
@@ -195,7 +209,7 @@
                 mammalian cells to adhere to each other. As such, our technology and model could be used to guide cells with light to create highly specific mammalian tissues.
 
 
-                <table style="border: 1px solid black; margin-left: 40px; margin-top: 30px; margin-bottom: 15px">
+                <table style="border: 1px solid black; margin-left: 40px; margin-top: 15px; margin-bottom: 15px">
                     <tr>
                         <td>
                             Breakdown of the cellular mechanisms involved in the expression of intimin:
@@ -310,26 +324,26 @@
                 <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 2: Depicts a re-scaled plot of Figure 1 in order to view the rate at which the TF is released in the cell cytoplasm</p>
                 </h2>
 
-                <table style="width: 60%; margin-left: 150px!important" class="text-content-duo-primary">
+                <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
 
                     <tr>
-                        <th class="text-content" style="padding-left: 25px">Step</th>
-                        <th class="text-content" style="padding-left: 25px">Time taken to plateau (hr) </th>
+                        <th class="text-content"  style="padding: 0">Step</th>
+                        <th class="text-content"  style="padding: 0">Time taken to plateau (hr) </th>
                     </tr>
 
                     <tr>
-                        <td class="text-content" style="padding-left: 25px">Cleavage of PhoCl Linker</td>
-                        <th class="text-content" style="padding-left: 25px">0.1</th>
+                        <td class="text-content" style="padding: 0">Cleavage of PhoCl Linker</td>
+                        <th class="text-content" style="padding: 0">0.1</th>
                     </tr>
 
                     <tr>
-                        <td class="text-content" style="padding-left: 25px" >Transcription</td>
-                        <th class="text-content" style="padding-left: 25px">0.1</th>
+                        <td class="text-content" style="padding: 0">Transcription</td>
+                        <th class="text-content" style="padding: 0">0.1</th>
                     </tr>
 
                     <tr>
-                        <td class="text-content" style="padding-left: 25px">Translation</td>
-                        <th class="text-content" style="padding-left: 25px">3</th>
+                        <td class="text-content" style="padding: 0">Translation</td>
+                        <th class="text-content" style="padding: 0">3</th>
                     </tr>
 
                 </table>
@@ -449,19 +463,19 @@
                 <div class="text-section">
                     <h1 class="title">Optimized conditions </h1>
                     <p class="text-content"> The biggest increase in the rate of RFP expression in the cytoplasm of the cells occurs when the value of 'β’ increases and the values of ‘d<sub>3</sub>’ decreases. This is something we expected, as the larger the value of β the faster the speed at which mRNA is transported to the cytoplasm of the cell from the nucleus and therefore the faster the rate of translation. In addition, the lower the d<sub>3</sub> value, the slower the degradation of mRNA in the cell. Thus, the combination of both of these phenomena results in a faster and greater concentration of RFP expressed in the cytoplasm of the cell.</p>
-                    <table style="width: 60%; margin-left: 150px!important" class="text-content-duo-primary">
+                    <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
                         <tr>
-                            <th class="text-content" style="padding: 15px">Optimized Parameter</th>
-                            <th class="text-content" style="padding: 15px">Value </th>
+                            <th class="text-content" style="padding: 0">Optimized Parameter</th>
+                            <th class="text-content" style="padding: 0">Value </th>
                         </tr>
                         <tr>
-                            <td class="text-content" style="padding: 15px">β (1/s)</td>
-                            <th class="text-content" style="padding: 15px">2.2E+00</th>
+                            <td class="text-content" style="padding: 0">β (1/s)</td>
+                            <th class="text-content" style="padding: 0">2.2E+00</th>
 
                         </tr>
                         <tr>
-                            <td class="text-content" style="padding: 15px" >d<sub>3</sub> (1/s)</td>
-                            <th class="text-content" style="padding: 15px">6.4E-05</th>
+                            <td class="text-content" style="padding: 0">d<sub>3</sub> (1/s)</td>
+                            <th class="text-content" style="padding: 0">6.4E-05</th>
                         </tr>
                     </table>
                     <br>
@@ -483,7 +497,7 @@
                         We focused on identifying the main operational costs a user would incur. We determined the most critical ones were: the light intensity they used to activate the HEK 293 cellular mechanism; and the frequency of light pulsing.
                         We created a function in Python that took costs incurred for both methods into consideration, where we attempted to identify the most cost-efficient operational conditions for our tool.</p>
 
-                    <table style="width: 60%; margin-left: 150px!important" class="text-content-duo-primary">
+                    <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
                         <tr>
                             <th class="text-content" style="padding: 0">Light Intensity (W/cm<sup>2</sup>)</th>
                             <th class="text-content" style="padding: 0">Cost per hour of utility (£/hr) </th>
@@ -512,34 +526,34 @@
 
                     <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Outlines the operating costs incurred for operating the optogenetic tool with a range of light intensities with no light pulsing present</p>
                     <br>
-                    <table style="width: 60%; margin-left: 150px!important" class="text-content-duo-primary">
+                    <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
                         <tr>
                             <th class="text-content" style="padding: 0">Pulsing Duration (hr)</th>
-                            <th class="text-content" style="padding:0 0 0 150px">Cost for total pulsing over 2 hour operation period (£) </th>
+                            <th class="text-content" style="padding:0 0 0 20px">Cost for total pulsing over 2 hour operation period (£) </th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">2</td>
-                            <th class="text-content" style="padding: 0 0 0 150px">7E-03</th>
+                            <th class="text-content" style="padding: 0 0 0 20px">7E-03</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">1.33</td>
-                            <th class="text-content" style="padding:0 0 0 150px">4.E-03</th>
+                            <th class="text-content" style="padding:0 0 0 20px">4.E-03</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">1</td>
-                            <th class="text-content" style="padding:0 0 0 150px">3.5E-03</th>
+                            <th class="text-content" style="padding:0 0 0 20px">3.5E-03</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">0.5</td>
-                            <th class="text-content" style="padding:0 0 0 150px">1.8E-03</th>
+                            <th class="text-content" style="padding:0 0 0 20px">1.8E-03</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">0.25</td>
-                            <th class="text-content" style="padding:0 0 0 150px">8.8E-0.4</th>
+                            <th class="text-content" style="padding:0 0 0 20px">8.8E-0.4</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">0</td>
-                            <th class="text-content" style="padding:0 0 0 150px">0</th>
+                            <th class="text-content" style="padding:0 0 0 20px">0</th>
                         </tr>
                     </table>
                     <p class="text-content" style="margin-top: 0; padding-top:0px; padding-bottom:0px; margin-bottom: 0px "><i>Figure 14: </i> Outlines the operating costs incurred for pulsing the light source of the optogenetic tool over a range of frequencies at a light intensity of 27 W/cm<sup>2</sup></p>
@@ -594,37 +608,42 @@
                             <li>The cells are not going through the cell cycle when they are induced to photocleave and release the RFP TF in the cytoplasm of the cell</li>
                         </ul>
 
-                    </div>
 
-                    <div class="text-section">
+                    <h3 id="trigger-species" class="title">LAME Species <span class="glyphicon glyphicon-chevron-down"></span></h3>
 
-                        <h3 class="title">LAME Species</h3>
+                    <div id="species" class="row">
 
-                        <img src="../../assets/Mam/Mam_Species.png" class="image-content-graphs" style="width: 900px; height:350px">
+                        <div class="text-section">
 
-                    </div>
-
-                    <div class="text-section">
-
-                        <h3 class="title">LAME Parameters</h3>
-
-                        <img src="../../assets/Mam/Mam_Parameters.png" class="image-content-graphs" style="width: 900px; height:650px">
+                            <img src="../../assets/Mam/Mam_Species.png" class="image-content-graphs" style="width: 900px; height:350px">
+                        </div>
 
                     </div>
 
-                    <div class="text-section">
+                    <h3 id="trigger-parameters" class="title">LAME Parameters <span class="glyphicon glyphicon-chevron-down"></span></h3>
 
-                        <h5 class="title">LAME Initial Conditions</h5>
+                        <div id="parameters" class="row">
+                            <div class="text-section">
+                                <img src="../../assets/Mam/Mam_Parameters.png" class="image-content-graphs" style="width: 900px; height:650px">
 
-                        <img src="../../assets/Mam/Mam_InitialAssump.png" class="image-content-graphs" style="width: 900px; height:1000px">
+                            </div>
+                        </div>
 
-                    </div>
+                        <h5 id="trigger-conditions" class="title">LAME Initial Conditions <span class="glyphicon glyphicon-chevron-down"></span></h5>
 
-                    <div class="text-section">
+                        <div id="conditions" class="row">
+                            <div class="text-section">
 
-                        <h6 class="title">Bibliography</h6>
+                                <img src="../../assets/Mam/Mam_InitialAssump.png" class="image-content-graphs" style="width: 900px; height:1000px">
 
-                        <p class="subtitle">
+                            </div>
+                        </div>
+
+                        <div class="text-section">
+                            <h6 class="title">Bibliography</h6>
+                            <br>
+
+                            <p class="subtitle" style="color: rgb(163, 161, 168); max-width:80%">
                             <br>
                             <br>
                             Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.
