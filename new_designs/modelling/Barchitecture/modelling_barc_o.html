@@ -227,7 +227,7 @@
 
             <ol class="text-content"> LEGIT is a mathematical model that determines the conditions required for optimal and rapid
                 light activated expression of the protein intimin. Intimin is a protein expressed on the surface of our genetically
-                engineered E. coli cells. We use it as an anchor onto which we fuse our binding partners, SpyTag and SpyCatcher.
+                engineered E. coli cells. We use intimin as an anchor onto which we fuse our binding partners, SpyTag and SpyCatcher.
                 Once the SpyTags and SpyCatchers have attached to a particular cell they start to bind to SpyTags and SpyCatchers
                 on other neighbouring cells. We control this process using light. This intracellular binding allows our cells to aggregate
                 into shapes. In order to control the amount of binding that takes place between our cells we  need to control the
@@ -282,7 +282,7 @@
 
             <h1 class="title" style="margin-top: 0px">Modelling steps</h1>
 
-                <h1 class="subtitle" style="max-width: 80%">1.) Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter</h1>
+                <h1 class="subtitle" style="max-width: 80%">1) Photoactivation, dimerization and binding of the Transcription Factor (EL222) to the LuxI promoter</h1>
 
                 <img id="special-image-1" src="../../assets/Barch/Barc_dimerisation.jpg" class="image-content-graphs" style="margin-left: 150px">
 
@@ -302,7 +302,7 @@
                 </p>
                 <img src="../../assets/glossary/eq_hill.png" class="image-content-graphs" style="width:370px; height:110px; margin-left: 220px; margin-bottom: 0px">
 
-                <h1 class="subtitle" style="margin-top:0px">2.) Transcription</h1>
+                <h1 class="subtitle" style="margin-top:0px">2) Transcription</h1>
                 <img src="../../assets/Barch/Barc_Transcription.jpg" class="image-content-graphs" style="width: 900px ;height:450px">
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Location: Cytoplasm </p>
 
@@ -313,7 +313,7 @@
                 </p>
                 <img src="../../assets/bac_transcription.png" class="image-content-graphs" style="width: 420px; height: 90px; margin-left: 220px">
 
-                <h1 class="subtitle">3.) Translation</h1>
+                <h1 class="subtitle">3) Translation</h1>
                 <img src="../../assets/Barch/Barc_Translation.png" class="image-content-graphs" style="width: 900px ;height:450px">
                 <p class="text-content" style="margin-top: 0; padding-top:0 "> Location: Cytoplasm
                     <br>
@@ -334,7 +334,7 @@
                 <p class="text-content" >Finally, we also decided to take into consideration the fact that dilutions can occur due to cell growth and the half-life of the intimin protein. As such we introduced a degradation term to represent such degradations of intimin over time.
                 </p>
 
-                <h1 class="subtitle">4.) Transport</h1>
+                <h1 class="subtitle">4) Transport</h1>
 
                 <img src="../../assets/Barch/Barc_Transport.jpg" class="image-content-graphs" style="width: 900px ;height:450px">
                 <p class="text-content"style="margin-top: 0; padding-top:0 ">Location: Cell surface
@@ -422,7 +422,8 @@
             <h2 class="border">
                 <img src="../../assets/Barch/Barc_Intensity.png" class="image-content-graphs" style="width:720px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
                 <br>
-            <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 3: Demonstrates the effect light intensity has on the concentration and rate of expression of intimin on the cell surface
+            <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 3: Demonstrates the effect light intensity has on the concentration and rate of expression of intimin on the cell surface. It determines the optimum light intensity for our
+                optogentic tool is 18 W/cm<sup>2</sup>
             </p>
 
             </h2>
@@ -434,7 +435,7 @@
                     sufficient to cause cell adhesion.
                 </p>
                 <br>
-                <h2 class="subsubtitle">WetLab contribution </h2>
+                <h2 class="subsubtitle">Wet Lab contribution </h2>
                 <p class="text-content"> Real life experimental data could be obtained for this model by extracting EL222 monomers
                     from E.coli cells, exposing them to varying intensities of blue light, and running the samples on an SDS page.
                     One could thus evaluate the effect light intensity has on the extent to which dimerization of EL222 monomers occurs.
@@ -484,7 +485,8 @@
 
                 <img src="../../assets/Barch/Bac_PSKm.png" class="image-content-graphs" style="width:720px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
 
-            <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 6: Evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface with the use of Parameter Sampling</p>
+            <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 6: Evaluates the effect K<sub>m</sub> has on the rate of intimin expression on the cell surface with the use of Parameter Sampling.
+            It determines the optimum K<sub>m</sub> value for our engineered cells is 3.19e-04 uM</p>
 
             </h2>
 
@@ -519,7 +521,8 @@
             <h2 class="border">
                 <img src="../../assets/Barch/Bac_PSVmax.png" class="image-content-graphs" style="width:750px; height:430px; padding-bottom:0; padding-top: 0px; padding-left:30px; padding-right: 115px">
                 <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 8: Evaluates the effect
-                    V<sub>max</sub> has on the rate of intimin expression on the cell surface with the use of Parameter Sampling </p>
+                    V<sub>max</sub> has on the rate of intimin expression on the cell surface with the use of Parameter Sampling.
+                    It determines the optimum K<sub>m</sub> value for our engineered cells is 2.4E+02 1/s</p>
             </h2>
 
                 <p class="text-content" style="margin-top: 0; padding-top:0"> Parameter Sampling allowed us to take a series of factors into consideration when optimizing the value of V<sub>max</sub>.
@@ -574,7 +577,7 @@
                     transport of intimin to the cell surface. In addition, the higher the V<sub>max</sub> the faster the rate at which the reaction
                     occurs. Thus, the combination of both of these phenomena results in faster transport of intimin to the surface of the cell.</p>
 
-                <table style="width: 60%; margin-left: 150px!important" class="text-content-duo-primary">
+                <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
                     <tr>
                         <th class="text-content" style="padding: 0">Optimized Paramter</th>
                         <th class="text-content" style="padding: 0">Value </th>
@@ -611,7 +614,7 @@
                 into consideration, where we attempted to identify the most cost-efficient operational
                 conditions for our tool.
 
-                <table style="width: 60%; margin-left: 150px!important" class="text-content-duo-primary">
+                <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
                     <tr>
                         <th class="text-content" style="padding: 0">Light Intensity (W/cm<sup>2</sup>)</th>
                         <th class="text-content" style="padding: 0">Cost per hour of utility (£/hr) </th>
@@ -641,7 +644,7 @@
                 <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Outlines the operating costs incurred for operating the optogenetic tool with a range of light intensities with no light pulsing present
                 <br>
                 <br> We also decided to analyze the impact light pulsing would have on the overall process costs.</p>
-                <table style="width: 60%; margin-left: 150px!important" class="text-content-duo-primary">
+                <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
                     <tr>
                         <th class="text-content" style="padding: 0">Pulsing Duration (hr)</th>
                         <th class="text-content" style="padding:0 0 0 150px">Cost for total pulsing over 2 hour operation period (£) </th>
@@ -679,7 +682,8 @@
 
                 <h2 class="border">
                 <img src="../../assets/Barch/Bac_CostOpt.png" class="image-content-graphs" style="width:750px; height:430px; padding-bottom:0; padding-top: 0px; padding-left:30px; padding-right: 115px">
-                <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 17: Demonstrates a comparison of the effects of light pulsing and light intensity on the overall cost of our optogenetic tool </p>
+                <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 17: Demonstrates a comparison of the effects of light pulsing and light intensity on the overall cost of our optogenetic tool.
+                The best cost trade-off was identified when operating our  technology is operated at a light intensity of 30 W/cm<sup>2</sup> with a 4.5-hour pulsing frequency </p>
                 </h2>
 
                 <p class="text-content">Figure 17 exhibits that the costs incurred to operate our optogenetic tool increases
@@ -736,7 +740,7 @@
 
                 <div class="text-section">
 
-                    <ul class="text-content">
+                    <ul class="text-content" style="margin-left:40px!important">
                         <li>Mass action kinetics</li>
                         <li>Michaelis Menten kinetics</li>
                         <li>All reactions are taking place in cells that are plated in a petri dish</li>
