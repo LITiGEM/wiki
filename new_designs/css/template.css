@@ -267,8 +267,19 @@ body {
 }
 
 
-a {
-    text-decoration: underline;
+.subsubtitle {
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-weight: 500;
+    padding: 1% 1% 1% 15%;
+    margin:0;
+    color: rgba(204, 0, 53, 0.69);
+}
+
+.subtitle a {
+    color: inherit;
+    font-weight:bold;
+    font-style: italic;
 }
 
 /* ----------------------------------------------------------------*/
@@ -294,9 +305,37 @@ a {
     font-weight:bold;
 }
 
+.text-figure {
+    position:relative;
+    max-width:80%;
+    font-size: 16px;
+    font-family: "Crimson Text";
+    padding: 1% 3% 1% 15%;
+    margin:0 !important;
+}
+
+.text-hyperlink  a {
+    position:relative;
+    max-width:80%;
+    font-size: 18px;
+    font-family: "Crimson Text";
+    color: black;
+    text-decoration: underline;
+    padding: 0% 3% 1% 15%;
+    margin:0 !important;
+
+}
+
+.border {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    max-width: 65%;
+    margin-left: 160px;
+}
 
 /* this is for the <p> elements that contain text AND will be put on a row where pictures will be added*/
-/* Notice the difference in the max-width */
+/* Notice the difference in the maxwidth */
 .text-content-duo {
     position:relative;
     max-width:97%;
@@ -317,7 +356,6 @@ a {
     background-color: rgb(245, 247, 249);
 /*    color: rgba(152, 171, 189, 0.75);*/
 }
-
 
 
 
@@ -355,7 +393,7 @@ a {
 .image-content-icons {
     height: 120px;
     width:120px;
-    margin: 4% 5% 0 20%;
+    margin: 4% 3% 0 0;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -367,6 +405,13 @@ a {
 .affix {
     top: 20px;
     left:40px;
+}
+
+/* for the pdfs to be seen on the website */
+.pdfs {
+    margin:2% 0 15% 5%;
+    width:800px;
+    height:500px;
 }
 
 /* class made to center content? - not sure where we are using this */

@@ -76,6 +76,13 @@
     </script>
 </head>
 
+<style>
+
+    .image-content-here {
+        height:400px;
+        width:400px;
+    }
+</style>
 
 <body data-spy="scroll" data-target="#side-index">
 
@@ -86,7 +93,6 @@
             <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Description</a></li>
-                    <li><a href="#" class="dropped">Experiments</a></li>
                     <li><a href="#" class="dropped">Results</a></li>
                     <li><a href="#" class="dropped">Parts</a></li>
                     <li><a href="#" class="dropped">Gold Criteria</a></li>
@@ -168,46 +174,43 @@
             </ul>
         </nav>
 
-
+        <!-- Content-->
         <div style="float: right !important" class="col-sm-10">
 
+            <!-- Blue light experiments-->
             <div id="bluelight" class="row">
-                <div style="margin-top: 20px" class="text-section">
+                <div class="text-section col-sm-7">
 
+                    <h1 class="title">Blue light inducible transcription</h1>
+
+                    <p class="text-content">As shown in the above graph, only J23151-GFP (positive control) had a significant difference in fluorescence compared to R0040-GFP (negative control) WT cells and the Luria Broth (LB) in both dark and Blue-light conditions. Pblind-GFP had no significantly different fluorescence level compared to the LB baseline, negative control or WT cells in either condition. This is expected, as the EL222 protein is required for blue-light inducible transcriptional activation.  This experiment was performed to corroborate that the promoter has no significant leakage and to demonstrate that GFP cannot be expressed in the absence of EL222. This is of particular interest as the aim of LIT is to demonstrate the versatility and high precision of light control.</p>
+
+                </div>
+
+                <div class="picture-section-right col-sm-4">
+                    <img src="assets/results/results-gfp.png" class="image-content-here">
+                    <p class="text-content-duo">Figure 1. Blue light inducible promoter (Pblind) characterisation. J23151 is a constitutive promoter, R0040 is a TetR repressible promoter (repression inhibited only by the addition of tetracycline), Pblind promoter is a fusion of EL222 (photosensitive transcription factor) binding region and the luxI promoter, where EL222 is only able to dimerize and bind the Pblind promoter upon blue light exposure, where it can then recruit RNAP and drive the transcription of genes downstream. Wild type (WT) 10beta cells were transformed with J23151-GFP (positive control), R0040-GFP (negative control) or Pblind-GFP. All cells were grown overnight at 37°C in darkness or exposed to blue light (465nm) and diluted to OD600=0.6 to record GFP fluorescence. The data represents the mean of 3 biological replicates and 4 technical replicates for each condition. Luria broth (LB) was included as a baseline for the fluorescence. Error bars represent the SD and statistical significance of **** P < 0.0001 was calculated using the Tukey's multiple comparisons test.</p>
+                </div>
+
+            </div>
+
+
+            <!-- Mammalian stuff -->
+            <div class="row">
+                <div class="text-section col-sm-7">
                     <h1 class="title">What happens with bacteria</h1>
-
                     <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
                 </div>
+            </div>
 
-                <div class="picture-section-right">
-                    <img src="assets/results/results-gfp.png" class="image-content-graphs">
-                    <img src="assets/results/results-gfp-table.png" class="image-content-graphs">
+
+            <!-- Aggregation experiments -->
+            <div class="row">
+                <div class="text-section col-sm-7">
+                    <h1 class="title">What happens with bacteria</h1>
+                    <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                 </div>
-
-            </div>
-
-
-
-            <div class="text-section">
-                <h1 class="title">What happens with bacteria</h1>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-            </div>
-
-            <div class="text-section">
-                <h1 class="title">What happens with bacteria</h1>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-            </div>
-
-            <div class="text-section">
-                <h1 class="title">What happens with bacteria</h1>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
             </div>
 
         </div>
