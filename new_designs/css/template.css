@@ -249,7 +249,7 @@ body {
     font-family: "Noto Sans";
     font-size: 23px;
     font-weight: 600;
-    padding: 5% 1% 1% 15%;
+    padding: 5% 1% 1% 15%!important;
     margin:0;
     color: rgba(204, 0, 53, 0.69);
     text-decoration: none;
@@ -268,8 +268,8 @@ body {
     font-family: "Noto Sans";
     font-size: 18px;
     font-weight: 500;
-    padding: 1% 1% 1% 15%;
-    margin:0;
+    padding: 1% 1% 1% 15%;!important;
+    margin:0;!important;
     color: rgb(163, 161, 168);
     text-decoration: none;
 }
@@ -323,7 +323,7 @@ body {
     max-width:80%;
     font-size: 16px;
     font-family: "Crimson Text";
-    padding: 1% 3% 1% 15%;
+    padding: 0 3% 1% 15%;
     margin:0 !important;
 }
 
@@ -334,7 +334,7 @@ body {
     font-family: "Crimson Text";
     color: black;
     text-decoration: underline;
-    padding: 0 3% 1% 15%;
+    padding: 0 3% 1% 10%!important;
     margin:0 !important;
 
 }
@@ -404,6 +404,7 @@ body {
     height:300px;
     width:650px;
     padding:1% 1% 1% 15%;
+    margin-left: 100px!important;
 }
 
 .image-content-icons {
@@ -590,6 +591,14 @@ body {
     max-width: 65%;
     margin-left: 160px;
 }
+
+.image-content-equations {
+    height:300px;
+    width:650px;
+    padding:1% 1% 1% 15%;
+    margin-left: 180px;
+}
+
 /* ----------------------------------------------------------------*/
 /* UNKNOWN - please help finding them*/
 /* ----------------------------------------------------------------*/
