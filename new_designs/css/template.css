@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
@@ -20,7 +19,7 @@ body {
 }
 
 /* ----------------------------------------------------------------*/
-                        /* Navbar and Top part*/
+/* Navbar and Top part*/
 /* ----------------------------------------------------------------*/
 
 /* for the div that contains the navbar*/
@@ -182,7 +181,7 @@ body {
 /* ----------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------*/
-                    /* The scrolling SIDE bar*/
+/* The scrolling SIDE bar*/
 /* ----------------------------------------------------------------*/
 /* for the li elements in the side bar*/
 .side-link {
@@ -250,7 +249,7 @@ body {
     font-family: "Noto Sans";
     font-size: 23px;
     font-weight: 600;
-    padding: 5% 1% 1% 15%;
+    padding: 5% 1% 1% 15%!important;
     margin:0;
     color: rgba(204, 0, 53, 0.69);
     text-decoration: none;
@@ -269,8 +268,8 @@ body {
     font-family: "Noto Sans";
     font-size: 18px;
     font-weight: 500;
-    padding: 1% 1% 1% 15%;
-    margin:0;
+    padding: 1% 1% 1% 15%;!important;
+    margin:0;!important;
     color: rgb(163, 161, 168);
     text-decoration: none;
 }
@@ -324,7 +323,7 @@ body {
     max-width:80%;
     font-size: 16px;
     font-family: "Crimson Text";
-    padding: 1% 3% 1% 15%;
+    padding: 0 3% 1% 15%;
     margin:0 !important;
 }
 
@@ -335,7 +334,7 @@ body {
     font-family: "Crimson Text";
     color: black;
     text-decoration: underline;
-    padding: 0 3% 1% 15%;
+    padding: 0 3% 1% 10%!important;
     margin:0 !important;
 
 }
@@ -370,7 +369,7 @@ body {
     padding: 2% 3% 2% 15%;
     margin:0 !important;
     background-color: rgb(245, 247, 249);
-/*    color: rgba(152, 171, 189, 0.75);*/
+    /*    color: rgba(152, 171, 189, 0.75);*/
 }
 
 
@@ -405,6 +404,7 @@ body {
     height:300px;
     width:650px;
     padding:1% 1% 1% 15%;
+    margin-left: 100px!important;
 }
 
 .image-content-icons {
@@ -416,7 +416,7 @@ body {
 }
 
 /* ----------------------------------------------------------------*/
-                /* THE NEW CLASSES that we are using*/
+/* THE NEW CLASSES that we are using*/
 /* ----------------------------------------------------------------*/
 .overlay {
     position:absolute;
@@ -475,7 +475,7 @@ body {
 }
 
 /* ----------------------------------------------------------------*/
-                            /* MISCELLANEOUS*/
+/* MISCELLANEOUS*/
 /* ----------------------------------------------------------------*/
 /* for the scroll spy to work */
 .affix {
@@ -521,7 +521,7 @@ body {
 
 
 /* ----------------------------------------------------------------*/
-                        /* HP- specific classes */
+/* HP- specific classes */
 /* ----------------------------------------------------------------*/
 
 
@@ -535,7 +535,7 @@ body {
 }
 
 /* ----------------------------------------------------------------*/
-                    /* MODELLING-specific classes */
+/* MODELLING-specific classes */
 /* ----------------------------------------------------------------*/
 
 /* this is for text at the start of modelling rows, to highlight a main point of that text section */
@@ -591,8 +591,16 @@ body {
     max-width: 65%;
     margin-left: 160px;
 }
+
+.image-content-equations {
+    height:300px;
+    width:650px;
+    padding:1% 1% 1% 15%;
+    margin-left: 180px;
+}
+
 /* ----------------------------------------------------------------*/
-            /* UNKNOWN - please help finding them*/
+/* UNKNOWN - please help finding them*/
 /* ----------------------------------------------------------------*/
 /* No idea where these are from? */
 .stats {
@@ -639,6 +647,4 @@ body {
 /* actual HTML (style section)*/
 /* They will be individual to each page and it's better to keep them separated*/
 /* ----------------------------------------------------------------*/
-
-
 
