@@ -105,15 +105,14 @@
         border: 1px solid black;
         border-collapse: collapse;
     }
+
     th, td {
         padding: 5px;
     }
-    th{
+    th, td {
         text-align: center;
     }
-    td {
-        text-align: left;
-    }
+
 </style>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
@@ -204,7 +203,7 @@
         <!-- The side navbar -->
         <nav class="col-sm-2">
             <ul id="side-index" class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Overview</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#section1">Aims</a></li>
                 <li id="step2" class="navy-link side-link"><a href="#section2">Science behind LAME</a></li>
                 <li id="step3" class="navy-link side-link"><a href="#section3">Results</a></li>
                 <li id="step4" class="navy-link side-link"><a href="#section4">Cost Analysis</a></li>
@@ -217,35 +216,32 @@
         <div style="float: right !important" class="col-sm-10">
 
             <h1 class="title" style="font-size:50px;">LAME - From light to organs</h1>
-            <h2 class="subtitle"> A mathematical model that optimizes the speed and percision with which HEK 293 cells
-                <br>form structured tissues</h2>
+            <h2 class="subtitle"> A mathematical model that optimizes the speed and percision with which HEK 293 cells form structured tissues</h2>
 
-            <h2 class="title">Model Aims</h2>
+            <h2 class="title"  id="section1" style="margin-top: 30px!important; padding-top:0!important">Model Aims</h2>
             <p class="text-content">1. Determine the rate limiting cellular mechanism</p>
             <p class="text-content">2. Optimize the rate limiting parameters by using a conventional (Sensitivity Analysis) and an innovative (Paramter Sampling) approach </p>
             <p class="text-content">3. Determine the range of optimal light intensities and light pulses our Wet Lab should test</p>
             <p class="text-content">4. Conduct a Cost Analysis to evaluate the economic viability of our optogenetic tool</p>
 
-            <h2 class="text-section">
-
-            <h1 class="title">The Science behind LAME</h1>
-
-            <ol class="text-content">  LAME models the light activated expression of Red Fluorescent Proteins (RFP) within genetically engineered HEK 293 cells. This mechanism is
+            <div class="text-section">
+            <h1 class="title" id="section2">The Science behind LAME</h1>
+            <p class="text-content">  LAME models the light activated expression of Red Fluorescent Proteins (RFP) within genetically engineered HEK 293 cells. This mechanism is
                 important because it allows for precise control and direction of protein expression.
                 On the outer membrane of our HEK 293 cells there is an immobilised surface protein that has a photocleavable linker (PhoCl) attached to
                 it. The photocleavable linker anchors the RFP transcription factor (TF). When we shine light onto our HEK 293 cells the photocleavable linker becomes cleaved and the RFP TF is released into the cytoplasm of the cell. The TF is attached to a dCas9,
                 that guides the RFP TF to the RFP promoter in the cell nucleus. This mechanism could be adapted to induce the production of the surface protein cadherin to cause
-                mammalian cells to adhere to each other. As such, our technology and model could be used to guide cells with light to create highly specific mammalian tissues.
+                mammalian cells to adhere to each other. As such, our technology and model could be used to guide cells with light to create highly specific mammalian tissues.</p>
 
 
-                <table style="border: 1px solid black; margin-left: 40px; margin-top: 15px; margin-bottom: 15px">
+
+                <table style="border: 1px solid black; margin-top: 30px; margin-bottom: 15px; margin-left:150px!important; max-width: 80%!important;">
+
                     <tr>
                         <td>
-                            Breakdown of the cellular mechanisms involved in the expression of intimin:
-                            <br>
-                            <img src="../../assets/Equation%20breakdown.png" class="image-content-graphs" style="width:400px; height:370px; margin-left: 70px ">
-                            <br>
-                            <p> Legend:
+                            <p class="text-content" style="padding-left:15px!important;max-width: 100%">Breakdown of the cellular mechanisms involved in the expression of RFP:</p>
+                            <img src="../../assets/Equation%20breakdown.png" class="image-content-graphs" style="width:400px; height:370px; margin-left:0!important ">
+                            <p class="text-figure" style="margin-left: 50px!important"> Legend:
                                 <br><b>LACE<sub>TF</sub></b> = Photocleavable (PhoCl) linker attached to the outer membrane of the cells and the TF
                                 <br><b>LACE</b> = Protein on cells' outer membrane attached to a part of the cleaved PhoCl linker
                                 <br><b>TF<sub>C</sub></b> = Free TF in the cytoplasm of the cell
@@ -260,15 +256,15 @@
                         </td>
                     </tr>
                 </table>
-                <br>
 
-                In order to tackle the cellular mechanisms involved in RFP expression, we decided to divide our model into three main steps:
-                <p class="text-content" style="margin-left: 0; padding-left:0; max-width:100%!important"> Step 1: Photocleavage and release of the RFP TF in the cytoplasm of the cell</p>
-                <p class="text-content" style="margin-left: 0; padding-left:0">Step 2: Transcription</p>
-                <p class="text-content" style="margin-left: 0; padding-left:0">Step 3: Translation</p></ol>
+
+                <p class="text-content">In order to tackle the cellular mechanisms involved in RFP expression, we decided to divide our model into three main steps:</p>
+                <p class="text-content">Step 1: Photocleavage and release of the RFP TF in the cytoplasm of the cell</p>
+                <p class="text-content">Step 2: Transcription</p>
+                <p class="text-content">Step 3: Translation</p>
 
             <img src="../../assets/Mam/Mam_overview.png" class="image-content-graphs" style="width: 750px; height: 450px; padding-left: 40px; margin-left: 120px">
-                <h1 class="text-figure" style="padding-top:15px; padding-bottom: 30px"> Figure 1: Demonstrates an overview of the modelling steps in our LAME model</h1>
+                <h1 class="text-figure" style="padding-top:15px; padding-bottom: 30px; margin-left:20px!important;"> Figure 1: Demonstrates an overview of the modelling steps in our LAME model</h1>
 
             <p class="text-content" style="margin-top: 0; padding-top:0 ">In our LAME model the rate kinetics of our system are induced with photocleaving.
                 This is a unique twist we incorporated in contrast to conventional mammalian cell expression systems. In addition, the attachment of a dCas9
@@ -283,15 +279,17 @@
 
             <h1 class="subtitle ">1) Photocleavage and release of the RFP TF in the cytoplasm of the cell</h1>
 
-                <img id="special-image-1" src="../../assets/Mam/Photocleavage%20Mammalian%201.svg" class="image-content-graphs" style="margin-left:125px ;padding-left: 40px; padding-bottom: 0px!important; margin-bottom: 0px!important; height:600px; width:450px">
-                <img id="special-image-2" src="../../assets/Mam/Photocleavage%20Mammalian%202.svg" class="image-content-graphs" style="margin-left:0px ;padding-left: 40px; padding-bottom:0px!important; margin-bottom: 0px!important; height:600px; width:450px">
+
+                <img id="special-image-1" src="../../assets/Photocleavage_Mammalian.svg" class="image-content-graphs" style="margin-left:80px ;padding-left: 40px; padding-bottom: 0px!important; margin-bottom: 0px!important; width: 750px; height: 450px;">
+
+               
 
                 <p class="text-content" style="padding-top:0!important; margin-top:0!important">Location: Outer cell membrane
                     <br>
 
                     <br>The first step of our simulation is the photocleavage of PhoCl, which results in the release of the RFP TF in the cytoplasm of the cell. We introduced two degradation factors within our ODEs, in order to account for the half-life of the RFP TF and the
                     continual transport of the RFP TF from the cytoplasm to the nucleus of the cell.</p>
-                <img src="../../assets/Mam/Mam_Eq1.png" class="image-content-graphs" style="margin-left: 180px; width:500px; height:80px">
+                <img src="../../assets/Mam/Mam_Eq1.png" class="image-content-equations" style="margin-left: 180px; width:450px; height:70px">
 
 
                 <p class="text-content" style="padding-bottom: 0px"> The photocleavage is dependent on light intensity (L). The Hill equation is commonly used to
@@ -299,12 +297,12 @@
                     the effect different light intensities would have on the rate of photocleavage of the LACE<sub>TF</sub> complex. </p>
 
 
-                <img src="../../assets/Mam/Mam_Eq2.png" class="image-content-graphs" style="width:325px; height:80px; padding-bottom: 0px;padding-top: 0px; margin-left: 280px">
+                <img src="../../assets/Mam/Mam_Eq2.png" class="image-content-equations" style="width:300px; height:80px; padding-bottom: 0px;padding-top: 0px; margin-left: 280px">
 
                 <h1 class="subtitle" style="padding-top: 15px">2) Transcription</h1>
-                <img src="../../assets/Mam/Mam_Transcription.svg" class="image-content-graphs" style="width: 900px ;height:450px">
+                <img src="../../assets/Mam/Transcription_Mammalian.svg" class="image-content-graphs" style="width: 800px ;height:450px; margin-bottom: 0; margin-top: 0">
 
-                <p class="text-content" style="margin-top: 0; padding-top:0 "> Location: Nucleus
+                <p class="text-content" style="margin-top: 0; padding-top:0; padding-bottom: 0;"> Location: Nucleus
                     <br>
                     <br> The second step of our simulation is the production of mRNA from transcription.
                     In order for transcription to take place the RFP TF needs to be transported from the cytoplasm of the cell to the nucleus. The RFP TF is guided into the
@@ -312,62 +310,68 @@
                     affects the rate at which transcription takes place. We incorporated two degradation factors to account for the half-life of the mRNA and the transport of the mRNA from the nucleus of the cell
                     to the cytoplasm.</p>
 
-                <img src="../../assets/Mam/Mam_Eq3.png" class="image-content-graphs" style="width: 540px; height:70px; padding-bottom: 0px; margin-left:190px">
+                <img src="../../assets/Mam/Mam_Eq3.png" class="image-content-equations" style="width: 540px; height:70px; padding-bottom: 0px; margin-left:190px; padding-top:0">
 
-                <h1 class="subtitle" style="padding-top:15px">3) Translation</h1>
-                <img src="../../assets/Mam/Mam_Translation.svg" class="image-content-graphs" style="width: 900px ;height:450px">
+                <h1 class="subtitle" style="padding-top:15px; padding-bottom: 0">3) Translation</h1>
+                <img src="../../assets/Mam/Translation_Mammalian.svg" class="image-content-graphs" style="width: 800px ;height:450px; padding-top:0; padding-bottom: 0;">
 
-                <p class="text-content" style="margin-top: 0; padding-top:0 ">Location: Cytoplasm
+                <p class="text-content" style="margin-top: 0!important; padding-top: 0!important; ">Location: Cytoplasm
                     <br>
                     <br>
                     The third step of our simulation is the production of the RFP protein from translation. The change in concentration of the RFP protein is dependent on three main factors. Firstly, the rate at which mRNA is transported from the nucleus to the cytoplasm, this is
 
                     represented with the letter 'β'. Secondly, the rate of translation, represented by 'k<sub>3</sub>', and thirdly the maximum amount of RFP protein a cell can express, represented by the letter 'η'. A degradation term was introduced to represent the degradation of
                     RFP over time because of dilution due to cell growth and the limited half-life of the RFP protein. </p>
-                <img src="../../assets/Mam/Mam_Eq4.png" class="image-content-graphs" style="width: 490px; height:70px; padding-top: 0px; margin-left: 200px">
+                <img src="../../assets/Mam/Mam_Eq4.png" class="image-content-equations" style="width: 450px; height:80px; padding-top: 0px; margin-left: 200px">
 
 
-                <h2 class="text-hyperlink" style="padding-top: 0px; padding-bottom: 5px; padding-left: 160px!important">
-                    <a href="project-description.html">Not enough biology? Check out the project description page!</a></h2>
+
+                <div class="text-hyperlink" style="padding-top: 2px!important; padding-bottom:2px!important; margin-left: 90px">
+                    <a href="project-description.html">Not enough biology? Check out the project description page!</a></div>
+
             </div>
 
                 <div class="text-section">
-                    <h1 class="title">Results</h1>
+                    <h1 class="title" id="section3">Results </h1>
                     <p class="text-content">From our LAME simulation we compiled our graphs, evaluated their results
                         and determined the optimal range of values our Wet Lab team should evaluate in order to optimize the rate-limiting parameters of the system.</p>
                 </div>
                 <h1 class="subtitle">Determining the rate limiting step in RFP expression</h1>
-                <p class="text-content">We used rate kinetics modelling to determine the rate limiting step in the cellular mechanisms involved in the light-activated translation of RFP.
+                <p class="text-content">We used rate kinetics modelling to determine the rate limiting step in the cellular mechanisms involved in the light-activated translation of RFP.</p>
 
-                <h2 class="border" style="margin-left: 160px!important">
-                <img src="../../assets/Mam/Mam_RK.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
-                <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 1: Demonstrates the rate of the cellular mechanisms involved in the expression of RFP protein </p>
-                </p>
-                </h2>
+
+                <div class="border">
+                    <img src="../../assets/Mam/Mam_RK.png" class="image-border" style="padding-bottom:0">
+                    <p class="text-figure" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 1: Demonstrates the rate of the cellular mechanisms involved in the expression of RFP protein </p>
+
+                </div>
+
 
                 <p class="text-content">In Figure 1 the photocleavable expression system is induced with a 27 W/cm<sup>2</sup> light intensity. The concentration of the free RFP TF and mRNA in the nucleus appear to be much smaller than that of the RFP protein.
                     Therefore, we decided to plot a second figure, in which we re-scaled the graph, in order to evaluate the rate of photocleaving and transcription. </p>
 
-                <h2 class="border" style="margin-left: 160px!important">
-                <img src="../../assets/Mam/Mam_RLS.png" class="image-content-graphs" style="width:900px!important; height:500px!important; margin-left:0!important; padding-left:0!important; padding-right:0!important; margin-right:0!important;max-width: 100%!important">
-                <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0!important; max-width:100%; padding-left:0px!important"> Figure 2: Depicts a re-scaled plot of Figure 1 in order to view the rate at which the TF is released in the cell cytoplasm</p>
-                </h2>
 
-                <table style="width: 60%; margin-left: 160px!important; margin-top: 15px!important" class="text-content-duo-primary">
+                <div class="border">
+                <img src="../../assets/Mam/Mam_RLS.png" class="image-border" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
+                <p class="text-figure" style=" padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 2: Depicts a re-scaled plot of Figure 1 in order to view the rate at which the TF is released in the cell cytoplasm</p>
+                </div>
+
+                <table style="width: 60%; margin-left: 170px!important" class="text-content-duo-primary">
 
                     <tr>
-                        <th class="text-content"  style="padding: 0">Step</th>
-                        <th class="text-content"  style="padding: 0">Time taken to plateau (hr) </th>
+                        <th class="text-content" style="padding-left: 25px; padding-top: 0; padding-bottom: 0">Step</th>
+                        <th class="text-content" style="padding-left: 25px; padding-top: 0; padding-bottom: 0">Time taken to plateau (hr) </th>
                     </tr>
 
                     <tr>
-                        <td class="text-content" style="padding: 0">Cleavage of PhoCl Linker</td>
-                        <th class="text-content" style="padding: 0">0.1</th>
+                        <td class="text-content" style="padding-left: 25px;padding-top: 0; padding-bottom: 0">Cleavage of PhoCl Linker</td>
+                        <th class="text-content" style="padding-left: 25px;padding-top: 0; padding-bottom: 0">0.1</th>
                     </tr>
 
                     <tr>
-                        <td class="text-content" style="padding: 0">Transcription</td>
-                        <th class="text-content" style="padding: 0">0.1</th>
+                        <td class="text-content" style="padding-left: 25px;padding-top: 0; padding-bottom: 0" >Transcription</td>
+                        <th class="text-content" style="padding-left: 25px;padding-top: 0; padding-bottom: 0">0.1</th>
+
                     </tr>
 
                     <tr>
@@ -389,10 +393,12 @@
                     54 W/cm<sup>2</sup>, where 0 W/cm<sup>2</sup> represented our system in its off state and 54 W/cm<sup>2</sup> represented the maximum light intensity mammalian cells can withstand
                     before they started to die.</p>
 
-                <h2 class="border" style="margin-left: 160px!important">
-                    <img src="../../assets/Mam/Mam_LI.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
-                    <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 3: Evaluates the effect light intensity has on the concentration and rate of expression of RFP protein in the cell with the use of a Sensitivity Analysis </p>
-                </h2>
+
+                <div class="border">
+                    <img src="../../assets/Mam/Mam_LI.png" class="image-border">
+                    <p class="text-figure" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 3: Evaluates the effect light intensity has on the concentration and rate of expression of RFP protein in the cell with the use of a Sensitivity Analysis </p>
+                </div>
+
 
                     <p class="text-content" style="margin-top: 0; padding-top:0">From Figure 3 it is evident that an increase in the light intensity used to photocleave PhoCl corresponds to an increase in the concentration of RFP expressed in the cells.</p>
 
@@ -405,22 +411,26 @@
                 <h2 class="subtitle" style="padding-top: 15px; max-width: 80%">Optimizing the rate at which mRNA is transported to the cell nucleus (β) with a Sensitivity Analysis and Parameter Sampling</h2>
                 <p class="text-content">The rate of translation is dependent on the rate at which mRNA is transported from the nucleus to the cytoplasm of the cell. Ideally, we would want a high β value to increase the rate at which the mRNA is transported to the cytoplasm of the cell. This would increase the rate of translation.</p>
 
-                <h2 class="border" style="margin-left: 160px!important">
-                <img src="../../assets/Mam/Mam_SAbeta.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
-                <br>
-                <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 5: Evaluates the effect β has on the rate of RFP expression in the cytoplasm of the cell with the use of a Sensitivity Analysis
-                </h2>
+
+                <div class="border">
+                    <img src="../../assets/Mam/Mam_SAbeta.png" class="image-border"
+                    >
+                    <p class="text-figure" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 5: Evaluates the effect β has on the rate of RFP expression in the cytoplasm of the cell with the use of a Sensitivity Analysis
+                </div>
+
 
                 <p class="text-content"> Sensitivity Analyses determine the magnitude of the effect a particular parameter has on the output of a model. Therefore, we first decided to run a Sensitivity Analysis to determine/ validate that β has a large contribution
                     on the concentration of RFP expressed in the cells. In order to do this a range of β values, from other similar cellular mechanisms, were inputted into our model. From Figure 5 we determined the optimum β value to
                     operate our cellular mechanism at is 2.20Ε+00 1/s. We therefore, decided to conduct Parameter Sampling to ensure the value we select
                     to optimize our β to can realistically be achieved in our cellular mechanism.
 
-                <h2 class="border" style="margin-left: 160px!important">
-                    <img src="../../assets/Mam/Mam_PSbeta.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
 
-                    <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 6: Evaluates the effect β has on the rate of RFP expression in the cytoplasm of the cell with the use of Parameter Sampling </p>
-                </h2>
+                <div class="border">
+                    <img src="../../assets/Mam/Mam_PSbeta.png" class="image-border" >
+
+
+                    <p class="text-figure" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 6: Evaluates the effect β has on the rate of RFP expression in the cytoplasm of the cell with the use of Parameter Sampling </p>
+                </div>
 
                 <p class="text-content">Parameter Sampling allowed us to take a series of factors into consideration when optimizing the value of β.
                     The values of β represented in figure 6 are more realistic and significantly lower than
@@ -432,29 +442,29 @@
                 <h2 class="text-hyperlink" style="padding-top:0%; margin-top:5px!important; padding-left: 160px!important">
                     <a href="assumptions_barc_o.html">Interested in the steps and weighting system we used for our Parameter Sampling?</a></h2>
 
-                <h2 class="subtitle" style="padding-top: 15px; padding-bottom: 15px; max-width: 80%">Optimizing the degradation rate (d<sub>3</sub>) of the RFP protein with the use of a Sensitivity Analysis and Parameter Sampling</h2>
+                <h2 class="subtitle" style="padding-top:10px!important; padding-bottom: 10px!important; max-width: 80%">Optimizing the degradation rate (d<sub>3</sub>) of the RFP protein with the use of a Sensitivity Analysis and Parameter Sampling</h2>
 
                 <p class="text-content">The parameter d<sub>3</sub> represents the rate at which the concentration of RFP decreases due to protein degradation and dilution.
                     Therefore, we would want to minimize the value of d<sub>3</sub> so as to decrease the time it takes for the maximum amount of RFP to be expressed in the cell.</p>
 
 
-                <h2 class="border" style="margin-left: 160px!important">
+                <div class="border">
 
-                <img src="../../assets/Mam/Mam_SADeg.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
-                <br>
-                <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 7: Evaluates the effect d<sub>3</sub> has on the rate of RFP expression in the cell with the use of a Sensitivity Analysis
-                </h2>
+                <img src="../../assets/Mam/Mam_SADeg.png" class="image-border">
+                <p class="text-figure" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 7: Evaluates the effect d<sub>3</sub> has on the rate of RFP expression in the cell with the use of a Sensitivity Analysis
+                </div>
 
                 <p class="text-content"> In Figure 7 it is evident that from the Sensitivity Analysis d<sub>3</sub>  is a large contributor to the final concentration of
                     RFP that can be expressed in the cells. Therefore, we decided to progress and carry out a Parameter Analysis in order to optmize
                     our d<sub>3</sub> value.</p>
 
-                <h2 class="border" style="margin-left: 160px!important">
+                <div class="border">
 
-                <img src="../../assets/Mam/Mam_PSDeg.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
-                <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 8: Evaluates the effect d<sub>3</sub> has on the rate of RFP expression in the cell with the use of Parameter Sampling
-                </p>
-                </h2>
+
+                    <img src="../../assets/Mam/Mam_PSDeg.png" class="image-border" >
+                    <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 8: Evaluates the effect d<sub>3</sub> has on the rate of RFP expression in the cell with the use of Parameter Sampling
+                    </p>
+                </div>
 
                 <p class="text-content">Parameter Sampling allowed us to take a series of factors into consideration when optimizing the value of d<sub>3</sub>.
                     From Figure 8 we determined the optimum d<sub>3</sub> value to maximize the concentration of RFP expressed in the
@@ -469,43 +479,45 @@
 
                     <br>We first ran a control simulation, where we introduced one long pulse of 7 hours of light, to ensure we received a curved response that would simulate the activation and deactivation of our cellular mechanisms over a defined period of time. </p>
 
-                <h2 class="border" style="margin-left: 160px!important">
-                    <img src="../../assets/Mam/Mam_1pulse.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
-                    <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 9: Evaluates the effect one long pulse has on the rate kinetics of the expression of RFP in the cell cytoplasm
+
+                <div class="border">
+                    <img src="../../assets/Mam/Mam_1pulse.png" class="image-border">
+                    <p class="text-figure" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 9: Evaluates the effect one long pulse has on the rate kinetics of the expression of RFP in the cell cytoplasm
+
                     </p>
-                </h2>
+                </div>
 
                 <p class="text-content"> From Figure 9 it is evident the behavior of all the species produced, after each step involved in the expression of RFP, are represented in a dumb bell shaped curve. This is justifiable, as when the light is turned off we expect the rate of product production to become smaller than the rate of product degradation. Therefore, as time passes the concentration of each product from each step is expected to decrease.
-                    <br>
+                    We then wanted to evaluate the effect pulsing, for periods of 2 hours, would have on the rate kinetics involved in the expression of RFP in the cytoplasm of the cell.</p>
 
-                    <br> We then wanted to evaluate the effect pulsing, for periods of 2 hours, would have on the rate kinetics involved in the expression of RFP in the cytoplasm of the cell.</p>
 
-                <h2 class="border" style="margin-left: 160px!important">
-                <img src="../../assets/Mam/Mam_3pulses.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
-                <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 10: Evaluates the effect pulsing light, in 2-hour intervals, has on the rate kinetics involved in the rate and concentration of RFP expressed in the cytoplasm of the cell
-                </h2>
+                <div class="border">
+                    <img src="../../assets/Mam/Mam_3pulses.png" class="image-border">
+                    <p class="text-figure" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 10: Evaluates the effect pulsing light, in 2-hour intervals, has on the rate kinetics involved in the rate and concentration of RFP expressed in the cytoplasm of the cell
+                </div>
+
 
                 <p class="text-content">From Figure 10 we discovered that if we pulse light on the cells for a period of 2 hours over a 24-hour period, we experienced a small decrease (14% decrease) in the concentration of RFP expressed in the cytoplasm of the cells.
-
-                    <br>
                 </p>
 
                 <div class="text-section">
                     <h1 class="title">Optimized conditions </h1>
                     <p class="text-content"> The biggest increase in the rate of RFP expression in the cytoplasm of the cells occurs when the value of 'β’ increases and the values of ‘d<sub>3</sub>’ decreases. This is something we expected, as the larger the value of β the faster the speed at which mRNA is transported to the cytoplasm of the cell from the nucleus and therefore the faster the rate of translation. In addition, the lower the d<sub>3</sub> value, the slower the degradation of mRNA in the cell. Thus, the combination of both of these phenomena results in a faster and greater concentration of RFP expressed in the cytoplasm of the cell.</p>
-                    <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
+
+                    <table style="width: 60%; margin-left: 170px!important" class="text-content-duo-primary">
                         <tr>
-                            <th class="text-content" style="padding: 0">Optimized Parameter</th>
-                            <th class="text-content" style="padding: 0">Value </th>
+                            <th class="text-content" style="padding: 15px; padding-top:0; padding-bottom: 0">Optimized Parameter</th>
+                            <th class="text-content" style="padding: 15px; padding-top:0; padding-bottom: 0">Value </th>
                         </tr>
                         <tr>
-                            <td class="text-content" style="padding: 0">β (1/s)</td>
-                            <th class="text-content" style="padding: 0">2.2E+00</th>
+                            <td class="text-content" style="padding: 15px; padding-top:0; padding-bottom: 0">β (1/s)</td>
+                            <th class="text-content" style="padding: 15px; padding-top:0; padding-bottom: 0">2.2E+00</th>
 
                         </tr>
                         <tr>
-                            <td class="text-content" style="padding: 0">d<sub>3</sub> (1/s)</td>
-                            <th class="text-content" style="padding: 0">6.4E-05</th>
+                            <td class="text-content" style="padding: 15px; padding-top:0; padding-bottom: 0" >d<sub>3</sub> (1/s)</td>
+                            <th class="text-content" style="padding: 15px; padding-top:0; padding-bottom: 0">6.4E-05</th>
+
                         </tr>
                     </table>
                     <br>
@@ -514,20 +526,24 @@
                     <p class="text-content"> We ran our rate kinetics model with our newly optimized parameters and determined that with our optimized parameters a larger concentration of RFP was expressed in the cytoplasm of the cell. However, the same amount of time was taken for the RFP expression rate to plateau. Therefore, this
                         means that although the concentration of RFP expressed in the cytoplasm of the cell was optimized this step prevails as the rate-limiting step in the network of cellular mechanisms involved.</p>
 
-                    <h2 class="border" style="margin-left: 160px!important">
-                        <img src="../../assets/Mam/Mam_RKOpt.png" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
-                        <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 12: Depicts the optimized and unoptimized rate kinetics for the translation of the RFP protein </p>
-                    </h2>
+
+                    <div class="border">
+                        <img src="../../assets/Mam/Mam_RKOpt.png" class="image-border">
+                        <p class="text-figure" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important">Figure 12: Depicts the optimized and unoptimized rate kinetics for the translation of the RFP protein </p>
+                    </div>
+
 
                 </div>
 
-                <div class="text-section">
-                    <h1 class="title">Cost Analysis</h1>
+                <div class="text-section" style="padding-top: 450px; border:none">
+                    <h1 class="title" id="section4">Cost Analysis</h1>
                     <p class="text-content"> We ran a  Cost Analysis to ensure our LIT optogenetic tool was an affordable technology current labs could use to replace alternative technologies.
                         We focused on identifying the main operational costs a user would incur. We determined the most critical ones were: the light intensity they used to activate the HEK 293 cellular mechanism; and the frequency of light pulsing.
                         We created a function in Python that took costs incurred for both methods into consideration, where we attempted to identify the most cost-efficient operational conditions for our tool.</p>
 
-                    <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
+
+                    <table style="width: 60%; margin-left: 150px!important; padding-top:0; padding-bottom:0" class="text-content-duo-primary">
+
                         <tr>
                             <th class="text-content" style="padding: 0">Light Intensity (W/cm<sup>2</sup>)</th>
                             <th class="text-content" style="padding: 0">Cost per hour of utility (£/hr) </th>
@@ -554,58 +570,60 @@
                         </tr>
                     </table>
 
-                    <p class="text-content" style="margin-top: 0; padding-top:0"><i>Figure 13: </i> Outlines the operating costs incurred for operating the optogenetic tool with a range of light intensities with no light pulsing present</p>
+                    <p class="text-figure" style="margin-top: 0; margin-left: 0!important; padding-top:0">Figure 13: Outlines the operating costs incurred for operating the optogenetic tool with a range of light intensities with no light pulsing present</p>
                     <br>
-                    <table style="width: 60%; margin-left: 160px!important" class="text-content-duo-primary">
+
+                    <table style="width: 60%; margin-left: 150px!important; padding-top:0; padding-bottom:0" class="text-content-duo-primary">
                         <tr>
                             <th class="text-content" style="padding: 0">Pulsing Duration (hr)</th>
-                            <th class="text-content" style="padding:0 0 0 20px">Cost for total pulsing over 2 hour operation period (£) </th>
+                            <th class="text-content" style="padding:0 0 0 50px">Cost for total pulsing over 2 hour operation period (£) </th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">2</td>
-                            <th class="text-content" style="padding: 0 0 0 20px">7E-03</th>
+                            <th class="text-content" style="padding: 0 0 0 50px">7E-03</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">1.33</td>
-                            <th class="text-content" style="padding:0 0 0 20px">4.E-03</th>
+                            <th class="text-content" style="padding:0 0 0 50px">4.E-03</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">1</td>
-                            <th class="text-content" style="padding:0 0 0 20px">3.5E-03</th>
+                            <th class="text-content" style="padding:0 0 0 50px">3.5E-03</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">0.5</td>
-                            <th class="text-content" style="padding:0 0 0 20px">1.8E-03</th>
+                            <th class="text-content" style="padding:0 0 0 50px">1.8E-03</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">0.25</td>
-                            <th class="text-content" style="padding:0 0 0 20px">8.8E-0.4</th>
+                            <th class="text-content" style="padding:0 0 0 50px">8.8E-0.4</th>
                         </tr>
                         <tr>
                             <td class="text-content" style="padding: 0">0</td>
-                            <th class="text-content" style="padding:0 0 0 20px">0</th>
+                            <th class="text-content" style="padding:0 0 0 50px">0</th>
+
                         </tr>
                     </table>
-                    <p class="text-content" style="margin-top: 0; padding-top:0px; padding-bottom:0px; margin-bottom: 0px "><i>Figure 14: </i> Outlines the operating costs incurred for pulsing the light source of the optogenetic tool over a range of frequencies at a light intensity of 27 W/cm<sup>2</sup></p>
+                    <p class="text-figure" style="margin-top: 0; margin-left: 0!important; padding-top:0">Figure 14: Outlines the operating costs incurred for pulsing the light source of the optogenetic tool over a range of frequencies at a light intensity of 27 W/cm<sup>2</sup></p>
                     <br>
-                    <h2 class="border" style="margin-left: 160px!important">
-                        <img src="../../assets/Mam/Mam_CostOpt.png" class="image-content-graphs" style="width:750px; height:400px; padding-bottom:0; padding-left:30px; padding-right: 115px">
-                         <p class="text-content" style="margin-bottom: 10px!important; padding-top: 5px!important; margin-left:0; max-width:100%; padding-left:15px!important"> Figure 15: Comparison of the effects of pulsing and light intensity on the overall cost
-                    </h2>
 
+                    <h2 class="border">
+                        <img src="../../assets/Mam/Mam_CostOpt.png" class="image-border" style="margin-top:0!important">
+                        <p class="text-figure" style="margin-top: 0; margin-left: -150px!important; max-width:100%; padding-top:0; text-decoration: none!important">Figure 15:  Comparison of the effects of pulsing and light intensity on the overall cost </p>
+
+
+                    </h2>
                     <p class="text-content"> We decided to plot both the costs incurred for different light intensities and the pulsing durations on the same graph to evaluate their synergistic effect.
                         The most optimum operating conditions for our optogenetic tool were defined as those at which the lines intersect. Beyond the point of intersection, it was evident that the operational costs
                         for the optogenetic tool were too high. Below the intersection point it was evident that the activity of the HEK 293 cell adhesion mechanism would
                         be too slow, and as one of the biggest selling points of our technology is its rapidity we decided it would not be practical to
-                        operate at such a slow rate.
-                        <br>
+                        operate at such a slow rate.</p>
 
-                        <br>
-                        Therefore, the best trade-off was identified when operating at a light intensity of 30 W/cm<sup>2</sup> with a 4.5 hour pulsing frequency.</p>
+                        <p class="text-content">Therefore, the best trade-off was identified when operating at a light intensity of 30 W/cm<sup>2</sup> with a 4.5 hour pulsing frequency.</p>
                 </div>
 
                 <div class="text-section">
-                    <h6 class="title">Alternative application for our model</h6>
+                    <h6 class="title" id="section5">Alternative application for our model</h6>
 
                     <div style="margin-top: 20px">
 
@@ -623,36 +641,52 @@
                         </p>
 
                     </div>
-                    <h2 id="trigger-assumptions" class="title">LAME Assumptions <span class="glyphicon glyphicon-chevron-down"></span></h2>
 
-                    <div id="assumptions" class="row">
 
-                        <div class="text-section">
 
-                        <ul class="text-content" style="margin-left:30px!important">
-                            <li>Mass action kinetics</li>
-                            <li>All reactions are taking place in cells that are plated in a petri dish</li>
-                            <li>PhoCl always cleaves when exposed to violet light (400 nm)</li>
-                            <li>LACE with the RFP TF attached to it is constitutively expressed in the cell</li>
-                            <li>Every cell is activated by the same light intensity, regardless of its position in the petri dish</li>
-                            <li>There is no light reflection or refraction from the cells</li>
-                            <li>All cells are at their exponential growth phase</li>
-                            <li>The cells are not going through the cell cycle when they are induced to photocleave and release the RFP TF in the cytoplasm of the cell</li>
-                        </ul>
+
+                    <div class="text-section" id="section6">
+
+                        <h2 class="title" id="trigger-assumptions">LAME Assumptions <span class="glyphicon glyphicon-chevron-down"></span></h2>
+
+                        <div id="assumptions" class="row">
+
+                            <ul class="text-content" style="margin-left:30px!important">
+                                <li>Mass action kinetics</li>
+                                <li>All reactions are taking place in cells that are plated in a petri dish</li>
+                                <li>PhoCl always cleaves when exposed to violet light (400 nm)</li>
+                                <li>LACE with the RFP TF attached to it is constitutively expressed in the cell</li>
+                                <li>Every cell is activated by the same light intensity, regardless of its position in the petri dish</li>
+                                <li>There is no light reflection or refraction from the cells</li>
+                                <li>All cells are at their exponential growth phase</li>
+                                <li>The cells are not going through the cell cycle when they are induced to photocleave and release the RFP TF in the cytoplasm of the cell</li>
+                            </ul>
+                        </div>
 
 
                     <h3 id="trigger-species" class="title">LAME Species <span class="glyphicon glyphicon-chevron-down"></span></h3>
 
-                    <div id="species" class="row">
 
-                        <div class="text-section">
+                        <h3 class="title" id="trigger-species"> LAME Species <span class="glyphicon glyphicon-chevron-down"></span></h3>
+
+                            <div id="species">
+
+                            <img src="../../assets/Mam/specie_mamm.png" class="image-content-graphs" style="width: 900px; height:350px">
+
+                            </div>
+                    </div>
+
 
                             <img src="../../assets/Mam/Mam_Species.png" class="image-content-graphs" style="width: 900px; height:350px">
                         </div>
 
-                    </div>
 
-                    <h3 id="trigger-parameters" class="title">LAME Parameters <span class="glyphicon glyphicon-chevron-down"></span></h3>
+                        <h3 class="title" id="trigger-conditions">LAME Parameters <span class="glyphicon glyphicon-chevron-down"></span></h3>
+
+                        <div id="conditions">
+                            <img src="../../assets/Mam/parameter_mamm.png" class="image-content-graphs" style="width: 900px; height:650px">
+                        </div>
+
 
                         <div id="parameters" class="row">
                             <div class="text-section">
@@ -661,21 +695,24 @@
                             </div>
                         </div>
 
-                        <h5 id="trigger-conditions" class="title">LAME Initial Conditions <span class="glyphicon glyphicon-chevron-down"></span></h5>
 
-                        <div id="conditions" class="row">
-                            <div class="text-section">
+                        <h3 class="title" id="trigger-parameters">LAME Initial Conditions <span class="glyphicon glyphicon-chevron-down"></span></h3>
+
+                        <div id="parameters">
+                            <img src="../../assets/Mam/Mam_InitialAssump.png" class="image-content-graphs" style="width: 900px; height:1000px">
+
+                        </div>
 
                                 <img src="../../assets/Mam/Mam_InitialAssump.png" class="image-content-graphs" style="width: 900px; height:1000px">
 
                             </div>
                         </div>
 
-                        <div class="text-section">
-                            <h6 class="title">Bibliography</h6>
-                            <br>
 
-                            <p class="subtitle" style="color: rgb(163, 161, 168); max-width:80%">
+                        <h6 class="title">Bibliography <span class="glyphicon glyphicon-chevron-down"></span></h6>
+
+                        <p class="subtitle" style="max-width: 80%">
+
                             <br>
                             <br>
                             Ramakrishnan P, Maclean M, MacGregor S, Anderson J, Grant M. Cytotoxic responses to 405nm light exposure in mammalian and bacterial cells: Involvement of reactive oxygen species. 2017.
@@ -708,7 +745,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
     </div>
 </div>
 
