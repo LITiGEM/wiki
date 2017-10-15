@@ -72,22 +72,66 @@
                 }
             }
 
+            $("#golit").click(function(){
+                $("#hidden-golit").fadeIn("slow");
+                $('#intro').hide();
+                $('#hidden-optoflux').hide();
+                $('#hidden-legit').hide();
+                $('#hidden-lame').hide();
+            });
+
+            $("#optoflux").click(function(){
+                $("#hidden-optoflux").fadeIn("slow");
+                $('#intro').hide();
+                $('#hidden-legit').hide();
+                $('#hidden-lame').hide();
+                $('#hidden-golit').hide();
+            });
+
+            $("#legit").click(function(){
+                $("#hidden-legit").fadeIn("slow");
+                $('#intro').hide();
+                $('#hidden-lame').hide();
+                $('#hidden-golit').hide()
+                $('#hidden-optoflux').hide();
+            });
+
+            $("#lame").click(function(){
+                $("#hidden-lame").fadeIn("slow");
+                $('#intro').hide();
+                $('#hidden-optoflux').hide();
+                $('#hidden-legit').hide();
+                $('#hidden-golit').hide();
+            });
+
         });
     </script>
 </head>
 
 <style>
     .image-content-here {
-        height: 320px;
-        width:320px;
-        padding:0;
-        border-radius: 48%;
+        height:90%;
+        width:95%;
+        margin:0;
     }
 
-    .image-content-here-2 {
-        height: 320px;
-        width:320px;
-        padding:0;
+    .image-content-here-icons {
+        height: 30%;
+        width:30%;
+        margin: 5% 5% 0 10%;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .overlay-here {
+        margin:82% 0 0 0 !important;
+        height:18%;
+        width: 100%;
+    }
+
+    #intro {
+        padding: 10% 10% 10% 15%;
+        font-size: 25px;
     }
 
     #godown {
@@ -95,12 +139,38 @@
         font-size: 30px;
         padding: 0 0 0 5%;
     }
+
+    .cols-here {
+        padding: 0 0 0 0 !important;
+        margin: 2% 0 0 1.8% !important;
+        height:300px !important;
+        width:300px !important;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .modelling-intro {
+        position:relative;
+        max-width:80%;
+        font-size: 20px;
+        text-align: justify;
+        font-family: "Open Sans";
+        padding: 5% 3% 10% 20%;
+        margin:0 !important;
+    }
+    
+    #hidden-golit, #hidden-legit, #hidden-lame, #hidden-optoflux {
+        display: none;
+    }
+
+    
 </style>
 
 <body data-spy="scroll" data-target="#side-index">
 <!-- The top navbar -->
 <div class="container-fluid">
     <div id="top" class="row">
+
+        <img src="../assets/logo-navbar.png" class="logo-top">
 
         <ul class="navy">
             <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
@@ -114,24 +184,11 @@
                 </ul>
             </li>
 
-                <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
-                    <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Protocols</a></li>
-                        <li><a href="#" class="dropped">Safety</a></li>
-                        <li><a href="#" class="dropped">Stuff</a></li>
-                    </ul>
-                </li>
-            </li>
-
-            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
+            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Overview</a></li>
-                    <li><a href="#" class="dropped">Product</a></li>
-                    <li><a href="#" class="dropped">IP</a></li>
-                    <li><a href="#" class="dropped">Business Environment</a></li>
-                    <li><a href="#" class="dropped">Marketing</a></li>
-                    <li><a href="#" class="dropped">Management</a></li>
-                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
+                    <li><a href="#" class="dropped">Public Engagement</a></li>
+                    <li><a href="#" class="dropped">Integrated Practices</a></li>
                 </ul>
             </li>
 
@@ -146,15 +203,20 @@
                 </ul>
             </li>
 
-            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
+            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Overview</a></li>
-                    <li><a href="#" class="dropped">Public Engagement</a></li>
-                    <li><a href="#" class="dropped">Integrated Practices</a></li>
+                    <li><a href="#" class="dropped">Product</a></li>
+                    <li><a href="#" class="dropped">IP</a></li>
+                    <li><a href="#" class="dropped">Business Environment</a></li>
+                    <li><a href="#" class="dropped">Marketing</a></li>
+                    <li><a href="#" class="dropped">Management</a></li>
+                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
                 </ul>
             </li>
 
-            <li id="drop2" class="navy-link"><a href="#about">JUDGING CRITERIA</a>
+
+            <li id="drop2" class="navy-link"><a href="#about">MEDALS</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Bronze</a></li>
                     <li><a href="#" class="dropped">Silver</a></li>
@@ -169,7 +231,17 @@
                     <li><a href="#" class="dropped">Attributions</a></li>
                 </ul></li>
 
+            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Protocols</a></li>
+                    <li><a href="#" class="dropped">Safety</a></li>
+                    <li><a href="#" class="dropped">Stuff</a></li>
+                </ul>
+            </li>
+
         </ul>
+
+
     </div>
 
 </div>
@@ -177,21 +249,77 @@
 <div class="container-fluid">
     <div class="row">
 
-            <!-- The side navbar -->
-        <nav id="side-index" class="col-sm-2">
-            <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#golit">GOLIT</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#optoflux">OptoFlux</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#legit">LEGIT</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#lame">LAME</a></li>
-            </ul>
-        </nav>
+                <!-- Overview row -->
+                <div class="row">
 
-        <!-- Content -->
-            <div style="float: right !important" class="col-sm-10">
+                    <!-- GoLIT -->
+                    <div id="golit" class="col-sm-2 cols-here">
+                        <img src="../assets/GOIT.gif" class="image-content-here">
+
+                        <div class="overlay overlay-here">
+                            <p style="font-size: 17px; color:#030016" class="HP-title">A cellular automaton to model cell adhesion in Barchitecture</p>
+                        </div>
+
+                    </div>
+
+                    <!--  Optoflux -->
+                    <div id="optoflux" class="col-sm-2 cols-here">
+                        <img style="height: 80%; width:90%; margin:10% 0 10% 7%" src="../assets/OptoFlux/Opto_overview.png" class="image-content-here">
+
+                        <div class="overlay overlay-here">
+                            <p style="font-size: 17px; color:#030016" class="HP-title">Modelling the dimensions of the LIT bulb</p>
+                        </div>
+
+                    </div>
+
+                    <!-- LEGIT -->
+                    <div id="legit" class="col-sm-2 cols-here">
+                        <img src="../assets/bacterial-modelling-overview.jpg" class="image-content-here">
+
+                        <div class="overlay overlay-here">
+                            <p style="font-size: 17px; color:#030016" class="HP-title">People dancing to transcribe proteins for LIT</p>
+                        </div>
+
+                    </div>
+
+                    <!-- LAME -->
+                    <div id="lame" class="col-sm-2 cols-here">
+                        <img src="../assets/Mam/Mam_overview.png" class="image-content-here">
+
+                        <div class="overlay overlay-here">
+                            <p style="font-size: 17px; color:#030016" class="HP-title">People dancing to transcribe proteins for LIT</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Text bit-->
+                    <div style="background-color: rgba(42,44,57,0.12)" class="col-sm-12">
+
+                        <p id="intro"  class="text-content-new">Click on one of the models to find out more. Things to look for: genetic algorithms, cost analysis, sensitivity analysis.</p>
+
+                        <div id="hidden-golit">
+                            <p class="modelling-intro">We used a cellular automaton to visualize cell adhesion in our Barchitecture application. Our model sets a few rules that cells behave according to over a period of time.</p>
+                        </div>
+
+                        <div id="hidden-legit">
+                            <p  class="modelling-intro">We aimed to engineer a bacterial light bulb that serves as more than an ambient light. We identified a significant design consideration: light must reach our co-culture bacteria for nutrition purposes and traverse the bulb when it is produced by the bioluminescent E. Coli.</p>
+                        </div>
+
+                        <div id="hidden-lame">
+                            <p class="modelling-intro"> Lame</p>
+                        </div>
+
+                        <div id="hidden-optoflux">
+                            <p class="modelling-intro"> Optoflux</p>
+                        </div>
+                    </div>
 
 
-                <!-- Philosophy and aims-->
+
+                </div>
+
+
+               <!-- &lt;!&ndash; Philosophy and aims&ndash;&gt;
                 <div class="row">
                     <div class="text-section col-sm-8">
 
@@ -249,12 +377,6 @@
 
                 </div>
 
-                <!-- GOLIT -->
-                <div id="golit" class="row">
-
-                    <div class="text-section col-sm-7">
-
-                        <h1 class="title">GOLIT (Game of LIT) </h1>
 
                         <p class="text-content-duo modelling-steps-intro">The ultimate goal of synthetic biology is to recreate cells as cellular automata, in order to simulate life and explore new forms of artificial life. We extended the use of cellular automata to help people visualize our project better. </p>
 
@@ -316,7 +438,7 @@
 
                 </div>
 
-                <!-- LEGIT -->
+                &lt;!&ndash; LEGIT &ndash;&gt;
                 <div id="legit" class="row">
 
                     <div class="text-section col-sm-7">
@@ -1068,7 +1190,7 @@
 
                 </div>
 
-                <!-- LAME -->
+                &lt;!&ndash; LAME &ndash;&gt;
                 <div id="lame" class="row">
 
                     <div class="text-section col-sm-7">
@@ -1098,7 +1220,7 @@
                     </div>
 
 
-                </div>
+                </div>-->
 
             </div>
 
