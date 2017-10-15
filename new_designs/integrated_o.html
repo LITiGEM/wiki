@@ -81,28 +81,77 @@
                 }
             }
 
+
+            $("#button-arc").click(function(){
+                $("#hidden-architects").slideToggle("slow");
+            });
+
+            $("#button-arup").click(function(){
+                $("#hidden-arup").slideToggle("slow");
+            });
+
+            $("#button-tfl").click(function(){
+                $("#hidden-tfl").slideToggle("slow");
+            });
+
+            $("#button-esa").click(function(){
+                $("#hidden-esa").slideToggle("slow");
+            });
+
+
         });
     </script>
 </head>
 
 <style>
     .image-content-here {
-        height:350px;
-        width:340px;
-        border-radius: 50%;
+        height:90%;
+        width:95%;
+        margin:5% 0 5% 0;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
-    .image-content-here-arc {
-        height:250px;
-        width:400px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    .icons-here {
+        height:30%;
+        width:35%;
+        margin:38% 0 35% 30%;
+    }
+
+    .overlay-here {
+        top:40% !important;
+        width:87%;
+    }
+
+    .overlay-buttons-here {
+        right: 42.5% !important;
+        background-color: transparent;
+        border:none;
+    }
+
+    .infos-here {
+        font-size: 40px;
+        color: black;
+    }
+
+    #button-arc, #button-arup, #button-tfl, #button-esa {
+        margin:5% 0 0 50%;
+        border: none;
+    }
+
+    #hidden-architects, #hidden-arup, #hidden-esa {
+        display:none;
+        background-color: rgba(165, 165, 165, 0.11);
+        margin:0 0 0 7%;
     }
 </style>
+
 <body data-spy="scroll" data-target="#side-index">
 
 <div class="container-fluid">
     <div id="top" class="row">
+
+
+        <img src="assets/logo-navbar.png" class="logo-top">
 
         <ul class="navy">
             <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
@@ -116,24 +165,11 @@
                 </ul>
             </li>
 
-            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
-                <ul class="navy-hidden">
-                    <li><a href="#" class="dropped">Protocols</a></li>
-                    <li><a href="#" class="dropped">Safety</a></li>
-                    <li><a href="#" class="dropped">Stuff</a></li>
-                </ul>
-            </li>
-            </li>
-
-            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
+            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Overview</a></li>
-                    <li><a href="#" class="dropped">Product</a></li>
-                    <li><a href="#" class="dropped">IP</a></li>
-                    <li><a href="#" class="dropped">Business Environment</a></li>
-                    <li><a href="#" class="dropped">Marketing</a></li>
-                    <li><a href="#" class="dropped">Management</a></li>
-                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
+                    <li><a href="#" class="dropped">Public Engagement</a></li>
+                    <li><a href="#" class="dropped">Integrated Practices</a></li>
                 </ul>
             </li>
 
@@ -148,22 +184,26 @@
                 </ul>
             </li>
 
-            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
+            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Overview</a></li>
-                    <li><a href="#" class="dropped">Public Engagement</a></li>
-                    <li><a href="#" class="dropped">Integrated Practices</a></li>
+                    <li><a href="#" class="dropped">Product</a></li>
+                    <li><a href="#" class="dropped">IP</a></li>
+                    <li><a href="#" class="dropped">Business Environment</a></li>
+                    <li><a href="#" class="dropped">Marketing</a></li>
+                    <li><a href="#" class="dropped">Management</a></li>
+                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
                 </ul>
             </li>
 
-            <li id="drop2" class="navy-link"><a href="#about">JUDGING CRITERIA</a>
+
+            <li id="drop2" class="navy-link"><a href="#about">MEDALS</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Bronze</a></li>
                     <li><a href="#" class="dropped">Silver</a></li>
                     <li><a href="#" class="dropped">Gold</a></li>
                 </ul>
             </li>
-
 
             <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
                 <ul class="navy-hidden">
@@ -172,7 +212,16 @@
                     <li><a href="#" class="dropped">Attributions</a></li>
                 </ul></li>
 
+            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Protocols</a></li>
+                    <li><a href="#" class="dropped">Safety</a></li>
+                    <li><a href="#" class="dropped">Stuff</a></li>
+                </ul>
+            </li>
+
         </ul>
+
     </div>
 
 </div>
@@ -186,14 +235,220 @@
                 <li id="step3" class="navy-link side-link"><a href="#stakes">Architects</a></li>
                 <li id="step4" class="navy-link side-link"><a href="#tfl">Transport for London</a></li>
                 <li id="step5" class="navy-link side-link"><a href="#space">European Space Agency</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#meetup">UK Meet-up</a></li>
             </ul>
         </nav>
 
 
+         <!-- Content -->
         <div style="float: right !important" class="col-sm-10">
 
+            <!-- Overview -->
+            <div class="row">
+
+                <!-- Instagram-->
+                <div style="box-shadow: none !important" class="col-sm-4 cols">
+
+                    <div style="width:100%;" class="overlay overlay-here">
+                        <p style="font-size: 19px" class="HP-title">133 artists helped us prototype our bacterial light-bulb</p>
+                    </div>
+
+                    <img style="width:100%" src="assets/insta1.jpg" class="image-content-here">
+
+                    <button id="sciencem" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><a href="#aesthetics">
+                        <span class="glyphicon glyphicon-chevron-down infos-here"></span></a>
+                    </button>
+                </div>
+
+                <!-- ARUP -->
+                <div class="col-sm-4">
+
+                    <div class="overlay overlay-here">
+                        <p style="font-size:18px" class="HP-title">We meet ARUP to find applications of Barchitecture in construction</p>
+                    </div>
+
+                    <img src="assets/HP-arup.jpg" class="image-content-here">
+
+                    <button id="sci" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
+                        <span style="color:white" class="glyphicon glyphicon-chevron-down infos-here"></span>
+                    </button>
+                </div>
+
+                <!-- ESA -->
+                <div style="margin:2% 1% 0 0 !important;" class="col-sm-3 cols">
+
+                    <div style="width:100%; top:0 !important; margin-top: 0 !important" class="overlay overlay-here">
+                        <p style="font-size: 19px" class="HP-title">The European Space Agency shaped our Gold BioBrick</p>
+                    </div>
+
+                    <img src="assets/icon-esa.png" class="icons-here">
+
+                    <button style="right: 40% !important" id="sc" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
+                        <span  class="glyphicon glyphicon-chevron-down infos-here"></span>
+                    </button>
+
+                </div>
+
+                <!-- Architects-->
+                <div class="col-sm-4">
+
+                    <div class="overlay overlay-here">
+                        <p class="HP-title">With the Barchitects</p>
+                    </div>
+
+                    <img src="assets/HP-Beckett1.jpg" class="image-content-here">
+
+                    <button id="scie" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
+                        <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                    </button>
+
+                </div>
+
+                <!-- TfL -->
+                <div style="margin-top:2%" class="col-sm-3 cols">
+
+                    <div style="width:100%; top:0 !important; margin-top: 0 !important;" class="overlay overlay-here">
+                        <p style="font-size: 19px" class="HP-title">Transport for London guided us on our bulb prototype</p>
+                    </div>
+
+                    <img src="assets/icon-tfl.png" class="icons-here">
+
+                    <button style="right: 40% !important" id="s" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
+                        <span  class="glyphicon glyphicon-chevron-down infos-here"></span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Instagram -->
             <div id="aesthetics" class="row">
+                <div class="text-section col-sm-7">
+
+                    <h1 class="title">The aesthetics of light technologies</h1>
+
+                    <p class="text-content-new">To design our light-bulb to be aesthetically pleasing, we organised a competition on Instagram, reaching 78,000 people and receiving 133 submissions. The designs for our prototype were chosen based on people considering challenges of deploying a bacterial light-bulb in real life.</p>
+
+                </div>
+
+                <div class="picture-section-right col-sm-4">
+                    <img src="assets/bulb.png" class="image-content-here">
+                </div>
+
+            </div>
+
+
+            <!-- ESA -->
+            <div id="space" class="row">
+
+                <div class="picture-section-left col-sm-4">
+
+                    <img style="box-shadow: none" src="assets/icon-esa.png" class="image-content-here">
+                </div>
+
+                <div class="text-section col-sm-7">
+
+                    <h1 class="title">European Space Agency</h1>
+
+                    <p class="text-content-new">We talked to Dr Ralph Mueller from the ESA to see how we could extend the use of bacterial architecture from Earth to outer space. The initial premise was that taking large amounts of building material when colonising new planets would be inefficient.</p>
+
+                    <button id="button-esa" type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                </div>
+
+
+
+                <div id="hidden-esa" class="col-sm-10">
+
+                    <p class="text-content">After discussing how biological light switches can shape architecture in space, very interesting outcomes came out:</p>
+
+                    <ul class="list-section">
+                        <li class="list-item-content">We decided jointly with our bulb project to find a way for cells to survive in extreme environments. So, we characterised the application of the IrrE biobrick for these purposes, contributing to our Gold Medal criteria (link).</li>
+                        <li class="list-item-content">Research has focused on decreasing the mass of materials and electronics by engineering microbes that can print the necessary components. To this end, our biological light switches can be integrated into ‘growing’ electronics through light guidance.</li>
+                    </ul>
+
+                    <p class="text-content">For instance, Lunar regolith bio-mining of silicates and metal oxides is a current active area of research. Taking it a step further and engineering bacteria to not only harvest silicates and produce biosilica, but also form desired structures and bind this biomaterial could be used to generate silicon semiconductors and circuit boards.</p>
+                </div>
+
+
+            </div>
+
+            <!-- Architects -->
+            <div id="stakes" class="row">
+
+                <div class="text-section col-sm-7">
+                    <h1 class="title">Architects</h1>
+
+                    <p class="text-content-new">We contacted two practicing architects with experience in combining biology and architecture to understand needs in the field and how our Barchitecture application could address them. After our conversations, we changed our focus from small scale to large scale 3D structures.</p>
+
+                    <button id="button-arc" type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                </div>
+
+                <div class="picture-section-right col-sm-4">
+                    <img src="assets/HP-Beckett2.jpg" style="width:100%;height:90%; margin-bottom: 5%" class="image-content-here-arc">
+                </div>
+
+                <div id="hidden-architects" class="col-sm-10">
+
+                    <p class="text-content-new"> Our first conversation was with Richard Beckett, a practicing architect from the Bartlett School of Architecture. After discussing our vision for architectural structures made from bacteria, we were pointed in 2 directions:</p>
+
+                    <ul class="list-section">
+                        <li class="list-item-content"><b>Academic architecture</b>, where a bacterial 3D printing system would be a tool to develop concepts and prototypes.</li>
+                        <li class="list-item-content"><b>Real life applications</b>, where structures made from biopolymers can form temporary shelters, structures for festivals and plastic frames to be combined with cement in traditional buildings.</li>
+                    </ul>
+
+                    <p class="text-content-new">These ideas lead us to get in touch with Rachael Armstrong – a former TED Fellow who explores the intersection of biology and architecture.</p>
+
+                    <p class="text-content-new">Our Skype call was beneficial in terms of thinking about the scales on which architects work in terms of both time and space. The feedback obtained in the meeting was very supportive of trying to use bacteria to form structures.</p>
+
+                    <img src="assets/HP-Rachael.png" class="image-content-here-arc">
+                </div>
+
+
+            </div>
+
+            <!-- TfL -->
+            <div id="tfl" class="row">
+
+                <div class="picture-section-left col-sm-4">
+                    <img style="box-shadow: none" src="assets/icon-bulb.png" class="image-content-here">
+
+                </div>
+
+                <div class="text-section col-sm-7">
+                    <h1 class="title">Implementing bacterial bulbs on the streets of London - a practical guide</h1>
+                    <p class="text-content-new">We contacted Transport for London about what criteria our bacterial light-bulb would need to meet to be deployed as street lamps on London’s roads. We then use the relevant information to tailor our mathematical modelling and entrepreneurship.</p>
+
+                    <button id="button-tfl" type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                </div>
+
+            </div>
+
+            <!-- ARUP -->
+            <div class="row">
+                <div class="text-section col-sm-7">
+                    <h1 class="title">ARUP - the construction colossal</h1>
+                    <p class="text-content-new">At ARUP we presented our idea of how Barchitecture can help overcome the depletion of raw materials, the increasing need to create sustainable buildings and the need for rapid structure building in the case of natural disasters.</p>
+
+                    <button id="button-arup" type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                </div>
+
+                <div class="picture-section-right col-sm-4">
+                    <img src="assets/HP-arup.jpg" class="image-content-here">
+                </div>
+
+                <div id="hidden-arup" class="col-sm-10">
+                    <p class="text-content-duo">During the meeting, we discussed the science and the potential for our Barchitecture application. At the end, ARUP proposed that they could give 50 hours of pro-bono consulting to develop a more concrete design for Barchitecture. We then produced a concise document that explains in detail the aims of the project and the nature of the collaboration. Given the nature of big companies, time was an issue in taking the project to a design phase where sketches would be built.</p>
+                    <p class="text-content-duo">Here is the document, from which future iGEM teams can see a way of tailoring documents to model their interactions with industry stakeholders.</p>
+
+                </div>
+
+            </div>
+
+
+           <!-- <div id="aesthetics" class="row">
 
                 <div class="text-section col-sm-7">
 
@@ -212,31 +467,9 @@
 
             </div>
 
-            <!-- Architects -->
-            <div id="stakes" class="row">
-                <div class="text-section col-sm-7">
-                    <h1 class="title">Architects</h1>
-                    <p class="text-content-duo HP-intros">To go from cells to cities, we contacted architects to understand the scales one would have to work on and what would be possible in the short and long term.</p>
 
-                    <p class="text-content">Our first conversation was with Richard Beckett, a practicing architect from the Bartlett School of Architecture. After discussing our vision for architectural structures made from bacteria, we were pointed in 2 directions:</p>
 
-                    <ul class="list-section">
-                        <li class="list-item-content"><b>Academic architecture</b>, where a bacterial 3D printing system would be a tool to develop concepts and prototypes.</li>
-                        <li class="list-item-content"><b>Real life applications</b>, where structures made from biopolymers can form temporary shelters, structures for festivals and plastic frames to be combined with cement in traditional buildings.</li>
-                    </ul>
-
-                    <p class="text-content">These ideas lead us to get in touch with Rachael Armstrong – a former TED Fellow who explores the intersection of biology and architecture.</p>
-
-                    <p class="text-content-duo">Our Skype call was beneficial in terms of thinking about the scales on which architects work in terms of both time and space. The feedback obtained in the meeting was very supportive of trying to use bacteria to form structures.</p>
-                </div>
-
-                <div class="picture-section-right col-sm-4">
-                    <img src="assets/HP-Beckett1.jpg" style="border-radius: 50%; width:300px;height:300px; margin-bottom: 5%" class="image-content-here-arc">
-                    <img src="assets/HP-Rachael.png" class="image-content-here-arc">
-                </div>
-            </div>
-
-            <!-- Blue Alpha -->
+            &lt;!&ndash; Blue Alpha &ndash;&gt;
             <div class="row">
                 <div class="text-section col-sm-11">
                     <h1 class="title">Blue Alpha</h1>
@@ -246,36 +479,8 @@
                 </div>
             </div>
 
-            <!-- the TfL -->
-            <div id="tfl" class="row">
-                <div class="text-section">
-                    <h1 class="title">From ambient lights to street illumination</h1>
-                    <p class="text-content">We explored old and new areas for implementing bacterial light bulbs: ambient lights and street illumination. We contacted Transport for London and established a conversation around what criteria such a new technology would need to meet to be deployed as street lamps on London’s roads. We gained relevant information that then helped tailor our mathematical modelling and entrepreneurship. Our conversation with Teresa van Dongen, who designed a bacterial ambient light, revealed what is useful for designers who start using synthetic biology.</p>
 
-                    <p class="text-content">Submit your ideas to others for verification and feedback.</p>
-                </div>
-            </div>
-
-            <!-- ARUP -->
-            <div class="row">
-                <div class="text-section col-sm-7">
-                    <h1 class="title">ARUP - the construction colossal</h1>
-                    <p class="text-content-duo HP-intros">How can the construction industry overcome the depletion of raw materials, the increasing need to create sustainable buildings and the need for rapid structure building in the case of natural disasters?</p>
-                    <p class="text-content-duo">To explore how our optogenetics application can provide solutions in the area of construction, we contacted ARUP – one of the biggest construction companies in the world.</p>
-
-                    <p class="text-content-duo">During the meeting, we discussed the science and the potential for our Barchitecture application. At the end, ARUP proposed that they could give 50 hours of pro-bono consulting to develop a more concrete design for Barchitecture. We then produced a concise document that explains in detail the aims of the project and the nature of the collaboration. Given the nature of big companies, time was an issue in taking the project to a design phase where sketches would be built.</p>
-
-                    <p class="text-content-duo">Here is the document, from which future iGEM teams can see a way of tailoring documents to model their interactions with industry stakeholders.</p>
-
-                </div>
-
-                <div class="picture-section-right col-sm-4">
-                    <img src="assets/HP-arup.jpg" class="image-content-here">
-                </div>
-
-            </div>
-
-            <!-- EUROPEAN SPACE AGENCY -->
+            &lt;!&ndash; EUROPEAN SPACE AGENCY &ndash;&gt;
             <div id="space" class="row">
                 <div class="text-section">
                     <h1 class="title">European Space Agency</h1>
@@ -292,7 +497,7 @@
                 </div>
             </div>
 
-            <!-- UK MEET-UP -->
+            &lt;!&ndash; UK MEET-UP &ndash;&gt;
             <div id="meetup" class="row">
                 <div class="text-section">
                     <h1 class="title">UK iGEM 2017</h1>
@@ -302,7 +507,7 @@
 
                 </div>
             </div>
-
+-->
 
         </div>
 
