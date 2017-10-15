@@ -207,7 +207,9 @@
                 </div>
             </div>
 
-            <div class="text-section" style="border: none; padding-top:60px">
+            <div class="text-section" style="border: none; padding-top: 60px">
+
+
                <h2 class="title" style="padding-top: 5px">Model Aims</h2>
                 <p class="text-content"> 1. Visually represent cell adhesion</p>
                 <p class="text-content"> 2. Combination of gene expression kinetics and cellular automata: For spatial analysis</p>
@@ -626,13 +628,13 @@
 
             <div class="text-content-duo col-sm-10" style="border: none">
                 <h2 class="title">How did we adapt the Game of Life? </h2>
-                <p class="text-content" style="max-width: 100%">Similar to <a class="text-hyperlink" href="glossary_o.html"> Conway's Game of Life,</a> we are representing the cells on a 2D grid so when running the model,
+                <p class="text-content" style="max-width: 100%">Similar to <a  class="text-hyperlink" href="glossary_o.html"> Conway's Game of Life,</a> we are representing the cells on a 2D grid so when running the model,
                     the cells are constantly updated over a defined period of time.
                     In the GOLIT model the cells can either be in the “bound” or “unbound” state. Our game requires the user to define the state of all the cells on the grid
                     and update the grid according to a set of rules for each time point. The state of a cell at a particular
                     time point depends on the the state of its neighboring cells as well as the concentration of SpyTag/
                     SpyCatcher expressed on the surface of the target cell.
-                    <p class="text-content" style="max-width: 100%"> The rules below assign probabilities of one cell becoming "bound" depending on the
+                    <p class="text-content"> rules below assign probabilities of one cell becoming "bound" depending on the
                     number of 'bound' neighbors surrounding it.</p>
 
                 <h2 class="subtitle" style="padding-bottom: 20px">Rules of the Game of LIT </h2>
@@ -692,19 +694,20 @@
                     <li style="margin-left: 40px"> The duration of each generation</li>
                 </ul>
 
-                <h2 class="text-hyperlink" style="margin-top: 5px!important; margin-left:80px!important; padding-bottom:0!important"><a href="https://github.com/LITiGEM/Simulation/tree/master/Game%20of%20LIT">Click here to check out our code on Github!</a></h2>
-                <h1 class="title" style="padding-top: 0!important;">Results</h1>
+                <h2 class="text-hyperlink" style="margin-top: 20px; margin-left:150px!important"><a href="https://github.com/LITiGEM/Simulation/tree/master/Game%20of%20LIT">Click here to check out our code on Github!</a></h2>
+                <h2 class="title">Results</h2>
                 <p class="text-content"> We ran the GOLIT model for light intensities 0W/cm<sup>2</sup>, 18W/cm<sup>2</sup>, 35W/cm<sup>2</sup>,
                     53W/cm<sup>2</sup>, and 70W/cm<sup>2</sup>, i.e. the same values tested in the intimin expression model (LEGIT).
                     For each light intensity tested, we plotted the number of cells vs. time points in order to determine the maximum amount
-                    of adhesion that was accomplished/feasible for each condition evaluated.</p>
+                    of adhesion that was accomplished/feasible for each condition evaluated.
+                    <br>
                     <ul class="text-content">Setting up the conditions for the game:
                     <li style="margin-left: 40px"> Dimensions of the 2D grid: 50x50 matrix</li>
                     <li style="margin-left: 40px"> Evaluate the adhesion of cells for 15 generations</li>
                     <li style="margin-left: 40px"> Initially at time, t=0, no cells are in the "bound" state </li>
                     <li style="margin-left: 40px"> Black cells represent "bound" cells and white cells are "unbound" cells</li>
                     </ul>
-
+                 </p>
                 <div class="border">
                     <img src="../assets/GOLIT/S_0plot.jpg" class="image-content-graphs" style="width: 320px; height: 300px;margin-left:0!important; padding-left:2px!important;padding-right:0">
                     <img src="../assets/GOLIT/S_0grid.jpg" class="image-content-graphs" style="width: 330px; height: 300px; margin-right: 0!important; padding-right:2px!important; padding-left: 1px">
@@ -798,13 +801,15 @@
                     <p class="text-figure" style="padding-top: 0px; padding-left:20px; max-width: 100%!important">Figure 6: shows the number of aggregated cells after 80 generations for 18W/cm<sup>2</sup>,
                         which we identified as the light intensity giving the highest rate of cell aggregation </p>.
                 </div>
+
+
             </div>
 
             <div class="text-section">
                 <h1 class="title">Making the Model smart: incorporating Artificial Intelligence</h1>
                 <p class="text-content"><b>Aim:</b> Optimize the initial light distribution pattern on the grid to allow for the
                     fastest rate of cell aggregation.</p>
-                <p class="text-content" style="padding-bottom: 0">We decided to upgrade our model by incorporating artificial intelligence, more particularly a
+                <p class="text-content">We decided to upgrade our model by incorporating artificial intelligence, more particularly a
                     <a href="glossary_o.html">Genetic Algorithm (GA)</a> . Genetic Algorithms are a type of subsymbolic artificial agent. Essentially, they adopt the
                     principles of Darwinian evolution to tackle the challenge of parameter optimization.
                     <br>In the context of GOLIT we are applying a genetic algorithm to optimize the positions at which light should be shown onto an empty grid,
@@ -815,9 +820,10 @@
                     probabilities. The genetic algorithm selects the “best agent”, i.e. the “agent” showing the pattern
                     that will allow cells to aggregate fastest and therefore allow for the most efficient cell aggregation.</p>
 
-                <h2 class="text-hyperlink" style="margin-left:70px!important; padding-top:0; margin-top:20px!important"><a href="https://github.com/LITiGEM/Simulation/tree/master/Game%20of%20LIT/LIT"> Click here to access Github</a></h2>
+                <h2 class="text-hyperlink" style="margin-left:130px!important;"><a href="https://github.com/LITiGEM/Simulation/tree/master/Game%20of%20LIT/LIT"> Click here to access Github</a></h2>
 
-                <h1 class="title" style="padding-top:0!important">How does it work?</h1>
+
+                <h1 class="title">How does it work?</h1>
 
                 <div class="picture-section-left" style=" height:105px; border:none; max-width: 100%">
                     <img src="../assets/GOLIT/dark.png" class="image-content-graphs" style="width: 260px; height:300px; padding-left: 0;padding-right:2px; margin-left:80px">
