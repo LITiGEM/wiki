@@ -36,7 +36,7 @@ body {
 .navy {
     display: block;
     list-style-type: none;
-    margin: 3% 0 1% 18%;
+    margin: 4% 0 1% 18%;
     padding: 0 0 2% 0;
     z-index: 6;
 }
@@ -171,6 +171,14 @@ body {
     width:120px;
 }
 
+
+
+.logo-top {
+    height:120px !important;
+    width:120px;
+    margin:0 0 0 5%;
+    float:left;
+}
 /* ----------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------*/
@@ -179,6 +187,7 @@ body {
 /* for the li elements in the side bar*/
 .side-link {
     font-size: 16px;
+    font-family: "Open Sans";
 }
 
 /* for the text inside*/
@@ -294,6 +303,16 @@ body {
     margin:0 !important;
 }
 
+.text-content-new {
+    position:relative;
+    max-width:97%;
+    font-size: 20px;
+    text-align: justify;
+    font-family: "Open Sans";
+    padding: 2% 3% 2% 15%;
+    margin:0 !important;
+}
+
 /* For any links that we might have in these p elements */
 .text-content a {
     color: inherit;
@@ -336,7 +355,8 @@ body {
     position:relative;
     max-width:97%;
     font-size: 18px;
-    font-family: "Crimson Text";
+    text-align: justify;
+    font-family: "Open Sans";
     padding: 2% 3% 2% 15%;
     margin:0 !important;
 }
@@ -358,7 +378,7 @@ body {
 /* ----------------------------------------------------------------*/
 /* this is for ul elements where we want to put content */
 .list-section {
-    list-style-type: circle;
+    list-style-type: none;
     position:relative;
     max-width:80%;
     padding: 2% 3% 2% 18%;
@@ -369,6 +389,7 @@ body {
 .list-item-content {
     font-family: "Crimson Text";
     font-size: 18px;
+    padding:3% 0 0 0;
 }
 
 /* ----------------------------------------------------------------*/
@@ -391,6 +412,65 @@ body {
     width:120px;
     margin: 4% 3% 0 0;
     border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------------------------------------------------*/
+                /* THE NEW CLASSES that we are using*/
+/* ----------------------------------------------------------------*/
+.overlay {
+    position:absolute;
+    margin:5% 0 5% 0;
+    height:auto;
+    width:95%;
+    top:0;
+    background-color: rgba(47, 48, 52, 0.55);
+}
+
+.overlay-buttons {
+    position:absolute;
+    bottom:3.2%;
+    right:5%;
+    border-color: white;
+}
+
+.HP-title {
+    font-family: Futura;
+    color: rgb(255, 224, 255);
+    text-align: center;
+    padding: 1% 1% 1% 1%;
+    font-size: 24px;
+
+}
+
+.HP-description {
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    padding: 10% 5% 1% 5%;
+    font-weight: 300;
+    font-size: 19px;
+
+}
+
+.descriptions {
+    position:absolute;
+    margin:5% 0 5% 0;
+    height:50%;
+    width:95%;
+    display:none;
+    bottom:0;
+    background-color: rgba(47, 48, 52, 0.67);
+}
+
+.infos {
+    font-size: 30px;
+    color: #23bfdc;
+}
+
+.cols {
+    padding: 0 0 0 0 !important;
+    margin: 1%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 

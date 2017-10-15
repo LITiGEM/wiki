@@ -81,12 +81,20 @@
                 }
             }
 
-            $("#show1").click(function(){
+            $("#button-museum").click(function(){
+                $("#hidden-museum").slideToggle("slow");
+            });
+
+            $("#button-meetup").click(function(){
+                $("#hidden-meetup").slideToggle("slow");
+            });
+
+            $("#button-summer").click(function(){
                 $("#hidden-summer").slideToggle("slow");
             });
 
-            $("#show2").click(function(){
-                $("#hidden-wellcome").slideToggle("slow");
+            $("#button-smart").click(function(){
+                $("#hidden-smart").slideToggle("slow");
             });
 
         });
@@ -95,21 +103,38 @@
 
 <style>
     .image-content-here {
-        height:300px;
-        width:300px;
-        border-radius: 50%;
+        height:100%;
+        width:100%;
+        margin:0 0 0 0;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
-    #special-image-here-1 {
-        height:320px;
-        width:320px;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    .infos-here {
+        font-size: 40px;
+        color: black;
     }
 
-    #hidden-summer, #hidden-wellcome {
+    #button-museum, #button-meetup, #button-summer,#button-smart {
+        margin:5% 0 0 50%;
+        border: none;
+    }
+
+    .overlay-here {
+        top:0% !important;
+        margin-top: 0 !important;
+        width:100%;
+    }
+
+    .overlay-buttons-here {
+        right: 42.5% !important;
+        background-color: transparent;
+        border:none;
+    }
+
+    #hidden-summer, #hidden-museum,#hidden-smart {
         display:none;
+        background-color: rgba(165, 165, 165, 0.11);
+        margin:0 0 0 7%;
     }
 
 </style>
@@ -118,6 +143,9 @@
 
 <div class="container-fluid">
     <div id="top" class="row">
+
+
+        <img src="assets/logo-navbar.png" class="logo-top">
 
         <ul class="navy">
             <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
@@ -131,24 +159,11 @@
                 </ul>
             </li>
 
-            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
-                <ul class="navy-hidden">
-                    <li><a href="#" class="dropped">Protocols</a></li>
-                    <li><a href="#" class="dropped">Safety</a></li>
-                    <li><a href="#" class="dropped">Stuff</a></li>
-                </ul>
-            </li>
-            </li>
-
-            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
+            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Overview</a></li>
-                    <li><a href="#" class="dropped">Product</a></li>
-                    <li><a href="#" class="dropped">IP</a></li>
-                    <li><a href="#" class="dropped">Business Environment</a></li>
-                    <li><a href="#" class="dropped">Marketing</a></li>
-                    <li><a href="#" class="dropped">Management</a></li>
-                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
+                    <li><a href="#" class="dropped">Public Engagement</a></li>
+                    <li><a href="#" class="dropped">Integrated Practices</a></li>
                 </ul>
             </li>
 
@@ -163,22 +178,26 @@
                 </ul>
             </li>
 
-            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
+            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Overview</a></li>
-                    <li><a href="#" class="dropped">Public Engagement</a></li>
-                    <li><a href="#" class="dropped">Integrated Practices</a></li>
+                    <li><a href="#" class="dropped">Product</a></li>
+                    <li><a href="#" class="dropped">IP</a></li>
+                    <li><a href="#" class="dropped">Business Environment</a></li>
+                    <li><a href="#" class="dropped">Marketing</a></li>
+                    <li><a href="#" class="dropped">Management</a></li>
+                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
                 </ul>
             </li>
 
-            <li id="drop2" class="navy-link"><a href="#about">JUDGING CRITERIA</a>
+
+            <li id="drop2" class="navy-link"><a href="#about">MEDALS</a>
                 <ul class="navy-hidden">
                     <li><a href="#" class="dropped">Bronze</a></li>
                     <li><a href="#" class="dropped">Silver</a></li>
                     <li><a href="#" class="dropped">Gold</a></li>
                 </ul>
             </li>
-
 
             <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
                 <ul class="navy-hidden">
@@ -187,13 +206,21 @@
                     <li><a href="#" class="dropped">Attributions</a></li>
                 </ul></li>
 
+            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Protocols</a></li>
+                    <li><a href="#" class="dropped">Safety</a></li>
+                    <li><a href="#" class="dropped">Stuff</a></li>
+                </ul>
+            </li>
+
         </ul>
+
     </div>
 
 </div>
 
 <div class="container-fluid">
-    <div class="row">
 
         <!-- The side navbar -->
         <nav id="side-index" class="col-sm-2">
@@ -209,56 +236,135 @@
         <!-- Content -->
         <div style="float: right !important" class="col-sm-10">
 
-            <!-- SCIENCE MUSEUM -->
-            <div id="museum" class="row">
+            <!-- Overview -->
+            <div class="row">
 
-                <div style="margin-top: 20px" class="text-section col-sm-7">
+                <!-- Science Museum-->
+                <div style="box-shadow: none !important" class="col-sm-4 cols">
 
-                    <h1 class="title">Where is science communication headed?</h1>
+                    <div style="width:100%;" class="overlay overlay-here">
+                        <p style="font-size: 19px" class="HP-title">The public danced to get from cells to cities</p>
+                    </div>
 
-                    <p class="text-content-duo HP-intros">We asked ourselves a question: as an emerging field and not void of controversies, how will synthetic biology engage with people in the future? Our focus was on initial audience engagement to see how gamification can familiarize people with synthetic biology and excite them about how they could contribute.</p>
+                    <img src="assets/HP-ScienceMuseum-1.jpg" class="image-content-here">
 
-                    <p class="text-content-duo">We tested our assumption by observing the public perception of our attempt at gamification and assessed our idea through principles laid out by Seymour Papert and feedback from the public.</p>
+                    <button id="sciencem" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><a href="#aesthetics">
+                        <span style="color:white" class="glyphicon glyphicon-chevron-down infos-here"></span></a>
+                    </button>
+                </div>
 
-                    <p class="text-content-duo">We took people inside E. Coli cells by combining Dance Dance Revolution with transcription and turned translation into an arcade game. Held at London Science Museum’s Late event, we had the chance to listen to some of the 2000 attendees.</p>
+                <!-- Meet-up-->
+                <div class="col-sm-4 cols">
 
-                    <p class="text-content-duo"><a href="#">Here you can see our various prototypes, analysis and feedback.</a></p>
+                    <div class="overlay overlay-here">
+                        <p style="font-size:18px" class="HP-title">Debates at the UK Meet-up explored how we do synbio</p>
+                    </div>
+
+                    <img src="assets/HP-Meetup.jpg" class="image-content-here">
+
+                    <button id="sci" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
+                        <span style="color:white" class="glyphicon glyphicon-chevron-down infos-here"></span>
+                    </button>
+                </div>
+
+                <!-- Wellcome -->
+                <div style="margin:1% 1% 0 0 !important;" class="col-sm-3 cols">
+
+                    <div style="width:100%; top:0 !important; margin-top: 0 !important" class="overlay overlay-here">
+                        <p style="font-size: 19px" class="HP-title">The European Space Agency shaped our Gold BioBrick</p>
+                    </div>
+
+                    <img src="assets/HP-Wellcome.jpeg" class="image-content-here">
+
+                    <button style="right: 40% !important" id="sc" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
+                        <span  class="glyphicon glyphicon-chevron-down infos-here"></span>
+                    </button>
+
+                </div>
+
+                <!-- Smart Dinner -->
+                <div style="margin-top:2%" class="col-sm-4 cols">
+
+                    <div style="width:100%; top:0 !important; margin-top: 0 !important;" class="overlay overlay-here">
+                        <p style="font-size: 19px" class="HP-title">Transport for London guided us on our bulb prototype</p>
+                    </div>
+
+                    <img src="assets/HP-smart.png" class="image-content-here">
+
+                    <button style="right: 40% !important" id="s" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
+                        <span  class="glyphicon glyphicon-chevron-down infos-here"></span>
+                    </button>
+
+                </div>
+
+                <!-- Summer-->
+                <div class="col-sm-3 cols">
+
+                    <div class="overlay overlay-here">
+                        <p style="font-size: 18px" class="HP-title">Kids at UCL's summer school want to genetically modify mules</p>
+                    </div>
+
+                    <img src="assets/HP-summersc.JPG" class="image-content-here">
+
+                    <button id="scie" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
+                        <span style="color:white" class="glyphicon glyphicon-chevron-down infos-here"></span>
+                    </button>
 
                 </div>
 
 
+
+            </div>
+
+            <!-- Science Museum-->
+            <div id="museum" class="row">
+
+                <div style="margin-top: 20px" class="text-section col-sm-7">
+
+                    <h1 class="title">Dance, bacteria, Dance!</h1>
+
+                    <p class="text-content-new">We took people inside E. Coli cells by combining Dance Dance Revolution with transcription and turned translation into an arcade game. Held at London Science Museum’s Late event, we had the chance to listen to some of the 2000 attendees.</p>
+
+                    <button id="button-museum" type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+
+                </div>
+
                 <div style="margin-top: 20px" class="picture-section-right col-sm-4">
-                    <img src="assets/HP-ScienceMuseum-4.jpg" id="special-image-here-1">
+                    <img src="assets/HP-ScienceMuseum-2.jpg" class="image-content-here">
                 </div>
 
 
             </div>
 
-            <!-- SUMMER SCHOOL-->
+            <!-- Summer School-->
             <div id="discussion" class="row">
 
-                <div class="text-section col-sm-7">
-
-                    <h1 class="title">Facilitating discussion in synthetic biology</h1>
-
-                    <p class="text-content-duo HP-intros">We tested the technique of discussion facilitation in a medium-scale event. Based on a team member’s experience with the guidelines used in management consulting by companies such as Deloitte, we organised the session as an introduction to synthetic biology and our biological light switches and their applications. The lucky ones were adolescents taking part in the UCL Sutton Trust Biosciences Summer School.</p>
-
-                    <p id="show1" class="text-content-duo HP-intros">Click here to find out more about what we've learnt <span class="glyphicon glyphicon-chevron-down"></span></p>
-                </div>
-
-                <div class="picture-section-right col-sm-4">
+                <div class="picture-section-left col-sm-4">
                     <img src="assets/HP-summersc.JPG" class="image-content-here">
                 </div>
 
 
+                <div class="text-section col-sm-7">
+
+                    <h1 class="title">How 17-year olds want to make mules make love to each other</h1>
+
+                    <p class="text-content-new">We tested the technique of discussion facilitation in a medium-scale event. Based on a team member’s experience with the guidelines used in management consulting by companies such as Deloitte, we organised the session as an introduction to synthetic biology and our biological light switches and their applications. The lucky ones were adolescents taking part in the UCL Sutton Trust Biosciences Summer School.</p>
+
+                    <button id="button-summer" type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                </div>
+
+
+
                 <div id="hidden-summer" class="text-section col-sm-11">
-                    <p class="text-content">Our introduction of the project and synthetic biology focused on asking students what their knowledge about the field is and then built upon this. For example, we highlighted the need for interdisciplinary work and then asked why that might be important. We discussed examples of how mathematical modelling can be combined with wet lab experiments and then entrepreneurship.</p>
+                    <p class="text-content-new">Our introduction of the project and synthetic biology focused on asking students what their knowledge about the field is and then built upon this. For example, we highlighted the need for interdisciplinary work and then asked why that might be important. We discussed examples of how mathematical modelling can be combined with wet lab experiments and then entrepreneurship.</p>
 
-                    <p class="text-content">What worked well was having the students diverge and talk among themselves about given points and then converge back to share everyone’s opinion and then summarise conclusion or take-away points along the way.</p>
+                    <p class="text-content-new">What worked well was having the students diverge and talk among themselves about given points and then converge back to share everyone’s opinion and then summarise conclusion or take-away points along the way.</p>
 
-                    <p class="text-content">The most interesting example came in a discussion initiated by a student: ‘We should make mules fertile, as it can benefit agriculture’.</p>
+                    <p class="text-content-new">The most interesting example came in a discussion initiated by a student: ‘We should make mules fertile, as it can benefit agriculture’.</p>
 
-                    <p class="text-content">We went through 4 or 5 turns of diverging and converging to cover points such as:</p>
+                    <p class="text-content-new">We went through 4 or 5 turns of diverging and converging to cover points such as:</p>
 
                     <ul class="list-section">
                         <li class="list-item-content">-	what are the real-life trade-offs of modifying mules in an agricultural context?</li>
@@ -272,7 +378,43 @@
                 </div>
             </div>
 
-            <!-- WELLCOME TRUST-->
+
+            <!-- Smart Dinner-->
+            <div id="dinner" class="row">
+
+                <div class="text-section col-sm-7">
+
+                    <h1 class="title">Smart Dinner</h1>
+
+                    <p class="text-content-new">Together with EatOffTheMenu, we organized a dinner for 8-10 people, to have a meal and discuss synthetic biology freely.</p>
+
+                    <button id="button-smart" type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                </div>
+
+
+                <div id="hidden-smart" class="col-sm-10">
+
+                    <p class="text-content-new">We wanted to explore public engagement in a more intimate and closed setting, where we would have enough time to dedicate to talking about synthetic biology and our project.</p>
+
+                    <p class="text-content-new">Future iGEM teams might want to explore organising small events that while not reaching many people, builds useful connections and relationships with members of the public.</p>
+
+                </div>
+
+            </div>
+    </div>
+
+</div>
+
+<!--            &lt;!&ndash; SCIENCE MUSEUM &ndash;&gt;
+
+
+
+
+            &lt;!&ndash; SUMMER SCHOOL&ndash;&gt;
+
+
+            &lt;!&ndash; WELLCOME TRUST&ndash;&gt;
             <div id="welcome" class="row">
                 <div class="text-section col-sm-7">
 
@@ -305,25 +447,15 @@
 
             </div>
 
-            <!-- DINNER -->
-            <div id="dinner" class="row">
-                <div class="text-section">
-                    <h1 class="title">Smart Dinner</h1>
+            &lt;!&ndash; DINNER &ndash;&gt;
 
-                    <p class="text-content">We wanted to explore public engagement in a more intimate and closed setting, where we would have enough time to dedicate to talking about synthetic biology and our project.</p>
-
-                    <p class="text-content">We found Smart Dinners, a weekly event held in London, where between 8-10 people attend and have a meal, discussing various topics. After getting in touch, we picked a week to talk about synthetic biology and engage with the participants.</p>
-
-                    <p class="text-content">Future iGEM teams might want to explore organising small events that while not reaching many people, builds useful connections and relationships with members of the public.</p>
-                </div>
-            </div>
 
         </div>
 
         <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
     </div>
-</div>
+</div> -->
 
 </body>
 
