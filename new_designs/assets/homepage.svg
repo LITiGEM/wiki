@@ -3,11 +3,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="960px" height="560px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
-<g id="BG" display="none">
-	
-		<image display="inline" overflow="visible" opacity="0.2" enable-background="new    " width="1920" height="1080" xlink:href="FAB6DA36.jpg"  transform="matrix(0.6216 0.1642 -0.1642 0.6216 -100.5955 -250.052)">
-	</image>
-</g>
 <g id="Bases">
 	<path fill="#23B5FE" d="M639.427,173.503c-2.896,2.704-7.354,2.634-9.957-0.156l-63.056-67.544
 		c-2.605-2.789-2.369-7.241,0.526-9.945l0,0c2.896-2.702,7.354-2.633,9.957,0.156l63.057,67.544
@@ -76,7 +71,7 @@
 	<path fill="#9E37F9" d="M825.337,11.977c-2.889,2.71-6.872,3.157-8.901,0.998l-49.123-52.322c-2.029-2.16-1.334-6.109,1.554-8.822
 		l0,0c2.891-2.711,6.875-3.157,8.902-0.996l49.126,52.32C828.922,5.317,828.224,9.265,825.337,11.977L825.337,11.977z"/>
 </g>
-<g id="DNA_Circles_Kurz" opacity="0.5">
+<g id="DNA_Big_Circles" opacity="0.5">
 	<circle fill="#FFD788" cx="773.341" cy="66.493" r="13.25"/>
 	<circle fill="#FFD788" cx="773.722" cy="123.981" r="13.25"/>
 	<circle fill="#FFD788" cx="775.156" cy="154.03" r="13.25"/>
@@ -164,7 +159,7 @@
 	<circle fill="#FFD788" cx="722.538" cy="41.729" r="13.25"/>
 	<circle fill="#FFD788" cx="740.334" cy="47.209" r="14.687"/>
 </g>
-<g id="Medium_Sized" opacity="0.9">
+<g id="DNA_Medium_Circles" opacity="0.9">
 	<circle fill="#B48DFF" cx="604.774" cy="60.572" r="10"/>
 	<circle fill="#B48DFF" cx="571.502" cy="89.982" r="10"/>
 	<circle fill="#B48DFF" cx="552.887" cy="113.467" r="10"/>
@@ -257,7 +252,7 @@
 	<circle fill="#B48DFF" cx="925.373" cy="31.948" r="10"/>
 	<circle fill="#B48DFF" cx="940.623" cy="10.002" r="10"/>
 </g>
-<g id="Smaller_Layer">
+<g id="DNA_Small_Circles">
 	<circle fill="#8AC7FF" cx="779.678" cy="88.421" r="6.75"/>
 	<circle fill="#8AC7FF" cx="772.578" cy="106.298" r="6.75"/>
 	<circle fill="#8AC7FF" cx="764.503" cy="123.955" r="6.75"/>

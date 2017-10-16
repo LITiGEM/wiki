@@ -128,6 +128,11 @@
         font-size: 30px;
         color: black;
     }
+
+    .infos-hidden-here {
+        font-size: 40px;
+        color: black;
+    }
     .side-images {
         height:100px;
         width:100px;
@@ -147,7 +152,8 @@
     .list-item-results {
         font-family: "Noto Sans";
         font-size: 16px;
-        padding:3% 0 0 0;
+        text-align: center;
+        padding:3% 2% 2% 2%;
     }
 
     .applications-text {
@@ -333,17 +339,22 @@
 
 
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-2">
+
                     <img src="assets/icon-barc.png" class="summary-images">
+
+                    <button type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><a href="#">
+                        <span class="glyphicon glyphicon-chevron-down infos-hidden-here"></span></a>
+                    </button>
                 </div>
 
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
 
                     <h1 class="title">Barchitecture Results</h1>
                     <ul class="list-results">
-                        <li class="list-item-results">Designed biobricks and experiments for 2 systems of how cells bind to each other to form 3D upon light exposure</li>
-                        <li class="list-item-results">Performed experiments to test blue-light activation for the transcription of necessary proteins</li>
-                        <li class="list-item-results">Modelled the expression of adhesion proteins on E. Coli cell surface</li>
-                        <li class="list-item-results">Modelled cell adhesion with a cellular automaton for better visualisation</li>
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Designed biobricks and experiments for 2 systems of how cells bind to each other to form 3D upon light exposure</li>
+                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Performed experiments to test blue-light activation for the transcription of necessary proteins</li>
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Modelled the expression of adhesion proteins on E. Coli cell surface</li>
+                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Modelled cell adhesion with a cellular automaton for better visualisation</li>
                     </ul>
                 </div>
 
@@ -433,7 +444,6 @@
 
             </div>
 
-
             <!-- Tissue printing -->
             <div class="row">
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
@@ -442,17 +452,23 @@
 
 
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-2">
+
                     <img src="assets/icon-organ.png" class="summary-images">
+
+                    <button type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><a href="#">
+                        <span class="glyphicon glyphicon-chevron-down infos-hidden-here"></span></a>
+                    </button>
+
                 </div>
 
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
 
                     <h1 class="title">Organ printing Results</h1>
                     <ul class="list-results">
-                        <li class="list-item-results">Designed biobricks and experiments for 2 systems of how cells bind to each other to form 3D upon light exposure</li>
-                        <li class="list-item-results">Performed experiments to test blue-light activation for the transcription of necessary proteins</li>
-                        <li class="list-item-results">Modelled the expression of adhesion proteins on E. Coli cell surface</li>
-                        <li class="list-item-results">Modelled cell adhesion with a cellular automaton for better visualisation</li>
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Designed biobricks and experiments for 2 systems of how cells bind to each other to form 3D upon light exposure</li>
+                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Performed experiments to test blue-light activation for the transcription of necessary proteins</li>
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Modelled the expression of adhesion proteins on E. Coli cell surface</li>
+                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Modelled cell adhesion with a cellular automaton for better visualisation</li>
                     </ul>
                 </div>
 
@@ -463,23 +479,27 @@
 
             <!-- Light bulb -->
             <div class="row">
+
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
-                    <p class="summary-here">Barchitecture is a 3D printing technology based on 2 suspended colonies of E. Coli cells that display on their surface one of the 2 binding partners that form a strong covalent bond: SpyTag or SpyCatcher. By using light in the form of lasers, one ensures that only in the desired location in the cell population covalent bonds will be formed between bacteria. Once a 3D structure is formed, light induces the production of PHB, which accumulates in the form of granules inside cells. Cells then use a type-2 system to secrete the PHB, with the granules being cross-linked into a solid shape by a photoinitiator.</p>
+                    <p class="summary-here">Our bacterial bulb uses E. Coli to luminescence only during night time and cyanobacteria to provide nutrients for the bioluminescent bacteria. We incorporate the Lux operon into E. coli and suppress its activity with the EL222 photosensitive protein. We use an existent glucose secretion system for the cyanobacteria (reference).</p>
                 </div>
 
-
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-2">
+
                     <img src="assets/icon-bulb.png" class="summary-images">
+
+                    <button type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><a href="#">
+                        <span class="glyphicon glyphicon-chevron-down infos-hidden-here"></span></a>
+                    </button>
                 </div>
 
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
 
                     <h1 class="title">Bacterial bulb Results</h1>
                     <ul class="list-results">
-                        <li class="list-item-results">Designed biobricks and experiments for 2 systems of how cells bind to each other to form 3D upon light exposure</li>
-                        <li class="list-item-results">Performed experiments to test blue-light activation for the transcription of necessary proteins</li>
-                        <li class="list-item-results">Modelled the expression of adhesion proteins on E. Coli cell surface</li>
-                        <li class="list-item-results">Modelled cell adhesion with a cellular automaton for better visualisation</li>
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Designed the bulb with a light-induced transcriptional control of bioluminescence</li>
+                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Modelled the dimensions necessary for the bulb to accommodate cyanobacteria</li>
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">3D printed a prototype for the bulb after integrating designs from artists</li>
                     </ul>
                 </div>
 

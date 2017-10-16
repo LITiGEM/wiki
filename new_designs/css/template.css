@@ -187,7 +187,7 @@ body {
 /* for the li elements in the side bar*/
 .side-link {
     font-size: 16px;
-    font-family: "Open Sans";
+    font-family: "Josefin Sans";
 }
 
 /* for the text inside*/
@@ -250,7 +250,8 @@ body {
     font-family: "Noto Sans";
     font-size: 23px;
     font-weight: 600;
-    padding: 5% 1% 1% 15%!important;
+
+    padding: 5% 1% 1% 10% !important;
     margin:0;
     color: rgba(204, 0, 53, 0.69);
     text-decoration: none;
@@ -413,23 +414,20 @@ body {
 /* ----------------------------------------------------------------*/
 .overlay {
     position:absolute;
-    margin:5% 0 5% 0;
+    margin:0 0 5% 0;
     height:auto;
-    width:95%;
+    width:99.9%;
     top:0;
     background-color: rgba(47, 48, 52, 0.55);
 }
 
 .overlay-buttons {
     position:absolute;
-    bottom:3.2%;
-    right:5%;
-    border-color: white;
 }
 
 .HP-title {
-    font-family: Futura;
-    color: rgb(255, 224, 255);
+    font-family: Noto Sans;
+    color: rgb(248, 253, 255);
     text-align: center;
     padding: 1% 1% 1% 1%;
     font-size: 24px;
@@ -448,17 +446,17 @@ body {
 
 .descriptions {
     position:absolute;
-    margin:5% 0 5% 0;
+    margin:5% 0 0 0;
     height:50%;
-    width:95%;
+    width:99.9%;
     display:none;
     bottom:0;
     background-color: rgba(47, 48, 52, 0.67);
 }
 
 .infos {
-    font-size: 30px;
-    color: #23bfdc;
+    font-size: 40px;
+    color: #ffffff;
 }
 
 .cols {

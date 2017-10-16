@@ -24,77 +24,35 @@
 
         $(document).ready(function(){
 
-            $("#wellcome").click(function(){
-
-                if ($("#wellcome-text").css('display') === 'none') {
-                    $("#wellcome-text").show();
-
-                } else {
-                    $("#wellcome-text").hide();
-                }
+            $("#wellcome").mouseover(function(){
+                $("#wellcome-text").show();
             });
 
-            $("#summer").click(function(){
-
-                if ($("#summer-text").css('display') === 'none') {
-                    $("#summer-text").show();
-
-                } else {
-                    $("#summer-text").hide();
-                }
+            $("#summer").mouseover(function(){
+                $("#summer-text").show();
             });
 
-            $("#smartd").click(function(){
-
-                if ($("#smartd-text").css('display') === 'none') {
-                    $("#smartd-text").show();
-
-                } else {
-                    $("#smartd-text").hide();
-                }
+            $("#smartd").mouseover(function(){
+                $("#smartd-text").show();
             });
 
-            $("#sciencem").click(function(){
-
-                if ($("#sciencem-text").css('display') === 'none') {
-                    $("#sciencem-text").show();
-
-                } else {
-                    $("#sciencem-text").hide();
-                }
+            $("#sciencem").mouseover(function(){
+                $("#sciencem-text").show();
             });
 
 
-            $("#meetup").click(function(){
-
-                if ($("#meetup-text").css('display') === 'none') {
-                    $("#meetup-text").show();
-
-                } else {
-                    $("#meetup-text").hide();
-                }
+            $("#meetup").mouseover(function(){
+                $("#meetup-text").show();
             });
 
 
-            $("#insta").click(function(){
-
-                if ($("#insta-text").css('display') === 'none') {
-                    $("#insta-text").show();
-
-                } else {
-                    $("#insta-text").hide();
-                }
+            $("#insta").mouseover(function(){
+                $("#insta-text").show();
             });
 
 
-            $("#collabs").click(function(){
-
-                if ($("#collabs-text").css('display') === 'none') {
-                    $("#collabs-text").show();
-
-                } else {
-                    $("#collabs-text").hide();
-                }
+            $("#collabs").mouseover(function(){
+                $("#collabs-text").show();
             });
 
         });
@@ -106,24 +64,50 @@
 
     .image-content-here {
         height:50%;
-        width:95%;
-        margin:5% 0 5% 0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width:99.9%;
+        margin:0 !important;
     }
 
     .image-content-here-icons {
         height: 30%;
         width:30%;
-        margin: 5% 5% 0 10%;
+        margin: 15% 5% 0 10%;
         border-radius: 50%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    #meetup:hover .descriptions {
+        display:block;
+    }
+
+    #sciencem:hover .descriptions {
+        display:block;
+    }
+
+    #insta:hover .descriptions {
+        display:block;
+    }
+    #smartd:hover .descriptions {
+        display:block;
+    }
+
+    #summer:hover .descriptions {
+        display:block;
+    }
+
+    #wellcome:hover .descriptions {
+        display:block;
+    }
+
+    #collabs:hover .descriptions {
+        display:block;
     }
 
 </style>
 
 <body data-spy="scroll" data-target="#side-index">
 
-    <div class="container-fluid">
+    <div style="margin:0 !important; padding:0 !important" class="container-fluid">
         <div id="top" class="row">
 
 
@@ -207,53 +191,49 @@
         <!-- The menu for the images-->
         <div class="row">
 
-            <!-- Instagram & Collabs-->
-            <div style="margin: 0 0 0 3%" class="col-sm-3 cols">
 
-                <div>
+       <!--     <div class="col-sm-12">
+                <p class="instruction">Click on the images to find out more</p>
+            </div>-->
+            <!-- Instagram & Collabs-->
+            <div style="margin: 1% 0 0 3%" class="col-sm-3 cols">
+
+                <div id="insta">
                     <img src="assets/insta1.jpg" class="image-content-here">
 
                     <div class="overlay">
                         <p class="HP-title">Light bulb prototyping - Artists save us</p>
                     </div>
 
-                    <div style="top:20%; right:5%; height:27%" id="insta-text" class="descriptions">
+                    <div style="top:22%; height:27%" id="insta-text" class="descriptions">
                         <p style="font-size: 17px" class="HP-description">To make our light-bulb prototype look nice, we asked artists for designs. We reached 78,000 people, got 133 design submissions and developed our final prototype.</p>
                     </div>
 
-                    <button id="insta" style="position:absolute; top:42%; right:5%" type="button" class="btn btn-default btn-sm">
-                        <span class="glyphicon glyphicon-info-sign infos"></span>
-                    </button>
 
                 </div>
 
-
                 <!--Collabs-->
-                <div>
+                <div id="collabs">
 
-                    <div style="top:50%" class="overlay">
+                    <div style="top:55%" class="overlay">
                         <p class="HP-title">How we decided to go to Mars</p>
                     </div>
 
                     <img src="assets/icon-tfl.png" class="image-content-here-icons">
                     <img src="assets/icon-arc.png" class="image-content-here-icons">
-                    <img src="assets/icon-esa.png" class="image-content-here-icons">
-                    <img src="assets/icon-arup.png" class="image-content-here-icons">
-                    <img src="assets/icon-design.png" class="image-content-here-icons">
+                    <img style="margin-bottom: 12%" src="assets/icon-esa.png" class="image-content-here-icons">
+                    <img style="margin-bottom: 12%" src="assets/icon-arup.png" class="image-content-here-icons">
 
                     <div style="height:30%; top:70%" id="collabs-text" class="descriptions">
                         <p style="font-size: 18px" class="HP-description">We developed ideas with the European Space Agency, Transport for London and architects for biobricks to make, entrepreneurship and how to take bacterial architecture to Mars.</p>
                     </div>
 
-                    <button style=" bottom:5%; right:5%" id="collabs" type="button" class="btn btn-default btn-sm">
-                        <span class="glyphicon glyphicon-info-sign infos"></span>
-                    </button>
                 </div>
 
             </div>
 
             <!-- Science Museum-->
-            <div  class="col-sm-4 cols">
+            <div id="sciencem" style="display: flex; align-items: center; justify-content: center" class="col-sm-4 cols">
                 <img src="assets/HP-ScienceMuseum-1.jpg" class="image-content-here">
 
                 <div class="overlay">
@@ -264,14 +244,11 @@
                     <p style="padding: 18% 6% 1% 6%; font-size: 20px" class="HP-description">We designed an interactive journey from DNA to 3D structures made out of bacteria. At London Science Museum’s Late event, 2000 guests played, learnt about our project and gave us feedback.</p>
                 </div>
 
-                <button id="sciencem" type="button" class="btn btn-default btn-sm overlay-buttons">
-                    <span class="glyphicon glyphicon-info-sign infos"></span>
-                </button>
 
             </div>
 
             <!-- Wellcome-->
-            <div class="col-sm-4 cols">
+            <div id="wellcome" style="display: flex; align-items: center; justify-content: center" class="col-sm-4 cols">
                 <img src="assets/HP-Wellcome.jpeg" class="image-content-here">
 
                 <div style="height:auto" class="overlay">
@@ -282,13 +259,10 @@
                     <p class="HP-description">To develop policy for the future of organ printing, we talked to people at the Wellcome Trust Reading room about societal and ethical impacts of light-induced technologies.</p>
                 </div>
 
-                <button id="wellcome" style="bottom:4.5%; right:5%" type="button" class="btn btn-default btn-sm overlay-buttons">
-                    <span class="glyphicon glyphicon-info-sign infos"></span>
-                </button>
             </div>
 
             <!-- Smart Dinner-->
-            <div class="col-sm-4 cols">
+            <div id="smartd" style="display: flex; align-items: center; justify-content: center" class="col-sm-4 cols">
                 <img src="assets/HP-smart.png" class="image-content-here">
 
                 <div style="height:auto" class="overlay">
@@ -299,13 +273,11 @@
                     <p style="font-size: 17px; padding-top: 5%" class="HP-description">EatoffTheMenu organize dinners on topics from AI to Trump politics. We collaborated to bring together 8 people to talk about our LIT project, its safety and whether we should have GMOs on our table.</p>
                 </div>
 
-                <button id="smartd" style="bottom:6.5%; right:5%" type="button" class="btn btn-default btn-sm overlay-buttons">
-                    <span class="glyphicon glyphicon-info-sign infos"></span>
-                </button>
+
             </div>
 
             <!-- Meet-up -->
-            <div style="margin: 0 0 0 10%" class="col-sm-5 cols">
+            <div id="meetup" style="margin: 0 0 0 10%" class="col-sm-5 cols">
 
                 <img src="assets/HP-Meetup.jpg" class="image-content-here">
 
@@ -317,13 +289,10 @@
                     <p style="font-size: 20px" class="HP-description">We organised debates at the UK iGEM meet-up to see how effective they are at revealing answers and producing more questions about synthetic biology.</p>
                 </div>
 
-                <button id="meetup" style="bottom:5.5%; right:5%" type="button" class="btn btn-default btn-sm overlay-buttons">
-                    <span class="glyphicon glyphicon-info-sign infos"></span>
-                </button>
             </div>
 
             <!--Summer school-->
-            <div style="float: right" class="col-sm-5 cols">
+            <div id="summer" style="float: right" class="col-sm-5 cols">
                 <img src="assets/HP-summersc.JPG" class="image-content-here">
 
                 <div style="height:auto" class="overlay">
@@ -334,9 +303,6 @@
                     <p style="font-size: 18px" class="HP-description">We talked to 17-year olds from UCL’s Bio Summer School about the impacts of modifying organisms on the environments they inhabit. The discussion led to modifying mules for agricultural purposes.</p>
                 </div>
 
-                <button id="summer" style="bottom:6%; right:5%" type="button" class="btn btn-default btn-sm overlay-buttons">
-                    <span class="glyphicon glyphicon-info-sign infos"></span>
-                </button>
             </div>
 
 
