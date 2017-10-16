@@ -79,16 +79,117 @@
 <style>
 
     .image-content-here {
-        height:400px;
-        width:400px;
+        margin:20% 0 2% 0;
+        height:70%;
+        width:70%;
+    }
+
+    .summary-images {
+        margin:80% 0 2% 0;
+        height:90%;
+        width:90%;
+    }
+
+    .overlay-buttons-here {
+        position: relative;
+        margin:1% 0 0 30% !important;
+        background-color: transparent;
+        border:none;
+    }
+
+    #description-intro {
+        position:relative;
+        font-size: 30px;
+        text-align: center;
+        font-family: "Josefin Sans";
+        padding: 5% 0 0 15%;
+        margin:0 !important;
+    }
+
+    .summary-here {
+        position:relative;
+        font-size: 15px;
+        font-family: "Noto Sans";
+        padding: 5% 0 0 10%;
+        margin:0 !important;
+    }
+
+    .overlay-text {
+        position:relative;
+        max-width:80%;
+        font-size: 18px;
+        text-align: center;
+        font-family: "Open Sans";
+        padding: 2% 10% 0 0;
+        margin:0 !important;
+    }
+
+    .infos-here {
+        font-size: 30px;
+        color: black;
+    }
+    .side-images {
+        height:100px;
+        width:100px;
+        margin:5% 0 5% 0;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .list-results {
+        list-style-type: none;
+        position:relative;
+        max-width:90%;
+        padding: 2% 3% 2% 2%;
+        margin:0 !important;
+    }
+
+    .list-item-results {
+        font-family: "Noto Sans";
+        font-size: 16px;
+        padding:3% 0 0 0;
+    }
+
+    .applications-text {
+        position:relative;
+        font-size: 20px;
+        text-align: center;
+        font-family: "Noto Sans";
+        padding: 15% 12% 2% 10%;
+        margin:0 !important;
+    }
+
+    #applications-description {
+        position:relative;
+        max-width:97%;
+        font-size: 20px;
+        text-align: justify;
+        font-family: "Noto Sans";
+        padding: 15% 12% 15% 10%;
+        margin:0 !important;
+    }
+
+    .buttons-here {
+        border:none;
+        margin:0 0 5% 35%;
+        background-color: transparent;
+    }
+
+    .application-boxes {
+        border-left:solid 1px rgba(39, 32, 34, 0.16);
+    }
+
+   #hidden-barc, #hidden-organ, #hidden-bulb {
+        display:none;
     }
 </style>
 
 <body data-spy="scroll" data-target="#side-index">
 
-<div class="container-fluid">
-    <div id="top" class="row">
 
+<!-- The top navbar -->
+<div style="margin:0 !important; padding:0 !important" class="container-fluid">
+    <div id="top" class="row">
 
         <img src="assets/logo-navbar.png" class="logo-top">
 
@@ -165,55 +266,228 @@
 
 </div>
 
+
+<!-- Content-->
 <div class="container-fluid">
     <div class="row">
 
         <!-- The side navbar -->
         <nav id="side-index" class="col-sm-2">
             <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#bluelight">Blue light inducible transcription</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Experiment 2</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Experiment 3</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2"><img src="assets/icon-barc.png" class="side-images"><p style="padding-left: 10px">Barchitecture</p></a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3"><img src="assets/icon-bulb.png" class="side-images"><p style="padding-left: 10px">Bacterial bulb</p></a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3"><img src="assets/icon-organ.png" class="side-images"><p style="padding-left: 10px">Organ printing</p></a></li>
             </ul>
         </nav>
 
         <!-- Content-->
-        <div style="float: right !important" class="col-sm-10">
+        <div style=" margin-left: 4%" class="col-sm-9">
 
-            <!-- Blue light experiments-->
-            <div id="bluelight" class="row">
-                <div class="text-section col-sm-7">
+            <!-- Overview -->
+            <div class="row">
 
-                    <h1 class="title">Blue light inducible transcription</h1>
+                <div class="col-sm-10">
+                    <p id="description-intro">Results from our 3 applications that we have developed for optogenetics. All organic.</p>
+                </div>
 
-                    <p class="text-content">As shown in the above graph, only J23151-GFP (positive control) had a significant difference in fluorescence compared to R0040-GFP (negative control) WT cells and the Luria Broth (LB) in both dark and Blue-light conditions. Pblind-GFP had no significantly different fluorescence level compared to the LB baseline, negative control or WT cells in either condition. This is expected, as the EL222 protein is required for blue-light inducible transcriptional activation.  This experiment was performed to corroborate that the promoter has no significant leakage and to demonstrate that GFP cannot be expressed in the absence of EL222. This is of particular interest as the aim of LIT is to demonstrate the versatility and high precision of light control.</p>
+                <!-- Barchitecture -->
+                <div class="col-sm-4">
+                    <img src="assets/icon-barc.png" class="image-content-here">
+
+                    <p class="overlay-text">Applying light switches to create 3D structures</p>
+
+                    <button id="button-barc" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><a href="#aesthetics">
+                        <span class="glyphicon glyphicon-chevron-down infos-here"></span></a>
+                    </button>
 
                 </div>
 
-                <div class="picture-section-right col-sm-4">
-                    <img src="assets/results/results-gfp.png" class="image-content-here">
-                    <p class="text-content-duo">Figure 1. Blue light inducible promoter (Pblind) characterisation. J23151 is a constitutive promoter, R0040 is a TetR repressible promoter (repression inhibited only by the addition of tetracycline), Pblind promoter is a fusion of EL222 (photosensitive transcription factor) binding region and the luxI promoter, where EL222 is only able to dimerize and bind the Pblind promoter upon blue light exposure, where it can then recruit RNAP and drive the transcription of genes downstream. Wild type (WT) 10beta cells were transformed with J23151-GFP (positive control), R0040-GFP (negative control) or Pblind-GFP. All cells were grown overnight at 37°C in darkness or exposed to blue light (465nm) and diluted to OD600=0.6 to record GFP fluorescence. The data represents the mean of 3 biological replicates and 4 technical replicates for each condition. Luria broth (LB) was included as a baseline for the fluorescence. Error bars represent the SD and statistical significance of **** P < 0.0001 was calculated using the Tukey's multiple comparisons test.</p>
+                <!-- Organ Printing-->
+                <div class="col-sm-4">
+                    <img src="assets/icon-organ.png" class="image-content-here">
+                    <p class="overlay-text">Using light to precisely control organ printing</p>
+
+                    <button id="button-organ" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><a href="#aesthetics">
+                        <span class="glyphicon glyphicon-chevron-down infos-here"></span></a>
+                    </button>
+                </div>
+
+                <!-- Light bulb-->
+                <div class="col-sm-4">
+                    <img src="assets/icon-bulb.png" class="image-content-here">
+                    <p class="overlay-text">A bacterial light-bulb controlled through light</p>
+
+                    <button id="button-bulb" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><a href="#aesthetics">
+                        <span class="glyphicon glyphicon-chevron-down infos-here"></span></a>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Barchitecture-->
+            <div class="row">
+
+                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
+                    <p class="summary-here">Barchitecture is a 3D printing technology based on 2 suspended colonies of E. Coli cells that display on their surface one of the 2 binding partners that form a strong covalent bond: SpyTag or SpyCatcher. By using light in the form of lasers, one ensures that only in the desired location in the cell population covalent bonds will be formed between bacteria. Once a 3D structure is formed, light induces the production of PHB, which accumulates in the form of granules inside cells. Cells then use a type-2 system to secrete the PHB, with the granules being cross-linked into a solid shape by a photoinitiator.</p>
+                </div>
+
+
+                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-2">
+                    <img src="assets/icon-barc.png" class="summary-images">
+                </div>
+
+                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
+
+                    <h1 class="title">Barchitecture Results</h1>
+                    <ul class="list-results">
+                        <li class="list-item-results">Designed biobricks and experiments for 2 systems of how cells bind to each other to form 3D upon light exposure</li>
+                        <li class="list-item-results">Performed experiments to test blue-light activation for the transcription of necessary proteins</li>
+                        <li class="list-item-results">Modelled the expression of adhesion proteins on E. Coli cell surface</li>
+                        <li class="list-item-results">Modelled cell adhesion with a cellular automaton for better visualisation</li>
+                    </ul>
+                </div>
+
+                <div id="hidden-barc" class="col-sm-10">
+
+                    <!-- Applications of barchitecture-->
+                    <div class="row">
+
+                        <div style="background-color: rgba(32,88,137,0.12)" class="col-sm-3 application-boxes">
+
+                            <p class="applications-text">Natural disasters</p>
+
+                            <button type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-right infos-here"></span>
+                            </button>
+                        </div>
+
+
+                        <div style="float:right; border:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-9">
+                            <p id="applications-description">Considering the increasing frequency of natural disasters, having a cheap and immediate way to generate structures could be used to temporarily shelter people, seal leaks, or bridge over flooded areas. Microorganisms can be also engineered to simultaneously detect and/or feed off hazardous waste and help clean up septic systems.</p>
+                        </div>
+
+
+                        <div style="background-color: rgba(137,2,19,0.12)" class="col-sm-3 application-boxes">
+
+                            <p class="applications-text">Space Exploration</p>
+
+                            <button type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-right infos-here"></span>
+                            </button>
+                        </div>
+
+                        <div style="background-color: rgba(15,137,0,0.12)" class="col-sm-3 application-boxes">
+                            <p class="applications-text">Medical implants</p>
+
+                            <button type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-right infos-here"></span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Why use cells to do it-->
+
+                    <!-- Scientific process-->
+
+                    <div class="row">
+                        <div class="text-section col-sm-11">
+                            <p class="text-content-new">We broke down barchitecture into 3 main components: (1) cell adhesion (2) light induced control and (3) polymer production/binding. The final engineered cells would be able to respond to the light stimuli and assemble into desired structures that can simultaneously produce and bind a desired polymer.</p>
+                        </div>
+
+                        <!-- Cell Adhesion-->
+                        <div class="text-section col-sm-11">
+                            <h1 class="title">1. Cell Adhesion</h1>
+
+                            <p class="text-content-new">To trigger cell adhesion, we decided to make use of the SpyTag and SpyCatcher, two binding partners that form rapid covalent bonds. SpyTag (13 amino acids) and SpyCatcher (138 amino acids, 15 kDa) come from CnaB2 (immunoglobulin-llike collagen adhesin domain) of the FbaB protein, found in the invasive strains of S. pyogenes. We decided to fuse SpyTag and SpyCatcher to outer membrane surface proteins in distinct cell populations that would then aggregate once mixed together.</p>
+
+                            <p class="text-content-new">Bullshit about how intimin is the best out of some surface display proteins</p>
+
+                            <p class="text-content-new">Constructs</p>
+
+                            <p class="text-content-new">Experiments</p>
+                        </div>
+
+                        <!-- Light Induced Control-->
+                        <div class="text-section col-sm-11">
+                            <h1 class="title">2. Light Induced Control</h1>
+
+                            <p class="text-content-new">Constructs</p>
+
+                            <p class="text-content-new">Experiments</p>
+                        </div>
+
+                        <!-- Polymer production/binding-->
+                        <div class="text-section col-sm-11">
+                            <h1 class="title">3. Polymer production/binding</h1>
+
+                            <p class="text-content-new">Constructs</p>
+
+                            <p class="text-content-new">Experiments</p>
+                        </div>
+
+                    </div>
+
+
                 </div>
 
             </div>
 
 
-            <!-- Mammalian stuff -->
+            <!-- Tissue printing -->
             <div class="row">
-                <div class="text-section col-sm-7">
-                    <h1 class="title">What happens with bacteria</h1>
-                    <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
+                    <p class="summary-here">Barchitecture is a 3D printing technology based on 2 suspended colonies of E. Coli cells that display on their surface one of the 2 binding partners that form a strong covalent bond: SpyTag or SpyCatcher. By using light in the form of lasers, one ensures that only in the desired location in the cell population covalent bonds will be formed between bacteria. Once a 3D structure is formed, light induces the production of PHB, which accumulates in the form of granules inside cells. Cells then use a type-2 system to secrete the PHB, with the granules being cross-linked into a solid shape by a photoinitiator.</p>
+                </div>
+
+
+                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-2">
+                    <img src="assets/icon-organ.png" class="summary-images">
+                </div>
+
+                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
+
+                    <h1 class="title">Organ printing Results</h1>
+                    <ul class="list-results">
+                        <li class="list-item-results">Designed biobricks and experiments for 2 systems of how cells bind to each other to form 3D upon light exposure</li>
+                        <li class="list-item-results">Performed experiments to test blue-light activation for the transcription of necessary proteins</li>
+                        <li class="list-item-results">Modelled the expression of adhesion proteins on E. Coli cell surface</li>
+                        <li class="list-item-results">Modelled cell adhesion with a cellular automaton for better visualisation</li>
+                    </ul>
+                </div>
+
+                <div id="hidden-organ" class="col-sm-10">
 
                 </div>
             </div>
 
-
-            <!-- Aggregation experiments -->
+            <!-- Light bulb -->
             <div class="row">
-                <div class="text-section col-sm-7">
-                    <h1 class="title">What happens with bacteria</h1>
-                    <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
+                    <p class="summary-here">Barchitecture is a 3D printing technology based on 2 suspended colonies of E. Coli cells that display on their surface one of the 2 binding partners that form a strong covalent bond: SpyTag or SpyCatcher. By using light in the form of lasers, one ensures that only in the desired location in the cell population covalent bonds will be formed between bacteria. Once a 3D structure is formed, light induces the production of PHB, which accumulates in the form of granules inside cells. Cells then use a type-2 system to secrete the PHB, with the granules being cross-linked into a solid shape by a photoinitiator.</p>
                 </div>
+
+
+                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-2">
+                    <img src="assets/icon-bulb.png" class="summary-images">
+                </div>
+
+                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-5">
+
+                    <h1 class="title">Bacterial bulb Results</h1>
+                    <ul class="list-results">
+                        <li class="list-item-results">Designed biobricks and experiments for 2 systems of how cells bind to each other to form 3D upon light exposure</li>
+                        <li class="list-item-results">Performed experiments to test blue-light activation for the transcription of necessary proteins</li>
+                        <li class="list-item-results">Modelled the expression of adhesion proteins on E. Coli cell surface</li>
+                        <li class="list-item-results">Modelled cell adhesion with a cellular automaton for better visualisation</li>
+                    </ul>
+                </div>
+
+
+                <div id="hidden-bulb" class="col-sm-10">
+
+                </div>
+
             </div>
 
         </div>

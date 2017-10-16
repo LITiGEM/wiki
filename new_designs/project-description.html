@@ -87,17 +87,40 @@
 
 <style>
     .image-content-here {
-        height:50%;
-        width:95%;
-        margin:5% 0 5% 0;
+        height:10%;
+        width:25%;
+        margin:3% 3% 3% 4%;
+        float:right;
+        border-radius: 50%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .side-images {
+        height:100px;
+        width:100px;
+        margin:5% 0 5% 0;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .protein-images {
+        height:30%;
+        width:45%;
+        margin:1% 0 3% 0;
+        float:right;
+        border-radius: 50%;
+    }
+
+    #step1 {
+        font-size: 17px;
+        font-family: "Noto Sans";
     }
 
 </style>
 
 <body data-spy="scroll" data-target="#side-index">
 
-<div class="container-fluid">
+<div style="margin:0 !important; padding:0 !important" class="container-fluid">
     <div id="top" class="row">
 
 
@@ -180,105 +203,75 @@
         <!-- The side navbar -->
         <nav id="side-index" class="col-sm-2">
             <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Optogenetic tools</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Barchitecture</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Tissue Regeneration</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section3">Bacterial Light-bulb</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#section1">Optogenetics applications</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2"><img src="assets/icon-barc.png" class="side-images"><p style="padding-left: 10px">Barchitecture</p></a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3"><img src="assets/icon-bulb.png" class="side-images"><p style="padding-left: 10px">Bacterial bulb</p></a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3"><img src="assets/icon-organ.png" class="side-images"><p style="padding-left: 10px">Organ printing</p></a></li>
             </ul>
         </nav>
 
-
-        <div style="float: right !important" class="col-sm-10">
+        <div style=" margin-left: 4%" class="col-sm-9">
 
             <!-- The intro bit -->
             <div class="row">
-                <div class="text-section col-sm-10">
+
+                <div class="text-section col-sm-11">
 
                 <h1 class="title">Why do optogenetics?</h1>
 
-                <p class="text-content">The field of neuroscience developed the idea of optogenetic tools: genes for light-sensitive proteins are introduced into cells to control them. The variety of light-sensitive proteins motivated us to explore the applications of some optogenetic tools with the aim to inform the research community and the general public about their potential and advantages over other forms of controlling organisms.</p>
+                <img src="assets/description-protein2.jpg"class="protein-images">
+
+                <p style="padding:3% 0 0 2%; max-width: 90%" class="text-content-new">We developed three applications for optogenetic tools. Optogenetics refers to the usage of biological light switches for the regulatory control of cellular functions. These light switches are light-sensitive proteins that upon exposure to a particular wavelength are able to trigger or suppress processes within cells.</p>
+
+                <div style="margin:3% 0 0 0;background-color:rgba(91,89,110,0.2)" class="row">
+                    <p class="text-content-new">Examples of natural or engineered light switches include light-activated channels & pumps, proteins that undergo light-dependent changes in oligomeric interactions, proteins subject to light-dependent allosteric control, light-responsive non-natural amino acids and photocleavable proteins.</p>
+                </div>
+
+                <img style="float:left; width:35%; margin:2% 3% 0 1%" src="assets/description-protein1.png" class="protein-images">
+
+                <p style="padding:3% 0 6% 5%" class="text-content-new">These tools allow for the precise temporal and spatial control over when and which cells are activated in a given population. Biological light switches can also form logic gates, allowing for the design of complex gene circuits where wavelengths can affect different stages.</p>
+
+                <p style="text-align: center; font-weight: 500; font-size: 23px; background-color:rgba(91,89,110,0.2)" class="text-content-new">Despite their variety, their use has not been widely adopted in synthetic biology.</p>
+
+
 
                 </div>
             </div>
 
             <!-- The problem - nobody uses this shit -->
             <div class="row">
-                <div class="text-section text-section-description-first col-sm-8">
-                    <h1 class="title">The problem - nobody likes Opto</h1>
+                <div class="text-section col-sm-11">
+                    <h1 class="title">What are the challenges in optogenetics?</h1>
 
-                    <p class="text-content">We chose to apply light control in architectural structures to reimagine the vision proposed in the essay ‘Organics’ by architect William Katavolos. Can we grow structures out of living organisms?</p>
-
-                    <p class="text-content">Bacteria can be engineered to generate sustainable and eco-friendly materials, such as bricks and bioplastics. Also, natural and artificial light are central components of the space that we inhabit. </p>
-
-                    <p class="text-content">Barchitecture combines these two advantages by implementing 2 biological light switches in a system to guide cell structuring into desired 3D structures.</p>
-                </div>
-
-                <div class="text-section text-section-description-second col-sm-8">
-                    <h1 class="title">How is that useful?</h1>
-                    <p class="text-content">Considering the increasing frequency of natural disasters, having a cheap and immediate way to generate structures can provide shelter to people.</p>
+                    <p style="text-align: center" class="text-content-new">We addressed 2 issues with biological light switches: low popularity due to sparse applications and a lack of standardisation. Both challenges were ideal for our iGEM project, through which we showcased the usefulness of light control in 3 distinct applications and standardised 3  biological light switches to be used by future iGEM teams.</p>
 
                 </div>
 
-                <div class="text-section text-section-description-third col-sm-8">
-                    <h1 class="title">To infinity and beyond</h1>
-                    <p class="text-content">We didn’t limit ourselves to applications on Earth. Currently, significant trade-offs are made for the amount of necessary materials and equipment to be transported in outer space due to monetary and fuel considerations. Our light-guided system can also be applied to bacteria in space to mine silicates and metal oxides from Lunar regolith. After the harvest, bacteria can be guided to form desired structures and bind biosilica to generate semiconductors and circuit boards.</p>
-
-                </div>
-
-                <div class="text-section col-sm-8">
-                    <h1 class="title">Small scale structures</h1>
-                    <p class="text-content">The production of small scale devices with medical applications also derives from our ability to grow structures from bacteria. Biopolymers, such as PHB, have a wide range of applications (agriculture films, safe materials for toys and packaging, feedstock additives). Via accurate light control, PHB-based medical implants can be produced, such as biocompatible veins and bronchus. See here the outcomes of our conversation with Blue Alpha - a company producing PHB from bacteria.</p>
-
-                </div>
             </div>
-
 
             <!-- What we're doing to address this - developing applications -->
             <div class="row">
 
-                <div class="text-section text-section-description-first">
-
-                    <h1 class="title">Bioluminescence and light switches</h1>
-
-                    <p class="text-content">We aim to produce a more efficient, longer-lasting and reliable light bulb that does not require electricity, mechanical input or continuous nutrient input. To achieve this, we are developing a “LIT Bulb” comprised of E. coli cells that can detect sunlight changes and luminesce at night time. To guarantee a constant food source, the E.coli cells will be co-cultured with cyanobacteria that can continuously produce and secrete glucose.</p>
+                <div style="background-color: rgba(129,149,175,0.19); margin-top: 2%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); " class="col-sm-11">
+                    <p class="HP-intros">We developed three distinct applications for biological light switches to show their potential in the scientific community. In contrast to current mechanical and chemical stimuli, our light based strategies allow for the precise spatiotemporal and noninvasive control of complex gene circuits.</p>
                 </div>
 
-                <div class="text-section text-section-description-second">
-                    <h1 class="title">To infinity and beyond</h1>
-                    <p class="text-content">We didn’t limit ourselves to applications on Earth. Currently, significant trade-offs are made for the amount of necessary materials and equipment to be transported in outer space due to monetary and fuel considerations. Our light-guided system can also be applied to bacteria in space to mine silicates and metal oxides from Lunar regolith. After the harvest, bacteria can be guided to form desired structures and bind biosilica to generate semiconductors and circuit boards.</p>
-
+                <div style="background-color: rgba(163,0,202,0.08)" class="text-section col-sm-11">
+                    <img src="assets/icon-barc.png" class="image-content-here">
+                    <p style="padding:5% 0 5% 2%" class="text-content-new">We are engineering bacterial cells that can be directed by light to form physical structures out of biodegradable plastic. Bacteria form strong covalent bonds instantly upon light exposure, which guides the formation of 3D structures. Then, the same cells produce biopolymer granules and secrete them to be cross-linked into a solid shape.</p>
                 </div>
 
-                <div class="text-section">
-                    <h1 class="title">Small scale structures</h1>
-                    <p class="text-content">The production of small scale devices with medical applications also derives from our ability to grow structures from bacteria. Biopolymers, such as PHB, have a wide range of applications (agriculture films, safe materials for toys and packaging, feedstock additives). Via accurate light control, PHB-based medical implants can be produced, such as biocompatible veins and bronchus. See here the outcomes of our conversation with Blue Alpha - a company producing PHB from bacteria.</p>
-
-                </div>
-            </div>
-
-
-            <!-- The part about the light bulb-->
-            <div class="row">
-                <div class="text-section">
-                    <h1 class="title">Informal conversations</h1>
-                    <p class="text-content"> Our intention was to learn about her experience with bioluminescent bacteria and more importantly, about the human-centered aspects of such a product: aesthetics, use and safety. <br>We talked about the engineering aspects that she experimented with and started a conversation about what potential light-induced technologies have for the future of design and bioluminescence.</p>
-                    <p class="text-content"> Creating kits, giving people the possibility to build their own bacterial powered light-bulb, would make this new concept more exciting and push more people to want to learn about the science behind bioluminescent organisms.</p>
-
+                <div style="background-color: rgba(191,71,0,0.09)" class=" text-section col-sm-11">
+                    <img style="float:left"src="assets/icon-bulb.png" class="image-content-here">
+                    <p style="padding:5% 0 5% 2%" class="text-content-new">To minimize the usage of electricity for illumination we designed a bacterial light bulb. Compared to previous attempts, we are incorporating a photosensitive protein to regulate the bioluminescence of E. Coli inside and the co-culturing with cyanobacteria, which through photosynthesis will provide the glucose necessary for their buddy cells.</p>
                 </div>
 
-                <div class="text-section">
-                    <h1 class="title">To infinity and beyond</h1>
-                    <p class="text-content">We didn’t limit ourselves to applications on Earth. Currently, significant trade-offs are made for the amount of necessary materials and equipment to be transported in outer space due to monetary and fuel considerations. Our light-guided system can also be applied to bacteria in space to mine silicates and metal oxides from Lunar regolith. After the harvest, bacteria can be guided to form desired structures and bind biosilica to generate semiconductors and circuit boards.</p>
 
-                </div>
-
-                <div class="text-section">
-                    <h1 class="title">Small scale structures</h1>
-                    <p class="text-content">The production of small scale devices with medical applications also derives from our ability to grow structures from bacteria. Biopolymers, such as PHB, have a wide range of applications (agriculture films, safe materials for toys and packaging, feedstock additives). Via accurate light control, PHB-based medical implants can be produced, such as biocompatible veins and bronchus. See here the outcomes of our conversation with Blue Alpha - a company producing PHB from bacteria.</p>
-
+                <div style="background-color: rgba(5,6,216,0.11)" class="text-section col-sm-11">
+                    <img src="assets/icon-organ.png" class="image-content-here">
+                    <p style="padding:5% 0 5% 2%" class="text-content-new">We’re also addressing one of the biggest issues in tissue engineering: control of the cells during tissue formation. We are developing an optical guidance system for inter-cell adhesion and directed gene expression of mammalian cells. This will enable fast in situ cell adhesion for tissue-specific organ healing.</p>
                 </div>
             </div>
-
 
         </div>
 
