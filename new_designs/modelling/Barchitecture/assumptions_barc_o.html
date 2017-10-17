@@ -94,7 +94,7 @@
         width:800px;
     }
 
-	#hidden-sanalysis, #hide2 {
+	#hidden-sanalysis, #hide1 {
 		display:none;
 		max-width: 65%;
 		margin-left: 150px;
@@ -109,18 +109,6 @@
 		margin-left: 150px;
 	}
 
-
-	#show2  {
-		height: auto;
-		background-color: rgba(204, 0, 53, 0.69);
-		overflow: hidden;
-		max-width:65%;
-		padding: 2% 3% 2% 5%;
-		position:relative;
-		margin-left: 150px;
-	}
-
-
 	#show1 p {
 		font-size: 30px !important;
 		font-weight: 500;
@@ -131,17 +119,6 @@
 
 	}
 
-	#show2 p {
-		padding-top: 30px;
-		padding-right: 10%;
-		padding-left: 10%;
-		font-size: 30px !important;
-		font-weight: 500;
-		font-family: "Josefin Sans" !important;
-		font-color: black;
-		width:100%;
-		text-align: center;
-	}
 
 </style>
 
@@ -244,7 +221,7 @@
             <div id="section1" style="margin-top: 20px" class="text-section">
 
                 <h1 class="title">Cracking the Model</h1>
-                <h2 class="subtitle">Methods of parameter optimisation</h2>
+                <h1 class="subtitle">Methods of parameter optimisation</h1>
 
                 <p class="text-content"> Mathematical Modelling describes complex biological systems with mathematical
                     equations and concepts. Setting up the initial conditions in the model is not that straight forward.
@@ -253,16 +230,14 @@
                     to crack the model. Once, established the parameters need to constantly be optimised with experimental
                     data and/or literature data in order to fit reality to its maximum. Parameter optimisation adds all
                     the weight to a model's credibility, this is why we decided to approach this in 2 ways:
-                    Sensitivity Analysis and Parameter Sampling.
-                    <br>
-                <h2 class="subtitle" style="padding-top: 20px"> <i>Scroll down to find out more!</i> </h2></p>
+					Sensitivity Analysis and Parameter Sampling.</p>
             </div>
 
 			<!-- Sensitivity analysis -->
 			<div id="section2" class="row">
 				<div class="text-section">
 
-					<h2 class="title">Sensitivity Analysis</h2>
+					<h1 class="title">Sensitivity Analysis</h1>
 
 					<p class="text-content">Sensitivity Analysis is a conventionally used method for parameter optimisation.
 						A range of independent variables is tested in this technique and their impact on the dependent variable is evaluated.
@@ -272,7 +247,7 @@
 				</div>
 
 				<div class="text-section">
-					<h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">Method</h2>
+					<h1 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">Method</h1>
 						<ol class="text-content" style="width: 100%">
 							<li style="margin-left: 20px">Identify the dependent variable to be optimised (the rate limiting step in our process)</li>
 							<li style="margin-left: 20px">Identify the independent variables that have an impact on this step</li>
@@ -284,8 +259,7 @@
 				</div>
 
 				<div id="show1" class="text-section">
-						<p><i class="down" ></i> </p>
-							<h2 class="tabletitle">Sensitivity Analysis method applied to LEGIT model</h2>
+							<h1 class="title" style="color:white; font-size: 20px; padding-left:25px!important">Sensitivity Analysis method applied to LEGIT model</h1>
 				</div>
 
 				<div id="hidden-sanalysis">
@@ -293,23 +267,19 @@
 						Given that transport of intimin to the surface of the E.coli cells is the rate
 						limiting step in the overall process, we are rewriting this ODE in order to simplify
 						the Sensitivity Analysis on this step. </p>
-
 					<img src="../../assets/modellingMethods/sensitivityAnalysisEqu.png" style="width: 700px; height:700px; margin-top:10px">
 				</div>
-
 			</div>
-
 
 			<!-- Parameter sampling-->
 			<div id="section3" class="row">
             	<div class="text-section col-sm-10">
-                <h2 class="title">Parameter Sampling</h2>
+                <h1	class="title">Parameter Sampling</h1>
                 <p class="text-content">Parameter sampling, is another technique used to tackle the issue of uncertain and incomplete knowledge of parameter values.
                     It is a method of parameter optimisation, which relies on the random sampling of parameter values within a specified range.
                     A probability density function (PDF) determines the distribution of the continuous random variables evaluated in the function.
                     Parameter sampling considers biological noise, making it a more realistic representation of the behaviour of a biological system.</p>
-                <br>
-                <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">Method</h2>
+                <h1 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">Method</h1>
                     <ol class="text-content" style="width: 100%">
                         <li style="margin-left: 20px">Identify the dependent variable to be optimised (the rate limiting step in our process)</li>
                         <li style="margin-left: 20px">Identify the independent variables that have an impact on the step we are trying to optimise</li>
@@ -319,13 +289,12 @@
                         <li style="margin-left: 20px">Generate probability densitiy functions (pdf);input the sample size, standard deviation and weighted mean</li>
                     </ol>
                 <br>
-                <h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LEGIT model</h2>
+                <h1 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LEGIT model</h1>
                 <p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of
                     transport of intimin. For this the values of K<sub>m</sub> and V<sub>max</sub> are evaluated. </p>
 				</div>
 
-				<div class="picture-section-left col-sm-7" style="margin-left: 0; margin-top: 15px; padding-top:15px; padding-left: 0; padding-bottom: 0">
-
+				<div class="picture-section-left col-sm-6" style="margin-left:150px!important; margin-top: 15px; padding-top:15px; margin-right: 0!important; padding-bottom: 0; padding-right:0px!important">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px"
 	 height="300px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
 <g id="BG">
@@ -879,14 +848,13 @@
 	</g>
 </g>
 </svg>
-
 				</div>
 
-				<div class="text-content-duo col-sm-3">
+				<div class="text-content-duo col-sm-4" style="padding-right:150px!important">
 
-					<p class="text-content-duo modelling-steps-intro" style="margin-left:400px">Conditions for intimin</p>
+					<p class="text-content" style="margin-left:400px; padding-top:50px; padding-bottom:20px">Conditions for intimin</p>
 
-					<ul class="text-content-duo modelling-steps-intro" style="padding-top: 25px">
+					<ul class="text-content" style="padding-top: 25px">
 						<li style="margin-left: 15px">Size: 94 kDa </li>
 						<li style="margin-left: 15px">Optimal pH conditions: 7 </li>
 						<li style="margin-left: 15px">Native organism: E.coli </li>
@@ -894,24 +862,21 @@
 				</div>
 
 				<div class="text-content col-sm-10">
-
 					<p  style="margin-left: 150px">Weighted mean of K<sub>m</sub>: 0.0147 uM</p>
 					<p style="margin-left: 150px">Weighted mean of V<sub>max</sub>: 300000 s<sup>-1</sup>(1 s.f.) </p>
-
 				</div>
-
 				<div class="text-section">
 
-					<p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of K<sub>m</sub></a></p>
-					<p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of V<sub>max</sub></a></p>
+					<p class="text-hyperlink"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of K<sub>m</sub></a></p>
+					<p class="text-hyperlink"> <a href="parameter_o.html">Click here to check out the data collected to optimise the value of V<sub>max</sub></a></p>
 
 				</div>
 			</div>
 
-			<h2 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LAME model</h2>
+			<h1 class="subtitle" style="color: rgba(204, 0, 53, 0.69)">LAME model</h1>
 			<p class="text-content">Assessing the impact of randomly generated discrete variables on the rate of translation of GFP. For this the rate of nuclear export of the transcript and the rate of GFP degradation are evaluated.</p>
 
-			<div class="picture-section-left col-sm-7" style="margin-left: 0; margin-top: 15px; padding-top:15px; padding-left: 0; padding-bottom: 0">
+			<div class="picture-section-left col-sm-6" style="margin-left:130px!important; margin-top: 15px; padding-top:15px; margin-right: 0!important; padding-bottom: 0; padding-right:0px!important; border:none!important">
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px"
 	 height="300px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
 <g id="BG">
@@ -1358,11 +1323,11 @@
 </svg>
 			</div>
 
-			<div class="text-content-duo col-sm-3">
+			<div class="text-content-duo col-sm-4" style="padding-right:150px!important">
 
-				<p class="text-content-duo modelling-steps-intro" style="margin-left:400px">Conditions for RFP protein</p>
+				<p class="text-content" style="margin-left:400px; padding-top:20px; padding-bottom:20px">Conditions for RFP protein</p>
 
-				<ul class="text-content-duo modelling-steps-intro" style="padding-top: 25px">
+				<ul class="text-content" style="padding-top: 5px">
 					<li style="margin-left: 20px">Size: 27.9 kDa </li>
 					<li style="margin-left: 20px">Location of protein: Cytoplasm</li>
 					<li style="margin-left: 20px">Native organism: CHO cells </li>
@@ -1377,8 +1342,8 @@
 			</div>
 
 			<div class="text-section col-sm-10" style="border:none">
-                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the  rate of nuclear export</a></p>
-                <p class="subtitle"> <a href="parameter_o.html">Click here to check out the data collected to optimise the rate of degradation</a></p>
+                <p class="text-hyperlink"> <a href="parameter_o.html">Click here to check out the data collected to optimise the  rate of nuclear export</a></p>
+                <p class="text-hyperlink"> <a href="parameter_o.html">Click here to check out the data collected to optimise the rate of degradation</a></p>
 
             </div>
 
