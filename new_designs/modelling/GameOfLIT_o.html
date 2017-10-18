@@ -841,22 +841,21 @@
             <div class="text-section" id="section5">
                 <h1 class="title">Feeding the Model with Experimental Data</h1>
                 <p class="text-content">The ultimate goal of developing mathematical models is to create robust systems
-                    which are representative of reality. The best way to optimize parameters in a model is to tweak it with experimental data.
+                    which are representative of reality. The best way to optimize parameters in a model is to use experimental data.
 
-                    Our Wet Lab team simulated the bacterial SpyTag/ SpyCatcher adhesion chemically, by testing the adhesion
+                    Our Wet Lab team simulated the bacterial chemical adhesion between SpyTag and SpyCatcher, by testing the adhesion
                     between Biotin and Avadin. Similar to SpyTag and SpyCatcher, Biotin and Avadin form a covalent bond when in close proximity to each other.
-                    This experimental data allowed us to optimize the concentration of surface proteins needed to achieve the
-                    highest binding rate. </p>
+                    This experimental data allowed us to determine the optimum concentration of surface proteins needed to achieve binding
+                    at the fastest rate. </p>
 
                 <video controls class="image-content-graphs" style="margin-left: 50px!important">
                     <source src="../assets/GOLIT/cellAggregation.mp4" type="video/mp4" style="align-content: center">
                 </video>
-                <p class="text-content" style="padding-top: 0">The video above shows 8 Eppendorf tubes, each representing the
+                <p class="text-content" style="padding-top: 0">The video above shows 8 eppendorf tubes, each representing the
                 different experimental conditions tested. We performed a series of experiments with competent cells.
                     From left to right: DMF solvent and Avadin, DMF solvent and PBS solvent,
                 PBS solvent and Avadin, PBS solvent, 125 µMBiothin and Avadin, 125 µM Biotin and PBS, 1000µM Biotin and Avadin,
                 1000µM Biotin and PBS.</p>
-
 
 
                 <img src="../assets/GOLIT/biotin_plot.jpg" class="image-content-graphs" style="width: 400px; height: 350px; padding-left:20px!important;padding-right:0!important; margin-right:0!important">
@@ -864,9 +863,20 @@
                 <p class="text-figure" style="padding-left:160px">Figure 7: Shows the number of aggregated cells vs. time. These are the
                     experimental results abotained for the simulation of SpyTag/SpyCatcher adhesion using Biotin and Avadin</p>
 
-                <p class="text-content">WRITE SOME STUFF ABOUT THE DATA</p>
+                <p class="text-content">From our experimental data we determined that as time passed a greater number of cells adhered to each other.
+                    Therefore, as time passed a greater number of cells aggregated to each other, and sedimented to the bottom
+                    of the eppendorf tubes, a lower concentration of un-adhered cells remained in the supernatant stream. To implement this data in the GOLIT,
+                    we calculated the percentage change in aggregation between each time point. This percentage change represented the probability of a cell adhering with another cell at each time point.
+                    We decided to run the Game of LIT once we combined these experimentally determined probabilities with the binding probabilities that were dependant on the number
+                    of neighbouring cells. </p>
 
-                <p class="text-content"><a class="text-hyperlink" style="margin-left: 10px"> Click here to check the protocol of the cell aggregation experiment</a></p>
+                <p class="text-content">The grid, as expected, does not fill up at the end our experiment. This occurs because from the final OD measurement of the supernatant stream in the eppendorf tubes it was
+                evident that un-adhered cells were still present in the supernatant stream. We would expect all the cells to adhere to each other if we allowed for a sufficiently long period of time. </p>
+
+                <p class="text-content">We would like to conduct future experiments to determine the optimum concentrations of Avidin and Biotin required to
+                    lead to all the cells present in a culture to adhere to themselves in the least amount of time.</p>
+
+                <p class="text-content"><a class="text-hyperlink" style="margin-left: 0px"> Click here to check the protocol of the cell aggregation experiment</a></p>
 
 
                 <h1 class="title" id="section6">Assumptions </h1>
