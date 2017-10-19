@@ -23,11 +23,12 @@
 
         $(document).ready(function(){
             //Take your div into one js variable
-            var s1 = $("#step1");
-            var s2 = $("#step2");
-            var s3 = $("#step3");
+            var s1 = $("#why");
+            var s2 = $("#meth");
+            var s3 = $("#res");
 
             //Take the current position (vertical position from top) of your div in the variable
+
             var pos = s1.position();
             var pos1 = s2.position();
             var pos2 = s3.position();
@@ -35,31 +36,27 @@
             //Now when scroll event trigger do following
             $(window).scroll(function () {
 
-                scrollFunction()
+                var scroll = $(window).scrollTop();
 
-                var windowpos = $(window).scrollTop();
-                //console.log(windowpos);
+                if (scroll >= pos.top && scroll <= pos1.top) {
 
-                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-                if (windowpos >= (pos.top + 100)) {
-                    // div.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s1.addClass("active-link");
+                    $("#step1").addClass("active-link");
+                } else {
+                    $("#step1").removeClass("active-link");
                 }
 
-                if (windowpos >= (pos1.top + 750)) {
-                    // div1.addClass("AfterScroll");
-                    s1.removeClass("active-link");
-                    s3.removeClass("active-link");
-                    s2.addClass("active-link");
+                if (scroll >= pos1.top && scroll <= pos2.top) {
 
+                    $("#step2").addClass("active-link");
+                } else {
+                    $("#step2").removeClass("active-link");
                 }
 
-                if (windowpos >= (pos2.top + 1100)) {
-                    //div2.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s4.removeClass("active-link");
-                    s3.addClass("active-link");
+                if (scroll >= pos2.top) {
+
+                    $("#step3").addClass("active-link");
+                } else {
+                    $("#step3").removeClass("active-link");
                 }
 
             });
@@ -78,9 +75,16 @@
 
 <style>
     .image-content-here {
-        height:350px;
-        width:450px;
-        padding-top: 0;
+        height:100%;
+        width:100%;
+        padding: 0 !important;
+        margin:0 !important;
+    }
+
+    .graph-text {
+        font-size:1.2vw;
+        font-family:Lato;
+        padding:2% 0 0 0;
     }
 </style>
 <body data-spy="scroll" data-target="#side-index">
@@ -88,7 +92,7 @@
 <div style="margin:0 !important; padding:0 !important" class="container-fluid">
     <div id="top" class="row">
 
-        <img src="assets/logo-navbar.png" class="logo-top">
+        <img src="assets/logotop.png" class="logo-top">
 
         <ul class="navy">
             <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
@@ -168,61 +172,76 @@
         <!-- The side navbar -->
         <nav id="side-index" class="col-sm-2">
             <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Why make cells resistant?</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">Methods</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Results & Conclusion</a></li>
+                <li id="step1" class="navy-link side-link"><a href="#why">Why make cells resistant?</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#meth">Methods</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#res">Results & Conclusion</a></li>
             </ul>
         </nav>
 
         <!-- Content -->
-        <div style="float: right !important" class="col-sm-10">
-
+        <div style="margin-left: 4%" class="col-sm-9">
 
             <!-- Intro & Overview -->
             <div class="row">
 
-                <div class="text-section col-sm-6">
+                <div style="border-right:none; border-left:none; border-bottom:none" class="text-section col-sm-6">
 
-                    <h1 class="title">Why make cells resistant?</h1>
+                    <h1 class="title">Gold Medal - improvement on the IrrE plasmid</h1>
 
-                    <p class="text-content-duo HP-intros">Following our integrated practice conversation with the European Space agency, we decided to engineer our E. Coli to perform their tasks in extreme conditions. The necessity applies to both the Barchitecture application, where cells may face harsh conditions in outer space, as well as the bacterial light-bulb, when the inside of the bulb is cleaned.</p>
+                    <p class="text-content-new">For our Gold Medal we improved the BBa_K729005 biobrick (the IrrE plasmid), by further characterising and testing it in simulated extreme conditions. Results show that E coli cells with the IrrE plasmid are more resilient to oxidative stress, high salinity and viscous growth media compared to controls over  a period of 30 hours.</p>
 
-                    <p class="text-content-duo">For our Gold Medal, we improved the BBa_K729005 biobrick, by further showing that cells can survive in simulated extreme conditions: oxidative stress, high salinity and viscous growth media. This biobrick contains the IrrE gene from Deinococcus Radiodurans, helping cells survive in harsh environments. We measured optical densities over a period of 30 hours, with the cells containing the IrrE plasmid surviving, compared to controls.</p>
-
-                    <p class="text-content-duo">Our results give future iGEM teams the possibility of experimenting with cells in extreme conditions, relevant to their applications.</p>
+                    <button style="margin:0 0 0 40% !important" type="button" class="btn btn-default btn-sm overlay-buttons"><a href="#why">
+                        <span class="glyphicon glyphicon-chevron-down infos"></span></a>
+                    </button>
 
                 </div>
 
-                <div class="picture-section-right col-sm-3">
+                <div class="picture-section-right col-sm-5">
                     <img src="assets/IrrE.png" class="image-content-graphs image-content-here">
+                    <p class="graph-text">Figure 1 showing optical density measurements after 30 hours between controls and cell with the IrrE plasmid in different media.</p>
                 </div>
 
 
             </div>
 
-            <!-- Methods -->
-            <div class="row">
-                <div class="text-section">
+            <!-- Why we did it -->
+            <div id="why" class="row">
+                <div style="border-right:none; border-left:none; border-bottom:none" class="text-section col-sm-10">
+
+                    <h1 class="title">Why we did it</h1>
+
+                    <p class="text-content-new">We integrated our fruitful conversation with the European Space agency into our wet lab, by deciding to engineer E. Coli to perform their tasks in extreme conditions. The necessity applies to both the Barchitecture application, where cells face harsh conditions in outer space, as well as the bacterial light-bulb, when the inside of the bulb is cleaned.</p>
+
+                    <p class="text-content-new">The IrrE gene from Deinococcus Radiodurans helps cells survive in harsh environments. We measured optical densities over a period of 30 hours, with the cells containing the IrrE plasmid surviving, compared to controls. Our results give future iGEM teams the possibility of experimenting with cells in extreme conditions, relevant to their applications.</p>
+
+                </div>
+
+            </div>
+
+            <!-- Method-->
+            <div id="meth" class="row">
+                <div style="border-right:none; border-left:none; border-bottom:none" class="text-section col-sm-10">
                     <h1 class="title">Methods</h1>
-                    <p class="text-content"> In this experiment, we aimed to test viability of IrrE harboring cells (salinity and oxidative stresses) and make improvements on previous data (lubricants) from UCL iGEM 2012 & 2015. Resistance to high salinity is crucial to our project because we need cells to make structures on mars whereas Martian brine may kill normal cells. Cells may also need to survive under oxidative stress because the light bulb we made sometimes needs to be cleaned. Normally cleaning agents contain certain levels of oxidants to reach the disinfectant level. We used 1.5% of H2O2 and treat cells for 15 mins to simulate disinfection process.</p>
-                    <p class="text-content"> IrrE cells and control were grown in four media. Controls had LB, while the other either LB+1M NaCl, LB+1.5% H2O2 or LB+40%v/v lubricant. For H2O2 environment, we treated the pelleted cells from overnight culture by incubating them in 1.5% H2O2 solution for 15 mins and then re-suspended the cells with pure LB before inoculation. As for the rest of the samples, overnight cultures were pelleted and re-suspended with pure LB. All inoculation samples started with optical densities of 0.001(OD600=0.001). The cell cultures were put in shaking incubator (37˚C, 220 r.p.m) for 30 hours. Optical densities were measured constantly throughout the whole experiment.</p>
+
+                    <p class="text-content-new">In this experiment, we aimed to test viability of IrrE harboring cells in conditions of high salinity and oxidative stress and make improvements on previous data (lubricants) from UCL iGEM 2012 & 2015. Resistance to high salinity is crucial to our project because we need cells to make structures on Mars, where the Martian brine may kill normal cells. Cells may also need to survive under oxidative stress because the light bulb we made sometimes needs to be cleaned. Normally cleaning agents contain certain levels of oxidants that reach the disinfectant level. We used 1.5% of H2O2 and treated cells for 15 mins to simulate disinfection process.</p>
+                    <p class="text-content-new"> IrrE cells and control were grown in four media. Controls had LB, while the other either LB+1M NaCl, LB+1.5% H2O2 or LB+40%v/v lubricant. For H2O2 environment, we treated the pelleted cells from overnight culture by incubating them in 1.5% H2O2 solution for 15 mins and then re-suspended the cells with pure LB before inoculation. As for the rest of the samples, overnight cultures were pelleted and re-suspended with pure LB. All inoculation samples started with optical densities of 0.001(OD600=0.001). The cell cultures were put in shaking incubator (37˚C, 220 r.p.m) for 30 hours. Optical densities were measured constantly throughout the whole experiment.</p>
 
                 </div>
             </div>
 
 
             <!-- Results & Conclusion -->
-            <div class="row">
+            <div id="res" class="row">
 
-                <div class="text-section col-sm-6">
+                <div  style="border-right:none; border-left:none; border-bottom:none" class="text-section col-sm-10">
 
                     <h1 class="title">Results & Conclusion</h1>
 
-                    <p class="text-content-duo">The final results have shown the expected results as the graphs illustrated. IrrE promoted the growth of cells in lubricant and brine greatly. There has been conversable growth of H2O2 treated cells although OD600 has not reached level as cells in LB should be. All three tests showed IrrE can provide protections to cells under some extreme conditions and it is necessary for our cells to survive in the bulb when it comes to cleaning and making structures by bacteria on Mars</p>
-                </div>
+                    <p class="text-content-new">The final results show the expected results (see Figure2 below). IrrE promoted the growth of cells in lubricant and brine greatly. There has been conversable growth of H2O2 treated cells although OD600 has not reached level as cells in LB should be. All three tests showed IrrE can provide protections to cells under some extreme conditions and it is necessary for our cells to survive in the bulb when it comes to cleaning and making structures by bacteria on Mars.</p>
 
-                <div class="picture-section-right col-sm-4">
-                    <img src="assets/IrrE_Full.png" class="image-content-graphs image-content-here">
+                    <img src="assets/IrrE_Full.png" class="image-content-here">
+                    <p class="graph-text">Figure 2A shows optical density measurements after 30 hours between controls and cell with the IrrE plasmid in normal LB media. Figure2B shows the same comparison in high salinity media (LB + 1M NaCl), while Figure2C an Figure2D for oxidative stress(1.5%H2O2) and viscous growth (40% v/v Lubricant), respectively.</p>
+
                 </div>
 
             </div>
