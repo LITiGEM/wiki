@@ -256,19 +256,19 @@ body {
 
 /* Classes to be used as titles - generally we might want to tweak them in all the documents to optimise for different pages*/
 .title {
-    font-family: "Noto Sans";
+    font-family: Lato;
     font-size: 23px;
     font-weight: 600;
 
     padding: 5% 1% 1% 10% !important;
     margin:0;
-    color: rgba(204, 0, 53, 0.69);
+    color: rgb(22, 22, 22);
     text-decoration: none;
 }
 
 
 .subtitle {
-    font-family: "Noto Sans";
+    font-family: Lato;
     font-size: 18px;
     font-weight: 500;
     padding: 1% 1% 1% 15%;!important;
