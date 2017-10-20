@@ -23,7 +23,7 @@
     <script>
 
         $(document).ready(function(){
-            //Take your div into one js variable
+           /* //Take your div into one js variable
             var s1 = $("#step1");
             var s2 = $("#step2");
             var s3 = $("#step3");
@@ -80,7 +80,7 @@
                     document.getElementById("myBtn").style.display = "none";
                 }
             }
-
+*/
 
             $("#button-arc").click(function(){
                 $("#hidden-architects").slideToggle("slow");
@@ -109,23 +109,28 @@
 
 <style>
     .image-content-here {
-        height:90%;
-        width:95%;
-        margin:5% 0 5% 0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        display:block;
+        height:100%;
+        width:100%;
+        position:relative;
+    }
+
+    .image-content-hidden {
+        margin:2% 0 2% 15%;
+        height:40%;
+        width:40%;
     }
 
     .icons-here {
         height:30%;
         width:35%;
-        margin:38% 0 35% 30%;
+        margin:30% 0 32% 30%;
     }
 
     .overlay-here {
-        top:40% !important;
-        width:87%;
-    }
 
+        background-color: transparent;
+    }
     .overlay-buttons-here {
         top:78%;
         right: 42.5% !important;
@@ -243,7 +248,6 @@
             </ul>
         </nav>
 
-
          <!-- Content -->
         <div style="float: right !important" class="col-sm-10">
 
@@ -251,87 +255,94 @@
             <div class="row">
 
                 <!-- Instagram-->
-                <div style="box-shadow: none !important" class="col-sm-4 cols">
+                <div style="margin-top: 3% !important; box-shadow: none;" class="col-sm-4 cols">
 
-                    <div style="width:100%;" class="overlay overlay-here">
-                        <p style="font-size: 19px" class="HP-title">133 artists helped us prototype our bacterial light-bulb</p>
+                    <div class="overlay">
+                        <p style="font-size: 1.7vw" class="HP-title">133 artists helped us prototype our bacterial light-bulb</p>
                     </div>
 
-                    <img style="width:100%" src="assets/insta1.jpg" class="image-content-here">
+                    <img src="assets/insta1.jpg" class="image-content-here">
 
-                    <button id="sciencem" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><a href="#aesthetics">
-                        <span class="glyphicon glyphicon-chevron-down infos-here"></span></a>
-                    </button>
+                    <img src="assets/HP-Rachael.png" style="height:125px !important;" class="image-content-here">
                 </div>
 
-                <!-- ARUP -->
-                <div class="col-sm-4">
+                <!-- ESA & TfL -->
+                <div style="margin-top: 3% !important; box-shadow: none" class="col-sm-3 cols">
 
                     <div class="overlay overlay-here">
-                        <p style="font-size:18px" class="HP-title">We meet ARUP to find applications of Barchitecture in construction</p>
-                    </div>
-
-                    <img src="assets/HP-arup.jpg" class="image-content-here">
-
-                    <button id="down-arup" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
-                        <span style="color:white" class="glyphicon glyphicon-chevron-down infos-here"></span>
-                    </button>
-                </div>
-
-                <!-- ESA -->
-                <div style="margin:2% 1% 0 0 !important;" class="col-sm-3 cols">
-
-                    <div style="width:100%; top:0 !important; margin-top: 0 !important" class="overlay overlay-here">
-                        <p style="font-size: 19px" class="HP-title">The European Space Agency shaped our Gold BioBrick</p>
+                       <!-- <p style="font-size: 1.8vw" class="HP-title">The European Space Agency shaped our Gold BioBrick</p>-->
                     </div>
 
                     <img src="assets/icon-esa.png" class="icons-here">
 
-                    <button style="right: 40% !important" id="sc" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
-                        <span  class="glyphicon glyphicon-chevron-down infos-here"></span>
-                    </button>
+                    <div class="overlay overlay-here">
+                        <!--<p style="font-size: 1.8vw" class="HP-title">Transport for London guided us on our bulb prototype</p>-->
+                    </div>
+
+                    <img src="assets/icon-tfl.png" class="icons-here">
 
                 </div>
 
                 <!-- Architects-->
-                <div class="col-sm-4">
+                <div style="margin-top: 3% !important; box-shadow: none" class="col-sm-4 cols">
 
-                    <div class="overlay overlay-here">
+                    <div class="overlay">
                         <p class="HP-title">With the Barchitects</p>
                     </div>
 
                     <img src="assets/HP-Beckett1.jpg" class="image-content-here">
 
-                    <button id="scie" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
-                        <span class="glyphicon glyphicon-chevron-down infos-here"></span>
-                    </button>
-
                 </div>
 
-                <!-- TfL -->
-                <div style="margin-top:2%" class="col-sm-3 cols">
 
-                    <div style="width:100%; top:0 !important; margin-top: 0 !important;" class="overlay overlay-here">
-                        <p style="font-size: 19px" class="HP-title">Transport for London guided us on our bulb prototype</p>
+                <!-- ARUP -->
+                <div style="float:left;box-shadow: none; margin-bottom: 5% !important;" class="col-sm-4 cols">
+
+                    <div class="overlay overlay-here">
+                        <p style="font-size:1.6vw" class="HP-title">We meet ARUP to find applications of Barchitecture in construction</p>
                     </div>
 
-                    <img src="assets/icon-tfl.png" class="icons-here">
-
-                    <button style="right: 40% !important" id="s" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
-                        <span  class="glyphicon glyphicon-chevron-down infos-here"></span>
-                    </button>
+                    <img src="assets/HP-arup.jpg" class="image-content-here">
 
                 </div>
+
+                <!-- Instagram again-->
+                <div style="float:left;box-shadow: none; margin-bottom: 5% !important;" class="col-sm-3 cols">
+
+                    <div class="overlay overlay-here">
+                        <p style="font-size:1.6vw" class="HP-title">We meet ARUP to find applications of Barchitecture in construction</p>
+                    </div>
+
+                    <img src="assets/insta2.jpg" class="image-content-here">
+
+                </div>
+
+
+                <!-- ESA again -->
+                <div style="float:left; margin-bottom: 5% !important;" class="col-sm-4 cols">
+
+                    <div class="overlay">
+                        <p style="font-size:1.6vw" class="HP-title">We meet ARUP to find applications of Barchitecture in construction</p>
+                    </div>
+
+                    <img src="assets/HP-esa.png" class="image-content-here">
+
+                </div>
+
+
+
+
 
             </div>
 
             <!-- Instagram -->
             <div id="aesthetics" class="row">
+
                 <div style="border-left:none; border-right:none; border-bottom:none" class="text-section col-sm-7">
 
-                    <h1 class="title">The aesthetics of light technologies</h1>
+                    <h1 class="title">Artists design light-induced technologies</h1>
 
-                    <p class="text-content-new">To design our light-bulb to be aesthetically pleasing, we organised a competition on Instagram, reaching 78,000 people and receiving 133 submissions. The designs for our prototype were chosen based on people considering challenges of deploying a bacterial light-bulb in real life.</p>
+                    <p class="text-content-new">We organised a competition on Instagram to consider the design of our bacterial bulb when deploying it in real life, reaching 78,000 people and receiving 133 submissions.  With the help of the artists, we developed a prototype, choosing designs that considered the safety and social implications of our bacterial light bulb.</p>
 
                     <button id="button-insta" type="button" class="btn btn-default btn-sm">
                         <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
@@ -343,17 +354,19 @@
 
                 <div style="margin-top: 30px" id="hidden-insta" class="col-sm-10">
 
-                    <p class="text-content-new">Our aims with the Instagram competition were to: engage with as many artists as possible, integrated the outcome in a central part of our project, make in the interaction bidirectional.</p>
+                    <p class="text-content-new">We organised a competition on Instagram to consider the design of our bacterial bulb when deploying it in real life, reaching 78,000 people and receiving 133 submissions.  With the help of the artists, we developed a prototype, choosing designs that considered the safety and social implications of our bacterial light bulb.</p>
 
-                    <p class="text-content-new">In collaboration with the_art_competition, we held the competition over a week. Together with Helen, the Instagramer who runs these competitions, we wanted to offer people the chance to think about how complex the implementation of synthetic biology technologies can be, including:</p>
+                    <img src="assets/HP-insta3.jpg" style="margin-left:7.5%; margin-right: 0 !important; display:inline-block" class="image-content-hidden">
 
-                    <ul class="list-section">
-                        <li class="list-item-content">The consideration of societal impacts</li>
-                        <li class="list-item-content">Where would the bulbs function? Private or public spaces?</li>
-                        <li class="list-item-content">What would an aesthetically appealing bulb look like?</li>
-                        <li class="list-item-content">Is the future LIT by bacteria or dystopic?</li>
-                    </ul>
-                    <p class="text-content-new">Entries proved to be very well thought out. Some designs clearly depicted co-culturing of E. coli and cyanobacteria as well as its potential usage in private and public spaces.</p>
+                    <img src="assets/HP-insta0.jpg" style="margin-left: 0 !important; display:inline-block" class="image-content-hidden">
+
+                    <p class="text-content-new">the_art_competition organises  weekly art competitions on different topics, with 78,000 followers. Together we wanted to offer people a chance to think about how complex the implementation of synthetic biology technologies can be. Also, we wanted our interaction of be bidirectional and obtain help with the design our our bulb.</p>
+
+                    <p class="text-content-new">We asked participants to consider in their submissions societal impacts, where the bulbs would function (private or public spaces?), the aesthetics and a future where bacteria are more integrated in our lives (awesome or dystopic?).</p>
+
+                    <p class="text-content-new">Entries were very well thought out, with designs clearly depicting co-culturing of E. coli and cyanobacteria as well as its potential usage in private and public spaces.</p>
+
+                    <img src="assets/HP-insta2.jpg" class="image-content-hidden">
 
                     <p class="text-content-new">We selected a winner based on the thoughtfulness shown in the design and the number of likes.  The design was taken as the starting point for our mathematical modelling, to see how we can combine aesthetic and engineering requirements into a prototype.</p>
 
@@ -371,9 +384,9 @@
 
                 <div style="border-left:none; border-right:none; border-bottom:none" class="text-section col-sm-7">
 
-                    <h1 style="padding-left: 15%; padding-right:0" class="title">From the European Space Agency to the Moon</h1>
+                    <h1 style="padding-left: 15% !important" class="title">From the European Space Agency to the Moon</h1>
 
-                    <p style="padding-left: 15%; padding-right:0" class="text-content-new">We talked to Dr Ralph Müller and Jan NAME from the ESA to see how we could extend the use of bacterial architecture from Earth to outer space. The initial premise was that taking large amounts of building material when colonising new planets would be inefficient.</p>
+                    <p style="padding-left: 15%; padding-right:0" class="text-content-new">We talked to Dr Ralph Müller and Jan from the ESA to see how we could extend the use of bacterial architecture from Earth to outer space, in the end influencing what Biobrick we improved for our Gold Medal. The initial premise was that taking large amounts of building material when colonising new planets would be inefficient. Then, we moved onto other uses of our bacteria in space. </p>
 
                     <button id="button-esa" type="button" class="btn btn-default btn-sm">
                         <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
@@ -385,10 +398,9 @@
 
                     <img src="assets/HP-esa.png" style="height:50%; width:50%; margin:0 0 0 22.5%" class="image-content-here">
 
-                    <ul class="list-section">
-                            <li style="font-size: 17px" class="list-item-content">While organisms such as Deinnococus Radiodurans or the Tardigrade could be engineered, we decided to improve a plasmid that can give the most common synthetic biology chassis, E. Coli, the necessary resilience in specific environments.</li>
-                            <li style="font-size: 17px" class="list-item-content">We also learnt that much research has been focusing on decreasing the mass of materials and electronics by engineering microbes that can print the necessary components. To this end, our biological light switches can be integrated into ‘growing’ electronics through light guidance.</li>
-                    </ul>
+                    <p class="text-content-new">While organisms such as Deinnococus Radiodurans or the Tardigrade could be engineered, we decided to improve a plasmid that can give the most common synthetic biology chassis, E. Coli, the necessary resilience in specific environments.</p>
+
+                    <p class="text-content-new">We also learnt that much research has been focusing on decreasing the mass of materials and electronics by engineering microbes that can print the necessary components. To this end, our biological light switches can be integrated into ‘growing’ electronics through light guidance.</p>
 
 
                     <p class="text-content-new">For instance, Lunar regolith bio-mining of silicates and metal oxides is a current active area of research. Taking it a step further and engineering bacteria to not only harvest silicates and produce biosilica, but also form desired structures and bind this biomaterial could be used to generate silicon semiconductors and circuit boards.</p>
