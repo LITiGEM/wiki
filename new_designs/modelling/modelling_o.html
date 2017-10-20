@@ -22,55 +22,6 @@
     <script>
 
         $(document).ready(function(){
-            //Take your div into one js variable
-            var s1 = $("#step1");
-            var s2 = $("#step2");
-            var s3 = $("#step3");
-            var s4 = $("#step4");
-
-            //Take the current position (vertical position from top) of your div in the variable
-            var pos = s1.position();
-            var pos1 = s2.position();
-            var pos2 = s3.position();
-
-            //Now when scroll event trigger do following
-            $(window).scroll(function () {
-
-                scrollFunction()
-
-                var windowpos = $(window).scrollTop();
-                //console.log(windowpos);
-
-                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-                if (windowpos >= (pos.top + 100)) {
-                    // div.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s1.addClass("active-link");
-                }
-
-                if (windowpos >= (pos1.top + 750)) {
-                    // div1.addClass("AfterScroll");
-                    s1.removeClass("active-link");
-                    s3.removeClass("active-link");
-                    s2.addClass("active-link");
-
-                }
-
-                if (windowpos >= (pos2.top + 1100)) {
-                    //div2.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s3.addClass("active-link");
-                }
-
-            });
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
-            }
 
             $("#golit").click(function(){
                 $("#hidden-golit").fadeIn("slow");
@@ -125,7 +76,7 @@
 
     .overlay-here {
         top:32.5% !important;
-        height:35%;
+        height:40%;
         width: 100%;
     }
 
@@ -145,10 +96,10 @@
     .modelling-intro {
         position:relative;
         max-width:80%;
-        font-size: 1.5vw;
+        font-size: 1.5vw !important;
         text-align: center;
         color: white;
-        font-family: Lato;
+        font-family: Lato !important;
         padding: 5% 3% 10% 20%;
         margin:0 !important;
     }
@@ -271,7 +222,7 @@
                     <!--    <img style="height: 80%; width:90%; margin:10% 0 10% 7%" src="../assets/OptoFlux/Opto_overview.png" class="image-content-here">
 -->
                         <div class="overlay overlay-here">
-                            <p style="font-size: 1.7vw;padding-bottom:5%; color:#030016" class="HP-title">Modelling the shape and dimensions of the LIT bulb</p>
+                            <p style="font-size: 1.7vw;padding-bottom:5% !important; color:#030016" class="HP-title">Modelling the shape and dimensions of the LIT bulb</p>
                         </div>
 
                     </div>
@@ -315,73 +266,6 @@
 
                 </div>
 
-
-               <!-- &lt;!&ndash; Philosophy and aims&ndash;&gt;
-                <div class="row">
-                    <div class="text-section col-sm-8">
-
-                        <h1 class="title">The Modelling of LIT</h1>
-
-                        <h2 class="subtitle">Philosophy and exciting nerdy stuff</h2>
-
-
-						<p class="text-content-duo"> Our project focuses on optimizing the accuracy and speed of gene-activation
-							with the use of light. We call this a light-activated switch. We introduced our
-							light-activated switches into different biological systems to activate cell adhesion.
-
-							We created 3 types of biological light-activated switches that were
-							applied to highly innovative, and very different applications involving cell
-							adhesion: organ printing, illumination and architecture (even on Mars).
-						</p>
-
-						<p class="text-content-duo modelling-steps-intro"> We created mathematical models to simulate the biological
-							processes our optogenetic tools were activating or supressing.
-							More specifically, we concentrated on the interplay of
-							cellular mechanisms and determined the parameters
-							involved in their functioning optimally. Our models allowed us to:</p>
-
-                         <ul class="list-section">
-
-							 <li class="list-item-content"> Gain a better understanding of the biology and chemistry behind the effects
-								 our optogenetic tools have on our engineered cells. This enabled us to
-								 prepare Wet Lab experiments </li>
-							 <li class="list-item-content"> Conduct a Cost Analysis of our optogenetic tools</li>
-                             <li class="list-item-content"> Create a 3D design of our LIT bulb </li>
-                             <li class="list-item-content"> Introduce a novel mathematical modelling method by combining ODEs
-								 for gene expression and cellular automata for spatial analysis</li>
-                             <li class="list-item-content"> Confirm, with real life experimental data, the robustness of our models</li>
-                         </ul>
-
-                        <p class="text-content-duo modelling-steps-intro">Once we created our biological models, we decided to challenge
-							the conventional way modellers tackle the problem of parameter
-							optimization. To do so, we used:</p>
-                        <ul class="list-section">
-                            <li class="list-item-content">Genetic algorithms</li>
-                            <li class="list-item-content">Parameter sampling</li>
-                            <li class="list-item-content">Sensitivity analysis</li>
-                        </ul>
-
-                        <p class="text-content-duo modelling-steps-intro">To be mind-blown, scroll down or click here<a id="godown" href="#golit"><span class="glyphicon glyphicon-chevron-down"></span></a></p>
-                    </div>
-
-                    <div class="picture-section-right col-sm-3">
-                        <p class="modelling-steps-intro">To find out more about the applications,<a href="#"> click here.</a></p>
-
-                        <img src="../assets/icon-bulb.png" class="image-content-icons">
-                        <img src="../assets/icon-organ.png" class="image-content-icons">
-                        <img src="../assets/icon-barc.png" class="image-content-icons">
-                    </div>
-
-                </div>
-
-		in inaccessible places. </p>
-
-
-
-
-                <!-- OPTOFLUX -->
-
-        <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
     </div>
 </div>
