@@ -23,64 +23,6 @@
     <script>
 
         $(document).ready(function(){
-           /* //Take your div into one js variable
-            var s1 = $("#step1");
-            var s2 = $("#step2");
-            var s3 = $("#step3");
-            var s4 = $("#step4");
-
-            //Take the current position (vertical position from top) of your div in the variable
-            var pos = s1.position();
-            var pos1 = s2.position();
-            var pos2 = s3.position();
-            var pos3 = s4.position();
-
-            //Now when scroll event trigger do following
-            $(window).scroll(function () {
-
-                scrollFunction()
-
-                var windowpos = $(window).scrollTop();
-                //console.log(windowpos);
-
-                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-                if (windowpos >= (pos.top + 100)) {
-                    // div.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s1.addClass("active-link");
-                }
-
-                if (windowpos >= (pos1.top + 750)) {
-                    // div1.addClass("AfterScroll");
-                    s1.removeClass("active-link");
-                    s3.removeClass("active-link");
-                    s2.addClass("active-link");
-
-                }
-
-                if (windowpos >= (pos2.top + 1100)) {
-                    //div2.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s4.removeClass("active-link");
-                    s3.addClass("active-link");
-                }
-
-                if (windowpos >= (pos3.top + 1300)) {
-                    //div2.addClass("AfterScroll");
-                    s3.removeClass("active-link");
-                    s4.addClass("active-link");
-                }
-
-            });
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
-            }
-*/
 
             $("#button-arc").click(function(){
                 $("#hidden-architects").slideToggle("slow");
@@ -127,10 +69,6 @@
         margin:30% 0 32% 30%;
     }
 
-    .overlay-here {
-
-        background-color: transparent;
-    }
     .overlay-buttons-here {
         top:78%;
         right: 42.5% !important;
@@ -143,8 +81,9 @@
         color: black;
     }
 
+
     #button-arc, #button-arup, #button-tfl, #button-esa, #button-insta {
-        margin:5% 0 0 50%;
+        margin:5% 0 0 20%;
         border: none;
     }
 
@@ -242,9 +181,11 @@
         <nav id="side-index" class="col-sm-2">
             <ul  class="nav nav-stacked" data-spy="affix" data-offset-top="205">
                 <li id="step1" class="navy-link side-link"><a href="#aesthetics">Aesthetics</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#stakes">Architects</a></li>
-                <li id="step4" class="navy-link side-link"><a href="#tfl">Transport for London</a></li>
-                <li id="step5" class="navy-link side-link"><a href="#space">European Space Agency</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#stakes">Architects</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#tfl">Transport for London</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#space">ESA</a></li>
+                <li id="step5" class="navy-link side-link"><a href="#space">Lessons learnt</a></li>
+
             </ul>
         </nav>
 
@@ -255,82 +196,77 @@
             <div class="row">
 
                 <!-- Instagram-->
-                <div style="margin-top: 3% !important; box-shadow: none;" class="col-sm-4 cols">
+                <a href="#aesthetics"><div style="margin-top: 3% !important; box-shadow: none;" class="col-sm-4 cols">
 
                     <div class="overlay">
-                        <p style="font-size: 1.7vw" class="HP-title">133 artists helped us prototype our bacterial light-bulb</p>
+                        <p style="font-size: 1.7vw" class="HP-title">133 artists helped us 3D print our prototype</p>
                     </div>
 
                     <img src="assets/insta1.jpg" class="image-content-here">
 
                     <img src="assets/HP-Rachael.png" style="height:125px !important;" class="image-content-here">
-                </div>
+                </div></a>
 
                 <!-- ESA & TfL -->
-                <div style="margin-top: 3% !important; box-shadow: none" class="col-sm-3 cols">
+                <a href="#space"><div style="margin-top: 3% !important; box-shadow: none" class="col-sm-3 cols">
 
-                    <div class="overlay overlay-here">
-                       <!-- <p style="font-size: 1.8vw" class="HP-title">The European Space Agency shaped our Gold BioBrick</p>-->
+                    <div class="overlay">
+                        <p style="font-size: 1.5vw" class="HP-title">With ESA's help we shaped our Gold Medal biobrick</p>
                     </div>
 
                     <img src="assets/icon-esa.png" class="icons-here">
 
-                    <div class="overlay overlay-here">
-                        <!--<p style="font-size: 1.8vw" class="HP-title">Transport for London guided us on our bulb prototype</p>-->
+                    <div style="margin-top:90%" class="overlay">
+                        <p style="font-size: 1.5vw" class="HP-title">We learnt from TfL about deploying the bulb in real life</p>
                     </div>
 
                     <img src="assets/icon-tfl.png" class="icons-here">
 
-                </div>
+                </div></a>
 
                 <!-- Architects-->
-                <div style="margin-top: 3% !important; box-shadow: none" class="col-sm-4 cols">
+                <a href="#stakes"><div style="margin-top: 3% !important; box-shadow: none" class="col-sm-4 cols">
 
                     <div class="overlay">
-                        <p class="HP-title">With the Barchitects</p>
+                        <p class="HP-title">What do architects need from LIT?</p>
                     </div>
 
                     <img src="assets/HP-Beckett1.jpg" class="image-content-here">
 
-                </div>
-
+                </div></a>
 
                 <!-- ARUP -->
-                <div style="float:left;box-shadow: none; margin-bottom: 5% !important;" class="col-sm-4 cols">
+                <a href="#arup"><div style="float:left;box-shadow: none; margin-bottom: 5% !important;" class="col-sm-4 cols">
 
                     <div class="overlay overlay-here">
-                        <p style="font-size:1.6vw" class="HP-title">We meet ARUP to find applications of Barchitecture in construction</p>
+                        <p style="font-size:1.5vw" class="HP-title">ARUP were interested in using Barchitecture in construction</p>
                     </div>
 
                     <img src="assets/HP-arup.jpg" class="image-content-here">
 
-                </div>
+                </div></a>
 
                 <!-- Instagram again-->
-                <div style="float:left;box-shadow: none; margin-bottom: 5% !important;" class="col-sm-3 cols">
+                <a href="#aesthetics"><div style="float:left;box-shadow: none; margin-bottom: 5% !important;" class="col-sm-3 cols">
 
                     <div class="overlay overlay-here">
-                        <p style="font-size:1.6vw" class="HP-title">We meet ARUP to find applications of Barchitecture in construction</p>
+                        <p style="font-size:1.4vw" class="HP-title">78,000 people learnt about a new type of light bulb</p>
                     </div>
 
                     <img src="assets/insta2.jpg" class="image-content-here">
 
-                </div>
-
+                </div></a>
 
                 <!-- ESA again -->
-                <div style="float:left; margin-bottom: 5% !important;" class="col-sm-4 cols">
+                <a href="#space"> <div style="float:left; margin-bottom: 5% !important;" class="col-sm-4 cols">
 
                     <div class="overlay">
-                        <p style="font-size:1.6vw" class="HP-title">We meet ARUP to find applications of Barchitecture in construction</p>
+                        <p style="font-size:1.5vw" class="HP-title">Barchitecting from Earth to the Moon</p>
                     </div>
 
                     <img src="assets/HP-esa.png" class="image-content-here">
 
-                </div>
-
-
-
+                </div></a>
 
 
             </div>
@@ -340,12 +276,26 @@
 
                 <div style="border-left:none; border-right:none; border-bottom:none" class="text-section col-sm-7">
 
-                    <h1 class="title">Artists design light-induced technologies</h1>
+                    <h1 class="title">Artists make our LIT pretty</h1>
 
-                    <p class="text-content-new">We organised a competition on Instagram to consider the design of our bacterial bulb when deploying it in real life, reaching 78,000 people and receiving 133 submissions.  With the help of the artists, we developed a prototype, choosing designs that considered the safety and social implications of our bacterial light bulb.</p>
+                    <p class="text-content-new">We called for artists on Instagram to help us design an aesthetically pleasing bacterial bulb, reaching 78,000 people and receiving 133 submissions. Their designs informed our prototype and we integrated their sketches in our OptoFlux mathematical model and our entrepreneurship designs.  The best ones considered safety and the social implications of deploying a bacterial light bulb in real life.</p>
 
                     <button id="button-insta" type="button" class="btn btn-default btn-sm">
-                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                        <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                    </button>
                 </div>
 
                 <div class="picture-section-right col-sm-4">
@@ -354,19 +304,17 @@
 
                 <div style="margin-top: 30px" id="hidden-insta" class="col-sm-10">
 
-                    <p class="text-content-new">We organised a competition on Instagram to consider the design of our bacterial bulb when deploying it in real life, reaching 78,000 people and receiving 133 submissions.  With the help of the artists, we developed a prototype, choosing designs that considered the safety and social implications of our bacterial light bulb.</p>
+                    <p style="padding-top: 5%" class="text-content-new"><a href="https://www.instagram.com/the_art_competition/?hl=en" style="text-decoration: none !important">the_art_competition</a> organises weekly art competitions on different topics, reaching to 78,000 followers. Together we wanted to encourage artists to think about how complex the implementation of synthetic biology technologies can be in real life and how they may influence this process. So, we designed the Instagram competition to have artists ask themselves new questions and for us to learn what aesthetics could be incorporated into the bacterial light bulb.</p>
 
                     <img src="assets/HP-insta3.jpg" style="margin-left:7.5%; margin-right: 0 !important; display:inline-block" class="image-content-hidden">
 
                     <img src="assets/HP-insta0.jpg" style="margin-left: 0 !important; display:inline-block" class="image-content-hidden">
 
-                    <p class="text-content-new">the_art_competition organises  weekly art competitions on different topics, with 78,000 followers. Together we wanted to offer people a chance to think about how complex the implementation of synthetic biology technologies can be. Also, we wanted our interaction of be bidirectional and obtain help with the design our our bulb.</p>
-
                     <p class="text-content-new">We asked participants to consider in their submissions societal impacts, where the bulbs would function (private or public spaces?), the aesthetics and a future where bacteria are more integrated in our lives (awesome or dystopic?).</p>
 
                     <p class="text-content-new">Entries were very well thought out, with designs clearly depicting co-culturing of E. coli and cyanobacteria as well as its potential usage in private and public spaces.</p>
 
-                    <img src="assets/HP-insta2.jpg" class="image-content-hidden">
+                    <img style="margin-left:30%" src="assets/HP-insta2.jpg" class="image-content-hidden">
 
                     <p class="text-content-new">We selected a winner based on the thoughtfulness shown in the design and the number of likes.  The design was taken as the starting point for our mathematical modelling, to see how we can combine aesthetic and engineering requirements into a prototype.</p>
 
@@ -389,12 +337,27 @@
                     <p style="padding-left: 15%; padding-right:0" class="text-content-new">We talked to Dr Ralph Müller and Jan from the ESA to see how we could extend the use of bacterial architecture from Earth to outer space, in the end influencing what Biobrick we improved for our Gold Medal. The initial premise was that taking large amounts of building material when colonising new planets would be inefficient. Then, we moved onto other uses of our bacteria in space. </p>
 
                     <button id="button-esa" type="button" class="btn btn-default btn-sm">
-                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                        <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+
+                    </button>
                 </div>
 
                 <div id="hidden-esa" class="col-sm-10">
 
-                    <p class="text-content-new">Our conversation revealed that there is a need for organisms sent into space to be resistant to extreme environments. So, we decided to characterise the application of the IrrE biobrick to enable E. Coli cells to resist some of the conditions found in extreme environments, contributing to our Gold Medal criteria (link).</p>
+                    <p class="text-content-new">Our conversation revealed that there is a need for organisms sent into space to be resistant to extreme environments. So, we decided to characterise the application of the IrrE biobrick to enable E. Coli cells to resist some of the conditions found in extreme environments, contributing to our <a href="http://2017.igem.org/Team:UCL/Part_Improvement">Gold Medal criteria</a>.</p>
 
                     <img src="assets/HP-esa.png" style="height:50%; width:50%; margin:0 0 0 22.5%" class="image-content-here">
 
@@ -418,7 +381,21 @@
                     <p style="padding: 5% 5% 0 10%" class="text-content-new">We contacted two practicing architects with experience in combining biology and architecture to understand needs in the field and how our Barchitecture application could address them. After our conversations, we changed our focus from small scale to large scale 3D structures.</p>
 
                     <button id="button-arc" type="button" class="btn btn-default btn-sm">
-                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                        <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                    </button>
                 </div>
 
                 <div class="picture-section-right col-sm-5">
@@ -427,7 +404,7 @@
 
                 <div style="margin-top: 30px" id="hidden-architects" class="col-sm-10">
 
-                    <p class="text-content-new"> Our first conversation was with Richard Beckett, a practicing architect from the Bartlett School of Architecture. After discussing our vision for architectural structures made from bacteria, we considered two directions for our Barchitecture technology"</p>
+                    <p class="text-content-new"> Our first conversation was with Richard Beckett, a practicing architect from the Bartlett School of Architecture. After discussing our vision for architectural structures made from bacteria, we considered two directions for our Barchitecture technology.</p>
 
                     <ul class="list-section">
                         <li class="list-item-content"><b>Academic architecture</b>, where a bacterial 3D printing system would be a tool to develop concepts and prototypes.</li>
@@ -436,16 +413,16 @@
 
                     <img src="assets/HP-Rachael.png" style="height:60%; width:60%; margin: 0 0 0 17%" class="image-content-here">
 
-                    <p class="text-content-new">These ideas lead us to get in touch with Rachael Armstrong – a former TED Fellow who explores the intersection of biology and architecture.</p>
+                    <p class="text-content-new">These ideas lead us to get in touch with Rachael Armstrong – a former TED Fellow who explores the intersection of biology and architecture. Our Skype call was beneficial to learn about thinking on larger scales in terms of both time and space. So, we formulated a vision for our Barchitecture application that would incorporate living organisms in buildings that could create structures from bacteria depending on natural and artificial light cycles. </p>
 
-                    <p class="text-content-new">Our Skype call was beneficial in terms of thinking about the scales on which architects work in terms of both time and space. The feedback obtained in the meeting was very supportive of trying to use bacteria to form structures.</p>
+                    <p class="text-content-new">The next steps to take would be to experiment with our cells and different materials and see how light-guided adhesion could benefit other structures. We encourage future iGEM teams to get in touch with more architects and develop prototypes for the classic architecture critique sessions.</p>
 
 
                 </div>
 
 
             </div>
-`
+
             <!-- TfL -->
             <div id="tfl" class="row">
 
@@ -454,49 +431,78 @@
                 </div>
 
                 <div style="border-left:none; border-right:none; border-bottom:none" class="text-section col-sm-7">
-                    <h1 style="padding-left: 15%; padding-right:0" class="title">Implementing bacterial bulbs on the streets of London - a practical guide</h1>
+                    <h1 style="padding-left: 15%; padding-left:15% !important;" class="title">Implementing bacterial bulbs on the streets of London - a practical guide</h1>
                     <p style="padding-left: 15%; padding-right:0" class="text-content-new">We contacted a bioluminescence start-up, an artist and Transport for London about the challenges in bioluminescent bulbs and what criteria our bacterial light-bulb would need to meet to be deployed as street lamps on London’s roads. We then used the relevant information to tailor our mathematical modelling and entrepreneurship.</p>
 
                     <button id="button-tfl" type="button" class="btn btn-default btn-sm">
-                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                        <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                    </button>
                 </div>
 
                 <div style="margin-top: 30px" id="hidden-tfl" class="col-sm-10">
 
-                    <p class="text-content-new">Our conversations with relevant stakeholders to bioluminescent bacteria gave us ideas to produce DIY kits to implement bioluminescence in daily life and insight into how to deploy the light bulb on the streets of London.</p>
+                    <p style="margin-top: 30px" class="text-content-new">Our conversations with relevant stakeholders to bioluminescent bacteria gave us ideas to produce <span style="color:#ff9a78">DIY kits</span> to implement <span style="color:#81adff">bioluminescence in daily life</span> and insight into <span style="color:#966eff">how to deploy the light bulb on the streets</span> of London.</p>
 
                     <img src="assets/rejection.jpg" style="height:20%; width:20%; margin: 0 0 0 35%" class="image-content-here">
 
-                    <p class="text-content-new">After Glowee decided that they’re too cool for school, we reached to Teresa, a Dutch artist who designed and produced and bioluminescent light-bulb with bacteria.</p>
+                    <p class="text-content-new">After Glowee decided that they’re too cool for school, we reached to Teresa van Dongen, a Dutch artist who designed and produced a bioluminescent light-bulb with bacteria - <a href="http://teresavandongen.com/ambio">Ambio</a>.</p>
 
-                    <p class="text-content-new">Our intention was to learn about her experience with bioluminescent bacteria and more importantly, about the human-centred aspects of such a product: aesthetics, use and safety. We talked about the engineering aspects that she experimented with and started a conversation about what potential biological light switches have for the future of design.</p>
+                    <p class="text-content-new">We learnt about her experience with bioluminescent bacteria and more importantly, about the human-centred aspects of such a product: aesthetics, use and safety. We talked about the engineering aspects that she experimented with and started a conversation about what potential biological light switches have for the future of design.</p>
 
-                    <p class="text-content-new">The Skype call led to an idea of creating DIY kits, giving people the possibility to build their own bacterial powered light-bulb, making this new concept more exciting and pushing more people to want to learn about the science behind bioluminescent organisms. Also, Teresa pointed us in the direction of ambient lights as an application for our bacterial bulb – one idea to be pursued in the lab was to engineer biological light switches that can adjust bulb luminosity to various degrees, working in an analog fashion.</p>
+                    <p class="text-content-new">The Skype call led to an idea of creating DIY kits, giving people the possibility to build their own bacterial powered light-bulb, making this new concept more exciting and pushing more people to want to learn about the science behind bioluminescent organisms.</p>
 
-                    <p class="text-content-new">We also felt that the potential in our application is to contribute to initiatives that promote sustainable living and alternative energy. So, after the Instagram competition that inspired our mathematical modelling and prototype, we considered engaging with stakeholders that would use bacterial light bulbs for street illumination. We reached to the City of Westminster Council and Transport for London to learn about the needs and requirements for a bacterial light bulb to be implemented in real life.</p>
+                    <p class="text-content-new">We also felt that our bacterial bulb could contribute to sustainable living and alternative energy. So, after the Instagram competition that inspired our mathematical modelling and prototype, we considered engaging with stakeholders that would use bacterial light bulbs for street illumination. We reached to the City of Westminster Council and Transport for London to learn about the needs and requirements for a bacterial light bulb to be implemented in real life.</p>
 
-                    <p class="text-content-new">With the later we established a conversation about how a bacterial light bulb can be deployed as street lamps. Our aim was to integrate the outcomes of this discussion in the design and entrepreneurship related to the light bulb.</p>
+                    <p class="text-content-new">With the later we talked about how to deploy bacterial light bulbs as street lamps. We integrated the outcomes of this discussion in the design and entrepreneurship related to the light bulb.</p>
 
+                    <img src="assets/tfl-email.jpg" style="height:60%; width:60%; margin-left: 15%" class="image-content-here">
 
-                    <p class="text-content-new">Transport for London is responsible for the illumination of 5% of the city’s roads. A rough estimation suggests that 1213mW (can we estimate this number?) are consumed per day to illuminate these streets. The whole system is centralised through a computerised system that monitors consumption and lighting hours.</p>
+                    <p class="text-content-new">Transport for London is responsible for the illumination of 5% of the city’s roads. A rough estimation suggests that 1213mW () are consumed per day to illuminate these streets. The whole system is centralised through a computerised system that monitors consumption and lighting hours.</p>
 
-                    <p class="text-content-new">Currently, TfL uses both standard and LED bulbs. Standard bulbs are changed once every year, while they are in the process of replacing all the bulbs with LEDs – quite a lengthy ongoing process. With the opportunity for new technology, TfL considers the cost, longer-term energy savings, maintenance, ability to dim the lighting according to time of day and the ability to meet lighting level requirements. We were also interested in the challenges that they faced now: lowering energy consumption is a top priority; complaints about broken bulbs, lights shining into property and the brightness of lights.</p>
+                    <p class="text-content-new">We learned that currently, with the opportunity for new technology, TfL considers the <b>cost</b>, <b>longer-term energy savings</b>, <b>maintenance</b>, <b>ability to dim the lighting according to time of day</b> and the <b>ability to meet lighting level requirements</b>. We were also interested in the challenges that they faced now: lowering energy consumption as a top priority; complaints about broken bulbs, lights shining into property and the brightness of lights.</p>
 
-                    <p class="text-content-new">All this information contributed to our entrepreneurship analysis, which considered the needs and challenges. At the end, we submitted to TfL a short proposal for review, outlining our bacterial light-bulb and the technology.</p>
+                    <p class="text-content-new">All this information contributed to our entrepreneurship analysis, in the form of the needs and challenges to be addressed. At the end, we submitted to TfL a short proposal for review, outlining our bacterial light-bulb and the technology. The next step is to go through a few iterations in collaboration with TfL and to improve on the current prototype.</p>
                 </div>
 
             </div>
 
             <!-- ARUP -->
-            <div class="row">
+            <div id="arup" class="row">
                 <div style="border-left:none; border-right:none; border-bottom:none" class="text-section col-sm-6">
 
                     <h1 class="title">ARUP - how to construct with bacteria</h1>
 
-                    <p class="text-content-new">At ARUP we presented our idea of how Barchitecture can help overcome the depletion of raw materials, the increasing need to create sustainable buildings and the need for rapid structure building in the case of natural disasters.</p>
+                    <p class="text-content-new">At ARUP we presented our idea of Barchitecture helping overcome the depletion of raw materials, the increasing need to create sustainable buildings and the need for rapid structure building in the case of natural disasters. We produced a document to take the idea to a design phase with engineers from ARUP.</p>
 
                     <button id="button-arup" type="button" class="btn btn-default btn-sm">
-                        <span class="glyphicon glyphicon-menu-down infos-here"></span></button>
+                        <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                    </button>
                 </div>
 
                 <div class="picture-section-right col-sm-5">
@@ -514,71 +520,13 @@
 
             </div>
 
-
-           <!-- <div id="aesthetics" class="row">
-
-                <div class="text-section col-sm-7">
-
-                    <h1 class="title">The aesthetics of light technologies</h1>
-
-                    <p class="text-content-duo HP-intros">Deploying a bacterial light-bulb in real life can face major challenges: will people find it attractive enough to be on the streets? Can the engineering requirements meet the aesthetic ones? Where do we make compromises between the 2?</p>
-
-                    <p class="text-content-duo">Through our Instagram competition, reaching 78,000 followers, we wanted participants to consider relevant aspects of deploying a bacterial light bulb in real life and submit designs for our prototype.</p>
-
-                    <p class="text-content-duo">Entries, a final 3D-printed version of the bulb and tips for future iGEMers.</p>
-                </div>
-
-                <div class="picture-section-right col-sm-4">
-                    <img src="assets/bulb.png" class="image-content-here">
-                </div>
+            <!-- Lessons learnt -->
+            <div id="lessons" class="row">
 
             </div>
 
-
-
-            &lt;!&ndash; Blue Alpha &ndash;&gt;
-            <div class="row">
-                <div class="text-section col-sm-11">
-                    <h1 class="title">Blue Alpha</h1>
-                    <p class="text-content-duo HP-intros">In the early stages of the Barchitecture application, we consulted Blue Alpha – a company that specializes in PHB production for a variety of applications. We gained insight into small and large scale applications and the market demand. All the information shaped the direction in which our technology would be headed and informed our decisions on the entrepreneurial front.</p>
-                    <p class="text-content-duo">One important idea emerged from our conversation. We were advised that as PHB is a biocompatible polymer, a direction could be to produce PHB-based medical implants. Via accurate light control, we could 3D print small biocompatible implants, such as veins. However, we chose to focus on large scale structures. Our motivation was twofold: the very promising feedback obtained from practicing architects and the material properties of bacterially-produced PHB, which are less suitable for medical implants, as Blue Alpha informed us.</p>
-
-                </div>
-            </div>
-
-
-            &lt;!&ndash; EUROPEAN SPACE AGENCY &ndash;&gt;
-            <div id="space" class="row">
-                <div class="text-section">
-                    <h1 class="title">European Space Agency</h1>
-                    <p class="text-content">We wanted to extend the use of bacterial architecture from Earth to outer space. The initial premise was that taking large amounts of building material when colonising new planets would be inefficient. To know about the challenges of deploying our barchitecture technology in space, we contacted the European Space agency.</p>
-                    <p class="text-content">After discussing how biological light switches can shape architecture in space, very interesting outcomes came out:</p>
-
-                    <ul class="list-section">
-                        <li class="list-item-content">We decided jointly with our bulb project to find a way for cells to survive in extreme environments. So, we characterised the application of the IrrE biobrick for these purposes, contributing to our Gold Medal criteria (link).</li>
-                        <li class="list-item-content">Research has focused on decreasing the mass of materials and electronics by engineering microbes that can print the necessary components. To this end, our biological light switches can be integrated into ‘growing’ electronics through light guidance.</li>
-                    </ul>
-
-                    <p class="text-content">For instance, Lunar regolith bio-mining of silicates and metal oxides is a current active area of research. Taking it a step further and engineering bacteria to not only harvest silicates and produce biosilica, but also form desired structures and bind this biomaterial could be used to generate silicon semiconductors and circuit boards.</p>
-
-                </div>
-            </div>
-
-            &lt;!&ndash; UK MEET-UP &ndash;&gt;
-            <div id="meetup" class="row">
-                <div class="text-section">
-                    <h1 class="title">UK iGEM 2017</h1>
-                    <p class="text-content">Together with the Warwick and Westminster iGEM teams, we hosted the UK 2017 iGEM Meet-up. Besides the usual project presentations and talks, we tested an idea developed from the very start of the project: what tools should one use to choose an iGEM project?</p>
-                    <p class="text-content">At the start of our project, many ideas and projects were discussed, debated and pondered upon. What perhaps needed some more consideration, was how do we think about the project development in terms of ethical, safety and societal considerations? What directions should be pursued?</p>
-                    <p class="text-content">To see what a good way to engage in such a thought experiment would be, we organised debates between UK’s iGEM teams on synthetic biology matters. Topics ranged from whether synthetic biology should be merged with AI, to whether there should be a limit on what can be genetically engineered, to who should own the intellectual property of scientific developments.</p>
-
-                </div>
-            </div>
--->
 
         </div>
-
-        <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
 </div>
 
