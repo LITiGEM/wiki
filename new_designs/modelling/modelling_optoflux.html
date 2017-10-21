@@ -85,7 +85,7 @@
         height:600px;
         width:550px;
     }
-
+    /* style for the tables */
     table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
@@ -202,24 +202,22 @@
         <div style="float: right !important" class="col-sm-10">
 
             <div class="text-section" style="border: none">
-                <h1 class="title" style="font-size:50px; max-width:80%;">OptoFlux - Making designing a breeze</h1>
+                <h1 class="title" style="font-size:40px; max-width:80%;">OptoFlux - Making designing a breeze</h1>
                 <h2 class="subtitle" style="margin-left:5px!important; margin-top:5px!important; margin-bottom:15px!important"> A mathematical model that optimizes the dimensions of the LIT bulb to maximize its productivity</h2>
             </div>
 
-            <h2 class="title"  id="section1" style="margin-top: 15px!important; padding-top:0!important; margin-left: 5px!important; margin-bottom:10px!important">Model Aims</h2>
+            <h1 class="title"  id="section1">Model Aims</h1>
             <p class="text-content" style="margin-top:10px!important">1. Determine the optimum concentration of Cyanobacteria cells in the LIT bulb</p>
             <p class="text-content">2. Determine the concentration of E.coli cells required in the LIT bulb in order to produce a luminescence of 160W</p>
             <p class="text-content">3. Determine the diameter of the LIT bulb</p>
             <p class="text-content">4. Design a 3D prototype of the LIT bulb</p>
 
-            <div class="text-section">
+            <div class="text-section" style="border: none">
               <h1 class="title">The Science behind the LIT bulb</h1>
-
                 <p class="text-content-duo" style="max-width:80%"> We developed our OptoFlux model to determine the optimum shape for our LIT bulb.
                     The LIT bulb is powered by the co-culture of photosynthesising Cyanobacteria cells and luminescing E.coli cells.
                     In order to maximize the amount of luminescence our E.coli cells can produce we need to maximize the amount of photosynthesis
                     taking place by the Cyanobacteria cells.</p>
-
                 <p class="text-content-duo col-sm-4" style="padding-bottom:0; margin-left:150px!important; padding-right:0 "> Essentially, when the Cyanobacteria cells photosynthesise they produce glucose. A portion of the glucose they
                     produce is then taken up by the E.coli cells to produce luminescence. OptoFlux works by ensuring the rate of photosynthesis is the same
                     in all the cells regardless of their position in the LIT bulb, hence it assumes that the same light intensity will reach all the cells.
@@ -227,26 +225,23 @@
                     Finally, we used the optimal dimensions obtained from OptoFlux to create a 3D model of our LIT bulb in Autodesk Fusion 360.</p>
 
                 <div class="picture-section-right col-sm-3" style="margin-left: 50px; padding-right:5px; padding-top:0; border:none">
-                        <img src="../assets/OptoFlux/Opto_overview.png" class="image-content-graphs" style="width: 320px; height: 250px; padding-top: 0px; padding-left:0px!important; margin-left:0p">
-                        <p class="text-content" style="padding-left:0px!important;padding-top: 0; margin-top: 5px!important; padding-bottom: 0; max-width:100%">Figure 1: Co-culture in LIT bulb</p>
+                        <img src="../assets/OptoFlux/Opto_overview.png" class="image-content-graphs" style="width: 400px; height: 280px; padding-top: 15px; padding-left:0!important">
+                        <p class="text-figure" style="padding-left:0px!important;padding-top: 0; margin-top: 5px!important; padding-bottom: 0; max-width:100%">Figure 1: Co-culture in LIT bulb</p>
                 </div>
-
-
-
              </div>
 
-            <div class="text-section col-sm-10">
+            <div class="text-section col-sm-10" style="border: none">
 
-            <h1 class="title" style="margin-top: 0px; padding-top: 30px; margin-left: 15px!important">Outlining the steps for the LIT bulb design</h1>
+            <h1 class="title" style="margin-top: 0; padding-top: 30px; margin-left: 15px!important">Outlining the steps for the LIT bulb design</h1>
                 <p class="text-content" style="margin-left: 15px!important; max-width:100%"> <b>Step 1:</b> Use OptoFlux to deterimine the optimal LIT bulb diameter that maximizes the amount of glucose produced</p>
                 <p class="text-content" style="margin-left: 15px!important; max-width:100%"> <b>Step 2:</b> Determine the number of E.coli cells required to produce a high enough luminescence which can compete with a conventional 160W light bulb </p>
                 <p class="text-content" style="margin-left: 15px!important; max-width:100%"> <b>Step 3:</b> Evaluate if the amount of glucose produced from the Cyanobacteria cells is sufficient to culture the required number of E.coli cells </p>
 
             </div>
 
-            <div class="text-section col-sm-10">
+            <div class="text-section col-sm-10" style="border: none">
 
-                <h1 class="title" style="margin-top: 0px; padding-top: 30px; margin-left: 15px!important; margin-bottom:15px!important">Step 1: Use OptoFlux to deterimine the optimal LIT bulb diameter that maximizes the amount of glucose produced</h1>
+                <h1 class="title" style="margin-top: 0; padding-top: 30px; margin-left: 15px!important; margin-bottom:15px!important">Step 1: Use OptoFlux to deterimine the optimal LIT bulb diameter that maximizes the amount of glucose produced</h1>
                 <h2 class="subtitle" style="margin-top: 15px!important; margin-bottom:15px!important; padding-top: 0px; margin-left: 15px!important"> Modelling step outline</h2>
 
                 <p class="text-content" style="margin-left: 15px!important; max-width:100%"> 1) Determine the Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</p>
@@ -254,9 +249,9 @@
                 <p class="text-content" style="margin-left: 15px!important; max-width:100%"> 3) Determine the rate of photon uptake by the  Cyanobacteria cells at each position in the LIT bulb</p>
                 <p class="text-content" style="margin-left: 15px!important; max-width:100%"> 4) Determine the average sugar production rate at each position in the LIT bulb</p>
 
-                <h1 class="title" style="margin-top: 0px; padding-top: 30px; margin-left: 15px!important">Modelling steps</h1>
-                <h1 class="subtitle" style="margin-top: 0px; padding-top: 30px; margin-left: 15px!important">1) Determine the Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</h1>
-                <img id="special-image-1" src="../assets/OptoFlux/Optoflux_d1.png" class="image-content-graphs" style="width: 900px ;height:450px; margin-left:15px!important" >
+                <h1 class="title" >Modelling steps</h1>
+                <h1 class="subtitle">1) Determine the Incoming Photon Flux Density (Iph) at the edge of the LIT bulb that is closest to the light source</h1>
+                <img id="special-image-1" src="../assets/OptoFlux/Optoflux_d1.png" class="image-content-graphs" style="width: 900px ;height:350px; margin-left:15px!important" >
 
                 <p class="text-content" style="padding-top:15px; max-width:100%; margin-left: 15px!important ">
                     We determined the number of photons entering our LIT bulb by employing the  <a href="glossary_o.html"> Planck-Einstein relationship </a>. This
@@ -266,24 +261,26 @@
                     that could take place by our Cyanobacteria cells.
                 </p>
 
-                <img src="../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width: 290px; height: 60px; margin-left: 260px!important">
+                <div class="equations">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$&space;I_{ph\lambda}0=&space;I_{ph}0&space;\times&space;EnL$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$&space;I_{ph\lambda}0=&space;I_{ph}0&space;\times&space;EnL$$" title="$$ I_{ph\lambda}0= I_{ph}0 \times EnL$$" /></a>
+                </div>
+                <!--<img src="../assets/OptoFlux/Iph_edge.png" class="image-content-graphs" style="width: 290px; height: 60px; margin-left: 260px!important">-->
 
                 <p class="text-content" style="margin-top: 0; padding-top:0;margin-left: 15px!important; max-width:100% ">Where:
                     <br>I<sub>ph<sub>λ</sub></sub> = Incoming photon flux density at a particular wavelength (λ)
                     <br>I<sub>ph</sub> = Total Incoming photon flux density over the PAR light spectrum
-                    <br>E<sub>nl</sub> = Amount of light absorbed by the Cyanobacteria cells at different Iph values
-                </p>
-                <br>
+                    <br>E<sub>nl</sub> = Amount of light absorbed by the Cyanobacteria cells at different Iph values</p>
 
                 <h1 class="subtitle" style="margin-left:15px!important">2) Determine the Iph at each position in the LIT bulb</h1>
-                <img src="../assets/OptoFlux/Optoflux_d2.png" class="image-content-graphs" style="width: 900px ;height:450px; margin-left:15px!important" >
-                <br>
-                <br> <p class="text-content" style="margin-top: 0; padding-top:0; max-width: 100%; margin-left:15px!important"> We then decided to divide the LIT bulb into a number of imaginary segments (z),
+                <img src="../assets/OptoFlux/Optoflux_d2.png" class="image-content-graphs" style="width: 800px ;height:400px; margin-left:15px!important" >
+                <p class="text-content" style="margin-top: 0; padding-top:0; max-width: 100%; margin-left:15px!important"> We then decided to divide the LIT bulb into a number of imaginary segments (z),
                 and to determine the Iph entering each of the imaginary segments of the LIT bulb. This way, we could evaluate the number of photons
                 available for the photosynthesis of our Cyanobacteria cells at each position within the bulb.
                 <br>
-
-                <img src="../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:400px; height: 95px; padding-left: 0; margin-left: 120px!important">
+                <div class="equations">
+                <a href="http://www.codecogs.com/eqnedit.php?latex=$$I_{ph()z}=&space;\sum&space;^{700nm}_{400nm}&space;I_{ph\lambda}0\times&space;e^{-\alpha_{x\lambda}\times&space;C_x\times&space;z&space;\times&space;AF}\times&space;\Delta&space;\lambda$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$I_{ph()z}=&space;\sum&space;^{700nm}_{400nm}&space;I_{ph\lambda}0\times&space;e^{-\alpha_{x\lambda}\times&space;C_x\times&space;z&space;\times&space;AF}\times&space;\Delta&space;\lambda$$" title="$$I_{ph()z}= \sum ^{700nm}_{400nm} I_{ph\lambda}0\times e^{-\alpha_{x\lambda}\times C_x\times z \times AF}\times \Delta \lambda$$" /></a>
+                </div>
+                <!--<img src="../assets/OptoFlux/Iph_EachZone.png" class="image-content-graphs" style="width:400px; height: 95px; padding-left: 0; margin-left: 120px!important">-->
 
                 <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%">Where:
                     <br>α<sub>x,λ</sub> = Specific light absorption coefficient for Cyanobacteria cells
@@ -291,55 +288,57 @@
                     <br>z = Zone, i.e. Location in the LIT bulb
                     <br>AF = Accumulation Factor (accounts for the photoaccumulation state of the cells)
                     <br>Δλ = Wavelength intervals </p>
-                <br>
                 <h1 class="subtitle" style="margin-left:15px!important">3) Determine the rate of photon uptake by the  Cyanobacteria cells at each position in the LIT bulb</h1>
-                <img src="../assets/OptoFlux/Optoflux_d3.png" class="image-content-graphs" style="width: 900px ;height:450px; margin-left:15px!important">
+                <img src="../assets/OptoFlux/Optoflux_d3.png" class="image-content-graphs" style="width: 800px ;height:350px; margin-left:15px!important">
                 <br>
                 <br>
                 <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important">
                     We determined the photon uptake rate at each position in the LIT bulb using forward and backward
                     finite differences. The finite differences allowed us to estimate an approximation.</p>
 
-                <img src="../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:400px; height: 90px; margin-left:210px!important">
+                <!--<img src="../assets/OptoFlux/Photon_Uptake.png" class="image-content-graphs" style="width:400px; height: 90px; margin-left:210px!important">-->
+                <div class="equations">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$q_{ph}(z)=&space;\frac{I_{ph}(z&plus;\frac{1}{2&space;\Delta&space;z)})&space;-I_{ph}(z-\frac{1}{2&space;\Delta&space;z})}{Cx\times&space;\Delta&space;z}$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$q_{ph}(z)=&space;\frac{I_{ph}(z&plus;\frac{1}{2&space;\Delta&space;z)})&space;-I_{ph}(z-\frac{1}{2&space;\Delta&space;z})}{Cx\times&space;\Delta&space;z}$$" title="$$q_{ph}(z)= \frac{I_{ph}(z+\frac{1}{2 \Delta z)}) -I_{ph}(z-\frac{1}{2 \Delta z})}{Cx\times \Delta z}$$" /></a>
+                </div>
 
                 <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important">Where:
                     <br>Δ<sub>z</sub> = Distance between two positions in the LIT bulb
                     <br>q<sub>ph</sub>(z) = Rate of photon uptake by the Cyanobacteria cells at each position in the LIT bulb </p>
 
-                <br>
 
                 <h1 class="subtitle" style="margin-left:15px!important">4) Determine the average sugar production rate at each position in the LIT bulb</h1>
 
-                <img src="../assets/OptoFlux/Optoflux_d4.png" class="image-content-graphs" style="width: 900px ;height:450px; margin-left:15px!important">
+                <img src="../assets/OptoFlux/Optoflux_d4.png" class="image-content-graphs" style="width: 850px ;height:350px; margin-left:15px!important">
                 <p class="text-content"style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important">
                     <br> We determined the average rate of sugar production within the LIT bulb  by determining
-                    the specific rate of sugar production and the yield of biomass on sugar at each position in the bulb.
-                    <br>
-                    <br> Part 1: Finding the specific rate of sugar production at each position of the LIT bulb:</br></p>
-                <img src="../assets/OptoFlux/Specific_SugarProduction.png" class="image-content-graphs" style="width:400px; height: 90px; margin-left:200px!important">
-                <br>
-                <br>
+                    the specific rate of sugar production and the yield of biomass on sugar at each position in the bulb.</p>
+                    <p class="text-content">Part 1: Finding the specific rate of sugar production at each position of the LIT bulb:</p>
+                <!--<img src="../assets/OptoFlux/Specific_SugarProduction.png" class="image-content-graphs" style="width:400px; height: 90px; margin-left:200px!important">-->
+                <div class="equations">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$q_s^c(z)&space;=&space;q_{s,m}\times&space;tanh&space;(\frac{Y^C_{s&space;phm}\times&space;q_{ph}(z)}{q^C_{s,m}})$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$q_s^c(z)&space;=&space;q_{s,m}\times&space;tanh&space;(\frac{Y^C_{s&space;phm}\times&space;q_{ph}(z)}{q^C_{s,m}})$$" title="$$q_s^c(z) = q_{s,m}\times tanh (\frac{Y^C_{s phm}\times q_{ph}(z)}{q^C_{s,m}})$$" /></a>
+                </div>
                 <p class="text-content" style="margin-top: 0; padding-top:0; margin-left: 15px!important">Where:
                     <br>q<sub>s</sub><sup>c</sup>(z)= Specific sugar production rate at each position in the LIT bulb
                     <br>q<sub>s,m</sub><sup>c</sup>(z) = Maximal sugar production rate in the cells
-                    <br>Y<sub>phm</sub><sup>c</sup> = Maximal yield of sugar on photons
-                </p>
-                <br>
-                <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important"><b>Part 2: Determine the yield of biomass on sugar production at each position of the LIT bulb </b></p>
-                <img src="../assets/OptoFlux/Yield_Biomass.png" class="image-content-graphs" style="width:280px; height: 70px; margin-left:240px!important">
-                <br>
-                <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100% ">Where:
-                    <br>Y<sub>sph</sub>(z)= Yield of biomass on sugar at every position in the LIT bulb
-                </p>
-                <br>
-                <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important">Part 3: We determined the average sugar production rate in the LIT bulb: </p>
-                <img src="../assets/OptoFlux/Average_SugarProduction.png" class="image-content-graphs" style="width:320px; height: 60px; margin-left:220px!important">
+                    <br>Y<sub>phm</sub><sup>c</sup> = Maximal yield of sugar on photons</p>
+                <p class="text-content"><b>Part 2: Determine the yield of biomass on sugar production at each position of the LIT bulb </b></p>
+                <div class="equations">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$Y_{sph}(z)=\frac{q^C_S}{I_{ph}(z)}$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$Y_{sph}(z)=\frac{q^C_S}{I_{ph}(z)}$$" title="$$Y_{sph}(z)=\frac{q^C_S}{I_{ph}(z)}$$" /></a>
+                </div>
+                <!--<img src="../assets/OptoFlux/Yield_Biomass.png" class="image-content-graphs" style="width:280px; height: 70px; margin-left:240px!important">-->
+                <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100% ">Where:</p>
+                    <p class="text-content">Y<sub>sph</sub>(z)= Yield of biomass on sugar at every position in the LIT bulb</p>
+                <p class="text-content" style="padding-bottom: 20px!important">Part 3: We determined the average sugar production rate in the LIT bulb: </p>
+                <div class="equations">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$q^C_{s,&space;average}&space;=&space;mean&space;(q^C_S)$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$q^C_{s,&space;average}&space;=&space;mean&space;(q^C_S)$$" title="$$q^C_{s, average} = mean (q^C_S)$$" /></a>
+                </div>
+                <!--<img src="../assets/OptoFlux/Average_SugarProduction.png" class="image-content-graphs" style="width:320px; height: 60px; margin-left:220px!important">-->
                 <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important">Where:
                     <br>q<sub>s average</sub><sup>c</sup>= Average sugar production rate
                 </p>
             </div>
 
-            <div class="text-section col-sm-10">
+            <div class="text-section col-sm-10" style="border: none">
                 <h1 class="title" style="margin-left:15px!important">OptoFlux Results</h1>
                 <p class="text-content" style="margin-left:15px!important; max-width:100%!important">With our OptoFlux model, we were able to determine the optimal: LIT bulb dimensions, Cyanobacteria cell concentration and Incoming Photon Flux Density</p>
 
@@ -366,10 +365,10 @@
             </table>
                 <br>
 
-            <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important"> Figure 2: Outlines the parameters that were inputted into OptoFlux model to optimize the diameter of the bulb </p>
+            <p class="text-figure" style=" max-width:100%!important"> Figure 2: Outlines the parameters that were inputted into OptoFlux model to optimize the diameter of the bulb </p>
             <br>
             <img src="../assets/OptoFlux/Opt_Diam.svg" class="image-content-graphs" style="width: 800px; height: 450px; padding-bottom: 0; margin-bottom: 0">
-            <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important"> Figure 3: Demonstrates the effect increasing the diameter of the bulb has on the average sugar production rate and the
+            <p class="text-figure" style="max-width:100%!important"> Figure 3: Demonstrates the effect increasing the diameter of the bulb has on the average sugar production rate and the
                 yield of biomass on sugar </p>
 
             <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important">As expected, Figure 2 shows the general trend of increase in LIT bulb diameter with a decrease in average sugar production rate.
@@ -400,14 +399,12 @@
                 </tr>
             </table>
 
-                <br>
-                <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important"> Figure 4: Outlines the optimized diameter for the LIT bulb</p>
+                <p class="text-figure" style="max-width:100%!important"> Figure 4: Outlines the optimized diameter for the LIT bulb</p>
 
-                <h1 class="subtitle" style="margin-left:15px!important; padding-top:15px">Optimising the concentration of the Cyanobacteria cells in the LIT bulb</h2>
+                <h1 class="subtitle" style="margin-left:15px!important; padding-top:15px">Optimising the concentration of the Cyanobacteria cells in the LIT bulb</h1>
 
                     <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important">Similarly, to optimize the concentration of Cyanobacteria cells needed for the LIT bulb we focused on two aspects:
-                the amount of sugar produced; and the yield of sugar on biomass for each diameter tested.
-            </p>
+                the amount of sugar produced; and the yield of sugar on biomass for each diameter tested.</p>
 
             <table  class="text-content-duo-primary" style="width: 70%; margin-left: 150px!important; max-width:60%">
                 <tr>
@@ -425,14 +422,13 @@
                 </tr>
 
             </table>
-                    <br>
-                    <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important"> Figure 5: Outlines the parameters that were inputted into OptoFlux model to optimize the Cyanobacteria concentration in the bulb </p>
+
+                <p class="text-figure" style="max-width:100%!important"> Figure 5: Outlines the parameters that were inputted into OptoFlux model to optimize the Cyanobacteria concentration in the bulb </p>
 
             <img src="../assets/OptoFlux/Opt_Cx.svg" class="image-content-graphs" style="width: 800px; height: 450px">
-            <br>
-                    <p class="text-content" style="margin-top: 0; padding-top:0; margin-left:15px!important; max-width:100%!important">Figure 6: Demonstrates the effect changing the Cyanobacteria concentration has on the average sugar production rate and the
-                yield of biomass on sugar
-            </p>
+
+                    <p class="text-figure" style="max-width:100%!important">Figure 6: Demonstrates the effect changing the Cyanobacteria concentration has on the average sugar production rate and the
+                yield of biomass on sugar</p>
                     <p class="text-content" style="margin-top: 0; padding-top:0; padding-bottom:15px; margin-left:15px!important; max-width:100%!important">Figure 6 demonstrates that increasing the concentration of Cyanobacteria in the LIT bulb, decreases the
                 average rate of sugar production. An augmentation in the concentration of cells in the bulb, leads to an increase in the overall number of cells.
                 This causes the content of the LIT bulb to be more viscous.
@@ -440,8 +436,7 @@
                 As such, the average sugar production rate in the LIT bulb decreases. The yield of biomass on sugar increases as the concentration of
                 Cyanobacteria cells increases. This occurs because, if the number of cells in the bulb increases there are a larger number of
                 cells photosynthesising. This in turn results in a larger amount of sugar being produced. Here again the intersection of the two lines
-                represents the optimized conditions, i.e. the trade off between average sugar concentration and yield of biomass on sugar.
-            </p>
+                represents the optimized conditions, i.e. the trade off between average sugar concentration and yield of biomass on sugar.</p>
 
             <table class="text-content-duo-primary" style="width: 70%; margin-left: 150px!important; max-width:60%">
                 <tr>
@@ -463,9 +458,9 @@
                     <th class="text-content" style="padding: 0">100</th>
                 </tr>
             </table>
-                    <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important"> Figure 7: Outlines the optimized Cyanobacteria concentration for the LIT bulb
+                    <p class="text-figure" style=" max-width:100%!important"> Figure 7: Outlines the optimized Cyanobacteria concentration for the LIT bulb
 
-            <h1 class="subtitle" style="margin-left:15px!important; padding-top:15px">Optimizing the Incoming Photon FLux density (Iph) for the LIT bulb</h3>
+            <h1 class="subtitle" style="margin-left:15px!important; padding-top:15px">Optimizing the Incoming Photon FLux density (Iph) for the LIT bulb</h1>
 
             <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important; padding-bottom:15px">To optimize the incoming Iph for the LIT bulb we focused on two aspects: the amount of sugar produced; and the yield of sugar on biomass.</p>
 
@@ -485,11 +480,11 @@
                 </tr>
 
             </table>
-            <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important"> Figure 8: Outlines the parameters that were inputted into OptoFlux model to optimize the Iph for the LIT bulb </p>
+            <p class="text-figure" style="max-width:100%!important"> Figure 8: Outlines the parameters that were inputted into OptoFlux model to optimize the Iph for the LIT bulb </p>
 
             <img src="../assets/OptoFlux/Opt_Iph0.svg" class="image-content-graphs" style="width: 800px; height: 450px">
-            <br>
-            <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important"> Figure 9: Demonstrates the effect increasing the Iph has on the average sugar production rate and the
+
+            <p class="text-figure" style="max-width:100%!important"> Figure 9: Demonstrates the effect increasing the Iph has on the average sugar production rate and the
                 yield of biomass on sugar </p>
             <p class="text-content" style="margin-top: 0; padding-top:15px; padding-bottom:15px; margin-left:15px!important; max-width:100%!important">From Figure 9 we see that an increase in the Iph for the LIT bulb correlates with an increase in the average sugar production rate. This occurs
                 because by increasing the Iph for the bulb, essentially corresponds to an increase in the number of photons entering the bulb. Therefore, a larger number of photons is available for photosynthesis.
@@ -519,9 +514,9 @@
                     <th class="text-content" style="padding: 0">2.5E-03</th>
                 </tr>
             </table>
-            <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important"> Figure 10: Outlines the optimized Iph for the LIT bulb
+            <p class="text-figure" style="max-width:100%!important"> Figure 10: Outlines the optimized Iph for the LIT bulb
 
-                <div class="text-section">
+                <div class="text-section" style="border:none">
             <h1 class="title" style="margin-left:15px!important; padding-top:15px"> OptoFluxes optimized conditions for the LIT bulb</h1>
                     <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important">From the OptoFlux model we were able to optimize the conditions within our LIT bulb
                 to maximize the amount of sugar produced from our Cyanobacteria cells.
@@ -546,11 +541,15 @@
                     <th class="text-content" style="padding: 0">2.5E-03</th>
                 </tr>
             </table>
-                    <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important"> Figure 11: Outlines the optimized parameters for the LIT bulb </p>
+                    <p class="text-figure" style=" max-width:100%!important"> Figure 11: Outlines the optimized parameters for the LIT bulb </p>
+            </div>
 
         </div>
 
-        <div class="text-section">
+
+    <div class="text-section col-sm-10" style="border:none">
+
+        <div class="text-section" style="border: none">
             <h6 class="title" style="margin-left:15px!important; padding-top:15px">Step 2: Determine the number of E.coli cells required to produce a high enough luminescence which can compete with a conventional 160W light bulb</h6>
             <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important">We optimized the concentration of E.coli cells in our LIT bulb in order to be able to produce
                 a luminescence equivalent to a 160W light bulb. </p>
@@ -561,30 +560,34 @@
             <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; margin-bottom:15px!important; max-width:100%!important"> 3) Determine the concentration of Cyanobactria cells required in the bulb and compared it to the
                 maximum concentration of Cyanobacteria cells our OptoFlux optimized LIT design can handle </p>
 
-            <h10 class="title" style="margin-top: 20px!important; padding-top: 30px; margin-left: 15px!important"> Analytical Steps</h10>
+            <h1 class="title" style="margin-top: 20px!important; padding-top: 30px; margin-left: 15px!important"> Analytical Steps</h1>
             <br>
             <br>
             <p class="subtitle" style="margin-left:15px!important; padding-top:15px">1) Determine the number of E.coli cells required to produce the required luminescence</p>
 
-            <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important">From literature we determined that each E.coli cell produces a luminescence equivalent to 10<sup>4</sup> photons/s.
+            <p class="text-content" style=" max-width:100%!important; padding-bottom: 20px">From literature we determined that each E.coli cell produces a luminescence equivalent to 10<sup>4</sup> photons/s.
                 A 160 W light bulb produces a luminescence of 10<sup>18</sup> photons/s. Therefore:</p>
-            <img src="../assets/OptoFlux/Ecoli_Number.png" class="image-content-graphs" style="width: 620px; height: 100px; margin-left: 150px!important">
-            <br>
-            <br>
-            <p class="subtitle" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important"> 2) Determine the number of Cyanobacteria cells required to produce sufficient levels of glucose
+            <div class="equations">
+                <a href="http://www.codecogs.com/eqnedit.php?latex=$$&space;\frac{10^8&space;\frac{photons}{s}}{10^4\frac{photons}{s}}&space;=&space;10^{14}&space;E.&space;coli&space;\hspace{0.25cm}&space;cells&space;\hspace{0.25cm}&space;are&space;\hspace{0.25cm}&space;required&space;\hspace{0.25cm}&space;to&space;\hspace{0.25cm}&space;reach&space;\hspace{0.25cm}&space;the&space;\hspace{0.25cm}&space;desired&space;\hspace{0.25cm}&space;luminescence&space;$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$&space;\frac{10^8&space;\frac{photons}{s}}{10^4\frac{photons}{s}}&space;=&space;10^{14}&space;E.&space;coli&space;\hspace{0.25cm}&space;cells&space;\hspace{0.25cm}&space;are&space;\hspace{0.25cm}&space;required&space;\hspace{0.25cm}&space;to&space;\hspace{0.25cm}&space;reach&space;\hspace{0.25cm}&space;the&space;\hspace{0.25cm}&space;desired&space;\hspace{0.25cm}&space;luminescence&space;$$" title="$$ \frac{10^8 \frac{photons}{s}}{10^4\frac{photons}{s}} = 10^{14} E. coli \hspace{0.25cm} cells \hspace{0.25cm} are \hspace{0.25cm} required \hspace{0.25cm} to \hspace{0.25cm} reach \hspace{0.25cm} the \hspace{0.25cm} desired \hspace{0.25cm} luminescence $$" /></a>
+            </div>
+            <p class="subtitle" style=" max-width:100%!important"> 2) Determine the number of Cyanobacteria cells required to produce sufficient levels of glucose
                 to co-culture the desired number of E.coli cells </p>
 
-            <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important">The ratio of E.coli cells to Cyanobacteria cells in a co-culture is; 10<sup>7</sup> E.coli cells to 10<sup>8</sup> Cyanobacteria cells. Therefore:</p>
-            <img src="../assets/OptoFlux/Cyano_number.png" class="image-content-graphs" style="width: 520px; height: 80px; margin-left: 170px!important">
-            <br>
+            <p class="text-content" style="padding-bottom: 20px; max-width:100%!important">The ratio of E.coli cells to Cyanobacteria cells in a co-culture is; 10<sup>7</sup> E.coli cells to 10<sup>8</sup> Cyanobacteria cells. Therefore:</p>
+            <div class="equations">
+                <a href="http://www.codecogs.com/eqnedit.php?latex=$$\frac{10^8}{10^7}&space;=&space;\frac{10^{14}}{x}$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$\frac{10^8}{10^7}&space;=&space;\frac{10^{14}}{x}$$" title="$$\frac{10^8}{10^7} = \frac{10^{14}}{x}$$" /></a>
+                <a href="http://www.codecogs.com/eqnedit.php?latex=$$x&space;=&space;10^{15}&space;Cyanobacteria&space;\hspace{0.25cm}&space;cells&space;\hspace{0.25cm}&space;are&space;\hspace{0.25cm}&space;required&space;\hspace{0.25cm}&space;in&space;\hspace{0.25cm}&space;our&space;\hspace{0.25cm}&space;lightbulb$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$x&space;=&space;10^{15}&space;Cyanobacteria&space;\hspace{0.25cm}&space;cells&space;\hspace{0.25cm}&space;are&space;\hspace{0.25cm}&space;required&space;\hspace{0.25cm}&space;in&space;\hspace{0.25cm}&space;our&space;\hspace{0.25cm}&space;lightbulb$$" title="$$x = 10^{15} Cyanobacteria \hspace{0.25cm} cells \hspace{0.25cm} are \hspace{0.25cm} required \hspace{0.25cm} in \hspace{0.25cm} our \hspace{0.25cm} lightbulb$$" /></a>
+            </div>
 
             <p class="subtitle" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important"> 3) Determine the concentration of Cyanobactria cells required in the bulb and compared it to the
                 maximum concentration of Cyanobacteria cells our OptoFlux optimized LIT design can handle</p>
 
-            <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important">In order to determine the Cyanobacteria cells concentration in the LIT bulb we first calculated the mass of the Cyanobacteria cells and then determined the moles of the Cyanobacteria cells.
+            <p class="text-content" style="max-width:100%!important; padding-bottom: 20px">In order to determine the Cyanobacteria cells concentration in the LIT bulb we first calculated the mass of the Cyanobacteria cells and then determined the moles of the Cyanobacteria cells.
                 This enabled us to determine the concentration of Cyanobacteria cells present in the LIT bulb. </p>
 
-            <img src="../assets/OptoFlux/Cyano_concentration.png" class="image-content-graphs" style="width: 700px; height: 70px; margin-left: 110px!important">
+            <div class="equations">
+                <a href="http://www.codecogs.com/eqnedit.php?latex=$$\frac{Moles&space;\hspace{0.25cm}of&space;\hspace{0.25cm}Cyanobacteria&space;}{Volume&space;\hspace{0.25cm}&space;of&space;\hspace{0.25cm}cell&space;\hspace{0.25cm}&space;culture&space;\hspace{0.25cm}&space;in&space;\hspace{0.25cm}&space;the&space;\hspace{0.25cm}&space;LITbulb}=&space;\frac{8.2\times0^{-4}moles}{0.0054&space;m^3}&space;=0.15&space;moles/m^3$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$\frac{Moles&space;\hspace{0.25cm}of&space;\hspace{0.25cm}Cyanobacteria&space;}{Volume&space;\hspace{0.25cm}&space;of&space;\hspace{0.25cm}cell&space;\hspace{0.25cm}&space;culture&space;\hspace{0.25cm}&space;in&space;\hspace{0.25cm}&space;the&space;\hspace{0.25cm}&space;LITbulb}=&space;\frac{8.2\times0^{-4}moles}{0.0054&space;m^3}&space;=0.15&space;moles/m^3$$" title="$$\frac{Moles \hspace{0.25cm}of \hspace{0.25cm}Cyanobacteria }{Volume \hspace{0.25cm} of \hspace{0.25cm}cell \hspace{0.25cm} culture \hspace{0.25cm} in \hspace{0.25cm} the \hspace{0.25cm} LITbulb}= \frac{8.2\times0^{-4}moles}{0.0054 m^3} =0.15 moles/m^3$$" /></a>
+            </div>
 
             <p class="text-content" style="margin-top: 0; margin-bottom:30px!important; padding-top:15px; margin-left:15px!important; max-width:100%!important">The OptoFlux LIT bulb design has the capacity to culture up to 100 mol/m<sup>3</sup> of Cyanobacteria cells.
                 In order for our LIT bulb to produce a luminescence equivalent to a 160W light bulb we require a Cyanobacteria concentration of 0.15 mol/m<sup>3</sup>, this
@@ -592,17 +595,17 @@
                 Therefore, our OptoFlux LIT bulb is suitable for to maintain our co-culture. </p>
         </div>
 
-        <div class="text-section">
+        <div class="text-section" style="border: none">
             <p class="title" style="margin-left:15px!important; padding-top:30px!important"> Step 3: 3D Prototype of the LIT bulb</p>
 
-            <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important""> We decided to create a prototype of the OptoFlux LIT bulb on Autodesk Fusion 360.</p>
+            <p class="text-content" style="margin-top: 0; padding-top:15px; margin-left:15px!important; max-width:100%!important"> We decided to create a prototype of the OptoFlux LIT bulb on Autodesk Fusion 360.</p>
 
-            <img src="../assets/OptoFlux/Fusion360%20Lightbulb.svg" class="image-content-graphs" style="width: 800px; height: 450px; padding-bottom: 0; margin-bottom: 0"">
-            <p p class="text-content" style="margin-top: 0; padding-top:0px!important; margin-left:15px!important; max-width:100%!important"> Figure 12: 3D design of the LIT bulb </p>
+            <img src="../assets/OptoFlux/Fusion360%20Lightbulb.svg" class="image-content-graphs" style="width: 800px; height: 450px; padding-bottom: 0; margin-bottom: 0">
+            <p class="text-figure" style="max-width:100%!important"> Figure 12: 3D design of the LIT bulb </p>
 
         </div>
 
-        <div class="text-section">
+        <div class="text-section" style="border: none">
             <h2 class="title" style="margin-left:15px!important; margin-top: 10px!important; margin-bottom:15px!important">OptoFlux Assumptions</h2>
 
             <ul class="text-content" style="margin-left:60px!important">
@@ -615,26 +618,26 @@
             </ul>
         </div>
 
-        <div class="text-section">
-            <h2 class="title" style="margin-left:15px!important; margin-top: 10px!important; margin-bottom:15px!important">OptoFlux Species</h3>
+        <div class="text-section" style="border: none">
+            <h2 class="title" style="margin-left:15px!important; margin-top: 10px!important; margin-bottom:15px!important">OptoFlux Species</h2>
 
             <img src="../assets/OptoFlux/Optoflux_Species.png" class="image-content-graphs" style="width: 870px; height:230px">
         </div>
 
-        <div class="text-section">
-            <h2 class="title" style="margin-left:15px!important; margin-top: 10px!important; margin-bottom:15px!important">OptoFlux Parameters</h3>
+        <div class="text-section" style="border: none">
+            <h2 class="title" style="margin-left:15px!important; margin-top: 10px!important; margin-bottom:15px!important">OptoFlux Parameters</h2>
 
             <img src="../assets/OptoFlux/Optoflux_Parameters.png" class="image-content-graphs" style="width: 850px; height:950px">
         </div>
 
-        <div class="text-section">
+        <div class="text-section" style="border: none">
 
             <h2 class="title" style="margin-left:15px!important; margin-top: 10px!important; margin-bottom:15px!important">Analytical steps used to calculate the concentration of Cyanobacteria</h5>
 
             <img src="../assets/OptoFlux/Initial_Cond.png" class="image-content-graphs" style="width: 900px; height:1000px">
         </div>
 
-        <div class="text-section">
+        <div class="text-section" style="border: none">
 
             <h2 class="title" style="margin-left:15px!important; margin-top: 10px!important; margin-bottom:15px!important">Bibliography</h2>
         <br>
@@ -653,17 +656,13 @@
             <br>
             <br>
             Patel A, Mishra S, Pawar R, Ghosh P. Purification and characterization of C-Phycocyanin from cyanobacterial species of marine and freshwater habitat. Protein Expression and Purification. 2005;40(2):248-255.
-            <br>
-            <br>
-        </p>
-
-
-
+           </p>
+        </div>
     </div>
+
 
     <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
-</div>
 </div>
 
 </body>
