@@ -189,7 +189,7 @@
                 </p>
             </div>
 
-            <div class="text-section">
+            <div class="text-section" style="border:none">
 
                 <h1 class="title">Cellular Automata</h1>
 
@@ -199,7 +199,7 @@
                     neighboring cells.</p>
             </div>
 
-            <div class="text-section">
+            <div class="text-section" style="border:none">
                 <h1 class="title">Game of Life</h1>
                 <p class="text-content">The Game of Life, (which we adapted for our purposes), relates a particular case of a
                     2D cellular automata that is known to show complex behaviors.
@@ -208,19 +208,25 @@
 
             </div>
 
-            <div class="text-section">
+            <div class="text-section" style="border:none">
                 <h1 class="title">Hill Equation</h1>
-                <p class="text-content">The Hill equation is used in biology to describe the interaction between a ligand and its binding site. The general form of the Hill equation is expressed as:</p>
-                <img src="../assets/Hill2.jpg" class="image-content-graphs" style="width:350px;height:80px">
+                <p class="text-content" style="padding-bottom: 20px">The Hill equation is used in biology to describe the interaction between a ligand and its binding site. The general form of the Hill equation is expressed as:</p>
+                <p class="equations">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$&space;f(L)=&space;\frac{k[L]^n}{K{_d}&plus;[L]^n}$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$&space;f(L)=&space;\frac{k[L]^n}{K{_d}&plus;[L]^n}$$" title="$$ f(L)= \frac{k[L]^n}{K{_d}+[L]^n}$$" /></a>
+                </p>
+                    <!--<img src="../assets/Hill2.jpg" class="image-content-graphs" style="width:350px;height:80px"> -->
                 <p class="text-content">where,
                     <br>f(L) = Fraction of the protein concentration bound to the ligand  
                     <br>L = free ligand concentration
                     <br>n = Hill coefficient
-                    <br>Kd = Dissociation constant which follows mass action kinetics
-                    <br>
-                    <br>The Hill equation is often adapted in mathematical modelling to allow for a more flexible modelling of the dynamics of a promoter.
+                    <br>Kd = Dissociation constant which follows mass action kinetics </p>
+
+                    <p class="text-content" style="padding-bottom: 20px">The Hill equation is often adapted in mathematical modelling to allow for a more flexible modelling of the dynamics of a promoter.
                     In our case we implemented a form of the Hill equation that had been adapted to represent a photo-activated cellular mechanism to determine the rate of photo-activation (k1) of our transcription factor.</p>
-                <img src="../assets/Hill.jpg" class="image-content-graphs" style="width:400px;height:100px">
+                <!--<img src="../assets/Hill.jpg" class="image-content-graphs" style="width:400px;height:100px">-->
+               <p class="equations">
+                   <a href="http://www.codecogs.com/eqnedit.php?latex=$$&space;k_1=f(L)=\alpha&space;&plus;&space;\frac{k[L]^n}{K{^n}{_1}&plus;[L]^n}$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$&space;k_1=f(L)=\alpha&space;&plus;&space;\frac{k[L]^n}{K{^n}{_1}&plus;[L]^n}$$" title="$$ k_1=f(L)=\alpha + \frac{k[L]^n}{K{^n}{_1}+[L]^n}$$" /></a>
+               </p>
                 <p class="text-content">Two parameters were added to the equation to account for our modelling needs:
                     <br> a = accounts for the basal expression level of the promoter (LuxI)
                     <br> k = accounts for the maximum expression of the promoter due to light intensity 0
@@ -228,31 +234,44 @@
 
             </div>
 
-            <div class="text-section">
+            <div class="text-section" style="border:none">
                 <h1 class="title">Mass Action Kinetics</h1>
-                <p class="text-content">Mass action kinetics describe chemical reactions. It assumes that the rate of a chemical reaction is proportional to the concentration of the initial reactants.
+                <p class="text-content" style="padding-bottom: 20px" >Mass action kinetics describe chemical reactions. It assumes that the rate of a chemical reaction is proportional to the concentration of the initial reactants.
                 Mass action kinetics assumes: </p>
-                <img src="../assets/glossary/MA.jpg" class="image-content-graphs" style="width:280px;height:55px">
-                <p class="text-content">Given an Ordinary Differential Equation (ODE):</p>
-                <img src="../assets/ODE.jpg" class="image-content-graphs" style="width:330px;height:70px">
+                <!--<img src="../assets/glossary/MA.jpg" class="image-content-graphs" style="width:280px;height:55px">-->
+                <p class="equations">
+                    <a href='http://www.codecogs.com/eqnedit.php?latex=$$&space;A&plus;B&space;\rightarrow&space;C$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$&space;A&plus;B&space;\rightarrow&space;C$$" title="$$ A+B \rightarrow C$$' /></a>
+                </p>
+                <p class="text-content" style="padding-bottom: 20px">Given an Ordinary Differential Equation (ODE):</p>
+                <p class="text-content" style="margin-left: 200px!important">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$\frac{dC}{dt}=&space;k[A][B]$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$\frac{dC}{dt}=&space;k[A][B]$$" title="$$\frac{dC}{dt}= k[A][B]$$" /></a>
+                </p>
+                <!--<img src="../assets/ODE.jpg" class="image-content-graphs" style="width:330px;height:70px">-->
                 <p class="text-content">Where k is known as the rate constant, its units depend on the order of the reaction, i.e. the number of reactants.</p>
             </div>
 
 
         <!-- ADD ASSUMPTIONS ABOUT DERIVATION -->
 
-            <div class="text-section">
+            <div class="text-section" style="border:none">
                 <h1 class="title">Michaelis Menten</h1>
-                <p class="text-content">The Michaelis Menten equation was created to describe the rate kinetics in enzymatic reactions. Computational biologists commonly use the Michaelis Menten equation to describe the rate kinetics of cellular mechanisms. The steps described by the Michaelis Menten kinetics, can be represented schematically
+                <p class="text-content" style="padding-bottom: 20px">The Michaelis Menten equation was created to describe the rate kinetics in enzymatic reactions. Computational biologists commonly use the Michaelis Menten equation to describe the rate kinetics of cellular mechanisms. The steps described by the Michaelis Menten kinetics, can be represented schematically
                     in the following equation:</p>
-                <img src="../assets/glossary/enzyme.png" class="image-content-graphs" style="width:350px;height:65px">
+                <!--<img src="../assets/glossary/enzyme.png" class="image-content-graphs" style="width:350px;height:65px">-->
+                <p class="text-content" style="margin-left:200px!important">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$E&plus;S&space;\rightleftarrows&space;ES\rightarrow&space;E&plus;P$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$E&plus;S&space;\rightleftarrows&space;ES\rightarrow&space;E&plus;P$$" title="$$E+S \rightleftarrows ES\rightarrow E+P$$" /></a>
+                </p>
+
                 <p class="text-content">where,
                     <br>E = enzyme
                     <br>S = substrate
                     <br>ES = enzyme substrate complex
                     <br>P = product </p>
-                <p class="text-content">The rate at which the final product is formed is given by the following equation:</p>
-                <img src="../assets/glossary/MichaelisMenten.jpg" class="image-content-graphs" style="width:420px;height:80px">
+                <p class="text-content" style="padding-bottom: 20px">The rate at which the final product is formed is given by the following equation:</p>
+                <!--<img src="../assets/glossary/MichaelisMenten.jpg" class="image-content-graphs" style="width:420px;height:80px"> -->
+                <p class="equations">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$v=\frac{d[P]}{dt}=&space;v_{max}=\frac{[S]}{K_m&plus;[S]}$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$v=\frac{d[P]}{dt}=&space;v_{max}=\frac{[S]}{K_m&plus;[S]}$$" title="$$v=\frac{d[P]}{dt}= v_{max}=\frac{[S]}{K_m+[S]}$$" /></a>
+                </p>
                 <p class="text-content">where,
                     <br>v = rate of product concentration over time
                     <br>P = concentration of product
@@ -265,13 +284,15 @@
                 </p>
             </div>
 
-            <div class="text-section">
+            <div class="text-section" style="border:none">
                 <h1 class="title">Planck-Einstein Relationship</h1>
-                <p class="text-content">
+                <p class="text-content" style="padding-bottom: 20px">
                     The Planck-Einstien relationship (quantum mechanics) is the formula that relates energy given by a photon to frequency.
                 </p>
-                <img src="../assets/Planck-Einstein.png" class="image-content-graphs" style="width: 270px; height: 50px; padding-bottom: 0; padding-top: 0">
-                <br>
+                <!--<img src="../assets/Planck-Einstein.png" class="image-content-graphs" style="width: 270px; height: 50px; padding-bottom: 0; padding-top: 0">-->
+                <p class="equations">
+                    <a href="http://www.codecogs.com/eqnedit.php?latex=$$&space;E=hv$$" target="_blank"><img src="http://latex.codecogs.com/gif.latex?$$&space;E=hv$$" title="$$ E=hv$$" /></a>
+                </p>
                 <p class="text-content">Where,
                 <br>E = energy (J)
                 <br>h = Planck's Constant (Js)
@@ -280,8 +301,8 @@
                 </p>
 
             </div>
-            <div class="text-section" style="max-width: 70%">
-                <h2 class="title">Bibliography</h2>
+            <div class="text-section" style="max-width: 70%; border:none"">
+                <h1 class="title">Bibliography</h1>
                     <p class="subtitle">
                     Introduction to Genetic Algorithms [Internet]. Doc.ic.ac.uk. 2017 [cited 8 October 2017]. Available from: https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html</li>
                     <br>
@@ -289,7 +310,7 @@
                     Game of Life -- from Wolfram MathWorld [Internet]. Mathworld.wolfram.com. 2017 [cited 8 October 2017]. Available from: http://mathworld.wolfram.com/GameofLife.html</li>
                     <br>
                     <br>
-                    Essential Biochemistry - Enzyme Kinetics [Internet]. Higheredbcs.wiley.com. 2017 [cited 8 October 2017]. Available from: http://higheredbcs.wiley.com/legacy/college/pratt/0471393878/student/animations/enzyme_kinetics/index.html</li>
+                    Essential Biochemistry - Enzyme Kinetics [Internet]. Higheredbcs.wiley.com. 2017 [cited 8 October 2017]. Available from: http://higheredbcs.wiley.com/legacy/college/pratt/0471393878/student<br>/animations/enzyme_kinetics/index.html</li>
                     <br>
                     <br>
                     Hill equation (biochemistry) [Internet]. En.wikipedia.org. 2017 [cited 8 October 2017]. Available from: https://en.wikipedia.org/wiki/Hill_equation_(biochemistry)</li>

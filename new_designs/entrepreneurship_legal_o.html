@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+    <meta charset="UTF-8">
+    <title>LIT Entrepreneurs</title>
+    <link rel="stylesheet" type="text/css" href="css/template.css">
+
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            //Take your div into one js variable
+            var s1 = $("#step1");
+            var s2 = $("#step2");
+            var s3 = $("#step3");
+
+            //Take the current position (vertical position from top) of your div in the variable
+            var pos = s1.position();
+            var pos1 = s2.position();
+            var pos2 = s3.position();
+
+            //Now when scroll event trigger do following
+            $(window).scroll(function () {
+
+                scrollFunction()
+
+                var windowpos = $(window).scrollTop();
+                //console.log(windowpos);
+
+                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
+                if (windowpos >= (pos.top + 100)) {
+                    // div.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s1.addClass("active-link");
+                }
+
+                if (windowpos >= (pos1.top + 750)) {
+                    // div1.addClass("AfterScroll");
+                    s1.removeClass("active-link");
+                    s3.removeClass("active-link");
+                    s2.addClass("active-link");
+
+                }
+
+                if (windowpos >= (pos2.top + 1100)) {
+                    //div2.addClass("AfterScroll");
+                    s2.removeClass("active-link");
+                    s3.addClass("active-link");
+                }
+
+            });
+
+
+            //---------------------------------------------------------------------
+            //the scroll function for the 'Back to Top' button
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+
+        });
+    </script>
+</head>
+
+<style>
+    .image-content-here {
+        height: 200px;
+        width:220px;
+        border-radius: 50%;
+        margin: 1% 5% 1% 5%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .introbit {
+        position:relative;
+        font-size: 25px;
+        font-family: "Crimson Text";
+        padding: 1% 3% 2% 15%;
+        margin:0 !important;
+    }
+
+    .quotes {
+        position:relative;
+        font-size: 22px;
+        font-style:italic;
+        font-family: "Crimson Text";
+        padding: 1% 3% 2% 15%;
+        margin:0 !important;
+    }
+
+    .competitors-table {
+        margin:10% 0 0 0;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .competitors-tr {
+        border: 1px solid black;
+
+    }
+
+    .competitors-td  {
+        padding: 3% 3% 3% 3%;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .competitors-td-changing {
+        padding: 3% 3% 3% 3%;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .competitors-td-first-column {
+        padding: 1% 8% 1% 2% !important;
+        font-weight: 600;
+        font-size:16px;
+        max-width: 100%;
+        background-color: #c6c6d8;
+    }
+
+    .table-buttons {
+        margin: 2% 0 1% 3%;
+        float:right;
+        position: relative;
+    }
+    .icons-here {
+        height:100px;
+        width:100px;
+        padding: 1%;
+        margin: 1% 10% 5% 10%;
+    }
+
+</style>
+
+<body data-spy="scroll" data-target="#side-index">
+<!-- The top navbar -->
+<div style="margin:0 !important; padding:0 !important" class="container-fluid">
+    <div id="top" class="row">
+
+        <img src="assets/logo-navbar.png" class="logo-top">
+
+        <ul class="navy">
+            <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Description</a></li>
+                    <li><a href="#" class="dropped">Results</a></li>
+                    <li><a href="#" class="dropped">Parts</a></li>
+                    <li><a href="#" class="dropped">Gold Criteria</a></li>
+                    <li><a href="#" class="dropped">Interlab</a></li>
+
+                </ul>
+            </li>
+
+            <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Public Engagement</a></li>
+                    <li><a href="#" class="dropped">Integrated Practices</a></li>
+                </ul>
+            </li>
+
+            <li id="drop5" class="navy-link"><a href="#">MODELLING</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Barchitecture</a></li>
+                    <li><a href="#" class="dropped">Game of LIT</a></li>
+                    <li><a href="#" class="dropped">Mammalian</a></li>
+                    <li><a href="#" class="dropped">Light Bulb</a></li>
+                    <li><a href="#" class="dropped">Glossary</a></li>
+                </ul>
+            </li>
+
+            <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Product</a></li>
+                    <li><a href="#" class="dropped">IP</a></li>
+                    <li><a href="#" class="dropped">Business Environment</a></li>
+                    <li><a href="#" class="dropped">Marketing</a></li>
+                    <li><a href="#" class="dropped">Management</a></li>
+                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
+                </ul>
+            </li>
+
+
+            <li id="drop2" class="navy-link"><a href="#about">MEDALS</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Bronze</a></li>
+                    <li><a href="#" class="dropped">Silver</a></li>
+                    <li><a href="#" class="dropped">Gold</a></li>
+                </ul>
+            </li>
+
+            <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Team</a></li>
+                    <li><a href="#" class="dropped">Collaborations</a></li>
+                    <li><a href="#" class="dropped">Attributions</a></li>
+                </ul></li>
+
+            <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
+                <ul class="navy-hidden">
+                    <li><a href="#" class="dropped">Protocols</a></li>
+                    <li><a href="#" class="dropped">Safety</a></li>
+                    <li><a href="#" class="dropped">Stuff</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- The side navbar -->
+        <nav id="side-index" class="col-sm-2">
+            <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
+                <li id="step1" class="navy-link side-link"><a href="#about">About Us</a></li>
+                <li id="step2" class="navy-link side-link"><a href="#product">Product</a></li>
+                <li id="step3" class="navy-link side-link"><a href="#manufacture">Manufacturing Practices</a></li>
+                <li id="step4" class="navy-link side-link"><a href="#ip">Intellectual Property</a></li>
+                <li id="step5" class="navy-link side-link"><a href="#busienv">Business Environment</a></li>
+                <li id="step6" class="navy-link side-link"><a href="#market">Marketing</a></li>
+                <li id="step8" class="navy-link side-link"><a href="#management">Management</a></li>
+                <li id="step7" class="navy-link side-link"><a href="#finance">Financial Data</a></li>
+                <li id="step9" class="navy-link side-link"><a href="#policy">Safety and Policy</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <div style="float: right !important" class="col-sm-10">
+
+            <!-- Intro -->
+            <div id="who" class="row">
+
+                <h1 class="title" style="margin-left:0; font-size:40px ">Intellectual Property Law</h1>
+
+                <div style="margin-top: 10px; border:none" class="text-section col-sm-7">
+                <p class="text-content-duo">We love open-source and we believe that the future of synthetic biology lies in everyone doing it responsibly, transparently and with the best intentions. The culture at LIT is about enabling people to creatively innovate and not shut down ideas if no short-term benefit is apparent.</p>
+                <p class="text-content-duo">Still, as any starting company, one must play the game and protect our new product from global competitors. Perhaps naively, we started out by reaching to Glowee, a company that is focusing on integrating bioluminescence on the streets. Their response, maybe unsurprisingly, was of keeping information confidential</p>
+                <p class="text-content-duo">Essentially, there are two options: </p>
+                    <p class="text-content-duo">Signing a non-disclosure agreement, thus ensuring that any information is revealed in strict confidentiality. </p>
+                    <p class="text-content-duo">Protecting the LIT bulb with a patent.</p>
+                    <p class="text-content-duo">Intellectual Property Rights provide protection for technological innovations, such as the LIT bulb which combines Synthetic Biology, with the principle of a self-sustaining object through co-culturing of 2 microorganism and with an innovative and performant design.
+                        Protecting the LIT bulb with a patent will prevent 3rd parties from selling, importing and manufacturing our creation.</p>
+                <p class="text-content-duo">For now LIT bulb is aimed at streetlamps in London, hence we are first looking into filing a patent application with the UK Intellectual Property Office (IPO). Later, as our market expands we will consider extending the IP protection across Europe (European Patent Office) and the US (United States Patent and Trademark Office). </p>
+                <p class="text-content-duo">Filing a patent is not as simple as it sounds. It is a very long and costly process which requires requires legal advice to ensure maximum protection and make sure our product is not infringing any existing patent. </p>
+                <p class="text-content-duo">Criteria for patentability
+                    Novelty
+                    Inventive step
+
+                    Structure
+                    Description
+                    Drawing
+                    Claim (product, process, use)
+                </p>
+                </div>
+
+            <div id="why" class="row">
+
+                <div class="text-section col-sm-10" style="border:none">
+                    <h1 class="title" style="margin-left: 360px">Policy </h1>
+                </div>
+
+                <div class="picture-section-left col-sm-4" style="border:none">
+                    <img src="assets/team.jpg" class="image-content-here" style="box-shadow: none; width: 380px; height:350px; margin-left:20px">
+                </div>
+
+                <div class="text-section col-sm-7" style="border:none">
+                    <p class="text-content-duo">The 21st century is an era of high tech and incredible technological advance, where authorities and governments aim to implement new technologies in any areas of public life. The LIT light bulb, has the potential to revolutionise the street lighting system in London if is implemented and regulated in the right way. Yet, whenever a new product is introduced to the market, the competition has to be analysed and the economical viability of the project needs to be considered.</p>
+                    <p class="text-content-duo"> LIT, Light Induced Technologies, is a London based company that combines the concepts
+                        of Synthetic Biology with the urban design to create innovative technologies that target current demand. </p>
+                    <p class="text-content-duo"> Currently, the world is in the process of rethinking 2 essential aspects of
+                        what our metropoles mean: energy consumption and the integration of nature into urban design – sometimes
+                        involving the idea of biomimicry.</p>
+                    <p class="text-content-duo">We see the implementation of new and better technology to satisfy the needs for
+                        private and public illumination as the only solution to the issue. Not only will our products help
+                        with the current worldwide endeavour of reducing energy consumption, they will also make citizens
+                        more aware of what their surroundings are made of and how one must take care of that. The concept of
+                        the citizen can again be relieved. </p>
+                    <p class="text-content">http://localhost:63342/wik/new_designs/assets/product.png?_ijt=nul90vqk49rjln00pcfrvbrajg</p>
+                </div>
+
+            </div>
+        </div>
+
+</body>
+
+</html>

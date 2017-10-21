@@ -407,7 +407,7 @@ body {
     height:300px;
     width:650px;
     padding:1% 1% 1% 15%;
-    margin-left: 100px!important;
+    margin-left: 0!important;
 }
 
 .image-content-icons {
@@ -601,6 +601,11 @@ body {
     margin-left: 180px;
 }
 
+.equations a{
+    margin-left: 300px;
+    padding: 5% !important;
+    padding-top: 50px!important;
+}
 /* ----------------------------------------------------------------*/
 /* UNKNOWN - please help finding them*/
 /* ----------------------------------------------------------------*/
