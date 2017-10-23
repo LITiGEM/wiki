@@ -48,6 +48,25 @@
                 $("#applications-description").text("The production of small scale devices with medical applications also derives from our ability to grow structures from bacteria. Biopolymers, such as PHB, have a wide range of applications (agriculture films, safe materials for toys and packaging, feedstock additives). Via accurate light control, PHB-based medical implants can be produced, such as biocompatible veins and bronchus. See here the outcomes of our conversation with Blue Alpha - a company producing PHB from bacteria.");
             });
 
+            $("#tissue-app1").click(function(){
+                $("#applications-tissue-description").text("Scaffold design and construction methods need to be tailored towards the tissue tried to be produced. Scaffolds for heart reconstruction need to fulfil completely different prerequisites to bone scaffolds. With the incredibly diverse microenvironment of cells a myriad of different designs have been tested. Furthermore, the rapid invention of new biomaterials that are usable as scaffold material increase the number of possible scaffolds even further.");
+            });
+
+            $("#tissue-app2").click(function(){
+                $("#applications-tissue-description").text("After cells are seeded onto the scaffold their growth is limited by the constraints posed by the scaffold. This puts further responsibility on scaffold design and reduces the flexibility in the design. Once seeded, cells grow into the scaffold and reliable prediction of cell organisation is extremely difficult in a growing 3-dimensional tissue. Limited only by the constraints of the scaffold cells can form separate aggregations inside the scaffold or certain types of cell can establish a dominance instead of forming a coexistence with their neighbouring cells.");
+            });
+
+            $("#tissue-app3").click(function(){
+                $("#applications-tissue-description").text("Controlling this differentiation process has recently been achieved by embedding the growing tissue into a flow chamber and exposing the cells to different growth factors that guide the differentiation. [3] This proves to be very efficient but it also means that all cells in the tissue are exposed to the same growth factors and targeted differentiation of specific cells is difficult.");
+            });
+
+            $("#tissue-app4").click(function(){
+                $("#applications-tissue-description2").text("In order to form structures cells need to form dynamic non-covalent formations in adherens junctions that allow constant remodelling of the structure while still maintaining a high degree of rigidity. The cell adhesion proteins in these junctions are stabilized via connections with the cytoskeleton, most notably actin filaments. Cells forming synthetic tissues therefore need to have the ability to form these connections rapidly in a cell culture that is dividing.In mammalian cells transcription takes around 30 min, translation (incl. mRNA export) another 30 min and further protein sorting and processing is dependent on the the type of protein. For the purpose of forming structural patterns, a photosensitive cell adhesion system therefore needs to be post-translational and instantaneous.");
+            });
+
+            $("#tissue-app5").click(function(){
+                $("#applications-tissue-description2").text("Many studies in developmental biology focus on the cell signalling in a growing organisms to elucidate the formation of complex structures. From these studies we know that simple adhesion between cells is only the first step of forming a stable, 3-dimensional structure. Equally important is the activation of genes that lead to the production of the extracellular matrix (ECM) and other cell adhesion proteins like integrins and selections.Furthermore, the ability to activate specific genes in a cell, theoretically, allows biological engineers to harness the already existing code to activate a full range of mechanisms.");
+            });
 
         });
     </script>
@@ -150,7 +169,7 @@
         margin:0 !important;
     }
 
-    #applications-description {
+    #applications-description, #applications-tissue-description, #applications-tissue-description2 {
         position:relative;
         max-width:97%;
         font-size: 1.5vw;
@@ -499,7 +518,118 @@
 
                 <div id="hidden-organ" class="col-sm-10">
 
+                    <div class="row">
+
+                        <div class="text-section col-sm-11">
+                            <h1 style="text-align: center; padding:3% 0 5% 0 !important;" class="title">Tissue engineering and how</h1>
+
+                            <p class="text-content-new">Tissue engineering involves developing sophisticated 3-dimensional scaffolds that mimic the tissue tried to be reproduced in mechanical terms such as elasticity, volume and organization. After the scaffold has been produced cells are seeded into and onto the scaffold and they are allowed to grow into the scaffold. Our project addresses common problems found in this area, by constructing a molecular tool that allows the control of cells while they are forming a tissue.</p>
+
+                            <p class="text-content-new">This approach allows the production of tissue structures that are specific to somebody's own cell and has the potential to overcome many of the problems seen in human-to-human transplantation.</p>
+
+                            <ul class="list-section">
+                                Advantages
+                                <li class="list-item-content">using a patient’s own cells to create such tissues ensures there will be no rejection by the host</li>
+                                <li class="list-item-content">Independent of long transplant waiting lists patients would not suffer the impaired living conditions and death due to a failing organ</li>
+                                <li class="list-item-content">streamlining the production of tissues in vitro would reduce the costs and enable access to transplantations to people living in underprivileged conditions</li>
+
+                            </ul>
+
+                            <p class="text-content-new">However, the scaffolding and cell-seeding method, often called ‘bioprinting’ or ‘cellular 3D-printing’ has many drawbacks:</p>
+
+                        </div>
+
+                        <div style="background-color: rgba(32,88,137,0.12); border-top:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-3 application-boxes">
+
+                            <p class="applications-text">Choosing the right scaffold</p>
+
+                            <button id="tissue-app1" type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-right infos-here"></span>
+                            </button>
+                        </div>
+
+                        <div style="float:right; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-9">
+                            <p id="applications-tissue-description">Scaffold design and construction methods need to be tailored towards the tissue tried to be produced. Scaffolds for heart reconstruction need to fulfil completely different prerequisites to bone scaffolds. With the incredibly diverse microenvironment of cells a myriad of different designs have been tested. Furthermore, the rapid invention of new biomaterials that are usable as scaffold material increase the number of possible scaffolds even further</p>
+                        </div>
+
+                        <div style="background-color: rgba(137,2,19,0.12)" class="col-sm-3 application-boxes">
+
+                            <p class="applications-text">Cellular Organisation</p>
+
+                            <button id="tissue-app2" type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-right infos-here"></span>
+                            </button>
+                        </div>
+
+                        <div style="background-color: rgba(15,137,0,0.12); border-bottom:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-3 application-boxes">
+                            <p class="applications-text">Post-printing control of cells</p>
+
+                            <button id="tissue-app3" type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-right infos-here"></span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <!-- Overview - here should add buttons to navigate to each bit (or put on the side)-->
+                        <div class="col-sm-11">
+                            <p class="text-content-new">A combination of optogenetic genes and light stimulating these genes has the potential to allow precise spatiotemporal control of tissue generation at the cellular and even molecular level.</p>
+
+                            <p class="text-content-new"> Optical stimuli in comparison to mechanical ones do not require physical stimulation. As shown through multi-photon microscopy, it is possible to activate single molecules on a molecular level through the simultaneous exposure to different light sources. This means optical stimuli have the potential to activate photosensitive proteins in space and time at a subcellular level on the in- and outside of a growing tissue.</p>
+
+                            <p class="text-content-new"> In comparison to chemical stimuli, optical stimuli do not diffuse in solution and the risk of off-target cell activation is reduced.</p>
+
+                            <p class="text-content-new">  Furthermore, for future standardization, optical stimuli do not require specific scaffolds to build on. However, they do require a one-time acquisition of light sources capable of dynamically controlling the optogenetic circuits inside the cells.</p>
+
+                            <p class="text-content-new">The optogenetic guidance system has to control the following mechanisms in the cells of a growing tissue:</p>
+
+                            <div style="background-color: rgba(32,88,137,0.12); border-top:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-3 application-boxes">
+
+                                <p class="applications-text">Instantaneous cell adhesion</p>
+
+                                <button id="tissue-app4" type="button" class="btn btn-default btn-sm buttons-here">
+                                    <span class="glyphicon glyphicon-chevron-right infos-here"></span>
+                                </button>
+                            </div>
+
+                            <div style="float:right; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-9">
+                                <p id="applications-tissue-description2">In order to form structures cells need to form dynamic non-covalent formations in adherens junctions that allow constant remodelling of the structure while still maintaining a high degree of rigidity. The cell adhesion proteins in these junctions are stabilized via connections with the cytoskeleton, most notably actin filaments. Cells forming synthetic tissues therefore need to have the ability to form these connections rapidly in a cell culture that is dividing. In mammalian cells transcription takes around 30 min, translation (incl. mRNA export) another 30 min and further protein sorting and processing is dependent on the the type of protein. For the purpose of forming structural patterns, a photosensitive cell adhesion system therefore needs to be post-translational and instantaneous.</p>
+                            </div>
+
+                            <div style="background-color: rgba(137,2,19,0.12)" class="col-sm-3 application-boxes">
+
+                                <p class="applications-text">Gene activation</p>
+
+                                <button id="tissue-app5" type="button" class="btn btn-default btn-sm buttons-here">
+                                    <span class="glyphicon glyphicon-chevron-right infos-here"></span>
+                                </button>
+                            </div>
+
+                            <div style="background-color: rgba(15,137,0,0.12); border-bottom:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-3 application-boxes">
+                                <p class="applications-text">Post-printing control of cells</p>
+
+                                <button id="tissue-app6" type="button" class="btn btn-default btn-sm buttons-here">
+                                    <span class="glyphicon glyphicon-chevron-right infos-here"></span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-11">
+                            <p class="text-content-new">These challenges will not be overcome in day or even a decade but like with every difficult engineering project we need to start with an analysis of the problem and dividing it into manageable parts.</p>
+
+                        <p class="text-content-new">LIT’s aim is to bring us one step closer to a synthetic biology future in tissue engineering by focusing on the better characterisation of existing optogenetic tools in two scenarios: instantaneous cell adhesion and light-induced gene activation and regulation.</p>
+                        </div>
+
+
+                    </div>
+
                 </div>
+
+
             </div>
 
             <!-- Light bulb -->
