@@ -48,6 +48,27 @@
                 $("#applications-description").text("The production of small scale devices with medical applications also derives from our ability to grow structures from bacteria. Biopolymers, such as PHB, have a wide range of applications (agriculture films, safe materials for toys and packaging, feedstock additives). Via accurate light control, PHB-based medical implants can be produced, such as biocompatible veins and bronchus. See here the outcomes of our conversation with Blue Alpha - a company producing PHB from bacteria.");
             });
 
+            $("#tissue-app1").click(function(){
+                $("#applications-tissue-description").text("Scaffold design and construction methods need to be tailored towards the tissue tried to be produced. Scaffolds for heart reconstruction need to fulfil completely different prerequisites to bone scaffolds. With the incredibly diverse microenvironment of cells a myriad of different designs have been tested. Furthermore, the rapid invention of new biomaterials that are usable as scaffold material increase the number of possible scaffolds even further.");
+            });
+
+            $("#tissue-app2").click(function(){
+                $("#applications-tissue-description").text("After cells are seeded onto the scaffold their growth is limited by the constraints posed by the scaffold. This puts further responsibility on scaffold design and reduces the flexibility in the design. Once seeded, cells grow into the scaffold and reliable prediction of cell organisation is extremely difficult in a growing 3-dimensional tissue. Limited only by the constraints of the scaffold cells can form separate aggregations inside the scaffold or certain types of cell can establish a dominance instead of forming a coexistence with their neighbouring cells.");
+            });
+
+            $("#tissue-app3").click(function(){
+                $("#applications-tissue-description").text("Controlling this differentiation process has recently been achieved by embedding the growing tissue into a flow chamber and exposing the cells to different growth factors that guide the differentiation. [3] This proves to be very efficient but it also means that all cells in the tissue are exposed to the same growth factors and targeted differentiation of specific cells is difficult.");
+            });
+
+            $("#tissue-app4").click(function(){
+                $("#applications-tissue-description2").text("In order to form structures cells need to form dynamic non-covalent formations in adherens junctions that allow constant remodelling of the structure while still maintaining a high degree of rigidity. The cell adhesion proteins in these junctions are stabilized via connections with the cytoskeleton, most notably actin filaments. Cells forming synthetic tissues therefore need to have the ability to form these connections rapidly in a cell culture that is dividing.In mammalian cells transcription takes around 30 min, translation (incl. mRNA export) another 30 min and further protein sorting and processing is dependent on the the type of protein. For the purpose of forming structural patterns, a photosensitive cell adhesion system therefore needs to be post-translational and instantaneous.");
+                $("#hidden-list").hide();
+            });
+
+            $("#tissue-app5").click(function(){
+                $("#applications-tissue-description2").text("Many studies in developmental biology focus on the cell signalling in a growing organisms to elucidate the formation of complex structures. From these studies we know that simple adhesion between cells is only the first step of forming a stable, 3-dimensional structure. Equally important is the activation of genes that lead to the production of the extracellular matrix (ECM) and other cell adhesion proteins like integrins and selections.Furthermore, the ability to activate specific genes in a cell, theoretically, allows biological engineers to harness the already existing code to activate a full range of mechanisms.");
+                $("#hidden-list").show();
+            });
 
         });
     </script>
@@ -108,6 +129,9 @@
         margin:0 !important;
     }
 
+    #hidden-list {
+        display:none;
+    }
     .infos-here {
         font-size: 30px;
         color: black;
@@ -146,16 +170,16 @@
         font-size: 1.4vw;
         text-align: center;
         font-family: Lato;
-        padding: 15% 12% 2% 10%;
+        padding: 15% 5% 2% 0;
         margin:0 !important;
     }
 
-    #applications-description {
+    #applications-description, #applications-tissue-description, #applications-tissue-description2 {
         position:relative;
         max-width:97%;
-        font-size: 1.5vw;
-        text-align: justify;
-        font-family: Lato;
+        font-size: 1.5vw !important;
+        text-align: justify !important;
+        font-family: Lato !important;
         padding: 15% 12% 21% 10%;
         margin:0 !important;
     }
@@ -168,6 +192,7 @@
 
     .application-boxes {
         border-left:solid 1px rgba(39, 32, 34, 0.16);
+        margin: 3% 0 0 0;
     }
 
    #hidden-barc, #hidden-organ, #hidden-bulb {
@@ -471,10 +496,11 @@
 
             <!-- Tissue printing -->
             <div id="organ" class="row">
+
+                <!-- Main overview of results -->
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16);margin-bottom:3%" class="col-sm-5">
                     <p class="summary-here">Barchitecture is a 3D printing technology based on 2 suspended colonies of E. Coli cells that display on their surface one of the 2 binding partners that form a strong covalent bond: SpyTag or SpyCatcher. By using light in the form of lasers, one ensures that only in the desired location in the cell population covalent bonds will be formed between bacteria. Once a 3D structure is formed, light induces the production of PHB, which accumulates in the form of granules inside cells. Cells then use a type-2 system to secrete the PHB, with the granules being cross-linked into a solid shape by a photoinitiator.</p>
                 </div>
-
 
                 <div style="border-top: solid 1px rgba(39, 32, 34, 0.16);margin-bottom:3%" class="col-sm-2">
 
@@ -497,9 +523,274 @@
                     </ul>
                 </div>
 
+
+                <!-- Hidden bit -->
                 <div id="hidden-organ" class="col-sm-10">
 
+                    <div class="row">
+
+                            <div class="text-section col-sm-11">
+                                <h1 style="text-align: center; padding:3% 0 5% 0 !important;" class="title">Tissue engineering and how</h1>
+
+                                <p class="text-content-new">Tissue engineering involves developing sophisticated 3-dimensional scaffolds that mimic the tissue tried to be reproduced in mechanical terms such as elasticity, volume and organization. After the scaffold has been produced cells are seeded into and onto the scaffold and they are allowed to grow into the scaffold. Our project addresses common problems found in this area, by constructing a molecular tool that allows the control of cells while they are forming a tissue through light.</p>
+
+                                <p class="text-content-new">This approach allows the production of tissue structures that are specific to somebody's own cell and has the potential to overcome many of the problems seen in human-to-human transplantation.</p>
+
+                                <ul class="list-section">
+                                    <p style="padding-left: 35% !important" class="title">Advantages</p>
+                                    <li style="text-align: justify" class="list-item-content">Using a patient’s own cells to create such tissues ensures there will be <span style="color: #ff6657">no rejection</span> by the host</li>
+                                    <li style="text-align: justify" class="list-item-content">Independent of long transplant waiting lists <span style="color: #6499ff">patients would not suffer</span> the impaired living conditions and death due to a failing organ</li>
+                                    <li style="text-align: justify" class="list-item-content">Streamlining the production of tissues in vitro would <span style="color: #ff6657">reduce the costs</span> and <span style="color: #5f9eff">enable access</span> to transplantations to people living in underprivileged conditions</li>
+
+                                </ul>
+
+                            </div>
+
+                            <p style="position:relative; text-align: center; padding-top:10% !important; padding-bottom: 5% !important" class="text-content-new">However, the scaffolding and cell-seeding method, often called ‘bioprinting’ or ‘cellular 3D-printing’ has many drawbacks:</p>
+
+
+                        <div style="margin-left: 8% !important; background-color: rgba(32,88,137,0.12); border-top:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-3 application-boxes">
+
+                                <p class="applications-text">Choosing the right scaffold</p>
+
+                                <button id="tissue-app1" type="button" class="btn btn-default btn-sm buttons-here">
+                                    <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                                </button>
+                            </div>
+
+                        <div style="background-color: rgba(137,2,19,0.12);" class="col-sm-3 application-boxes">
+
+                            <p class="applications-text">Cellular Organisation</p>
+
+                            <button id="tissue-app2" type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                            </button>
+                        </div>
+
+                        <div style="background-color: rgba(15,137,0,0.12); border-bottom:solid 1px rgba(39, 32, 34, 0.16);" class="col-sm-3 application-boxes">
+                            <p class="applications-text">Post-printing control of cells</p>
+
+                            <button id="tissue-app3" type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                            </button>
+
+                        </div>
+
+                        <div style="margin-left: 8% !important; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-9">
+                                <p id="applications-tissue-description">Scaffold design and construction methods need to be tailored towards the tissue tried to be produced. Scaffolds for heart reconstruction need to fulfil completely different prerequisites to bone scaffolds. With the incredibly diverse microenvironment of cells a myriad of different designs have been tested. Furthermore, the rapid invention of new biomaterials that are usable as scaffold material increase the number of possible scaffolds even further</p>
+                            </div>
+
+
+                        </div>
+
+
+                    <div class="row">
+
+                            <!-- Overview - here should add buttons to navigate to each bit (or put on the side)-->
+                    <div class=" text-section col-sm-11">
+
+                                <p class="text-content-new">A combination of optogenetic genes and light stimulating these genes has the potential to allow precise spatiotemporal control of tissue generation at the cellular and even molecular level.</p>
+
+                                <p class="text-content-new"> Optical stimuli in comparison to mechanical ones do not require physical stimulation. As shown through multi-photon microscopy, it is possible to activate single molecules on a molecular level through the simultaneous exposure to different light sources. This means optical stimuli have the potential to activate photosensitive proteins in space and time at a subcellular level on the in- and outside of a growing tissue.</p>
+
+                                <p class="text-content-new"> In comparison to chemical stimuli, optical stimuli do not diffuse in solution and the risk of off-target cell activation is reduced.</p>
+
+                                <p class="text-content-new">  Furthermore, for future standardization, optical stimuli do not require specific scaffolds to build on. However, they do require a one-time acquisition of light sources capable of dynamically controlling the optogenetic circuits inside the cells.</p>
+
+                                <p class="text-content-new">The optogenetic guidance system has to control the following mechanisms in the cells of a growing tissue:</p>
+
+                        <ul class="list-section"><p class="text-content-new">Overview of how we designed a light-dependent tissue engineering system</p>
+
+                            <li class="list-item-content"><a style="color:rgba(85,85,85,0.76)" href="#current">Current Tissue Engineering Approaches & their Problems</a></li>
+                            <li class="list-item-content"><a style="color:rgba(122,122,122,0.76)" href="#">The Challenges on the Way to a Synthetic Biology Future in Tissue Engineering</a></li>
+                            <li class="list-item-content"><a style="color:rgba(172,172,172,0.76)" href="#instacell">Instantaneous Cell Adhesion</a></li>
+                            <li class="list-item-content"><a style="color:rgba(197,197,197,0.76)" href="#geneactiv">Light-induced Gene Activation & Regulation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+
+                    <div style="margin-left: 8% !important; background-color: rgba(32,88,137,0.12); border-top:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-4 application-boxes">
+
+                            <p class="applications-text">Instantaneous cell adhesion</p>
+
+                            <button id="tissue-app4" type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                            </button>
+                        </div>
+
+                        <div id="current" style=" background-color: rgba(137,2,19,0.12)" class="col-sm-4 application-boxes">
+
+                            <p class="applications-text">Gene activation</p>
+
+                            <button id="tissue-app5" type="button" class="btn btn-default btn-sm buttons-here">
+                                <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                            </button>
+                        </div>
+
+
+                        <div style="margin-left: 8% !important; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-8">
+                            <p id="applications-tissue-description2">In order to form structures cells need to form dynamic non-covalent formations in adherens junctions that allow constant remodelling of the structure while still maintaining a high degree of rigidity. The cell adhesion proteins in these junctions are stabilized via connections with the cytoskeleton, most notably actin filaments. Cells forming synthetic tissues therefore need to have the ability to form these connections rapidly in a cell culture that is dividing. In mammalian cells transcription takes around 30 min, translation (incl. mRNA export) another 30 min and further protein sorting and processing is dependent on the the type of protein. For the purpose of forming structural patterns, a photosensitive cell adhesion system therefore needs to be post-translational and instantaneous.</p>
+
+                            <ul id="hidden-list"><p class="text-content-new">The ones that are most important for tissue engineering are:</p>
+
+                                <li class="list-item-content">Dedifferentiation</li>
+                                <li class="list-item-content">Differentiation - Tissue consists of a range of specialised cells and their products and there is never a type of tissue made up of only one cell. To form a type of tissue cells, therefore, have to differentiate into a range of different cell types. This process requires already existing pluripotent stem cells. But in order to make this process feasible in healthcare current methods of inducing cells into a pluripotent state a too inefficient. We therefore propose that a gene activation system is needed that can induce dedifferentiation and differentiation triggered by different light sources.</li>
+                                <li class="list-item-content">Phototaxis - Next to forming connections between cells and rigidifying these by consecutive establishment of an ECM, cells need to migrate inside and on top of the tissue. One of the major disadvantages of current tissue engineering approaches is that a cell’s movement once seeded onto a scaffold is hard to control. However, if this movement is guided by a light-path more control can be gained for the structuring process.</li>
+                                <li class="list-item-content">Proliferation</li>
+                                <li class="list-item-content">Apopotosis - A growing tissue is defined by a dynamic interplay between cellular proliferation and death. For instance, the human embryo originally has webbed feet and hands but the controlled apoptosis of the interdigital regions is responsible for the development of our fine tuned fingers. Similar, in a developing tissue we want to control cell death in certain regions while leaving others to continue proliferating.</li>
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-sm-11">
+                        <p class="text-content-new">These challenges will not be overcome in day or even a decade but like with every difficult engineering project we need to start with an analysis of the problem and dividing it into manageable parts.</p>
+
+                        <p class="text-content-new">LIT’s aim is to bring us one step closer to a synthetic biology future in tissue engineering by focusing on the better characterisation of existing optogenetic tools in two scenarios: instantaneous cell adhesion and light-induced gene activation and regulation.</p>
+                    </div>
+
+                    <div class="text-section col-sm-11">
+                        <p class="text-content-new">Currently, in the synthetic biology community we need to resolve the need for more optogenetic tools and to characterise the existing ones better.</p>
+
+                        <p class="text-content-new">LIT’s aim is to bring us one step closer to a synthetic biology future in tissue engineering by focusing on the better characterisation of existing optogenetic tools in two scenarios: instantaneous cell adhesion and light-induced gene activation & regulation.</p>
+                    </div>
+
+                    <div id="instacell" style="background-color: rgba(171, 171, 171, 0.31)" class="text-section col-sm-11">
+                        <h1 class="title">Instantaneous cell adhesion</h1>
+
+                        <h1 style="color:#dc5162" class="subtitle">The problem</h1>
+
+                        <p class="text-content-new">While in the developing embryo cell adhesion is tightly regulated through a myriad of events that happened before and after the connection has formed, a synthetic tissue cannot rely on this stream of previous information.</p>
+
+                        <p class="text-content-new">Instantaneous cell adhesion is, therefore, a prerequisite for the formation of synthetic tissue structures. This instantaneous cell adhesion needs to mimic the natural mechanisms as much as possible but at the same time be photosensitive. LIT therefore came to the conclusion that the mechanism has to be post-translational because transcriptional control would require too long to form connections. Furthermore, post-translational control is mostly exerted through protein-protein inhibition which in comparison to transcriptional control results in less noise and fewer off-target activation.</p>
+                    </div>
+
+                    <div style="background-color: rgba(199,199,199,0.31)" class="text-section col-sm-11">
+                        <h1 class="subtitle">Design</h1>
+                        <p class="text-content-new">Using the human body's natural way of cell adhesion we first designed a BioBrick based on the preproprotein of E-cadherin (BBa_K2332312) which we received as a gift from Prof. Stephen Price, UCL, and tested its capability of forming cell-cell adhesions via aggregation assays. E-cadherin is a calcium-dependent cell adhesion molecule that functions in the establishment and maintenance of epithelial cell morphology during embryongenesis and adulthood. During the secretory pathway the encoded preproprotein undergoes proteolytic processing to generate a mature protein.</p>
+
+                        <p class="text-content-new">Previously, iGEM UCSF 2011 used the extracellular domain of E-cadherin (BBa_K644000) trying to form cell connections. However, E-cadherin’s function depends not only on the presence of calcium but also on the bonding of linker-proteins like alpha and beta catenin to the cytosolic domain of E-cadherin and the actin filaments in the cortex of the mammalian cell. This ‘anchoring’ results in stable mass action and the formation of adherens junctions between cells.</p>
+
+                        <p class="text-content-new">LIT investigated entry points into E-cadherin’s physiology that would render the protein photosensitive. We chose the interaction between the cytosolic domain of E-cadherin and beta-catenin. By fusing the novel photocleavable protein PhoCl to the cytosolic domain of E-cadherin the interaction with beta-catenin is sterically inhibited. PhoCl is an engineered green-to-red photoconvertible fluorescent protein (Zhang et al. 2017) which we received as a gift from the Robert Campbell lab, University of Alberta, Canada. It consists of 232 amino acids that are cleaved into an ~66-residue N-terminal fragment and an ~166-residue C-terminal fragment. We designed a new BioBrick based on PhoCl (BBa_K2332311) and a BioBrick of the E-cadherin-PhoCl fusion protein (BBa_).</p>
+
+                        <p class="text-content-new">The fusion protein cannot form stable cell-cell connections due to the lack of interactions with the actin cortex. However, after 400 nm, violet light exposure the sterical interference of the N-terminal 66 amino acid PhoCl remnant is too weak to inhibit the formation of connections between E-cadherin and the actin cortex. Stable connections can now be formed between cells and photo-activation is achieved.</p>
+
+                        <p class="text-content-new">A two-step experimental approach was chosen: first test the E-cadherin preproprotein via an aggregation assay for the ability to form patterns and then test the E-cadherin-PhoCl fusion for photo-sensitivity.</p>
+                    </div>
+
+                    <div style="background-color: rgba(223,223,223,0.31)" class="text-section col-sm-11">
+                        <p class="subtitle">Results</p>
+                    </div>
+
+
+                    <div id="geneactiv" style="background-color: rgba(171, 171, 171, 0.31)" class="text-section col-sm-11">
+                        <h1 class="title">Light-induced Gene Activation & Regulation</h1>
+
+                        <h1 class="subtitle">The problem</h1>
+
+                        <p class="text-content-new">Precise and reliable gene activation is essential for cellular control. LIT believes that light fulfils the physical requirements to act as the tool for gene activation. Different approaches have been tried in the past to activate genes via light. </p>
+
+                        <p class="text-content-new">To address the limitations in other approaches based on light, researchers adapted the CRISPR-Cas9 activator system for optogenetic control. Polstein et al. 2015 showed that fusing the light-inducible heterodimerizing proteins CRY2 and CIB1 from Arabidopsis thaliana to the VP64 transactivation domain and either the N- or C- terminus of dCas9, the catalytically inactive form of Cas9 (D10A, H840A) allows induction of transcription of endogenous genes in the presence of blue light.</p>
+
+                        <p class="text-content-new">This light-activated CRISPR-Cas9 effector (LACE) system can easily be modified by changing the gRNA that is expressed inside the cell and therefore allows dynamic on- and off-switching of genes. Nihongaki et al. 2015 modified the LACE system by using the transactivation domain of NFκB, called p65, instead of VP64 and activated endogenous and exogenous genes in a spatiotemporally confined manner.</p>
+
+                        <p class="text-content-new">However, these LACE systems are limited by the exposure time to blue light and require widefield illumination of the entire cell in order to activate both components, the dCas-CIB1 and the CRY2-TF. Gene activation in these systems requires constant blue light exposure for at least 2-3 hours for measurable results.</p>
+
+                        <p class="text-content-new">In the context of controlling cells to form tissues, this dependence on widefield illumination presents a major problem. All cells in the tissue would be illuminated at the same time and no specificity could be achieved. It is therefore necessary to reduce the required exposure time for the activation of the LACE system and render the activation mechanism independent of widefield illumination.</p>
+                    </div>
+
+                    <div style="background-color: rgba(199,199,199,0.31)" class="text-section col-sm-11">
+
+                        <h1 class="subtitle">Design</h1>
+                        <p class="text-content-new">Our solution is a LACE system that does not depend on heterodimerizing proteins from plants but instead on post-translational control exerted through a photocleavable linker.</p>
+
+                        <p class="text-content-new">The system consists of four essential units: a transmembrane domain, a photocleavable linker, dCas9 and a transactivation domain (p65, VP64, VP16).</p>
+
+                        <p class="text-content-new">Based on these prerequisite we designed BioBrick BBa_K2332317, a single-illumination light-activated CRISPR-Cas9 effector (siLACE) system localised to the plasma membrane of the cell via the photocleavable linker PhoCl. By localising the system to the plasma membrane the dCas9 fused to the transactivation domain is preprogrammed to not enter the nucleus and can therefore not activate any target gene inside the nucleus.</p>
+
+                        <p class="text-content-new">However, a single laser beam of 400 nm, violet light has been shown to be able to cleave PhoCl. After cleavage, the dCas9-TF is able to enter the nucleus, directed by attached nuclear localisation sequences. Inside the nucleus the system uses gRNAs to find the endogenous target gene and induce transcription.</p>
+
+                        <p class="text-content-new">The illumination radius of such the laser is many magnitudes below the dimensions of a standard mammalian cell (diameter: 10-15 µm; volume: ~4,000 µm3). This means that our siLACE system is not only able to activate genes on a single cell level but even modulate the expression via subcellular activation of only certain plasma membrane areas.</p>
+
+                        <p class="text-content-new">The main advantages of this siLACE system over previous designs is its independence of widefield illumination, its ‘memory’ and its ability for modulation. The system allows activation of genes solely via a single laser beam and once activated stays in an active state until the siLACE protein is naturally degraded. Additionally by changing the laser radius and the exposure time it is possible to activate different amounts of dCas9-TF’s at the same time, leading to short or long expression of the target gene.</p>
+                    </div>
+
+
+                    <!-- Left to upload below -->
+
+                    <div class="col-sm-11">
+                        <p class="text-content-new">For the construction and testing of our siLACE system we divided it into two testable components: the plasma membrane delivery system (PMDS, BBa_K2332315) and the dCas9-p65 (BBa_K2332316).</p>
+                    </div>
+
+                    <div style="background-color: rgba(171, 171, 171, 0.31)" class="text-section col-sm-11">
+                        <h1 class="subtitle">Plasma membrane delivery system (PMDS)</h1>
+                        <p class="text-content-new">The aim of the PMDS design was to create a generally practical transmembrane protein embedded in the plasma membrane that localises a target protein to its cytosolic side and allows subsequent delocalisation via light-induction.</p>
+
+                        <p class="text-content-new">There are many commercially available expression vectors available that target recombinant proteins to the surface of mammalian cells. (e.g.  ThermoFisher’s pDisplay). However, our PMDS is not only supposed to target a protein to the outside of the PM but also to the inside. LIT therefore had to investigate membrane trafficking in mammalian cells in depth to ensure the most efficient design.</p>
+
+                        <p class="text-content-new">In mammalian cells, all proteins start translation in the cytoplasm (with the exception of some mitochondrial proteins) and either undergo protein sorting during or after translation. PM transmembrane proteins first encode a signal peptide that is immediately bound by the signal recognition particle (SRP) which localises the translation complex to the endoplasmic reticulum (ER) where the translation continues through the Sec61-channel. During the co-translational import into the ER the presence or absence of special sequences of hydrophobic amino acids defines if a protein will contain one, two or multiple transmembrane domains or if the protein will be soluble (absence of hydrophobic sequence). If only one hydrophobic sequence is encoded the protein will be a single-span transmembrane protein. By default all proteins encoded enter the secretory pathway if they do not contain specialised signal sequences or signal patches, surface markers that define a proteins destination inside the cell.</p>
+
+                        <p class="text-content-new">We therefore had to incorporate a well characterised ER signal peptide into our PMDS, ensure the translation of a stable transmembrane domain and be cautious to not include a special signal sequence into the design.</p>
+
+                        <p class="text-content-new">iGEM LMU-TU Munich 2016 tested three different ER signal peptides of which ‘BM-40’ (BBa_K2170214) yielded the best result in a luciferase secretion assay. Unfortunately, this BioBrick is not in stock in the registry of standard biological parts and so we contacted iGEM  LMU-TU Munich 2017 who provided us with the plasmid.</p>
+
+                        <p class="text-content-new">The next step was to find the most promising transmembrane domain for our PMDS. We conducted a bioinformatic analysis of different transmembrane domains from the registry as well as from Nagaraj et al. 2011 and Quadrat and Truong 2016. Both papers are from the Applied Protein Engineering lab, University of Toronto, and investigate strategies for the assembly of synthetic transmembrane proteins. The result of our analysis was that the TMD of EGFR (BBa_K2170210) would be most suitable for ensuring transmembrane anchoring and a defined orientation of the protein. </p>
+
+                        <p class="text-content-new">The final design of the coding region of our PMDS is shown in Figure .. . It consists of the signal peptide ‘BM-40’, an ‘ectodomain insert’, the ‘TMDEGFR’, the photocleavable linker ‘PhoCl’, ‘cytosolic domain insert’ and stop codon (5’ to 3’).</p>
+
+                        <p class="text-content-new">For our test construct we chose BBa_K648013, a GFP fused N-terminally to a FLAG epitope tag, followed by an enterokinase cleavage site, as our ‘ectodomain insert’. In doing so we further characterised BBa_K648013 because the entry from iGEM Penn State 2011 did not mention that the submitted BioBrick contains a FLAG epitope or enterokinase cleavage site. This BioBrick was chosen because the GFP allows for easy tracking of the protein during its synthesis and the secretory pathway. Additionally, the enterokinase cleavage site allows for easy orientation testing of our PMDS by adding enterokinase into the cell solution and recording delocalisation of the GFP from the PM into the solution.</p>
+
+                        <p class="text-content-new">For the ‘cytosolic domain insert’ we chose the mCherry BioBrick BBa_J06504 followed by a NLS. mCherry was chosen because because its absorption maximum of 585 nm wavelength light lies outside the emission spectrum of GFP (max. At 510 nm) which makes makes separate imaging easier by reducing bleed-through.</p>
+
+                    </div>
+
+                    <div style="background-color: rgba(199,199,199,0.31)" class="text-section col-sm-11">
+
+                        <h1 class="subtitle">Experimental design</h1>
+
+                        <p class="text-content-new">Previous iGEM teams have used a range of different methods for gene delivery into mammalian cells. Some chose viral delivery, others tried to tried to make the iGEM submission vector pSB1C3 a mammalian expression vector by adding a device for mammalian antibiotic expression and creating a device for the gene of interest with mammalian promoters and terminators. Both these processes take a long time and have a high risk of failure. This is why MIT 2010 proposed a new standard to concatenate mammalian parts based on Gateway cloning instead of restriction cloning, the MammoBlock standard. However, this approach requires buying additional material and requires modification of standard BioBricks for Gateway cloning. Since time is the most pressing issue during a one summer research project LIT decided to use standard mammalian expression plasmids instead. We chose to use pcDNA3.1, a standard mammalian expression plasmid, because it is already optimized for protein expression in mammalian cell lines and contains a 5’-UTR and 3’-UTR that is well characterized and ensures efficient translation of the gene of interest.</p>
+
+                        <p class="text-content-new">After restriction cloning of our PMDS coding region into pcDNA3.1 we aim to transfect HEK293T cells by using Qiagen’s “SuperFect® Transfection Reagent” kit, a transfection method based on activated-dendrimers. This method has been successfully used for the aggregation assay (see above).</p>
+
+                        <p class="text-content-new">Using a confocal microscope we are able to see localisation of GFP and mCherry to the plasma membrane. Using a 400 nm, violet laser we are able to induce photocleavage of specific cells in the culture and record the movement of mCherry from the PM to the nucleus. Quantitative data is produced through analysis of percentage colocalization of GFP and mCherry.</p>
+
+                        <p class="text-content-new">This system can be tested even further in the future by using an mCherry part that contains a degradation tag (e.g. BBa_K1926013). This would allow a more dynamic system characterised by fast localisation of mCherry to the nucleus and consecutive degradation, returning the cell to its original state.</p>
+
+                        <p class="text-content-new">Finally, we incorporated a KpnI cutting site between PhoCl and mCherry and a BamHI cutting site between mCherry and the stop codon. These restriction sites allow easy exchange of the mCherry part with any other gene flanked by these sites in an iterative plug-and-play fashion (see Litcofsky et al. 2012). These two enzymes were chosen because they are not found in the iGEM submission plasmid pSB1C3 and therefore allow the plug-and-play method with a wide range of BioBricks.</p>
+                    </div>
+
+                    <div style="background-color: rgba(171, 171, 171, 0.31)" class="text-section col-sm-11">
+                        <h1 class="subtitle">dCas9-TF</h1>
+
+                        <p class="text-content-new">The aim of the dCas9-TF design was to replicate the results of Nihongaki et al. 2015 with a dCas9-p65 fusion protein instead of a dCas9-CIB1 and CRY2-p65 heterodimerizing system. For this purpose we contacted Dr. Nihongaki who gave us the sequences for his constructs as a gift.</p>
+
+                        <p class="text-content-new">The dCas9-p65 is targeted towards an mCherry reporter via a gRNA that has 13 different binding sites upstream of the mCherry reporter.</p>
+
+                        <p class="text-content-new">Using pcDNA3.1 as the vector and Qiagen’s “SuperFect® Transfection Reagent” kit as the transfection method we aim to express exogenous mCherry as reference for the testing of our final siLACE construct.</p>
+
+                        <p class="text-content-new">The dCas9-p65 coding region has been flanked by a KpnI cutting site (5’-end, downstream of the start codon) and a BamHI cutting site (3’-end, upstream of the stop codon) for further usage.</p>
+                    </div>
+
+                    <div style="background-color: rgba(199,199,199,0.31)" class="text-section col-sm-11">
+                        <h1 class="subtitle">siLACE system</h1>
+
+                        <p class="text-content-new">After we produced and tested our two test constructs the final single-illumination light-activated CRISPR-Cas9 effector system (BBa_K2332317) is created by choosing the dCas9-p65 gene as the ‘cytosolic domain insert’ of the PMDS. Since the dCas9-p65 incorporates a 5’ KpnI and a 3’ BamHI site it is suitable for plug-and-play exchange with the mCherry from our test PMDS. PMDS is thereby modified to deliver the dCas9-p65 to the plasma membrane instead of mCherry.</p>
+
+                        <p class="text-content-new">Using pcDNA3.1 as the vector and Qiagen’s “SuperFect® Transfection Reagent” kit as the transfection method we expect that no exogenous mCherry will be expressed after the transfection because the PMDS inhibits dCas9-p65 to enter the nucleus. Only after photoactivation with 400 nm, violet light will PhoCl be cleaved and irreversibly release the dCas9-p65 which now enters the nucleus. Inside the nucleus it associated with the gRNA and binds to the 13 different binding sites on the mCherry reporter. The transactivation domain p65 subsequently induces activation of transcription of the mCherry gene.</p>
+
+                        <p class="text-content-new">The presented experiments are our designs which we could not conduct during the summer anymore because of time issues. However, we encourage future iGEM teams to use the designs we worked on over the summer and continue where we stopped (which counts as further characterisation of an existing BioBrick and is a Gold medal criteria).</p>
+
+                    </div>
+
+
                 </div>
+
+            </div>
+
+
             </div>
 
             <!-- Light bulb -->

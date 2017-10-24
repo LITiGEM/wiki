@@ -109,6 +109,7 @@ body {
 /* each li element that has a hidden ul will be a drop id*/
 #drop:hover > .navy-hidden {
     margin-top: 20px;
+    margin-left:0;
     display:block;
     visibility:visible;
     opacity:1;
@@ -116,17 +117,19 @@ body {
 
 #drop1:hover > .navy-hidden {
     margin-top: 20px;
+    margin-left:0;
     display:block;
     visibility:visible;
     opacity:1;
 }
 
 #drop1:hover > ul li {
-    width:120px;
+    width:90px;
 }
 
 #drop2:hover > .navy-hidden {
     margin-top: 20px;
+    margin-left:0;
     display:block;
     visibility:visible;
     opacity:1;
@@ -138,6 +141,7 @@ body {
 
 #drop3:hover > .navy-hidden {
     margin-top: 20px;
+    margin-left:0;
     display:block;
     visibility:visible;
     opacity:1;
@@ -149,35 +153,38 @@ body {
 
 #drop4:hover > .navy-hidden {
     margin-top: 20px;
+    margin-left:0;
     display:block;
     visibility:visible;
     opacity:1;
 }
 
 #drop4:hover > ul li {
-    width:80px;
+    width:100px;
 }
 
 #drop5:hover > .navy-hidden {
     margin-top: 20px;
+    margin-left:0;
     display:block;
     visibility:visible;
     opacity:1;
 }
 
 #drop5:hover > ul li {
-    width:120px;
+    width:105px;
 }
 
 #drop6:hover > .navy-hidden {
     margin-top: 20px;
+    margin-left:0;
     display:block;
     visibility:visible;
     opacity:1;
 }
 
 #drop6:hover > ul li {
-    width:120px;
+    width:110px;
 }
 
 
