@@ -19,63 +19,22 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- a script that does the underlining for the side bar -->
-    <script>
-
-        $(document).ready(function(){
-            //Take your div into one js variable
-            var s1 = $("#step1");
-            var s2 = $("#step2");
-            var s3 = $("#step3");
-
-            //Take the current position (vertical position from top) of your div in the variable
-            var pos = s1.position();
-            var pos1 = s2.position();
-            var pos2 = s3.position();
-
-            //Now when scroll event trigger do following
-            $(window).scroll(function () {
-
-                scrollFunction()
-
-                var windowpos = $(window).scrollTop();
-                //console.log(windowpos);
-
-                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-                if (windowpos >= (pos.top + 100)) {
-                    // div.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s1.addClass("active-link");
-                }
-
-                if (windowpos >= (pos1.top + 750)) {
-                    // div1.addClass("AfterScroll");
-                    s1.removeClass("active-link");
-                    s3.removeClass("active-link");
-                    s2.addClass("active-link");
-
-                }
-
-                if (windowpos >= (pos2.top + 1100)) {
-                    //div2.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s3.addClass("active-link");
-                }
-
-            });
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
-            }
-
-        });
-    </script>
 </head>
 
+<style>
+    a {
+        text-decoration: none !important;
+    }
+    .biobricks {
+        position:relative;
+        max-width:97%;
+        font-size: 1.5vw !important;
+        font-family: Lato !important;
+        padding: 2% 12% 2% 10%;
+        margin:0 !important;
+    }
+
+</style>
 
 <body data-spy="scroll" data-target="#side-index">
 
@@ -160,51 +119,78 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- The side navbar -->
-        <nav id="side-index" class="col-sm-2">
-            <ul  class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step1" class="navy-link side-link"><a href="#section1">Light switches</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2">GFP Tags</a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3">Random shit</a></li>
-            </ul>
-        </nav>
+        <div style="margin:0 !important; padding:0 !important" class="col-sm-11">
 
+            <div style="margin-top: 20px; margin-left: 5% !important" class="text-section col-sm-5">
 
-        <div style="float: right !important" class="col-sm-10">
+                <h1 class="title">Basic Parts</h1>
 
-            <div style="margin-top: 20px" class="text-section">
+                <a href="http://parts.igem.org/wiki/index.php?title=Part:BBa_K2332002"><p class="biobricks">BBa_K2332002: PBlind promoter</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
 
-                <h1 class="title">Light Switches</h1>
+                <a href="http://parts.igem.org/Part:BBa_K2332004"><p class="biobricks">BBa_K2332004: EL222</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
 
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <a href="http://parts.igem.org/Part:BBa_K2332010"><p class="biobricks">BBa_K2332010: Intimin'-SpyTag</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
 
-                <img src="assets/bulb.png" class="image-content">
+                <a href="http://parts.igem.org/Part:BBa_K2332012"><p class="biobricks">BBa_K2332012: Intimin'-SpyCatcher</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
 
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <a href="http://parts.igem.org/Part:BBa_K2332017"><p class="biobricks">BBa_K2332017: GFP-SpyTag</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
+
+                <a href="http://parts.igem.org/Part:BBa_K2332030"><p class="biobricks">BBa_K2332030: Intimin'-GFP-SpyTag</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
+
+                <a href="http://parts.igem.org/Part:BBa_K2332031"><p class="biobricks">BBa_K2332031: GFP-SpyCatcher</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
+
+                <a href="http://parts.igem.org/Part:BBa_K2332032"><p class="biobricks">BBa_K2332032: Photocaged GFP-SpyCatcher</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
+
+                <a href="http://parts.igem.org/Part:BBa_K2332015"><p class="biobricks">BBa_K2332015: Photocaged Intimin'-SpyCatcher</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
+
+                <a href="http://parts.igem.org/Part:BBa_K2332019"><p class="biobricks">BBa_K2332019: PBLrep promoter</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
+
+                <a href="http://parts.igem.org/Part:BBa_K2332020"><p class="biobricks">BBa_K2332020: LuxCDABE</p></a>
+                <p class="text-content-new">Designed for light activation in Barchitecture</p>
+
+                <a href="http://parts.igem.org/Part:BBa_K2332311"><p class="biobricks">BBa_K2332311: E-cadherin (Preproprotein)</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332312"><p class="biobricks">BBa_K2332312: PhoCl</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332314"><p class="biobricks">BBa_K2332314: E-cadherin-PhoCl Fusion</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332315"><p class="biobricks">BBa_K2332315: Plasma membrane delivery system</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332316"><p class="biobricks">BBa_K2332316: dCas9-p65</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332317"><p class="biobricks">BBa_K2332317: Photoactive dCas9-p65 (siLACE system)</p></a>
 
             </div>
 
 
-            <div class="text-section">
-                <h1 class="title">GFP Tags</h1>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <div style="margin-top: 20px; margin-left: 3%" class="text-section col-sm-6">
+                <h1 class="title">Composite Parts</h1>
+                <a href="http://parts.igem.org/Part:BBa_K2332050"><p class="biobricks">BBa_K2332050: Intimin’-SpyTag (constitutive)</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332051"><p class="biobricks">BBa_K2332051: Intimin’-SpyCatcher (constitutive)</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332052"><p class="biobricks">BBa_K2332052: Intimin'-GFP-SpyTag  (constitutive)</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332053"><p class="biobricks">BBa_K2332053: GFP-SpyTag  (constitutive)</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332054"><p class="biobricks">BBa_K2332054: GFP-SpyCatcher  (constitutive)</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332001"><p class="biobricks">BBa_K2332001: pBlind-GFP</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332011"><p class="biobricks">BBa_K2332011: Pblind Intimin’-SpyTag</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332014"><p class="biobricks">BBa_K2332014: Pblind Intimin’-SpyCatcher</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332040"><p class="biobricks">BBa_K2332040: Pblind-Intimin'-GFP-SpyTag</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332041"><p class="biobricks">BBa_K2332041: Pblind-GFP-SpyCatcher</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332000"><p class="biobricks">BBa_K2332000: Pblind-GFP-SpyTag</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332042"><p class="biobricks">BBa_K2332042: Photocaged GFP-SpyCatcher</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332025"><p class="biobricks">BBa_K2332025: Photocaged Intimin'-SpyCatcher</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332003"><p class="biobricks">BBa_K2332003: tRNA-Pyl (pyIT)</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332005"><p class="biobricks">BBa_K2332005: EL222</p></a>
+                <a href="http://parts.igem.org/Part:BBa_K2332021"> <p class="biobricks">BBa_K2332021: Pblrep-LuxCDABE</p></a>
+
+                <a href="http://parts.igem.org/Part:BBa_K2332313"><p class="biobricks">BBa_K2332313: E-cadherin coding device</p></a>
 
             </div>
 
-            <div class="text-section">
-                <h1 class="title">Random shit</h1>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-            </div>
-
-            <div class="text-section">
-                <h1 class="title">What happens with bacteria</h1>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                <p class="text-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-            </div>
 
         </div>
 
