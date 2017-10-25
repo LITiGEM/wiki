@@ -103,6 +103,13 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
+
+    .summary-images {
+        margin:30% 0 0 0;
+        height:90%;
+        width:90%;
+    }
+
     .protein-images {
         height:30%;
         width:45%;
@@ -111,9 +118,48 @@
         border-radius: 50%;
     }
 
+    .overlay-buttons-here {
+        position: relative;
+        margin:30% 35% 0 0 !important;
+        background-color: rgba(125, 165, 255, 0.22);
+        border:none;
+    }
+
+    .overlay-buttons-here p {
+        max-width: 60%;
+        padding-top: 2%;
+        font-size: 1.3vw !important;
+        font-family: Lato !important;
+    }
+
+    .demo2 {
+        color: black;
+        background-color: rgba(181, 203, 230, 0.29);
+        text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+    }
+
+    .infos-hidden-here {
+             font-size: 3vw;
+             color: black;
+         }
+
     #step1 {
-        font-size: 17px;
-        font-family: "Noto Sans";
+        font-size: 1.6vw !important;
+        font-family: Lato !important;
+    }
+
+    .list-results {
+        list-style-type: none;
+        position:relative;
+        padding: 2% 3% 2% 2%;
+        margin:0 !important;
+    }
+
+    .list-item-results {
+        font-family: Lato !important;
+        font-size: 1.3vw;
+        text-align: center;
+        padding:3% 1% 2% 4%;
     }
 
 </style>
@@ -209,7 +255,7 @@
             </ul>
         </nav>
 
-        <div style=" margin-left: 4%" class="col-sm-9">
+        <div style=" margin-left: 5% !important" class="col-sm-9">
 
             <!-- The intro bit -->
             <div class="row">
@@ -251,28 +297,101 @@
             <!-- What we're doing to address this - developing applications -->
             <div class="row">
 
-                <div style="background-color: rgba(129,149,175,0.19); margin-top: 2%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); " class="col-sm-11">
-                    <p class="HP-intros">We developed three distinct applications for biological light switches to show their potential in the scientific community. In contrast to current mechanical and chemical stimuli, our light based strategies allow for the precise spatiotemporal and noninvasive control of complex gene circuits.</p>
+                <div class="col-sm-11">
+                    <p class="HP-intros demo2">We developed three distinct applications for biological light switches to show their potential in the scientific community. In contrast to current mechanical and chemical stimuli, our light based strategies allow for the precise spatiotemporal and noninvasive control of complex gene circuits.</p>
                 </div>
 
-                <div style="background-color: rgba(163,0,202,0.08)" class="text-section col-sm-11">
-                    <img src="assets/icon-barc.png" class="image-content-here">
-                    <p style="padding:5% 0 5% 2%" class="text-content-new">We are engineering bacterial cells that can be directed by light to form physical structures out of biodegradable plastic. Bacteria form strong covalent bonds instantly upon light exposure, which guides the formation of 3D structures. Then, the same cells produce biopolymer granules and secrete them to be cross-linked into a solid shape.</p>
+            </div>
+
+            <!-- Barchitecture -->
+            <div class="text-section row">
+
+                <div class="col-sm-5">
+
+                    <p style="padding:10% 0 5% 5% !important" class="text-content-new">We are engineering bacterial cells that can be directed by light to form physical structures out of biodegradable plastic. Bacteria form strong covalent bonds instantly upon light exposure, which guides the formation of 3D structures. Then, the same cells produce biopolymer granules and secrete them to be cross-linked into a solid shape. We chose to focus on designing and testing the light-induced cell aggregation system and polymer production.</p>
+
                 </div>
 
-                <div style="background-color: rgba(191,71,0,0.09)" class=" text-section col-sm-11">
-                    <img style="float:left"src="assets/icon-bulb.png" class="image-content-here">
-                    <p style="padding:5% 0 5% 2%" class="text-content-new">To minimize the usage of electricity for illumination we designed a bacterial light bulb. Compared to previous attempts, we are incorporating a photosensitive protein to regulate the bioluminescence of E. Coli inside and the co-culturing with cyanobacteria, which through photosynthesis will provide the glucose necessary for their buddy cells.</p>
+                <div class="col-sm-3">
+
+                    <img src="assets/icon-barc.png" class="summary-images">
+
+                    <button id="button-barc-hidden" type="button" class="btn btn-default btn-sm overlay-buttons-here"><p>Deep down the rabbit hole</p></button>
+                </div>
+
+                <div class="col-sm-4">
+
+                    <h1 style="padding-left: 17.5% !important" class="title">What we achieved</h1>
+                    <ul class="list-results">
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Designed <b>4 biobricks</b> and experiments for 2 systems to induce <b>cell adhesion</b> to form 3D upon <b>light exposure</b></li>
+                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Performed experiments to <b>test blue-light activation</b> for the transcription of necessary proteins</li>
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results"><b>Modelled</b> the expression of adhesion proteins on E. Coli cell surface</li>
+                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results"><b>Modelled</b> cell adhesion with <b>a cellular automaton</b> for better visualisation</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Tissue -->
+            <div class=" text-section row">
+
+                <div class="col-sm-5">
+                    <p style="padding:10% 0 5% 2%" class="text-content-new">We also used these light switches to design a guidance system for mammalian tissue engineering. Our focus is on 2 parts: structure formation, for which we developed a photosensitive form of the cell adhesion protein E-cadherin; and specific gene activation, for which we propose a dCas9-TF system that upon light exposure activates genes of interest. To achieve a 3-dimensional tissue, we propose that a modified multi-photon microscope can make photoactivation specific to the desired outcomes.</p>
+                </div>
+
+                <div class="col-sm-3">
+
+                    <img src="assets/icon-organ.png" class="summary-images">
+
+                    <button id="button-organ-hidden" type="button" class="btn btn-default btn-sm overlay-buttons-here"><p>Deep down the rabbit hole</p></button>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <h1 style="padding-left: 17.5% !important" class="title">What we achieved</h1>
+                    <ul class="list-results">
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Designed BioBricks and experiments for a photosensitive cell adhesion and a gene activation system in mammalian cells</li>
+                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Performed experiments to test cell aggregation for pattern formation</li>
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Modelled the activation of genes of interest with a dCas9-TF after photoactivation</li>
+                    </ul>
                 </div>
 
 
-                <div style="background-color: rgba(5,6,216,0.11)" class="text-section col-sm-11">
-                    <img src="assets/icon-organ.png" class="image-content-here">
-                    <p style="padding:5% 0 5% 2%" class="text-content-new">We’re also addressing one of the biggest issues in tissue engineering: control of the cells during tissue formation. We are developing an optical guidance system for inter-cell adhesion and directed gene expression of mammalian cells. This will enable fast in situ cell adhesion for tissue-specific organ healing.</p>
+            </div>
+
+            <!-- Bulb -->
+            <div class="text-section row">
+
+                <div class="col-sm-5">
+                    <p style="padding:15% 0 5% 2%" class="text-content-new">We designed a bacterial light-bulb to provide an environmentally-friendly alternative to traditional illumination sources. Compared to previous attempts, we are incorporating a photosensitive protein (EL222) to regulate the bioluminescence of E. Coli inside and the co-culturing with cyanobacteria, which through photosynthesis provide the glucose necessary for their buddy cells.</p>
                 </div>
+
+                <div class="col-sm-3">
+
+                    <img src="assets/icon-bulb.png" class="summary-images">
+
+                    <button id="button-bulb-hidden" type="button" class="btn btn-default btn-sm overlay-buttons-here"><p>Deep down the rabbit hole</p></button>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <h1 style="padding-left: 17.5% !important" class="title">What we achieved</h1>
+                    <ul class="list-results">
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Designed the bulb with a light-induced transcriptional control of bioluminescence</li>
+                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Modelled the dimensions necessary for the bulb to accommodate cyanobacteria</li>
+                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">3D printed a prototype for the bulb after integrating designs from artists</li>
+                    </ul>
+                </div>
+
+
+
             </div>
 
         </div>
+
+    </div>
 
         <a href="#" id="myBtn" title="Go to top">Back to Top</a>
 
