@@ -29,13 +29,6 @@
             var section5 = $('#tissue-nav1'), section6 = $('#tissue-nav2'), section7 = $('#tissue-nav3'), section8 = $('#tissue-nav4');
             var section9 = $('#bulb-nav1'), section10 = $('#bulb-nav2'), section11 = $('#bulb-nav3'), section12 = $('#bulb-nav4');
 
-            //the content that will change will be stored in these variables
-            var section1Content;
-            var section2Content;
-            var section3Content;
-            var section4Content;
-
-
             //these functions give values to the high-level buttons that define what section 1, 2, 3 and 4
             // and to the relevant content that should be displayed
 
@@ -55,15 +48,6 @@
                 $(section4).show();
 
 
-                //here I could make these buttons fade in when they change their content
-
-                //here we also change the content what is supposed to come next
-                section1Content = $('#barc-1');
-                section2Content = $('#barc-2');
-                section3Content = $('#barc-3');
-                section4Content = $('#barc-4');
-
-
             });
 
             $("#tissue").click(function(){
@@ -73,7 +57,7 @@
                 $(section2).hide();
                 $(section3).hide();
                 $(section4).hide();
-                $(section8).hide();
+                $(section12).hide();
                 $(section9).hide();
                 $(section10).hide();
                 $(section11).hide();
@@ -83,14 +67,6 @@
                 $(section7).show();
                 $(section8).show();
 
-                //here we also change the content what is supposed to come next
-                section1Content = $('#tissue-1');
-                section2Content = $('#tissue-2');
-                section3Content = $('#tissue-3');
-                section4Content = $('#tissue-4');
-
-                console.log(section5);
-                console.log(section1Content);
             });
 
             $("#bulb").click(function(){
@@ -110,126 +86,229 @@
                 $(section11).show();
                 $(section12).show();
 
-                //here we also change the content what is supposed to come next
-                section1Content = $('#bulb-1');
-                section2Content = $('#bulb-2');
-                section3Content = $('#bulb-3');
-                section4Content = $('#bulb-4');
             });
 
             //the second menu buttons - when we press on the button, it should fadeIn the right content
 
             $(section1).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section2Content).hide();
-                $(section3Content).hide();
-                $(section4Content).hide();
+                $('#barc-1').fadeIn("slow");
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
 
-                $(section1Content).show();
+                $('#tissue-1').hide();
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
+
+                $('#bulb-1').hide();
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
 
 
             });
 
             $(section2).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section1Content).hide();
-                $(section3Content).hide();
-                $(section4Content).hide();
+                $('#barc-2').fadeIn("slow");
+                $('#barc-1').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
 
-                $(section2Content).fadeIn("slow");
+                $('#tissue-1').hide();
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
+
+                $('#bulb-1').hide();
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
             });
 
             $(section3).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section2Content).hide();
-                $(section1Content).hide();
-                $(section4Content).hide();
+                $('#barc-3').fadeIn("slow");
+                $('#barc-2').hide();
+                $('#barc-1').hide();
+                $('#barc-4').hide();
 
-                $(section3Content).fadeIn("slow");
+                $('#tissue-1').hide();
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
+
+                $('#bulb-1').hide();
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
             });
 
             $(section4).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section2Content).hide();
-                $(section3Content).hide();
-                $(section1Content).hide();
+                $('#barc-4').fadeIn("slow");
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-1').hide();
 
-                $(section4Content).fadeIn("slow");
+                $('#tissue-1').hide();
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
+
+                $('#bulb-1').hide();
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
             });
 
             $(section5).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section2Content).hide();
-                $(section3Content).hide();
-                $(section4Content).hide();
+                $('#tissue-1').fadeIn("slow");
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
 
-                $(section1Content).show();
+                $('#barc-1').hide();
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
+
+                $('#bulb-1').hide();
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
 
 
             });
 
             $(section6).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section1Content).hide();
-                $(section3Content).hide();
-                $(section4Content).hide();
+                $('#tissue-2').fadeIn("slow");
+                $('#tissue-1').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
 
-                $(section2Content).fadeIn("slow");
+                $('#barc-1').hide();
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
+
+                $('#bulb-1').hide();
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
             });
 
             $(section7).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section2Content).hide();
-                $(section1Content).hide();
-                $(section4Content).hide();
+                $('#tissue-3').fadeIn("slow");
+                $('#tissue-2').hide();
+                $('#tissue-1').hide();
+                $('#tissue-4').hide();
 
-                $(section3Content).fadeIn("slow");
+                $('#barc-1').hide();
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
+
+                $('#bulb-1').hide();
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
             });
 
             $(section8).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section2Content).hide();
-                $(section3Content).hide();
-                $(section1Content).hide();
+                $('#tissue-4').fadeIn("slow");
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-1').hide();
 
-                $(section4Content).fadeIn("slow");
+                $('#barc-1').hide();
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
+
+                $('#bulb-1').hide();
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
             });
 
             $(section9).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section2Content).hide();
-                $(section3Content).hide();
-                $(section4Content).hide();
+                $('#bulb-1').fadeIn("slow");
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
 
-                $(section1Content).show();
+                $('#barc-1').hide();
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
+
+                $('#tissue-1').hide();
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
 
             });
 
             $(section10).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section1Content).hide();
-                $(section3Content).hide();
-                $(section4Content).hide();
+                $('#bulb-2').fadeIn("slow");
+                $('#bulb-1').hide();
+                $('#bulb-3').hide();
+                $('#bulb-4').hide();
 
-                $(section2Content).fadeIn("slow");
+                $('#barc-1').hide();
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
+
+                $('#tissue-1').hide();
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
             });
 
             $(section11).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section2Content).hide();
-                $(section1Content).hide();
-                $(section4Content).hide();
+                $('#bulb-3').fadeIn("slow");
+                $('#bulb-2').hide();
+                $('#bulb-1').hide();
+                $('#bulb-4').hide();
 
-                $(section3Content).fadeIn("slow");
+                $('#barc-1').hide();
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
+
+                $('#tissue-1').hide();
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
             });
 
             $(section12).click(function(){
                 //here we only have to fade the right content and out the bad one
-                $(section2Content).hide();
-                $(section3Content).hide();
-                $(section1Content).hide();
+                $('#bulb-4').fadeIn("slow");
+                $('#bulb-2').hide();
+                $('#bulb-3').hide();
+                $('#bulb-1').hide();
 
-                $(section4Content).fadeIn("slow");
+                $('#barc-1').hide();
+                $('#barc-2').hide();
+                $('#barc-3').hide();
+                $('#barc-4').hide();
+
+                $('#tissue-1').hide();
+                $('#tissue-2').hide();
+                $('#tissue-3').hide();
+                $('#tissue-4').hide();
             });
 
 
@@ -276,9 +355,9 @@
 <style>
 
     .image-content-here {
-        margin:20% 0 2% 0;
-        height:70%;
-        width:70%;
+        margin:15% 0 2% 15%;
+        height:40%;
+        width:40%;
     }
 
     .image-content-hidden {
@@ -300,21 +379,12 @@
         border:none;
     }
 
-    .overlay-buttons-here p {
-        position:relative;
-        font-size: 1.5vw !important;
-        text-align: justify;
-        font-family: Lato;
-        padding: 15% 0 0 0;
-        margin:0 !important;
-    }
-
     #description-intro {
         position:relative;
-        font-size: 30px;
+        font-size: 1.6vw !important;
         text-align: center;
         font-family: "Josefin Sans";
-        padding: 5% 0 0 15%;
+        padding: 3% 0 0 15%;
         margin:0 !important;
     }
 
@@ -414,7 +484,22 @@
 
     #barc-nav1, #barc-nav2, #barc-nav3, #barc-nav4, #tissue-nav1, #tissue-nav2, #tissue-nav3, #tissue-nav4, #bulb-nav1, #bulb-nav2, #bulb-nav3, #bulb-nav4 {
         display:none;
+        width:20% !important;
+        height:70px;
+        margin:1% 1% 2% 1% !important;
+        background-color: rgba(0, 67, 147, 0.42);
     }
+
+    .buttoni {
+        position:relative;
+        font-size: 1.3vw !important;
+        font-family: Lato !important;
+        padding: 0 0 0 0 !important;
+        margin:0 !important;
+        color: white;
+    }
+
+
 </style>
 
 <body data-spy="scroll" data-target="#side-index">
@@ -424,7 +509,7 @@
 <div style="margin:0 !important; padding:0 !important" class="container-fluid">
     <div id="top" class="row">
 
-        <img src="assets/logotop.png" class="logo-top">
+        <img src="http://2017.igem.org/wiki/images/9/92/Logotop.png" class="logo-top">
 
         <ul class="navy">
             <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
@@ -505,19 +590,19 @@
     <div class="row">
 
         <!-- Content-->
-        <div style=" margin-left: 10% !important" class="col-sm-10">
+        <div style=" margin-left: 10% !important" class="col-sm-11">
 
             <!-- Overview -->
             <div class="row">
 
                 <div class="col-sm-10">
-                    <p id="description-intro">Results from our 3 applications that we have developed for optogenetics. All organic.</p>
+                    <p id="description-intro">Click on one of our applications to find our more about how we explored biological light switches</p>
                 </div>
 
                 <!-- Barchitecture -->
                 <div  class="col-sm-4">
 
-                    <img id="barc" src="assets/icon-barc.png" class="image-content-here">
+                    <img id="barc" src="http://2017.igem.org/wiki/images/2/23/Icon-barc.png" class="image-content-here">
 
                     <p class="overlay-text">Applying light switches to create 3D structures</p>
 
@@ -525,14 +610,14 @@
 
                 <!-- Organ Printing-->
                 <div class="col-sm-4">
-                    <img id="tissue" src="assets/icon-organ.png" class="image-content-here">
-                    <p class="overlay-text">Using light to precisely control organ printing</p>
+                    <img id="tissue" src="http://2017.igem.org/wiki/images/b/bb/Icon-organ.png" class="image-content-here">
+                    <p class="overlay-text">Using light to precisely control tissue engineering</p>
 
                 </div>
 
                 <!-- Light bulb-->
                 <div class="col-sm-4">
-                    <img id="bulb" src="assets/icon-bulb.png" class="image-content-here">
+                    <img id="bulb" src="http://2017.igem.org/wiki/images/8/89/Icon-bulb.png" class="image-content-here">
                     <p class="overlay-text">A bacterial light-bulb controlled through light</p>
 
                 </div>
@@ -542,35 +627,36 @@
             <!-- The second menu the sections will be replaced when clicking on the images above, to be specific to each module-->
             <div class="row">
 
-                <!-- Menu for barchitecture-->
-                <button  id="barc-nav1" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Our 2017 focus</p></button>
+                <div class="col-sm-11">
+                    <!-- Menu for barchitecture-->
+                    <button  id="barc-nav1" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Overview</p></button>
 
-                <button  id="barc-nav2" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>The potential of the idea</p></button>
+                    <button  id="barc-nav2" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">The potential of the idea</p></button>
 
-                <button  id="barc-nav3" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Our light-induced systems</p></button>
+                    <button  id="barc-nav3" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Our light-induced systems</p></button>
 
-                <button  id="barc-nav4" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Experimental results</p></button>
-
-
-                <!-- Menu for tissue-->
-                <button  id="tissue-nav1" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Overview</p></button>
-
-                <button  id="tissue-nav2" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Challenges we are addressing</p></button>
-
-                <button  id="tissue-nav3" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Our solution</p></button>
-
-                <button  id="tissue-nav4" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Comparing to current alternatives</p></button>
+                    <button  id="barc-nav4" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Experimental results</p></button>
 
 
-                <!-- Menu for the bulb-->
-                <button  id="bulb-nav1" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Overview</p></button>
+                    <!-- Menu for tissue-->
+                    <button  id="tissue-nav1" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Overview</p></button>
 
-                <button  id="bulb-nav2" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Why a bacterial bulb</p></button>
+                    <button  id="tissue-nav2" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Challenges</p></button>
 
-                <button  id="bulb-nav3" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Experiments</p></button>
+                    <button  id="tissue-nav3" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Our solution</p></button>
 
-                <button  id="bulb-nav4" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here"><p>Taking it to the market</p></button>
+                    <button  id="tissue-nav4" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Alternative comparison</p></button>
 
+
+                    <!-- Menu for the bulb-->
+                    <button  id="bulb-nav1" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Overview</p></button>
+
+                    <button  id="bulb-nav2" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Why a bacterial bulb</p></button>
+
+                    <button  id="bulb-nav3" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Experiments</p></button>
+
+                    <button  id="bulb-nav4" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Taking it to the market</p></button>
+                </div>
             </div>
 
             <!-- This is where all the shit happens-->
@@ -581,7 +667,7 @@
 
                     <p class="summary-here"><b>Barchitecture</b> is a 3D printing technology based on 2 suspended colonies of E. Coli cells that display on their surface one of the 2 binding partners that form <b>a strong covalent bond</b>: SpyTag or SpyCatcher. By using light in the form of lasers, one ensures that only in the desired location in the cell population covalent bonds will be formed between bacteria. Once a 3D structure is formed, <b>light induces the production of PHB</b>, which accumulates in the form of granules inside cells. Cells then use a type-2 system to <b>secrete the PHB</b>, with the granules being cross-linked into a solid shape by a photoinitiator.</p>
 
-                    <p class="text-content-new">In our project, we decided to focus on designing and testing cell adhesion systems that are light-activated.</p>
+                    <p class="text-content-new">One is a <span style="color:#417fff">light-induced transcriptional control system</span> of cell adhesion with the <span style="color:#ff7d5d">photosensitive protein EL222</span>. The second uses the <span style="color:#ff7d5d">photo-caged non-natural amino acid</span> PyroLysine to achieve a <span style="color:#417fff">quicker post-translational control</span> over cell adhesion.</p>
 
                 </div>
 
@@ -677,17 +763,17 @@
                         <p class="text-content-new">Using the blue light inducible promoter PBlind , we aim to use blue light (6hr, 475nm) to induce the transcription of Intimin, a cell surface protein, fused to either SpyTag (13 amino acids) or SpyCatcher (138 amino acids, 15kDa). SpyTag and SpyCatcher are two binding partners that come from CnaB2 (immunoglobulin-llike collagen adhesin domain) of the FbaB protein, found in the invasive strains of S. pyogenes. SpyTag contains a reactive aspartate that forms a strong isopeptide bond with a reactive lysine residue in SpyCatcher when in close proximity. </p>
 
                         <!-- the 2 briobricks-->
-                        <img src="assets/BB-Intimin-SpyTag.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/a/ae/BB-Intimin-SpyTag.png" class="image-content-hidden">
 
-                        <img src="assets/BB-Intimin-SpyCatcher.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/d/dc/BB-Intimin-SpyCatcher.png" class="image-content-hidden">
 
                         <p class="text-content-new">Once a mixture of cells are light induced to display SpyTag or SpyCatcher on their cell surface, they are expected to aggregate. Similar to lithography, structures would be generated layer by layer from a flat surface by exposing a particular radius with blue light. </p>
 
                         <p class="text-content-new">Designers note: after analysing multiple cell surface display proteins, we opted for Intimin (EaeA intimin) as it has shown to display passenger proteins of similar size to SpyCatcher and it had not been characterised by iGEM teams before. Other cell candidates considered include: ice nucleation protein, PgsA and OmpC.</p>
 
-                        <img src="assets/results-di-spy.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/d/d0/SpyTag-SpyCatcher.png" class="image-content-hidden">
 
-                        <img src="assets/results-di-photoactiv.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/4/41/Bacteria-diagram-transcript.png" class="image-content-hidden">
 
                         <p class="text-content-new">Designed Experiments</p>
 
@@ -695,15 +781,15 @@
 
                         <p class="text-content-new">B) Represents two cell lines expressing either intimin’-SpyTag or intimin’-SpyCatcher fusion proteins pre and post light induction. Aggregation experiments described in A) would have been repeated after replacing the constitutive promoter with PBlind , blue-light inducible promoter and transforming cells with EL222 (blue light inducer) under a constitutive promoter (C). Cell aggregation and fluorescence experiments would have been carried out with cells grown overnight under darkness or under blue-light and in the presence or absence of the EL222 construct.</p>
 
-                        <img src="assets/exp-barc-1.jpg" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/e/e8/Exp-barc-1.jpeg" class="image-content-hidden">
 
-                        <img src="assets/exp-barc-2.jpg" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/7/72/Exp-barc-2.jpeg" class="image-content-hidden">
 
-                        <img src="assets/exp-barc-3.jpg" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/8/86/Exp-barc-3.jpeg" class="image-content-hidden">
 
-                        <img src="assets/exp-barc-4.jpg" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/d/d9/Exp-barc-4.jpeg" class="image-content-hidden">
 
-                        <img src="assets/GFP-SpyTag.jpg" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/6/63/Exp-barc-5.jpeg" class="image-content-hidden">
                     </div>
 
                     <!-- Light Induced Control-->
@@ -715,11 +801,11 @@
 
                         <p class="text-content-new">To achieve this, we introduced an amber stop codon (TAG) in place of the reactive Lys 31 residue (Lys31X) in SpyCatcher. Amberless E. coli cells also have to express pyrrolysyl tRNA (pyIT/tRNAPylCUA) from M. mazei and pyrrolysyl-tRNA synthetase from M. barkeri and the UAA must be supplemented in the media. The pyrrolysyl-tRNA synthetase catalyses the acylation of the suppressor tRNACUA with the UAA. During translation, the UAG amber codon in the mRNA is recognized by the acylated tRNACUA and the UAA will be added to the growing polypeptide chain. The orthogonality of this system has shown to work in both E. coli and mammalian cells.</p>
 
-                        <img src="assets/results-di-photocage.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/0/05/Results-di-photocage.png" class="image-content-hidden">
 
-                        <img src="assets/BB-Intimin-SpyCatcher%20amber.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/3/3c/BB-Intimin-SpyCatcher-amber.png" class="image-content-hidden">
 
-                        <img src="assets/results-di-photocage2.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/4/4b/Results-di-photocage2.png" class="image-content-hidden">
 
                         <p class="text-content-new">Figure 2. Post-translational light induction of cell aggregation. A) Represents two cell lines expressing constitutively either intimin’-SpyTag or the photocaged version of intimin’-SpyCatcher fusion proteins. Cells harbouring either construct would have either been mixed together or mixed with WT cells (control) or not mixed and exposed to UV light (365nm) or not exposed for 25min-1hr and then passed through a particle sizer with a range of aperture sizes (0.4µm - 40µm) to compare aggregate sizes. As secondary experiments and for visual purposes we would have also incubated cells expressing Intimin’-SpyTag with purified photocaged GFP-SpyCatcher, photocaged Intimin’-SpyCatcher with purified GFP-SpyTag and Intimin-GFP-SpyTag with photocaged Intimin-SpyCatcher cell lines pre and post photo-lysis (365nm) for 25min-1hr to visualize cell-protein binding and cell-cell interaction via fluorescence microscopy. We also included a His-Tag within all photocaged SpyCatcher construct variants to enable in-vitro analysis of complexes formed with SpyTag variants.</p>
 
@@ -733,7 +819,7 @@
 
                         <p class="text-content-new">Proposed design for the production, secretion and binding of PHA granules:</p>
 
-                        <img src="assets/results-di-phb.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/c/c4/Results-di-phb.png" class="image-content-hidden">
 
                         <p class="text-content-new">Through a similar mechanism, bacteria, could be light-guided to form precise and intricate structures that can then simultaneously produce and bind biosilica. This approach will enable “growing” electronics just with the guidance of a particular wavelength of light.</p>
 
@@ -749,7 +835,7 @@
 
                         <p class="text-content-new">We tested whether the promoter has any significant leakage. Also, we wanted to show that GFP cannot be expressed in the absence of EL222. This is of particular interest as the aim of LIT is to demonstrate the versatility and high precision of light control. As shown in Figure1, only J23151-GFP (positive control) had a significant difference in fluorescence compared to R0040-GFP (negative control) WT cells and the Luria Broth (LB) in both dark and Blue-light conditions.  Pblind-GFP had no significantly different fluorescence level compared to the LB baseline, negative control or WT cells in either condition. This is expected, as the EL222 protein is required for blue-light inducible transcriptional activation.</p>
 
-                        <img src="assets/results-graph-barc.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/1/1b/Results-graph-barc.png" class="image-content-hidden">
 
                         <p class="text-content-new">Figure 1. Blue light inducible promoter (Pblind) characterisation. J23151 is a constitutive promoter, R0040 is a TetR repressible promoter (repression inhibited only by the addition of tetracycline), Pblind promoter is a fusion of EL222 (photosensitive transcription factor) binding region and the luxI promoter, where EL222 is only able to dimerize and bind the Pblind promoter upon blue light exposure, where it can then recruit RNAP and drive the transcription of genes downstream. Wild type (WT) 10beta cells were transformed with J23151-GFP (positive control), R0040-GFP (negative control) or Pblind-GFP. All cells were grown overnight at 37°C in darkness or exposed to blue light (465nm) and diluted to OD600=0.6 to record GFP fluorescence. The data represents the mean of 3 biological replicates and 4 technical replicates for each condition. Luria broth (LB) was included as a baseline for the fluorescence. Error bars represent the SD and statistical significance of **** P < 0.0001 was calculated using the Tukey's multiple comparisons test.</p>
                     </div>
@@ -769,7 +855,20 @@
                         <p class="applications-text">Instantaneous cell adhesion</p>
 
                         <button id="tissue-app4" type="button" class="btn btn-default btn-sm buttons-here">
-                            <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
                         </button>
                     </div>
 
@@ -778,7 +877,20 @@
                         <p class="applications-text">Gene activation</p>
 
                         <button id="tissue-app5" type="button" class="btn btn-default btn-sm buttons-here">
-                            <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
                         </button>
                     </div>
 
@@ -967,7 +1079,20 @@
                         <p class="applications-text">Choosing the right scaffold</p>
 
                         <button id="tissue-app1" type="button" class="btn btn-default btn-sm buttons-here">
-                            <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
                         </button>
                     </div>
 
@@ -976,7 +1101,20 @@
                         <p class="applications-text">Cellular Organisation</p>
 
                         <button id="tissue-app2" type="button" class="btn btn-default btn-sm buttons-here">
-                            <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
                         </button>
                     </div>
 
@@ -984,7 +1122,20 @@
                         <p class="applications-text">Post-printing control of cells</p>
 
                         <button id="tissue-app3" type="button" class="btn btn-default btn-sm buttons-here">
-                            <span class="glyphicon glyphicon-chevron-down infos-here"></span>
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
                         </button>
 
                     </div>
@@ -1022,15 +1173,15 @@
                     <div class="col-sm-10">
                         <p class="text-content-new">The light sensitive E. coli detects sunlight (blue light) to repress bioluminescence encoded by LuxCDABE. In the presence of light, transcription of the LuxCDABE for the production of Luciferase and substrates will be inhibited by EL222 binding onto our blue light repressible promoter (PBLrep). In the dark, the inhibition will be released and bioluminescence will be induced. This ensures that our bulb is only active in the dark and excess buildup of substrates and luciferase, potentially toxic, will be prevented. This system also ensures that cell concentration dependent luminescence through quorum sensing is surpassed and our cultures can fluoresce independently and in response to light changes.</p>
 
-                        <img src="assets/results-di-bulb.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/8/81/Results-di-bulb.png" class="image-content-hidden">
 
                         <p class="text-content-new">The blue light repressible promoter (PBLrep) consists of the 18bp DNA binding region of EL222, a natural photosensitive DNA-binding protein from the marine bacterium Erythrobacter litoralis HTCC2594, positioned between the -35 and -10 regions of the RNAP binding site. In the dark, EL222 is inactive as its N-terminal LOV domain represses its DNA-binding C-terminal HTH domain. In the daytime, exposure to blue light (450nm) results in the LOV-HTH interaction to be released, allowing it to dimerize and bind its binding region, causing steric hindrance to RNAP binding, ultimately repressing transcription. Therefore, only at nighttime the transcription of LuxCDABE will occur.</p>
 
                         <p class="text-content-new">Cells would have been transformed with (construct) and (construct el222) (constitutively expressing EL222 protein) plasmids. Cells would have been either kept in the dark or exposed to blue light (465 nm) for 6 hours and bioluminescence levels would have been measured by aliquoting samples into a 96-well plate every 6 hours using FLUOstar plate reader.</p>
 
-                        <img src="assets/bulb-proto.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/2/29/Bulb-proto.png" class="image-content-hidden">
 
-                        <img src="assets/bulb-proto-2.png" class="image-content-hidden">
+                        <img src="http://2017.igem.org/wiki/images/6/69/Bulb-proto2.png" class="image-content-hidden">
 
                         <p class="text-content-new">Through mathematical modelling, the optimal dimensions and structure of the bulb were determined (click here for modelling details). The circular structure of the LIT bulb maximizes the exposure of Cyanobacteria to sunlight. A pump was introduced to ensure the cells remain suspended and the cell culture is homogeneously distributed throughout the LIT bulb. A three-way manual valve was introduced to allow for the easy replacement of media once every 12 months. A filter will be added to the valve to allow media to be replaced without removing the cell culture.</p>
 

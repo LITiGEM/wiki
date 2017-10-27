@@ -23,55 +23,13 @@
     <script>
 
         $(document).ready(function(){
-            //Take your div into one js variable
-            var s1 = $("#step1");
-            var s2 = $("#step2");
-            var s3 = $("#step3");
-            var s4 = $("#step4");
-
-            //Take the current position (vertical position from top) of your div in the variable
-            var pos = s1.position();
-            var pos1 = s2.position();
-            var pos2 = s3.position();
-            var pos3 = s4.position();
 
             //Now when scroll event trigger do following
             $(window).scroll(function () {
 
-                scrollFunction()
-
-                var windowpos = $(window).scrollTop();
-                //console.log(windowpos);
-
-                //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-                if (windowpos >= (pos.top + 100)) {
-                    // div.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s1.addClass("active-link");
+                    scrollFunction();
                 }
-
-                if (windowpos >= (pos1.top + 750)) {
-                    // div1.addClass("AfterScroll");
-                    s1.removeClass("active-link");
-                    s3.removeClass("active-link");
-                    s2.addClass("active-link");
-
-                }
-
-                if (windowpos >= (pos2.top + 1100)) {
-                    //div2.addClass("AfterScroll");
-                    s2.removeClass("active-link");
-                    s4.removeClass("active-link");
-                    s3.addClass("active-link");
-                }
-
-                if (windowpos >= (pos3.top + 1300)) {
-                    //div2.addClass("AfterScroll");
-                    s3.removeClass("active-link");
-                    s4.addClass("active-link");
-                }
-
-            });
+                );
 
             function scrollFunction() {
                 if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -169,7 +127,7 @@
 <div style="margin:0 !important; padding:0 !important" class="container-fluid">
     <div id="top" class="row">
 
-        <img src="assets/logotop.png" class="logo-top">
+        <img src="http://2017.igem.org/wiki/images/9/92/Logotop.png" class="logo-top">
 
         <ul class="navy">
             <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
@@ -249,9 +207,9 @@
         <nav id="side-index" class="col-sm-2">
             <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
                 <li id="step1" class="navy-link side-link"><a href="#section1">Optogenetics applications</a></li>
-                <li id="step2" class="navy-link side-link"><a href="#section2"><img src="assets/icon-barc.png" class="side-images"><p style="padding-left: 10px">Barchitecture</p></a></li>
-                <li id="step4" class="navy-link side-link"><a href="#section3"><img src="assets/icon-bulb.png" class="side-images"><p style="padding-left: 10px">Bacterial bulb</p></a></li>
-                <li id="step3" class="navy-link side-link"><a href="#section3"><img src="assets/icon-organ.png" class="side-images"><p style="padding-left: 10px">Organ printing</p></a></li>
+                <li id="step2" class="navy-link side-link"><a href="#section2"><img src="http://2017.igem.org/wiki/images/2/23/Icon-barc.png" class="side-images"><p style="padding-left: 10px">Barchitecture</p></a></li>
+                <li id="step4" class="navy-link side-link"><a href="#section3"><img src="http://2017.igem.org/wiki/images/8/89/Icon-bulb.png" class="side-images"><p style="padding-left: 10px">Bacterial bulb</p></a></li>
+                <li id="step3" class="navy-link side-link"><a href="#section3"><img src="http://2017.igem.org/wiki/images/b/bb/Icon-organ.png" class="side-images"><p style="padding-left: 10px">Organ printing</p></a></li>
             </ul>
         </nav>
 
@@ -314,7 +272,7 @@
 
                 <div class="col-sm-3">
 
-                    <img src="assets/icon-barc.png" class="summary-images">
+                    <img src="http://2017.igem.org/wiki/images/2/23/Icon-barc.png" class="summary-images">
 
                     <button id="button-barc-hidden" type="button" class="btn btn-default btn-sm overlay-buttons-here"><p>Deep down the rabbit hole</p></button>
                 </div>
@@ -341,7 +299,7 @@
 
                 <div class="col-sm-3">
 
-                    <img src="assets/icon-organ.png" class="summary-images">
+                    <img src="http://2017.igem.org/wiki/images/b/bb/Icon-organ.png" class="summary-images">
 
                     <button id="button-organ-hidden" type="button" class="btn btn-default btn-sm overlay-buttons-here"><p>Deep down the rabbit hole</p></button>
 
@@ -369,7 +327,7 @@
 
                 <div class="col-sm-3">
 
-                    <img src="assets/icon-bulb.png" class="summary-images">
+                    <img src="http://2017.igem.org/wiki/images/8/89/Icon-bulb.png" class="summary-images">
 
                     <button id="button-bulb-hidden" type="button" class="btn btn-default btn-sm overlay-buttons-here"><p>Deep down the rabbit hole</p></button>
 
