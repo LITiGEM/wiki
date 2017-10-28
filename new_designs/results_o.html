@@ -24,18 +24,368 @@
 
         $(document).ready(function(){
 
-            $("#button-barc-hidden").click(function(){
-                $("#hidden-barc").slideToggle("slow");
+            var menus = ['#barc-nav1','#barc-nav2','#barc-nav3','#barc-nav4','#tissue-nav1','#tissue-nav2','#tissue-nav3','#tissue-nav4','#bulb-nav1','#bulb-nav2','#bulb-nav3','#bulb-nav4'];
+            var contents = ['#barc-1','#barc-2','#barc-3','#barc-4','#tissue-1','#tissue-2','#tissue-3','#tissue-4','#bulb-1','#bulb-2','#bulb-3','#bulb-4'];
+
+
+            $("#barc").click(function(){
+                console.log("helo");
+                //presenting all the relevant menu bars
+                for (i=0; i<menus.length; i++) {
+                    var bar = menus[i];
+
+                    if (bar.charAt(2)!=="a") {
+                        $(bar).hide();
+
+                    } else {
+                        $(bar).show();
+                    }
+                }
+
+                //presenting the first relevant content div
+                for (i=0; i<contents.length; i++) {
+                    var bar = contents[i];
+
+                    if (bar.charAt(2)!=="a") {
+                        $(bar).hide();
+
+                    }
+                }
+
+                $("#barc-1").show();
+
             });
 
-            $("#button-organ-hidden").click(function(){
-                $("#hidden-organ").slideToggle("slow");
+            $("#tissue").click(function(){
+
+                //presenting all the relevant menu bars
+                for (i=0; i<menus.length; i++) {
+                    var bar = menus[i];
+
+                    if (bar.charAt(2)!=="i") {
+                        $(bar).hide();
+
+                    } else {
+                        $(bar).show();
+                    }
+                }
+
+                //presenting the first relevant content div
+                for (i=0; i<contents.length; i++) {
+                    var bar = contents[i];
+
+                    if (bar.charAt(2)!=="i") {
+                        $(bar).hide();
+
+                    }
+                }
+
+                $("#tissue-1").show();
+
             });
 
-            $("#button-bulb-hidden").click(function(){
-                $("#hidden-bulb").slideToggle("slow");
+            $("#bulb").click(function(){
+
+                //presenting all the relevant menu bars
+                for (i=0; i<menus.length; i++) {
+                    var bar = menus[i];
+
+                    if (bar.charAt(2)!=="u") {
+                        $(bar).hide();
+
+                    } else {
+                        $(bar).show();
+                    }
+                }
+
+                //presenting the first relevant content div
+                for (i=0; i<contents.length; i++) {
+                    var bar = contents[i];
+
+                    if (bar.charAt(2)!=="u") {
+                        $(bar).hide();
+
+                    }
+                }
+
+                $("#bulb-1").show();
+
             });
 
+            //the second menu buttons - when we press on the button, it should fadeIn the right content
+
+             $("#barc-nav1").click(function(){
+
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             // ARE YOU SERIOUS THAT I HAVE TO USE NESTED IF LOOPS? Jesus, iGEM, this is just ridiculous
+             // && for the win!!!!
+
+                 if (bar.charAt(2)!=="a") {
+                    if (bar.charAt(6)!=="1") {
+                        $(bar).hide();
+                    }
+                 } else if (bar.charAt(2)==="a") {
+                        if (bar.charAt(6)!=="1") {
+                            $(bar).hide();
+                    }
+                 }
+             }
+
+             $('#barc-1').fadeIn("slow");
+
+             });
+
+             $("#barc-nav2").click(function(){
+             //here we only have to fade the right content and out the bad one
+
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             // ARE YOU SERIOUS THAT I HAVE TO USE NESTED IF LOOPS? Jesus, iGEM, this is just ridiculous
+             // && for the win!!!!
+
+             if (bar.charAt(2)!=="a") {
+                if (bar.charAt(6)!=="2") {
+                    $(bar).hide();
+                }
+             } else if (bar.charAt(2)==="a") {
+                if (bar.charAt(6)!=="2") {
+                    $(bar).hide();
+                }
+                }
+             }
+
+             $('#barc-2').fadeIn("slow");
+
+             });
+
+             $("#barc-nav3").click(function(){
+             //here we only have to fade the right content and out the bad one
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+                 var bar = contents[i];
+
+
+                 // ARE YOU SERIOUS THAT I HAVE TO USE NESTED IF LOOPS? Jesus, iGEM, this is just ridiculous
+                 // && for the win!!!!
+
+                 if (bar.charAt(2) !== "a") {
+                     if (bar.charAt(6) !== "3") {
+                         $(bar).hide();
+                     }
+                 } else if (bar.charAt(2) === "a") {
+                     if (bar.charAt(6) !== "3") {
+                         $(bar).hide();
+                     }
+                 }
+             }
+
+             $('#barc-3').fadeIn("slow");
+             });
+
+
+
+             $("#barc-nav4").click(function(){
+             //here we only have to fade the right content and out the bad one
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="a") {
+                if (bar.charAt(6)!=="4") {
+                    $(bar).hide();
+                }
+             } else if (bar.charAt(2)==="a") {
+
+                if (bar.charAt(6)!=="4") {
+                    $(bar).hide();
+                }
+             }
+             }
+
+             $('#barc-4').fadeIn("slow");
+
+             });
+
+             $("#tissue-nav1").click(function(){
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="i") {
+                 if(bar.charAt(8)!=="1") {
+                     $(bar).hide();
+                 }
+             } else if (bar.charAt(2)==="i") {
+
+                if(bar.charAt(8)!=="1") {
+                    $(bar).hide();
+                }
+             }
+
+             }
+
+             $('#tissue-1').fadeIn("slow");
+
+             });
+
+             $("#tissue-nav2").click(function(){
+
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="i") {
+
+                if (bar.charAt(8)!=="2") {
+                    $(bar).hide();
+                }
+             } else if (bar.charAt(2)==="i") {
+
+             if (bar.charAt(8)!=="2") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#tissue-2').fadeIn("slow");
+             });
+
+             $("#tissue-nav3").click(function(){
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+                 if (bar.charAt(2)!=="i") {
+
+                    if (bar.charAt(8)!=="3") {
+                        $(bar).hide();
+                    }
+                 } else if (bar.charAt(2)==="i") {
+
+                 if (bar.charAt(8)!=="3") {
+                     $(bar).hide();
+                 }
+             }
+             }
+
+             $('#tissue-3').fadeIn("slow");
+             });
+
+             $("#tissue-nav4").click(function(){
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="i") {
+
+                if (bar.charAt(8)!=="4") {
+                    $(bar).hide();
+                }
+             } else if (bar.charAt(2)==="i") {
+
+             if (bar.charAt(8)!=="4") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#tissue-4').fadeIn("slow");
+             });
+
+             $("#bulb-nav1").click(function(){
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+                 if (bar.charAt(2)!=="u") {
+
+                 if (bar.charAt(6)!=="1") {
+                     $(bar).hide();
+                 }
+                 } else if (bar.charAt(2)==="u") {
+
+                 if (bar.charAt(6)!=="1") {
+                     $(bar).hide();
+                 }
+             }
+             }
+
+             $('#bulb-1').fadeIn("slow");
+
+             });
+
+             $("#bulb-nav2").click(function(){
+             //here we only have to fade the right content and out the bad one
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="u") {
+
+             if (bar.charAt(6)!=="2") {
+                 $(bar).hide();
+             }
+             } else if (bar.charAt(2)==="u") {
+
+             if (bar.charAt(6)!=="2") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#bulb-2').fadeIn("slow");
+             });
+
+             $("#bulb-nav3").click(function(){
+             //here we only have to fade the right content and out the bad one
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="u") {
+
+             if (bar.charAt(6)!=="3") {
+                 $(bar).hide();
+             }
+             } else if (bar.charAt(2)==="u") {
+
+             if (bar.charAt(6)!=="3") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#bulb-3').fadeIn("slow");
+             });
+
+             $("#bulb-nav4").click(function(){
+             //here we only have to fade the right content and out the bad one
+
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="u") {
+
+             if (bar.charAt(6)!=="4") {
+                 $(bar).hide();
+             }
+             } else if (bar.charAt(2)==="u") {
+
+             if (bar.charAt(6)!=="4") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#bulb-4').fadeIn("slow");
+             });
+
+            //functions for the small tables inside the sectionContent variables
             $("#barc-app1").click(function(){
                 $("#applications-description").text("Considering the increasing frequency of natural disasters, having a cheap and immediate way to generate structures could be used to temporarily shelter people, seal leaks, or bridge over flooded areas. Microorganisms can be also engineered to simultaneously detect and/or feed off hazardous waste and help clean up septic systems.");
             });
@@ -77,9 +427,9 @@
 <style>
 
     .image-content-here {
-        margin:20% 0 2% 0;
-        height:70%;
-        width:70%;
+        margin:15% 0 2% 15%;
+        height:40%;
+        width:40%;
     }
 
     .image-content-hidden {
@@ -96,17 +446,17 @@
 
     .overlay-buttons-here {
         position: relative;
-        margin:1% 0 0 25% !important;
+        margin:1% 0 0 5% !important;
         background-color: transparent;
         border:none;
     }
 
     #description-intro {
         position:relative;
-        font-size: 30px;
+        font-size: 1.6vw !important;
         text-align: center;
         font-family: "Josefin Sans";
-        padding: 5% 0 0 15%;
+        padding: 3% 0 0 15%;
         margin:0 !important;
     }
 
@@ -199,6 +549,29 @@
         display:none;
         margin-left:7.5%;
     }
+
+    #barc-1, #barc-2, #barc-3, #barc-4, #tissue-1, #tissue-2, #tissue-3, #tissue-4, #bulb-1, #bulb-2, #bulb-3, #bulb-4 {
+        display:none;
+    }
+
+    #barc-nav1, #barc-nav2, #barc-nav3, #barc-nav4, #tissue-nav1, #tissue-nav2, #tissue-nav3, #tissue-nav4, #bulb-nav1, #bulb-nav2, #bulb-nav3, #bulb-nav4 {
+        display:none;
+        width:20% !important;
+        height:70px;
+        margin:1% 1% 2% 1% !important;
+        background-color: rgba(0, 67, 147, 0.42);
+    }
+
+    .buttoni {
+        position:relative;
+        font-size: 1.3vw !important;
+        font-family: Lato !important;
+        padding: 0 0 0 0 !important;
+        margin:0 !important;
+        color: white;
+    }
+
+
 </style>
 
 <body data-spy="scroll" data-target="#side-index">
@@ -208,7 +581,7 @@
 <div style="margin:0 !important; padding:0 !important" class="container-fluid">
     <div id="top" class="row">
 
-        <img src="assets/logotop.png" class="logo-top">
+        <img src="http://2017.igem.org/wiki/images/9/92/Logotop.png" class="logo-top">
 
         <ul class="navy">
             <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
@@ -288,28 +661,20 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- The side navbar -->
-        <nav id="side-index" class="col-sm-2">
-            <ul class="nav nav-stacked" data-spy="affix" data-offset-top="205">
-                <li id="step2" class="navy-link side-link"><a href="#barc"><img src="assets/icon-barc.png" class="side-images"><p>Barchitecture</p></a></li>
-                <li id="step3" class="navy-link side-link"><a href="#organ"><img src="assets/icon-organ.png" class="side-images"><p>Organ printing</p></a></li>
-                <li id="step4" class="navy-link side-link"><a href="#bulb"><img src="assets/icon-bulb.png" class="side-images"><p>Bacterial bulb</p></a></li>
-            </ul>
-        </nav>
-
         <!-- Content-->
-        <div style=" margin-left: 4%" class="col-sm-9">
+        <div style=" margin-left: 10% !important" class="col-sm-11">
 
             <!-- Overview -->
             <div class="row">
 
                 <div class="col-sm-10">
-                    <p id="description-intro">Results from our 3 applications that we have developed for optogenetics. All organic.</p>
+                    <p id="description-intro">Click on one of our applications to find our more about how we explored biological light switches</p>
                 </div>
 
                 <!-- Barchitecture -->
-                <div class="col-sm-4">
-                    <img src="assets/icon-barc.png" class="image-content-here">
+                <div  class="col-sm-4">
+
+                    <img id="barc" src="http://2017.igem.org/wiki/images/2/23/Icon-barc.png" class="image-content-here">
 
                     <p class="overlay-text">Applying light switches to create 3D structures</p>
 
@@ -317,334 +682,310 @@
 
                 <!-- Organ Printing-->
                 <div class="col-sm-4">
-                    <img src="assets/icon-organ.png" class="image-content-here">
-                    <p class="overlay-text">Using light to precisely control organ printing</p>
+                    <img id="tissue" src="http://2017.igem.org/wiki/images/b/bb/Icon-organ.png" class="image-content-here">
+                    <p class="overlay-text">Using light to precisely control tissue engineering</p>
 
                 </div>
 
                 <!-- Light bulb-->
                 <div class="col-sm-4">
-                    <img src="assets/icon-bulb.png" class="image-content-here">
+                    <img id="bulb" src="http://2017.igem.org/wiki/images/8/89/Icon-bulb.png" class="image-content-here">
                     <p class="overlay-text">A bacterial light-bulb controlled through light</p>
 
                 </div>
 
             </div>
 
-            <!-- Barchitecture-->
-            <div id="barc" class="row">
+            <!-- The second menu the sections will be replaced when clicking on the images above, to be specific to each module-->
+            <div class="row">
 
-                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16);margin-bottom:3%" class="col-sm-5">
-                    <p class="summary-here"><b>Barchitecture</b> is a 3D printing technology based on 2 suspended colonies of E. Coli cells that display on their surface one of the 2 binding partners that form <b>a strong covalent bond</b>: SpyTag or SpyCatcher. By using light in the form of lasers, one ensures that only in the desired location in the cell population covalent bonds will be formed between bacteria. Once a 3D structure is formed, <b>light induces the production of PHB</b>, which accumulates in the form of granules inside cells. Cells then use a type-2 system to <b>secrete the PHB</b>, with the granules being cross-linked into a solid shape by a photoinitiator.</p>
+                <div class="col-sm-11">
+                    <!-- Menu for barchitecture-->
+                    <button  id="barc-nav1" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Overview</p></button>
+
+                    <button  id="barc-nav2" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">The potential of the idea</p></button>
+
+                    <button  id="barc-nav3" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Our light-induced systems</p></button>
+
+                    <button  id="barc-nav4" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Experimental results</p></button>
+
+
+                    <!-- Menu for tissue-->
+                    <button  id="tissue-nav1" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Overview</p></button>
+
+                    <button  id="tissue-nav2" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Challenges</p></button>
+
+                    <button  id="tissue-nav3" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Our solution</p></button>
+
+                    <button  id="tissue-nav4" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Alternative comparison</p></button>
+
+
+                    <!-- Menu for the bulb-->
+                    <button  id="bulb-nav1" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Overview</p></button>
+
+                    <button  id="bulb-nav2" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Why a bacterial bulb</p></button>
+
+                    <button  id="bulb-nav3" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Experiments</p></button>
+
+                    <button  id="bulb-nav4" type="button" class="btn btn-default btn-lg overlay-buttons-here"><p class="buttoni">Taking it to the market</p></button>
                 </div>
-
-                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16);margin-bottom:3%" class="col-sm-2">
-
-                    <img src="assets/icon-barc.png" class="summary-images">
-
-                    <button id="button-barc-hidden" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
-                        <span class="glyphicon glyphicon-chevron-down infos-hidden-here"></span>
-                    </button>
-                </div>
-
-                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16);margin-bottom:3%" class="col-sm-5">
-
-                    <h1 class="title">Barchitecture Results</h1>
-                    <ul class="list-results">
-                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Designed <b>4 biobricks</b> and experiments for 2 systems to induce <b>cell adhesion</b> to form 3D upon <b>light exposure</b></li>
-                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Performed experiments to <b>test blue-light activation</b> for the transcription of necessary proteins</li>
-                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results"><b>Modelled</b> the expression of adhesion proteins on E. Coli cell surface</li>
-                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results"><b>Modelled</b> cell adhesion with <b>a cellular automaton</b> for better visualisation</li>
-                    </ul>
-                </div>
-
-                <div id="hidden-barc" class="col-sm-10">
-
-                    <!-- Applications of barchitecture-->
-                    <div class="row">
-
-                        <h1 style="text-align: center; padding:3% 0 5% 0 !important;" class="title">Why Barchitecture is useful</h1>
-
-                        <div style="background-color: rgba(32,88,137,0.12); border-top:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-3 application-boxes">
-
-                            <p class="applications-text">Natural disasters</p>
-
-                            <button id="barc-app1" type="button" class="btn btn-default btn-sm buttons-here">
-                                <span class="glyphicon glyphicon-chevron-right infos-here"></span>
-                            </button>
-                        </div>
-
-                        <div style="float:right; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-9">
-                            <p id="applications-description">Considering the increasing frequency of natural disasters, having a cheap and immediate way to generate structures could be used to temporarily shelter people, seal leaks, or bridge over flooded areas. Microorganisms can be also engineered to simultaneously detect and/or feed off hazardous waste and help clean up septic systems.</p>
-                        </div>
-
-                        <div style="background-color: rgba(137,2,19,0.12)" class="col-sm-3 application-boxes">
-
-                            <p class="applications-text">Space Exploration</p>
-
-                            <button id="barc-app2" type="button" class="btn btn-default btn-sm buttons-here">
-                                <span class="glyphicon glyphicon-chevron-right infos-here"></span>
-                            </button>
-                        </div>
-
-                        <div style="background-color: rgba(15,137,0,0.12); border-bottom:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-3 application-boxes">
-                            <p class="applications-text">Medical implants</p>
-
-                            <button id="barc-app3" type="button" class="btn btn-default btn-sm buttons-here">
-                                <span class="glyphicon glyphicon-chevron-right infos-here"></span>
-                            </button>
-
-                        </div>
-                    </div>
-
-                    <!-- Why use cells to do it-->
-
-                    <!-- Scientific process-->
-                    <div class="row">
-
-                        <!-- Overview - here should add buttons to navigate to each bit (or put on the side)-->
-                        <div class="col-sm-11">
-                            <p class="text-content-new">We developed (i) transcriptional and (ii) post-translational light switches for the induction of cellular aggregation. The final engineered cells would be able to respond to the light stimuli and assemble into desired structures that can simultaneously produce and bind a desired polymer.</p>
-                        </div>
-
-                        <!-- Cell Adhesion-->
-                        <div class="text-section col-sm-11">
-                            <h1 class="title">1. Transcriptional light switch for cell adhesion</h1>
-
-                            <p class="text-content-new">Using the blue light inducible promoter PBlind , we aim to use blue light (6hr, 475nm) to induce the transcription of Intimin, a cell surface protein, fused to either SpyTag (13 amino acids) or SpyCatcher (138 amino acids, 15kDa). SpyTag and SpyCatcher are two binding partners that come from CnaB2 (immunoglobulin-llike collagen adhesin domain) of the FbaB protein, found in the invasive strains of S. pyogenes. SpyTag contains a reactive aspartate that forms a strong isopeptide bond with a reactive lysine residue in SpyCatcher when in close proximity. </p>
-
-                            <!-- the 2 briobricks-->
-                            <img src="assets/BB-Intimin-SpyTag.png" class="image-content-hidden">
-
-                            <img src="assets/BB-Intimin-SpyCatcher.png" class="image-content-hidden">
-
-                            <p class="text-content-new">Once a mixture of cells are light induced to display SpyTag or SpyCatcher on their cell surface, they are expected to aggregate. Similar to lithography, structures would be generated layer by layer from a flat surface by exposing a particular radius with blue light. </p>
-
-                            <p class="text-content-new">Designers note: after analysing multiple cell surface display proteins, we opted for Intimin (EaeA intimin) as it has shown to display passenger proteins of similar size to SpyCatcher and it had not been characterised by iGEM teams before. Other cell candidates considered include: ice nucleation protein, PgsA and OmpC.</p>
-
-                            <img src="assets/results-di-spy.png" class="image-content-hidden">
-
-                            <img src="assets/results-di-photoactiv.png" class="image-content-hidden">
-
-                            <p class="text-content-new">Designed Experiments</p>
-
-                            <p class="text-content-new">A) Represents two cell lines expressing either intimin’-SpyTag or intimin’-SpyCatcher fusion proteins. Cells harbouring either construct under the control of a constitutive promoter would have either been mixed together or mixed with WT cells (control) (15min) or not mixed and passed through a particle sizer with a range of aperture sizes (0.4µm - 40µm) to compare aggregate sizes. As secondary experiments and for visual purposes we would have also incubated cells expressing Intimin-SpyTag with purified GFP-SpyCatcher, Intimin’-SpyCatcher with purified GFP-SpyTag and Intimin-GFP-SpyTag with Intimin-SpyCatcher cell lines for 15min and visualize cell-protein binding and cell-cell interaction via fluorescence microscopy. We also included a His-Tag within all SpyCatcher construct variants to enable in-vitro analysis of complexes formed with SpyTag variants.</p>
-
-                            <p class="text-content-new">B) Represents two cell lines expressing either intimin’-SpyTag or intimin’-SpyCatcher fusion proteins pre and post light induction. Aggregation experiments described in A) would have been repeated after replacing the constitutive promoter with PBlind , blue-light inducible promoter and transforming cells with EL222 (blue light inducer) under a constitutive promoter (C). Cell aggregation and fluorescence experiments would have been carried out with cells grown overnight under darkness or under blue-light and in the presence or absence of the EL222 construct.</p>
-
-                            <img src="assets/exp-barc-1.jpg" class="image-content-hidden">
-
-                            <img src="assets/exp-barc-2.jpg" class="image-content-hidden">
-
-                            <img src="assets/exp-barc-3.jpg" class="image-content-hidden">
-
-                            <img src="assets/exp-barc-4.jpg" class="image-content-hidden">
-
-                            <img src="assets/GFP-SpyTag.jpg" class="image-content-hidden">
-                        </div>
-
-                        <!-- Light Induced Control-->
-                        <div class="text-section col-sm-11">
-                            <h1 class="title">2. Post-translational light switch for cell adhesion</h1>
-
-                            <p class="text-content-new">As a more immediate induction of cell aggregation, we aimed to develop a post-translational light switch in which cells are constitutively expressing either Intimin’ fusion proteins with SpyTag or an inactive version of SpyCatcher. Only upon light exposure, SpyCatcher is able to bind SpyTag resulting in a much faster response than transcriptional induction. This is achieved by incorporating a photocaged unnatural amino acid (UAA), Ne-methyl-L-lysine, in place of the reactive lysine in SpyCatcher required for the covalent bond formation with the SpyTag aspartate residue. Upon exposure to UV light (20min, 365nm), the “cage” group in the unnatural photocaged amino acid is cleaved off revealing the native amino acid and a biologically active protein. This approach also adds a layer of bio-containment as cells will only function when externally supplied with UAA.</p>
-
-                            <p class="text-content-new">To achieve this, we introduced an amber stop codon (TAG) in place of the reactive Lys 31 residue (Lys31X) in SpyCatcher. Amberless E. coli cells also have to express pyrrolysyl tRNA (pyIT/tRNAPylCUA) from M. mazei and pyrrolysyl-tRNA synthetase from M. barkeri and the UAA must be supplemented in the media. The pyrrolysyl-tRNA synthetase catalyses the acylation of the suppressor tRNACUA with the UAA. During translation, the UAG amber codon in the mRNA is recognized by the acylated tRNACUA and the UAA will be added to the growing polypeptide chain. The orthogonality of this system has shown to work in both E. coli and mammalian cells.</p>
-
-                            <img src="assets/results-di-photocage.png" class="image-content-hidden">
-
-                            <img src="assets/BB-Intimin-SpyCatcher%20amber.png" class="image-content-hidden">
-
-                            <img src="assets/results-di-photocage2.png" class="image-content-hidden">
-
-                            <p class="text-content-new">Figure 2. Post-translational light induction of cell aggregation. A) Represents two cell lines expressing constitutively either intimin’-SpyTag or the photocaged version of intimin’-SpyCatcher fusion proteins. Cells harbouring either construct would have either been mixed together or mixed with WT cells (control) or not mixed and exposed to UV light (365nm) or not exposed for 25min-1hr and then passed through a particle sizer with a range of aperture sizes (0.4µm - 40µm) to compare aggregate sizes. As secondary experiments and for visual purposes we would have also incubated cells expressing Intimin’-SpyTag with purified photocaged GFP-SpyCatcher, photocaged Intimin’-SpyCatcher with purified GFP-SpyTag and Intimin-GFP-SpyTag with photocaged Intimin-SpyCatcher cell lines pre and post photo-lysis (365nm) for 25min-1hr to visualize cell-protein binding and cell-cell interaction via fluorescence microscopy. We also included a His-Tag within all photocaged SpyCatcher construct variants to enable in-vitro analysis of complexes formed with SpyTag variants.</p>
-
-                        </div>
-
-                        <!-- Polymer production/binding-->
-                        <div class="text-section col-sm-11">
-                            <h1 class="title">3. Polymer production/binding</h1>
-
-                            <p class="text-content-new">Bacteria has been widely used for the production of biomaterials to generate sustainable and eco friendly bricks, bioplastic products, items of clothing as well as “living materials” by incorporating nanoparticles into biofilms. With Barchitecture we can light-induce cellular 3D structural arrangements while producing, binding or degrading biomaterials such as PHA or silicates.</p>
-
-                            <p class="text-content-new">Proposed design for the production, secretion and binding of PHA granules:</p>
-
-                            <img src="assets/results-di-phb.png" class="image-content-hidden">
-
-                            <p class="text-content-new">Through a similar mechanism, bacteria, could be light-guided to form precise and intricate structures that can then simultaneously produce and bind biosilica. This approach will enable “growing” electronics just with the guidance of a particular wavelength of light.</p>
-
-                            <p class="text-content-new">Our engineered cells would form the desired 3D structure using blue light. These cells would also express photocaged (inactive) recombinant silicatein on their surface. Another wavelength of light would activate silicatein to begin the production of biosilica from water-soluble biosilica precursors added to the media. Our cells could also present ligands on their surface to attach the produced polymer to their surface.</p>
-                        </div>
-
-
-                        <!-- Actual results-->
-                        <div class="text-section col-sm-11">
-                            <p class="title">Our wet lab data</p>
-
-                            <p class="text-content-new">We tested whether the promoter has any significant leakage. Also, we wanted to show that GFP cannot be expressed in the absence of EL222. This is of particular interest as the aim of LIT is to demonstrate the versatility and high precision of light control. As shown in Figure1, only J23151-GFP (positive control) had a significant difference in fluorescence compared to R0040-GFP (negative control) WT cells and the Luria Broth (LB) in both dark and Blue-light conditions.  Pblind-GFP had no significantly different fluorescence level compared to the LB baseline, negative control or WT cells in either condition. This is expected, as the EL222 protein is required for blue-light inducible transcriptional activation.</p>
-
-                            <img src="assets/results-graph-barc.png" class="image-content-hidden">
-
-                            <p class="text-content-new">Figure 1. Blue light inducible promoter (Pblind) characterisation. J23151 is a constitutive promoter, R0040 is a TetR repressible promoter (repression inhibited only by the addition of tetracycline), Pblind promoter is a fusion of EL222 (photosensitive transcription factor) binding region and the luxI promoter, where EL222 is only able to dimerize and bind the Pblind promoter upon blue light exposure, where it can then recruit RNAP and drive the transcription of genes downstream. Wild type (WT) 10beta cells were transformed with J23151-GFP (positive control), R0040-GFP (negative control) or Pblind-GFP. All cells were grown overnight at 37°C in darkness or exposed to blue light (465nm) and diluted to OD600=0.6 to record GFP fluorescence. The data represents the mean of 3 biological replicates and 4 technical replicates for each condition. Luria broth (LB) was included as a baseline for the fluorescence. Error bars represent the SD and statistical significance of **** P < 0.0001 was calculated using the Tukey's multiple comparisons test.</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
 
-            <!-- Tissue printing -->
-            <div id="organ" class="row">
+            <!-- This is where all the shit happens-->
+            <div class="row">
 
-                <!-- Main overview of results -->
-                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16);margin-bottom:3%" class="col-sm-5">
-                    <p class="summary-here">Barchitecture is a 3D printing technology based on 2 suspended colonies of E. Coli cells that display on their surface one of the 2 binding partners that form a strong covalent bond: SpyTag or SpyCatcher. By using light in the form of lasers, one ensures that only in the desired location in the cell population covalent bonds will be formed between bacteria. Once a 3D structure is formed, light induces the production of PHB, which accumulates in the form of granules inside cells. Cells then use a type-2 system to secrete the PHB, with the granules being cross-linked into a solid shape by a photoinitiator.</p>
-                </div>
+                <!-- Barchitecture bits-->
+                <div id="barc-1" class="col-sm-11">
 
-                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16);margin-bottom:3%" class="col-sm-2">
+                    <p class="summary-here"><b>Barchitecture</b> is a 3D printing technology based on 2 suspended colonies of E. Coli cells that display on their surface one of the 2 binding partners that form <b>a strong covalent bond</b>: SpyTag or SpyCatcher. By using light in the form of lasers, one ensures that only in the desired location in the cell population covalent bonds will be formed between bacteria. Once a 3D structure is formed, <b>light induces the production of PHB</b>, which accumulates in the form of granules inside cells. Cells then use a type-2 system to <b>secrete the PHB</b>, with the granules being cross-linked into a solid shape by a photoinitiator.</p>
 
-                    <img src="assets/icon-organ.png" class="summary-images">
-
-                    <button id="button-organ-hidden" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
-                        <span class="glyphicon glyphicon-chevron-down infos-hidden-here"></span>
-                    </button>
+                    <p class="text-content-new">One is a <span style="color:#417fff">light-induced transcriptional control system</span> of cell adhesion with the <span style="color:#ff7d5d">photosensitive protein EL222</span>. The second uses the <span style="color:#ff7d5d">photo-caged non-natural amino acid</span> PyroLysine to achieve a <span style="color:#417fff">quicker post-translational control</span> over cell adhesion.</p>
 
                 </div>
 
-                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16);margin-bottom:3%" class="col-sm-5">
+                <div id="barc-2" class="col-sm-11">
 
-                    <h1 class="title">Organ printing Results</h1>
-                    <ul class="list-results">
-                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Designed biobricks and experiments for 2 systems of how cells bind to each other to form 3D upon light exposure</li>
-                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Performed experiments to test blue-light activation for the transcription of necessary proteins</li>
-                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Modelled the expression of adhesion proteins on E. Coli cell surface</li>
-                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Modelled cell adhesion with a cellular automaton for better visualisation</li>
-                    </ul>
-                </div>
+                    <h1 style="text-align: center; padding:3% 7% 5% 0 !important;" class="title">Why Barchitecture is useful</h1>
 
+                    <div style="margin-left: 8% !important; background-color: rgba(32,88,137,0.12)" class="col-sm-3 application-boxes">
 
-                <!-- Hidden bit -->
-                <div id="hidden-organ" class="col-sm-10">
+                        <p class="applications-text">Natural disasters</p>
 
-                    <div class="row">
-
-                            <div class="text-section col-sm-11">
-                                <h1 style="text-align: center; padding:3% 0 5% 0 !important;" class="title">Tissue engineering and how</h1>
-
-                                <p class="text-content-new">Tissue engineering involves developing sophisticated 3-dimensional scaffolds that mimic the tissue tried to be reproduced in mechanical terms such as elasticity, volume and organization. After the scaffold has been produced cells are seeded into and onto the scaffold and they are allowed to grow into the scaffold. Our project addresses common problems found in this area, by constructing a molecular tool that allows the control of cells while they are forming a tissue through light.</p>
-
-                                <p class="text-content-new">This approach allows the production of tissue structures that are specific to somebody's own cell and has the potential to overcome many of the problems seen in human-to-human transplantation.</p>
-
-                                <ul class="list-section">
-                                    <p style="padding-left: 35% !important" class="title">Advantages</p>
-                                    <li style="text-align: justify" class="list-item-content">Using a patient’s own cells to create such tissues ensures there will be <span style="color: #ff6657">no rejection</span> by the host</li>
-                                    <li style="text-align: justify" class="list-item-content">Independent of long transplant waiting lists <span style="color: #6499ff">patients would not suffer</span> the impaired living conditions and death due to a failing organ</li>
-                                    <li style="text-align: justify" class="list-item-content">Streamlining the production of tissues in vitro would <span style="color: #ff6657">reduce the costs</span> and <span style="color: #5f9eff">enable access</span> to transplantations to people living in underprivileged conditions</li>
-
-                                </ul>
-
-                            </div>
-
-                            <p style="position:relative; text-align: center; padding-top:10% !important; padding-bottom: 5% !important" class="text-content-new">However, the scaffolding and cell-seeding method, often called ‘bioprinting’ or ‘cellular 3D-printing’ has many drawbacks:</p>
-
-
-                        <div style="margin-left: 8% !important; background-color: rgba(32,88,137,0.12); border-top:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-3 application-boxes">
-
-                                <p class="applications-text">Choosing the right scaffold</p>
-
-                                <button id="tissue-app1" type="button" class="btn btn-default btn-sm buttons-here">
-                                    <span class="glyphicon glyphicon-chevron-down infos-here"></span>
-                                </button>
-                            </div>
-
-                        <div style="background-color: rgba(137,2,19,0.12);" class="col-sm-3 application-boxes">
-
-                            <p class="applications-text">Cellular Organisation</p>
-
-                            <button id="tissue-app2" type="button" class="btn btn-default btn-sm buttons-here">
-                                <span class="glyphicon glyphicon-chevron-down infos-here"></span>
-                            </button>
-                        </div>
-
-                        <div style="background-color: rgba(15,137,0,0.12); border-bottom:solid 1px rgba(39, 32, 34, 0.16);" class="col-sm-3 application-boxes">
-                            <p class="applications-text">Post-printing control of cells</p>
-
-                            <button id="tissue-app3" type="button" class="btn btn-default btn-sm buttons-here">
-                                <span class="glyphicon glyphicon-chevron-down infos-here"></span>
-                            </button>
-
-                        </div>
-
-                        <div style="margin-left: 8% !important; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-9">
-                                <p id="applications-tissue-description">Scaffold design and construction methods need to be tailored towards the tissue tried to be produced. Scaffolds for heart reconstruction need to fulfil completely different prerequisites to bone scaffolds. With the incredibly diverse microenvironment of cells a myriad of different designs have been tested. Furthermore, the rapid invention of new biomaterials that are usable as scaffold material increase the number of possible scaffolds even further</p>
-                            </div>
-
-
-                        </div>
-
-
-                    <div class="row">
-
-                            <!-- Overview - here should add buttons to navigate to each bit (or put on the side)-->
-                    <div class=" text-section col-sm-11">
-
-                                <p class="text-content-new">A combination of optogenetic genes and light stimulating these genes has the potential to allow precise spatiotemporal control of tissue generation at the cellular and even molecular level.</p>
-
-                                <p class="text-content-new"> Optical stimuli in comparison to mechanical ones do not require physical stimulation. As shown through multi-photon microscopy, it is possible to activate single molecules on a molecular level through the simultaneous exposure to different light sources. This means optical stimuli have the potential to activate photosensitive proteins in space and time at a subcellular level on the in- and outside of a growing tissue.</p>
-
-                                <p class="text-content-new"> In comparison to chemical stimuli, optical stimuli do not diffuse in solution and the risk of off-target cell activation is reduced.</p>
-
-                                <p class="text-content-new">  Furthermore, for future standardization, optical stimuli do not require specific scaffolds to build on. However, they do require a one-time acquisition of light sources capable of dynamically controlling the optogenetic circuits inside the cells.</p>
-
-                                <p class="text-content-new">The optogenetic guidance system has to control the following mechanisms in the cells of a growing tissue:</p>
-
-                        <ul class="list-section"><p class="text-content-new">Overview of how we designed a light-dependent tissue engineering system</p>
-
-                            <li class="list-item-content"><a style="color:rgba(85,85,85,0.76)" href="#current">Current Tissue Engineering Approaches & their Problems</a></li>
-                            <li class="list-item-content"><a style="color:rgba(122,122,122,0.76)" href="#">The Challenges on the Way to a Synthetic Biology Future in Tissue Engineering</a></li>
-                            <li class="list-item-content"><a style="color:rgba(172,172,172,0.76)" href="#instacell">Instantaneous Cell Adhesion</a></li>
-                            <li class="list-item-content"><a style="color:rgba(197,197,197,0.76)" href="#geneactiv">Light-induced Gene Activation & Regulation</a></li>
-                        </ul>
+                        <button id="barc-app1" type="button" class="btn btn-default btn-sm buttons-here">
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_1_" width="162" height="115"/>
+                                </defs>
+                                <clipPath id="SVGID_2_">
+                                    <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                                </clipPath>
+                                <g clip-path="url(#SVGID_2_)">
+                                    <path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+                                </g>
+                            </g>
+                            </svg>
+                        </button>
                     </div>
 
-                    <div class="row">
+
+                    <div style="background-color: rgba(137,2,19,0.12)" class="col-sm-3 application-boxes">
+
+                        <p class="applications-text">Space Exploration</p>
+
+                        <button id="barc-app2" type="button" class="btn btn-default btn-sm buttons-here">
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                        </button>
+                    </div>
+
+
+                    <div style="background-color: rgba(15,137,0,0.12);" class="col-sm-3 application-boxes">
+                        <p class="applications-text">Medical implants</p>
+
+                        <button id="barc-app3" type="button" class="btn btn-default btn-sm buttons-here">
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                        </button>
+
+                    </div>
+
+                    <div style="margin-left: 8% !important; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-9">
+                        <p id="applications-description">Considering the increasing frequency of natural disasters, having a cheap and immediate way to generate structures could be used to temporarily shelter people, seal leaks, or bridge over flooded areas. Microorganisms can be also engineered to simultaneously detect and/or feed off hazardous waste and help clean up septic systems.</p>
+                    </div>
+
+
+                </div>
+
+                <div id="barc-3" class="col-sm-11">
+                    <!-- Overview - here should add buttons to navigate to each bit (or put on the side)-->
+                    <div class="col-sm-11">
+                        <p class="text-content-new">We developed (i) transcriptional and (ii) post-translational light switches for the induction of cellular aggregation. The final engineered cells would be able to respond to the light stimuli and assemble into desired structures that can simultaneously produce and bind a desired polymer.</p>
+                    </div>
+
+                    <!-- Cell Adhesion-->
+                    <div class="text-section col-sm-11">
+                        <h1 class="title">1. Transcriptional light switch for cell adhesion</h1>
+
+                        <p class="text-content-new">Using the blue light inducible promoter PBlind , we aim to use blue light (6hr, 475nm) to induce the transcription of Intimin, a cell surface protein, fused to either SpyTag (13 amino acids) or SpyCatcher (138 amino acids, 15kDa). SpyTag and SpyCatcher are two binding partners that come from CnaB2 (immunoglobulin-llike collagen adhesin domain) of the FbaB protein, found in the invasive strains of S. pyogenes. SpyTag contains a reactive aspartate that forms a strong isopeptide bond with a reactive lysine residue in SpyCatcher when in close proximity. </p>
+
+                        <!-- the 2 briobricks-->
+                        <img src="http://2017.igem.org/wiki/images/a/ae/BB-Intimin-SpyTag.png" class="image-content-hidden">
+
+                        <img src="http://2017.igem.org/wiki/images/d/dc/BB-Intimin-SpyCatcher.png" class="image-content-hidden">
+
+                        <p class="text-content-new">Once a mixture of cells are light induced to display SpyTag or SpyCatcher on their cell surface, they are expected to aggregate. Similar to lithography, structures would be generated layer by layer from a flat surface by exposing a particular radius with blue light. </p>
+
+                        <p class="text-content-new">Designers note: after analysing multiple cell surface display proteins, we opted for Intimin (EaeA intimin) as it has shown to display passenger proteins of similar size to SpyCatcher and it had not been characterised by iGEM teams before. Other cell candidates considered include: ice nucleation protein, PgsA and OmpC.</p>
+
+                        <img src="http://2017.igem.org/wiki/images/d/d0/SpyTag-SpyCatcher.png" class="image-content-hidden">
+
+                        <img src="http://2017.igem.org/wiki/images/4/41/Bacteria-diagram-transcript.png" class="image-content-hidden">
+
+                        <p class="text-content-new">Designed Experiments</p>
+
+                        <p class="text-content-new">A) Represents two cell lines expressing either intimin’-SpyTag or intimin’-SpyCatcher fusion proteins. Cells harbouring either construct under the control of a constitutive promoter would have either been mixed together or mixed with WT cells (control) (15min) or not mixed and passed through a particle sizer with a range of aperture sizes (0.4µm - 40µm) to compare aggregate sizes. As secondary experiments and for visual purposes we would have also incubated cells expressing Intimin-SpyTag with purified GFP-SpyCatcher, Intimin’-SpyCatcher with purified GFP-SpyTag and Intimin-GFP-SpyTag with Intimin-SpyCatcher cell lines for 15min and visualize cell-protein binding and cell-cell interaction via fluorescence microscopy. We also included a His-Tag within all SpyCatcher construct variants to enable in-vitro analysis of complexes formed with SpyTag variants.</p>
+
+                        <p class="text-content-new">B) Represents two cell lines expressing either intimin’-SpyTag or intimin’-SpyCatcher fusion proteins pre and post light induction. Aggregation experiments described in A) would have been repeated after replacing the constitutive promoter with PBlind , blue-light inducible promoter and transforming cells with EL222 (blue light inducer) under a constitutive promoter (C). Cell aggregation and fluorescence experiments would have been carried out with cells grown overnight under darkness or under blue-light and in the presence or absence of the EL222 construct.</p>
+
+                        <img src="http://2017.igem.org/wiki/images/e/e8/Exp-barc-1.jpeg" class="image-content-hidden">
+
+                        <img src="http://2017.igem.org/wiki/images/7/72/Exp-barc-2.jpeg" class="image-content-hidden">
+
+                        <img src="http://2017.igem.org/wiki/images/8/86/Exp-barc-3.jpeg" class="image-content-hidden">
+
+                        <img src="http://2017.igem.org/wiki/images/d/d9/Exp-barc-4.jpeg" class="image-content-hidden">
+
+                        <img src="http://2017.igem.org/wiki/images/6/63/Exp-barc-5.jpeg" class="image-content-hidden">
+                    </div>
+
+                    <!-- Light Induced Control-->
+                    <div class="text-section col-sm-11">
+
+                        <h1 class="title">2. Post-translational light switch for cell adhesion</h1>
+
+                        <p class="text-content-new">As a more immediate induction of cell aggregation, we aimed to develop a post-translational light switch in which cells are constitutively expressing either Intimin’ fusion proteins with SpyTag or an inactive version of SpyCatcher. Only upon light exposure, SpyCatcher is able to bind SpyTag resulting in a much faster response than transcriptional induction. This is achieved by incorporating a photocaged unnatural amino acid (UAA), Ne-methyl-L-lysine, in place of the reactive lysine in SpyCatcher required for the covalent bond formation with the SpyTag aspartate residue. Upon exposure to UV light (20min, 365nm), the “cage” group in the unnatural photocaged amino acid is cleaved off revealing the native amino acid and a biologically active protein. This approach also adds a layer of bio-containment as cells will only function when externally supplied with UAA.</p>
+
+                        <p class="text-content-new">To achieve this, we introduced an amber stop codon (TAG) in place of the reactive Lys 31 residue (Lys31X) in SpyCatcher. Amberless E. coli cells also have to express pyrrolysyl tRNA (pyIT/tRNAPylCUA) from M. mazei and pyrrolysyl-tRNA synthetase from M. barkeri and the UAA must be supplemented in the media. The pyrrolysyl-tRNA synthetase catalyses the acylation of the suppressor tRNACUA with the UAA. During translation, the UAG amber codon in the mRNA is recognized by the acylated tRNACUA and the UAA will be added to the growing polypeptide chain. The orthogonality of this system has shown to work in both E. coli and mammalian cells.</p>
+
+                        <img src="http://2017.igem.org/wiki/images/0/05/Results-di-photocage.png" class="image-content-hidden">
+
+                        <img src="http://2017.igem.org/wiki/images/3/3c/BB-Intimin-SpyCatcher-amber.png" class="image-content-hidden">
+
+                        <img src="http://2017.igem.org/wiki/images/4/4b/Results-di-photocage2.png" class="image-content-hidden">
+
+                        <p class="text-content-new">Figure 2. Post-translational light induction of cell aggregation. A) Represents two cell lines expressing constitutively either intimin’-SpyTag or the photocaged version of intimin’-SpyCatcher fusion proteins. Cells harbouring either construct would have either been mixed together or mixed with WT cells (control) or not mixed and exposed to UV light (365nm) or not exposed for 25min-1hr and then passed through a particle sizer with a range of aperture sizes (0.4µm - 40µm) to compare aggregate sizes. As secondary experiments and for visual purposes we would have also incubated cells expressing Intimin’-SpyTag with purified photocaged GFP-SpyCatcher, photocaged Intimin’-SpyCatcher with purified GFP-SpyTag and Intimin-GFP-SpyTag with photocaged Intimin-SpyCatcher cell lines pre and post photo-lysis (365nm) for 25min-1hr to visualize cell-protein binding and cell-cell interaction via fluorescence microscopy. We also included a His-Tag within all photocaged SpyCatcher construct variants to enable in-vitro analysis of complexes formed with SpyTag variants.</p>
+
+                    </div>
+
+                    <!-- Polymer production/binding-->
+                    <div class="text-section col-sm-11">
+                        <h1 class="title">3. Polymer production/binding</h1>
+
+                        <p class="text-content-new">Bacteria has been widely used for the production of biomaterials to generate sustainable and eco friendly bricks, bioplastic products, items of clothing as well as “living materials” by incorporating nanoparticles into biofilms. With Barchitecture we can light-induce cellular 3D structural arrangements while producing, binding or degrading biomaterials such as PHA or silicates.</p>
+
+                        <p class="text-content-new">Proposed design for the production, secretion and binding of PHA granules:</p>
+
+                        <img src="http://2017.igem.org/wiki/images/c/c4/Results-di-phb.png" class="image-content-hidden">
+
+                        <p class="text-content-new">Through a similar mechanism, bacteria, could be light-guided to form precise and intricate structures that can then simultaneously produce and bind biosilica. This approach will enable “growing” electronics just with the guidance of a particular wavelength of light.</p>
+
+                        <p class="text-content-new">Our engineered cells would form the desired 3D structure using blue light. These cells would also express photocaged (inactive) recombinant silicatein on their surface. Another wavelength of light would activate silicatein to begin the production of biosilica from water-soluble biosilica precursors added to the media. Our cells could also present ligands on their surface to attach the produced polymer to their surface.</p>
+                    </div>
+
+                </div>
+
+                <div id="barc-4" class="col-sm-11">
+                    <!-- Actual results-->
+                    <div class="text-section col-sm-11">
+                        <p class="title">Our wet lab data</p>
+
+                        <p class="text-content-new">We tested whether the promoter has any significant leakage. Also, we wanted to show that GFP cannot be expressed in the absence of EL222. This is of particular interest as the aim of LIT is to demonstrate the versatility and high precision of light control. As shown in Figure1, only J23151-GFP (positive control) had a significant difference in fluorescence compared to R0040-GFP (negative control) WT cells and the Luria Broth (LB) in both dark and Blue-light conditions.  Pblind-GFP had no significantly different fluorescence level compared to the LB baseline, negative control or WT cells in either condition. This is expected, as the EL222 protein is required for blue-light inducible transcriptional activation.</p>
+
+                        <img src="http://2017.igem.org/wiki/images/1/1b/Results-graph-barc.png" class="image-content-hidden">
+
+                        <p class="text-content-new">Figure 1. Blue light inducible promoter (Pblind) characterisation. J23151 is a constitutive promoter, R0040 is a TetR repressible promoter (repression inhibited only by the addition of tetracycline), Pblind promoter is a fusion of EL222 (photosensitive transcription factor) binding region and the luxI promoter, where EL222 is only able to dimerize and bind the Pblind promoter upon blue light exposure, where it can then recruit RNAP and drive the transcription of genes downstream. Wild type (WT) 10beta cells were transformed with J23151-GFP (positive control), R0040-GFP (negative control) or Pblind-GFP. All cells were grown overnight at 37°C in darkness or exposed to blue light (465nm) and diluted to OD600=0.6 to record GFP fluorescence. The data represents the mean of 3 biological replicates and 4 technical replicates for each condition. Luria broth (LB) was included as a baseline for the fluorescence. Error bars represent the SD and statistical significance of **** P < 0.0001 was calculated using the Tukey's multiple comparisons test.</p>
+                    </div>
+
+                </div>
+
+                <!-- Tissue engineering bits-->
+
+                <!-- Overview-->
+                <div id="tissue-1" class="col-sm-11"></div>
+
+                <!-- Challenges to resolve-->
+                <div id="tissue-2" class="col-sm-11">
 
                     <div style="margin-left: 8% !important; background-color: rgba(32,88,137,0.12); border-top:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-4 application-boxes">
 
-                            <p class="applications-text">Instantaneous cell adhesion</p>
+                        <p class="applications-text">Instantaneous cell adhesion</p>
 
-                            <button id="tissue-app4" type="button" class="btn btn-default btn-sm buttons-here">
-                                <span class="glyphicon glyphicon-chevron-down infos-here"></span>
-                            </button>
-                        </div>
-
-                        <div id="current" style=" background-color: rgba(137,2,19,0.12)" class="col-sm-4 application-boxes">
-
-                            <p class="applications-text">Gene activation</p>
-
-                            <button id="tissue-app5" type="button" class="btn btn-default btn-sm buttons-here">
-                                <span class="glyphicon glyphicon-chevron-down infos-here"></span>
-                            </button>
-                        </div>
-
-
-                        <div style="margin-left: 8% !important; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-8">
-                            <p id="applications-tissue-description2">In order to form structures cells need to form dynamic non-covalent formations in adherens junctions that allow constant remodelling of the structure while still maintaining a high degree of rigidity. The cell adhesion proteins in these junctions are stabilized via connections with the cytoskeleton, most notably actin filaments. Cells forming synthetic tissues therefore need to have the ability to form these connections rapidly in a cell culture that is dividing. In mammalian cells transcription takes around 30 min, translation (incl. mRNA export) another 30 min and further protein sorting and processing is dependent on the the type of protein. For the purpose of forming structural patterns, a photosensitive cell adhesion system therefore needs to be post-translational and instantaneous.</p>
-
-                            <ul id="hidden-list"><p class="text-content-new">The ones that are most important for tissue engineering are:</p>
-
-                                <li class="list-item-content">Dedifferentiation</li>
-                                <li class="list-item-content">Differentiation - Tissue consists of a range of specialised cells and their products and there is never a type of tissue made up of only one cell. To form a type of tissue cells, therefore, have to differentiate into a range of different cell types. This process requires already existing pluripotent stem cells. But in order to make this process feasible in healthcare current methods of inducing cells into a pluripotent state a too inefficient. We therefore propose that a gene activation system is needed that can induce dedifferentiation and differentiation triggered by different light sources.</li>
-                                <li class="list-item-content">Phototaxis - Next to forming connections between cells and rigidifying these by consecutive establishment of an ECM, cells need to migrate inside and on top of the tissue. One of the major disadvantages of current tissue engineering approaches is that a cell’s movement once seeded onto a scaffold is hard to control. However, if this movement is guided by a light-path more control can be gained for the structuring process.</li>
-                                <li class="list-item-content">Proliferation</li>
-                                <li class="list-item-content">Apopotosis - A growing tissue is defined by a dynamic interplay between cellular proliferation and death. For instance, the human embryo originally has webbed feet and hands but the controlled apoptosis of the interdigital regions is responsible for the development of our fine tuned fingers. Similar, in a developing tissue we want to control cell death in certain regions while leaving others to continue proliferating.</li>
-
-                            </ul>
-                        </div>
-
-
+                        <button id="tissue-app4" type="button" class="btn btn-default btn-sm buttons-here">
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                        </button>
                     </div>
+
+                    <div id="current" style=" background-color: rgba(137,2,19,0.12)" class="col-sm-4 application-boxes">
+
+                        <p class="applications-text">Gene activation</p>
+
+                        <button id="tissue-app5" type="button" class="btn btn-default btn-sm buttons-here">
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                        </button>
+                    </div>
+
+
+
+                    <div style="margin-left: 8% !important; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-8">
+                        <p id="applications-tissue-description2">In order to form structures cells need to form dynamic non-covalent formations in adherens junctions that allow constant remodelling of the structure while still maintaining a high degree of rigidity. The cell adhesion proteins in these junctions are stabilized via connections with the cytoskeleton, most notably actin filaments. Cells forming synthetic tissues therefore need to have the ability to form these connections rapidly in a cell culture that is dividing. In mammalian cells transcription takes around 30 min, translation (incl. mRNA export) another 30 min and further protein sorting and processing is dependent on the the type of protein. For the purpose of forming structural patterns, a photosensitive cell adhesion system therefore needs to be post-translational and instantaneous.</p>
+
+                        <ul id="hidden-list"><p class="text-content-new">The ones that are most important for tissue engineering are:</p>
+
+                            <li class="list-item-content">Dedifferentiation</li>
+                            <li class="list-item-content">Differentiation - Tissue consists of a range of specialised cells and their products and there is never a type of tissue made up of only one cell. To form a type of tissue cells, therefore, have to differentiate into a range of different cell types. This process requires already existing pluripotent stem cells. But in order to make this process feasible in healthcare current methods of inducing cells into a pluripotent state a too inefficient. We therefore propose that a gene activation system is needed that can induce dedifferentiation and differentiation triggered by different light sources.</li>
+                            <li class="list-item-content">Phototaxis - Next to forming connections between cells and rigidifying these by consecutive establishment of an ECM, cells need to migrate inside and on top of the tissue. One of the major disadvantages of current tissue engineering approaches is that a cell’s movement once seeded onto a scaffold is hard to control. However, if this movement is guided by a light-path more control can be gained for the structuring process.</li>
+                            <li class="list-item-content">Proliferation</li>
+                            <li class="list-item-content">Apopotosis - A growing tissue is defined by a dynamic interplay between cellular proliferation and death. For instance, the human embryo originally has webbed feet and hands but the controlled apoptosis of the interdigital regions is responsible for the development of our fine tuned fingers. Similar, in a developing tissue we want to control cell death in certain regions while leaving others to continue proliferating.</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Our designs-->
+                <div id="tissue-3" class="col-sm-11">
 
                     <div class="col-sm-11">
                         <p class="text-content-new">These challenges will not be overcome in day or even a decade but like with every difficult engineering project we need to start with an analysis of the problem and dividing it into manageable parts.</p>
@@ -784,53 +1125,167 @@
                         <p class="text-content-new">The presented experiments are our designs which we could not conduct during the summer anymore because of time issues. However, we encourage future iGEM teams to use the designs we worked on over the summer and continue where we stopped (which counts as further characterisation of an existing BioBrick and is a Gold medal criteria).</p>
 
                     </div>
-
-
                 </div>
 
-            </div>
+                <!-- Comparison to other methods-->
+                <div id="tissue-4" class="col-sm-11">
+                    <h1 style="text-align: center; padding:3% 0 5% 0 !important;" class="title">Tissue engineering and how</h1>
 
+                    <p class="text-content-new">Tissue engineering involves developing sophisticated 3-dimensional scaffolds that mimic the tissue tried to be reproduced in mechanical terms such as elasticity, volume and organization. After the scaffold has been produced cells are seeded into and onto the scaffold and they are allowed to grow into the scaffold. Our project addresses common problems found in this area, by constructing a molecular tool that allows the control of cells while they are forming a tissue through light.</p>
 
-            </div>
+                    <p class="text-content-new">This approach allows the production of tissue structures that are specific to somebody's own cell and has the potential to overcome many of the problems seen in human-to-human transplantation.</p>
 
-            <!-- Light bulb -->
-            <div id="bulb" class="row">
+                    <ul class="list-section">
+                        <p style="padding-left: 35% !important" class="title">Advantages</p>
+                        <li style="text-align: justify" class="list-item-content">Using a patient’s own cells to create such tissues ensures there will be <span style="color: #ff6657">no rejection</span> by the host</li>
+                        <li style="text-align: justify" class="list-item-content">Independent of long transplant waiting lists <span style="color: #6499ff">patients would not suffer</span> the impaired living conditions and death due to a failing organ</li>
+                        <li style="text-align: justify" class="list-item-content">Streamlining the production of tissues in vitro would <span style="color: #ff6657">reduce the costs</span> and <span style="color: #5f9eff">enable access</span> to transplantations to people living in underprivileged conditions</li>
 
-                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16);margin-bottom:3%" class="col-sm-5">
-                    <p class="summary-here">Our bacterial bulb uses E. Coli to luminescence only during night time and cyanobacteria to provide nutrients for the bioluminescent bacteria. We incorporate the Lux operon into E. coli and suppress its activity with the EL222 photosensitive protein. We use an existent glucose secretion system for the cyanobacteria (reference).</p>
-                </div>
-
-                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16); margin-bottom:3%" class="col-sm-2">
-
-                    <img src="assets/icon-bulb.png" class="summary-images">
-
-                    <button id="button-bulb-hidden" type="button" class="btn btn-default btn-sm overlay-buttons overlay-buttons-here">
-                        <span class="glyphicon glyphicon-chevron-down infos-hidden-here"></span>
-                    </button>
-                </div>
-
-                <div style="border-top: solid 1px rgba(39, 32, 34, 0.16); margin-bottom:3%" class="col-sm-5">
-
-                    <h1 class="title">Bacterial bulb Results</h1>
-                    <ul class="list-results">
-                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">Designed the bulb with a light-induced transcriptional control of bioluminescence</li>
-                        <li style="background-color: rgba(120,117,133,0.2)" class="list-item-results">Modelled the dimensions necessary for the bulb to accommodate cyanobacteria</li>
-                        <li style="background-color: rgba(59,57,69,0.2)" class="list-item-results">3D printed a prototype for the bulb after integrating designs from artists</li>
                     </ul>
+
+                    <p style="position:relative; text-align: center; padding-top:10% !important; padding-bottom: 5% !important" class="text-content-new">However, the scaffolding and cell-seeding method, often called ‘bioprinting’ or ‘cellular 3D-printing’ has many drawbacks:</p>
+
+
+                    <div style="margin-left: 8% !important; background-color: rgba(32,88,137,0.12); border-top:solid 1px rgba(39, 32, 34, 0.16)" class="col-sm-3 application-boxes">
+
+                        <p class="applications-text">Choosing the right scaffold</p>
+
+                        <button id="tissue-app1" type="button" class="btn btn-default btn-sm buttons-here">
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                        </button>
+                    </div>
+
+                    <div style="background-color: rgba(137,2,19,0.12);" class="col-sm-3 application-boxes">
+
+                        <p class="applications-text">Cellular Organisation</p>
+
+                        <button id="tissue-app2" type="button" class="btn btn-default btn-sm buttons-here">
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                        </button>
+                    </div>
+
+                    <div style="background-color: rgba(15,137,0,0.12); border-bottom:solid 1px rgba(39, 32, 34, 0.16);" class="col-sm-3 application-boxes">
+                        <p class="applications-text">Post-printing control of cells</p>
+
+                        <button id="tissue-app3" type="button" class="btn btn-default btn-sm buttons-here">
+                            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15%" height="15%" viewBox="0 0 162 115" enable-background="new 0 0 162 115" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="162" height="115"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path d="M80.913,90.145l63.957-89.766h16.464l-80.42,112.914L0.492,0.379h16.464L80.913,90.145z"/>
+	</g>
+</g>
+</svg>
+                        </button>
+
+                    </div>
+
+                    <div style="margin-left: 8% !important; border:solid 1px rgba(39, 32, 34, 0.16); height:397px; overflow: scroll !important;" class="col-sm-9">
+                        <p id="applications-tissue-description">Scaffold design and construction methods need to be tailored towards the tissue tried to be produced. Scaffolds for heart reconstruction need to fulfil completely different prerequisites to bone scaffolds. With the incredibly diverse microenvironment of cells a myriad of different designs have been tested. Furthermore, the rapid invention of new biomaterials that are usable as scaffold material increase the number of possible scaffolds even further</p>
+                    </div>
+
+
+                    <!-- Conclusion of why light and what should be done in the future-->
+                    <div class=" text-section col-sm-11">
+
+                        <p class="text-content-new">A combination of optogenetic genes and light stimulating these genes has the potential to allow precise spatiotemporal control of tissue generation at the cellular and even molecular level.</p>
+
+                        <p class="text-content-new"> Optical stimuli in comparison to mechanical ones do not require physical stimulation. As shown through multi-photon microscopy, it is possible to activate single molecules on a molecular level through the simultaneous exposure to different light sources. This means optical stimuli have the potential to activate photosensitive proteins in space and time at a subcellular level on the in- and outside of a growing tissue.</p>
+
+                        <p class="text-content-new"> In comparison to chemical stimuli, optical stimuli do not diffuse in solution and the risk of off-target cell activation is reduced.</p>
+
+                        <p class="text-content-new">  Furthermore, for future standardization, optical stimuli do not require specific scaffolds to build on. However, they do require a one-time acquisition of light sources capable of dynamically controlling the optogenetic circuits inside the cells.</p>
+
+                        <p class="text-content-new">The optogenetic guidance system has to control the following mechanisms in the cells of a growing tissue:</p>
+
+                    </div>
+
                 </div>
 
-                <div id="hidden-bulb" class="text-section col-sm-10">
-                    <p class="text-content-new">The light sensitive E. coli detects sunlight (blue light) to repress bioluminescence encoded by LuxCDABE. In the presence of light, transcription of the LuxCDABE for the production of Luciferase and substrates will be inhibited by EL222 binding onto our blue light repressible promoter (PBLrep). In the dark, the inhibition will be released and bioluminescence will be induced. This ensures that our bulb is only active in the dark and excess buildup of substrates and luciferase, potentially toxic, will be prevented. This system also ensures that cell concentration dependent luminescence through quorum sensing is surpassed and our cultures can fluoresce independently and in response to light changes.</p>
 
-                    <img src="assets/results-di-bulb.png" class="image-content-hidden">
+                <!-- Bulb bits-->
+                <div id="bulb-1" class="col-sm-11"> <div class="col-sm-10">
 
-                    <p class="text-content-new">The blue light repressible promoter (PBLrep) consists of the 18bp DNA binding region of EL222, a natural photosensitive DNA-binding protein from the marine bacterium Erythrobacter litoralis HTCC2594, positioned between the -35 and -10 regions of the RNAP binding site. In the dark, EL222 is inactive as its N-terminal LOV domain represses its DNA-binding C-terminal HTH domain. In the daytime, exposure to blue light (450nm) results in the LOV-HTH interaction to be released, allowing it to dimerize and bind its binding region, causing steric hindrance to RNAP binding, ultimately repressing transcription. Therefore, only at nighttime the transcription of LuxCDABE will occur.</p>
+                    <p class="text-content-new">The bulb has been designed to ensure biocontainment and prevent the interaction with our engineered microorganisms or their release into the environment.</p>
 
-                    <p class="text-content-new">Cells would have been transformed with (construct) and (construct el222) (constitutively expressing EL222 protein) plasmids. Cells would have been either kept in the dark or exposed to blue light (465 nm) for 6 hours and bioluminescence levels would have been measured by aliquoting samples into a 96-well plate every 6 hours using FLUOstar plate reader.</p>
+                    <p class="text-content-new">The energy strain for the production of bioluminescence by our engineered E. coli cells is so large that they would be outcompeted quickly by other microorganisms if they were to be released in the environment.</p>
 
-                    <img src="assets/bulb-proto.png" class="image-content-hidden">
+                    <p class="text-content-new">Cyanobacteria will be engineered to secrete the glucose product from photosynthesis, thus they would be unable to sustain their growth when competing against other microbes in the environment if they were to be released.</p>
 
-                    <img src="assets/bulb-proto-2.png" class="image-content-hidden">
+                </div>
+                </div>
+
+                <div id="bulb-2" class="col-sm-11"> <div class="col-sm-10">
+
+                    <p class="text-content-new">Cyanobacteria will be engineered to secrete the glucose product from photosynthesis, thus they would be unable to sustain their growth when competing against other microbes in the environment if they were to be released.</p>
+
+                </div></div>
+
+                <div id="bulb-3" class="col-sm-11">
+
+                    <div class="col-sm-10">
+                        <p class="text-content-new">The light sensitive E. coli detects sunlight (blue light) to repress bioluminescence encoded by LuxCDABE. In the presence of light, transcription of the LuxCDABE for the production of Luciferase and substrates will be inhibited by EL222 binding onto our blue light repressible promoter (PBLrep). In the dark, the inhibition will be released and bioluminescence will be induced. This ensures that our bulb is only active in the dark and excess buildup of substrates and luciferase, potentially toxic, will be prevented. This system also ensures that cell concentration dependent luminescence through quorum sensing is surpassed and our cultures can fluoresce independently and in response to light changes.</p>
+
+                        <img src="http://2017.igem.org/wiki/images/8/81/Results-di-bulb.png" class="image-content-hidden">
+
+                        <p class="text-content-new">The blue light repressible promoter (PBLrep) consists of the 18bp DNA binding region of EL222, a natural photosensitive DNA-binding protein from the marine bacterium Erythrobacter litoralis HTCC2594, positioned between the -35 and -10 regions of the RNAP binding site. In the dark, EL222 is inactive as its N-terminal LOV domain represses its DNA-binding C-terminal HTH domain. In the daytime, exposure to blue light (450nm) results in the LOV-HTH interaction to be released, allowing it to dimerize and bind its binding region, causing steric hindrance to RNAP binding, ultimately repressing transcription. Therefore, only at nighttime the transcription of LuxCDABE will occur.</p>
+
+                        <p class="text-content-new">Cells would have been transformed with (construct) and (construct el222) (constitutively expressing EL222 protein) plasmids. Cells would have been either kept in the dark or exposed to blue light (465 nm) for 6 hours and bioluminescence levels would have been measured by aliquoting samples into a 96-well plate every 6 hours using FLUOstar plate reader.</p>
+
+                        <img src="http://2017.igem.org/wiki/images/2/29/Bulb-proto.png" class="image-content-hidden">
+
+                        <img src="http://2017.igem.org/wiki/images/6/69/Bulb-proto2.png" class="image-content-hidden">
+
+                        <p class="text-content-new">Through mathematical modelling, the optimal dimensions and structure of the bulb were determined (click here for modelling details). The circular structure of the LIT bulb maximizes the exposure of Cyanobacteria to sunlight. A pump was introduced to ensure the cells remain suspended and the cell culture is homogeneously distributed throughout the LIT bulb. A three-way manual valve was introduced to allow for the easy replacement of media once every 12 months. A filter will be added to the valve to allow media to be replaced without removing the cell culture.</p>
+
+                        <p class="text-content-new">Biosafety and microbial containment considerations are of particular importance in the manufacturing design process of the LIT Bulb, as our product intends to coexist with the wider population as a source of public illumination.</p>
+
+                        <p class="text-content-new">The bulb has been designed to ensure biocontainment and prevent the interaction with our engineered microorganisms or their release into the environment.</p>
+
+                        <p class="text-content-new">The energy strain for the production of bioluminescence by our engineered E. coli cells is so large that they would be outcompeted quickly by other microorganisms if they were to be released in the environment.</p>
+
+                        <p class="text-content-new">Cyanobacteria will be engineered to secrete the glucose product from photosynthesis, thus they would be unable to sustain their growth when competing against other microbes in the environment if they were to be released.</p>
+
+                    </div>
+                </div>
+
+                <div id="bulb-4" class="col-sm-11">
+
+                <div class="col-sm-10">
+
+                    <img src="http://2017.igem.org/wiki/images/6/69/Bulb-proto2.png" class="image-content-hidden">
 
                     <p class="text-content-new">Through mathematical modelling, the optimal dimensions and structure of the bulb were determined (click here for modelling details). The circular structure of the LIT bulb maximizes the exposure of Cyanobacteria to sunlight. A pump was introduced to ensure the cells remain suspended and the cell culture is homogeneously distributed throughout the LIT bulb. A three-way manual valve was introduced to allow for the easy replacement of media once every 12 months. A filter will be added to the valve to allow media to be replaced without removing the cell culture.</p>
 
@@ -844,7 +1299,10 @@
 
                 </div>
 
+                </div>
             </div>
+
+
 
         </div>
 

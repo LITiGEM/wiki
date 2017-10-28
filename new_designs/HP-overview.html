@@ -9,10 +9,7 @@
     <title>Human Practices Overview</title>
     <link rel="stylesheet" type="text/css" href="css/template.css">
 
-    <!-- BOOTSTRAP -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -63,11 +60,9 @@
 <style>
 
     .image-content-here {
-        display:block;
         height:100%;
         width:100%;
-        position:relative;
-
+/*        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
     }
 
     .image-content-here-icons {
@@ -105,49 +100,54 @@
         display:block;
     }
 
+    .conta {
+        display:inline !important;
+        position:relative;
+    }
+
 </style>
 
-<body style="background-color:rgba(41,41,41,0.87)" data-spy="scroll" data-target="#side-index">
+<body data-spy="scroll" data-target="#side-index">
 
     <div style="margin:0 !important; padding:0 !important" class="container-fluid">
         <div id="top" class="row">
 
-            <img src="assets/logotop.png" class="logo-top">
+            <a href="http://2017.igem.org/Team:UCL"><img src="http://2017.igem.org/wiki/images/9/92/Logotop.png" class="logo-top"></a>
 
             <ul class="navy">
-                <li id="drop1" class="navy-link"><a href="#">PROJECT</a>
+                <li id="drop1" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Description">PROJECT</a>
                     <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Description</a></li>
-                        <li><a href="#" class="dropped">Results</a></li>
-                        <li><a href="#" class="dropped">Parts</a></li>
-                        <li><a href="#" class="dropped">Gold Criteria</a></li>
-                        <li><a href="#" class="dropped">Interlab</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Description" class="dropped">Description</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Results" class="dropped">Results</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Parts" class="dropped">Parts</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Part_Improvement" class="dropped">Gold Part</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/InterLab" class="dropped">Interlab</a></li>
 
                     </ul>
                 </li>
 
-                <li id="drop" class="navy-link"><a href="#">HUMAN PRACTICES</a>
+                <li id="drop" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Human_Practices">HUMAN PRACTICES</a>
                     <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Overview</a></li>
-                        <li><a href="#" class="dropped">Public Engagement</a></li>
-                        <li><a href="#" class="dropped">Integrated Practices</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Human_Practices" class="dropped">Overview</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Engagement" class="dropped">Public Engagement</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/HP/Gold_Integrated" class="dropped">Integrated Practices</a></li>
                     </ul>
                 </li>
 
                 <li id="drop5" class="navy-link"><a href="#">MODELLING</a>
                     <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Overview</a></li>
-                        <li><a href="#" class="dropped">Barchitecture</a></li>
-                        <li><a href="#" class="dropped">Game of LIT</a></li>
-                        <li><a href="#" class="dropped">Mammalian</a></li>
-                        <li><a href="#" class="dropped">Light Bulb</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Model" class="dropped">Overview</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Model4" class="dropped">Barchitecture</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Model1" class="dropped">Game of LIT</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Model3" class="dropped">Mammalian</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Model2" class="dropped">Light Bulb</a></li>
                         <li><a href="#" class="dropped">Glossary</a></li>
                     </ul>
                 </li>
 
-                <li id="drop3" class="navy-link"><a href="#">ENTREPRENEURSHIP</a>
+                <li id="drop3" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Entrepreneurship">ENTREPRENEURSHIP</a>
                     <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Overview</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Entrepreneurship" class="dropped">Overview</a></li>
                         <li><a href="#" class="dropped">Product</a></li>
                         <li><a href="#" class="dropped">IP</a></li>
                         <li><a href="#" class="dropped">Business Environment</a></li>
@@ -158,28 +158,16 @@
                 </li>
 
 
-                <li id="drop2" class="navy-link"><a href="#about">MEDALS</a>
-                    <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Bronze</a></li>
-                        <li><a href="#" class="dropped">Silver</a></li>
-                        <li><a href="#" class="dropped">Gold</a></li>
-                    </ul>
-                </li>
+                <li id="drop2" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Medals">OUR MEDALS</a></li>
 
                 <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
                     <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Team</a></li>
-                        <li><a href="#" class="dropped">Collaborations</a></li>
-                        <li><a href="#" class="dropped">Attributions</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Team" class="dropped">Team</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Collaborations" class="dropped">Collaborations</a></li>
+                        <li><a href="http://2017.igem.org/Team:UCL/Attributions" class="dropped">Attributions</a></li>
                     </ul></li>
 
-                <li id="drop4" class="navy-link"><a href="#">NOTE BOOK</a>
-                    <ul class="navy-hidden">
-                        <li><a href="#" class="dropped">Protocols</a></li>
-                        <li><a href="#" class="dropped">Safety</a></li>
-                        <li><a href="#" class="dropped">Stuff</a></li>
-                    </ul>
-                </li>
+                <li id="drop4" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Notebook">LAB BOOK</a></li>
 
             </ul>
 
@@ -193,284 +181,257 @@
         <div class="row">
 
 
-            <!-- Science Museum-->
-            <div id="sciencem" style="display: flex; float:left; align-items: center; justify-content: center" class="col-sm-4 cols">
-                <img src="assets/HP-SM1.png" class="image-content-here">
+            <div style="margin-left:5% !important" class="card-columns">
 
-                <div class="overlay">
-                    <p class="HP-title">People dancing to transcribe proteins for LIT</p>
-                </div>
-
-                <div id="sciencem-text" class="descriptions">
-                    <p style=" font-size: 1.5vw" class="HP-description">We designed an interactive journey from DNA to 3D structures made out of bacteria. At London Science Museum’s Late event, 2000 guests played, learnt about our project and gave us feedback.</p>
-                </div>
-
-            </div>
-
-            <!--  Wellcome -->
-            <div id="wellcome" style="display: flex; align-items: center; justify-content: center" class="col-sm-4 cols">
-
-                <img src="assets/HP-Wellcome.jpeg" style="height:375px" class="image-content-here">
-
-                <div class="overlay">
-                    <p class="HP-title">Organ printing - a mind-blow for policy</p>
-                </div>
-
-                <div id="wellcome-text" class="descriptions">
-                    <p style=" font-size: 1.5vw" class="HP-description">To develop policy for the future of organ printing, we talked to people at the Wellcome Trust Reading room about societal and ethical impacts of light-induced technologies.</p>
-                </div>
-
-            </div>
-
-            <!-- Instagram -->
-            <div class="col-sm-4 cols">
-
-                <div id="insta">
-
-                    <img src="assets/HP-insta1.jpg" class="image-content-here">
-
-                    <div class="overlay">
-                        <p class="HP-title">Light bulb prototyping - Artists save us</p>
+                <div id="insta" class="card" style="width: 20rem;">
+                    <img class="card-img image-content-here" src="http://2017.igem.org/wiki/images/d/d1/Insta1.jpeg">
+                    <div class="card-body">
+                        <h4 class="card-title HP-title">Light bulb prototyping - Artists save us</h4>
+                        <p class="card-text text-content">To make our light-bulb prototype look nice, we asked artists for designs. We reached 78,000 people, got 133 design submissions and developed our final prototype.</p>
                     </div>
+                </div>
 
-                    <div id="insta-text" class="descriptions">
-                        <p style="font-size: 1.5vw" class="HP-description">To make our light-bulb prototype look nice, we asked artists for designs. We reached 78,000 people, got 133 design submissions and developed our final prototype.</p>
+                <div id="collabs" class="card" style="width: 20rem;">
+                    <img class="card-img image-content-here" src="http://2017.igem.org/wiki/images/a/a5/HP-collabs.jpeg">
+                    <div class="card-body">
+                        <h4 class="card-title HP-title">How we decided to go to Mars</h4>
+                        <p class="card-text text-content">Working with the ESA we focus our Gold Biobrick on making cells resistant to harsh environments.</p>
                     </div>
-
-
                 </div>
-            </div>
-
-            <!-- Smart Dinner -->
-            <div id="smartd" style="display: flex; align-items: center;margin:0 0 0 0 !important; justify-content: center" class="col-sm-4 cols">
-                <img src="assets/HP-smart.png" class="image-content-here">
-
-                <div class="overlay">
-                    <p class="HP-title">Tonight's special: GMOs</p>
+                <div  class="card" style="width: 20rem; display: inline-block">
+                    <img class="card-img image-content-here" src="assets/insta2.jpg">
+                </div>
+                <div id="e" class="card" style="width: 20rem; display: inline-block">
+                    <img class="card-img image-content-here" src="assets/insta3.jpg">
                 </div>
 
-                <div id="smartd-text" class="descriptions">
-                    <p style="font-size: 17px; padding-top: 5%" class="HP-description">EatoffTheMenu organize dinners on topics from AI to Trump politics. We collaborated to bring together 8 people to talk about our LIT project, its safety and whether we should have GMOs on our table.</p>
-                </div>
-
-
-            </div>
-
-            <!--Collabs-->
-            <div  style="margin:0 0 0 0 !important" class="col-sm-4 cols">
-
-                <div id="collabs">
-
-                    <div class="overlay">
-                        <p class="HP-title">How we decided to go to Mars</p>
+                <div id="sciencem" class="card" style="width: 20rem;">
+                    <img class="card-img image-content-here" src="http://2017.igem.org/wiki/images/5/53/HP-ScienceMuseum-1.jpeg">
+                    <div class="card-body">
+                        <h4 class="card-title HP-title">Dancing with bacteria</h4>
+                        <p class="card-text text-content">We designed an interactive journey from DNA to 3D structures made out of bacteria. At London Science Museum’s Late event, 2000 guests played, learnt about our project and gave us feedback.</p>
                     </div>
+                </div>
 
-                    <img src="assets/HP-esa.jpg" style="height:255px !important " class="image-content-here">
-
-                    <div id="collabs-text" class="descriptions">
-                        <p style="font-size:1.4vw" class="HP-description">We developed ideas with the European Space Agency, Transport for London and architects for biobricks to make, entrepreneurship and how to take bacterial architecture to Mars.</p>
+                <div id="wellcome" class="card" style="width: 20rem;">
+                    <img class="card-img image-content-here" src="http://2017.igem.org/wiki/images/7/73/HP-Wellcome.jpeg">
+                    <div class="card-body">
+                        <h4 class="card-title HP-title">Debating policy</h4>
+                        <p class="card-text text-content">To develop policy for the future of organ printing, we talked to people at the Wellcome Trust Reading room about societal and ethical impacts of light-induced technologies.</p>
                     </div>
-
                 </div>
+
+                <div id="smartd" class="card" style="width: 20rem;">
+                    <img class="card-img image-content-here" src="http://2017.igem.org/wiki/images/7/72/HP-smart.png">
+                    <div class="card-body">
+                        <h4 class="card-title HP-title">Tonight's special: GMOs</h4>
+                        <p class="card-text text-content">EatoffTheMenu organize dinners on topics from AI to Trump politics. We collaborated to bring together 8 people to talk about our LIT project, its safety and whether we should have GMOs on our table.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 20rem; display: inline-block">
+                    <img class="card-img image-content-here" src="assets/HP-Rachael.png">
+                </div>
+
+
+                <div class="card" style="width: 20rem; display: inline-block">
+                    <img class="card-img image-content-here" src="http://2017.igem.org/wiki/images/2/21/HP-summersc.jpeg">
+                </div>
+
+
+                <div id="wellco" class="card" style="width: 20rem;">
+                    <img class="card-img image-content-here" src="assets/HP-Beckett1.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title HP-title">Debating policy</h4>
+                        <p class="card-text text-content">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+                <div id="wellcom" class="card" style="width: 20rem;">
+                    <img class="card-img image-content-here" src="http://2017.igem.org/wiki/images/b/bc/HP-Meetup.jpeg">
+                    <div class="card-body">
+                        <h4 class="card-title HP-title">Debating policy</h4>
+                        <p class="card-text text-content">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+                <div  class="card" style="width: 20rem; display: inline-block">
+                    <img class="card-img image-content-here" src="assets/HP-summersc.JPG">
+                </div>
+
+                <div id="summer" class="card" style="width: 20rem; display: inline-block">
+                    <img class="card-img image-content-here" src="assets/HP-Rabia.jpeg">
+                </div>
+
 
             </div>
-
-            <!-- Summer school-->
-            <div id="summer" style=" margin:0 0 0 0 !important" class="col-sm-4 cols">
-                <img src="assets/HP-summersc.JPG" class="image-content-here">
-
-                <div class="overlay">
-                    <p class="HP-title">Genetically modifying mules to make love</p>
-                </div>
-
-                <div id="summer-text" class="descriptions">
-                    <p style="font-size: 1.4vw" class="HP-description">We facilitated discussion with 17-year olds from UCL’s Summer School about modifying organisms  and its impacts. Highlight: we should modify mules for agriculture.</p>
-                </div>
-
-            </div>
-            <!-- Meet-up  -->
-            <div id="meetup" style=" float:left !important;margin: 0 0 0 0" class="col-sm-4 cols">
-
-                <img src="assets/HP-Meetup.jpg" class="image-content-here">
-
-                <div class="overlay">
-                    <p class="HP-title">Debates over who owns synthetic biology</p>
-                </div>
-
-                <div id="meetup-text" class="descriptions">
-                    <p style="font-size: 1.4vw" class="HP-description">We organised debates at the UK iGEM meet-up to see how effective they are at revealing answers and producing more questions about synthetic biology.</p>
-                </div>
-
-            </div>
-
-
-
-
         </div>
 
 
-          <!--  &lt;!&ndash; Instagram &ndash;&gt;
-            <div id="ip" class="row">
 
-                <div class="text-section col-sm-7">
-
-                    <h1 class="title">What will the future of illumination look like?</h1>
-
-                    <p class="text-content-duo HP-intros">Through our Integrated Human Practices activities, we wanted to test a few principles that future teams can use when exploring their projects. We focused on:</p>
-
-                    <ul class="list-section">
-                        <li class="list-item-content">high outreach</li>
-                        <li class="list-item-content">interactivity</li>
-                        <li class="list-item-content">the extent to which we integrate an outcome into the project holistically</li>
-                    </ul>
-
-                    <p class="text-content-duo HP-intros">We designed our Instagram competition to use these principles to understand the complexity of deploying a bacterial light bulb in the real life. At the end, we reached 78,000 people, received 133 design submissions and developed our final prototype.</p>
-                </div>
-
-            <div class="picture-section-right col-sm-4">
-                <img src="assets/insta1.jpg" class="image-content-here">
-            </div>
-
-            </div>
-
-            &lt;!&ndash; Collaborations &ndash;&gt;
-            <div class="row">
-
-                <div class="text-section col-sm-7">
-
-                    <h1 class="title">Collaborations & Conversations </h1>
-
-                    <p class="text-content-duo HP-intros">We saw stakeholder engagement as the opportunity to stress test ideas, engage in a bidirectional exchange of ideas and meet interesting people. Some of our conversations included:</p>
-
-                    <ul class="list-section">
-                        <li class="list-item-content">Architects</li>
-                        <li class="list-item-content">Designers</li>
-                        <li class="list-item-content">Construction Companies</li>
-                        <li class="list-item-content">Transport for London</li>
-                        <li class="list-item-content">European Space Agency</li>
-                    </ul>
-
-                </div>
-
-                <div class="picture-section-right col-sm-4">
-
-
-                </div>
-            </div>
-
-            &lt;!&ndash; Meet-up &ndash;&gt;
-            <div class="row">
-
-                <div class="text-section col-sm-6">
-                    <h1 class="title">UK iGEM Meet-up</h1>
-
-                    <p class="text-content-duo HP-intros">At the UK iGEM 2017 meet-up, we tested a tool to use when choosing an iGEM project and developing ideas: debates.</p>
-
-                    <p class="text-content-duo">By organising debates on synthetic biology questions, we observed how useful this technique can be to reveal answers and produce more questions. Future iGEM teams can study our observations about the process and build upon it by exploring how debates can be applied to creating chances for feedback on ideas.</p>
-
-                </div>
-
-                <div class="picture-section-right col-sm-5">
-
-
-
-                </div>
-
-            </div>
-
-
-            &lt;!&ndash; Science Museum &ndash;&gt;
-            <div id="pe" class="row">
-
-                <div class="text-section col-sm-7">
-
-                    <h1 class="title">Light can excite cells. Can LIT do the same?</h1>
-
-                    <p class="text-content-duo HP-intros">Thought experiment: what will the future of science communication look like? We explored this question through gamification.</p>
-
-                    <p class="text-content-duo">Our aim was to test how gamification can be used to communicate science better. We gamified the central dogma of biology and presented the installation at the London Science Museum Late event, with an exposure to 2000 guests.</p>
-
-                    <p class="text-content-duo"><a href="#">Check out how it works, reflections and tips for future iGEM teams.</a></p>
-                </div>
-
-            </div>
-
-            &lt;!&ndash; Smart Dinner &ndash;&gt;
-            <div class="row">
-                <div class="text-section col-sm-7">
-                    <h1 class="title">Smart Dinner</h1>
-
-                    <p class="text-content-duo HP-intros">Public engagement can happen on small, medium and large scales in terms of the public outreach. We wanted to test each level and see what useful outcomes can be expected from each.</p>
-
-                    <p class="text-content-duo">On the small scale, we decided to focus on the idea of intimacy: how can a small-scale discussion facilitate a more thorough understanding of synthetic biology and building close connections with the people involved. We reached to Smart Dinners, who popularly organise dinners where people discuss and debate various themes. The outcomes were quite different from the large-scale events that we held.</p>
-
-                </div>
-
-                <div class="picture-section-right col-sm-4">
-                    <img src="assets/HP-smart.png" class="special-images-here" style="height:300px; width:300px">
-                </div>
-
-            </div>
-
-            &lt;!&ndash; Wellcome trust &ndash;&gt;
-            <div class="row">
-                <div class="text-section col-sm-7">
-                    <h1 class="title">Wellcome Trust event</h1>
-                    <p class="text-content-duo HP-intros">While the first small-scale event was about a free discussion on the topic, we experimented with a more focused conversation to compare the two approaches.</p>
-
-                    <p class="text-content-duo">Again, people invited to the event came from different backgrounds and targeted the discussion to policy development around synthetic biology.</p>
-                </div>
-
-
-            </div>
-
-            &lt;!&ndash; Summer School &ndash;&gt;
-            <div class="row">
-            <div class="text-section col-sm-7">
-                <h1 class="title">Facilitating discussion in synthetic biology</h1>
-                <p class="text-content-duo HP-intros">On the medium-scale outreach level, we sought an opportunity to engage with high-school students. The aim was to test the efficacy of discussion facilitation as a technique in synthetic biology.</p>
-
-                <p class="text-content-duo">We used knowledge and techniques from management consulting to engage with students. The result? A very in-depth conversation about how to genetically modify mules to make love to each other – along the way we touched on relevant points on using gene drives, consequences of genetic engineering and real-life trade-offs.</p>
-            </div>
-
-            <div class="picture-section-right col-sm-4">
-                <img src="assets/HP-summersc.JPG" id="special-image-here-1">
-            </div>
-
-
-        </div>
-
-
-        &lt;!&ndash; Philosophy &ndash;&gt;
-        <div id="philo" class="row">
-
-            <div  class="text-section col-sm-8">
-
-                <h1 class="title">Our philosophy</h1>
-
-                <h2 class="subtitle">Why we did HP the way we did it</h2>
-
-                <p class="text-content-duo">Our team developed applications for biological light switches that by controlling specific cellular processes can innovate areas of medicine, illumination and architecture.</p>
-
-                <p class="text-content-duo HP-intros">We saw the Human Practices activities as opportunities to explore the applications of these biological light switches and develop a holistic perspective on them. In doing so, we tested activities and principles to see how well they work and combined them with the wet lab experiments, mathematical modelling and entrepreneurship. Examples include gamification, small and large scale events, online competitions and engaging with architects.</p>
-
-                <p class="text-content">We hope that our achievements this summer will inspire a more creative view of the role of Human Practices in synthetic biology and will serve as good documentation for future iGEM teams to build upon.</p>
-
-
-            </div>
-
-            <div class="picture-section-right col-sm-3">
-                <p class="modelling-steps-intro">To find out more about the applications,<a href="#"> click here.</a></p>
-
-                <img src="assets/icon-bulb.png" class="image-content-icons">
-                <img src="assets/icon-organ.png" class="image-content-icons">
-                <img src="assets/icon-barc.png" class="image-content-icons">
-            </div>
-
-        </div>-->
 
     </div>
 
 </body>
 
 </html>
+
+<!--  &lt;!&ndash; Instagram &ndash;&gt;
+   <div id="ip" class="row">
+
+       <div class="text-section col-sm-7">
+
+           <h1 class="title">What will the future of illumination look like?</h1>
+
+           <p class="text-content-duo HP-intros">Through our Integrated Human Practices activities, we wanted to test a few principles that future teams can use when exploring their projects. We focused on:</p>
+
+           <ul class="list-section">
+               <li class="list-item-content">high outreach</li>
+               <li class="list-item-content">interactivity</li>
+               <li class="list-item-content">the extent to which we integrate an outcome into the project holistically</li>
+           </ul>
+
+           <p class="text-content-duo HP-intros">We designed our Instagram competition to use these principles to understand the complexity of deploying a bacterial light bulb in the real life. At the end, we reached 78,000 people, received 133 design submissions and developed our final prototype.</p>
+       </div>
+
+   <div class="picture-section-right col-sm-4">
+       <img src="assets/insta1.jpg" class="image-content-here">
+   </div>
+
+   </div>
+
+   &lt;!&ndash; Collaborations &ndash;&gt;
+   <div class="row">
+
+       <div class="text-section col-sm-7">
+
+           <h1 class="title">Collaborations & Conversations </h1>
+
+           <p class="text-content-duo HP-intros">We saw stakeholder engagement as the opportunity to stress test ideas, engage in a bidirectional exchange of ideas and meet interesting people. Some of our conversations included:</p>
+
+           <ul class="list-section">
+               <li class="list-item-content">Architects</li>
+               <li class="list-item-content">Designers</li>
+               <li class="list-item-content">Construction Companies</li>
+               <li class="list-item-content">Transport for London</li>
+               <li class="list-item-content">European Space Agency</li>
+           </ul>
+
+       </div>
+
+       <div class="picture-section-right col-sm-4">
+
+
+       </div>
+   </div>
+
+   &lt;!&ndash; Meet-up &ndash;&gt;
+   <div class="row">
+
+       <div class="text-section col-sm-6">
+           <h1 class="title">UK iGEM Meet-up</h1>
+
+           <p class="text-content-duo HP-intros">At the UK iGEM 2017 meet-up, we tested a tool to use when choosing an iGEM project and developing ideas: debates.</p>
+
+           <p class="text-content-duo">By organising debates on synthetic biology questions, we observed how useful this technique can be to reveal answers and produce more questions. Future iGEM teams can study our observations about the process and build upon it by exploring how debates can be applied to creating chances for feedback on ideas.</p>
+
+       </div>
+
+       <div class="picture-section-right col-sm-5">
+
+
+
+       </div>
+
+   </div>
+
+
+   &lt;!&ndash; Science Museum &ndash;&gt;
+   <div id="pe" class="row">
+
+       <div class="text-section col-sm-7">
+
+           <h1 class="title">Light can excite cells. Can LIT do the same?</h1>
+
+           <p class="text-content-duo HP-intros">Thought experiment: what will the future of science communication look like? We explored this question through gamification.</p>
+
+           <p class="text-content-duo">Our aim was to test how gamification can be used to communicate science better. We gamified the central dogma of biology and presented the installation at the London Science Museum Late event, with an exposure to 2000 guests.</p>
+
+           <p class="text-content-duo"><a href="#">Check out how it works, reflections and tips for future iGEM teams.</a></p>
+       </div>
+
+   </div>
+
+   &lt;!&ndash; Smart Dinner &ndash;&gt;
+   <div class="row">
+       <div class="text-section col-sm-7">
+           <h1 class="title">Smart Dinner</h1>
+
+           <p class="text-content-duo HP-intros">Public engagement can happen on small, medium and large scales in terms of the public outreach. We wanted to test each level and see what useful outcomes can be expected from each.</p>
+
+           <p class="text-content-duo">On the small scale, we decided to focus on the idea of intimacy: how can a small-scale discussion facilitate a more thorough understanding of synthetic biology and building close connections with the people involved. We reached to Smart Dinners, who popularly organise dinners where people discuss and debate various themes. The outcomes were quite different from the large-scale events that we held.</p>
+
+       </div>
+
+       <div class="picture-section-right col-sm-4">
+           <img src="assets/HP-smart.png" class="special-images-here" style="height:300px; width:300px">
+       </div>
+
+   </div>
+
+   &lt;!&ndash; Wellcome trust &ndash;&gt;
+   <div class="row">
+       <div class="text-section col-sm-7">
+           <h1 class="title">Wellcome Trust event</h1>
+           <p class="text-content-duo HP-intros">While the first small-scale event was about a free discussion on the topic, we experimented with a more focused conversation to compare the two approaches.</p>
+
+           <p class="text-content-duo">Again, people invited to the event came from different backgrounds and targeted the discussion to policy development around synthetic biology.</p>
+       </div>
+
+
+   </div>
+
+   &lt;!&ndash; Summer School &ndash;&gt;
+   <div class="row">
+   <div class="text-section col-sm-7">
+       <h1 class="title">Facilitating discussion in synthetic biology</h1>
+       <p class="text-content-duo HP-intros">On the medium-scale outreach level, we sought an opportunity to engage with high-school students. The aim was to test the efficacy of discussion facilitation as a technique in synthetic biology.</p>
+
+       <p class="text-content-duo">We used knowledge and techniques from management consulting to engage with students. The result? A very in-depth conversation about how to genetically modify mules to make love to each other – along the way we touched on relevant points on using gene drives, consequences of genetic engineering and real-life trade-offs.</p>
+   </div>
+
+   <div class="picture-section-right col-sm-4">
+       <img src="assets/HP-summersc.JPG" id="special-image-here-1">
+   </div>
+
+
+</div>
+
+
+&lt;!&ndash; Philosophy &ndash;&gt;
+<div id="philo" class="row">
+
+   <div  class="text-section col-sm-8">
+
+       <h1 class="title">Our philosophy</h1>
+
+       <h2 class="subtitle">Why we did HP the way we did it</h2>
+
+       <p class="text-content-duo">Our team developed applications for biological light switches that by controlling specific cellular processes can innovate areas of medicine, illumination and architecture.</p>
+
+       <p class="text-content-duo HP-intros">We saw the Human Practices activities as opportunities to explore the applications of these biological light switches and develop a holistic perspective on them. In doing so, we tested activities and principles to see how well they work and combined them with the wet lab experiments, mathematical modelling and entrepreneurship. Examples include gamification, small and large scale events, online competitions and engaging with architects.</p>
+
+       <p class="text-content">We hope that our achievements this summer will inspire a more creative view of the role of Human Practices in synthetic biology and will serve as good documentation for future iGEM teams to build upon.</p>
+
+
+   </div>
+
+   <div class="picture-section-right col-sm-3">
+       <p class="modelling-steps-intro">To find out more about the applications,<a href="#"> click here.</a></p>
+
+       <img src="assets/icon-bulb.png" class="image-content-icons">
+       <img src="assets/icon-organ.png" class="image-content-icons">
+       <img src="assets/icon-barc.png" class="image-content-icons">
+   </div>
+
+</div>-->
