@@ -24,294 +24,366 @@
 
         $(document).ready(function(){
 
-            //the second menu buttons will have some initial values
-            var section1 = $('#barc-nav1'), section2 = $('#barc-nav2'), section3 = $('#barc-nav3'), section4 = $('#barc-nav4');
-            var section5 = $('#tissue-nav1'), section6 = $('#tissue-nav2'), section7 = $('#tissue-nav3'), section8 = $('#tissue-nav4');
-            var section9 = $('#bulb-nav1'), section10 = $('#bulb-nav2'), section11 = $('#bulb-nav3'), section12 = $('#bulb-nav4');
+            var menus = ['#barc-nav1','#barc-nav2','#barc-nav3','#barc-nav4','#tissue-nav1','#tissue-nav2','#tissue-nav3','#tissue-nav4','#bulb-nav1','#bulb-nav2','#bulb-nav3','#bulb-nav4'];
+            var contents = ['#barc-1','#barc-2','#barc-3','#barc-4','#tissue-1','#tissue-2','#tissue-3','#tissue-4','#bulb-1','#bulb-2','#bulb-3','#bulb-4'];
 
-            //these functions give values to the high-level buttons that define what section 1, 2, 3 and 4
-            // and to the relevant content that should be displayed
 
             $("#barc").click(function(){
-                $(section5).hide();
-                $(section6).hide();
-                $(section7).hide();
-                $(section8).hide();
-                $(section9).hide();
-                $(section10).hide();
-                $(section11).hide();
-                $(section12).hide();
+                console.log("helo");
+                //presenting all the relevant menu bars
+                for (i=0; i<menus.length; i++) {
+                    var bar = menus[i];
 
-                $(section1).show();
-                $(section2).show();
-                $(section3).show();
-                $(section4).show();
+                    if (bar.charAt(2)!=="a") {
+                        $(bar).hide();
 
+                    } else {
+                        $(bar).show();
+                    }
+                }
+
+                //presenting the first relevant content div
+                for (i=0; i<contents.length; i++) {
+                    var bar = contents[i];
+
+                    if (bar.charAt(2)!=="a") {
+                        $(bar).hide();
+
+                    }
+                }
+
+                $("#barc-1").show();
 
             });
 
             $("#tissue").click(function(){
 
+                //presenting all the relevant menu bars
+                for (i=0; i<menus.length; i++) {
+                    var bar = menus[i];
 
-                $(section1).hide();
-                $(section2).hide();
-                $(section3).hide();
-                $(section4).hide();
-                $(section12).hide();
-                $(section9).hide();
-                $(section10).hide();
-                $(section11).hide();
+                    if (bar.charAt(2)!=="i") {
+                        $(bar).hide();
 
-                $(section5).show();
-                $(section6).show();
-                $(section7).show();
-                $(section8).show();
+                    } else {
+                        $(bar).show();
+                    }
+                }
+
+                //presenting the first relevant content div
+                for (i=0; i<contents.length; i++) {
+                    var bar = contents[i];
+
+                    if (bar.charAt(2)!=="i") {
+                        $(bar).hide();
+
+                    }
+                }
+
+                $("#tissue-1").show();
 
             });
 
             $("#bulb").click(function(){
 
+                //presenting all the relevant menu bars
+                for (i=0; i<menus.length; i++) {
+                    var bar = menus[i];
 
-                $(section1).hide();
-                $(section2).hide();
-                $(section3).hide();
-                $(section4).hide();
-                $(section5).hide();
-                $(section6).hide();
-                $(section7).hide();
-                $(section8).hide();
+                    if (bar.charAt(2)!=="u") {
+                        $(bar).hide();
 
-                $(section9).show();
-                $(section10).show();
-                $(section11).show();
-                $(section12).show();
+                    } else {
+                        $(bar).show();
+                    }
+                }
+
+                //presenting the first relevant content div
+                for (i=0; i<contents.length; i++) {
+                    var bar = contents[i];
+
+                    if (bar.charAt(2)!=="u") {
+                        $(bar).hide();
+
+                    }
+                }
+
+                $("#bulb-1").show();
 
             });
 
             //the second menu buttons - when we press on the button, it should fadeIn the right content
 
-            $(section1).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#barc-1').fadeIn("slow");
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
+             $("#barc-nav1").click(function(){
 
-                $('#tissue-1').hide();
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
 
-                $('#bulb-1').hide();
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
+             // ARE YOU SERIOUS THAT I HAVE TO USE NESTED IF LOOPS? Jesus, iGEM, this is just ridiculous
+             // && for the win!!!!
 
+                 if (bar.charAt(2)!=="a") {
+                    if (bar.charAt(6)!=="1") {
+                        $(bar).hide();
+                    }
+                 } else if (bar.charAt(2)==="a") {
+                        if (bar.charAt(6)!=="1") {
+                            $(bar).hide();
+                    }
+                 }
+             }
 
-            });
+             $('#barc-1').fadeIn("slow");
 
-            $(section2).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#barc-2').fadeIn("slow");
-                $('#barc-1').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
+             });
 
-                $('#tissue-1').hide();
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
+             $("#barc-nav2").click(function(){
+             //here we only have to fade the right content and out the bad one
 
-                $('#bulb-1').hide();
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
-            });
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
 
-            $(section3).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#barc-3').fadeIn("slow");
-                $('#barc-2').hide();
-                $('#barc-1').hide();
-                $('#barc-4').hide();
+             // ARE YOU SERIOUS THAT I HAVE TO USE NESTED IF LOOPS? Jesus, iGEM, this is just ridiculous
+             // && for the win!!!!
 
-                $('#tissue-1').hide();
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
+             if (bar.charAt(2)!=="a") {
+                if (bar.charAt(6)!=="2") {
+                    $(bar).hide();
+                }
+             } else if (bar.charAt(2)==="a") {
+                if (bar.charAt(6)!=="2") {
+                    $(bar).hide();
+                }
+                }
+             }
 
-                $('#bulb-1').hide();
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
-            });
+             $('#barc-2').fadeIn("slow");
 
-            $(section4).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#barc-4').fadeIn("slow");
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-1').hide();
+             });
 
-                $('#tissue-1').hide();
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
-
-                $('#bulb-1').hide();
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
-            });
-
-            $(section5).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#tissue-1').fadeIn("slow");
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
-
-                $('#barc-1').hide();
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
-
-                $('#bulb-1').hide();
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
+             $("#barc-nav3").click(function(){
+             //here we only have to fade the right content and out the bad one
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+                 var bar = contents[i];
 
 
-            });
+                 // ARE YOU SERIOUS THAT I HAVE TO USE NESTED IF LOOPS? Jesus, iGEM, this is just ridiculous
+                 // && for the win!!!!
 
-            $(section6).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#tissue-2').fadeIn("slow");
-                $('#tissue-1').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
+                 if (bar.charAt(2) !== "a") {
+                     if (bar.charAt(6) !== "3") {
+                         $(bar).hide();
+                     }
+                 } else if (bar.charAt(2) === "a") {
+                     if (bar.charAt(6) !== "3") {
+                         $(bar).hide();
+                     }
+                 }
+             }
 
-                $('#barc-1').hide();
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
-
-                $('#bulb-1').hide();
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
-            });
-
-            $(section7).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#tissue-3').fadeIn("slow");
-                $('#tissue-2').hide();
-                $('#tissue-1').hide();
-                $('#tissue-4').hide();
-
-                $('#barc-1').hide();
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
-
-                $('#bulb-1').hide();
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
-            });
-
-            $(section8).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#tissue-4').fadeIn("slow");
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-1').hide();
-
-                $('#barc-1').hide();
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
-
-                $('#bulb-1').hide();
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
-            });
-
-            $(section9).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#bulb-1').fadeIn("slow");
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
-
-                $('#barc-1').hide();
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
-
-                $('#tissue-1').hide();
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
-
-            });
-
-            $(section10).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#bulb-2').fadeIn("slow");
-                $('#bulb-1').hide();
-                $('#bulb-3').hide();
-                $('#bulb-4').hide();
-
-                $('#barc-1').hide();
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
-
-                $('#tissue-1').hide();
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
-            });
-
-            $(section11).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#bulb-3').fadeIn("slow");
-                $('#bulb-2').hide();
-                $('#bulb-1').hide();
-                $('#bulb-4').hide();
-
-                $('#barc-1').hide();
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
-
-                $('#tissue-1').hide();
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
-            });
-
-            $(section12).click(function(){
-                //here we only have to fade the right content and out the bad one
-                $('#bulb-4').fadeIn("slow");
-                $('#bulb-2').hide();
-                $('#bulb-3').hide();
-                $('#bulb-1').hide();
-
-                $('#barc-1').hide();
-                $('#barc-2').hide();
-                $('#barc-3').hide();
-                $('#barc-4').hide();
-
-                $('#tissue-1').hide();
-                $('#tissue-2').hide();
-                $('#tissue-3').hide();
-                $('#tissue-4').hide();
-            });
+             $('#barc-3').fadeIn("slow");
+             });
 
 
+
+             $("#barc-nav4").click(function(){
+             //here we only have to fade the right content and out the bad one
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="a") {
+                if (bar.charAt(6)!=="4") {
+                    $(bar).hide();
+                }
+             } else if (bar.charAt(2)==="a") {
+
+                if (bar.charAt(6)!=="4") {
+                    $(bar).hide();
+                }
+             }
+             }
+
+             $('#barc-4').fadeIn("slow");
+
+             });
+
+             $("#tissue-nav1").click(function(){
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="i") {
+                 if(bar.charAt(8)!=="1") {
+                     $(bar).hide();
+                 }
+             } else if (bar.charAt(2)==="i") {
+
+                if(bar.charAt(8)!=="1") {
+                    $(bar).hide();
+                }
+             }
+
+             }
+
+             $('#tissue-1').fadeIn("slow");
+
+             });
+
+             $("#tissue-nav2").click(function(){
+
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="i") {
+
+                if (bar.charAt(8)!=="2") {
+                    $(bar).hide();
+                }
+             } else if (bar.charAt(2)==="i") {
+
+             if (bar.charAt(8)!=="2") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#tissue-2').fadeIn("slow");
+             });
+
+             $("#tissue-nav3").click(function(){
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+                 if (bar.charAt(2)!=="i") {
+
+                    if (bar.charAt(8)!=="3") {
+                        $(bar).hide();
+                    }
+                 } else if (bar.charAt(2)==="i") {
+
+                 if (bar.charAt(8)!=="3") {
+                     $(bar).hide();
+                 }
+             }
+             }
+
+             $('#tissue-3').fadeIn("slow");
+             });
+
+             $("#tissue-nav4").click(function(){
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="i") {
+
+                if (bar.charAt(8)!=="4") {
+                    $(bar).hide();
+                }
+             } else if (bar.charAt(2)==="i") {
+
+             if (bar.charAt(8)!=="4") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#tissue-4').fadeIn("slow");
+             });
+
+             $("#bulb-nav1").click(function(){
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+                 if (bar.charAt(2)!=="u") {
+
+                 if (bar.charAt(6)!=="1") {
+                     $(bar).hide();
+                 }
+                 } else if (bar.charAt(2)==="u") {
+
+                 if (bar.charAt(6)!=="1") {
+                     $(bar).hide();
+                 }
+             }
+             }
+
+             $('#bulb-1').fadeIn("slow");
+
+             });
+
+             $("#bulb-nav2").click(function(){
+             //here we only have to fade the right content and out the bad one
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="u") {
+
+             if (bar.charAt(6)!=="2") {
+                 $(bar).hide();
+             }
+             } else if (bar.charAt(2)==="u") {
+
+             if (bar.charAt(6)!=="2") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#bulb-2').fadeIn("slow");
+             });
+
+             $("#bulb-nav3").click(function(){
+             //here we only have to fade the right content and out the bad one
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="u") {
+
+             if (bar.charAt(6)!=="3") {
+                 $(bar).hide();
+             }
+             } else if (bar.charAt(2)==="u") {
+
+             if (bar.charAt(6)!=="3") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#bulb-3').fadeIn("slow");
+             });
+
+             $("#bulb-nav4").click(function(){
+             //here we only have to fade the right content and out the bad one
+
+             //presenting the first relevant content div
+             for (i=0; i<contents.length; i++) {
+             var bar = contents[i];
+
+             if (bar.charAt(2)!=="u") {
+
+             if (bar.charAt(6)!=="4") {
+                 $(bar).hide();
+             }
+             } else if (bar.charAt(2)==="u") {
+
+             if (bar.charAt(6)!=="4") {
+                 $(bar).hide();
+             }
+             }
+             }
+
+             $('#bulb-4').fadeIn("slow");
+             });
 
             //functions for the small tables inside the sectionContent variables
             $("#barc-app1").click(function(){
@@ -1164,9 +1236,22 @@
 
 
                 <!-- Bulb bits-->
-                <div id="bulb-1" class="col-sm-11"></div>
+                <div id="bulb-1" class="col-sm-11"> <div class="col-sm-10">
 
-                <div id="bulb-2" class="col-sm-11"></div>
+                    <p class="text-content-new">The bulb has been designed to ensure biocontainment and prevent the interaction with our engineered microorganisms or their release into the environment.</p>
+
+                    <p class="text-content-new">The energy strain for the production of bioluminescence by our engineered E. coli cells is so large that they would be outcompeted quickly by other microorganisms if they were to be released in the environment.</p>
+
+                    <p class="text-content-new">Cyanobacteria will be engineered to secrete the glucose product from photosynthesis, thus they would be unable to sustain their growth when competing against other microbes in the environment if they were to be released.</p>
+
+                </div>
+                </div>
+
+                <div id="bulb-2" class="col-sm-11"> <div class="col-sm-10">
+
+                    <p class="text-content-new">Cyanobacteria will be engineered to secrete the glucose product from photosynthesis, thus they would be unable to sustain their growth when competing against other microbes in the environment if they were to be released.</p>
+
+                </div></div>
 
                 <div id="bulb-3" class="col-sm-11">
 
@@ -1196,9 +1281,25 @@
                     </div>
                 </div>
 
-                <div id="bulb-4" class="col-sm-11"></div>
+                <div id="bulb-4" class="col-sm-11">
 
+                <div class="col-sm-10">
 
+                    <img src="http://2017.igem.org/wiki/images/6/69/Bulb-proto2.png" class="image-content-hidden">
+
+                    <p class="text-content-new">Through mathematical modelling, the optimal dimensions and structure of the bulb were determined (click here for modelling details). The circular structure of the LIT bulb maximizes the exposure of Cyanobacteria to sunlight. A pump was introduced to ensure the cells remain suspended and the cell culture is homogeneously distributed throughout the LIT bulb. A three-way manual valve was introduced to allow for the easy replacement of media once every 12 months. A filter will be added to the valve to allow media to be replaced without removing the cell culture.</p>
+
+                    <p class="text-content-new">Biosafety and microbial containment considerations are of particular importance in the manufacturing design process of the LIT Bulb, as our product intends to coexist with the wider population as a source of public illumination.</p>
+
+                    <p class="text-content-new">The bulb has been designed to ensure biocontainment and prevent the interaction with our engineered microorganisms or their release into the environment.</p>
+
+                    <p class="text-content-new">The energy strain for the production of bioluminescence by our engineered E. coli cells is so large that they would be outcompeted quickly by other microorganisms if they were to be released in the environment.</p>
+
+                    <p class="text-content-new">Cyanobacteria will be engineered to secrete the glucose product from photosynthesis, thus they would be unable to sustain their growth when competing against other microbes in the environment if they were to be released.</p>
+
+                </div>
+
+                </div>
             </div>
 
 

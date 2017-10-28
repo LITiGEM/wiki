@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+    <meta charset="UTF-8">
+
+    <title>The LIT Team</title>
+
+    <link rel="stylesheet" type="text/css" href="css/template.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+
+    .image-content-here {
+        height:100%;
+        width:100%;
+        /*        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    }
+
+    .image-content-here-icons {
+        height: 30%;
+        width:30%;
+        margin: 15% 5% 0 10%;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    #meetup:hover .descriptions {
+        display:block;
+    }
+
+    #sciencem:hover .descriptions {
+        display:block;
+    }
+
+    #insta:hover .descriptions {
+        display:block;
+    }
+    #smartd:hover .descriptions {
+        display:block;
+    }
+
+    #summer:hover .descriptions {
+        display:block;
+    }
+
+    #wellcome:hover .descriptions {
+        display:block;
+    }
+
+    #collabs:hover .descriptions {
+        display:block;
+    }
+
+    .conta {
+        display:inline !important;
+        position:relative;
+    }
+
+</style>
+
+<body data-spy="scroll" data-target="#side-index">
+
+<div style="margin:0 !important; padding:0 !important" class="container-fluid">
+    <div id="top" class="row">
+
+        <a href="http://2017.igem.org/Team:UCL"><img src="http://2017.igem.org/wiki/images/9/92/Logotop.png" class="logo-top"></a>
+
+        <ul class="navy">
+            <li id="drop1" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Description">PROJECT</a>
+                <ul class="navy-hidden">
+                    <li><a href="http://2017.igem.org/Team:UCL/Description" class="dropped">Description</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Results" class="dropped">Results</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Parts" class="dropped">Parts</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Part_Improvement" class="dropped">Gold Part</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/InterLab" class="dropped">Interlab</a></li>
+
+                </ul>
+            </li>
+
+            <li id="drop" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Human_Practices">HUMAN PRACTICES</a>
+                <ul class="navy-hidden">
+                    <li><a href="http://2017.igem.org/Team:UCL/Human_Practices" class="dropped">Overview</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Engagement" class="dropped">Public Engagement</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/HP/Gold_Integrated" class="dropped">Integrated Practices</a></li>
+                </ul>
+            </li>
+
+            <li id="drop5" class="navy-link"><a href="#">MODELLING</a>
+                <ul class="navy-hidden">
+                    <li><a href="http://2017.igem.org/Team:UCL/Model" class="dropped">Overview</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Model4" class="dropped">Barchitecture</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Model1" class="dropped">Game of LIT</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Model3" class="dropped">Mammalian</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Model2" class="dropped">Light Bulb</a></li>
+                    <li><a href="#" class="dropped">Glossary</a></li>
+                </ul>
+            </li>
+
+            <li id="drop3" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Entrepreneurship">ENTREPRENEURSHIP</a>
+                <ul class="navy-hidden">
+                    <li><a href="http://2017.igem.org/Team:UCL/Entrepreneurship" class="dropped">Overview</a></li>
+                    <li><a href="#" class="dropped">Product</a></li>
+                    <li><a href="#" class="dropped">IP</a></li>
+                    <li><a href="#" class="dropped">Business Environment</a></li>
+                    <li><a href="#" class="dropped">Marketing</a></li>
+                    <li><a href="#" class="dropped">Management</a></li>
+                    <li><a href="#" class="dropped">Economic Appraisal</a></li>
+                </ul>
+            </li>
+
+
+            <li id="drop2" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Medals">OUR MEDALS</a></li>
+
+            <li id="drop6" class="navy-link"><a href="#about">PEOPLE</a>
+                <ul class="navy-hidden">
+                    <li><a href="http://2017.igem.org/Team:UCL/Team" class="dropped">Team</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Collaborations" class="dropped">Collaborations</a></li>
+                    <li><a href="http://2017.igem.org/Team:UCL/Attributions" class="dropped">Attributions</a></li>
+                </ul></li>
+
+            <li id="drop4" class="navy-link"><a href="http://2017.igem.org/Team:UCL/Notebook">LAB BOOK</a></li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<div style="margin:1% 5% 0 5%!important" class="container-fluid col-sm-10">
+
+    <!-- The menu for the images-->
+    <div class="row">
+
+
+        <div style="margin-left:5% !important" class="card-columns">
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Florin Gheorghiu</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">"Thought experiment!"</small></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Paola Handal</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">"I will do it"</small></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Camillo Moschner</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">"THIS IS SO COOL!"</small></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Anima</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Nobody really knows</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Cecile Geier</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">"Can you make it glow?"</small></p>
+                </div>
+            </div>
+
+
+            <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Stefania Trepekli</h4>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">"Akalaaaa"</small></p>
+            </div>
+        </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Marisa Cvitanic</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">"ugh"</small></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Hongchang Fu</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">"ugh"</small></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Hristina Dimitrova</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">"man, I’m so stressed"</small></p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+</body>
+
+</html>
+
+<!--  &lt;!&ndash; Instagram &ndash;&gt;
+   <div id="ip" class="row">
+
+       <div class="text-section col-sm-7">
+
+           <h1 class="title">What will the future of illumination look like?</h1>
+
+           <p class="text-content-duo HP-intros">Through our Integrated Human Practices activities, we wanted to test a few principles that future teams can use when exploring their projects. We focused on:</p>
+
+           <ul class="list-section">
+               <li class="list-item-content">high outreach</li>
+               <li class="list-item-content">interactivity</li>
+               <li class="list-item-content">the extent to which we integrate an outcome into the project holistically</li>
+           </ul>
+
+           <p class="text-content-duo HP-intros">We designed our Instagram competition to use these principles to understand the complexity of deploying a bacterial light bulb in the real life. At the end, we reached 78,000 people, received 133 design submissions and developed our final prototype.</p>
+       </div>
+
+   <div class="picture-section-right col-sm-4">
+       <img src="assets/insta1.jpg" class="image-content-here">
+   </div>
+
+   </div>
+
+   &lt;!&ndash; Collaborations &ndash;&gt;
+   <div class="row">
+
+       <div class="text-section col-sm-7">
+
+           <h1 class="title">Collaborations & Conversations </h1>
+
+           <p class="text-content-duo HP-intros">We saw stakeholder engagement as the opportunity to stress test ideas, engage in a bidirectional exchange of ideas and meet interesting people. Some of our conversations included:</p>
+
+           <ul class="list-section">
+               <li class="list-item-content">Architects</li>
+               <li class="list-item-content">Designers</li>
+               <li class="list-item-content">Construction Companies</li>
+               <li class="list-item-content">Transport for London</li>
+               <li class="list-item-content">European Space Agency</li>
+           </ul>
+
+       </div>
+
+       <div class="picture-section-right col-sm-4">
+
+
+       </div>
+   </div>
+
+   &lt;!&ndash; Meet-up &ndash;&gt;
+   <div class="row">
+
+       <div class="text-section col-sm-6">
+           <h1 class="title">UK iGEM Meet-up</h1>
+
+           <p class="text-content-duo HP-intros">At the UK iGEM 2017 meet-up, we tested a tool to use when choosing an iGEM project and developing ideas: debates.</p>
+
+           <p class="text-content-duo">By organising debates on synthetic biology questions, we observed how useful this technique can be to reveal answers and produce more questions. Future iGEM teams can study our observations about the process and build upon it by exploring how debates can be applied to creating chances for feedback on ideas.</p>
+
+       </div>
+
+       <div class="picture-section-right col-sm-5">
+
+
+
+       </div>
+
+   </div>
+
+
+   &lt;!&ndash; Science Museum &ndash;&gt;
+   <div id="pe" class="row">
+
+       <div class="text-section col-sm-7">
+
+           <h1 class="title">Light can excite cells. Can LIT do the same?</h1>
+
+           <p class="text-content-duo HP-intros">Thought experiment: what will the future of science communication look like? We explored this question through gamification.</p>
+
+           <p class="text-content-duo">Our aim was to test how gamification can be used to communicate science better. We gamified the central dogma of biology and presented the installation at the London Science Museum Late event, with an exposure to 2000 guests.</p>
+
+           <p class="text-content-duo"><a href="#">Check out how it works, reflections and tips for future iGEM teams.</a></p>
+       </div>
+
+   </div>
+
+   &lt;!&ndash; Smart Dinner &ndash;&gt;
+   <div class="row">
+       <div class="text-section col-sm-7">
+           <h1 class="title">Smart Dinner</h1>
+
+           <p class="text-content-duo HP-intros">Public engagement can happen on small, medium and large scales in terms of the public outreach. We wanted to test each level and see what useful outcomes can be expected from each.</p>
+
+           <p class="text-content-duo">On the small scale, we decided to focus on the idea of intimacy: how can a small-scale discussion facilitate a more thorough understanding of synthetic biology and building close connections with the people involved. We reached to Smart Dinners, who popularly organise dinners where people discuss and debate various themes. The outcomes were quite different from the large-scale events that we held.</p>
+
+       </div>
+
+       <div class="picture-section-right col-sm-4">
+           <img src="assets/HP-smart.png" class="special-images-here" style="height:300px; width:300px">
+       </div>
+
+   </div>
+
+   &lt;!&ndash; Wellcome trust &ndash;&gt;
+   <div class="row">
+       <div class="text-section col-sm-7">
+           <h1 class="title">Wellcome Trust event</h1>
+           <p class="text-content-duo HP-intros">While the first small-scale event was about a free discussion on the topic, we experimented with a more focused conversation to compare the two approaches.</p>
+
+           <p class="text-content-duo">Again, people invited to the event came from different backgrounds and targeted the discussion to policy development around synthetic biology.</p>
+       </div>
+
+
+   </div>
+
+   &lt;!&ndash; Summer School &ndash;&gt;
+   <div class="row">
+   <div class="text-section col-sm-7">
+       <h1 class="title">Facilitating discussion in synthetic biology</h1>
+       <p class="text-content-duo HP-intros">On the medium-scale outreach level, we sought an opportunity to engage with high-school students. The aim was to test the efficacy of discussion facilitation as a technique in synthetic biology.</p>
+
+       <p class="text-content-duo">We used knowledge and techniques from management consulting to engage with students. The result? A very in-depth conversation about how to genetically modify mules to make love to each other – along the way we touched on relevant points on using gene drives, consequences of genetic engineering and real-life trade-offs.</p>
+   </div>
+
+   <div class="picture-section-right col-sm-4">
+       <img src="assets/HP-summersc.JPG" id="special-image-here-1">
+   </div>
+
+
+</div>
+
+
+&lt;!&ndash; Philosophy &ndash;&gt;
+<div id="philo" class="row">
+
+   <div  class="text-section col-sm-8">
+
+       <h1 class="title">Our philosophy</h1>
+
+       <h2 class="subtitle">Why we did HP the way we did it</h2>
+
+       <p class="text-content-duo">Our team developed applications for biological light switches that by controlling specific cellular processes can innovate areas of medicine, illumination and architecture.</p>
+
+       <p class="text-content-duo HP-intros">We saw the Human Practices activities as opportunities to explore the applications of these biological light switches and develop a holistic perspective on them. In doing so, we tested activities and principles to see how well they work and combined them with the wet lab experiments, mathematical modelling and entrepreneurship. Examples include gamification, small and large scale events, online competitions and engaging with architects.</p>
+
+       <p class="text-content">We hope that our achievements this summer will inspire a more creative view of the role of Human Practices in synthetic biology and will serve as good documentation for future iGEM teams to build upon.</p>
+
+
+   </div>
+
+   <div class="picture-section-right col-sm-3">
+       <p class="modelling-steps-intro">To find out more about the applications,<a href="#"> click here.</a></p>
+
+       <img src="assets/icon-bulb.png" class="image-content-icons">
+       <img src="assets/icon-organ.png" class="image-content-icons">
+       <img src="assets/icon-barc.png" class="image-content-icons">
+   </div>
+
+</div>-->
